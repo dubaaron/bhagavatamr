@@ -68,8 +68,21 @@ end
 puts "Jagat, Haribol!"
 
 
+# require 'main'
+
+# Main {
+#     argument 'canto' { 
+#         cast :int 
+#         default 1
+#     }
+
+#     # mode 'extract_translations_from_markdown'
+
+# }
+
+
 if ARGV.empty?
-    fetch_chapter()
+    fetch_chapter(canto: 3, chapter: 25)
 else
     extract_translations_from_markdown(ARGV[0])
 end
