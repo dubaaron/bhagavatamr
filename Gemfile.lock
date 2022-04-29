@@ -49,6 +49,7 @@ PLATFORMS
 DEPENDENCIES
   colorize
   mechanize
+  nokogiri
   pry
   thor
 
