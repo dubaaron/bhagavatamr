@@ -77,6 +77,13 @@ class Bhāgavatamr
     puts noko.css('.breadcrumb').text
     puts noko.css('.chapnum').text
     puts noko.css('.Chapter-Desc').text
+
+    # the texts are inside a td width=90% currently; start with that
+    noko.css('td[width="90%"]').children.each do |el|
+      puts el.content[0..108]
+      # look to see what kind of element, process as necessary, etc.
+    end
+
   end
 end
 
