@@ -8,41 +8,56 @@
 
 require 'thor'
 class BhāgavatamrCLI < Thor
-  desc 'Haribol'
+  desc 'fetch CANTO CHAPTER', 'fetch '
+  def fetch_chapter canto: 1, chapter: 1
+    Bhāgavatamr.fetch_chapter canto, chapter
+  end
 end
 
 
-def fetch_chapter(canto = 1, chapter = 1)
-  require 'net/http'
-  require 'rubygems'
-  require 'mechanize'
-
-  url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
-
-  agent = Mechanize.new
-
-  print "Setting links to 'off' ... "
-
-  page = agent.get(url_to_switch_links_off)
-
-  puts page.body + "\n"
-
-  chapter_url = URI("https://prabhupadabooks.com/sb/#{canto}/#{chapter}?d=1")
-
-  puts "Fetching Śrīmad-Bhāgavatam Canto %02d, Chapter %02d" % [canto, chapter]
+class Bhāgavatamr
+  def self.fetch_chapter(canto = 1, chapter = 1)
+    require 'net/http'
+    require 'rubygems'
+    require 'mechanize'
   
-  # chapter_raw_html = Net::HTTP.get(chapter_url)
-  page = agent.get(chapter_url)
+    @@agent = Mechanize.new
 
-  p page.body
+    self.turn_off_links
 
-  require 'fileutils'
-  FileUtils.mkdir_p "./output"
-
-  output_file_name = "output/%02d.%02d_raw.html" % [canto, chapter]
-  File.write(output_file_name, page.body)
+  
+    chapter_url = URI("https://prabhupadabooks.com/sb/#{canto}/#{chapter}?d=1")
+  
+    puts "Fetching Śrīmad-Bhāgavatam Canto %02d, Chapter %02d" % [canto, chapter]
     
+    # chapter_raw_html = Net::HTTP.get(chapter_url)
+    page = @@agent.get(chapter_url)
+  
+    # require 'pry'; binding.pry
+    puts '', page.body[1..1008], '...', ''
+  
+    require 'fileutils'
+    FileUtils.mkdir_p "./output"
+  
+    output_file_name = "output/%02d.%02d_raw.html" % [canto, chapter]
+    puts "Saving to '#{output_file_name}' ..."
+    File.write(output_file_name, page.body)
+    puts 'Done. Haribol!'
+      
+  end
+
+
+  def self.turn_off_links
+    url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
+  
+    puts "Setting links to 'off' ... "
+  
+    page = @@agent.get(url_to_switch_links_off)
+  
+    puts page.body + "\n"
+  end
 end
+
 
 
 def extract_translations_from_markdown(full_markdown_file = ARGV[0])
@@ -69,19 +84,6 @@ end
 
 puts "Jagat, Haribol!"
 BhāgavatamrCLI.start(ARGV)
-
-# require 'main'
-
-# Main {
-#     argument 'canto' { 
-#         cast :int 
-#         default 1
-#     }
-
-#     # mode 'extract_translations_from_markdown'
-
-# }
-
 
 # if ARGV.empty?
 #   fetch_chapter(canto: 3, chapter: 25)
