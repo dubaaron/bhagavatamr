@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 # - parse args, get canto and chapter (and destination?)
 # - turn off dictionary links - send req to:
@@ -5,8 +6,10 @@
 # - 
 # - fetch bhagavatam html from https://prabhupadabooks.com/sb/<canto>/<chapter>?d=1
 
-
-
+require 'thor'
+class BhāgavatamrCLI < Thor
+  desc 'Haribol'
+end
 
 
 def fetch_chapter(canto = 1, chapter = 1)
@@ -65,7 +68,7 @@ end
 
 
 puts "Jagat, Haribol!"
-
+BhāgavatamrCLI.start(ARGV)
 
 # require 'main'
 
@@ -80,8 +83,8 @@ puts "Jagat, Haribol!"
 # }
 
 
-if ARGV.empty?
-  fetch_chapter(canto: 3, chapter: 25)
-else
-  extract_translations_from_markdown(ARGV[0])
-end
+# if ARGV.empty?
+#   fetch_chapter(canto: 3, chapter: 25)
+# else
+#   extract_translations_from_markdown(ARGV[0])
+# end
