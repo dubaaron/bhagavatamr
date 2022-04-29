@@ -52,9 +52,16 @@ class Bhāgavatamr
       
   end
 
+
   def self.get_rawhtml_filepath canto = 1, chapter = 1
-    "#{OUTPUTDIR}/%02d.%02d_raw.html" % [canto, chapter]
+    self.get_output_path 'raw.html', canto: canto, chapter: chapter
   end
+
+
+  def self.get_output_path name = 'raw.html', canto: 1, chapter: 1
+    "#{OUTPUTDIR}/%02d.%02d_#{name}" % [canto, chapter]
+  end
+
 
   def self.turn_off_links
     url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
@@ -72,17 +79,26 @@ class Bhāgavatamr
     # require 'pry'; binding.pry
     puts "Processing HTML from #{file} ...", ''
 
+    output = ''
     require 'nokogiri'
     noko = Nokogiri::HTML File.open file
-    puts noko.css('.breadcrumb').text
-    puts noko.css('.chapnum').text
-    puts noko.css('.Chapter-Desc').text
+    output << noko.css('.breadcrumb').text << "\n"
+    output << noko.css('.chapnum').text << "\n"
+    output << noko.css('.Chapter-Desc').text << "\n"
+
+    puts output.light_blue
 
     # the texts are inside a td width=90% currently; start with that
     noko.css('td[width="90%"]').children.each do |el|
-      puts el.content[0..108]
+      output << el.content << "\n"
       # look to see what kind of element, process as necessary, etc.
     end
+
+    output_path = self.get_output_path 'processing', canto: canto, chapter: chapter
+    File.write output_path, output
+
+    puts "Written to #{output_path}"
+
 
   end
 end
