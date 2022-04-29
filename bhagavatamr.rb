@@ -8,14 +8,20 @@
 
 require 'thor'
 class BhāgavatamrCLI < Thor
-  desc 'fetch CANTO CHAPTER', 'fetch '
+  desc 'fetch CANTO CHAPTER', 'fetch and save HTML for chapter, defaults to 01.01'
   def fetch_chapter canto: 1, chapter: 1
     Bhāgavatamr.fetch_chapter canto, chapter
+  end
+
+  desc 'process CANTO CHAPTER', 'process HTML for chapter, default 01.01'
+  def process_chapter canto: 1, chapter: 1
+    Bhāgavatamr.process canto, chapter
   end
 end
 
 require 'colorize'
 class Bhāgavatamr
+  OUTPUTDIR = './output'
   def self.fetch_chapter(canto = 1, chapter = 1)
     require 'net/http'
     require 'rubygems'
@@ -37,15 +43,18 @@ class Bhāgavatamr
     puts '', page.body[1..1008].light_blue, '...', ''
   
     require 'fileutils'
-    FileUtils.mkdir_p "./output"
+    FileUtils.mkdir_p OUTPUTDIR
   
-    output_file_name = "output/%02d.%02d_raw.html" % [canto, chapter]
+    output_file_name = self.get_rawhtml_filepath
     puts "Saving to '#{output_file_name}' ..."
     File.write(output_file_name, page.body)
     puts 'Done. Haribol!'.yellow.on_blue.bold, ''
       
   end
 
+  def self.get_rawhtml_filepath canto = 1, chapter = 1
+    "#{OUTPUTDIR}/%02d.%02d_raw.html" % [canto, chapter]
+  end
 
   def self.turn_off_links
     url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
@@ -55,6 +64,19 @@ class Bhāgavatamr
     page = @@agent.get(url_to_switch_links_off)
   
     puts page.body.light_blue, ''
+  end
+
+
+  def self.process canto = 1, chapter = 1
+    file = self.get_rawhtml_filepath canto, chapter
+    # require 'pry'; binding.pry
+    puts "Processing HTML from #{file} ...", ''
+
+    require 'nokogiri'
+    noko = Nokogiri::HTML File.open file
+    puts noko.css('.breadcrumb').text
+    puts noko.css('.chapnum').text
+    puts noko.css('.Chapter-Desc').text
   end
 end
 
