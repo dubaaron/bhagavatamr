@@ -14,7 +14,7 @@ class BhāgavatamrCLI < Thor
   end
 end
 
-
+require 'colorize'
 class Bhāgavatamr
   def self.fetch_chapter(canto = 1, chapter = 1)
     require 'net/http'
@@ -28,13 +28,13 @@ class Bhāgavatamr
   
     chapter_url = URI("https://prabhupadabooks.com/sb/#{canto}/#{chapter}?d=1")
   
-    puts "Fetching Śrīmad-Bhāgavatam Canto %02d, Chapter %02d" % [canto, chapter]
+    puts "Fetching Śrīmad-Bhāgavatam Canto #{canto}, Chapter #{chapter}, from #{chapter_url}"
     
     # chapter_raw_html = Net::HTTP.get(chapter_url)
     page = @@agent.get(chapter_url)
   
     # require 'pry'; binding.pry
-    puts '', page.body[1..1008], '...', ''
+    puts '', page.body[1..1008].light_blue, '...', ''
   
     require 'fileutils'
     FileUtils.mkdir_p "./output"
@@ -42,7 +42,7 @@ class Bhāgavatamr
     output_file_name = "output/%02d.%02d_raw.html" % [canto, chapter]
     puts "Saving to '#{output_file_name}' ..."
     File.write(output_file_name, page.body)
-    puts 'Done. Haribol!'
+    puts 'Done. Haribol!'.yellow.on_blue.bold, ''
       
   end
 
@@ -54,7 +54,7 @@ class Bhāgavatamr
   
     page = @@agent.get(url_to_switch_links_off)
   
-    puts page.body + "\n"
+    puts page.body.light_blue, ''
   end
 end
 
@@ -82,7 +82,7 @@ def extract_translations_from_markdown(full_markdown_file = ARGV[0])
 end
 
 
-puts "Jagat, Haribol!"
+puts ' Jagat, Haribol! '.yellow.on_blue.bold
 BhāgavatamrCLI.start(ARGV)
 
 # if ARGV.empty?
