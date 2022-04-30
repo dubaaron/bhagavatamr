@@ -1,10 +1,19 @@
 #!/usr/bin/env ruby
 
-# - parse args, get canto and chapter (and destination?)
-# - turn off dictionary links - send req to:
-#   https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes
-# - 
-# - fetch bhagavatam html from https://prabhupadabooks.com/sb/<canto>/<chapter>?d=1
+require 'pry'
+
+=begin
+Todo:
+- [ ] always remember Krishna; never forget Krishna
+- [ ] some japa
+- [ ] make the weekly readings
+- [ ] fix html italic classes, etc
+- [ ] fix broken characters
+- [x] parse args, get canto and chapter (and destination?)
+- [x] turn off dictionary links - send req to:
+  https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes
+- [x] fetch bhagavatam html from https://prabhupadabooks.com/sb/<canto>/<chapter>?d=1
+=end
 
 require 'thor'
 class BhāgavatamrCLI < Thor
@@ -80,6 +89,7 @@ class Bhāgavatamr
     puts "Processing HTML from #{file} ...", ''
 
     output = ''
+    debug_output = ''
     require 'nokogiri'
     noko = Nokogiri::HTML File.open file
     output << noko.css('.breadcrumb').text << "\n"
@@ -88,18 +98,51 @@ class Bhāgavatamr
 
     puts output.light_blue
 
+    verses = {}
     # the texts are inside a td width=90% currently; start with that
     noko.css('td[width="90%"]').children.each do |el|
       output << el.content << "\n"
       # look to see what kind of element, process as necessary, etc.
+      if Element.new(el).class_is 'Textnum'
+        if m = el.content.match(/TEXT (\d+)(-(\d+))/)
+          verse_num = m[1]
+          this_verse = { verse_num: verse_num, }
+          binding.pry
+        end
+        binding.pry
+      end
+      if Element.new(el).class_is 'Synonyms'
+      # if el&.attributes.dig('class')&.value == 'Synonyms'
+        binding.pry
+      end
     end
 
     output_path = self.get_output_path 'processing', canto: canto, chapter: chapter
     File.write output_path, output
 
     puts "Written to #{output_path}"
+  end
+
+  def element el
+    Element.new el
+  end
+
+  def element_class_is element, classname
+    return true if element&.attributes.dig('class')&.value == classname
+    false
+  end
+end
 
 
+
+class Element
+  def initialize element
+    @el = element
+  end
+
+  def class_is classname
+    return true if @el&.attributes.dig('class')&.value == classname
+    false
   end
 end
 
