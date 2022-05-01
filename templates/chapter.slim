@@ -19,6 +19,20 @@ html
         -moz-osx-font-smoothing: grayscale;
         background-color: antiquewhite;
       }
+      .verse_num {
+        display: block;
+        position: absolute;
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        margin-left: -5rem;
+        margin-right: 1rem;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
 
   body.stackedit
     div.stackedit__html
@@ -26,7 +40,10 @@ html
 
       h1 #{fancy_number}:<br>#{title}
       - verses.each do |verse_num, verse|
-        p #{verse.num_range}. #{verse.english_translation_text}
+        p 
+          span.verse_num
+            | [#{verse.num_range}.] 
+          = verse.english_translation_text
 
       p 
         em == thus_ends_text
@@ -34,6 +51,7 @@ html
       p 
         | Text copied from: 
         a href="#{text_source_url}" #{text_source_url}
-        br
-        | on #{date_text_copied_from_source}
+        / br
+        /!  span.text_source_copied_date
+          | on #{date_text_copied_from_source} 
       p == next_prev_links_raw
