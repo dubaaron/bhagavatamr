@@ -83,15 +83,31 @@ class Bhāgavatamr
   end
 
 
+  def self.fix_broken_ñ str
+    # unfortunately, prabhupadabooks.com appears to be littered with ï¿½ where it should be ñ
+    # str.gsub "ï¿½", "ñ"
+    # try with HTML entity; 'ñ' didn't seem to work
+    str.gsub '&ntilde;', '&#241;'
+    str.gsub 'ï¿½', '&#241;'
+  end
+
+
   def self.process canto = 1, chapter = 1
-    file = self.get_rawhtml_filepath canto, chapter
+    raw_file = self.get_rawhtml_filepath canto, chapter
     # require 'pry'; binding.pry
-    puts "Processing HTML from #{file} ...", ''
+    puts "Processing HTML from #{raw_file} ...", ''
+
+    # binding.pry
+    puts "Cleaning stuff up ..."
+    fixed_html = self.fix_broken_ñ File.open(raw_file).read
+    File.write(self.get_output_path('cleaned.html', canto: canto, chapter: chapter), fixed_html)
+
 
     output = ''
     debug_output = ''
     require 'nokogiri'
-    noko = Nokogiri::HTML File.open file
+    # noko = Nokogiri::HTML File.open raw_file
+    noko = Nokogiri::HTML fixed_html
     output << noko.css('.breadcrumb').text << "\n"
     output << noko.css('.chapnum').text << "\n"
     output << noko.css('.Chapter-Desc').text << "\n"
@@ -99,23 +115,44 @@ class Bhāgavatamr
     puts output.light_blue
 
     verses = {}
+    this_verse = nil
     # the texts are inside a td width=90% currently; start with that
     noko.css('td[width="90%"]').children.each do |el|
-      output << el.content << "\n"
+      output << el.content
       # look to see what kind of element, process as necessary, etc.
-      if Element.new(el).class_is 'Textnum'
-        if m = el.content.match(/TEXT (\d+)(-(\d+))/)
-          verse_num = m[1]
-          this_verse = { verse_num: verse_num, }
-          binding.pry
+      case el&.attributes.dig('class')&.value
+      when 'Textnum'
+        # start new verse
+        unless this_verse.nil?
+          # put previous verse onto the stack
+          verses[this_verse.verse_num_start] = this_verse
         end
-        binding.pry
-      end
-      if Element.new(el).class_is 'Synonyms'
-      # if el&.attributes.dig('class')&.value == 'Synonyms'
-        binding.pry
+        # todo: test this regex?
+        if m = el.content.match(/TEXT (?<range>(?<start>\d+)(?:-(?<end>\d+))?)/)
+          verse_num = m[:start]
+          this_verse = Verse.new verse_num, m[:end]
+          binding.pry unless m[:end].nil?
+          # binding.pry
+        end
+        # binding.pry
+      
+      when 'Verse-Text'
+        this_verse.sanskrit_roman_lines << el.content
+      
+      when 'Synonyms'
+        this_verse.synonyms_html = el.children.to_html
+      
+      when 'Translation'
+        this_verse.english_translation_html << el.children.to_html
+      when 'First', 'Purport'
+      # if Element.new(el).class_is 'First' || Element.new(el).class_is 'Purport'
+        this_verse.purport_html_paragraphs << el.children.to_html
       end
     end
+
+    # put final verse onto the stack
+    verses[this_verse.verse_num_start] = this_verse
+
 
     output_path = self.get_output_path 'processing', canto: canto, chapter: chapter
     File.write output_path, output
@@ -123,16 +160,23 @@ class Bhāgavatamr
     puts "Written to #{output_path}"
   end
 
-  def element el
-    Element.new el
-  end
 
-  def element_class_is element, classname
-    return true if element&.attributes.dig('class')&.value == classname
-    false
-  end
 end
 
+
+class Verse
+  attr_accessor :verse_num_start, :verse_num_end, :sanskrit_roman_lines, 
+    :synonyms_html, :english_translation_html, :purport_html_paragraphs
+
+  def initialize verse_num_start, verse_num_end = nil
+    @verse_num_start = verse_num_start
+    @verse_num_end = verse_num_end.nil? ? verse_num_start : verse_num_end
+    @sanskrit_roman_lines = []
+    @synonyms_html = ''
+    @english_translation_html = ''
+    @purport_html_paragraphs = []
+  end
+end
 
 
 class Element
@@ -171,8 +215,10 @@ end
 
 
 puts ' Jagat, Haribol! '.yellow.on_blue.bold
+puts ' 1. Always Remember Kṛṣṇa, 2. Never forget Kṛṣṇa 🙏❤  '.blue.on_yellow.bold
 BhāgavatamrCLI.start(ARGV)
 
+puts ' 1. Always Remember Kṛṣṇa, 2. Never forget Kṛṣṇa 🙏❤  '.blue.on_yellow.bold
 # if ARGV.empty?
 #   fetch_chapter(canto: 3, chapter: 25)
 # else
