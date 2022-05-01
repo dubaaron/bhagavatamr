@@ -12,6 +12,9 @@ gem 'colorize'
 # for html processing
 gem 'nokogiri'
 
+# templating
+gem 'slim'
+
 group :development do
   gem 'pry'
 end

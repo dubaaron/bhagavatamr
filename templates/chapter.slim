@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta charset='utf-8'
+    title ŚB #{canto}.#{number}-t, #{title}
+
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    link[rel="stylesheet" href="https://stackedit.io/style.css"]
+    link[rel="preconnect" href="https://fonts.gstatic.com"]
+    link[href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Slab&display=swap" rel="stylesheet"]
+    css: 
+      body {
+        color: #111;
+        font-size: 24px;
+        font-family: 'Times New Roman', 'Manuale', serif;
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+
+  body.stackedit
+    div.stackedit__html
+      h2 Śrīmad-Bhāgavatam, Canto #{canto}: #{Bhāgavatamr::CANTOS[canto.to_i]}
+
+      h1 #{fancy_number}:<br>#{title}
+      - verses.each do |verse_num, verse|
+        p #{verse.num_range}. #{verse.english_translation_text}
+
+      p 
+        em == thus_ends_text
+      hr
+      p 
+        | Text copied from: 
+        a href="#{text_source_url}" #{text_source_url}
+        br
+        | on #{date_text_copied_from_source}
+      p == next_prev_links_raw

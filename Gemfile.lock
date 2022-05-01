@@ -38,7 +38,12 @@ GEM
     public_suffix (4.0.7)
     racc (1.6.0)
     rubyntlm (0.6.3)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    temple (0.8.2)
     thor (1.2.1)
+    tilt (2.0.10)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.1)
@@ -54,6 +59,7 @@ DEPENDENCIES
   mechanize
   nokogiri
   pry
+  slim
   thor
 
 BUNDLED WITH
