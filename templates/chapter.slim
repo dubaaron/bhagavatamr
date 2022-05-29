@@ -19,19 +19,29 @@ html
         -moz-osx-font-smoothing: grayscale;
         background-color: antiquewhite;
       }
+      .verse_translation {
+        font-weight: bold;
+        text-indent: -2rem;
+      }
       .verse_num {
-        display: block;
-        position: absolute;
+        / display: block;
+        / position: absolute;
         text-align: right;
         color: #555;
         font-size: 0.9em;
-        margin-left: -5rem;
-        margin-right: 1rem;
+        / margin-left: -5rem;
+        / margin-right: 1rem;
       }
       .text_source_copied_date {
         display: block;
         font-size: 0.8em;
         color: #555;
+      }
+      .current_para_highlight {
+        border: 1px dotted;
+        padding: 1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
       }
 
   body.stackedit
@@ -40,7 +50,7 @@ html
 
       h1 #{fancy_number}:<br>#{title}
       - verses.each do |verse_num, verse|
-        p 
+        p.verse_translation 
           span.verse_num
             | [#{verse.num_range}.] 
           = verse.english_translation_text
