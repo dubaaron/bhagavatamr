@@ -1,5 +1,5 @@
 doctype html
-html
+html lang='en'
   head
     meta charset='utf-8'
     title ŚB #{canto}.#{number}-t, #{title}
@@ -8,6 +8,57 @@ html
     link[rel="stylesheet" href="https://stackedit.io/style.css"]
     link[rel="preconnect" href="https://fonts.gstatic.com"]
     link[href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Slab&display=swap" rel="stylesheet"]
+    script[src="https://code.jquery.com/jquery-3.6.0.slim.min.js"]
+
+    javascript: 
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_para_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+
+
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+
     css: 
       body {
         color: #111;
@@ -24,13 +75,13 @@ html
         text-indent: -2rem;
       }
       .verse_num {
-        / display: block;
-        / position: absolute;
+        /* display: block; */
+        /* position: absolute; */
         text-align: right;
         color: #555;
         font-size: 0.9em;
-        / margin-left: -5rem;
-        / margin-right: 1rem;
+        /* margin-left: -5rem; */
+        /* margin-right: 1rem; */
       }
       .text_source_copied_date {
         display: block;
@@ -46,14 +97,17 @@ html
 
   body.stackedit
     div.stackedit__html
-      h2 Śrīmad-Bhāgavatam, Canto #{canto}: #{Bhāgavatamr::CANTOS[canto.to_i]}
+      h2 Śrīmad-Bhāgavatam, Canto #{canto}:<br>
+        #{Bhāgavatamr::CANTOS[canto.to_i]}
 
       h1 #{fancy_number}:<br>#{title}
       - verses.each do |verse_num, verse|
-        p.verse_translation 
-          span.verse_num
-            | [#{verse.num_range}.] 
-          = verse.english_translation_text
+        div.verse data-verse_num="#{verse_num}"
+          .verse_translation
+            p
+              span.verse_num
+                | [#{verse.num_range}.] 
+              = verse.english_translation_text
 
       p 
         em == thus_ends_text
