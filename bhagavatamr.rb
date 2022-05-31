@@ -127,9 +127,15 @@ class Bhāgavatamr
 
     chapter.verses = {}
     this_verse = nil
+    unhandled_bits = []
+
     # the texts are inside a td width=90% currently; start with that
     noko.css('td[width="90%"]').children.each do |el|
       output << el.content
+      
+      # strip links
+      el.search('a').each { |node| node.replace(node.children) }
+
       # look to see what kind of element, process as necessary, etc.
       case el&.attributes.dig('class')&.value
       when 'Textnum'
@@ -146,7 +152,7 @@ class Bhāgavatamr
           # binding.pry unless m[:end].nil?
         end
       
-      when 'Verse-Text'
+      when 'Verse-Text', 'Uvaca-line'
         this_verse.sanskrit_roman_lines << el.content
       
       when 'Synonyms'
@@ -155,9 +161,9 @@ class Bhāgavatamr
       when 'Translation'
         this_verse.english_translation_html << el.children.to_html
         this_verse.english_translation_text << el.text
-      when 'First', 'Purport', 'Verse-in-purp', 'After-Verse'
+      when 'First', 'Purport', 'After-Verse', 'Normal-Level', 'VerseRef'
         # todo: make sure we catch all variations; maybe write a way to check & compare text with original to make sure we're not missing anything?
-        # todo: make sure verse-in-purport is handled properly ...
+        # todo: make sure verse-in-purport is handled properly ... I think it is, now, but could verify?
         this_verse.purport_html_paragraphs << el.children.to_html
       when 'Thus-end'
         chapter.thus_ends_text << el.children.to_html
@@ -165,6 +171,18 @@ class Bhāgavatamr
         # todo: extract this info somehow?
         # binding.pry
         chapter.next_prev_links_raw = el.to_html
+      when 'Verse-Section', 'Synonyms-Section', 'chapnum', 'Chapter-Desc'
+        # ignore these for now; they are just headings
+      else
+        if el.text.match(/^([\s]|\\n)*$/) 
+          # ignore if just whitespace and literal '\n's
+          
+        # todo: fix this up for better reliability?
+        elsif el.to_html.match(/Verse-in-purp/)
+          this_verse.purport_html_paragraphs << "<blockquote>#{el.to_html}</blockquote>"
+        else
+          unhandled_bits << el.to_html
+        end
       end
 
       # "Link to this page" at bottom
@@ -179,6 +197,8 @@ class Bhāgavatamr
 
     # put final verse onto the stack
     chapter.add_verse this_verse
+
+    puts '', 'Unhandled bits:'.red, unhandled_bits, ''
 
 
     output_path = self.get_output_path canto, chapt_num, 'plain.txt'
