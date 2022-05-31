@@ -123,6 +123,14 @@ class Bhāgavatamr
     output << noko.css('.breadcrumb').text << "\n" << 
       "#{chapter.fancy_number}\n" << chapter.title
 
+    # todo: set this manually? because we know where we got it from ...
+    # "Link to this page" at bottom
+    if el = noko.search("p[align='center']")
+      if el.text.match?("Link to this page:")
+        chapter.text_source_url = el.css('a').text
+      end
+    end
+
     puts output.light_blue
 
     chapter.verses = {}
@@ -186,11 +194,11 @@ class Bhāgavatamr
       end
 
       # "Link to this page" at bottom
-      if el&.attributes.dig('align')&.value == 'center' && el&.name == 'p' &&
-        el.content.match?("Link to this page:")
-          # binding.pry
-          chapter.text_source_url = el.css('a').text
-      end
+      # if el&.attributes.dig('align')&.value == 'center' && el&.name == 'p' &&
+      #   el.content.match?("Link to this page:")
+      #     # binding.pry
+      #     chapter.text_source_url = el.css('a').text
+      # end
 
       # todo: handle multi-page chapters
     end
