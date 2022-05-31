@@ -8,7 +8,24 @@ html lang='en'
     link[rel="stylesheet" href="https://stackedit.io/style.css"]
     link[rel="preconnect" href="https://fonts.gstatic.com"]
     link[href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto+Slab&display=swap" rel="stylesheet"]
-    script[src="https://code.jquery.com/jquery-3.6.0.slim.min.js"]
+
+
+    script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    / link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.2/dist/full.css" rel="stylesheet"
+    link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"
+    script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"
+    script src="https://cdn.tailwindcss.com?plugins=typography"
+    
+    javascript:
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
 
     javascript: 
       $(document).ready(function() {
@@ -21,7 +38,6 @@ html lang='en'
           toggleVerseHighlight(current_verse_highlighted)
       
         })
-
       
         $(document).keydown(function(event) {
           if (current_verse_highlighted != false) {
@@ -37,7 +53,7 @@ html lang='en'
       
 
       function toggleVerseHighlight(verseElement, scrollToCenter = false) {
-        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_para_highlight').get(0)
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
         if (scrollToCenter) {
           el.scrollIntoView({behavior: 'smooth', block: 'center'})
         }
@@ -59,55 +75,90 @@ html lang='en'
         toggleVerseHighlight(current_verse_highlighted, true)
       }
 
+
+
+
     css: 
       body {
         color: #111;
-        font-size: 24px;
-        font-family: 'Times New Roman', 'Manuale', serif;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
         font-variant-ligatures: common-ligatures;
         line-height: 1.67;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: antiquewhite;
       }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
       .verse_translation {
         font-weight: bold;
-        text-indent: -2rem;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
       }
       .verse_num {
-        /* display: block; */
         /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
         text-align: right;
         color: #555;
         font-size: 0.9em;
-        /* margin-left: -5rem; */
-        /* margin-right: 1rem; */
+        font-weight: normal;
       }
       .text_source_copied_date {
         display: block;
         font-size: 0.8em;
         color: #555;
       }
-      .current_para_highlight {
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
         border: 1px dotted;
-        padding: 1rem;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
         background: rgba(0,0,108,0.2);
         font-weight: bold;
       }
+      .current_highlight p {
 
-  body.stackedit
-    div.stackedit__html
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+
+  body
+    div.prose.lg:prose-2xl.m-auto.container.p-4
       h2 Śrīmad-Bhāgavatam, Canto #{canto}:<br>
         #{Bhāgavatamr::CANTOS[canto.to_i]}
 
-      h1 #{fancy_number}:<br>#{title}
+      h1.text-3xl #{fancy_number}:<br>#{title}
+
       - verses.each do |verse_num, verse|
         div.verse data-verse_num="#{verse_num}"
+          .verse_controls
+            button.verse_num.btn
+              | [#{verse.num_range}.] 
+            - if verse.purport_html_paragraphs.count > 0
+              span.verse_purport
+                button [class="btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#verse_#{verse_num}_purport"                   aria-expanded="false" aria-controls="collapseExample"] 
+                  | P 
+                  span.purport_wordcount.text-xs.text-gray-400 = verse.purport_html_paragraphs.reduce(0) {|wc, para| wc += para.split.count}
           .verse_translation
             p
-              span.verse_num
-                | [#{verse.num_range}.] 
               = verse.english_translation_text
+          - if verse.purport_html_paragraphs.count > 0
+            .verse_purport_content.collapse id="verse_#{verse_num}_purport"
+              - verse.purport_html_paragraphs.each do |para|
+                p == para 
 
       p 
         em == thus_ends_text
