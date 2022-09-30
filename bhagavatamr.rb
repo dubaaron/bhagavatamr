@@ -6,6 +6,13 @@ require 'pry'
 Todo:
 - [ ] always remember Krishna; never forget Krishna
 - [ ] some japa
+- [ ] make so only one verse can be selected at a time (maybe later allow more than one through a setting?)
+- [x] put output in folders
+- [ ] fix input parsing
+- [ ] make a one-shot command to fetch & parse
+- [ ] try pulling from folio infobase files ... 
+  - https://github.com/imazen/folioxml
+  - https://stackoverflow.com/questions/6521655/need-to-export-from-folio-to-xml-or-convert-fff-to-xml
 - [x] make the weekly readings
   - [x] parse the verses into a structure
 - [ ] fix html italic classes, etc
@@ -36,7 +43,10 @@ end
 require 'colorize'
 class Bhāgavatamr
   OUTPUTDIR = './output'
-  CANTOS = { 4 => '“Creation of the Fourth Order”'}
+  CANTOS = { 
+    1 => '“Creation”', 
+    4 => '“Creation of the Fourth Order”'
+  }
 
   def self.fetch_chapter(canto = 1, chapter = 1)
     require 'net/http'
@@ -74,7 +84,7 @@ class Bhāgavatamr
 
 
   def self.get_output_path canto = 1, chapter = 1, name = 'raw.html'
-    "#{OUTPUTDIR}/%02d.%02d_#{name}" % [canto, chapter]
+    "#{OUTPUTDIR}/%02d/%02d_#{name}" % [canto, chapter]
   end
 
 
@@ -169,7 +179,7 @@ class Bhāgavatamr
       when 'Translation'
         this_verse.english_translation_html << el.children.to_html
         this_verse.english_translation_text << el.text
-      when 'First', 'Purport', 'After-Verse', 'Normal-Level', 'VerseRef'
+      when 'First', 'Purport', 'After-Verse', 'Normal-Level', 'VerseRef', 'Verse', 'One'
         # todo: make sure we catch all variations; maybe write a way to check & compare text with original to make sure we're not missing anything?
         # todo: make sure verse-in-purport is handled properly ... I think it is, now, but could verify?
         this_verse.purport_html_paragraphs << el.children.to_html
@@ -185,8 +195,8 @@ class Bhāgavatamr
         if el.text.match(/^([\s]|\\n)*$/) 
           # ignore if just whitespace and literal '\n's
           
-        # todo: fix this up for better reliability?
-        elsif el.to_html.match(/Verse-in-purp/)
+        # todo: fix this up for better reliability? use case-insensitive match?
+        elsif el.to_html.match(/Verse-in-purp/) or el.to_html.match(/One-line-verse-in-purp/)
           this_verse.purport_html_paragraphs << "<blockquote>#{el.to_html}</blockquote>"
         else
           unhandled_bits << el.to_html
