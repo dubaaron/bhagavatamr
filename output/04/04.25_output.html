@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 4.25, The Descriptions of the Characteristics of King Purañjana</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 4:<br>
+        “Creation of the Fourth Order”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twenty-five:<br>The Descriptions of the Characteristics of King Purañjana
+      </h1>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">288</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Maitreya continued speaking to Vidura: My dear Vidura, in this way Lord Śiva instructed the sons of King Barhiṣat. The sons of the King also worshiped Lord Śiva with great devotion and respect. Finally, Lord Śiva became invisible to the princes.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            This chapter contains a great lesson concerning the monarchical kingdom in the days of yore. When King Barhiṣat was considering retiring from the royal duties, he sent his sons to perform austerities in order to become perfect kings for the welfare of the citizens. At the same time, King Barhiṣat was being instructed by the great sage Nārada about the material world and the living entity who wants to enjoy it. It is therefore very clear how the kings and princes were trained to take charge of a kingdom. Welfare activities for the benefit of the citizens were aimed at understanding the Supreme Personality of Godhead. The human form of life is especially meant for understanding God, our relationship with Him and our activities in His service. Because the kings took charge of the spiritual education of the citizens, both the king and the citizens were happy in Kṛṣṇa consciousness. In this regard, we should remember that the monarchical hierarchy of Prācīnabarhiṣat comes from Mahārāja Dhruva, a great devotee of the Lord and the most celebrated disciple of Nārada Muni. King Prācīnabarhiṣat was then too much engaged in fruitive activities due to performing different types of <span class="Italic">yajñas.</span> One can actually be promoted to higher planetary systems or to the heavenly kingdoms by performing various <span class="Italic">yajñas,</span> but there is no question of liberation or going back home, back to Godhead. When the great sage Nārada saw that a descendant of Mahārāja Dhruva was being misled by fruitive activities, Nārada took compassion upon him and personally came to instruct him about the ultimate benediction of life, <span class="Italic">bhakti-yoga.</span> How Nārada Muni indirectly introduced the <span class="Italic">bhakti-yoga</span> system to King Prācīnabarhiṣat is very interestingly described in this Twenty-fifth Chapter.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">124</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All the Pracetā princes simply stood in the water for ten thousand years and recited the prayers given to them by Lord Śiva.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            Of course in the modern age one may be amazed how the princes could stand in the water for ten thousand years. However, living within air or living within water is the same process; one simply has to learn how to do it. The aquatics live within water for their whole life-span. Certain favorable conditions are created to enable them to live within water. In those days, however, people used to live for one hundred thousand years. Out of so many years, if one could spare ten thousand years for the sake of austerity, he would be assured of success in his future life. This was not very astonishing. Although such a feat is impossible in this age, it was quite possible in Satya-yuga.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">209</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While the princes were undergoing severe austerities in the water, their father was performing different types of fruitive activities. At this time the great saint Nārada, master and teacher of all spiritual life, became very compassionate upon the King and decided to instruct him about spiritual life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            As pointed out by Prabodhānanda Sarasvatī Ṭhākura, a great devotee of Lord Caitanya, <span class="Italic">kaivalya,</span> or merging into the Brahman effulgence, is just like going to hell. He similarly states that elevation to the upper planetary systems for the enjoyment of heavenly life is just so much phantasmagoria. This means that a devotee does not give any importance to the ultimate goal of the <span class="Italic">karmīs</span> and <span class="Italic">jñānīs.</span> The ultimate goal of the <span class="Italic">karmīs</span> is promotion to the heavenly kingdom, and the ultimate goal of the <span class="Italic">jñānīs</span> is merging into the Brahman effulgence. Of course, the <span class="Italic">jñānīs</span> are superior to the <span class="Italic">karmīs,</span> as confirmed by Lord Caitanya. <span class="Italic">Koṭi-karmaniṣṭha-madhye eka ‘jñānī’ śreṣṭha:</span> “one <span class="Italic">jñānī,</span> or impersonalist, is better than many thousands of fruitive actors.” (Cc. <span class="Ref_Italic">Madhya</span> 19.147) Therefore a devotee never enters upon the path of <span class="Italic">karma,</span> or elevation by fruitive activities. Nārada Muni took compassion upon King Prācīnabarhiṣat when he saw the King engaged in fruitive activity. In comparison to mundane workers, those who are trying to be elevated to the higher planetary systems by performing <span class="Italic">yajñas</span> are undoubtedly superior. In pure devotional service, however, both <span class="Italic">karma</span> and <span class="Italic">jñāna</span> are considered bewildering features of the illusory energy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">534</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada Muni asked King Prācīnabarhiṣat: My dear King, what do you desire to achieve by performing these fruitive activities? The chief aim of life is to get rid of all miseries and enjoy happiness, but these two things cannot be realized by fruitive activity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            In this material world there is a great illusion which covers real intelligence. A man in the mode of passion wants to work very hard to derive some benefit, but he does not know that time will never allow him to enjoy anything permanently. Compared with the work one expends, the gain is not so profitable. Even if it is profitable, it is not without its distresses. If a man is not born rich and he wants to purchase a house, cars and other material things, he has to work hard day and night for many years in order to possess them. Thus happiness is not attained without undergoing some distress.
+          </p>
+          <p>
+            Actually, pure happiness cannot be had within this material world. If we wish to enjoy something, we must suffer for something else. On the whole, suffering is the nature of this material world, and whatever enjoyment we are trying to achieve is simply illusion. After all, we have to suffer the miseries of birth, old age, disease and death. We may discover many fine medicines, but it is not possible to stop the sufferings of disease or death. Actually, medicine is not the counteracting agent for either disease or death. On the whole there is no happiness in this material world, but an illusioned person works very hard for so-called happiness. Indeed, this process of working hard is actually taken for happiness. This is called illusion.
+          </p>
+          <p>
+            Therefore Nārada Muni asked King Prācīnabarhiṣat what he desired to attain by performing so many costly sacrifices. Even if one attains a heavenly planet, he cannot avoid the distresses of birth, old age, disease and death. Someone may argue that even devotees have to undergo many distresses in executing austerities and penances connected with devotional service. Of course, for the neophytes the routine of devotional service may be very painful, but at least they have the hope that they will ultimately be able to avoid all kinds of distresses and achieve the highest perfectional stage of happiness. For the common <span class="Italic">karmīs,</span> there is no such hope because even if they are promoted to the higher planetary systems, they are not guaranteed freedom from the miseries of birth, old age, disease and death. Even Lord Brahmā, who is situated in the highest planetary system (Brahmaloka), has to die. Lord Brahmā’s birth and death may be different from an ordinary man’s, but within this material world he cannot avoid the distresses of birth, old age, disease and death. If one is at all serious about attaining liberation from these miseries, he must take to devotional service. This is confirmed by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.”
+          </p>
+          <p>
+            Thus after attaining full Kṛṣṇa consciousness, the devotee does not return to this material world after death. He goes back home, back to Godhead. That is the perfect stage of happiness, unblemished by any trace of distress.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">533</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The King replied: O great soul, Nārada, my intelligence is entangled in fruitive activities; therefore I do not know the ultimate goal of life. Kindly instruct me in pure knowledge so that I can get out of the entanglement of fruitive activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Śrī Narottama dāsa Ṭhākura has sung:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sat-saṅga chāḍi’ kainu asate vilāsa<br>te-kāraṇe lāgila ye karma-bandha-phāṅsa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            As long as a person is entangled in fruitive activities, he is bound to accept one body after another. This is called <span class="Italic">karma-bandha-phāṅsa</span>—entanglement in fruitive activities. It does not matter whether one is engaged in pious or impious activities, for both are causes for further entanglement in material bodies. By pious activities one can take birth in a rich family and get a good education and a beautiful body, but this does not mean that the distresses of life are ultimately eliminated. In the Western countries it is not unusual for one to take birth in a rich aristocratic family, nor is it unusual for one to have a good education and a very beautiful body, but this does not mean that Westerners are free from the distresses of life. Although at the present moment the younger generation in Western countries has sufficient education, beauty and wealth, and although there is enough food, clothing, and facilities for sense gratification, they are in distress. Indeed, they are so distressed that they become hippies, and the laws of nature force them to accept a wretched life. Thus they go about unclean and without shelter or food, and they are forced to sleep in the street. It can be concluded that one cannot become happy by simply performing pious activities. It is not a fact that those who are born with a silver spoon in their mouth are free from the material miseries of birth, old age, disease and death. The conclusion is that one cannot be happy by simply executing pious or impious activities. Such activities simply cause entanglement and transmigration from one body to another. Narottama dāsa Ṭhākura calls this <span class="Italic">karma-bandha-phāṅsa.</span>
+          </p>
+          <p>
+            King Prācīnabarhiṣat admitted this fact and frankly asked Nārada Muni how he could get out of this <span class="Italic">karma-bandha-phāṅsa,</span> entanglement in fruitive activities. This is actually the stage of knowledge indicated in the first verse of <span class="Italic">Vedānta-sūtra:</span> <span class="Italic">athāto brahma jijñāsā.</span> When one actually reaches the platform of frustration in an attempt to discharge <span class="Italic">karma-bandha-phāṅsa,</span> he inquires about the real value of life, which is called <span class="Italic">brahma jijñāsā.</span> In order to inquire about the ultimate goal of life, the <span class="Italic">Vedas</span> enjoin, <span class="Italic">tad-vijñānārthaṁ sa gurum evābhigacchet: </span><span class="Ref_Italic">[MU</span> <popup><div class="Verse">tad-vijñānārthaṁ sa gurum evābhigacchet<br>samit-pāṇiḥ śrotriyaṁ brahma-niṣṭham</div></popup>
+          </p>
+          <p>
+            “To understand these things properly, one must humbly approach, with firewood in hand, a spiritual master who is learned in the <i>Vedas</i> and firmly devoted to the Absolute Truth.” <br><span class="Ref_Italic">[Muṇḍaka Upaniṣad</span> 1.2.12]
+          </p>
+          <p>
+            <lt>1.2.12] “In order to understand the transcendental science, one must approach a bona fide spiritual master.”</lt>
+          </p>
+          <p>
+            King Prācīnabarhiṣat found the best spiritual master, Nārada Muni, and he therefore asked him about that knowledge by which one can get out of the entanglement of <span class="Italic">karma-bandha-phāṅsa,</span> fruitive activities. This is the actual business of human life. <span class="Italic">Jīvasya tattva jijñāsā nārtho yaś ceha karmabhiḥ.</span> As stated in the Second Chapter of the First Canto of <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.10), a human being’s only business is inquiring from a bona fide spiritual master about extrication from the entanglement of <span class="Italic">karma-bandha-phāṅsa.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">221</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Those who are interested only in a so-called beautiful life—namely remaining as a householder entangled by sons and a wife and searching after wealth—think that such things are life’s ultimate goal. Such people simply wander in different types of bodies throughout this material existence without finding out the ultimate goal of life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Those who are too much attached to family life—which consists of entanglement with wife, children, wealth and home—are engaged in <span class="Italic">kūṭa-dharma,</span> pseudo duties. Prahlāda Mahārāja has likened these pseudo occupational duties to a dark well (<span class="Italic">andha-kūpam</span>). Prahlāda has purposefully spoken of this dark well because if one falls into this well, he will die. He may cry for help, but no one will hear him or come to rescue him.
+          </p>
+          <p>
+            The words <span class="Italic">bhrāmyan saṁsāra-vartmasu</span> are significant. In <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 19.151), Śrī Caitanya Mahāprabhu very clearly explains: <span class="Italic">brahmāṇḍa bhramite kona bhāgyavān jīva.</span> All living entities are wandering in different types of bodies throughout different planets, and if, in the course of their wanderings, they come in contact with a devotee by the direction of the Supreme Personality of Godhead, their lives become successful. Even though King Prācīnabarhiṣat was engaged in fruitive activity, the great sage Nārada appeared before him. The King was very fortunate to be able to associate with Nārada, who enlightened him in spiritual knowledge. It is the duty of all saintly persons to follow in the footsteps of Nārada Muni and travel all over the world to every country and village just to instruct illusioned persons about the goal of life and to save them from the entanglement of <span class="Italic">karma-bandha,</span> fruitive activity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">155</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great saint Nārada said: O ruler of the citizens, my dear King, please see in the sky those animals which you have sacrificed without compassion and without mercy in the sacrificial arena.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Because animal sacrifice is recommended in the <span class="Italic">Vedas,</span> there are animal sacrifices in almost all religious rituals. However, one should not be satisfied simply by killing animals according to the directions of the scriptures. One should transcend the ritualistic ceremonies and try to understand the actual truth, the purpose of life. Nārada Muni wanted to instruct the King about the real purpose of life and invoke a spirit of renunciation in his heart. Knowledge and the spirit of renunciation (<span class="Italic">jñāna-vairāgya</span>) are the ultimate goal of life. Without knowledge, one cannot become detached from material enjoyment, and without being detached from material enjoyment, one cannot make spiritual advancement. <span class="Italic">Karmīs</span> are generally engaged in sense gratification, and for this end they are prepared to commit so many sinful activities. Animal sacrifice is but one such sinful activity. Consequently, by his mystic power Nārada Muni showed King Prācīnabarhiṣat the dead animals which he had sacrificed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">278</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All these animals are awaiting your death so that they can avenge the injuries you have inflicted upon them. After you die, they will angrily pierce your body with iron horns.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Nārada Muni wanted to draw King Prācīnabarhiṣat’s attention to the excesses of killing animals in sacrifices. It is said in the <span class="Italic">śāstras</span> that by killing animals in a sacrifice, one immediately promotes them to human birth. Similarly, by killing their enemies on a battlefield, the <span class="Italic">kṣatriyas</span> who fight for a right cause are elevated to the heavenly planets after death. In <span class="Italic">Manu-saṁhitā</span> it is stated that it is necessary for a king to execute a murderer so that the murderer will not suffer for his criminal actions in his next life. On the basis of such understanding, Nārada Muni warns the King that the animals killed in sacrifices by the King await him at his death in order to avenge themselves. Nārada Muni is not contradicting himself here. Nārada Muni wanted to convince the King that overindulgence in animal sacrifice is risky because as soon as there is a small discrepancy in the execution of such a sacrifice, the slaughtered animal may not be promoted to a human form of life. Consequently, the person performing sacrifice will be responsible for the death of the animal, just as much as a murderer is responsible for killing another man. When animals are killed in a slaughterhouse, six people connected with the killing are responsible for the murder. The person who gives permission for the killing, the person who kills, the person who helps, the person who purchases the meat, the person who cooks the flesh and the person who eats it, all become entangled in the killing. Nārada Muni wanted to draw the King’s attention to this fact. Thus animal-killing is not encouraged even in a sacrifice.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">673</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this connection I wish to narrate an old history connected with the character of a king called Purañjana. Please try to hear me with great attention.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The great sage Nārada Muni turned toward another topic—the history of King Purañjana. This is nothing but the history of King Prācīnabarhiṣat told in a different way. In other words, this is an allegorical presentation. The word <span class="Italic">purañjana</span> means “one who enjoys in a body.” This is clearly explained in the next few chapters. Because a person entangled in material activities wants to hear stories of material activities, Nārada Muni turned to the topics of King Purañjana, who is none other than King Prācīnabarhiṣat. Nārada Muni did not directly deprecate the value of performing sacrifices in which animals are sacrificed. Lord Buddha, however, directly rejected all animal sacrifice. Śrīla Jayadeva Gosvāmī has stated: <span class="Italic">nindasi yajña-vidher ahaha śruti-jātam.</span> The word <span class="Italic">śruti jātam</span> indicates that in the <span class="Italic">Vedas</span> animal sacrifice is recommended, but Lord Buddha directly denied Vedic authority in order to stop animal sacrifice. Consequently Lord Buddha is not accepted by the followers of the <span class="Italic">Vedas.</span> Because he does not accept the authority of the <span class="Italic">Vedas,</span> Lord Buddha is depicted as an agnostic or atheist. The great sage Nārada cannot decry the authority of the <span class="Italic">Vedas,</span> but he wanted to indicate to King Prācīnabarhiṣat that the path of <span class="Italic">karma-kāṇḍa</span> is very difficult and risky.
+          </p>
+          <p>
+            Foolish persons accept the difficult path of <span class="Italic">karma-kāṇḍa</span> for the sake of sense enjoyment, and those who are too much attached to sense enjoyment are called <span class="Italic">mūḍhas</span> (rascals). It is very difficult for a <span class="Italic">mūḍha</span> to understand the ultimate goal of life. In the propagation of the Kṛṣṇa consciousness movement, we actually see that many people are not attracted because they are <span class="Italic">mūḍhas</span> engaged in fruitive activity. It is said: <span class="Italic">upadeśo hi mūrkhāṇāṁ prakopāya na śāntaye.</span> If good instructions are given to a foolish rascal, he simply becomes angry and turns against the instructions instead of taking advantage of them. Because Nārada Muni knew this very well, he indirectly instructed the King by giving him the history of his entire life. In order to wear a gold or diamond nose pin or earring, one has to pierce the ear or nose. Such pain endured for the sake of sense gratification is endured on the path of <span class="Italic">karma-kāṇḍa,</span> the path of fruitive activity. If one wishes to enjoy something in the future, he has to endure trouble in the present. If one wants to become a millionaire in the future and enjoy his riches, he has to work very hard at the present moment in order to accumulate money. This is <span class="Italic">karma-kāṇḍīya.</span> Those who are too much attached to such a path undergo the risk anyway. Nārada Muni wanted to show King Prācīnabarhiṣat how one undergoes great troubles and miseries in order to engage in fruitive activity. A person who is very much attached to material activity is called <span class="Italic">viṣayī.</span> A <span class="Italic">viṣayī</span> is an enjoyer of <span class="Italic">viṣaya,</span> which means eating, sleeping, mating and defending. Nārada Muni is indirectly indicating through the story of King Purañjana that eating, sleeping, mating and defending are troublesome and risky.
+          </p>
+          <p>
+            The words <span class="Italic">itihāsam</span> (“history”) and <span class="Italic">purātanam</span> (“old”) indicate that although a living entity lives within the material body, the history of the living entity within the material body is very old. In this regard, Śrīla Bhaktivinoda Ṭhākura has sung, <span class="Italic">anādi karama-phale, padi’ bhavārṇava jale, taribāre nā dekhi upāya:</span> “Due to my past fruitive activities I have fallen into the water of material existence, and I cannot find any way to get out of it.” Every living entity is suffering in this material existence from past activities; therefore everyone has a very old history. Foolish material scientists have manufactured their own theories of evolution, which are simply concerned with the material body. But actually this is not the real evolution. The real evolution is the history of the living entity, who is <span class="Italic">purañjana,</span> “living within the body.” Śrī Nārada Muni will explain this evolutionary theory in a different way for the understanding of sane persons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">690</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, once in the past lived a king named Purañjana, who was celebrated for his great activities. He had a friend named Avijñāta [“the unknown one”]. No one could understand the activities of Avijñāta.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Every living entity is <span class="Italic">purañjana.</span> The word <span class="Italic">puram</span> means “within this body, within this form,” and <span class="Italic">jana</span> means “living entity.” Thus everyone is <span class="Italic">purañjana.</span> Every living entity is supposed to be the king of his body because the living entity is given full freedom to use his body as he likes. He usually engages his body for sense gratification, because one who is in the bodily conception of life feels that the ultimate goal of life is to serve the senses. This is the process of <span class="Italic">karma-kāṇḍa.</span> One who has no inner knowledge, who does not know that he is actually the spirit soul living within the body, who is simply enamored by the dictation of the senses, is called a materialist. A materialistic person interested in sense gratification can be called a <span class="Italic">purañjana.</span> Because such a materialistic person utilizes his senses according to his whims, he may also be called a king. An irresponsible king takes the royal position to be his personal property and misuses his treasury for sense gratification.
+          </p>
+          <p>
+            The word <span class="Italic">bṛhac-chravāḥ</span> is also significant. The word <span class="Italic">śravaḥ</span> means “fame.” The living entity is famous from ancient times, for as stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.20), <span class="Italic">na jāyate mriyate vā:</span> “The living entity is never born and never dies.” Because he is eternal, his activities are eternal, although they are performed in different types of bodies. <span class="Italic">Na hanyate hanyamāne śarīre:</span> [Bg. 2.20] “He does not die, even after the annihilation of the body.” Thus the living entity transmigrates from one body to another and performs various activities. In each body the living entity performs so many acts. Sometimes he becomes a great hero—just like Hiraṇyakaśipu and Kaṁsa or, in the modern age, Napoleon or Hitler. The activities of such men are certainly very great, but as soon as their bodies are finished, everything else is finished. Then they remain in name only. Therefore a living entity may be called <span class="Italic">bṛhac-chravāḥ;</span> he may have a great reputation for various types of activities. Nonetheless, he has a friend whom he does not know. Materialistic persons do not understand that God is present as the Supersoul, who is situated within the heart of every living entity. Although the Paramātmā sits beside the <span class="Italic">jīvātmā</span> as a friend, the <span class="Italic">jīvātmā,</span> or living entity, does not know it. Consequently he is described as <span class="Italic">avijñāta-sakhā,</span> meaning “one who has an unknown friend.” The word <span class="Italic">avijñāta-ceṣṭitaḥ</span> is also significant because a living entity works hard under the direction of the Paramātmā and is carried away by the laws of nature. Nonetheless, he thinks himself independent of God and independent of the stringent laws of material nature. It is stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.24):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">acchedyo ’yam adāhyo ’yam<br>akledyo ’śoṣya eva ca<br>nityaḥ sarva-gataḥ sthāṇur<br>acalo ’yaṁ sanātanaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This individual soul is unbreakable and insoluble and can be neither burned nor dried. He is everlasting, all-pervading, unchangeable, immovable and eternally the same.”
+          </p>
+          <p>
+            The living entity is <span class="Italic">sanātana,</span> eternal. Because he cannot be killed by any weapon, burnt into ashes by fire, soaked or moistened by water, nor dried up by air, he is considered to be immune to material reactions. Although he is changing bodies, he is not affected by the material conditions. He is placed under the material conditions, and he acts according to the directions of his friend, the Supersoul. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarvasya cāhaṁ hṛdi sanniviṣṭo<br>mattaḥ smṛtir jñānam apohanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” Thus the Lord as Paramātmā is situated in everyone’s heart, and He gives directions to the living entity to act in whatever way the living entity desires. In this life and in his previous lives the living entity does not know that the Lord is giving him a chance to fulfill all kinds of desires. No one can fulfill any desire without the sanction of the Lord. All the facilities given by the Lord are unknown to the conditioned soul.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">816</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Purañjana began to search for a suitable place to live, and thus he traveled all over the world. Even after a great deal of traveling, he could not find a place just to his liking. Finally he became morose and disappointed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The travelings of Purañjana are similar to the travelings of the modern hippies. Generally hippies are sons of great fathers and great families. It is not that they are always poor. But some way or another they abandon the shelter of their rich fathers and travel all over the world. As stated in this verse, the living entity wants to become a <span class="Italic">prabhu,</span> or master. The word <span class="Italic">prabhu</span> means “master,” but actually the living entity is not a master; he is the eternal servant of God. When the living entity abandons the shelter of God, Kṛṣṇa, and tries to become a <span class="Italic">prabhu</span> independently, he travels all over the creation. There are 8,400,000 species of life and millions and millions and trillions of planets within the creation. The living entity wanders throughout these various types of bodies and throughout different planets, and thus he is like King Purañjana, who traveled all over the world looking for a suitable place to live.
+          </p>
+          <p>
+            Śrī Narottama dāsa Ṭhākura has sung, <span class="Italic">karma-kāṇḍa, jñāna-kāṇḍa, kevala viṣera bhāṇḍa:</span> “The path of <span class="Italic">karma-kāṇḍa</span> [fruitive activities] and the path of <span class="Italic">jñāna-kāṇḍa</span> [speculation] are just like strong pots of poison.” <span class="Italic">Amṛta baliyā yebā khāya, nānā yoni sadā phire:</span> “A person who mistakes this poison to be nectar and drinks it travels in different species of life.” <span class="Italic">Kadarya bhakṣaṇa kare:</span> “And, according to his body, he eats all types of abominable things.” For instance, when the living entity is in the body of a hog, he eats stool. When the living entity is in the body of a crow, he eats all kinds of refuse, even pus and mucus, and enjoys it. Thus Narottama dāsa Ṭhākura points out that the living entity travels in different types of bodies and eats all kinds of abominable things. When he does not become ultimately happy, he becomes morose or takes to the ways of hippies.
+          </p>
+          <p>
+            Thus in this verse it is said (<span class="Italic">na anurūpam</span>) that the King could never find a place suitable for his purposes. This is because in any form of life and on any planet in the material world, a living entity cannot be happy because everything in the material world is unsuitable for the spirit soul. As stated in this verse, the living entity independently wants to become a <span class="Italic">prabhu,</span> but as soon as he gives up this idea and becomes a servant of God, Kṛṣṇa, his happiness immediately begins. Therefore Śrīla Bhaktivinoda Ṭhākura sings:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp"><0>miche māyāra vaśe,     yāccha bhese’,<br>khāccha hābuḍubu, bhāi<fc></fc></0></div></blockquote>
+          </p>
+          <p>
+            “My dear living entity, why are you being carried away by the waves of <span class="Italic">māyā</span>?” As stated in the <span class="Ref_Italic">Bhagavad-gītā</span> (18.61):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ sarva-bhūtānāṁ<br>hṛd-deśe ’rjuna tiṣṭhati<br>bhrāmayan sarva-bhūtāni<br>yantrārūḍhāni māyayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Lord is situated in everyone’s heart, O Arjuna, and is directing the wanderings of all living entities, who are seated as on a machine, made of the material energy.”
+          </p>
+          <p>
+            The living entity is carried in the machine of the body through so many species of life on so many planets. Therefore Bhaktivinoda Ṭhākura asks the living entity why he is being carried away in these bodily machines to be placed in so many different circumstances. He advises that one surmount the waves of <span class="Italic">māyā</span> by surrendering unto Kṛṣṇa.
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp"><0>jīva kṛṣṇa-dāsa,     ei viśvāsa,<br>karle ta’ āra duḥkha nāi<fc></fc></0></div></blockquote>
+          </p>
+          <p>
+            As soon as we confront Kṛṣṇa, Kṛṣṇa advises:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-dharmān parityajya<br>mām ekaṁ śaraṇaṁ vraja<br>ahaṁ tvāṁ sarva-pāpebhyo<br>mokṣayiṣyāmi mā śucaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction. Do not fear.” (Bg. 18.66)
+          </p>
+          <p>
+            Thus we are immediately relieved from traveling from one body to another and from one planet to another. Śrī Caitanya Mahāprabhu says: <span class="Italic">brahmāṇḍa bhramite kona bhāgyavān jīva</span> (Cc. <span class="Ref_Italic">Madhya</span> 19.151). If, while traveling, a living entity becomes fortunate enough to become blessed by the association of devotees and to come to Kṛṣṇa consciousness, his real life actually begins. This Kṛṣṇa consciousness movement is giving all wandering living entities a chance to take to the shelter of Kṛṣṇa and thus become happy.
+          </p>
+          <p>
+            In this verse the words <span class="Italic">vimanā iva</span> are very significant. In this material world even the great King of heaven is also full of anxiety. If even Lord Brahmā is full of anxiety, what of these ordinary living entities who are working within this planet? <span class="Ref_Italic">Bhagavad-gītā</span> (8.16) confirms:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ābrahma-bhuvanāl lokāḥ<br>punar āvartino ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “From the highest planet in the material world down to the lowest, all are places of misery wherein repeated birth and death take place.” In the material world a living entity is never satisfied. Even in the position of Brahmā or in the position of Indra or Candra, one is full of anxiety simply because he has accepted this material world as a place of happiness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">334</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Purañjana had unlimited desires for sense enjoyment; consequently he traveled all over the world to find a place where all his desires could be fulfilled. Unfortunately he found a feeling of insufficiency everywhere.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Śrīla Vidyāpati, a great Vaiṣṇava poet, has sung:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp"><0>tātala saikate, vāri-bindu-sama,<br>suta-mita-ramaṇī-samāje<fc></fc></0></div></blockquote>
+          </p>
+          <p>
+            Material sense gratification, with society, friendship and love, is herein compared to a drop of water falling on a desert. A desert requires oceans of water to satisfy it, and if only a drop of water is supplied, what is its use? Similarly, the living entity is part and parcel of the Supreme Personality of Godhead, who, as stated in the <span class="Italic">Vedānta-sūtra,</span> is <span class="Italic">ānandamayo ’bhyāsāt,</span> full of enjoyment. Being part and parcel of the Supreme Personality of Godhead, the living entity is also seeking complete enjoyment. However, complete enjoyment cannot be achieved separate from the Supreme Personality of Godhead. In his wanderings in the different species of life, the living entity may taste some type of enjoyment in one body or another, but full enjoyment of the senses cannot be obtained in any material body. Thus Purañjana, the living entity, wanders in different types of bodies, but everywhere meets frustration in his attempt to enjoy. In other words, the spiritual spark covered by matter cannot fully enjoy the senses in any circumstance in material life. A deer may become absorbed in the musical sounds vibrated by the hunter, but the result is that it loses its life. Similarly, a fish is very expert in gratifying its tongue, but when it eats the bait offered by the fisherman, it loses its life. Even the elephant, who is so strong, is captured and loses its independence while satisfying its genitals with a female elephant. In each and every species of life, the living entity gets a body to satisfy various senses, but he cannot enjoy all his senses at one time. In the human form of life he gets an opportunity to enjoy all his senses pervertedly, but the result is that he becomes so harassed in his attempted sense gratification that he ultimately becomes morose. As he tries to satisfy his senses more and more, he becomes more and more entangled.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">816</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Once, while wandering in this way, he saw on the southern side of the Himalayas, in a place named Bhārata-varṣa [India], a city that had nine gates all about and was characterized by all auspicious facilities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The tract of land south of the Himalaya Mountains is the land of India, which was known as Bhārata-varṣa. When a living entity takes birth in Bhārata-varṣa he is considered to be most fortunate. Indeed, Caitanya Mahāprabhu has stated:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (Cc. <span class="Ref_Italic">Ādi</span> 9.41)
+          </p>
+          <p>
+            Thus whoever takes birth in the land of Bhārata-varṣa attains all the facilities of life. He may take advantage of all these facilities for both material and spiritual advancement and thus make his life successful. After attaining the goal of life, one may distribute his knowledge and experience all over the world for humanitarian purposes. In other words, one who takes birth in the land of Bhārata-varṣa by virtue of his past pious activities gets full facility to develop the human form of life. In India, the climatic condition is such that one can live very peacefully without being disturbed by material conditions. Indeed, during the time of Mahārāja Yudhiṣṭhira or Lord Rāmacandra, people were free from all anxieties. There was not even extreme cold or extreme heat. The three kinds of miserable conditions—<span class="Italic">adhyātmika, adhibhautika</span> and <span class="Italic">adhidaivika</span> (miseries inflicted by the body and mind itself, those inflicted by other living entities, and natural disturbances)—were all absent during the reign of Lord Rāmacandra or Mahārāja Yudhiṣṭhira. But at present, compared to other countries on earth, India is artificially disturbed. Despite these material disturbances, however, the country’s culture is such that one can easily attain the goal of life—namely salvation, or liberation from material bondage. Thus in order to take birth in India one must have performed many pious activities in a past life.
+          </p>
+          <p>
+            In this verse the word <span class="Italic">lakṣita-lakṣaṇām</span> indicates that the human body attained in Bhārata-varṣa is very auspicious. Vedic culture is full of knowledge, and a person born in India can fully take advantage of Vedic cultural knowledge and the cultural system known as <span class="Italic">varṇāśrama-dharma.</span> Even at the present time, as we travel all over the world, we see that in some countries human beings have many material facilities but no facilities for spiritual advancement. We find everywhere the defects of one-sided facilities and a lack of full facilities. A blind man can walk but not see, and a lame man cannot walk but can see. <span class="Italic">Andha-paṅgu-nyāya.</span> The blind man may take the lame man over his shoulder, and as he walks the lame man may give him directions. Thus combined they may work, but individually neither the blind man nor the lame man can walk successfully. Similarly, this human form of life is meant for the advancement of spiritual life and for keeping the material necessities in order. Especially in the Western countries there are ample facilities for material comforts, but no one has any idea of spiritual advancement. Many are hankering after spiritual advancement, but many cheaters come, take advantage of their money, bluff them and go away. Fortunately the Kṛṣṇa consciousness movement is there to give all facilities for both material and spiritual advancement. In this way people in the Western countries may take advantage of this movement. In India any man in the villages, unaffected by the industrial cities of India, can still live in any condition and make spiritual advancement. The body has been called the city of nine gates, and these nine gates include two eyes, two ears, two nostrils, one mouth, a genital and a rectum. When the nine gates are clean and working properly, it is to be understood that the body is healthy. In India these nine gates are kept clean by the villagers who rise early in the morning, bathe in the well or rivers, go to the temples to attend <span class="Italic">maṅgala-ārati,</span> chant the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> and take <span class="Italic">prasāda.</span> In this way one can take advantage of all the facilities of human life. We are gradually introducing this system in different centers in our Society in the Western countries. One who takes advantage of it becomes more and more enlightened in spiritual life. At the present moment, India may be compared to the lame man and the Western countries to the blind man. For the past two thousand years India has been subjugated by the rule of foreigners, and the legs of progress have been broken. In the Western countries the eyes of the people have become blind due to the dazzling glitter of material opulence. The blind man of the Western countries and the lame man of India should combine together in this Kṛṣṇa consciousness movement. Then the lame man of India can walk with the help of the Westerner, and the blind Westerner can see with the help of the lame man. In short, the material advancement of the Western countries and the spiritual assets of India should combine for the elevation of all human society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">143</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            That city was surrounded by walls and parks, and within it were towers, canals, windows and outlets. The houses there were decorated with domes made of gold, silver and iron.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The body is protected by walls of skin. The hairs on the body are compared to parks, and the highest parts of the body, like the nose and head, are compared to towers. The wrinkles and depressions on different parts of the body are compared to trenches or canals, the eyes are compared to windows, and the eyelids are compared to protective gates. The three types of metal—gold, silver and iron—represent the three modes of material nature. Gold represents goodness; silver, passion; and iron, ignorance. The body is also sometimes considered to be a bag containing three elements (<span class="Italic">tri-dhātu</span>): mucus, bile and air (<span class="Italic">kapha, pitta</span> and <span class="Italic">vāyu</span>). <span class="Italic">Yasyātma-buddhiḥ kuṇape tri-dhātuke.</span> According to <span class="Ref_Italic">Bhāgavatam</span> (10.84.13), one who considers this bag of mucus, bile and air to be the self is considered no better than a cow or an ass.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">73</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The floors of the houses in that city were made of sapphire, crystal, diamonds, pearls, emeralds and rubies. Because of the luster of the houses in the capital, the city was compared to the celestial town named Bhogavatī.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            In the city of the body, the heart is considered to be the capital. Just as the capital of a state is especially gorgeously filled with various high buildings and lustrous palaces, the heart of the body is filled with various desires and plans for material enjoyment. Such plans are sometimes compared to valuable jewels such as sapphires, rubies, pearls and emeralds. The heart becomes the center for all planning for material enjoyment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">191</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In that city there were many assembly houses, street crossings, streets, restaurants, gambling houses, markets, resting places, flags, festoons and beautiful parks. All these surrounded the city.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            In this way the capital is described. In the capital there are assembly houses and many squares, many street crossings, avenues and streets, many gambling places, markets and places of rest, all decorated with flags and festoons. The squares are surrounded with railings and are devoid of trees. The heart of the body can be compared to the assembly house, for the living entity is within the heart along with the Paramātmā, as stated in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15): <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca.</span> The heart is the center of all remembrance, forgetfulness and deliberation. In the body the eyes, ears and nose are different places of attraction for sense enjoyment, and the streets for going hither and thither may be compared to different types of air blowing within the body. The yogic process for controlling the air within the body and the different nerves is called <span class="Italic">suṣumnā,</span> the path of liberation. The body is also a resting place because when the living entity becomes fatigued he takes rest within the body. The palms and the soles of the feet are compared to flags and festoons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">276</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the outskirts of that city were many beautiful trees and creepers encircling a nice lake. Also surrounding that lake were many groups of birds and bees that were always chanting and humming.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Since the body is a great city, there must be various arrangements such as lakes and gardens for sense enjoyment. Of the various parts of the body, those which incite sexual impulses are referred to here indirectly. Because the body has genitals, when the living entity attains the right age—be he man or woman—he becomes agitated by the sex impulse. As long as one remains a child, he is not agitated by seeing a beautiful woman. Although the sense organs are present, unless the age is ripe there is no sex impulse. The favorable conditions surrounding the sex impulse are compared here to a garden or a nice solitary park. When one sees the opposite sex, naturally the sex impulse increases. It is said that if a man in a solitary place does not become agitated upon seeing a woman, he is to be considered a <span class="Italic">brahmacārī.</span> But this practice is almost impossible. The sex impulse is so strong that even by seeing, touching or talking, coming into contact with, or even thinking of the opposite sex—even in so many subtle ways—one becomes sexually impelled. Consequently, a <span class="Italic">brahmacārī</span> or <span class="Italic">sannyāsī</span> is prohibited to associate with women, especially in a secret place. The <span class="Italic">śāstras</span> enjoin that one should not even talk to a woman in a secret place, even if she happens to be one’s own daughter, sister or mother. The sex impulse is so strong that even if one is very learned, he becomes agitated in such circumstances. If this is the case, how can a young man in a nice park remain calm and quiet after seeing a beautiful young woman?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">120</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The branches of the trees standing on the bank of the lake received particles of water carried by the spring air from the falls coming down from the icy mountain.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            In this verse the word <span class="Italic">hima-nirjhara</span> is particularly significant. The waterfall represents a kind of liquid humor or <span class="Italic">rasa</span> (relationship). In the body there are different types of humor, <span class="Italic">rasa</span> or mellow. The supreme mellow (relationship) is called the sexual mellow (<span class="Italic">ādi-rasa</span>). When this <span class="Italic">ādi-rasa,</span> or sex desire, comes in contact with the spring air moved by Cupid, it becomes agitated. In other words, all these are representations of <span class="Italic">rūpa, rasa, gandha, śabda</span> and <span class="Italic">sparśa.</span> The wind is <span class="Italic">sparśa,</span> or touch. The waterfall is <span class="Italic">rasa,</span> or taste. The spring air (<span class="Italic">kusumākara</span>) is smell. All these varieties of enjoyment make life very pleasing, and thus we become captivated by material existence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In such an atmosphere even the animals of the forest became nonviolent and nonenvious like great sages. Consequently, the animals did not attack anyone. Over and above everything was the cooing of the cuckoos. Any passenger passing along that path was invited by that atmosphere to take rest in that nice garden.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            A peaceful family with wife and children is compared to the peaceful atmosphere of the forest. Children are compared to nonviolent animals. Sometimes, however, wives and children are called <span class="Italic">svajanākhya-dasyu,</span> burglars in the name of kinsmen. A man earns his livelihood with hard labor, but the result is that he is plundered by his wife and children exactly as a person in a forest is attacked by some thieves and burglars who take his money. Nonetheless, in family life the turmoil of wife and children appears to be like the cooing of the cuckoos in the garden of family life. Being invited by such an atmosphere, the person who is passing through such a blissful family life desires to have his family with him at all costs.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While wandering here and there in that wonderful garden, King Purañjana suddenly came in contact with a very beautiful woman who was walking there without any engagement. She had ten servants with her, and each servant had hundreds of wives accompanying him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            The body has already been compared to a beautiful garden. During youth the sex impulse is awakened, and the intelligence, according to one’s imagination, is prone to contact the opposite sex. In youth a man or woman is in search of the opposite sex by intelligence or imagination, if not directly. The intelligence influences the mind, and the mind controls the ten senses. Five of these senses gather knowledge, and five work directly. Each sense has many desires to be fulfilled. This is the position of the body and the owner of the body, <span class="Italic">purañjana,</span> who is within the body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">155</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The woman was protected on all sides by a five-hooded snake. She was very beautiful and young, and she appeared very anxious to find a suitable husband.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            The vital force of a living entity includes the five kinds of air working within the body, which are known as <span class="Italic">prāṇa, apāna, vyāna, samāna</span> and <span class="Italic">udāna.</span> The vital force is compared to a serpent because a serpent can live by simply drinking air. The vital force carried by the air is described as the <span class="Italic">pratīhāra,</span> or the bodyguard. Without the vital force one cannot live for a moment. Indeed, all the senses are working under the protection of the vital force.
+          </p>
+          <p>
+            The woman, who represents intelligence, was searching after a husband. This indicates that intelligence cannot act without consciousness. A beautiful woman is useless unless protected by the proper husband. Intelligence must always be very fresh; therefore the word <span class="Italic">aprauḍhām</span> (“very young”) is used here. Material enjoyment means utilizing the intelligence for the sake of <span class="Italic">rūpa, rasa, gandha, śabda</span> and <span class="Italic">sparśa,</span> or form, taste, smell, sound and touch.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">110</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The woman’s nose, teeth and forehead were all very beautiful. Her ears were equally very beautiful and were bedecked with dazzling earrings.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The body of intelligence enjoys the objects of sense gratification that cover it, such as smell, vision and hearing. The word <span class="Italic">sunāsām</span> (“beautiful nose”) indicates the organ for acquiring knowledge by smell. Similarly, the mouth is the instrument for acquiring knowledge by taste, for by chewing an object and touching it with the tongue we can understand its taste. The word <span class="Italic">sukapolām</span> (“nice forehead”) indicates a clear brain capable of understanding things as they are. By intelligence one can set things in order. The earrings set upon the two ears are placed there by the work of the intelligence. Thus the ways of acquiring knowledge are described metaphorically.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">27</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The waist and hips of the woman were very beautiful. She was dressed in a yellow sārī with a golden belt. While she walked, her ankle bells rang. She appeared exactly like a denizen of the heavens.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            This verse expresses the joyfulness of the mind upon seeing a woman with raised hips and breasts dressed in an attractive <span class="Italic">sārī</span> and bedecked with ornaments.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">500</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            With the end of her sārī the woman was trying to cover her breasts, which were equally round and well placed side by side. She again and again tried to cover them out of shyness while she walked exactly like a great elephant.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            The two breasts represent attachment and envy. The symptoms of <span class="Italic">rāga</span> and <span class="Italic">dveṣa</span> (attachment and envy) are described in <span class="Ref_Italic">Bhagavad-gītā</span> (3.34):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">indriyasyendriyasyārthe<br>rāga-dveṣau vyavasthitau<br>tayor na vaśam āgacchet<br>tau hy asya paripanthinau</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Attraction and repulsion for sense objects are felt by embodied beings, but one should not fall under the control of senses and sense objects because they are stumbling blocks on the path of self-realization.”
+          </p>
+          <p>
+            These representatives of attachment and envy are very much unfavorable for advancement in spiritual life. One should not be attracted by the breasts of young women. The great saint Śaṅkarācārya has described the breasts of women, especially young women, as nothing but a combination of muscles and blood, so one should not be attracted by the illusory energy of raised breasts with nipples. They are agents of <span class="Italic">māyā</span> meant to victimize the opposite sex. Because the breasts are equally attractive, they are described as <span class="Italic">sama-vṛttau.</span> The sex impulse remains in an old man’s heart also, even up to the point of death. To be rid of such agitation, one must be very much advanced in spiritual consciousness, like Yāmunācārya, who said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yad-avadhi mama cetaḥ kṛṣṇa-pādāravinde<br>nava-nava-rasa-dhāmany udyataṁ rantum āsīt<br>tad-avadhi bata nārī-saṅgame smaryamāṇe<br>bhavati mukha-vikāraḥ suṣṭhu niṣṭhīvanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Since I have been engaged in the transcendental loving service of Kṛṣṇa, realizing ever-new pleasure in Him, whenever I think of sex pleasure, I spit at the thought, and my lips curl with distaste.” When one is spiritually advanced he can no longer be attracted by the lumps of flesh and blood which are the breasts of young women. The word <span class="Italic">nirantarau</span> is significant because although the breasts are situated in different locations, the action is the same. We should not make any distinction between attachment and envy. As described in <span class="Ref_Italic">Bhagavad-gītā</span> (3.37), they are both products of <span class="Italic">rajo-guṇa</span> (<span class="Italic">kāma eṣa krodha eṣa rajo-guṇa-samudbhavaḥ</span>).
+          </p>
+          <p>
+            The word <span class="Italic">nigūhantīm</span> (“trying to cover”) indicates that even if one is tainted by <span class="Italic">kāma, lobha, krodha,</span> etc., they can be transfigured by Kṛṣṇa consciousness. In other words, one can utilize <span class="Italic">kāma</span> (lust) for serving Kṛṣṇa. Being impelled by lust, an ordinary worker will work hard day and night; similarly a devotee can work hard day and night to satisfy Kṛṣṇa. Just as <span class="Italic">karmīs</span> are working hard to satisfy <span class="Italic">kāma-krodha,</span> a devotee should work in the same way to satisfy Kṛṣṇa. Similarly, <span class="Italic">krodha</span> (anger) can also be used in the service of Kṛṣṇa when it is applied to the nondevotee demons. Hanumānjī applied his anger in this way. He was a great devotee of Lord Rāmacandra, and he utilized his anger to set fire to the kingdom of Rāvaṇa, a nondevotee demon. Thus <span class="Italic">kāma</span> (lust) can be utilized to satisfy Kṛṣṇa, and <span class="Italic">krodha</span> (anger) can be utilized to punish the demons. When both are used for Kṛṣṇa’s service, they lose their material significance and become spiritually important.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">482</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Purañjana, the hero, became attracted by the eyebrows and smiling face of the very beautiful girl and was immediately pierced by the arrows of her lusty desires. When she smiled shyly, she looked very beautiful to Purañjana, who, although a hero, could not refrain from addressing her.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Every living entity is a hero in two ways. When he is a victim of the illusory energy, he works as a great hero in the material world, as a great leader, politician, businessman, industrialist, etc., and his heroic activities contribute to the material advancement of civilization. One can also become a hero by being master of the senses, a <span class="Italic">gosvāmī.</span> Material activities are false heroic activities, whereas restraining the senses from material engagement is great heroism. However great a hero one may be in the material world, he can be immediately conquered by the lumps of flesh and blood known as the breasts of women. In the history of material activities there are many examples, like the Roman hero Antony, who became captivated by the beauty of Cleopatra. Similarly, a great hero in India named Baji Rao became a victim of a woman during the time of Maharashtrian politics, and he was defeated. From history we understand that formerly politicians used to employ beautiful girls who were trained as <span class="Italic">viṣa-kanyā.</span> These girls had poison injected into their bodies from the beginning of their lives so that in due course of time they would become so immune to the poison and so poisonous themselves that simply by kissing a person they could kill him. These poisonous girls were engaged to see an enemy and kill him with a kiss. Thus there are many instances in human history of heroes who have been curbed simply by women. Being part and parcel of Kṛṣṇa, the living entity is certainly a great hero, but due to his own weakness he becomes attracted to the material features.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa-bahirmukha hañā bhoga-vāñchā kare<br>nikaṭa-stha māyā tāre jāpaṭiyā dhare</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            It is said in the <i>P<span class="Italic"></span></i>rema-vivarta that when a living entity wants to enjoy material nature, he is immediately victimized by the material energy. A living entity is not forced to come into the material world. He makes his own choice, being attracted by beautiful women. Every living entity has the freedom to be attracted by material nature or to stand as a hero and resist that attraction. It is simply a question of the living entity’s being attracted or not being attracted. There is no question of his being forced to come into contact with material energy. One who can keep himself steady and resist the attraction of material nature is certainly a hero and deserves to be called a <span class="Italic">gosvāmī.</span> Unless one is master of the senses, he cannot become a <span class="Italic">gosvāmī.</span> The living entity can take one of two positions in this world. He may become a servant of his senses, or he may become master of them. By becoming a servant of the senses, one becomes a great material hero, and by becoming master of the senses, he becomes a <span class="Italic">gosvāmī,</span> or spiritual hero.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">353</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear lotus-eyed, kindly explain to me where you are coming from, who you are, and whose daughter you are. You appear very chaste. What is the purpose of your coming here? What are you trying to do? Please explain all these things to me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The first aphorism in the <span class="Italic">Vedānta-sūtra</span> is <span class="Italic"><255>athāto brahma jijñāsā<bc>.</bc></255></span> In the human form of life one should put many questions to himself and to his intelligence. In the various forms of life lower than human life the intelligence does not go beyond the range of life’s primary necessities—namely eating, sleeping, mating and defending. Dogs, cats and tigers are always busy trying to find something to eat or a place to sleep, trying to defend and have sexual intercourse successfully. In the human form of life, however, one should be intelligent enough to ask what he is, why he has come into the world, what his duty is, who is the supreme controller, what is the difference between dull matter and the living entity, etc. There are so many questions, and the person who is actually intelligent should simply inquire about the supreme source of everything: <span class="Italic"><255>athāto brahma jijñāsā<bc>.</bc></255></span> A living entity is always connected with a certain amount of intelligence, but in the human form of life the living entity must inquire about his spiritual identity. This is real human intelligence. It is said that one who is simply conscious of the body is no better than an animal, even though he be in the human form. In <span class="Ref_Italic">Bhagavad-gītā</span> (15.15) Śrī Kṛṣṇa says, <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” In the animal form the living entity is completely forgetful of his relationship with God. This is called <span class="Italic">apohanam,</span> or forgetfulness. In the human form of life, however, consciousness is more greatly developed, and consequently the human being has a chance to understand his relationship with God. In the human form one should utilize his intelligence by asking all these questions, just as Purañjana, the living entity, is asking the unknown girl where she has come from, what her business is, why she is present, etc. These are inquiries about <span class="Italic">ātma-tattva</span>—self-realization. The conclusion is that unless a living entity is inquisitive about self-realization he is nothing but an animal.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">216</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear lotus-eyed, who are those eleven strong bodyguards with you, and who are those ten specific servants? Who are those women following the ten servants, and who is the snake that is preceding you?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            The ten strong servants of the mind are the five working senses and the five knowledge-gathering senses. All these ten senses work under the aegis of the mind. The mind and the ten senses combine to become eleven strong bodyguards. The hundreds of women under the jurisdiction of the senses are addressed here as <span class="Italic">lalanāḥ.</span> The mind works under the intelligence, and under the mind are the ten senses, and under the ten senses are innumerable desires to be fulfilled. All these, however, depend on the vital life-force, which is here represented by the snake. As long as the vital life-force is there, the mind works, and under the mind the senses work, and the senses give rise to so many material desires. Actually the living entity, known as <span class="Italic">purañjana,</span> is embarrassed by so much paraphernalia. All this paraphernalia simply constitutes different sources of anxiety, but one who is surrendered unto the Supreme Personality of Godhead, and who leaves all business to Him, is freed from such anxieties. Therefore Prahlāda Mahārāja advises a person who has taken to the materialistic way of life, which is never permanent but always temporary, to take shelter of the Supreme Personality of Godhead and leave aside all his so-called responsibilities in order to get free from all anxieties.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">449</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear beautiful girl, you are exactly like the goddess of fortune or the wife of Lord Śiva or the goddess of learning, the wife of Lord Brahmā. Although you must be one of them, I see that you are loitering in this forest. Indeed, you are as silent as the great sages. Is it that you are searching after your own husband? Whoever your husband may be, simply by understanding that you are so faithful to him, he will come to possess all opulences. I think you must be the goddess of fortune, but I do not see the lotus flower in your hand. Therefore I am asking you where you have thrown that lotus.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            Everyone thinks that his intelligence is perfect. Sometimes one employs his intelligence in the worship of Umā, the wife of Lord Śiva, in order to obtain a beautiful wife. Sometimes, when one wants to become as learned as Lord Brahmā, he employs his intelligence in the worship of the goddess of learning, Sarasvatī. Sometimes, when one wishes to become as opulent as Lord Viṣṇu, he worships the goddess of fortune, Lakṣmī. In this verse all these inquiries are made by King Purañjana, the living entity who is bewildered and does not know how to employ his intelligence. Intelligence should be employed in the service of the Supreme Personality of Godhead. As soon as one uses his intelligence in this way, the goddess of fortune automatically becomes favorable to him. The goddess of fortune, Lakṣmī, never remains without her husband, Lord Viṣṇu. Consequently, when one worships Lord Viṣṇu he automatically obtains the favor of the goddess of fortune. One should not, like Rāvaṇa, worship the goddess of fortune alone, for she cannot remain long without her husband. Thus her other name is Cañcalā, or restless. In this verse it is clear that Purañjana is representing our intelligence while he is talking with the girl. He not only appreciated the shyness of the girl but actually became more and more attracted by that shyness. He was actually thinking of becoming her husband and consequently was asking her whether she was thinking of her prospective husband or whether she was married. This is an example of <span class="Italic">bhoga-icchā</span>—the desire for enjoyment. One who is attracted by such desires becomes conditioned in this material world, and one who is not so attracted attains liberation. King Purañjana was appreciating the beauty of the girl as if she were the goddess of fortune, but at the same time he was careful to understand that the goddess of fortune cannot be enjoyed by anyone except Lord Viṣṇu. Since he doubted whether the girl was the goddess of fortune, he inquired about the lotus flower she was not holding. The material world is also the goddess of fortune because the material energy works under the direction of Lord Viṣṇu, as stated in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram</span>).
+          </p>
+          <p>
+            The material world cannot be enjoyed by any living entity. If one so desires to enjoy it, he immediately becomes a demon like Rāvaṇa, Hiraṇyakaśipu or Kaṁsa. Because Rāvaṇa wanted to enjoy the goddess of fortune, Sītādevī, he was vanquished with all his family, wealth and opulence. One can, however, enjoy that <span class="Italic">māyā</span> bestowed upon the living entity by Lord Viṣṇu. The satisfaction of one’s senses and desires means enjoying <span class="Italic">māyā,</span> not the goddess of fortune.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">322</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O greatly fortunate one, it appears that you are none of the women I have mentioned because I see that your feet are touching the ground. But if you are some woman of this planet, you can, like the goddess of fortune, who, accompanied by Lord Viṣṇu, increases the beauty of the Vaikuṇṭha planets, also increase the beauty of this city by associating with me. You should understand that I am a great hero and a very powerful king on this planet.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            There is a difference between demoniac mentality and devotional mentality. Devotees know perfectly well that the goddess of fortune, who is the constant companion of Viṣṇu, or Nārāyaṇa, cannot be enjoyed by a living entity. This higher sense of understanding is called Kṛṣṇa consciousness. Nonetheless, everyone wants to become happy by imitating the prosperity of Nārāyaṇa. In this verse Purañjana states that the girl appears to be an ordinary woman. However, since he is attracted by her, he requests that she become as happy as the goddess of fortune by associating with him. Thus he introduces himself as a great king with great influence so that she might accept him as her husband and be as happy as the goddess of fortune. To desire to enjoy this material world as a subordinate of the Supreme Personality of Godhead is godly. The demons, however, want to enjoy this material world without considering the Supreme Personality of Godhead. This is the difference between a demon and a demigod.
+          </p>
+          <p>
+            The word <span class="Italic">bhuvi-spṛk</span> mentioned in this verse is very significant. When the demigods sometimes come to this planet, they do not touch the ground. Purañjana could understand that this girl did not belong to the transcendental world or the higher planetary system because her feet were touching the ground. Since every woman in this world wants her husband to be very influential, rich and powerful, Purañjana, to seduce the girl, introduced himself as such a personality. In the material world, whether one be a man or a woman, one wants to enjoy. A man wants to enjoy a beautiful woman, and a woman wants to enjoy a powerful, opulent man. Every living entity who possesses such material desires is called <span class="Italic">puruṣa,</span> an enjoyer. Superficially it appears that the woman is the enjoyed and the man is the enjoyer, but internally everyone is an enjoyer. Consequently everything in this material world is called <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">140</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Certainly your glancing upon me today has very much agitated my mind. Your smile, which is full of shyness but at the same time lusty, is agitating the most powerful cupid within me. Therefore, O most beautiful, I ask you to be merciful upon me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            Everyone has lusty desires within, and as soon as one is agitated by the movement of a beautiful woman’s eyebrows, the cupid within immediately throws his arrow at the heart. Thus one is quickly conquered by the eyebrows of a beautiful woman. When one is agitated by lusty desires, his senses are attracted by all kinds of <span class="Italic">viṣaya</span> (enjoyable things like sound, touch, form, smell and taste). These attractive sense objects oblige one to come under the control of a woman. In this way the conditional life of a living entity begins. Conditional life means being under the control of a woman, and certainly the living entity is always at the mercy of a woman or a man. Thus living entities live in bondage to one another, and thus they continue this conditional, material life illusioned by <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">271</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear girl, your face is so beautiful with your nice eyebrows and eyes and with your bluish hair scattered about. In addition, very sweet sounds are coming from your mouth. Nonetheless, you are so covered with shyness that you do not see me face to face. I therefore request you, my dear girl, to smile and kindly raise your head to see me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Such a speech is typical of a living entity attracted by the opposite sex. This is called bewilderment occasioned by becoming conditioned by material nature. When thus attracted by the beauty of the material energy, one becomes very eager to enjoy. This is elaborately described in this instance of Purañjana’s becoming attracted by the beautiful woman. In conditional life the living entity is attracted by a face, eyebrows or eyes, a voice or anything. In short, everything becomes attractive. When a man or a woman is attracted by the opposite sex, it does not matter whether the opposite sex is beautiful or not. The lover sees everything beautiful in the face of the beloved and thus becomes attracted. This attraction causes the living entity to fall down in this material world. This is described in <span class="Ref_Italic">Bhagavad-gītā</span> (7.27):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">icchā-dveṣa-samutthena<br>dvandva-mohena bhārata<br>sarva-bhūtāni sammohaṁ<br>sarge yānti parantapa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O scion of Bharata [Arjuna], O conqueror of the foe, all living entities are born into delusion, overcome by the dualities of desire and hate.”
+          </p>
+          <p>
+            This condition of life is called <span class="Italic">avidyā.</span> Opposed to this <span class="Italic">avidyā</span> is real knowledge. <span class="Italic">Śrī Īśopaniṣad</span> distinguishes between <span class="Italic">vidyā</span> and <span class="Italic">avidyā,</span> knowledge and ignorance. By <span class="Italic">avidyā</span> (ignorance) one becomes conditioned, and by <span class="Italic">vidyā</span> (knowledge) one becomes liberated. Purañjana admits herein that he is attracted by <span class="Italic">avidyā.</span> Now he wishes to see the complete feature of <span class="Italic">avidyā</span> and so requests the girl to raise her head so that he can see her face to face. He thus wishes to see the various features that make <span class="Italic">avidyā</span> attractive.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">102</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada continued: My dear King, when Purañjana became so attracted and impatient to touch the girl and enjoy her, the girl also became attracted by his words and accepted his request by smiling. By this time she was certainly attracted by the King.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            By this incident we can understand that when a man is aggressive and begins to woo a woman, the woman becomes attracted to the man. This process is described in the <span class="Ref_Italic">Bhāgavatam</span> (5.5.8) as <span class="Italic">puṁsaḥ striyā mithunī-bhāvam etam.</span> This attraction is enacted on the platform of sexual life. Thus the sex impulse is the platform of material engagement. This conditional life, the platform of material sense enjoyment, is the cause of forgetfulness of spiritual life. In this way a living entity’s original Kṛṣṇa consciousness becomes covered or converted into material consciousness. Thus one engages in the business of sense gratification.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">344</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The girl said: O best of human beings, I do not know who has begotten me. I cannot speak to you perfectly about this. Nor do I know the names or the origin of the associates with me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            The living entity is ignorant of his origin. He does not know why this material world was created, why others are working in this material world and what the ultimate source of this manifestation is. No one knows the answers to these questions, and this is called ignorance. By researching into the origin of life, important scientists are finding some chemical compositions or cellular combinations, but actually no one knows the original source of life within this material world. The phrase <span class="Italic">brahma jijñāsā</span> is used to indicate an inquisitiveness to know the original source of our existence in this material world. No philosopher, scientist or politician actually knows wherefrom we have come, why we are here struggling so hard for existence and where we will go. Generally people are of the opinion that we are all here accidentally and that as soon as these bodies are finished all our dramatic activities will be finished and we will become zero. Such scientists and philosophers are impersonalists and voidists. In this verse the girl is expressing the actual position of the living entity. She cannot tell Purañjana her father’s name because she does not know from where she has come. Nor does she know why she is present in that place. She frankly says that she does not know anything about all this. This is the position of the living entity in the material world. There are so many scientists, philosophers and big leaders, but they do not know wherefrom they have come, nor do they know why they are busy within this material world to obtain a position of so-called happiness. In this material world we have many nice facilities for living, but we are so foolish that we do not ask who has made this world habitable for us and has arranged it so nicely. Everything is functioning in order, but people foolishly think that they are produced by chance in this material world and that after death they will become zero. They think that this beautiful place of habitation will automatically remain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">126</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great hero, we only know that we are existing in this place. We do not know what will come after. Indeed, we are so foolish that we do not care to understand who has created this beautiful place for our residence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            This lack of Kṛṣṇa consciousness is called ignorance. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.5) it is called <span class="Italic">parābhavas tāvad abodha jātaḥ.</span> Everyone is born ignorant. The <span class="Italic">Bhāgavatam</span> therefore says that we are all born ignorant within this material world. In our ignorance we may create nationalism, philanthropy, internationalism, science, philosophy and so many other things. The basic principle behind all these is ignorance. What then is the value of all this advancement of knowledge if the basic principle is ignorance? Unless a person comes to Kṛṣṇa consciousness, all of his activities are defeated. This human form of life is especially meant to dissipate ignorance, but without understanding how to dissipate ignorance people are planning and building many things. After death, however, all of this is finished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">265</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear gentleman, all these men and women with me are known as my friends, and the snake, who always remains awake, protects this city even during my sleeping hours. So much I know. I do not know anything beyond this.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Purañjana inquired from the woman about those eleven men and their wives and the snake. The woman gave a brief description of them. She was obviously without full knowledge of her surrounding men and women and the snake. As stated before, the snake is the vital force of the living being. This vital force always remains awake even when the body and the senses become fatigued and do no work. Even in the state of unconsciousness, when we sleep, the snake, or the life-force, remains intact and awake. Consequently we dream when we sleep. When the living entity gives up this material body, the vital force still remains intact and is carried to another material body. That is called transmigration, or change of the body, and we have come to know this process as death. Actually, there is no death. The vital force always exists with the soul, and when the soul is awakened from so-called sleep, he can see his eleven friends, or the active senses and the mind with their various desires (wives). The vital life-force remains. Even during our sleeping hours we can understand by virtue of our breathing process that the snake lives by eating the air that passes within this body. Air is exhibited in the form of breathing, and as long as breath is there, one can understand that a sleeping man is alive. Even when the gross body is asleep the vital force remains active and alive to protect the body. Thus the snake is described as living and eating air to keep the body fit for life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">238</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O killer of the enemy, you have somehow or other come here. This is certainly great fortune for me. I wish all auspicious things for you. You have a great desire to satisfy your senses, and all my friends and I shall try our best in all respects to fulfill your desires.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            The living entity comes down into this material world for sense gratification, and his intelligence, represented by the woman, gives him the proper direction by which he can satisfy his senses to their best capacity. In actuality, however, intelligence comes from the Supersoul, or the Supreme Personality of Godhead, and He gives full facility to the living entity who has come down to this material world. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.41):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vyavasāyātmikā buddhir<br>ekeha kuru-nandana<br>bahu-śākhā hy anantāś ca<br>buddhayo ’vyavasāyinām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who are on the spiritual path are resolute in purpose, and their aim is one. O beloved child of the Kurus, the intelligence of those who are irresolute is many-branched.”
+          </p>
+          <p>
+            When a devotee is advancing toward spiritual realization, his only aim is the service of the Supreme Personality of Godhead. He does not care for any other material or spiritual activity. King Purañjana represents the ordinary living entity, and the woman represents the ordinary living entity’s intelligence. Combined, the living entity enjoys his material senses, and the intelligence supplies all paraphernalia for his enjoyment. As soon as he enters the human form, the living entity is entrapped by a family tradition, nationality, customs, etc. These are all supplied by the <span class="Italic">māyā</span> of the Supreme Personality of Godhead. Thus the living entity, under the bodily conception of life, utilizes his intelligence to his best capacity in order to satisfy his senses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">100</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear lord, I have just arranged this city of nine gates for you so that you can have all kinds of sense gratification. You may live here for one hundred years, and everything for your sense gratification will be supplied.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            <span class="Italic">Dharmārtha-kāma-mokṣānāṁ dārāḥ samprāpti-hetavaḥ.</span> The wife is the cause of all kinds of success in religion, economic development, sense gratification and ultimately salvation. When one accepts a wife, it is to be understood that he is being helped in his progressive march toward liberation. In the beginning of life a person is trained as a <span class="Italic">brahmacārī</span> and is then allowed to marry a suitable girl and become a householder. If one is thoroughly trained in household life, he finds all facilities for human life—eating, sleeping, mating and defending. Everything is there if it is executed according to regulative principles.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">251</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            How can I expect to unite with others, who are neither conversant about sex nor capable of knowing how to enjoy life while living or after death? Such foolish persons are like animals because they do not know the process of sense enjoyment in this life and after death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            Since there are 8,400,000 species of life, there are also many different living conditions. In the lower grades of life (in plant and tree life) there is no system for sexual intercourse. In the upper grades (in the life of birds and bees) there is sex, but the insects and animals do not know how to actually enjoy sex life. In the human form of life, however, there is full knowledge of how to enjoy sex. Indeed, there are many so-called philosophers who give directions on how to enjoy sex life. There is even a science called <span class="Italic">kāma-śāstra,</span> which is the science of sex. In human life there are also such divisions as <span class="Italic">brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa.</span> There is no sex life except in the <span class="Italic">gṛhastha,</span> or householder, <span class="Italic">āśrama.</span> The <span class="Italic">brahmacārī</span> is not allowed any sex, a <span class="Italic">vānaprastha</span> voluntarily refrains from sex, and the <span class="Italic">sannyāsī</span> is completely renounced. The <span class="Italic">karmīs</span> do not practice <span class="Italic">brahmacarya, vānaprastha</span> or <span class="Italic">sannyāsa</span> life, for they are very much interested in <span class="Italic">gṛhastha</span> life. In other words, a human being is very much materially inclined. Indeed, all living entities are materially inclined. They prefer <span class="Italic">gṛhastha</span> life because there is a concession for sex. The <span class="Italic">karmīs</span> think the other statuses of life are worse than animal life, for animals also have sex, whereas the <span class="Italic">brahmacārī, vānaprastha</span> and <span class="Italic">sannyāsī</span> completely give up sex. The <span class="Italic">karmīs,</span> therefore, abhor these orders of spiritual life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">581</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The woman continued: In this material world, a householder’s life brings all kinds of happiness in religion, economic development, sense gratification and the begetting of children, sons and grandsons. After that, one may desire liberation as well as material reputation. The householder can appreciate the results of sacrifices, which enable him to gain promotion to superior planetary systems. All this material happiness is practically unknown to the transcendentalists. They cannot even imagine such happiness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            According to Vedic instructions, there are two paths for human activities. One is called <span class="Italic">pravṛtti-mārga,</span> and the other is called <span class="Italic">nivṛtti-mārga.</span> The basic principle for either of these paths is religious life. In animal life there is only <span class="Italic">pravṛtti-mārga.</span> <i>P<span class="Italic"></span></i>ravṛtti-mārga means sense enjoyment, and <span class="Italic">nivṛtti-mārga</span> means spiritual advancement. In the life of animals and demons, there is no conception of <span class="Italic">nivṛtti-mārga,</span> nor is there any actual conception of <span class="Italic">pravṛtti-mārga.</span> <span class="Italic">pravṛtti-mārga</span> maintains that even though one has the propensity for sense gratification, he can gratify his senses according to the directions of the Vedic injunctions. For example, everyone has the propensity for sex life, but in demoniac civilization sex is enjoyed without restriction. According to Vedic culture, sex is enjoyed under Vedic instructions. Thus the <span class="Italic">Vedas</span> give direction to civilized human beings to enable them to satisfy their propensities for sense gratification.
+          </p>
+          <p>
+            In the <span class="Italic">nivṛtti-mārga,</span> however, on the path of transcendental realization, sex is completely forbidden. The social orders are divided into four parts—<span class="Italic">brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa</span>—and only in the householder life can the <span class="Italic">pravṛtti-mārga</span> be encouraged or accepted according to Vedic instructions. In the orders of <span class="Italic">brahmacarya, vānaprastha</span> and <span class="Italic">sannyāsa,</span> there are no facilities for sex.
+          </p>
+          <p>
+            In this verse the woman is advocating <span class="Italic">pravṛtti-mārga</span> only and is discouraging the path of <span class="Italic">nivṛtti-mārga.</span> She clearly says that the <span class="Italic">yatis,</span> the transcendentalists, who are concerned only with spiritual life (<span class="Italic">kaivalya</span>), cannot imagine the happiness of <span class="Italic">pravṛtti-mārga.</span> In other words, the man who follows the Vedic principles enjoys the materialistic way of life not only by becoming happy in this life, but also in the next life by being promoted to the heavenly planets. In this life such a person gets all kinds of material opulences, such as sons and grandsons, because he is always engaged in various religious functions. The material distresses are birth, old age, disease and death, but those who are interested in <span class="Italic">pravṛtti-mārga</span> hold various religious functions at the time of birth, old age, disease and death. Without caring for the distresses of birth, old age, disease and death, they are addicted to performing the special functions according to the Vedic ritualistic ceremonies.
+          </p>
+          <p>
+            Factually, however, <span class="Italic">pravṛtti-mārga</span> is based on sex life. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.9.45), <span class="Italic">yan maithunādi-gṛhamedhi-sukhaṁ hi tuccham.</span> A householder who is too much addicted to <span class="Italic">pravṛtti-mārga</span> is actually called a <span class="Italic">gṛhamedhī,</span> not a <span class="Italic">gṛhastha.</span> Although the <span class="Italic">gṛhastha</span> desires sense gratification, he acts according to Vedic instructions. The <span class="Italic">gṛhamedhī,</span> however, who is interested only in sense gratification, does not follow any Vedic instruction. The <span class="Italic">gṛhamedhī</span> engages himself as an advocate of sex life and also allows his sons and daughters to engage in sex and to be deprived of any glorious end in life. A <span class="Italic">gṛhastha</span> enjoys sex life in this life as well as in the next, but a <span class="Italic">gṛhamedhī</span> does not know what the next life is about because he is simply interested in sex in this life. On the whole, when one is too much inclined toward sex, he does not care for the transcendental spiritual life. In this age of Kali especially, no one is interested in spiritual advancement. Even though it is sometimes found that one may be interested in spiritual advancement, he is most likely to accept a bogus method of spiritual life, being misguided by so many pretenders.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">275</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The woman continued: According to authorities, the householder life is pleasing not only to oneself but to all the forefathers, demigods, great sages, saintly persons and everyone else. A householder life is thus beneficial.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            According to the Vedic system, when one is born in this material world he has many obligations. He has obligations to the demigods—the demigods of the sun and moon, King Indra, Varuṇa, etc.—because they are supplying the necessities of life. We receive heat, light, water and all other natural amenities through the mercy of the demigods. We are also indebted to our forefathers, who have given us these bodies, paternal property, intelligence, society, friendship and love. Similarly, we are indebted to the general public for politics and sociology, and we are also indebted to lower animals such as horses, cows, asses, dogs and cats. In this way, as soon as one is born in this material world as a human being, he has so many obligations and is bound to repay all these obligations. If he does not repay them, he is further entangled in the process of birth and death. The <span class="Italic">gṛhamedhī,</span> however, who is overly addicted to material things, does not know that if he simply takes shelter at the lotus feet of Mukunda, he is immediately freed from all obligations to others. Unfortunately a <span class="Italic">gṛhamedhī</span> does not have any interest in Kṛṣṇa consciousness. Prahlāda Mahārāja says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">matir na kṛṣṇe parataḥ svato vā<br>mitho ’bhipadyeta gṛha-vratānām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 7.5.30)
+          </p>
+          <p>
+            A <span class="Italic">gṛha-vrata</span> is the same as a <span class="Italic">gṛhamedhī.</span> One who takes sex life to be supreme finds action in Kṛṣṇa consciousness confusing. Either due to his own personal consideration or due to his having taken instructions from others or conferring with them, he becomes addicted to sexual indulgence and cannot act in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">214</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my dear hero, who in this world will not accept a husband like you? You are so famous, so magnanimous, so beautiful and so easily gotten.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            Every husband is certainly a great hero to his wife. In other words, if a woman loves a man, that man appears very beautiful and magnanimous. Unless one becomes beautiful in the eyes of another, one cannot dedicate his whole life to another. The husband is considered very magnanimous because he gives as many children to the wife as she likes. Every woman is fond of children; therefore any husband who can please his wife by sex and give her children is considered very magnanimous. Not only does the husband become magnanimous by begetting children, but by giving his wife ornaments, nice food and dresses, he keeps her completely under submission. Such a satisfied wife will never give up the company of her husband. <span class="Italic">Manu-saṁhitā</span> recommends that to keep a wife satisfied a husband should give her some ornaments because women are generally fond of home, ornaments, dresses, children, etc. In this way the woman is the center of all material enjoyment.
+          </p>
+          <p>
+            In this regard, the word <span class="Italic">vikhyātam</span> is very significant. A man is always famous for his aggression toward a beautiful woman, and such aggression is sometimes considered rape. Although rape is not legally allowed, it is a fact that a woman likes a man who is very expert at rape.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">217</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O mighty-armed, who in this world will not be attracted by your arms, which are just like the bodies of serpents? Actually you relieve the distress of husbandless women like us by your attractive smile and your aggressive mercy. We think that you are traveling on the surface of the earth just to benefit us only.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            When a husbandless woman is attacked by an aggressive man, she takes his action to be mercy. A woman is generally very much attracted by a man’s long arms. A serpent’s body is round, and it becomes narrower and thinner at the end. The beautiful arms of a man appear to a woman just like serpents, and she very much desires to be embraced by such arms.
+          </p>
+          <p>
+            The word <span class="Italic">anātha-vargā</span> is very significant in this verse. <span class="Italic">Nātha</span> means “husband,” and <span class="Italic">a</span> means “without.” A young woman who has no husband is called <span class="Italic">anātha,</span> meaning “one who is not protected.” As soon as a woman attains the age of puberty, she immediately becomes very much agitated by sexual desire. It is therefore the duty of the father to get his daughter married before she attains puberty. Otherwise she will be very much mortified by not having a husband. Anyone who satisfies her desire for sex at that age becomes a great object of satisfaction. It is a psychological fact that when a woman at the age of puberty meets a man and the man satisfies her sexually, she will love that man for the rest of her life, regardless who he is. Thus so-called love within this material world is nothing but sexual satisfaction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_43_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">131</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Nārada continued: My dear King, those two—the man and the woman—supporting one another through mutual understanding, entered that city and enjoyed life for one hundred years.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_43_purport">
+          <p>
+            One hundred years is significant in this connection because every human being is given the concession to live up to a hundred years. The span of life is different on different planets, according to the planet’s distance from the sun. In other words, one hundred years on this planet is different from one hundred years on another planet. Lord Brahmā lives for one hundred years according to time on the Brahmaloka planet, but one day of Brahmā is equal to millions of years on this planet. Similarly, the days on the heavenly planets are equal to six months on this planet. On every planet, however, the span of life for a human being is roughly one hundred years. According to the life-spans on different planets, the standards of living also differ.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_44_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">254</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Many professional singers used to sing about the glories of King Purañjana and his glorious activities. When it was too hot in the summer, he used to enter a reservoir of water. He would surround himself with many women and enjoy their company.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_44_purport">
+          <p>
+            A living being has different activities in different stages of life. One stage is called <span class="Italic">jāgrata,</span> or the life of awakening, and another is called <span class="Italic">svapna,</span> or the life of dream. Another stage is called <span class="Italic">susupti,</span> or life in an unconscious state, and still another stage occurs after death. In the previous verse the life of awakening was described; that is, the man and the woman were married and enjoyed life for one hundred years. In this verse life in the dream state is described, for the activities Purañjana accomplished during the day were also reflected at night in the dream state. Purañjana used to live with his wife for sense enjoyment, and at night this very sense enjoyment was appreciated in different ways. A man sleeps very soundly when he is greatly fatigued, and when a rich man is greatly fatigued he goes to his garden house with many female friends and there enters the water and enjoys their company. Such is the tendency of the living entity within this material world. A living entity is never satisfied with a woman unless he is trained in the system of <span class="Italic">brahmacarya.</span> Generally a man’s tendency is to enjoy many women, and even at the very end of life the sex impulse is so strong that even though one is very old he still wants to enjoy the company of young girls. Thus because of the strong sex impulse the living entity becomes more and more involved in this material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_45_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">161</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Of the nine gates in that city, seven were on the surface, and two were subterranean. A total of nine doors were constructed, and these led to different places. All the gates were used by the city’s governor.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_45_purport">
+          <p>
+            The seven gates of the body that are situated upward are the two eyes, two nostrils, two ears and one mouth. The two subterranean gates are the rectum and the genitals. The king, or the ruler of the body, who is the living entity, uses all these doors to enjoy different types of material pleasures. The system of opening different gates to different places is still evident in old Indian cities. Formerly a capital was surrounded by walls, and one passed through various gates to go to various cities or toward specific directions. In Old Delhi there are still remnants of surrounding walls and various gates known as the Kashmiri Gate, the Lahori Gate, etc. Similarly, in Ahmadabad there is a Delhi Gate. The point of this simile is that the living entity wants to enjoy different types of material opulences, and to this end nature has given him various holes in his body that he can utilize for sense enjoyment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_46_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">90</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, of the nine doors, five led toward the eastern side, one led toward the northern side, one led toward the southern side, and two led toward the western side. I shall try to give the names of these different doors.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_46_purport">
+          <p>
+            Of the seven doors on the surface—namely the two eyes, two ears, two nostrils and one mouth—five look forward, and these are described as the doors facing the eastern side. Since looking forward means seeing the sun, these are described as the eastern gates, for the sun rises in the east. The gate on the northern side and the gate on the southern side represent the two ears, and the two gates facing the western side represent the rectum and the genitals. All the doors and gates are described below.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_47_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">165</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The two gates named Khadyotā and Āvirmukhī were situated facing the eastern side, but they were constructed in one place. Through those two gates the King used to go to the city of Vibhrājita accompanied by a friend whose name was Dyumān.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_47_purport">
+          <p>
+            The two names Khadyotā and Āvirmukhī mean “glowworm” and “torchlight.” This indicates that of the two eyes, the left eye is less powerful in its ability to see. Although both eyes are constructed in one place, one is stronger than the other in the power to see. The king, or the living entity, uses these two gates to see things properly, but he cannot see unless accompanied by a friend whose name is Dyumān. This friend is the sun. Although the two eyes are situated in one place, they have no power to see without the sunlight. <span class="Italic">Vibhrājitaṁ janapadam.</span> If one wants to see something very clearly (<span class="Italic">vibhrājitam</span>), he must see it with two eyes and the assistance of his friend the sunlight. Within this body everyone is a king because he uses his different gates according to his own will. Although he is very much proud of his power to see or hear, he is nonetheless dependent on the assistance of nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="48">
+        <div class="verse_controls">
+          <button class="verse_num btn">[48.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_48_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">87</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Similarly in the east there were two sets of gates named Nalinī and Nālinī, and these were also constructed in one place. Through these gates the King, accompanied by a friend named Avadhūta, used to go to the city of Saurabha.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_48_purport">
+          <p>
+            The two gates named Nalinī and Nālinī are the two nostrils. The living entity enjoys these two gates with the help of different <span class="Italic">avadhūtas,</span> or airs, which constitute the breathing process. Through these gates the living entity goes to the town of Saurabha, or aroma. In other words, the nostrils, with the help of their friend the air, enjoy various aromas in the material world. Nalinī and Nālinī are the pipes of the nostrils, through which one inhales and exhales, enjoying the aroma of sense pleasure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="49">
+        <div class="verse_controls">
+          <button class="verse_num btn">[49.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_49_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The fifth gate situated on the eastern side was named Mukhyā, or the chief. Through this gate, accompanied by his friends named Rasajña and Vipaṇa, he used to visit two places named Bahūdana and Āpaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_49_purport">
+          <p>
+            The mouth is here described as the chief or the most important gate. The mouth is a very important entrance because one has two functions to conduct with the mouth. One function is eating, and the other is speaking. Our eating is done with the friend Rasajña, the tongue, which can taste so many different types of foods. The tongue is also used for speaking, and it can speak of either material sense enjoyment or Vedic knowledge. Of course, here material sense enjoyment is stressed. Therefore the word <span class="Italic">rasajña</span> is used.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="50">
+        <div class="verse_controls">
+          <button class="verse_num btn">[50.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_50_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">55</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The southern gate of the city was known as Pitṛhū, and through that gate King Purañjana used to visit the city named Dakṣiṇa-pañcāla, accompanied by his friend Śrutadhara.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_50_purport">
+          <p>
+            The right ear is used for <span class="Italic">karma-kāṇḍīya,</span> or fruitive activities. As long as one is attached to the enjoyment of material resources, he hears from the right ear and uses the five senses to elevate himself to the higher planetary systems like Pitṛloka. Consequently, the right ear is here described as the Pitṛhū gate.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="51">
+        <div class="verse_controls">
+          <button class="verse_num btn">[51.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_51_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">255</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the northern side was the gate named Devahū. Through that gate, King Purañjana used to go with his friend Śrutadhara to the place known as Uttara-pañcāla.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_51_purport">
+          <p>
+            The two ears are situated on the northern side and the southern side. The ear on the southern side is very strong and is always anxious to hear about sense enjoyment. The ear on the northern side, however, is used for taking initiation from the spiritual master and for gaining promotion to the spiritual sky. The right ear, or the ear on the southern side, is called Pitṛhū, which indicates that it is used for attaining the higher planetary systems known as Pitṛloka, but the left ear, which is known as Devahū, is utilized for hearing about even higher planetary systems, such as Maharloka, Tapoloka and Brahmaloka—or yet even higher planets, situated in the spiritual universe, where one becomes more inclined to be permanently situated. This is explained in <span class="Ref_Italic">Bhagavad-gītā</span> (9.25):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yānti deva-vratā devān<br>pitṝn yānti pitṛ-vratāḥ<br>bhūtāni yānti bhūtejyā<br>yānti mad-yājino ’pi mām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who worship the demigods will take birth among the demigods; those who worship ghosts and spirits will take birth among such beings; those who worship ancestors go to the ancestors; and those who worship Me will live with Me.”
+          </p>
+          <p>
+            One who is interested in being happy on this planet as well as after death generally wants to be elevated to the Pitṛlokas. Such a person can use the right ear for hearing Vedic instructions. However, one who is interested in going to Tapoloka, Brahmaloka, the Vaikuṇṭha planets or Kṛṣṇaloka may take initiation from the spiritual master in order to be elevated to such <span class="Italic">lokas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="52">
+        <div class="verse_controls">
+          <button class="verse_num btn">[52.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_52_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">398</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the western side was a gate named Āsurī. Through that gate King Purañjana used to go to the city of Grāmaka, accompanied by his friend Durmada.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_52_purport">
+          <p>
+            The gate on the western side of the city was known as Āsurī because it was especially meant for the <span class="Italic">asuras.</span> The word <span class="Italic">asura</span> refers to those who are interested in sense gratification, specifically in sex life, to which they are overly attracted. Thus Purañjana, the living entity, enjoys himself to his greatest satisfaction by means of the genitals. Consequently he used to go to the place known as Grāmaka. Material sense gratification is also called <span class="Italic">grāmya,</span> and the place where sex life is indulged in to a great extent is called Grāmaka. When going to Grāmaka, Purañjana used to be accompanied by his friend Durmada. The word <span class="Italic">viṣaya</span> refers to the four bodily necessities of life—eating, sleeping, mating and defending. The word <span class="Italic">durmadena</span> may be analyzed in this way: <span class="Italic">dur</span> means <span class="Italic">duṣṭa,</span> or “sinful,” and <span class="Italic">mada</span> means “madness.” Every living entity who is in contact with material nature is called <span class="Italic">mada,</span> or mad. It is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">piśācī pāile yena mati-cchanna haya<br>māyā-grasta jīvera haya se bhāva udaya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Italic">Prema-vivarta</span>)
+          </p>
+          <p>
+            When a person is haunted, he becomes practically insane. When one is in an insane condition, he speaks all kinds of nonsense. Thus to become engaged in sense gratification, one has to accept a friend who is <span class="Italic">durmada,</span> or badly affected by the material disease.
+          </p>
+          <p>
+            The words <span class="Italic">āsurī nāma paścād dvāḥ</span> are significant in another sense. The sunrise is first visible from the eastern side—the Bay of Bengal—and gradually it progresses toward the west. It is practically experienced that people in the West are more addicted to sense gratification. Śrī Caitanya Mahāprabhu Himself has certified: <span class="Italic">paścimera loka saba mūḍha anācāra</span> (Cc. <span class="Ref_Italic">Ādi</span> 10.89). The more one goes to the western side, the more he will find people disinterested in spiritual life. He will find them behaving against the Vedic standards. Because of this, people living in the West are more addicted to sense gratification. In this <span class="Italic">Bhāgavatam</span> it is confirmed: <span class="Italic">āsurī nāma paścād dvāḥ.</span> In other words, the population on the western side is interested in an asuric civilization, that is, a materialistic way of life. Lord Caitanya consequently wanted this Kṛṣṇa consciousness movement to be preached on the western side of the world so that people addicted to sense gratification might be benefited by His teachings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="53">
+        <div class="verse_controls">
+          <button class="verse_num btn">[53.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_53_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">119</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Another gate on the western side was known as Nirṛti. Purañjana used to go through this gate to the place known as Vaiśasa, accompanied by his friend Lubdhaka.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_53_purport">
+          <p>
+            This is a reference to the rectum. The rectum is supposed to be situated on the western side of the eyes, nose and ears. This gate is especially meant for death. When an ordinary living entity abandons his present body, he passes through the rectum. It is therefore painful. When one is called by nature to evacuate, one also experiences pain. The friend of the living entity who accompanies him through this gate is named Lubdhaka, which means “greed.” Due to our greed, we eat unnecessarily, and such gluttony causes pain at the time of evacuation. The conclusion is that the living entity feels well if he evacuates properly. This gate is known as Nirṛti, or the painful gate.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="54">
+        <div class="verse_controls">
+          <button class="verse_num btn">[54.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_54_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">180</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Of the many inhabitants of this city, there are two persons named Nirvāk and Peśaskṛt. Although King Purañjana was the ruler of citizens who possessed eyes, he unfortunately used to associate with these blind men. Accompanied by them, he used to go here and there and perform various activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_54_purport">
+          <p>
+            This is a reference to the arms and legs of the living entity. The two legs do not speak, and they are blind. If a person simply trusts his legs to take him walking, he is likely to fall into a hole or bump into something. Thus led by the blind legs, one’s life may be placed in jeopardy.
+          </p>
+          <p>
+            Of the senses that are working, the hands and legs are very important, but they have no eyes to see. This means that in the hands and legs there are no holes. In the head there are many holes—two eyes, two nostrils, two ears and one mouth—but lower down, in the arms and legs, there are no holes. Consequently, the arms and legs have been described as <span class="Italic">andha,</span> blind. Although the living entity has many holes in his body, he nonetheless has to work with his hands and arms. Although the living entity is the master of many other senses, when he has to go somewhere, do something or touch something, he has to use his blind legs and hands.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="55">
+        <div class="verse_controls">
+          <button class="verse_num btn">[55.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_55_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">419</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes he used to go to his private home with one of his chief servants [the mind], who was named Viṣūcīna. At that time, illusion, satisfaction and happiness used to be produced from his wife and children.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_55_purport">
+          <p>
+            According to the Vedic conclusion, one’s self is situated within the heart. As stated in Vedic language, <span class="Italic">hṛdy ayam ātmā pratiṣṭhitaḥ:</span> the self is situated within the heart. In the material condition, however, the spirit soul is covered by the material qualities—namely goodness, passion and darkness—and within the heart these three qualities react. For instance, when one is in goodness, he feels happiness; when one is in passion, he feels satisfaction through material enjoyment; and when one is in darkness, he feels bewilderment. All these activities are of the mind, and they function on the platform of thinking, feeling and willing.
+          </p>
+          <p>
+            When the living entity is encircled by wife, children and home, he acts on the mental plane. Sometimes he is very happy, sometimes he is very much satisfied, sometimes he is not satisfied, and sometimes he is bewildered. Bewilderment is called <span class="Italic">moha,</span> illusion. Illusioned by society, friendship and love, the living entity thinks that his so-called society, friendship and love, nationality, community, etc. will give him protection. He does not know that after death he will be thrown into the hands of a very strong material nature that will force him to accept a certain type of body according to his present work. This body may not even be a human body. Thus the living entity’s feeling of security in this life in the midst of society, wife and friendship is nothing but illusion. All living entities encaged in various material bodies are illusioned by the present activities of material enjoyment. They forget their real business, which is to go back home, back to Godhead.
+          </p>
+          <p>
+            Everyone who is not in Kṛṣṇa consciousness must be considered to be in illusion. One’s so-called feelings of happiness and satisfaction resulting from material things are also illusions. Factually neither society, friendship, love nor anything else can save one from the onslaught of the external energy, which is symptomized by birth, death, old age and disease. To get even one living entity out of the illusory condition is very difficult; therefore Lord Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.14):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">daivī hy eṣā guṇa-mayī<br>mama māyā duratyayā<br>mām eva ye prapadyante<br>māyām etāṁ taranti te</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This divine energy of Mine, consisting of the three modes of material nature, is difficult to overcome. But those who have surrendered unto Me can easily cross beyond it.” Therefore, unless one surrenders completely at the lotus feet of Kṛṣṇa, he cannot get out of the entanglement of the three modes of material nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="56">
+        <div class="verse_controls">
+          <button class="verse_num btn">[56.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_56_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">238</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being thus entangled in different types of mental concoction and engaged in fruitive activities, King Purañjana came completely under the control of material intelligence and was thus cheated. Indeed, he used to fulfill all the desires of his wife, the Queen.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_56_purport">
+          <p>
+            When a living entity is in such bewilderment that he is under the control of his wife, or material intelligence, he has to satisfy the intelligence of his so-called wife and act exactly according to her dictates. Various <span class="Italic">śāstras</span> advise that for material convenience one should keep his wife always satisfied by giving her ornaments and by following her instructions. In this way there will be no trouble in family life. Therefore for one’s own social benefit, one is advised to keep his wife satisfied. In this way, when one becomes the servant of his wife, he must act according to the desires of his wife. Thus one becomes more and more entangled. In Bengal it is said that if one becomes an obedient servant of his wife, he loses all reputation. However, the difficulty is that unless one becomes a most obedient servant of his wife, family life becomes disturbed. In the Western countries this disturbance gives rise to the divorce law, and in Eastern countries like India there is separation. Now this disturbance is confirmed by the new introduction of the divorce law in India. Within the heart, the mind is acting, thinking, feeling and willing, and falling under the control of one’s wife is the same as falling under the control of material intelligence. Thus one begets children by his wife and becomes entangled in so many activities under the control of mental concoctions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="57">
+        <div class="verse_controls">
+          <button class="verse_num btn">[57–61.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_57_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">236</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the Queen drank liquor, King Purañjana also engaged in drinking. When the Queen dined, he used to dine with her, and when she chewed, King Purañjana used to chew along with her. When the Queen sang, he also sang. Similarly, when the Queen cried, he also cried, and when the Queen laughed, he also laughed. When the Queen talked loosely, he also talked loosely, and when the Queen walked, the King walked behind her. When the Queen would stand still, the King would also stand still, and when the Queen would lie down in bed, he would also follow and lie down with her. When the Queen sat, he would also sit, and when the Queen heard something, he would follow her to hear the same thing. When the Queen saw something, the King would also look at it, and when the Queen smelled something, the King would follow her to smell the same thing. When the Queen touched something, the King would also touch it, and when the dear Queen was lamenting, the poor King also had to follow her in lamentation. In the same way, when the Queen felt enjoyment, he also enjoyed, and when the Queen was satisfied, the King also felt satisfaction.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_57_purport">
+          <p>
+            The mind is the place where the self is situated, and the mind is conducted by the intelligence. The living entity, situated within the heart, follows the intelligence. The intelligence is herein depicted as the Queen, and the soul, under mental control, follows the material intelligence just as the King follows his wife. The conclusion is that material intelligence is the cause of bondage for the living entity. The point is that one has to take to spiritual intelligence to come out of this entanglement.
+          </p>
+          <p>
+            In the life of Mahārāja Ambarīṣa, we find that the great Mahārāja first engaged his mind on the lotus feet of Kṛṣṇa. In this way his intelligence became purified. Mahārāja Ambarīṣa also used his other senses in the service of the Lord. He engaged his eyes in seeing the Deity in the temple nicely decorated with flowers. He engaged his sense of smell by smelling the flowers, and he engaged his legs by walking to the temple. His hands were engaged in cleansing the temple, and his ears were engaged in hearing about Kṛṣṇa. His tongue was engaged in two ways: in speaking about Kṛṣṇa and in tasting <span class="Italic">prasāda</span> offered to the Deity. Materialistic persons, who are under the full control of material intelligence, cannot perform all these activities. Thus, consciously or unconsciously, they become entangled by the dictations of material intelligence. This fact is summarized in the following verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="62">
+        <div class="verse_controls">
+          <button class="verse_num btn">[62.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_62_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">559</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this way, King Purañjana was captivated by his nice wife and was thus cheated. Indeed, he became cheated in his whole existence in the material world. Even against that poor foolish King’s desire, he remained under the control of his wife, just like a pet animal that dances according to the order of its master.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_62_purport">
+          <p>
+            The word <span class="Italic">vipralabdhaḥ</span> is very significant in this verse. <span class="Italic">Vi</span> means “specifically,” and <span class="Italic">pralabdha</span> means “obtained.” Just to satisfy his desires, the King got the Queen, and thus he became cheated by material existence. Although he was not willing to do so, he remained a pet animal under the control of material intelligence. Just as a pet monkey dances according to the desires of its master, the King danced according to the desires of the Queen. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.2) it is said, <span class="Italic">mahat-sevāṁ dvāram āhur vimukteḥ:</span> if one associates with a saintly person, a devotee, one’s path of liberation becomes clear. But if one associates with a woman or with a person who is too much addicted to a woman, his path of bondage becomes completely clear.
+          </p>
+          <p>
+            On the whole, for spiritual advancement, one must give up the company of women. This is what is meant by the order of <span class="Italic">sannyāsa,</span> the renounced order. Before taking <span class="Italic">sannyāsa,</span> or completely renouncing the material world, one has to practice avoiding illicit sex. Sex life, licit or illicit, is practically the same, but through illicit sex one becomes more and more captivated. By regulating one’s sex life there is a chance that one may eventually be able to renounce sex or renounce the association of women. If this can be done, advancement in spiritual life comes very easily.
+          </p>
+          <p>
+            How one becomes captivated by the association of one’s dear wife is explained in this chapter by Nārada Muni. Attraction for one’s wife means attraction for the material qualities. One who is attracted by the material quality of darkness is in the lowest stage of life, whereas one who is attracted by the material quality of goodness is in a better position. Sometimes we see that when a person is on the platform of material goodness, he is attracted more or less by the cultivation of knowledge. This is, of course, a better position, for knowledge gives one the preference to accept devotional service. Unless one comes to the platform of knowledge, the <span class="Italic">brahma-bhūta</span> stage, one cannot advance in devotional service. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is thus transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments nor desires to have anything; he is equally disposed to every living entity. In that state he attains pure devotional service unto Me.”
+          </p>
+          <p>
+            The platform of knowledge is advantageous because it is a means by which one may come to the stage of devotional service. However, if one takes to devotional service directly, knowledge is revealed without separate endeavor. This is confirmed in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.7):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsudeve bhagavati<br>bhakti-yogaḥ prayojitaḥ<br>janayaty āśu vairāgyaṁ<br>jñānaṁ ca yad ahaitukam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Devotional service automatically reveals actual knowledge of our material existence. One who is sufficiently intelligent immediately attains the stage of renunciation of so-called society, family and love as well as other things. As long as we are attached to society, family and love of the material world, there is no question of knowledge. Nor is there a question of devotional service. By directly taking to devotional service, however, one becomes filled with knowledge and renunciation. In this way one’s life becomes successful.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-fifth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Descriptions of the Characteristics of King Purañjana.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/4/25">https://prabhupadabooks.com/sb/4/25</a><!-- span.text_source_copied_date
+        | on 2022-07-10 14:52:15 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 4.24: Chanting the Song Sung by Lord Siva     Next: SB 4.26: King Puranjana Goes to the Forest to Hunt, and His Queen Becomes Angry</div>
+      </p>
+    </div>
+  </body>
+</html>

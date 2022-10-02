@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 4.26, King Purañjana Goes to the Forest to Hunt, and His Queen Becomes Angry</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 4:<br>
+        “Creation of the Fourth Order”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twenty-six:<br>King Purañjana Goes to the Forest to Hunt, and His Queen Becomes Angry
+      </h1>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1–3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1322</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Nārada continued: My dear King, once upon a time King Purañjana took up his great bow, and equipped with golden armor and a quiver of unlimited arrows and accompanied by eleven commanders, he sat on his chariot driven by five swift horses and went to the forest named Pañca-prastha. He took with him in that chariot two explosive arrows. The chariot itself was situated on two wheels and one revolving axle. On the chariot were three flags, one rein, one chariot driver, one sitting place, two poles to which the harness was fixed, five weapons and seven coverings. The chariot moved in five different styles, and five obstacles lay before it. All the decorations of the chariot were made of gold.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            These three verses explain how the material body of the living entity is under the control of the three qualities of the external energy. The body itself is the chariot, and the living entity is the owner of the body, as explained in <span class="Ref_Italic">Bhagavad-gītā</span> (2.13): <span class="Italic">dehino ’smin yathā dehe.</span> The owner of the body is called the <span class="Italic">dehī,</span> and he is situated within this body, specifically within the heart. The living entity is driven by one chariot driver. The chariot itself is made of three <span class="Italic">guṇas,</span> three qualities of material nature, as confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (18.61): <span class="Italic">yantrārūḍhāni māyayā.</span> The word <span class="Italic">yantra</span> means “carriage.” The body is given by material nature, and the driver of that body is Paramātmā, the Supersoul. The living entity is seated within the chariot. This is the actual position.
+          </p>
+          <p>
+            The living entity is always being influenced by the three qualities—<span class="Italic">sattva</span> (goodness), <span class="Italic">rajas</span> (passion) and <span class="Italic">tamas</span> (ignorance). This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (7.13). <span class="Italic">Tribhir guṇamayair bhāvaiḥ:</span> the living entity is bewildered by the three qualities of material nature. These three qualities are described in this verse as three flags. By a flag, one can come to know who the owner of the chariot is; similarly, by the influence of the three qualities of material nature, one can easily know the direction in which the chariot is moving. In other words, one who has eyes to see can understand how the body is being driven, influenced by the particular type of quality of material nature. In these three verses the activity of the living entity is described to prove how the body becomes influenced by the quality of ignorance, even when a person wants to be religious. Nārada Muni wanted to prove to King Prācīnabarhiṣat that the King was being influenced by the <span class="Italic">tamo-guṇa,</span> the quality of ignorance, even though the King was supposed to be very religious.
+          </p>
+          <p>
+            According to <span class="Italic">karma-kāṇḍīya,</span> the process of fruitive activities, a person performs various sacrifices directed by the <span class="Italic">Vedas,</span> and in all those sacrifices animal-killing, or experimenting on the life of animals to test the power of Vedic <span class="Italic">mantras,</span> is enjoined. Animal-killing is certainly conducted under the influence of the mode of ignorance. Even though one may be religiously inclined, animal sacrifice is recommended in the <span class="Italic">śāstras,</span> not only in the <span class="Italic">Vedas</span> but even in the modern scriptures of other sects. These animal sacrifices are recommended in the name of religion, but actually animal sacrifice is meant for persons in the mode of ignorance. When such people kill animals, they can at least do so in the name of religion. However, when the religious system is transcendental, like the Vaiṣṇava religion, there is no place for animal sacrifice. Such a transcendental religious system is recommended by Kṛṣṇa in <span class="Ref_Italic">Bhagavad-gītā</span> (18.66):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-dharmān parityajya<br>mām ekaṁ śaraṇaṁ vraja<br>ahaṁ tvāṁ sarva-pāpebhyo<br>mokṣayiṣyāmi mā śucaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction. Do not fear.” Because King Prācīnabarhiṣat was engaged in performing various sacrifices in which animals were killed, Nārada Muni pointed out that such sacrifices are influenced by the mode of ignorance. From the very beginning of <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.1.2) it is said: <span class="Italic">projjhita-kaitavo ’tra.</span> All kinds of religious systems that are involved in cheating are completely kicked out of <span class="Italic">Śrīmad-Bhāgavatam.</span> In the <span class="Italic">bhagavad-dharma,</span> the religion dealing with one’s relationship with the Supreme Personality of Godhead, animal sacrifice is not recommended. In the performance of <span class="Italic">saṅkīrtana-yajña</span>—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare—there is no recommendation for animal sacrifices.
+          </p>
+          <p>
+            In these three verses, King Purañjana’s going to the forest to kill animals is symbolic of the living entity’s being driven by the mode of ignorance and thus engaging in different activities for sense gratification. The material body itself indicates that the living entity is already influenced by the three modes of material nature and that he is driven to enjoy material resources. When the body is influenced by the mode of ignorance, its infection becomes very acute. When it is influenced by the mode of passion, the infection is at the symptomatic stage. However, when the body is influenced by the mode of goodness, the materialistic infection becomes purified. The ritualistic ceremonies recommended in religious systems are certainly on the platform of goodness, but because within this material world even the mode of goodness is sometimes polluted by the other qualities (namely passion and ignorance), a man in goodness is sometimes driven by the influence of ignorance.
+          </p>
+          <p>
+            It is herein described that King Purañjana once went to the forest to kill animals. This means that he, the living entity, came under the influence of the mode of ignorance. The forest in which King Purañjana engaged in hunting was named Pañca-prastha. The word <span class="Italic">pañca</span> means “five,” and this indicates the objects of the five senses. The body has five working senses, namely the hands, the legs, the tongue, the rectum and the genitals. By taking full advantage of these working senses, the body enjoys material life. The chariot is driven by five horses, which represent the five sense organs—namely the eyes, ears, nose, skin and tongue. These sense organs are very easily attracted by the sense objects. Consequently, the horses are described as moving swiftly. On the chariot King Purañjana kept two explosive weapons, which may be compared to <span class="Italic">ahaṅkāra,</span> or false ego. This false ego is typified by two attitudes: “I am this body” (<span class="Italic">ahantā</span>), and “Everything in my bodily relationships belongs to me” (<span class="Italic">mamatā</span>).
+          </p>
+          <p>
+            The two wheels of the chariot may be compared to the two moving facilities—namely sinful life and religious life. The chariot is decorated with three flags, which represent the three modes of material nature. The five kinds of obstacles, or uneven roads, represent the five kinds of air passing within the body. These are <span class="Italic">prāṇa, apāna, udāna, samāna</span> and <span class="Italic">vyāna.</span> The body itself is covered by seven coverings, namely skin, muscle, fat, blood, marrow, bone and semen. The living entity is covered by three subtle material elements and five gross material elements. These are actually obstacles placed before the living entity on the path of liberation from material bondage.
+          </p>
+          <p>
+            The word <span class="Italic">raśmi</span> (“rope”) in this verse indicates the mind. The word <span class="Italic">nīḍa</span> is also significant, for <span class="Italic">nīḍa</span> indicates the nest where a bird takes rest. In this case <span class="Italic">nīḍa</span> is the heart, where the living entity is situated. The living entity sits in one place only. The causes of his bondage are two: namely lamentation and illusion. In material existence the living entity simply hankers to get something he can never get. Therefore he is in illusion. As a result of being in this illusory situation, the living entity is always lamenting. Thus lamentation and illusion are described herein as <span class="Italic">dvi-kūbara,</span> the two posts of bondage.
+          </p>
+          <p>
+            The living entity carries out various desires through five different processes, which indicate the working of the five working senses. The golden ornaments and dress indicate that the living entity is influenced by the quality of <span class="Italic">rajo-guṇa,</span> passion. One who has a good deal of money or riches is especially driven by the mode of passion. Being influenced by the mode of passion, one desires so many things for enjoyment in this material world. The eleven commanders represent the ten senses and the mind. The mind is always making plans with the ten commanders to enjoy the material world. The forest named Pañca-prastha, where the King went to hunt, is the forest of the five sense objects: form, taste, sound, smell and touch. Thus in these three verses Nārada Muni describes the position of the material body and the encagement of the living entity within it.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">186</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It was almost impossible for King Purañjana to give up the company of his Queen even for a moment. Nonetheless, on that day, being very much inspired by the desire to hunt, he took up his bow and arrow with great pride and went to the forest, not caring for his wife.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            One form of hunting is known as woman-hunting. A conditioned soul is never satisfied with one wife. Those whose senses are very much uncontrolled especially try to hunt for many women. King Purañjana’s abandoning the company of his religiously married wife is representative of the conditioned soul’s attempt to hunt for many women for sense gratification. Wherever a king goes, he is supposed to be accompanied by his queen, but when the king, or conditioned soul, becomes greatly overpowered by the desire for sense gratification, he does not care for religious principles. Instead, with great pride, he accepts the bow and arrow of attachment and hatred. Our consciousness is always working in two ways—the right way and the wrong way. When one becomes too proud of his position, influenced by the mode of passion, he gives up the right path and accepts the wrong one. <span class="Italic">Kṣatriya</span> kings are sometimes advised to go to the forest to hunt ferocious animals just to learn how to kill, but such forays are never meant for sense gratification. Killing animals to eat their flesh is forbidden for human beings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">321</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At that time King Purañjana was very much influenced by demoniac propensities. Because of this, his heart became very hard and merciless, and with sharp arrows he killed many innocent animals in the forest, taking no consideration.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            When a man becomes too proud of his material position, he tries to enjoy his senses in an unrestricted way, being influenced by the modes of passion and ignorance. He is thus described as asuric, or demoniac. When people are demoniac in spirit, they are not merciful toward the poor animals. Consequently, they maintain various animal slaughterhouses. This is technically called <span class="Italic">sūnā,</span> or <span class="Italic">hiṁsā,</span> which means the killing of living beings. In Kali-yuga, due to the increase of the modes of passion and ignorance, almost all men are asuric, or demoniac; therefore they are very much fond of eating flesh, and for this end they maintain various kinds of animal slaughterhouses.
+          </p>
+          <p>
+            In this age of Kali the propensity for mercy is almost nil. Consequently there is always fighting and wars between men and nations. Men do not understand that because they unrestrictedly kill so many animals, they also must be slaughtered like animals in big wars. This is very much evident in the Western countries. In the West, slaughterhouses are maintained without restriction, and therefore every fifth or tenth year there is a big war in which countless people are slaughtered even more cruelly than the animals. Sometimes during war, soldiers keep their enemies in concentration camps and kill them in very cruel ways. These are reactions brought about by unrestricted animal-killing in the slaughterhouse and by hunters in the forest. Proud, demoniac persons do not know the laws of nature, or the laws of God. Consequently, they unrestrictedly kill poor animals, not caring for them at all. In the Kṛṣṇa consciousness movement, animal-killing is completely prohibited. One is not accepted as a bona fide student in this movement unless he promises to follow the four regulative principles: no animal-killing, no intoxication, no illicit sex and no gambling. This Kṛṣṇa consciousness movement is the only means by which the sinful activities of men in this Kali-yuga can be counteracted.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">596</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If a king is too attracted to eating flesh, he may, according to the directions of the revealed scriptures on sacrificial performances, go to the forest and kill some animals that are recommended for killing. One is not allowed to kill animals unnecessarily or without restrictions. The Vedas regulate animal-killing to stop the extravagance of foolish men influenced by the modes of passion and ignorance.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            The question may be raised why a living being should be restricted in sense gratification. If a king, to learn how to kill, may go to the forest and kill animals, why should a living entity, who has been given senses, not be allowed unrestricted sense gratification? At the present moment this argument is put forward even by so-called <span class="Italic">svāmīs</span> and <span class="Italic">yogīs</span> who publicly say that because we have senses we must satisfy them by sense gratification. These foolish <span class="Italic">svāmīs</span> and <span class="Italic">yogīs,</span> however, do not know the injunctions of the <span class="Italic">śāstras.</span> Indeed, sometimes these rascals come out to defy the <span class="Italic">śāstras.</span> They even publicly announce that there should be no more <span class="Italic">śāstras,</span> no more books. “Just come to me,” they say, “and I shall touch you, and you will become immediately spiritually advanced.”
+          </p>
+          <p>
+            Because demoniac people want to be cheated, so many cheaters are present to cheat them. At the present moment in this age of Kali-yuga, the entire human society has become an assembly of cheaters and cheated. For this reason the Vedic scriptures have given us the proper directions for sense gratification. Everyone is inclined in this age to eat meat and fish, drink liquor and indulge in sex life, but according to the Vedic injunctions, sex is allowed only in marriage, meat-eating is allowed only when the animal is killed and offered before the goddess Kālī, and intoxication is allowed only in a restricted way. In this verse the word <span class="Italic">niyamyate</span> indicates that all these things—namely animal-killing, intoxication and sex—should be regulated.
+          </p>
+          <p>
+            Regulations are meant for human beings, not for animals. The traffic regulations on the street, telling people to keep to the right or the left, are meant for human beings, not for animals. If an animal violates such a law, he is never punished, but a human being is punished. The <span class="Italic">Vedas</span> are not meant for the animals, but for the understanding of human society. A person who indiscriminately violates the rules and regulations given by the <span class="Italic">Vedas</span> is liable to be punished. One should therefore not enjoy his senses according to his lusty desires, but should restrict himself according to the regulative principles given in the <span class="Italic">Vedas.</span> If a king is allowed to hunt in a forest, it is not for his sense gratification. We cannot simply experiment in the art of killing. If a king, being afraid to meet rogues and thieves, kills poor animals and eats their flesh comfortably at home, he must lose his position. Because in this age kings have such demoniac propensities, monarchy is abolished by the laws of nature in every country.
+          </p>
+          <p>
+            People have become so degraded in this age that on the one hand they restrict polygamy and on the other hand they hunt for women in so many ways. Many business concerns publicly advertise that topless girls are available in this club or in that shop. Thus women have become instruments of sense enjoyment in modern society. The <span class="Italic">Vedas</span> enjoin, however, that if a man has the propensity to enjoy more than one wife—as is sometimes the propensity for men in the higher social order, such as the <span class="Italic">brāhmaṇas, kṣatriyas</span> and <span class="Italic">vaiśyas,</span> and even sometimes the <span class="Italic">śūdras</span>—he is allowed to marry more than one wife. Marriage means taking complete charge of a woman and living peacefully without debauchery. At the present moment, however, debauchery is unrestricted. Nonetheless, society makes a law that one should not marry more than one wife. This is typical of a demoniac society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">432</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada Muni continued to speak to King Prācīnabarhiṣat: My dear King, any person who works according to the directions of the Vedic scriptures does not become involved in fruitive activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Just as a government may issue trade licenses in order for its citizens to act in a certain way, the <span class="Italic">Vedas</span> contain injunctions that restrain and regulate all of our fruitive activities. All living entities have come into this material world to enjoy themselves. Consequently, the <span class="Italic">Vedas</span> are given to regulate sense enjoyment. One who enjoys his senses under the Vedic regulative principles does not become entangled in the actions and reactions of his activities. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.9), <span class="Italic">yajñārthāt karmaṇaḥ:</span> one should act only for the performance of <span class="Italic">yajña,</span> or to satisfy Lord Viṣṇu. <span class="Italic">Anyatra loko ’yaṁ karma-bandhanaḥ:</span> otherwise any action will produce a reaction by which the living entity will be bound. A human being is especially meant to attain liberation from the bondage of birth, death, old age and disease. He is therefore directed by the Vedic regulative principles to work in such a way that he may fulfill his desires for sense gratification and at the same time gradually become freed from material bondage. Action according to such principles is called knowledge. Indeed, the word <span class="Italic">veda</span> means “knowledge.” The words <span class="Italic">jñānena na sa lipyate</span> indicate that by following the Vedic principles, one does not become involved in the actions and reactions of his fruitive activities.
+          </p>
+          <p>
+            Everyone is therefore advised to act in terms of the Vedic injunctions and not irresponsibly. When a person within a state acts according to the laws and licenses of the government, he does not become involved in criminal activities. Man-made laws, however, are always defective because they are made by men who are prone to committing mistakes, being illusioned, cheating and having imperfect senses. The Vedic instructions are different because they do not have these four defects. Vedic instructions are not subject to mistakes. The knowledge of the <span class="Italic">Vedas</span> is knowledge received directly from God, and there is consequently no question of illusion, cheating, mistakes or imperfect senses. All Vedic knowledge is perfect because it is received directly from God by the <span class="Italic">paramparā,</span> disciplic succession. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.1.1) it is said: <span class="Italic">tene brahma hṛdā ya ādi-kavaye.</span> The original creature of this universe, known as the <span class="Italic">ādi-kavi,</span> or Lord Brahmā, was instructed by Kṛṣṇa through the heart. After receiving these Vedic instructions from Lord Kṛṣṇa Himself, Brahmā distributed the knowledge by the <span class="Italic">paramparā</span> system to Nārada, and Nārada in turn distributed the knowledge to Vyāsa. In this way Vedic knowledge is perfect. If we act according to Vedic knowledge, there is no question of being involved in sinful activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1148</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Otherwise, a person who acts whimsically falls down due to false prestige. Thus he becomes involved in the laws of nature, which are composed of the three qualities [goodness, passion and ignorance]. In this way a living entity becomes devoid of his real intelligence and becomes perpetually lost in the cycle of birth and death. Thus he goes up and down from a microbe in stool to a high position in the Brahmaloka planet.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            There are many important words in this verse. The first is <span class="Italic">anyathā,</span> “otherwise,” which indicates one who does not care for the Vedic rules and regulations. The rules and regulations laid down in the <span class="Italic">Vedas</span> are called <span class="Italic">śāstra-vidhi.</span> <span class="Italic">Bhagavad-gītā</span> clearly states that one who does not accept the <span class="Italic">śāstra-vidhi,</span> or rules and regulations mentioned in the Vedic scriptures, and acts whimsically or puffed up with false pride never attains perfection in this life, nor does he attain happiness or liberation from the material condition.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaḥ śāstra-vidhim utsṛjya<br>vartate kāma-kārataḥ<br>na sa siddhim avāpnoti<br>na sukhaṁ na parāṁ gatim</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “He who discards scriptural injunctions and acts according to his own whims attains neither perfection nor happiness nor the supreme destination.” (Bg. 16.23) Thus one who is deliberately transgressing the rules and regulations of the <span class="Italic">śāstras</span> is simply involving himself more and more in material existence in the three modes of material nature. Human society should therefore follow the Vedic principles of life, which are summarized in <span class="Italic">Bhagavad-gītā.</span> Otherwise life in material existence will continue. Foolish persons do not know that the soul is passing through 8,400,000 spieces of life. By the gradual process of evolution, when one comes to the human form of life, he is supposed to follow the rules and regulations laid down in the <span class="Italic">Vedas.</span> Śrī Caitanya Mahāprabhu says that the living entity, since time immemorial, is suffering the threefold miseries of material nature due to his demoniac attitude, which is his spirit of revolt against the Supreme Personality of Godhead. Kṛṣṇa also confirms this in <span class="Ref_Italic">Bhagavad-gītā</span> (15.7):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mamaivāṁśo jīva-loke<br>jīva-bhūtaḥ sanātanaḥ<br>manaḥ-ṣaṣṭhānīndriyāṇi<br>prakṛti-sthāni karṣati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The living entities in this conditioned world are My eternal, fragmental parts. Due to conditioned life, they are struggling very hard with the six senses, which include the mind.” Every living entity is part and parcel of God. There is no reason for the living entity’s being put into the miserable threefold condition of material existence but that he voluntarily accepts material existence on the false pretext of becoming an enjoyer. To save him from this horrible condition, the Lord has given all the Vedic literatures in His incarnation of Vyāsadeva. It is therefore said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa bhuli’ sei jīva anādi-bahirmukha<br>ataeva māyā tāre deya saṁsāra-duḥkha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By forgetting Kṛṣṇa, the living entity has become materialistic since time immemorial. Therefore the illusory energy of Kṛṣṇa is giving him different types of miseries in material existence.” (Cc. <span class="Ref_Italic">Madhya</span> 20.117)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māyā-mugdha jīvera nāhi svataḥ kṛṣṇa-jñāna<br>jīvere kṛpāya kailā kṛṣṇa veda-purāṇa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “When a living entity is enchanted by the external energy, he cannot revive his original Kṛṣṇa consciousness independently. Due to such circumstances, Kṛṣṇa has kindly given him the Vedic literatures, such as the four <span class="Italic">Vedas</span> and eighteen <span class="Italic">Purāṇas.</span>” (Cc. <span class="Ref_Italic">Madhya</span> 20.122) Every human being should therefore take advantage of the Vedic instructions; otherwise one will be bound by his whimsical activities and will be without any guide.
+          </p>
+          <p>
+            The word <span class="Italic">mānārūḍhaḥ</span> is also very significant in this verse. Under the pretext of becoming great philosophers and scientists, men throughout the whole world are working on the mental platform. Such men are generally nondevotees, due to not caring for the instructions given by the Lord to the first living creature, Lord Brahmā. The <span class="Ref_Italic">Bhāgavatam</span> (5.18.12) therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harāv abhaktasya kuto mahad-guṇā<br>mano-rathenāsati dhāvato bahiḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A person who is a nondevotee has no good qualifications because he acts on the mental platform. One who acts on the mental platform has to change his standard of knowledge periodically. We consequently see that one philosopher may disagree with another philosopher, and one scientist may put forward a theory contradicting the theory of another scientist. All of this is due to their working on the mental platform without a standard of knowledge. In the Vedic instructions, however, the standard of knowledge is accepted, even though it may sometimes appear that the statements are contradictory. Because the <span class="Italic">Vedas</span> are the standard of knowledge, even though they may appear contradictory, they should be accepted. If one does not accept them, he will be bound by the material conditions.
+          </p>
+          <p>
+            The material conditions are described in this verse as <span class="Italic">guṇa-pravāha,</span> the flowing of the three modes of material nature. Śrīla Bhaktivinoda Ṭhākura therefore says in a song, <span class="Italic">miche māyāra vaśe, yāccha bhese’, khāccha hābuḍubu, bhāi:</span> “Why are you suffering? Why are you sometimes being drowned in the waves of material nature and sometimes coming to the surface?” <span class="Italic">Jīva kṛṣṇa-dāsa, ei viśvāsa, karle ta’ āra duḥkha nāi:</span> “Please therefore accept yourself as the servant of Kṛṣṇa. Then you will be freed from all miseries.” As soon as one surrenders to Kṛṣṇa and accepts the perfect standard of knowledge, which is <span class="Italic">Bhagavad-gītā</span> as it is, he then comes out of the material modes of nature and does not fall down and lose his knowledge.
+          </p>
+          <p>
+            <span class="Italic">Naṣṭa-prajñaḥ.</span> The word <span class="Italic">prajña</span> means “perfect knowledge,” and <span class="Italic">naṣṭa-prajña</span> means “one who has no perfect knowledge.” One who does not have perfect knowledge has only mental speculation. By such mental speculation one falls down and down into a hellish condition of life. By transgressing the laws laid down in the <span class="Italic">śāstras,</span> one cannot become pure in heart. When one’s heart is not purified, one acts according to the three material modes of nature. These activities are very nicely explained in verses 1 through 6 of the Seventeenth Chapter of <span class="Italic">Bhagavad-gītā.</span> <span class="Ref_Italic">Bhagavad-gītā</span> (2.45) further explains:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">traiguṇya-viṣayā vedā<br>nistraiguṇyo bhavārjuna<br>nirdvandvo nitya-sattva-stho<br>niryoga-kṣema ātmavān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The <span class="Italic">Vedas</span> mainly deal with the subject of the three modes of material nature. Rise above these modes, O Arjuna. Be transcendental to all of them. Be free from all dualities and from all anxieties for gain and safety, and be established in the Self.” The entire world and all material knowledge is within the three modes of material nature. One has to transcend these modes, and to attain that platform of transcendence one must follow the instruction of the Supreme Personality of Godhead and thus become perfect in life. Otherwise one will be knocked down by the waves of the material nature’s three modes. This is further explained in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.5.30) in the words of Prahlāda Mahārāja:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">matir na kṛṣṇe parataḥ svato vā<br>mitho ’bhipadyeta gṛha-vratānām<br>adānta-gobhir viśatāṁ tamisraṁ<br>punaḥ punaś carvita-carvaṇānām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Materialistic persons, who are too much engaged in material enjoyment and who do not know anything beyond their material experiences, are carried by the whims of material nature. They live a life characterized by chewing the chewed, and they are controlled by their uncontrolled senses. Thus they go down to the darkest regions of hellish life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">369</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When King Purañjana was hunting in this way, many animals within the forest lost their lives with great pain, being pierced by the sharp arrowheads. Upon seeing these devastating, ghastly activities performed by the King, all the people who were merciful by nature became very unhappy. Such merciful persons could not tolerate seeing all this killing.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            When demoniac persons engage in animal-killing, the demigods, or devotees of the Lord, are very much afflicted by this killing. Demoniac civilizations in this modern age maintain various types of slaughterhouses all over the world. Rascal <span class="Italic">svāmīs</span> and <span class="Italic">yogīs</span> encourage foolish persons to go on eating flesh and killing animals and at the same time continue their so-called meditation and mystical practices. All these affairs are ghastly, and a compassionate person, namely a devotee of the Lord, becomes very unhappy to see such a sight. The hunting process is also carried on in a different way, as we have already explained. Hunting women, drinking different types of liquor, becoming intoxicated, killing animals and enjoying sex all serve as the basis of modern civilization. Vaiṣṇavas are unhappy to see such a situation in the world, and therefore they are very busy spreading this Kṛṣṇa consciousness movement.
+          </p>
+          <p>
+            The devotees are pained to see the hunting and killing of animals in the forest, the wholesale slaughter of animals in the slaughterhouses, and the exploitation of young girls in brothels that function under different names as clubs and societies. Being very much compassionate upon the killing of animals in sacrifice, the great sage Nārada began his instructions to King Prācīnabarhiṣat. In these instructions, Nārada Muni explained that devotees like him are very much afflicted by all the killing that goes on in human society. Not only are saintly persons afflicted by this killing, but even God Himself is afflicted and therefore comes down in the incarnation of Lord Buddha. Jayadeva Gosvāmī therefore sings: <span class="Italic">sadaya-hṛdaya-darśita-paśu-ghātam.</span> Simply to stop the killing of animals, Lord Buddha compassionately appeared. Some rascals put forward the theory that an animal has no soul or is something like dead stone. In this way they rationalize that there is no sin in animal-killing. Actually animals are not dead stone, but the killers of animals are stonehearted. Consequently no reason or philosophy appeals to them. They continue keeping slaughterhouses and killing animals in the forest. The conclusion is that one who does not care for the instructions of saintly persons like Nārada and his disciplic succession surely falls into the category of <span class="Italic">naṣṭa-prajña</span> and thus goes to hell.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">497</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this way King Purañjana killed many animals, including rabbits, boars, buffalo, bison, black deer, porcupines and other game animals. After killing and killing, the King became very tired.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            A person in the mode of ignorance commits many sinful activities. In the <span class="Italic">Bhakti-rasāmṛta-sindhu,</span> Śrīla Rūpa Gosvāmī explains that a man becomes sinful out of ignorance only. The resultant effect of sinful life is suffering. Those who are not in knowledge, who commit violations of the standard laws, are subject to be punished under criminal laws. Similarly, the laws of nature are very stringent. If a child touches fire without knowing the effect, he must be burned, even though he is only a child. If a child violates the law of nature, there is no compassion. Only through ignorance does a person violate the laws of nature, and when he comes to knowledge he does not commit any more sinful acts.
+          </p>
+          <p>
+            The King became tired after killing so many animals. When a man comes in contact with a saintly person, he becomes aware of the stringent laws of nature and thus becomes a religious person. Irreligious persons are like animals, but in this Kṛṣṇa consciousness movement such persons can come to a sense of understanding things as they are and abandon the four principles of prohibited activities—namely illicit sex life, meat-eating, gambling and intoxication. This is the beginning of religious life. Those who are so-called religious and indulge in these four principles of prohibited activities are pseudoreligionists. Religious life and sinful activity cannot parallel one another. If one is serious in accepting a religious life, or the path of salvation, he must adhere to the four basic rules and regulations. However sinful a man may be, if he receives knowledge from the proper spiritual master and repents his past activities in his sinful life and stops them, he immediately becomes eligible to return home, back to Godhead. This is made possible just by following the rules and regulations given by the <span class="Italic">śāstra</span> and following the bona fide spiritual master.
+          </p>
+          <p>
+            At present the whole world is on the verge of retiring from a blind materialistic civilization, which may be likened to hunting animals in the forest. People should take advantage of this Kṛṣṇa consciousness movement and leave their troublesome life of killing. It is said that the killers of animals should neither live nor die. If they live only to kill animals and enjoy women, life is not very prosperous. And as soon as a killer dies, he enters the cycle of birth and death in the lower species of life. That also is not desirable. The conclusion is that killers should retire from the killing business and take to this Kṛṣṇa consciousness movement to make life perfect. A confused, frustrated man cannot get relief by committing suicide because suicide will simply lead him to take birth in the lower species of life or to remain a ghost, unable to attain a gross material body. Therefore the perfect course is to retire altogether from sinful activities and take up Kṛṣṇa consciousness. In this way one can become completely perfect and go back home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">502</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After this, the King, very much fatigued, hungry and thirsty, returned to his royal palace. After returning, he took a bath and had an appropriate dinner. Then he took rest and thus became freed from all restlessness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            A materialistic person works throughout the whole week very, very hard. He is always asking, “Where is money? Where is money?” Then, at the end of the week, he wants to retire from these activities and go to some secluded place to rest. King Purañjana returned to his home because he was very much fatigued from hunting animals in the forest. In this way his conscience came to stop him from committing further sinful activities and make him return home. In <span class="Italic">Bhagavad-gītā</span> materialistic persons are described as <span class="Italic">duṣkṛtinaḥ,</span> which indicates those who are always engaged in sinful activities. When a person comes to his senses and understands how he is engaging in sinful activities, he returns to his conscience, which is herein figuratively described as the palace. Generally a materialistic person is infected by the material modes of passion and ignorance. The results of passion and ignorance are lust and greed. In the life of a materialist, activity means working in lust and greed. However, when he comes to his senses, he wants to retire. According to Vedic civilization, such retirement is positively recommended, and this portion of life is called <span class="Italic">vānaprastha.</span> Retirement is absolutely necessary for a materialist who wants to become free from the activities of a sinful life.
+          </p>
+          <p>
+            King Purañjana’s coming home, taking bath and having an appropriate dinner indicate that a materialistic person must retire from sinful activities and become purified by accepting a spiritual master and hearing from him about the values of life. If one would do this, he would feel completely refreshed, just as one feels after taking a bath. After receiving initiation from a bona fide spiritual master, one must abandon all kinds of sinful activities, namely illicit sex, intoxication, gambling and meat-eating.
+          </p>
+          <p>
+            The word <span class="Italic">ucitāhāraḥ</span> used in this verse is important. <span class="Italic">Ucita</span> means “appropriate.” One must eat appropriately and not take after food as hogs take after stool. For a human being there are eatables described in <span class="Ref_Italic">Bhagavad-gītā</span> (17.8) as <span class="Italic">sāttvika-āhāra,</span> or food in the mode of goodness. One should not indulge in eating food in the modes of passion and ignorance. This is called <span class="Italic">ucitāhāra,</span> or appropriate eating. One who is always eating meat or drinking liquor, which is eating and drinking in passion and ignorance, must give these things up so that his real consciousness may be awakened. In this way one may become peaceful and refreshed. If one is restless or fatigued, one cannot understand the science of God. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.20):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">evaṁ prasanna-manaso<br>bhagavad-bhakti-yogataḥ<br>bhagavat-tattva-vijñānaṁ<br>mukta-saṅgasya jāyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Unless one can become free from the influence of passion and ignorance, he cannot be pacified, and without being pacified, one cannot understand the science of God. King Purañjana’s returning home is indicative of man’s returning to his original consciousness, known as Kṛṣṇa consciousness. Kṛṣṇa consciousness is absolutely necessary for one who has committed a lot of sinful activities, especially killing animals or hunting in the forest.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">231</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After this, King Purañjana decorated his body with suitable ornaments. He also smeared scented sandalwood pulp over his body and put on flower garlands. In this way he became completely refreshed. After this, he began to search out his Queen.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            When a man comes into good consciousness and accepts a saintly person as a spiritual master, he hears many Vedic instructions in the form of philosophy, stories, narrations about great devotees and transactions between God and His devotees. In this way a man becomes refreshed in mind, exactly like a person who smears scented sandalwood pulp all over his body and decorates himself with ornaments. These decorations may be compared to knowledge of religion and the self. Through such knowledge one becomes detached from a materialistic way of life and engages himself in always hearing <span class="Italic">Śrīmad-Bhāgavatam, Bhagavad-gītā</span> and other Vedic literatures. The word <span class="Italic">sādhv-alaṅkṛta</span> used in this verse indicates that one must be absorbed in knowledge gathered from the instructions of saintly persons. Just as King Purañjana began to search out his better half, the Queen, one who is decorated with knowledge and instructions from saintly persons should try to search out his original consciousness, Kṛṣṇa consciousness. One cannot return to Kṛṣṇa consciousness unless he is favored by the instructions of a saintly person. Therefore Śrīla Narottama dāsa Ṭhākura sings: <span class="Italic">sādhu-śāstra-guru-vākya, cittete kariyā aikya.</span> If we want to become saintly persons, or if we want to return to our original Kṛṣṇa consciousness, we must associate with <span class="Italic">sādhu</span> (a saintly person), <span class="Italic">śāstra</span> (authoritative Vedic literature) and <span class="Italic">guru</span> (a bona fide spiritual master). This is the process.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">481</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After taking his dinner and having his thirst and hunger satisfied, King Purañjana felt some joy within his heart. Instead of being elevated to a higher consciousness, he became captivated by Cupid, and was moved by a desire to find his wife, who kept him satisfied in his household life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            This verse is very significant for those desiring to elevate themselves to a higher level of Kṛṣṇa consciousness. When a person is initiated by a spiritual master, he changes his habits and does not eat undesirable eatables or engage in the eating of meat, the drinking of liquor, illicit sex or gambling. <span class="Italic">Sāttvika-āhāra,</span> foodstuffs in the mode of goodness, are described in the <span class="Italic">śāstras</span> as wheat, rice, vegetables, fruits, milk, sugar, and milk products. Simple food like rice, <span class="Italic">dhal, capātīs,</span> vegetables, milk and sugar constitute a balanced diet, but sometimes it is found that an initiated person, in the name of <span class="Italic">prasāda,</span> eats very luxurious foodstuffs. Due to his past sinful life he becomes attracted by Cupid and eats good food voraciously. It is clearly visible that when a neophyte in Kṛṣṇa consciousness eats too much, he falls down. Instead of being elevated to pure Kṛṣṇa consciousness, he becomes attracted by Cupid. The so-called <span class="Italic">brahmacārī</span> becomes agitated by women, and the <span class="Italic">vānaprastha</span> may again become captivated into having sex with his wife. Or he may begin to search out another wife. Due to some sentiment, he may give up his own wife and come into the association of devotees and a spiritual master, but due to his past sinful life he cannot stay. Instead of being elevated to Kṛṣṇa consciousness, he falls down, being attracted by Cupid, and takes to another wife for sex enjoyment. The fall of the neophyte devotee from the path of Kṛṣṇa consciousness down to material life is described in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.5.17) by Nārada Muni.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tyaktvā sva-dharmaṁ caraṇāmbujaṁ harer<br>bhajann apakvo ’tha patet tato yadi<br>yatra kva vābhadram abhūd amuṣya kiṁ<br>ko vārtha āpto ’bhajatāṁ sva-dharmataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            This indicates that although a neophyte devotee may fall down from the path of Kṛṣṇa consciousness due to his immaturity, his service to Kṛṣṇa never goes in vain. However, a person who remains steadfast in his family duty or so-called social or family obligation but does not take to Kṛṣṇa consciousness receives no profit. One who comes to Kṛṣṇa consciousness must be very cautious and refrain from prohibited activities, as defined by Rūpa Gosvāmī in his <span class="Italic">Upadeśāmṛta (2):</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">atyāhāraḥ prayāsaś ca<br>prajalpo niyamāgrahaḥ<br>jana-saṅgaś ca laulyaṁ ca<br>ṣaḍbhir bhaktir vinaśyati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A neophyte devotee should neither eat too much nor collect more money than necessary. Eating too much or collecting too much is called <span class="Italic">atyāhāra.</span> For such <span class="Italic">atyāhāra</span> one must endeavor very much. This is called <span class="Italic">prayāsa.</span> Superficially one may show himself to be very much faithful to the rules and regulations, but at the same time not be fixed in the regulative principles. This is called <span class="Italic">niyamāgraha.</span> By mixing with undesirable persons, or <span class="Italic">jana-saṅga,</span> one becomes tainted with lust and greed and falls down from the path of devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">305</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At that time King Purañjana was a little anxious, and he inquired from the household women: My dear beautiful women, are you and your mistress all very happy like before, or not?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            In this verse the word <span class="Italic">vediṣat</span> indicates King Prācīnabarhi. When a man becomes refreshed by association with devotees and awakes to Kṛṣṇa consciousness, he consults the activities of his mind—namely thinking, feeling and willing—and decides whether he should return to his material activities or stay steady in spiritual consciousness. The word <span class="Italic">kuśalam</span> refers to that which is auspicious. One can make his home perfectly auspicious when he engages in devotional service to Lord Viṣṇu. When one is engaged in activities other than <span class="Italic">viṣṇu-bhakti,</span> or in other words when one is engaged in material activities, he is always filled with anxieties. A sane man should consult his mind, its thinking, feeling and willing processes, and decide how these processes should be utilized. If one always thinks of Kṛṣṇa, feels how to serve Him and wills to execute the order of Kṛṣṇa, it should be known that he has taken good instruction from his intelligence, which is called the mother. Although the King was refreshed, he nonetheless inquired about his wife. Thus he was consulting, thinking and willing how he could return to his steady good consciousness. The mind may suggest that by <span class="Italic">viṣaya-bhoga,</span> or sense enjoyment, one can become happy, but when one becomes advanced in Kṛṣṇa consciousness, he does not derive happiness from material activities. This is explained in <span class="Ref_Italic">Bhagavad-gītā</span> (2.59):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">viṣayā vinivartante<br>nirāhārasya dehinaḥ<br>rasa-varjaṁ raso ’py asya<br>paraṁ dṛṣṭvā nivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The embodied soul may be restricted from sense enjoyment, though the taste for sense objects remains. But, ceasing such engagements by experiencing a higher taste, he is fixed in consciousness.” One cannot be unattached to the sense objects unless he finds better engagement in devotional service. <span class="Italic">paraṁ dṛṣṭvā nivartate.</span> One can cease from material activities only when one actually engages in devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">290</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Purañjana said: I do not understand why my household paraphernalia does not attract me as before. I think that if there is neither a mother nor devoted wife at home, the home is like a chariot without wheels. Where is the fool who will sit down on such an unworkable chariot?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            The great politician Cāṇakya Paṇḍita said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mātā yasya gṛhe nāsti<br>bhāryā cāpriya-vādinī<br>araṇyaṁ tena gantavyaṁ<br>yathāraṇyaṁ tathā gṛham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “If a person has neither a mother nor a pleasing wife at home, he should leave home and go to the forest, because for him there is no difference between the forest and home.” The real <span class="Italic">mātā,</span> or mother, is devotional service to the Lord, and the real <span class="Italic">patnī,</span> or devoted wife, is a wife who helps her husband execute religious principles in devotional service. These two things are required for a happy home.
+          </p>
+          <p>
+            Actually, a woman is supposed to be the energy of the man. Historically, in the background of every great man there is either a mother or a wife. One’s household life is very successful if he has both a good wife and mother. In such a case, everything about household affairs and all the paraphernalia in the house becomes very pleasing. Lord Caitanya Mahāprabhu had both a good mother and pleasing wife, and He was very happy at home. Nonetheless, for the benefit of the whole human race, He took <span class="Italic">sannyāsa</span> and left both His mother and wife. In other words, it is essential that one have both a good mother and wife in order to become perfectly happy at home. Otherwise home life has no meaning. Unless one is religiously guided by intelligence and renders devotional service unto the Supreme Personality of Godhead, his home can never become very pleasing to a saintly person. In other words, if a man has a good mother or a good wife, there is no need of his taking <span class="Italic">sannyāsa</span>—that is, unless it is absolutely necessary, as it was for Lord Caitanya Mahāprabhu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">367</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Kindly let me know the whereabouts of that beautiful woman who always saves me when I am drowning in the ocean of danger. By giving me good intelligence at every step, she always saves me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            There is no difference between a good wife and good intelligence. One who possesses good intelligence can deliberate properly and save himself from many dangerous conditions. In material existence there is danger at every step. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.14.58) it is said: <span class="Italic">padaṁ padaṁ yad vipadāṁ na teṣām.</span> This material world is not actually a place of residence for an intelligent person or a devotee because here there is danger at every step. Vaikuṇṭha is the real home for the devotee, for there is no anxiety and no danger. Good intelligence means becoming Kṛṣṇa conscious. In the <span class="Italic">Caitanya-caritāmṛta</span> it is said: <span class="Italic">kṛṣṇa ye bhaje se baḍa catura.</span> Unless one is Kṛṣṇa conscious, he cannot be called an intelligent person.
+          </p>
+          <p>
+            Herein we see that King Purañjana was searching after his good wife, who always helped him out of the dangerous situations that always occur in material existence. As already explained, a real wife is <span class="Italic">dharma-patnī.</span> That is, a woman accepted in marriage by ritualistic ceremony is called <span class="Italic">dharma-patnī,</span> which signifies that she is accepted in terms of religious principles. Children born of <span class="Italic">dharma-patnī,</span> or a woman married according to religious principles, inherit the property of the father, but children born of a woman who is not properly married do not inherit the father’s property. The word <span class="Italic">dharma-patnī</span> also refers to a chaste wife. A chaste wife is one who never had any connection with men before her marriage. Once a woman is given the freedom to mingle with all kinds of men in her youth, it is very difficult for her to keep chaste. She generally cannot remain chaste. When butter is brought into the proximity of fire, it melts. The woman is like fire, and man is like the butter. But if one gets a chaste wife, accepted through a religious marriage ritual, she can be of great help when one is threatened by the many dangerous situations of life. Actually such a wife can become the source of all good intelligence. With such a good wife, the family’s engagement in the devotional service of the Lord actually makes a home a <span class="Italic">gṛhastha-āśrama,</span> or household dedicated to spiritual cultivation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">385</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All the women addressed the King: O master of the citizens, we do not know why your dear wife has taken on this sort of existence. O killer of enemies, kindly look! She is lying on the ground without bedding. We cannot understand why she is acting this way.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            When a person is devoid of devotional service, or <span class="Italic">viṣṇu-bhakti,</span> he takes to many sinful activities. King Purañjana left home, neglected his own wife and engaged himself in killing animals. This is the position of all materialistic men. They do not care for a married chaste wife. They take the wife only as an instrument for sense enjoyment, not as a means for devotional service. To have unrestricted sex life, the <span class="Italic">karmīs</span> work very hard. They have concluded that the best course is to have sex with any woman and simply pay the price for her, as though she were a mercantile commodity. Thus they engage their energy in working very hard for such material acquisitions. Such materialistic people have lost their good intelligence. They must search out their intelligence within the heart. A person who does not have a chaste wife accepted by religious principles always has a bewildered intelligence.
+          </p>
+          <p>
+            The wife of King Purañjana was lying on the ground because she was neglected by her husband. Actually the woman must always be protected by her husband. We always speak of the goddess of fortune as being placed on the chest of Nārāyaṇa. In other words, the wife must remain embraced by her husband. Thus she becomes beloved and well protected. Just as one saves his money and places it under his own personal protection, one should similarly protect his wife by his own personal supervision. Just as intelligence is always within the heart, so a beloved chaste wife should always have her place on the chest of a good husband. This is the proper relationship between husband and wife. A wife is therefore called <span class="Italic">ardhāṅganī,</span> or half of the body. One cannot remain with only one leg, one hand or only one side of the body. He must have two sides. Similarly, according to nature’s way, husband and wife should live together. In the lower species of life, among birds and animals, it is seen that by nature’s arrangement the husband and wife live together. It is similarly ideal in human life for the husband and wife to live together. The home should be a place for devotional service, and the wife should be chaste and accepted by a ritualistic ceremony. In this way one can become happy at home.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">192</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Nārada continued: My dear King Prācīnabarhi, as soon as King Purañjana saw his Queen lying on the ground, appearing like a mendicant, he immediately became bewildered.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            In this verse the word <span class="Italic">avadhutām</span> is especially significant, for it refers to a mendicant who does not take care of his body. Since the Queen was lying on the ground without bedding and proper dress, King Purañjana became very much aggrieved. In other words, he repented that he had neglected his intelligence and had engaged himself in the forest in killing animals. In other words, when one’s good intelligence is separated or neglected, he fully engages in sinful activities. Due to neglecting one’s good intelligence, or Kṛṣṇa consciousness, one becomes bewildered and engages in sinful activities. Upon realizing this, a man becomes repentant. Such repentance is described by Narottama dāsa Ṭhākura:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp"><0>hari hari viphale janama goṅāinu<br>manuṣya-janama pāiyā,     rādhā-kṛṣṇa nā bhajiyā,<br>jāniyā śuniyā viṣa khāinu<fc></fc></0></div></blockquote>
+          </p>
+          <p>
+            Narottama dāsa Ṭhākura herein says that he repents for having spoiled his human life and knowingly drunk poison. By not being Kṛṣṇa conscious, one willingly drinks the poison of material life. The purport is that one certainly becomes addicted to sinful activities when he becomes devoid of his good chaste wife, or when he has lost his good sense and does not take to Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The King, with aggrieved mind, began to speak to his wife with very pleasing words. Although he was filled with regret and tried to pacify her, he could not see any symptom of anger caused by love within the heart of his beloved wife.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            The King very much regretted having left his Queen and having gone to the forest to execute sinful activities. When a person regrets his sinful activities, the abandoning of Kṛṣṇa consciousness and good intelligence, his path of deliverance from the path of material clutches is opened. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.5): <span class="Italic">parābhavas tāvad abodha jāto yāvan na jijñāsata ātma-tattvam.</span> When a person loses his Kṛṣṇa consciousness and loses interest in self-realization, he must engage in sinful activities. All one’s activities in a life devoid of Kṛṣṇa consciousness simply lead to defeat and misuse of one’s life. Naturally one who comes to Kṛṣṇa consciousness regrets his previous sinful activities in the human form. Only by this process can one be delivered from the clutches of nescience or ignorance in materialistic life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">279</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because the King was very expert in flattery, he began to pacify his Queen very slowly. First he touched her two feet, then embraced her nicely, seating her on his lap, and began to speak as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            One has to awaken his Kṛṣṇa consciousness by first regretting his past deeds. Just as King Purañjana began to flatter his Queen, one should, by deliberate consideration, raise himself to the platform of Kṛṣṇa consciousness. To attain such an end, one must touch the lotus feet of the spiritual master. Kṛṣṇa consciousness cannot be achieved by self-endeavor. One must therefore approach a self-realized, Kṛṣṇa conscious person and touch his lotus feet. Prahlāda Mahārāja therefore said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">naiṣāṁ matis tāvad urukramāṅghriṁ<br>spṛśaty anarthāpagamo yad-arthaḥ<br>mahīyasāṁ pāda-rajo-’bhiṣekaṁ<br>niṣkiñcanānāṁ na vṛṇīta yāvat</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 7.5.32)
+          </p>
+          <p>
+            One cannot come to the precincts of Kṛṣṇa consciousness unless he touches the dust of the lotus feet of a person who has become a <span class="Italic">mahātmā,</span> a great devotee. This is the beginning of the surrendering process. Lord Kṛṣṇa wants everyone to surrender unto Him, and this surrendering process begins when one touches the lotus feet of a bona fide spiritual master. By sincerely rendering service to a bona fide spiritual master, one begins his spiritual life in Kṛṣṇa consciousness. Touching the lotus feet of a spiritual master means giving up one’s false prestige and unnecessarily puffed-up position in the material world. Those who remain in the darkness of material existence due to their falsely prestigious positions—so-called scientists and philosophers—are actually atheists. They do not know the ultimate cause of everything. Although bewildered, they are not ready to surrender themselves to the lotus feet of a person who knows things in their proper perspective. In other words, one cannot arouse Kṛṣṇa consciousness simply by his own mental speculation. One must surrender to a bona fide spiritual master. Only this process will help one.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">317</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Purañjana said: My dear beautiful wife, when a master accepts a servant as his own man, but does not punish him for his offenses, the servant must be considered unfortunate.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            According to Vedic civilization, domestic animals and servants are treated exactly like one’s own children. Animals and children are sometimes punished not out of vengeance but out of love. Similarly, a master sometimes punishes his servant, not out of vengeance but out of love, to correct him and bring him to the right point. Thus King Purañjana took his punishment dealt by his wife, the Queen, as mercy upon him. He considered himself the most obedient servant of the Queen. She was angry at him for his sinful activities—namely, hunting in the forest and leaving her at home. King Purañjana accepted the punishment as actual love and affection from his wife. In the same way, when a person is punished by the laws of nature, by the will of God, he should not be disturbed. A real devotee thinks in this way. When a devotee is put into an awkward position, he takes it as the mercy of the Supreme Lord.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tat te ’nukampāṁ susamīkṣamāṇo<br>bhuñjāna evātma-kṛtaṁ vipākam<br>hṛd-vāg-vapurbhir vidadhan namas te<br>jīveta yo mukti-pade sa dāya-bhāk</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 10.14.8)
+          </p>
+          <p>
+            This verse states that the devotee accepts a reversal of his position in life as a benediction by the Lord and consequently offers the Lord more obeisances and prayers, thinking that the punishment is due to his past misdeeds and that the Lord is punishing him very mildly. The punishment awarded by the state or by God for one’s own faults is actually for one’s benefit. In the <span class="Italic">Manu-saṁhitā</span> it is said that the King should be considered merciful when he condemns a murderer to death because a murderer punished in this life becomes freed from his sinful activity and in the next life takes birth cleared of all sins. If one accepts punishment as a reward dealt by the master, he becomes intelligent enough not to commit the same mistake again.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">78</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear slender maiden, when a master chastises his servant, the servant should accept this as great mercy. One who becomes angry must be very foolish not to know that such is the duty of his friend.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            It is said that when a foolish man is instructed in something very nice, he generally cannot accept it. Indeed, he actually becomes angry. Such anger is compared to the poison of a serpent, for when a serpent is fed milk and bananas, its poison actually increases. Instead of becoming merciful or sober, the serpent increases its poisonous venom when fed nice foodstuffs. Similarly, when a fool is instructed, he does not rectify himself, but actually becomes angry.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">350</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear wife, your teeth are very beautifully set, and your attractive features make you appear very thoughtful. Kindly give up your anger, be merciful upon me, and please smile upon me with loving attachment. When I see a smile on your beautiful face, and when I see your hair, which is as beautiful as the color blue, and see your raised nose and hear your sweet talk, you will become more beautiful to me and thus attract me and oblige me. You are my most respected mistress.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            An effeminate husband, simply being attracted by the external beauty of his wife, tries to become her most obedient servant. Śrīpāda Śaṅkarācārya has therefore advised that we not become attracted by a lump of flesh and blood. The story is told that at one time a man, very much attracted to a beautiful woman, wooed the woman in such a way that she devised a plan to show him the ingredients of her beauty. The woman made a date to see him, and before seeing him she took a purgative, and that whole day and night she simply passed stool, and she preserved that stool in a pot. The next night, when the man came to see her, she appeared very ugly and emaciated. When the man inquired from her about the woman with whom he had an engagement, she replied, “I am that very woman.” The man refused to believe her, not knowing that she had lost all her beauty due to the violent purgative that caused her to pass stool day and night. When the man began to argue with her, the woman said that she was not looking beautiful because she was separated from the ingredients of her beauty. When the man asked how she could be so separated, the woman said, “Come on, and I will show you.” She then showed him the pot filled with liquid stool and vomit. Thus the man became aware that a beautiful woman is simply a lump of matter composed of blood, stool, urine and similar other disgusting ingredients. This is the actual fact, but in a state of illusion, man becomes attracted by illusory beauty and becomes a victim of <span class="Italic">māyā.</span>
+          </p>
+          <p>
+            King Purañjana begged his Queen to return to her original beauty. He tried to revive her just as a living entity tries to revive his original consciousness, Kṛṣṇa consciousness, which is very beautiful. All the beautiful features of the Queen could be compared to the beautiful features of Kṛṣṇa consciousness. When one returns to his original Kṛṣṇa consciousness, he actually becomes steady, and his life becomes successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">384</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O hero’s wife, kindly tell me if someone has offended you. I am prepared to give such a person punishment as long as he does not belong to the brāhmaṇa caste. But for the servant of Muraripu [Kṛṣṇa], I excuse no one within or beyond these three worlds. No one can freely move after offending you, for I am prepared to punish him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            According to Vedic civilization, a <span class="Italic">brāhmaṇa,</span> or one who is properly qualified to understand the Absolute Truth—that is, one belonging to the most intelligent social order—as well as the devotee of Lord Kṛṣṇa, who is known as Muradviṣa, enemy of a demon named Mura, is not subject to the rules and regulations of the state. In other words, upon breaking the laws of the state, everyone can be punished by the government except the <span class="Italic">brāhmaṇas</span> and Vaiṣṇavas. <span class="Italic">Brāhmaṇas</span> and Vaiṣṇavas never transgress the laws of the state or the laws of nature because they know perfectly well the resultant reactions caused by such law-breaking. Even though they may sometimes appear to violate the laws, they are not to be punished by the king. This instruction was given to King Prācīnabarhiṣat by Nārada Muni. King Purañjana was a representative of King Prācīnabarhiṣat, and Nārada Muni was reminding King Prācīnabarhiṣat of his forefather, Mahārāja Pṛthu, who never chastised a <span class="Italic">brāhmaṇa</span> or a Vaiṣṇava.
+          </p>
+          <p>
+            One’s pure intelligence, or pure Kṛṣṇa consciousness, becomes polluted by material activities. Pure consciousness can be revived by the process of sacrifice, charity, pious activities, etc., but when one pollutes his Kṛṣṇa consciousness by offending a <span class="Italic">brāhmaṇa</span> or a Vaiṣṇava, it is very difficult to revive. Śrī Caitanya Mahāprabhu has described the <span class="Italic">vaiṣṇava-aparādha,</span> or offense to a Vaiṣṇava, as “the mad elephant offense.” One should be very careful not to offend a Vaiṣṇava or a <span class="Italic">brāhmaṇa.</span> Even the great <span class="Italic">yogī</span> Durvāsā was harassed by the Sudarśana <span class="Italic">cakra</span> when he offended the Vaiṣṇava Mahārāja Ambarīṣa, who was neither a <span class="Italic">brāhmaṇa</span> nor a <span class="Italic">sannyāsī</span> but an ordinary householder. Mahārāja Ambarīṣa was a Vaiṣṇava, and consequently Durvāsā Muni was chastised.
+          </p>
+          <p>
+            The conclusion is that if Kṛṣṇa consciousness is covered by material sins, one can eliminate the sins simply by chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> but if one pollutes his Kṛṣṇa consciousness by offending a <span class="Italic">brāhmaṇa</span> or a Vaiṣṇava, one cannot revive it until one properly atones for the sin by pleasing the offended Vaiṣṇava or <span class="Italic">brāhmaṇa.</span> This was the course that Durvāsā Muni had to follow, for he surrendered unto Mahārāja Ambarīṣa. A <span class="Italic">vaiṣṇava-aparādha</span> cannot be atoned for by any means other than by begging the pardon of the offended Vaiṣṇava.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">58</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear wife, until this day I have never seen your face without tilaka decorations, nor have I seen you so morose and without luster or affection. Nor have I seen your two nice breasts wet with tears from your eyes. Nor have I ever before seen your lips, which are ordinarily as red as the bimba fruit, without their reddish hue.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Every woman looks very beautiful when decorated with <span class="Italic">tilaka</span> and vermillion. A woman generally becomes very attractive when her lips are colored with reddish saffron or vermillion. But when one’s consciousness and intelligence are without any brilliant thoughts about Kṛṣṇa, they become morose and lusterless, so much so that one cannot derive any benefit despite sharp intelligence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">252</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Queen, due to my sinful desires I went to the forest to hunt without asking you. Therefore I must admit that I have offended you. Nonetheless, thinking of me as your most intimate subordinate, you should still be very much pleased with me. Factually I am very much bereaved, but being pierced by the arrow of Cupid, I am feeling lusty. But where is the beautiful woman who would give up her lusty husband and refuse to unite with him?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            Both man and woman desire one another; that is the basic principle of material existence. Women in general always keep themselves beautiful so that they can be attractive to their lusty husbands. When a lusty husband comes before his wife, the wife takes advantage of his aggressive activities and enjoys life. Generally when a woman is attacked by a man—whether her husband or some other man—she enjoys the attack, being too lusty. In other words, when one’s intelligence is properly utilized, both the intellect and the intelligent person enjoy one another with great satisfaction. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.9.45):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yan maithunādi-gṛhamedhi-sukhaṁ hi tucchaṁ<br>kaṇḍūyanena karayor iva duḥkha-duḥkham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The actual happiness of the <span class="Italic">karmīs</span> is sex life. They work very hard outside the home, and to satiate their hard labor, they come home to enjoy sex life. King Purañjana went to the forest to hunt, and after his hard labor he returned home to enjoy sex life. If a man lives outside the home and spends a week in a city or somewhere else, at the end of the week he becomes very anxious to return home and enjoy sex with his wife. This is confirmed in <span class="Italic">Śrīmad-Bhāgavatam:</span> <span class="Italic">yan maithunādi-gṛhamedhi-sukhaṁ hi tuccham [SB </span>7.9.45]<span class="Italic">.</span> <span class="Italic">Karmīs</span> work very hard simply to enjoy sex. Modern human society has improved the materialistic way of life simply by inducing unrestricted sex life in many different ways. This is most prominently visible in the Western world.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-sixth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “King Purañjana Goes to the Forest to Hunt, and His Queen Becomes Angry.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/4/26">https://prabhupadabooks.com/sb/4/26</a><!-- span.text_source_copied_date
+        | on 2022-08-07 15:40:51 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 4.25: The Descriptions of the Characteristics of King Puranjana     Next: SB 4.27: Attack by Candavega on the City of King Puranjana: the Character of Kalakanya</div>
+      </p>
+    </div>
+  </body>
+</html>

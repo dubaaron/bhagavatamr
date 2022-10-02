@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 1.2, Divinity and Divine Service</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 1:<br>
+        “Creation”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Two:<br>Divinity and Divine Service
+      </h1>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">18</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ugraśravā [Sūta Gosvāmī], the son of Romaharṣaṇa, being fully satisfied by the perfect questions of the brāhmaṇas, thanked them and thus attempted to reply.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            The sages of Naimiṣāraṇya asked Sūta Gosvāmī six questions, and so he is answering them one by one.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">430</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Sūta Gosvāmī said: Let me offer my respectful obeisances unto that great sage [Śukadeva Gosvāmī] who can enter the hearts of all. When he went away to take up the renounced order of life [sannyāsa], leaving home without undergoing reformation by the sacred thread or the ceremonies observed by the higher castes, his father, Vyāsadeva, fearing separation from him, cried out, &quot;O my son!&quot; Indeed, only the trees, which were absorbed in the same feelings of separation, echoed in response to the begrieved father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The institution of <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> prescribes many regulative duties to be observed by its followers. Such duties enjoin that a candidate willing to study the <span class="Italic">Vedas</span> must approach a bona fide spiritual master and request acceptance as his disciple. The sacred thread is the sign of those who are competent to study the <span class="Italic">Vedas</span> from the <span class="Italic">ācārya,</span> or the bona fide spiritual master. Śrī Śukadeva Gosvāmī did not undergo such purificatory ceremonies because he was a liberated soul from his very birth.
+          </p>
+          <p>
+            Generally, a man is born as an ordinary being, and by the purificatory processes he is born for the second time. When he sees a new light and seeks direction for spiritual progress, he approaches a spiritual master for instruction in the <span class="Italic">Vedas.</span> The spiritual master accepts only the sincere inquirer as his disciple and gives him the sacred thread. In this way a man becomes twice-born, or a <span class="Italic">dvija.</span> After qualifying as a <span class="Italic">dvija</span> one may study the <span class="Italic">Vedas,</span> and after becoming well versed in the <span class="Italic">Vedas</span> one becomes a <span class="Italic">vipra.</span> A <span class="Italic">vipra,</span> or a qualified <span class="Italic">brāhmaṇa,</span> thus realizes the Absolute and makes further progress in spiritual life until he reaches the Vaiṣṇava stage. The Vaiṣṇava stage is the postgraduate status of a <span class="Italic">brāhmaṇa.</span> A progressive <span class="Italic">brāhmaṇa</span> must necessarily become a Vaiṣṇava, for a Vaiṣṇava is a self-realized, learned <span class="Italic">brāhmaṇa.</span>
+          </p>
+          <p>
+            Śrīla Śukadeva Gosvāmī was a Vaiṣṇava from the beginning; therefore, there was no need for him to undergo all the processes of the <span class="Italic">varṇāśrama</span> institution. Ultimately the aim of <span class="Italic">varṇāśrama-dharma</span> is to turn a crude man into a pure devotee of the Lord, or a Vaiṣṇava. Anyone, therefore, who becomes a Vaiṣṇava accepted by the first-class Vaiṣṇava, or <span class="Italic">uttama-adhikārī</span> Vaiṣṇava, is already considered a <span class="Italic">brāhmaṇa,</span> regardless of his birth or past deeds. Śrī Caitanya Mahāprabhu accepted this principle and recognized Śrīla Haridāsa Ṭhākura as the <span class="Italic">ācārya</span> of the holy name, although Ṭhākura Haridāsa appeared in a Mohammedan family. In conclusion, Śrīla Śukadeva Gosvāmī was born a Vaiṣṇava, and, therefore, brahminism was included in him. He did not have to undergo any ceremonies. Any lowborn person-be he a Kirāta, Hūṇa, Āndhra, Pulinda, Pulkaśa, Ābhīra, Śumbha, Yavana, Khasa or even lower-can be delivered to the highest transcendental position by the mercy of Vaiṣṇavas. Śrīla Śukadeva Gosvāmī was the spiritual master of Śrī Sūta Gosvāmī, who therefore offers his respectful obeisances unto Śrīla Śukadeva Gosvāmī before he begins his answers to the questions of the sages at Naimiṣāraṇya.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">597</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Let me offer my respectful obeisances unto him [Śuka], the spiritual master of all sages, the son of Vyāsadeva, who, out of his great compassion for those gross materialists who struggle to cross over the darkest regions of material existence, spoke this most confidential supplement to the cream of Vedic knowledge, after having personally assimilated it by experience.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            In this prayer, Śrīla Sūta Gosvāmī practically summarizes the complete introduction of <span class="Italic">Śrīmad-Bhāgavatam.</span> <span class="Italic">Śrīmad-Bhāgavatam</span> is the natural supplementary commentary on the <span class="Italic">Vedānta-sūtras.</span> The <span class="Italic">Vedānta-sūtras,</span> or the <span class="Italic">Brahma-sūtras,</span> were compiled by Vyāsadeva with a view to presenting just the cream of Vedic knowledge. <span class="Italic">Śrīmad-Bhāgavatam</span> is the natural commentary on this cream. Śrīla Śukadeva Gosvāmī was a thoroughly realized master on the <span class="Italic">Vedānta-sūtra,</span> and consequently he also personally realized the commentary, <span class="Italic">Śrīmad-Bhāgavatam.</span> And just to show his boundless mercy upon bewildered materialistic men who want to cross completely over nescience, he recited for the first time this confidential knowledge.
+          </p>
+          <p>
+            There is no point in arguing that a materialistic man can be happy. No materialistic creature-be he the great Brahmā or an insignificant ant-can be happy. Everyone tries to make a permanent plan for happiness, but everyone is baffled by the laws of material nature. Therefore the materialistic world is called the darkest region of God's creation. Yet the unhappy materialists can get out of it simply by desiring to get out. Unfortunately they are so foolish that they do not want to escape. Therefore they are compared to the camel who relishes thorny twigs because he likes the taste of the twigs mixed with blood. He does not realize that it is his own blood and that his tongue is being cut by the thorns. Similarly, to the materialist his own blood is as sweet as honey, and although he is always harassed by his own material creations, he does not wish to escape. Such materialists are called <span class="Italic">karmīs.</span> Out of hundreds of thousands of <span class="Italic">karmīs,</span> only a few may feel tired of material engagement and desire to get out of the labyrinth. Such intelligent persons are called <span class="Italic">jñānīs.</span> The <span class="Italic">Vedānta-sūtra</span> is directed to such <span class="Italic">jñānīs.</span> But Śrīla Vyāsadeva, being the incarnation of the Supreme Lord, could foresee the misuse of the <span class="Italic">Vedānta-sūtra</span> by unscrupulous men, and, therefore, he personally supplemented the <span class="Italic">Vedānta-sūtra</span> with the <span class="Italic">Bhāgavata Purāṇa.</span> It is clearly said that this <span class="Italic">Bhāgavatam</span> is the original commentary on the <span class="Italic">Brahma-sūtras.</span> Śrīla Vyāsadeva also instructed the <span class="Italic">Bhāgavatam</span> to his own son, Śrīla Śukadeva Gosvāmī, who was already at the liberated stage of transcendence. Śrīla Śukadeva realized it personally and then explained it. By the mercy of Śrīla Śukadeva, the <span class="Italic">Bhāgavata-vedānta-sūtra</span> is available for all those sincere souls who want to get out of material existence.
+          </p>
+          <p>
+            <span class="Italic">Śrīmad-Bhāgavatam</span> is the one unrivaled commentary on <span class="Italic">Vedānta-sūtra.</span> Śrīpāda Śaṅkarācārya intentionally did not touch it because he knew that the natural commentary would be difficult for him to surpass. He wrote his <span class="Italic">Śārīraka-bhāṣya,</span> and his so-called followers deprecated the <span class="Italic">Bhāgavatam</span> as some "new" presentation. One should not be misled by such propaganda directed against the <span class="Italic">Bhāgavatam</span> by the Māyāvāda school. From this introductory <span class="Italic">śloka,</span> the beginning student should know that <span class="Italic">Śrīmad-Bhāgavatam</span> is the only transcendental literature meant for those who are <span class="Italic">paramahaṁsas</span> and completely freed from the material disease called malice. The Māyāvādīs are envious of the Personality of Godhead despite Śrīpāda Śaṅkarācārya's admission that Nārāyaṇa, the Personality of Godhead, is above the material creation. The envious Māyāvādī cannot have access to the <span class="Italic">Bhāgavatam,</span> but those who are really anxious to get out of this material existence may take shelter of this <span class="Italic">Bhāgavatam</span> because it is uttered by the liberated Śrīla Śukadeva Gosvāmī. It is the transcendental torchlight by which one can see perfectly the transcendental Absolute Truth realized as Brahman, Paramātmā and Bhagavān.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">262</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Before reciting this Śrīmad-Bhāgavatam, which is the very means of conquest, one should offer respectful obeisances unto the Personality of Godhead, Nārāyaṇa, unto Nara-nārāyaṇa Ṛṣi, the supermost human being, unto mother Sarasvatī, the goddess of learning, and unto Śrīla Vyāsadeva, the author.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            All the Vedic literatures and the <span class="Italic">Purāṇas</span> are meant for conquering the darkest region of material existence. The living being is in the state of forgetfulness of his relation with God due to his being overly attracted to material sense gratification from time immemorial. His struggle for existence in the material world is perpetual, and it is not possible for him to get out of it by making plans. If he at all wants to conquer this perpetual struggle for existence, he must reestablish his eternal relation with God. And one who wants to adopt such remedial measures must take shelter of literatures such as the <span class="Italic">Vedas</span> and the <span class="Italic">Purāṇas.</span> Foolish people say that the <span class="Italic">Purāṇas</span> have no connection with the <span class="Italic">Vedas.</span> However, the <span class="Italic">Purāṇas</span> are supplementary explanations of the <span class="Italic">Vedas</span> intended for different types of men. All men are not equal. There are men who are conducted by the mode of goodness, others who are under the mode of passion and others who are under the mode of ignorance. The <span class="Italic">Purāṇas</span> are so divided that any class of men can take advantage of them and gradually regain their lost position and get out of the hard struggle for existence. Śrīla Sūta Gosvāmī shows the way of chanting the <span class="Italic">Purāṇas.</span> This may be followed by persons who aspire to be preachers of the Vedic literatures and the <span class="Italic">Purāṇas.</span> <span class="Italic">Śrīmad-Bhāgavatam</span> is the spotless <span class="Italic">Purāṇa,</span> and it is especially meant for those who desire to get out of the material entanglement permanently.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">385</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O sages, I have been justly questioned by you. Your questions are worthy because they relate to Lord Kṛṣṇa and so are of relevance to the world&#39;s welfare. Only questions of this sort are capable of completely satisfying the self.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Since it has been stated hereinbefore that in the <span class="Italic">Bhāgavatam</span> the Absolute Truth is to be known, the questions of the sages of Naimiṣāraṇya are proper and just, because they pertain to Kṛṣṇa, who is the Supreme Personality of Godhead, the Absolute Truth. In <span class="Ref_Italic">Bhagavad-gītā</span> (15.15) the Personality of Godhead says that in all the <span class="Italic">Vedas</span> there is nothing but the urge for searching after Him, Lord Kṛṣṇa. Thus the questions that pertain to Kṛṣṇa are the sum and substance of all the Vedic inquiries.
+          </p>
+          <p>
+            The whole world is full of questions and answers. The birds, beasts and men are all busy in the matter of perpetual questions and answers. In the morning the birds in the nest become busy with questions and answers, and in the evening also the same birds come back and again become busy with questions and answers. The human being, unless he is fast asleep at night, is busy with questions and answers. The businessmen in the market are busy with questions and answers, and so also the lawyers in the court and the students in the schools and colleges. The legislators in the parliament are also busy with questions and answers, and the politicians and the press representatives are all busy with questions and answers. Although they go on making such questions and answers for their whole lives, they are not at all satisfied. Satisfaction of the soul can only be obtained by questions and answers on the subject of Kṛṣṇa.
+          </p>
+          <p>
+            Kṛṣṇa is our most intimate master, friend, father or son and object of conjugal love. Forgetting Kṛṣṇa, we have created so many objects of questions and answers, but none of them are able to give us complete satisfaction. All things-but Kṛṣṇa-give temporary satisfaction only, so if we are to have complete satisfaction we must take to the questions and answers about Kṛṣṇa. We cannot live for a moment without being questioned or without giving answers. Because the <span class="Italic">Śrīmad-Bhāgavatam</span> deals with questions and answers that are related to Kṛṣṇa, we can derive the highest satisfaction only by reading and hearing this transcendental literature. One should learn the <span class="Italic">Śrīmad-Bhāgavatam</span> and make an all-around solution to all problems pertaining to social, political or religious matters. <span class="Italic">Śrīmad-Bhāgavatam</span> and Kṛṣṇa are the sum total of all things.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">517</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The supreme occupation [dharma] for all humanity is that by which men can attain to loving devotional service unto the transcendent Lord. Such devotional service must be unmotivated and uninterrupted to completely satisfy the self.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            In this statement, Śrī Sūta Gosvāmī answers the first question of the sages of Naimiṣāraṇya. The sages asked him to summarize the whole range of revealed scriptures and present the most essential part so that fallen people or the people in general might easily take it up. The <span class="Italic">Vedas</span> prescribe two different types of occupation for the human being. One is called the <span class="Italic">pravṛtti-mārga,</span> or the path of sense enjoyment, and the other is called the <span class="Italic">nivṛtti-mārga,</span> or the path of renunciation. The path of enjoyment is inferior, and the path of sacrifice for the supreme cause is superior. The material existence of the living being is a diseased condition of actual life. Actual life is spiritual existence, or <span class="Italic">brahma-bhūta [SB 4.30.20]</span> existence, where life is eternal, blissful and full of knowledge. Material existence is temporary, illusory and full of miseries. There is no happiness at all. There is just the futile attempt to get rid of the miseries, and temporary cessation of misery is falsely called happiness. Therefore, the path of progressive material enjoyment, which is temporary, miserable and illusory, is inferior. But devotional service to the Supreme Lord, which leads one to eternal, blissful and all-cognizant life, is called the superior quality of occupation. This is sometimes polluted when mixed with the inferior quality. For example, adoption of devotional service for material gain is certainly an obstruction to the progressive path of renunciation. Renunciation or abnegation for ultimate good is certainly a better occupation than enjoyment in the diseased condition of life. Such enjoyment only aggravates the symptoms of disease and increases its duration. Therefore devotional service to the Lord must be pure in quality, i.e., without the least desire for material enjoyment. One should, therefore, accept the superior quality of occupation in the form of the devotional service of the Lord without any tinge of unnecessary desire, fruitive action and philosophical speculation. This alone can lead one to perpetual solace in His service.
+          </p>
+          <p>
+            We have purposely denoted <span class="Italic">dharma</span> as occupation because the root meaning of the word <span class="Italic">dharma</span> is "that which sustains one's existence." A living being's sustenance of existence is to coordinate his activities with his eternal relation with the Supreme Lord Kṛṣṇa. Kṛṣṇa is the central pivot of living beings, and He is the all-attractive living entity or eternal form amongst all other living beings or eternal forms. Each and every living being has his eternal form in the spiritual existence, and Kṛṣṇa is the eternal attraction for all of them. Kṛṣṇa is the complete whole, and everything else is His part and parcel. The relation is one of the servant and the served. It is transcendental and is completely distinct from our experience in material existence. This relation of servant and the served is the most congenial form of intimacy. One can realize it as devotional service progresses. Everyone should engage himself in that transcendental loving service of the Lord, even in the present conditional state of material existence. That will gradually give one the clue to actual life and please him to complete satisfaction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">508</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By rendering devotional service unto the Personality of Godhead, Śrī Kṛṣṇa, one immediately acquires causeless knowledge and detachment from the world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Those who consider devotional service to the Supreme Lord Śrī Kṛṣṇa to be something like material emotional affairs may argue that in the revealed scriptures, sacrifice, charity, austerity, knowledge, mystic powers and similar other processes of transcendental realization are recommended. According to them, <span class="Italic">bhakti,</span> or the devotional service of the Lord, is meant for those who cannot perform the high-grade activities. Generally it is said that the <span class="Italic">bhakti</span> cult is meant for the <span class="Italic">śūdras, vaiśyas</span> and the less intelligent woman class. But that is not the actual fact. The <span class="Italic">bhakti</span> cult is the topmost of all transcendental activities, and therefore it is simultaneously sublime and easy. It is sublime for the pure devotees who are serious about getting in contact with the Supreme Lord, and it is easy for the neophytes who are just on the threshold of the house of <span class="Italic">bhakti.</span> To achieve the contact of the Supreme Personality of Godhead Śrī Kṛṣṇa is a great science, and it is open for all living beings, including the <span class="Italic">śūdras, vaiśyas,</span> women and even those lower than the lowborn <span class="Italic">śūdras,</span> so what to speak of the high-class men like the qualified <span class="Italic">brāhmaṇas</span> and the great self-realized kings. The other high-grade activities designated as sacrifice, charity, austerity, etc., are all corollary factors following the pure and scientific <span class="Italic">bhakti</span> cult.
+          </p>
+          <p>
+            The principles of knowledge and detachment are two important factors on the path of transcendental realization. The whole spiritual process leads to perfect knowledge of everything material and spiritual, and the results of such perfect knowledge are that one becomes detached from material affection and becomes attached to spiritual activities. Becoming detached from material things does not mean becoming inert altogether, as men with a poor fund of knowledge think. <span class="Italic">Naiṣkarma</span> means not undertaking activities that will produce good or bad effects. Negation does not mean negation of the positive. Negation of the nonessentials does not meant negation of the essential. Similarly, detachment from material forms does not mean nullifying the positive form. The <span class="Italic">bhakti</span> cult is meant for realization of the positive form. When the positive form is realized, the negative forms are automatically eliminated. Therefore, with the development of the <span class="Italic">bhakti</span> cult, with the application of positive service to the positive form, one naturally becomes detached from inferior things, and he becomes attached to superior things. Similarly, the <span class="Italic">bhakti</span> cult, being the supermost occupation of the living being, leads him out of material sense enjoyment. That is the sign of a pure devotee. He is not a fool, nor is he engaged in the inferior energies, nor does he have material values. This is not possible by dry reasoning. It actually happens by the grace of the Almighty. In conclusion, one who is a pure devotee has all other good qualities, namely knowledge, detachment, etc., but one who has only knowledge or detachment is not necessarily well acquainted with the principles of the <span class="Italic">bhakti</span> cult. <span class="Italic">Bhakti</span> is the supermost occupation of the human being.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">551</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The occupational activities a man performs according to his own position are only so much useless labor if they do not provoke attraction for the message of the Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            There are different occupational activities in terms of man's different conceptions of life. To the gross materialist who cannot see anything beyond the gross material body, there is nothing beyond the senses. Therefore his occupational activities are limited to concentrated and extended selfishness. Concentrated selfishness centers around the personal body-this is generally seen amongst the lower animals. Extended selfishness is manifested in human society and centers around the family, society, community, nation and world with a view to gross bodily comfort. Above these gross materialists are the mental speculators who hover aloft in the mental spheres, and their occupational duties involve making poetry and philosophy or propagating some <span class="Italic">ism</span> with the same aim of selfishness limited to the body and the mind. But above the body and mind is the dormant spirit soul whose absence from the body makes the whole range of bodily and mental selfishness completely null and void. But less intelligent people have no information of the needs of the spirit soul.
+          </p>
+          <p>
+            Because foolish people have no information of the soul and how it is beyond the purview of the body and mind, they are not satisfied in the performance of their occupational duties. The question of the satisfaction of the self is raised herein. The self is beyond the gross body and subtle mind. He is the potent active principle of the body and mind. Without knowing the need of the dormant soul, one cannot be happy simply with emolument of the body and mind. The body and the mind are but superfluous outer coverings of the spirit soul. The spirit soul's needs must be fulfilled. Simply by cleansing the cage of the bird, one does not satisfy the bird. One must actually know the needs of the bird himself.
+          </p>
+          <p>
+            The need of the spirit soul is that he wants to get out of the limited sphere of material bondage and fulfill his desire for complete freedom. He wants to get out of the covered walls of the greater universe. He wants to see the free light and the spirit. That complete freedom is achieved when he meets the complete spirit, the Personality of Godhead. There is a dormant affection for God within everyone; spiritual existence is manifested through the gross body and mind in the form of perverted affection for gross and subtle matter. Therefore we have to engage ourselves in occupational engagements that will evoke our divine consciousness. This is possible only by hearing and chanting the divine activities of the Supreme Lord, and any occupational activity which does not help one to achieve attachment for hearing and chanting the transcendental message of Godhead is said herein to be simply a waste of time. This is because other occupational duties (whatever <span class="Italic">ism</span> they may belong to) cannot give liberation to the soul. Even the activities of the salvationists are considered to be useless because of their failure to pick up the fountainhead of all liberties. The gross materialist can practically see that his material gain is limited only to time and space, either in this world or in the other. Even if he goes up to the Svargaloka, he will find no permanent abode for his hankering soul. The hankering soul must be satisfied by the perfect scientific process of perfect devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">218</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All occupational engagements are certainly meant for ultimate liberation. They should never be performed for material gain. Furthermore, according to sages, one who is engaged in the ultimate occupational service should never use material gain to cultivate sense gratification.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            We have already discussed that pure devotional service to the Lord is automatically followed by perfect knowledge and detachment from material existence. But there are others who consider that all kinds of different occupational engagements, including those of religion, are meant for material gain. The general tendency of any ordinary man in any part of the world is to gain some material profit in exchange for religious or any other occupational service. Even in the Vedic literatures, for all sorts of religious performances an allurement of material gain is offered, and most people are attracted by such allurements or blessings of religiosity. Why are such so-called men of religion allured by material gain? Because material gain can enable one to fulfill desires, which in turn satisfy sense gratification. This cycle of occupational engagements includes so-called religiosity followed by material gain and material gain followed by fulfillment of desires. Sense gratification is the general way for all sorts of fully occupied men. But in the statement of Sūta Gosvāmī, as per the verdict of the <span class="Italic">Śrīmad-Bhāgavatam,</span> this is nullified by the present <span class="Italic">śloka.</span>
+          </p>
+          <p>
+            One should not engage himself in any sort of occupational service for material gain only. Nor should material gain be utilized for sense gratification. How material gain should be utilized is described as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">353</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Life&#39;s desires should never be directed toward sense gratification. One should desire only a healthy life, or self-preservation, since a human being is meant for inquiry about the Absolute Truth. Nothing else should be the goal of one&#39;s works.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            The completely bewildered material civilization is wrongly directed towards the fulfillment of desires in sense gratification. In such civilization, in all spheres of life, the ultimate end is sense gratification. In politics, social service, altruism, philanthropy and ultimately in religion or even in salvation, the very same tint of sense gratification is ever-increasingly predominant. In the political field the leaders of men fight with one another to fulfill their personal sense gratification. The voters adore the so-called leaders only when they promise sense gratification. As soon as the voters are dissatisfied in their own sense satisfaction, they dethrone the leaders, The leaders must always disappoint the voters by not satisfying their senses. The same is applicable in all other fields; no one is serious about the problems of life. Even those who are on the path of salvation desire to become one with the Absolute Truth and desire to commit spiritual suicide for sense gratification. But the <span class="Italic">Bhāgavatam</span> says that one should not live for sense gratification. One should satisfy the senses only insomuch as required for self-preservation, and not for sense gratification. Because the body is made of senses, which also require a certain amount of satisfaction, there are regulative directions for satisfaction of such senses. But the senses are not meant for unrestricted enjoyment. For example, marriage or the combination of a man with a woman is necessary for progeny, but it is not meant for sense enjoyment. In the absence of voluntary restraint, there is propaganda for family planning, but foolish men do not know that family planning is automatically executed as soon as there is search after the Absolute Truth. Seekers of the Absolute Truth are never allured by unnecessary engagements in sense gratification because the serious students seeking the Absolute Truth are always overwhelmed with the work of researching the Truth. In every sphere of life, therefore, the ultimate end must be seeking after the Absolute Truth, and that sort of engagement will make one happy because he will be less engaged in varieties of sense gratification. And what that Absolute Truth is is explained as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">360</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Learned transcendentalists who know the Absolute Truth call this nondual substance Brahman, Paramātmā or Bhagavān.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The Absolute Truth is both subject and object, and there is no qualitative difference there. Therefore, Brahman, Paramātmā and Bhagavān are qualitatively one and the same. The same substance is realized as impersonal Brahman by the students of the <span class="Italic">Upaniṣads,</span> as localized Paramātmā by the Hiraṇyagarbhas or the <span class="Italic">yogīs,</span> and as Bhagavān by the devotees. In other words, Bhagavān, or the Personality of Godhead, is the last word of the Absolute Truth. Paramātmā is the partial representation of the Personality of Godhead, and impersonal Brahman is the glowing effulgence of the Personality of Godhead, as the sun rays are to the sun-god. Less intelligent students of either of the above schools sometimes argue in favor of their own respective realization, but those who are perfect seers of the Absolute Truth know well that the above three features of the one Absolute Truth are different perspective views seen from different angles of vision.
+          </p>
+          <p>
+            As it is explained in the first <span class="Italic">śloka</span> of the First Chapter of the <span class="Italic">Bhāgavatam,</span> the Supreme Truth is self-sufficient, cognizant and free from the illusion of relativity. In the relative world the knower is different from the known, but in the Absolute Truth both the knower and the known are one and the same thing. In the relative world the knower is the living spirit or superior energy, whereas the known is inert matter or inferior energy. Therefore, there is a duality of inferior and superior energy, whereas in the absolute realm both the knower and the known are of the same superior energy. There are three kinds of energies of the supreme energetic. There is no difference between the energy and energetic, but there is a difference of quality of energies. The absolute realm and the living entities are of the same superior energy, but the material world is inferior energy. The living being in contact with the inferior energy is illusioned, thinking he belongs to the inferior energy. Therefore there is the sense of relativity in the material world. In the Absolute there is no such sense of difference between the knower and the known, and therefore everything there is absolute.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">751</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The seriously inquisitive student or sage, well equipped with knowledge and detachment, realizes that Absolute Truth by rendering devotional service in terms of what he has heard from the Vedānta-śruti.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The Absolute Truth is realized in full by the process of devotional service to the Lord, Vāsudeva, or the Personality of Godhead, who is the full-fledged Absolute Truth. Brahman is His transcendental bodily effulgence, and Paramātmā is His partial representation. As such, Brahman or Paramātmā realization of the Absolute Truth is but a partial realization. There are four different types of human beings-the <span class="Italic">karmīs,</span> the <span class="Italic">jñānīs,</span> the <span class="Italic">yogīs</span> and the devotees. The <span class="Italic">karmīs</span> are materialistic, whereas the other three are transcendental. The first-class transcendentalists are the devotees who have realized the Supreme Person. The second-class transcendentalists are those who have partially realized the plenary portion of the absolute person. And the third-class transcendentalists are those who have barely realized the spiritual focus of the absolute person. As stated in the <span class="Italic">Bhagavad-gītā</span> and other Vedic literatures, the Supreme Person is realized by devotional service, which is backed by full knowledge and detachment from material association. We have already discussed the point that devotional service is followed by knowledge and detachment from material association. As Brahman and Paramātmā realization are imperfect realizations of the Absolute Truth, so the means of realizing Brahman and Paramātmā, i.e., the paths of <span class="Italic">jñāna</span> and <span class="Italic">yoga,</span> are also imperfect means of realizing the Absolute Truth. Devotional service, which is based on the foreground of full knowledge combined with detachment from material association and which is fixed by the aural reception of the <span class="Italic">Vedānta-śruti,</span> is the only perfect method by which the seriously inquisitive student can realize the Absolute Truth. Devotional service is not, therefore, meant for the less intelligent class of transcendentalist. There are three classes of devotees, namely first, second, and third class. The third-class devotees, or the neophytes, who have no knowledge and are not detached from material association, but who are simply attracted by the preliminary process of worshiping the Deity in the temple, are called material devotees. Material devotees are more attached to material benefit than transcendental profit. Therefore, one has to make definite progress from the position of material devotional service to the second-class devotional position. In the second-class position, the devotee can see four principles in the devotional line, namely the Personality of Godhead, His devotees, the ignorant and the envious. One has to raise himself at least to the stage of a second-class devotee and thus become eligible to know the Absolute Truth.
+          </p>
+          <p>
+            A third-class devotee, therefore, has to receive the instructions of devotional service from the authoritative sources of <span class="Italic">Bhāgavata.</span> The number one <span class="Italic">Bhāgavata</span> is the established personality of devotee, and the other <span class="Italic">Bhāgavatam</span> is the message of Godhead. The third-class devotee therefore has to go to the personality of devotee in order to learn the instructions of devotional service. Such a personality of devotee is not a professional man who earns his livelihood by the business of <span class="Italic">Bhāgavatam.</span> Such a devotee must be a representative of Śukadeva Gosvāmī, like Sūta Gosvāmī, and must preach the cult of devotional service for the all-around benefit of all people. A neophyte devotee has very little taste for hearing from the authorities. Such a neophyte devotee makes a show of hearing from the professional man to satisfy his senses. This sort of hearing and chanting has spoiled the whole thing, so one should be very careful about the faulty process. The holy messages of Godhead, as inculcated in the <span class="Italic">Bhagavad-gītā</span> or in the <span class="Italic">Śrīmad-Bhāgavatam,</span> are undoubtedly transcendental subjects, but even though they are so, such transcendental matters are not to be received from the professional man, who spoils them as the serpent spoils milk simply by the touch of his tongue.
+          </p>
+          <p>
+            A sincere devotee must, therefore, be prepared to hear the Vedic literature like the <span class="Italic">Upaniṣads, Vedānta</span> and other literatures left by the previous authorities or Gosvāmīs, for the benefit of his progress. Without hearing such literatures, one cannot make actual progress. And without hearing and following the instructions, the show of devotional service becomes worthless and therefore a sort of disturbance in the path of devotional service. Unless, therefore, devotional service is established on the principles of <span class="Italic">śruti, smṛti, purāṇa</span> or <span class="Italic">pañcarātra</span> authorities, the make-show of devotional service should at once be rejected. An unauthorized devotee should never be recognized as a pure devotee. By assimilation of such messages from the Vedic literatures, one can see the all-pervading localized aspect of the Personality of Godhead within his own self constantly. This is called <span class="Italic">samādhi.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">307</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best among the twice-born, it is therefore concluded that the highest perfection one can achieve by discharging the duties prescribed for one&#39;s own occupation according to caste divisions and orders of life is to please the Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Human society all over the world is divided into four castes and four orders of life. The four castes are the intelligent caste, the martial caste, the productive caste and the laborer caste. These castes are classified in terms of one's work and qualification and not by birth. Then again there are four orders of life, namely the student life, the householder's life, the retired and the devotional life. In the best interest of human society there must be such divisions of life, otherwise no social institution can grow in a healthy state. And in each and every one of the abovementioned divisions of life, <span class="Italic">the aim must be to please the supreme authority of the Personality of Godhead.</span> This institutional function of human society is known as the system of <span class="Italic">varṇāśrama-dharma,</span> which is quite natural for the civilized life. The <span class="Italic">varṇāśrama</span> institution is constructed to enable one to realize the Absolute Truth. It is not for artificial domination of one division over another. When the aim of life, i.e., realization of the Absolute Truth, is missed by too much attachment for <span class="Italic">indriya-prīti,</span> or sense gratification, as already discussed hereinbefore, the institution of the <span class="Italic">varṇāśrama</span> is utilized by selfish men to pose an artificial predominance over the weaker section. In the Kali-yuga, or in the age of quarrel, this artificial predominance is already current, but the saner section of the people know it well that the divisions of castes and orders of life are meant for smooth social intercourse and high-thinking self-realization and not for any other purpose.
+          </p>
+          <p>
+            Herein the statement of <span class="Italic">Bhāgavatam</span> is that the highest aim of life or the highest perfection of the institution of the <span class="Italic">varṇāśrama-dharma</span> is to cooperate jointly for the satisfaction of the Supreme Lord. This is also confirmed in the <span class="Ref_Italic">Bhagavad-gītā</span> (4.13).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">252</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, with one-pointed attention, one should constantly hear about, glorify, remember and worship the Personality of Godhead, who is the protector of the devotees.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            If realization of the Absolute Truth is the ultimate aim of life, it must be carried out by all means. In any one of the above-mentioned castes and orders of life, the four processes, namely glorifying, hearing, remembering and worshiping, are general occupations. Without these principles of life, no one can exist. Activities of the living being involve engagements in these four different principles of life. Especially in modern society, all activities are more or less dependent on hearing and glorifying. Any man from any social status becomes a well-known man in human society within a very short time if he is simply glorified truly or falsely in the daily newspapers. Sometimes political leaders of a particular party are also advertised by newspaper propaganda, and by such a method of glorification an insignificant man becomes an important man-within no time. But such propaganda by false glorification of an unqualified person cannot bring about any good, either for the particular man or for the society. There may be some temporary reactions to such propaganda, but there are no permanent effects. Therefore such activities are a waste of time. The actual object of glorification is the Supreme Personality of Godhead, who has created everything manifested before us. We have broadly discussed this fact from the beginning of the "<span class="Italic">janmādy asya</span>"<span class="Italic"> [SB 1.1.1]</span> <span class="Italic">śloka</span> of this <span class="Italic">Bhāgavatam.</span> The tendency to glorify others or hear others must be turned to the real object of glorification-the Supreme Being. And that will bring happiness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">340</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            With sword in hand, intelligent men cut through the binding knots of reactionary work [karma] by remembering the Personality of Godhead. Therefore, who will not pay attention to His message?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            The contact of the spiritual spark with material elements creates a knot which must be cut if one wants to be liberated from the actions and reactions of fruitive work. Liberation means freedom from the cycle of reactionary work. This liberation automatically follows for one who constantly remembers the transcendental pastimes of the Personality of Godhead. This is because all the activities of the Supreme Lord (His <span class="Italic">līlā</span>) are transcendental to the modes of the material energy. They are all-attractive spiritual activities, and therefore constant association with the spiritual activities of the Supreme Lord gradually spiritualizes the conditioned soul and ultimately severs the knot of material bondage.
+          </p>
+          <p>
+            Liberation from material bondage is, therefore, a by-product of devotional service. Attainment of spiritual knowledge is not sufficient to insure liberation. Such knowledge must be overcoated with devotional service so that ultimately the devotional service alone predominates. Then liberation is made possible. Even the reactionary work of the fruitive workers can lead one to liberation when it is overcoated with devotional service. <span class="Italic">Karma</span> overcoated with devotional service is called <span class="Italic">karma-yoga.</span> Similarly, empirical knowledge overcoated with devotional service is called <span class="Italic">jñāna-yoga.</span> But pure <span class="Italic">bhakti-yoga</span> is independent of such <span class="Italic">karma</span> and <span class="Italic">jñāna</span> because it alone can not only endow one with liberation from conditional life but also award one the transcendental loving service of the Lord.
+          </p>
+          <p>
+            Therefore, any sensible man who is above the average man with a poor fund of knowledge must constantly remember the Personality of Godhead by hearing about Him, by glorifying Him, by remembering Him and by worshiping Him always, without cessation. That is the perfect way of devotional service. The Gosvāmīs of Vṛndāvana, who were authorized by Śrī Caitanya Mahāprabhu to preach the <span class="Italic">bhakti</span> cult, rigidly followed this rule and made immense literatures of transcendental science for our benefit. They have chalked out ways for all classes of men in terms of the different castes and orders of life in pursuance of the teachings of <span class="Italic">Śrīmad-Bhāgavatam</span> and similar other authoritative scriptures.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">521</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O twice-born sages, by serving those devotees who are completely freed from all vice, great service is done. By such service, one gains affinity for hearing the messages of Vāsudeva.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            The conditioned life of a living being is caused by his revolting against the Lord. There are men called <span class="Italic">deva,</span> or godly living beings, and there are men called <span class="Italic">asuras,</span> or demons, who are against the authority of the Supreme Lord. In the <span class="Italic">Bhagavad-gītā</span> (Sixteenth Chapter) a vivid description of the <span class="Italic">asuras</span> is given in which it is said that the <span class="Italic">asuras</span> are put into lower and lower states of ignorance life after life and so sink to the lower animal forms and have no information of the Absolute Truth, the Personality of Godhead. These <span class="Italic">asuras</span> are gradually rectified to God consciousness by the mercy of the Lord's liberated servitors in different countries according to the supreme will. Such devotees of God are very confidential associates of the Lord, and when they come to save human society from the dangers of godlessness, they are known as the powerful incarnations of the Lord, as sons of the Lord, as servants of the Lord or as associates of the Lord. But none of them falsely claim to be God themselves. This is a blasphemy declared by the <span class="Italic">asuras,</span> and the demoniac followers of such <span class="Italic">asuras</span> also accept pretenders as God or His incarnation. In the revealed scriptures there is definite information of the incarnation of God. No one should be accepted as God or an incarnation of God unless he is confirmed by the revealed scriptures.
+          </p>
+          <p>
+            The servants of God are to be respected as God by the devotees who actually want to go back to Godhead. Such servants of God are called <span class="Italic">mahātmās,</span> or <span class="Italic">tīrthas,</span> and they preach according to particular time and place. The servants of God urge people to become devotees of the Lord. They never tolerate being called God. Śrī Caitanya Mahāprabhu was God Himself according to the indication of the revealed scriptures, but He played the part of a devotee. People who knew Him to be God addressed Him as God, but He used to block His ears with His hands and chant the name of Lord Viṣṇu. He strongly protested against being called God, although undoubtedly He was God Himself. The Lord behaves so to warn us against unscrupulous men who take pleasure in being addressed as God.
+          </p>
+          <p>
+            The servants of God come to propagate God consciousness, and intelligent people should cooperate with them in every respect. By serving the servant of God, one can please God more than by directly serving the Lord. The Lord is more pleased when He sees that His servants are properly respected because such servants risk everything for the service of the Lord and so are very dear to the Lord. The Lord declares in the <span class="Ref_Italic">Bhagavad-gītā</span> (18.69) that no one is dearer to Him than one who risks everything to preach His glory. By serving the servants of the Lord, one gradually gets the quality of such servants, and thus one becomes qualified to hear the glories of God. The eagerness to hear about God is the first qualification of a devotee eligible for entering the kingdom of God.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">465</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Kṛṣṇa, the Personality of Godhead, who is the Paramātmā [Supersoul] in everyone&#39;s heart and the benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee who has developed the urge to hear His messages, which are in themselves virtuous when properly heard and chanted.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Messages of the Personality of Godhead Śrī Kṛṣṇa are nondifferent from Him. Whenever, therefore, offenseless hearing and glorification of God are undertaken, it is to be understood that Lord Kṛṣṇa is present there in the form of transcendental sound, which is as powerful as the Lord personally. Śrī Caitanya Mahāprabhu, in His <span class="Italic">Śikṣāṣṭaka,</span> declares clearly that the holy name of the Lord has all the potencies of the Lord and that He has endowed His innumerable names with the same potency. There is no rigid fixture of time, and anyone can chant the holy name with attention and reverence at his convenience. The Lord is so kind to us that He can be present before us personally in the form of transcendental sound, but unfortunately we have no taste for hearing and glorifying the Lord's name and activities. We have already discussed developing a taste for hearing and chanting the holy sound. It is done through the medium of service to the pure devotee of the Lord.
+          </p>
+          <p>
+            The Lord is reciprocally respondent to His devotees. When He sees that a devotee is completely sincere in getting admittance to the transcendental service of the Lord and has thus become eager to hear about Him, the Lord acts from within the devotee in such a way that the devotee may easily go back to Him. The Lord is more anxious to take us back into His kingdom than we can desire. Most of us do not desire at all to go back to Godhead. Only a very few men want to go back to Godhead. But anyone who desires to go back to Godhead, Śrī Kṛṣṇa helps in all respects.
+          </p>
+          <p>
+            One cannot enter into the kingdom of God unless one is perfectly cleared of all sins. The material sins are products of our desires to lord it over material nature. It is very difficult to get rid of such desires. Women and wealth are very difficult problems for the devotee making progress on the path back to Godhead. Many stalwarts in the devotional line fell victim to these allurements and thus retreated from the path of liberation. But when one is helped by the Lord Himself, the whole process becomes as easy as anything by the divine grace of the Lord.
+          </p>
+          <p>
+            To become restless in the contact of women and wealth is not an astonishment, because every living being is associated with such things from remote time, practically immemorial, and it takes time to recover from this foreign nature. But if one is engaged in hearing the glories of the Lord, gradually he realizes his real position. By the grace of God such a devotee gets sufficient strength to defend himself from the state of disturbances, and gradually all disturbing elements are eliminated from his mind.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">376</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By regular attendance in classes on the Bhāgavatam and by rendering of service to the pure devotee, all that is troublesome to the heart is almost completely destroyed, and loving service unto the Personality of Godhead, who is praised with transcendental songs, is established as an irrevocable fact.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            Here is the remedy for eliminating all inauspicious things within the heart which are considered to be obstacles in the path of self-realization. The remedy is the association of the <span class="Italic">Bhāgavatas.</span> There are two types of <span class="Italic">Bhāgavatas,</span> namely the book <span class="Italic">Bhāgavata</span> and the devotee <span class="Italic">Bhāgavata.</span> Both the <span class="Italic">Bhāgavatas</span> are competent remedies, and both of them or either of them can be good enough to eliminate the obstacles. A devotee <span class="Italic">Bhāgavata</span> is as good as the book <span class="Italic">Bhāgavata</span> because the devotee <span class="Italic">Bhāgavata</span> leads his life in terms of the book <span class="Italic">Bhāgavata</span> and the book <span class="Italic">Bhāgavata</span> is full of information about the Personality of Godhead and His pure devotees, who are also <span class="Italic">Bhāgavatas.</span> <span class="Italic">Bhāgavata</span> book and person are identical.
+          </p>
+          <p>
+            The devotee <span class="Italic">Bhāgavata</span> is a direct representative of Bhagavān, the Personality of Godhead. So by pleasing the devotee <span class="Italic">Bhāgavata</span> one can receive the benefit of the book <span class="Italic">Bhāgavata.</span> Human reason fails to understand how by serving the devotee <span class="Italic">Bhāgavata</span> or the book <span class="Italic">Bhāgavata</span> one gets gradual promotion on the path of devotion. But actually these are facts explained by Śrīla Nāradadeva, who happened to be a maidservant's son in his previous life. The maidservant was engaged in the menial service of the sages, and thus he also came into contact with them. And simply by associating with them and accepting the remnants of foodstuff left by the sages, the son of the maidservant got the chance to become the great devotee and personality Śrīla Nāradadeva. These are the miraculous effects of the association of <span class="Italic">Bhāgavatas.</span> And to understand these effects practically, it should be noted that by such sincere association of the <span class="Italic">Bhāgavatas</span> one is sure to receive transcendental knowledge very easily, with the result that he becomes fixed in the devotional service of the Lord. The more progress is made in devotional service under the guidance of the <span class="Italic">Bhāgavatas,</span> the more one becomes fixed in the transcendental loving service of the Lord. The messages of the book <span class="Italic">Bhāgavata,</span> therefore, have to be received from the devotee <span class="Italic">Bhāgavata,</span> and the combination of these two <span class="Italic">Bhāgavatas</span> will help the neophyte devotee to make progress on and on.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">279</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As soon as irrevocable loving service is established in the heart, the effects of nature&#39;s modes of passion and ignorance, such as lust, desire and hankering, disappear from the heart. Then the devotee is established in goodness, and he becomes completely happy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            A living being in his normal constitutional position is fully satisfied in spiritual bliss. This state of existence is called <span class="Italic">brahma-bhūta [SB 4.30.20]</span> or <span class="Italic">ātmā-nandī,</span> or the state of self-satisfaction. This self-satisfaction is not like the satisfaction of the inactive fool. The inactive fool is in the state of foolish ignorance, whereas the self-satisfied <span class="Italic">ātmānandī</span> is transcendental to the material state of existence. This stage of perfection is attained as soon as one is fixed in irrevocable devotional service. Devotional service is not inactivity, but the unalloyed activity of the soul.
+          </p>
+          <p>
+            The soul's activity becomes adulterated in contact with matter, and as such the diseased activities are expressed in the form of lust, desire, hankering, inactivity, foolishness and sleep. The effect of devotional service becomes manifest by complete elimination of these effects of passion and ignorance. The devotee is fixed at once in the mode of goodness, and he makes further progress to rise to the position of Vāsudeva, or the state of unmixed <span class="Italic">sattva,</span> or <span class="Italic">śuddha-sattva.</span> Only in this <span class="Italic">śuddha-sattva</span> state can one always see Kṛṣṇa eye to eye by dint of pure affection for the Lord.
+          </p>
+          <p>
+            A devotee is always in the mode of unalloyed goodness; therefore he harms no one. But the nondevotee, however educated he may be, is always harmful. A devotee is neither foolish nor passionate. The harmful, foolish and passionate cannot be devotees of the Lord, however they may advertise themselves as devotees by outward dress. A devotee is always qualified with all the good qualities of God. Quantitatively such qualifications may be different, but qualitatively both the Lord and His devotee are one and the same.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">529</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus established in the mode of unalloyed goodness, the man whose mind has been enlivened by contact with devotional service to the Lord gains positive scientific knowledge of the Personality of Godhead in the stage of liberation from all material association.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            In the <span class="Ref_Italic">Bhagavad-gītā</span> (7.3) it is said that out of many thousands of ordinary men, one fortunate man endeavors for perfection in life. Mostly men are conducted by the modes of passion and ignorance, and thus they are engaged always in lust, desire, hankerings, ignorance and sleep. Out of many such manlike animals, there is actually a man who knows the responsibility of human life and thus tries to make life perfect by following the prescribed duties. And out of many thousands of such persons who have thus attained success in human life, one may know scientifically about the Personality of Godhead Śrī Kṛṣṇa. In the same <span class="Ref_Italic">Bhagavad-gītā</span> (18.55) it is also said that scientific knowledge of Śrī Kṛṣṇa is understood only by the process of devotional service (<span class="Italic">bhakti-yoga).</span>
+          </p>
+          <p>
+            The very same thing is confirmed herein in the above words. No ordinary man, or even one who has attained success in human life, can know scientifically or perfectly the Personality of Godhead. Perfection of human life is attained when one can understand that he is not the product of matter but is in fact spirit. And as soon as one understands that he has nothing to do with matter, he at once ceases his material hankerings and becomes enlivened as a spiritual being. This attainment of success is possible when one is above the modes of passion and ignorance, or, in other words, when one is actually a <span class="Italic">brāhmaṇa</span> by qualification. A <span class="Italic">brāhmaṇa</span> is the symbol of <span class="Italic">sattva-guṇa,</span> or the mode of goodness. And others, who are not in the mode of goodness, are either <span class="Italic">kṣatriyas, vaiśyas, śūdras</span> or less than the <span class="Italic">śūdras.</span> The brahminical stage is the highest stage of human life because of its good qualities. So one cannot be a devotee unless one at least qualifies as a <span class="Italic">brāhmaṇa.</span> The devotee is already a <span class="Italic">brāhmaṇa</span> by action. But that is not the end of it. As referred to above, such a <span class="Italic">brāhmaṇa</span> has to become a Vaiṣṇava in fact to be actually in the transcendental stage. A pure Vaiṣṇava is a liberated soul and is transcendental even to the position of a <span class="Italic">brāhmaṇa.</span> In the material stage even a <span class="Italic">brāhmaṇa</span> is also a conditioned soul because although in the brahminical stage the conception of Brahman or transcendence is realized, scientific knowledge of the Supreme Lord is lacking. One has to surpass the brahminical stage and reach the <span class="Italic">vasudeva</span> stage to understand the Personality of Godhead Kṛṣṇa. The science of the Personality of Godhead is the subject matter for study by the postgraduate students in the spiritual line. Foolish men, or men with a poor fund of knowledge, do not understand the Supreme Lord, and they interpret Kṛṣṇa according to their respective whims. The fact is, however, that one cannot understand the science of the Personality of Godhead unless one is freed from the contamination of the material modes, even up to the stage of a <span class="Italic">brāhmaṇa.</span> When a qualified <span class="Italic">brāhmaṇa</span> factually becomes a Vaiṣṇava, in the enlivened state of liberation he can know what is actually the Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">592</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus the knot in the heart is pierced, and all misgivings are cut to pieces. The chain of fruitive actions is terminated when one sees the self as master.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Attaining scientific knowledge of the Personality of Godhead means seeing one's own self simultaneously. As far as the identity of the living being as spirit self is concerned, there are a number of speculations and misgivings. The materialist does not believe in the existence of the spirit self, and empiric philosophers believe in the impersonal feature of the whole spirit without individuality of the living beings. But the transcendentalists affirm that the soul and the Supersoul are two different identities, qualitatively one but quantitatively different. There are many other theories, but all these different speculations are at once cleared off as soon as Śrī Kṛṣṇa is realized in truth by the process of <span class="Italic">bhakti-yoga.</span> Śrī Kṛṣṇa is like the sun, and the materialistic speculations about the Absolute Truth are like the darkest midnight. As soon as the Kṛṣṇa sun is arisen within one's heart, the darkness of materialistic speculations about the Absolute Truth and the living beings is at once cleared off. In the presence of the sun, the darkness cannot stand, and the relative truths that were hidden within the dense darkness of ignorance become clearly manifested by the mercy of Kṛṣṇa, who is residing in everyone's heart as the Supersoul.
+          </p>
+          <p>
+            In the <span class="Ref_Italic">Bhagavad-gītā</span> (10.11) the Lord says that in order to show special favor to His pure devotees, He personally eradicates the dense darkness of all misgivings by switching on the light of pure knowledge within the heart of a devotee. Therefore, because of the Personality of Godhead's taking charge of illuminating the heart of His devotee, certainly a devotee, engaged in His service in transcendental love, cannot remain in darkness. He comes to know everything of the absolute and the relative truths. The devotee cannot remain in darkness, and because a devotee is enlightened by the Personality of Godhead, his knowledge is certainly perfect. This is not the case for those who speculate on the Absolute Truth by dint of their own limited power of approach. Perfect knowledge is called <span class="Italic">paramparā,</span> or deductive knowledge coming down from the authority to the submissive aural receiver who is bona fide by service and surrender. One cannot challenge the authority of the Supreme and know Him also at the same time. He reserves the right of not being exposed to such a challenging spirit of an insignificant spark of the whole, a spark subjected to the control of illusory energy. The devotees are submissive, and therefore the transcendental knowledge descends from the Personality of Godhead to Brahmā and from Brahmā to his sons and disciples in succession. This process is helped by the Supersoul within such devotees. That is the perfect way of learning transcendental knowledge.
+          </p>
+          <p>
+            This enlightenment perfectly enables the devotee to distinguish spirit from matter because the knot of spirit and matter is untied by the Lord. This knot is called <span class="Italic">ahaṅkāra,</span> and it falsely obliges a living being to become identified with matter. As soon as this knot is loosened, therefore, all the clouds of doubt are at once cleared off. One sees his master and fully engages himself in the transcendental loving service of the Lord, making a full termination of the chain of fruitive action. In material existence, a living being creates his own chain of fruitive work and enjoys the good and bad effects of those actions life after life. But as soon as he engages himself in the loving service of the Lord, he at once becomes free from the chain of <span class="Italic">karma.</span> His actions no longer create any reaction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">202</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Certainly, therefore, since time immemorial, all transcendentalists have been rendering devotional service to Lord Kṛṣṇa, the Personality of Godhead, with great delight, because such devotional service is enlivening to the self.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The speciality of devotional service unto the Personality of Godhead Lord Śrī Kṛṣṇa is specifically mentioned herein. Lord Śrī Kṛṣṇa is the <span class="Italic">svayaṁ-rūpa</span> Personality of Godhead, and all other forms of Godhead, beginning from Śrī Baladeva, Saṅkarṣaṇa, Vāsudeva, Aniruddha, Pradyumna and Nārāyaṇa and extending to the <span class="Italic">puruṣa-avatāras, guṇa-avatāras, līlā-avatāras, yuga-avatāras</span> and many other thousands of manifestations of the Personality of Godhead, are Lord Śrī Kṛṣṇa's plenary portions and integrated parts. The living entities are separated parts and parcels of the Personality of Godhead. Therefore Lord Sri Kṛṣṇa is the original form of Godhead, and He is the last word in the Transcendence. Thus He is more attractive to the higher transcendentalists who participate in the eternal pastimes of the Lord. In forms of the Personality of Godhead other than Śrī Kṛṣṇa and Baladeva, there is no facility for intimate personal contact as in the transcendental pastimes of the Lord at Vrajabhūmi. The transcendental pastimes of Lord Śrī Kṛṣṇa are not newly accepted, as argued by some less intelligent persons; His pastimes are eternal and are manifested in due course once in a day of Brahmājī, as the sun rises on the eastern horizon at the end of every twenty-four hours.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">470</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The transcendental Personality of Godhead is indirectly associated with the three modes of material nature, namely passion, goodness and ignorance, and just for the material world&#39;s creation, maintenance and destruction He accepts the three qualitative forms of Brahmā, Viṣṇu and Śiva. Of these three, all human beings can derive ultimate benefit from Viṣṇu, the form of the quality of goodness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            That Lord Śrī Kṛṣṇa, by His plenary parts, should be rendered devotional service, as explained above, is confirmed by this statement. Lord Śrī Kṛṣṇa and all His plenary parts are <span class="Italic">viṣṇu-tattva,</span> or the Lordship of Godhead. From Śrī Kṛṣṇa, the next manifestation is Baladeva. From Baladeva is Saṅkarṣaṇa, from Saṅkarṣaṇa is Nārāyaṇa, from Nārāyaṇa there is the second Saṅkarṣaṇa, and from this Saṅkarṣaṇa the Viṣṇu <span class="Italic">puruṣa-avatāras.</span> The Viṣṇu or the Deity of the quality of goodness in the material world is the <span class="Italic">puruṣa-avatāra</span> known as Kṣīrodakaśāyī Viṣṇu or Paramātmā. Brahmā is the deity of <span class="Italic">rajas</span> (passion), and Śiva of ignorance. They are the three departmental heads of the three qualities of this material world. Creation is made possible by the goodness of Viṣṇu, and when it requires to be destroyed, Lord Śiva does it by the <span class="Italic">tāṇḍavanṛtya.</span> The materialists and the foolish human beings worship Brahmā and Śiva respectively. But the pure transcendentalists worship the form of goodness, Viṣṇu, in His various forms. Viṣṇu is manifested by His millions and billions of integrated forms and separated forms. The integrated forms are called Godhead, and the separated forms are called the living entities or the <span class="Italic">jīvas.</span> Both the <span class="Italic">jīvas</span> and Godhead have their original spiritual forms. <span class="Italic">Jīvas</span> are sometimes subjected to the control of material energy, but the Viṣṇu forms are always controllers of this energy. When Viṣṇu, the Personality of Godhead, appears in the material world, He comes to deliver the conditioned living beings who are under the material energy. Such living beings appear in the material world with intentions of being lords, and thus they become entrapped by the three modes of nature. As such, the living entities have to change their material coverings for undergoing different terms of imprisonment. The prison house of the material world is created by Brahmā under instruction of the Personality of Godhead, and at the conclusion of a <span class="Italic">kalpa</span> the whole thing is destroyed by Śiva. But as far as maintenance of the prison house is concerned, it is done by Viṣṇu, as much as the state prison house is maintained by the state. Anyone, therefore, who wishes to get out of this prison house of material existence, which is full of miseries like repetition of birth, death, disease and old age, must please Lord Viṣṇu for such liberation. Lord Viṣṇu is worshiped by devotional service only, and if anyone has to continue prison life in the material world, he may ask for relative facilities for temporary relief from the different demigods like Śiva, Brahmā, Indra and Varuṇa. No demigod, however, can release the imprisoned living being from the conditioned life of material existence. This can be done only by Viṣṇu. Therefore, the ultimate benefit may be derived from Viṣṇu, the Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">317</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Firewood is a transformation of earth, but smoke is better than the raw wood. And fire is still better, for by fire we can derive the benefits of superior knowledge [through Vedic sacrifices]. Similarly, passion [rajas] is better than ignorance [tamas], but goodness [sattva] is best because by goodness one can come to realize the Absolute Truth.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            As explained above, one can get release from the conditioned life of material existence by devotional service to the Personality of Godhead. It is further comprehended herein that one has to rise to the platform of the mode of goodness (<span class="Italic">sattva</span>) so that one can be eligible for the devotional service of the Lord. But if there are impediments on the progressive path, anyone, even from the platform of <span class="Italic">tamas,</span> can gradually rise to the <span class="Italic">sattva</span> platform by the expert direction of the spiritual master. Sincere candidates must, therefore, approach an expert spiritual master for such a progressive march, and the bona fide, expert spiritual master is competent to direct a disciple from any stage of life: <span class="Italic">tamas, rajas</span> or <span class="Italic">sattva.</span>
+          </p>
+          <p>
+            It is a mistake, therefore, to consider that worship of any quality or any form of the Supreme Personality of Godhead is equally beneficial. Except Viṣṇu, all separated forms are manifested under the conditions of material energy, and therefore the forms of material energy cannot help anyone to rise to the platform of <span class="Italic">sattva,</span> which alone can liberate a person from material bondage.
+          </p>
+          <p>
+            The uncivilized state of life, or the life of the lower animals, is controlled by the mode of <span class="Italic">tamas.</span> The civilized life of man, with a passion for various types of material benefits, is the stage of <span class="Italic">rajas.</span> The <span class="Italic">rajas</span> stage of life gives a slight clue to the realization of the Absolute Truth in the forms of fine sentiments in philosophy, art and culture with moral and ethical principles, but the mode of <span class="Italic">sattva</span> is a still higher stage of material quality, which actually helps one in realizing the Absolute Truth. In other words, there is a qualitative difference between the different kinds of worshiping methods as well as the respective results derived from the predominating deities, namely Brahmā, Viṣṇu and Hara.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">127</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Previously all the great sages rendered service unto the Personality of Godhead due to His existence above the three modes of material nature. They worshiped Him to become free from material conditions and thus derive the ultimate benefit. Whoever follows such great authorities is also eligible for liberation from the material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            The purpose of performing religion is neither to profit by material gain nor to get the simple knowledge of discerning matter from spirit. The ultimate aim of religious performances is to release oneself from material bondage and regain the life of freedom in the transcendental world, where the Personality of Godhead is the Supreme Person. Laws of religion, therefore, are directly enacted by the Personality of Godhead, and except for the <span class="Italic">mahājanas,</span> or the authorized agents of the Lord, no one knows the purpose of religion. There are twelve particular agents of the Lord who know the purpose of religion, and all of them render transcendental service unto Him. Persons who desire their own good may follow these <span class="Italic">mahājanas</span> and thus attain the supreme benefit.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">571</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Those who are serious about liberation are certainly nonenvious, and they respect all. Yet they reject the horrible and ghastly forms of the demigods and worship only the all-blissful forms of Lord Viṣṇu and His plenary portions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The Supreme Personality of Godhead Śrī Kṛṣṇa, who is the original person of the Viṣṇu categories, expands Himself in two different categories, namely integrated plenary portions and separated parts and parcels. The separated parts and parcels are the servitors, and the integrated plenary portions of <span class="Italic">viṣṇu-tattvas</span> are the worshipful objects of service.
+          </p>
+          <p>
+            All demigods who are empowered by the Supreme Lord are also separated parts and parcels. They do not belong to the categories of <span class="Italic">viṣṇu-tattva.</span> The <span class="Italic">viṣṇu-tattvas</span> are living beings equally as powerful as the original form of the Personality of Godhead, and they display different categories of power in consideration of different times and circumstances. The separated parts and parcels are powerful by limitation. They do not have unlimited power like the <span class="Italic">viṣṇu-tattvas.</span> Therefore, one should never classify the <span class="Italic">viṣṇu-tattvas,</span> or the plenary portions of Nārāyaṇa, the Personality of Godhead, in the same categories with the parts and parcels. If anyone does so he becomes at once an offender by the name <span class="Italic">pāṣaṇḍī.</span> In the age of Kali many foolish persons commit such unlawful offenses and equalize the two categories.
+          </p>
+          <p>
+            The separated parts and parcels have different positions in the estimation of material powers, and some of them are like Kāla-bhairava, Śmaśāna-bhairava, Śani, Mahākālī and Caṇḍikā. These demigods are worshiped mostly by those who are in the lowest categories of the mode of darkness or ignorance. Other demigods, like Brahmā, Śiva, Sūrya, Gaṇeśa and many similar deities, are worshiped by men in the mode of passion, urged on by the desire for material enjoyment. But those who are actually situated in the mode of goodness (<span class="Italic">sattva-guṇa</span>) of material nature worship only <span class="Italic">viṣṇu-tattvas.</span> <span class="Italic">Viṣṇu-tattvas</span> are represented by various names and forms, such as Nārāyaṇa, Dāmodara, Vāmana, Govinda and Adhokṣaja.
+          </p>
+          <p>
+            The qualified <span class="Italic">brāhmaṇas</span> worship the <span class="Italic">viṣṇu-tattvas</span> represented by the <span class="Italic">śālagrāma-śilā,</span> and some of the higher castes like the <span class="Italic">kṣatriyas</span> and <span class="Italic">vaiśyas</span> also generally worship the <span class="Italic">viṣṇu-tattvas.</span>
+          </p>
+          <p>
+            Highly qualified <span class="Italic">brāhmaṇas</span> situated in the mode of goodness have no grudges against the mode of worship of others. They have all respect for other demigods, even though they may look ghastly, like Kāla-bhairava or Mahākālī. They know very well that those horrible features of the Supreme Lord are all different servitors of the Lord under different conditions, yet they reject the worship of both horrible and attractive features of the demigods, and they concentrate only on the forms of Viṣṇu because they are serious about liberation from the material conditions. The demigods, even to the stage of Brahmā, the supreme of all the demigods, cannot offer liberation to anyone. Hiraṇyakaśipu underwent a severe type of penance to become eternal in life, but his worshipful deity, Brahmā, could not satisfy him with such blessings. Therefore Viṣṇu, and none else, is called <span class="Italic">mukti-pāda,</span> or the Personality of Godhead who can bestow upon us <span class="Italic">mukti,</span> liberation. The demigods, being like other living entities in the material world, are all liquidated at the time of the annihilation of the material structure. They are themselves unable to get liberation, and what to speak of giving liberation to their devotees. The demigods can award the worshipers some temporary benefit only, and not the ultimate one.
+          </p>
+          <p>
+            It is for this reason only that candidates for liberation deliberately reject the worship of the demigods, although they have no disrespect for any one of them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">382</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Those who are in the modes of passion and ignorance worship the forefathers, other living beings and the demigods who are in charge of cosmic activities, for they are urged by a desire to be materially benefited with women, wealth, power and progeny.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            There is no need to worship demigods of whatsoever category if one is serious about going back to Godhead. In the <span class="Ref_Italic">Bhagavad-gītā</span> (7.20,23) it is clearly said that those who are mad after material enjoyment approach the different demigods for temporary benefits, which are meant for men with a poor fund of knowledge. We should never desire to increase the depth of material enjoyment. Material enjoyment should be accepted only up to the point of the bare necessities of life and not more or less than that. To accept more material enjoyment means to bind oneself more and more to the miseries of material existence. More wealth, more women and false aristocracy are some of the demands of the materially disposed man because he has no information of the benefit derived from Viṣṇu worship. By Viṣṇu worship one can derive benefit in this life as well as in life after death. Forgetting these principles, foolish people who are after more wealth, more wives and more children worship various demigods. The aim of life is to end the miseries of life and not to increase them.
+          </p>
+          <p>
+            For material enjoyment there is no need to approach the demigods. The demigods are but servants of the Lord. As such, they are duty-bound to supply necessities of life in the form of water, light, air, etc. <span class="Italic">One should work hard and worship the Supreme Lord by the fruits of one's hard labor for existence, and that should be the motto of life.</span> One should be careful to execute occupational service with faith in God in the proper way, and that will lead one gradually on the progressive march back to Godhead.
+          </p>
+          <p>
+            Lord Śrī Kṛṣṇa, when He was personally present at Vrajadhāma, stopped the worship of the demigod Indra and advised the residents of Vraja to worship by their business and to have faith in God. Worshiping the multidemigods for material gain is practically a perversity of religion. This sort of religious activity has been condemned in the very beginning of the <span class="Italic">Bhāgavatam</span> as <span class="Italic">kaitava-dharma.</span> There is only one religion in the world to be followed by one and all, and that is the <span class="Italic">Bhāgavata-dharma,</span> or the religion which teaches one to worship the Supreme Personality of Godhead and no one else.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28-29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1322</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the revealed scriptures, the ultimate object of knowledge is Śrī Kṛṣṇa, the Personality of Godhead. The purpose of performing sacrifice is to please Him. Yoga is for realizing Him. All fruitive activities are ultimately rewarded by Him only. He is supreme knowledge, and all severe austerities are performed to know Him. Religion [dharma] is rendering loving service unto Him. He is the supreme goal of life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            That Śrī Kṛṣṇa, the Personality of Godhead, is the only object of worship is confirmed in these two <span class="Italic">ślokas.</span> In the Vedic literature there is the same objective: establishing one's relationship and ultimately reviving our lost loving service unto Him. That is the sum and substance of the <span class="Italic">Vedas.</span> In the <span class="Italic">Bhagavad-gītā</span> the same theory is confirmed by the Lord in His own words: the ultimate purpose of the <span class="Italic">Vedas</span> is to know Him only. All the revealed scriptures are prepared by the Lord through His incarnation in the body of Śrīla Vyāsadeva just to remind the fallen souls, conditioned by material nature, of Śrī Kṛṣṇa, the Personality of Godhead. No demigod can award freedom from material bondage. That is the verdict of all the Vedic literatures. Impersonalists who have no information of the Personality of Godhead minimize the omnipotency of the Supreme Lord and put Him on equal footing with all other living beings, and for this act such impersonalists get freedom from material bondage only with great difficulty. They can surrender unto Him only after many, many births in the culture of transcendental knowledge.
+          </p>
+          <p>
+            One may argue that the Vedic activities are based on sacrificial ceremonies. That is true. But all such sacrifices are also meant for realizing the truth about Vāsudeva. Another name of Vāsudeva is Yajña (sacrifice), and in the <span class="Italic">Bhagavad-gītā</span> it is clearly stated that all sacrifices and all activities are to be conducted for the satisfaction of Yajña, or Viṣṇu, the Personality of Godhead. This is the case also with the <span class="Italic">yoga</span> systems. <span class="Italic">Yoga</span> means to get into touch with the Supreme Lord. The process, however, includes several bodily features such as <span class="Italic">āsana, dhyāna, prāṇāyāma</span> and meditation, and all of them are meant for concentrating upon the localized aspect of Vāsudeva represented as Paramātmā. Paramātmā realization is but partial realization of Vāsudeva, and if one is successful in that attempt, one realizes Vāsudeva in full. But by ill luck most <span class="Italic">yogīs</span> are stranded by the powers of mysticism achieved through the bodily process. Ill-fated <span class="Italic">yogīs</span> are given a chance in the next birth by being placed in the families of good learned <span class="Italic">brāhmaṇas</span> or in the families of rich merchants in order to execute the unfinished task of Vāsudeva realization. If such fortunate <span class="Italic">brāhmaṇas</span> and sons of rich men properly utilize the chance, they can easily realize Vāsudeva by good association with saintly persons. Unfortunately, such preferred persons are captivated again by material wealth and honor, and thus they practically forget the aim of life.
+          </p>
+          <p>
+            This is also so for the culture of knowledge. According to <span class="Italic">Bhagavad-gītā</span> there are eighteen items in culturing knowledge. By such culture of knowledge one becomes gradually prideless, devoid of vanity, nonviolent, forbearing, simple, devoted to the great spiritual master, and self-controlled. By culture of knowledge one becomes unattached to hearth and home and becomes conscious of the miseries due to death, birth, old age and disease. And all culture of knowledge culminates in devotional service to the Personality of Godhead, Vāsudeva. Therefore, Vāsudeva is the ultimate aim in culturing all different branches of knowledge. Culture of knowledge leading one to the transcendental plane of meeting Vāsudeva is real knowledge. physical knowledge in its various branches is condemned in the <span class="Italic">Bhagavad-gītā</span> as <span class="Italic">ajñāna,</span> or the opposite of real knowledge. The ultimate aim of physical knowledge is to satisfy the senses, which means prolongation of the term of material existence and thereby continuance of the threefold miseries. So prolonging the miserable life of material existence is nescience. But the same physical knowledge leading to the way of spiritual understanding helps one to end the miserable life of physical existence and to begin the life of spiritual existence on the plane of Vāsudeva.
+          </p>
+          <p>
+            The same applies to all kinds of austerities. <span class="Italic">Tapasya</span> means voluntary acceptance of bodily pains to achieve some higher end of life. Rāvaṇa and Hiraṇyakaśipu underwent a severe type of bodily torture to achieve the end of sense gratification. Sometimes modern politicians also undergo severe types of austerities to achieve some political end. This is not actually <span class="Italic">tapasya.</span> One should accept voluntary bodily inconvenience for the sake of knowing Vāsudeva because that is the way of real austerities. Otherwise all forms of austerities are classified as modes of passion and ignorance. passion and ignorance cannot end the miseries of life. Only the mode of goodness can mitigate the threefold miseries of life. Vasudeva and Devakī, the so-called father and mother of Lord Kṛṣṇa, underwent penances to get Vāsudeva as their son. Lord Śrī Kṛṣṇa is the father of all living beings (Bg. 14.4). Therefore He is the original living being of all other living beings. He is the original eternal enjoyer amongst all other enjoyers. Therefore no one can be His begetting father, as the ignorant may think. Lord Śrī Kṛṣṇa agreed to become the son of Vasudeva and Devakī upon being pleased with their severe austerities. Therefore if any austerities have to be done, they must be done to achieve the end of knowledge, Vāsudeva.
+          </p>
+          <p>
+            Vāsudeva is the original Personality of Godhead Lord Śrī Kṛṣṇa. As explained before, the original Personality of Godhead expands Himself by innumerable forms. Such expansion of forms is made possible by His various energies. His energies are also multifarious, and His internal energies are superior and external energies inferior in quality. They are explained in the <span class="Ref_Italic">Bhagavad-gītā</span> (7.4-6) as the <span class="Italic">parā</span> and the <span class="Italic">aparā prakṛtis.</span> So His expansions of various forms which take place via the internal energies are superior forms, whereas the expansions which take place via the external energies are inferior forms. The living entities are also His expansions. The living entities who are expanded by His internal potency are eternally liberated persons, whereas those who are expanded in terms of the material energies are eternally conditioned souls. Therefore, all culture of knowledge, austerities, sacrifice and activities should be aimed at changing the quality of the influence that is acting upon us. For the present, we are all being controlled by the external energy of the Lord, and just to change the quality of the influence, we must endeavor to cultivate spiritual energy. In the <span class="Italic">Bhagavad-gītā</span> it is said that those who are <span class="Italic">mahātmās,</span> or those whose minds have been so broadened as to be engaged in the service of Lord Kṛṣṇa, are under the influence of the internal potency, and the effect is that such broadminded living beings are constantly engaged in the service of the Lord without deviation. That should be the aim of life. And that is the verdict of all the Vedic literatures. No one should bother himself with fruitive activities or dry speculation about transcendental knowledge. Everyone should at once engage himself in the transcendental loving service of the Lord. Nor should one worship different demigods who work as different hands of the Lord for creation, maintenance or destruction of the material world. There are innumerable powerful demigods who look over the external management of the material world. They are all different assisting hands of Lord Vāsudeva. Even Lord Śiva and Lord Brahmā are included in the list of demigods, but Lord Viṣṇu, or Vāsudeva, is always transcendentally situated. Even though He accepts the quality of goodness of the material world, He is still transcendental to all the material modes. The following example will clear that matter more explicitly. In the prison house there are the prisoners and the managers of the prison house. Both the managers and the prisoners are bound by the laws of the king. But even though the king sometimes comes in the prison, he is not bound by the laws of the prison house. The king is therefore always transcendental to the laws of the prison house, as the Lord is always transcendental to the laws of the material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">77</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the beginning of the material creation, that Absolute Personality of Godhead [Vāsudeva], in His transcendental position, created the energies of cause and effect by His own internal energy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            The position of the Lord is always transcendental because the causal and effectual energies required for the creation of the material world were also created by Him. He is unaffected, therefore, by the qualities of the material modes. His existence, form, activities and paraphernalia all existed before the material creation.* <span class="Italic">He is all-spiritual</span> and has nothing to do with the qualities of the material world, which are qualitatively distinct from the spiritual qualities of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">221</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After creating the material substance, the Lord [Vāsudeva] expands Himself and enters into it. And although He is within the material modes of nature and appears to be; one of the created beings, He is always fully enlightened in His transcendental position.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            The living entities are separated parts and parcels of the Lord, and the conditioned living entities, who are unfit for the spiritual kingdom, are strewn within the material world to enjoy matter to the fullest extent. As Paramātmā and eternal friend of the living entities, the Lord, by one of His plenary portions, accompanies the living entities to guide them in their material enjoyment and to become witness to all activities. While the living entities enjoy the material conditions, the Lord maintains His transcendental position without being affected by the material atmosphere. In the Vedic literatures (<span class="Italic">śruti</span>) it is said that there are two birds in one tree.<popup><div class="Verse-in-purp">dvā suparṇā sayujā sakhāyā<br>samānaṁ vṛkṣaṁ pariṣasvajāte<br>tayor anyaḥ pippalaṁ svādv atty<br>anaśnann anyo 'bhicākaśīti</div></popup>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Muṇḍaka Upaṇiṣad</span> 3.1.1)<lt>* One of them is eating the fruit of the tree, while the other is witnessing the actions. The witness is the Lord, and the fruit-eater is the living entity. The fruit-eater (living entity) has forgotten his real identity and is overwhelmed in the fruitive activities of the material conditions, but the Lord (Paramātmā) is always full in transcendental knowledge. That is the difference between the Supersoul and the conditioned soul. The conditioned soul, the living entity, is controlled by the laws of nature, while the Paramātmā, or the Supersoul, is the controller of the material energy.</lt>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">227</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Lord, as Supersoul, pervades all things, just as fire permeates wood, and so He appears to be of many varieties, though He is the absolute one without a second.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            Lord Vāsudeva, the Supreme Personality of Godhead, by one of His plenary parts expands Himself all over the material world, and His existence can be perceived even within the atomic energy. Matter, antimatter, proton, neutron, etc., are all different effects of the Paramātmā feature of the Lord. As from wood, fire can be manifested, or as butter can be churned out of milk, so also the presence of the Lord as Paramātmā can be felt by the process of legitimate hearing and chanting of the transcendental subjects which are especially treated in the Vedic literatures like the <span class="Italic">Upaniṣads</span> and <span class="Italic">Vedānta.</span> <span class="Italic">Śrīmad-Bhāgavatam</span> is the bona fide explanation of these Vedic literatures. The Lord can be realized through the aural reception of the transcendental message, and that is the only way to experience the transcendental subject. As fire is kindled from wood by another fire, the divine consciousness of man can similarly be kindled by another divine grace. His Divine Grace the spiritual master can kindle the spiritual fire from the woodlike living entity by imparting proper spiritual messages injected through the receptive ear. Therefore one is required to approach the proper spiritual master with receptive ears only, and thus divine existence is gradually realized. The difference between animality and humanity lies in this process only. A human being can hear properly, whereas an animal cannot.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">199</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supersoul enters into the bodies of the created beings who are influenced by the modes of material nature and causes them to enjoy the effects of these modes by the subtle mind.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            There are 8,400,000 species of living beings beginning from the highest intellectual being, Brahmā, down to the insignificant ant, and all of them are enjoying the material world according to the desires of the subtle mind and gross material body. The gross material body is based on the conditions of the subtle mind, and the senses are created according to the desire of the living being. The Lord as Paramātmā helps the living being to get material happiness because the living being is helpless in all respects in obtaining what he desires. He proposes, and the Lord disposes. In another sense, the living beings are parts and parcels of the Lord. They are therefore one with the Lord. In the <span class="Italic">Bhagavad-gītā</span> the living beings in all varieties of bodies have been claimed by the Lord as His sons. The sufferings and enjoyments of the sons are indirectly the sufferings and enjoyments of the father. Still the father is not in any way affected directly by the suffering and enjoyment of the sons. He is so kind that He constantly remains with the living being as Paramātmā and always tries to convert the living being towards the real happiness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">254</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus the Lord of the universes maintains all planets inhabited by demigods, men and lower animals. Assuming the roles of incarnations, He performs pastimes to reclaim those in the mode of pure goodness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            There are innumerable material universes, and in each and every universe there are innumerable planets inhabited by different grades of living entities in different modes of nature. The Lord (Viṣṇu) incarnates Himself in each and every one of them and in each and every type of living society. He manifests His transcendental pastimes amongst them just to create the desire to go back to Godhead. The Lord does not change His original transcendental position, but He appears to be differently manifested according to the particular time, circumstances and society.
+          </p>
+          <p>
+            Sometimes He incarnates Himself or empowers a suitable living being to act for Him, but in either case the purpose is the same: the Lord wants the suffering living being to go back home, back to Godhead. The happiness which the living beings are hankering for is not to be found within any corner of the innumerable universes and material planets. The eternal happiness which the living being wants is obtainable in the kingdom of God, but the forgetful living beings under the influence of the material modes have no information of the kingdom of God. The Lord, therefore, comes to propagate the message of the kingdom of God, either personally as an incarnation or through His bona fide representative as the good son of God. Such incarnations or sons of God are not making propaganda for going back to Godhead only within the human society. Their work is also going on in all types of societies, amongst demigods and those other than human beings.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the First Canto, Second Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled "Divinity and Divine Service."</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/1/2">https://prabhupadabooks.com/sb/1/2</a><!-- span.text_source_copied_date
+        | on 2022-07-10 16:02:31 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 1.1: Questions by the Sages     Next: SB 1.3: Krsna Is the Source of All Incarnations</div>
+      </p>
+    </div>
+  </body>
+</html>
