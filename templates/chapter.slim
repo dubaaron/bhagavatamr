@@ -149,6 +149,11 @@ html lang='en'
 
       h1.text-3xl #{fancy_number}:<br>#{title}
 
+      / - binding.pry
+      - unless summary.empty?
+        / - binding.pry
+        div.summary== summary.to_s
+
       - verses.each do |verse_num, verse|
         div.verse data-verse_num="#{verse_num}"
           .verse_controls
