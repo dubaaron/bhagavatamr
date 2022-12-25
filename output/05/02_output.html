@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.2, The Activities of Mahārāja Āgnīdhra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Two:<br>The Activities of Mahārāja Āgnīdhra
+      </h1>
+      <div class="summary">
+        <p>In this chapter, the character of Mahārāja Āgnīdhra is described. When Mahārāja Priyavrata went off for spiritual realization, his son Āgnīdhra became the ruler of Jambūdvīpa, in accordance with Mahārāja Priyavrata’s instructions, and maintained its residents with the same affection a father feels for his sons. Once Mahārāja Āgnīdhra desired to have a son, and therefore he entered a cave of Mandara Mountain to practice austerity. Understanding his desire, Lord Brahmā sent a celestial girl named Pūrvacitti to Āgnīdhra’s hermitage. After dressing herself very attractively, she presented herself before him with various feminine movements, and Āgnīdhra was naturally attracted to her. The girl’s actions, expressions, smile, sweet words and moving eyes were fascinating to him. Āgnīdhra was expert in flattery. Thus he attracted the celestial girl, who was pleased to accept him as her husband because of his mellifluous words. She enjoyed royal happiness with Āgnīdhra for many years before returning to her abode in the heavenly planets. In her womb Āgnīdhra begot nine sons—Nābhi, Kiṁpuruṣa, Harivarṣa, Ilāvṛta, Ramyaka, Hiraṇmaya, Kuru, Bhadrāśva and Ketumāla. He gave them nine islands with names corresponding to theirs. Āgnīdhra, however, his senses unsatisfied, was always thinking of his celestial wife, and therefore in his next life he was born in her celestial planet. After the death of Āgnīdhra, his nine sons married nine daughters of Meru named Merudevī, Pratirūpā, Ugradaṁṣṭrī, Latā, Ramyā, Śyāmā, Nārī, Bhadrā and Devavīti.</p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">535</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: After his father, Mahārāja Priyavrata, departed to follow the path of spiritual life by undergoing austerities, King Āgnīdhra completely obeyed his order. Strictly observing the principles of religion, he gave full protection to the inhabitants of Jambūdvīpa as if they were his own begotten sons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Following the instruction of his father, Mahārāja Priyavrata, Mahārāja Āgnīdhra ruled the inhabitants of Jambūdvīpa according to religious principles. These principles are exactly contrary to the modern principles of faithlessness. As clearly stated here, the King protected the citizens the way a father protects his begotten children. How he ruled the citizens is also described here—<span class="Italic">dharmāvekṣamāṇaḥ,</span> strictly according to religious principles. It is the duty of the executive head of a state to see that the citizens strictly follow religious principles. The Vedic religious principles begin with <span class="Italic">varṇāśrama-dharma,</span> the duties of the four <span class="Italic">varṇas</span> and four <span class="Italic">āśramas.</span> <span class="Italic">Dharma</span> refers to principles given by the Supreme Personality of Godhead. The first principle of <span class="Italic">dharma,</span> or religion, is to observe the duties of the four orders as enjoined by the Supreme Personality of Godhead. According to people’s qualities and activities, society should be divided into <span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas</span> and <span class="Italic">śūdras</span> and then again into <span class="Italic">brahmacārīs, gṛhasthas, vānaprasthas</span> and <span class="Italic">sannyāsīs.</span> These are religious principles, and it is the duty of the head of state to see that his citizens strictly follow them. He should not merely act officially; he should be like a father who is always a well-wisher of his sons. Such a father strictly observes whether his sons are performing their duties, and sometimes he also punishes them.
+          </p>
+          <p>
+            Just contrary to the principles mentioned here, the presidents and chief executives in the age of Kali are simply tax collectors who do not care whether religious principles are observed. Indeed, the chief executives of the present day introduce all kinds of sinful activity, especially illicit sex, intoxication, animal killing and gambling. These sinful activities are now very prominently manifested in India. Although a hundred years ago these four principles of sinful life were strictly prohibited in the families of India, they have now been introduced into every Indian family; therefore they cannot follow religious principles. In contrast to the principles of the kings of old, the modern state is concerned only with propaganda for levying taxes and is no longer responsible for the spiritual welfare of the citizens. The state is now callous to religious principles. <span class="Italic">Śrīmad-Bhāgavatam</span> predicts that in Kali-yuga the government will be entrusted with <span class="Italic">dasyu-dharma,</span> which means the occupational duty of rogues and thieves. Modern heads of state are rogues and thieves who plunder the citizens instead of giving them protection. Rogues and thieves plunder without regard for law, but in this age of Kali, as stated in <span class="Italic">Śrīmad-Bhāgavatam,</span> the lawmakers themselves plunder the citizens. The next prediction to be fulfilled, which is already coming to pass, is that because of the sinful activities of the citizens and the government, rain will become increasingly scarce. Gradually there will be complete drought and no production of food grains. People will be reduced to eating flesh and seeds, and many good, spiritually inclined people will have to forsake their homes because they will be too harassed by drought, taxation and famine. The Kṛṣṇa consciousness movement is the only hope to save the world from such devastation. It is the most scientific and authorized movement for the actual welfare of the whole human society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">637</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Desiring to get a perfect son and become an inhabitant of Pitṛloka, Mahārāja Āgnīdhra once worshiped Lord Brahmā, the master of those in charge of material creation. He went to a valley of Mandara Hill, where the damsels of the heavenly planets come down to stroll. There he collected garden flowers and other necessary paraphernalia and then engaged in severe austerities and worship.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The King became <span class="Italic">pitṛloka-kāma,</span> or desirous of being transferred to the planet named Pitṛloka. Pitṛloka is mentioned in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">yānti deva-vratā devān pitṝn yānti pitṛ-vratāḥ [Bg. 9.25]</span>). To go to this planet, one needs very good sons who can make offerings to Lord Viṣṇu and then offer the remnants to their forefathers. The purpose of the <span class="Italic">śrāddha</span> ceremony is to please the Supreme Personality of Godhead, Lord Viṣṇu, so that after pleasing Him one may offer <span class="Italic">prasāda</span> to one’s forefathers and in this way make them happy. The inhabitants of Pitṛloka are generally men of the <span class="Italic">karma-kāṇḍīya,</span> or fruitive activities category, who have been transferred there because of their pious activities. They can stay there as long as their descendants offer them <span class="Italic">viṣṇu-prasāda.</span> Everyone in heavenly planets such as Pitṛloka, however, must return to earth after exhausting the effects of his pious acts. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (9.21), <span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti:</span> persons who perform pious acts are transferred to higher planets, but when the effects of their pious acts are over, they are again transferred to earth.
+          </p>
+          <p>
+            Since Mahārāja Priyavrata was a great devotee, how could he have begotten a son who desired to be transferred to Pitṛloka? Lord Kṛṣṇa says, <span class="Italic">pitṝn yānti pitṛ-vratāḥ:</span> persons who desire to go to Pitṛloka are transferred there. Similarly, <span class="Italic">yānti mad-yājino ’pi mām:</span> persons who desire to be transferred to the spiritual planets, Vaikuṇṭhalokas, can also go there. Since Mahārāja Āgnīdhra was the son of a Vaiṣṇava, he should have desired to be transferred to the spiritual world, Vaikuṇṭhaloka. Why, then, did he desire to be transferred to Pitṛloka? In answer to this, Gosvāmī Giridhara, one of the <span class="Italic">Bhāgavatam</span> commentators, remarks that Āgnīdhra was born when Mahārāja Priyavrata was infatuated by lusty desires. This may be accepted as a fact because sons are begotten with different mentalities according to the time of their conception. According to the Vedic system, therefore, before a child is conceived, the <span class="Italic">garbhādhāna-saṁskāra</span> is performed. This ceremony molds the mentality of the father in such a way that when he plants his seed in the womb of his wife, he will beget a child whose mind will be completely saturated with a devotional attitude. At the present moment, however, there are no such <span class="Italic">garbhādhāna-saṁskāras,</span> and therefore people generally have a lusty attitude when they beget children. Especially in this age of Kali, there are no <span class="Italic">garbhādhāna</span> ceremonies; everyone enjoys sex with his wife like a cat or dog. Therefore according to śāstric injunctions, almost all the people of this age belong to the <span class="Italic">śūdra</span> category. Of course, although Mahārāja Āgnīdhra had a desire to be transferred to Pitṛloka, this does not mean that his mentality was that of a <span class="Italic">śūdra;</span> he was a <span class="Italic">kṣatriya.</span>
+          </p>
+          <p>
+            Mahārāja Āgnīdhra desired to be transferred to Pitṛloka, and therefore he needed a wife because anyone desiring to be transferred to Pitṛloka must leave behind a good son to offer yearly <span class="Italic">piṇḍa,</span> or <span class="Italic">prasāda</span> from Lord Viṣṇu. To have a good son, Mahārāja Āgnīdhra wanted a wife from a family of demigods. Therefore he went to Mandara Hill. where the women of the demigods generally come, to worship Lord Brahmā. In <span class="Ref_Italic">Bhagavad-gītā</span> (4.12) it is said, <span class="Italic">kāṅkṣantaḥ karmaṇāṁ siddhiṁ yajanta iha devatāḥ:</span> materialists who want quick results in the material world worship demigods. This is also confirmed in <span class="Italic">Śrīmad-Bhāgavatam.</span> <span class="Italic">Śrī-aiśvarya-prajepsavaḥ:</span> those who desire beautiful wives, substantial wealth and many sons worship the demigods, but an intelligent devotee, instead of being entangled by the happiness of this material world in the form of a beautiful wife, material opulence and children, desires to be immediately transferred back home, back to Godhead. Thus he worships the Supreme Personality of Godhead, Viṣṇu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">180</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Understanding King Āgnīdhra’s desire, the first and most powerful created being of this universe, Lord Brahmā, selected the best of the dancing girls in his assembly, whose name was Pūrvacitti, and sent her to the King.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            In this verse, the words <span class="Italic">bhagavān ādi-puruṣaḥ</span> are significant. <span class="Italic">Bhagavān ādi-puruṣaḥ</span> is Lord Kṛṣṇa. <span class="Italic">Govindam ādi-puruṣaṁ tam ahaṁ bhajāmi **.</span> Lord Kṛṣṇa is the original person. In <span class="Italic">Bhagavad-gītā,</span> He is also addressed by Arjuna as <span class="Italic">puruṣam ādyam,</span> the original person, and He is called Bhagavān. In this verse, however, we see that Lord Brahmā is described as <span class="Italic">bhagavān ādi-puruṣaḥ.</span> The reason he is called <span class="Italic">bhagavān</span> is that he fully represents the Supreme Personality of Godhead and is the first-born creature in this universe. Lord Brahmā could understand Mahārāja Āgnīdhra’s desire because he is as powerful as Lord Viṣṇu. As Lord Viṣṇu, situated as Paramātmā, can understand the desire of the living entity, so Lord Brahmā can also understand the living entity’s desire, for Viṣṇu, as a via medium, informs him. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.1.1), <span class="Italic">tene brahma hṛdā ya ādi-kavaye:</span> Lord Viṣṇu informs Lord Brahmā of everything from within his heart. Because Mahārāja Āgnīdhra specifically worshiped Lord Brahmā, Lord Brahmā was pleased, and he sent Pūrvacitti, the Apsarā, to satisfy him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Apsarā sent by Lord Brahmā began strolling in a beautiful park near the place where the King was meditating and worshiping. The park was beautiful because of its dense green foliage and golden creepers. There were pairs of varied birds such as peacocks, and in a lake there were ducks and swans, all vibrating very sweet sounds. Thus the park was magnificently beautiful because of the foliage, the clear water, the lotus flowers and the sweet singing of various kinds of birds.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">463</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As Pūrvacitti passed by on the road in a very beautiful style and mood of her own, the pleasing ornaments on her ankles tinkled with her every step. Although Prince Āgnīdhra was controlling his senses, practicing yoga with half-open eyes, he could see her with his lotuslike eyes, and when he heard the sweet tinkling of her bangles, he opened his eyes slightly more and could see that she was just nearby.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            It is said that <span class="Italic">yogīs</span> always think of the Supreme Personality of Godhead within their hearts. <span class="Italic">Dhyānāvasthita-tad-gatena manasā paśyanti yaṁ yoginaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 12.13.1). The Supreme Personality of Godhead is always observed by <span class="Italic">yogīs</span> who practice controlling the venomous senses. As recommended in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">yogīs</span> should practice <span class="Italic">samprekṣya nāsikāgram,</span> keeping their eyes half-open. If the eyes are closed completely, there will be a tendency to sleep. So-called <span class="Italic">yogīs</span> sometimes practice a fashionable form of <span class="Italic">yoga</span> by closing their eyes and meditating, but we have actually seen such so-called <span class="Italic">yogīs</span> sleeping and snoring while meditating. This is not the practice of <span class="Italic">yoga.</span> To actually practice <span class="Italic">yoga,</span> one should keep his eyes half-open and gaze at the tip of his nose.
+          </p>
+          <p>
+            Although Āgnīdhra, the son of Priyavrata, was practicing mystic <span class="Italic">yoga</span> and trying to control his senses, the tinkling sound of Pūrvacitti’s ankle bells disturbed his practice. <span class="Italic">Yoga indriya-saṁyamaḥ:</span> actual <span class="Italic">yoga</span> practice means controlling the senses. One must practice mystic <span class="Italic">yoga,</span> to control the senses, but the sense control of a devotee who fully engages in the service of the Lord with his purified senses (<span class="Italic">hṛṣīkeṇa hṛṣīkeśa-sevanam</span> [Cc. Madhya 19.170]) can never be disturbed. Śrīla Prabodhānanda Sarasvatī therefore stated, <span class="Italic">durdāntendriya-kāla-sarpa-paṭalī protkhāta-daṁṣṭra-yate</span> (<span class="Ref_Italic">Caitanya-candrāmṛta</span> 5). The practice of <span class="Italic">yoga</span> is undoubtedly good because it controls the senses, which are like venomous serpents. When one engages in devotional service, however, completely employing all the activities of the senses in the service of the Lord, the venomous quality of the senses is completely nullified. It is explained that a serpent is to be feared because of its poison fangs, but if those fangs are broken. the serpent, although it seems fearsome, is not at all dangerous. Devotees, therefore, may see hundreds and thousands of beautiful women with fascinating bodily movements and gestures but not be allured, whereas such women would make ordinary <span class="Italic">yogīs</span> fall. Even the advanced <span class="Italic">yogī</span> Viśvāmitra broke his mystic practice to unite with Menakā and beget a child known as Śakuntalā. The practice of mystic <span class="Italic">yoga,</span> therefore, is not sufficiently strong to control the senses. Another example is Prince Āgnīdhra, whose attention was drawn to the movements of Pūrvacitti, the Apsarā, simply because he heard the tinkling of her ankle bells. In the same way that Viśvāmitra Muni was attracted by the tinkling bangles of Menakā, Prince Āgnīdhra, upon hearing the tinkling bangles of Pūrvacitti, immediately opened his eyes to see her beautiful movements as she walked. The prince was also very handsome. As described herein, his eyes were just like the buds of lotus flowers. As he opened his lotuslike eyes, he could immediately see that the Apsarā was present by his side.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">444</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Like a honeybee, the Apsarā smelled the beautiful and attractive flowers. She could attract the minds and vision of both humans and demigods by her playful movements, her shyness and humility, her glances, the very pleasing sounds that poured from her mouth as she spoke, and the motion of her limbs. By all these qualities, she opened for Cupid, who bears an arrow of flowers, a path of aural reception into the minds of men. When she spoke, nectar seemed to flow from her mouth. As she breathed, the bees, mad for the taste of her breath, tried to hover about her beautiful lotuslike eyes. Disturbed by the bees, she tried to move hastily, but as she raised her feet to walk quickly, her hair, the belt on her hips, and her breasts, which were like water jugs, also moved in a way that made her extremely beautiful and attractive. Indeed, she seemed to be making a path for the entrance of Cupid, who is most powerful. Therefore the prince, completely subdued by seeing her, spoke to her as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            How a beautiful woman’s movements and gestures, her hair and the structure of her breasts, hips and other bodily features attract the minds not only of men but of demigods also is very finely described in this statement. The words <span class="Italic">divija</span> and <span class="Italic">manuja</span> specifically emphasize that the attraction of feminine gestures is powerful everywhere within this material world, both on this planet and in the higher planetary systems. It is said that the standard of living in the higher planetary systems is thousands and thousands of times higher than the standard of living on this planet. Therefore the beautiful bodily features of the women there are also thousands and thousands of times more attractive than the features of the women on earth. The creator has constructed women in such a way that their beautiful voices and movements and the beautiful features of their hips, their breasts, and the other parts of their bodies attract the members of the opposite sex, both on earth and on other planets, and awaken their lusty desires. When one is controlled by Cupid or the beauty of women, he becomes stunned like matter such as stone. Captivated by the material movements of women, he wants to remain in this material world. Thus one’s promotion to the spiritual world is checked simply by seeing the beautiful bodily structure and movements of women. Śrī Caitanya Mahāprabhu has therefore warned all devotees to beware of the attraction of beautiful women and materialistic civilization. Śrī Caitanya Mahāprabhu even refused to see Pratāparudra Mahārāja because he was a very opulent person in the material world. Lord Caitanya said in this connection, <span class="Italic">niṣkiñcanasya bhagavad-bhajanonmukhasya:</span> those who are engaged in the devotional service of the Lord because they are very serious about going back home, back to Godhead, should be very careful to avoid seeing the beautiful gestures of women and should also avoid seeing persons who are very rich.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">niṣkiñcanasya bhagavad-bhajanonmukhasya<br>pāraṁ paraṁ jigamiṣor bhava-sāgarasya<br>sandarśanaṁ viṣayiṇām atha yoṣitāṁ ca<br>hā hanta hanta viṣa-bhakṣaṇato ’py asādhu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Alas, for a person who is seriously desiring to cross the material ocean and engage in the transcendental loving service of the Lord without material motives, seeing a materialist engaged in sense gratification or seeing a woman who is similarly interested is more abominable than drinking poison willingly.” (<span class="Ref_Italic">Caitanya-caritāmṛta, Madhya</span> 11.8) One who is serious about going back home, back to Godhead, should not contemplate the attractive features of women and the opulence of rich men. Such contemplation will check one’s advancement in spiritual life. Once a devotee is fixed in Kṛṣṇa consciousness, however, these attractions will not agitate his mind.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">558</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Prince mistakenly addressed the Apsarā: O best of saintly persons, who are you? Why are you on this hill, and what do you want to do? Are you one of the illusory potencies of the Supreme Personality of Godhead? You seem to be carrying two bows without strings, What is the reason you carry these bows? Is it for some purpose of your own or for the sake of a friend? Perhaps you carry them to kill the mad animals in this forest.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            While undergoing severe penances in the forest, Āgnīdhra was captivated by the movements of Pūrvacitti, the girl sent by Lord Brahmā. As stated in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">kāmais tais tair hṛta jñānāḥ: [Bg. </span>7.20] when one becomes lusty, he loses his intelligence. Therefore Āgnīdhra, having lost his intelligence, could not distinguish whether Pūrvacitti was male or female. He mistook her for a <span class="Italic">muni-putra,</span> the son of a saintly person in the forest, and addressed her as <span class="Italic">muni-varya.</span> Because of her personal beauty, however, he could not believe her to be a boy. He therefore began studying her features. First he saw her two eyebrows, which were so expressive that he wondered whether he or she might be the <span class="Italic">māyā</span> of the Supreme Personality of Godhead. The words used in this connection are <span class="Italic">bhagavat-para-devatāyāḥ.</span> <span class="Italic">Devatāḥ,</span> the demigods, all belong to this material world, whereas Bhagavān, the Supreme Personality of Godhead, Kṛṣṇa, is always beyond this material world and is therefore known as <span class="Italic">para-devatā.</span> The material world is certainly created by <span class="Italic">māyā,</span> but it is created under the direction of <span class="Italic">para-devatā,</span> the Supreme Personality of Godhead. As confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram [Bg. 9.10]</span>), <span class="Italic">māyā</span> is not the ultimate authority for the creation of this material world. <span class="Italic">Māyā</span> acts on behalf of Kṛṣṇa.
+          </p>
+          <p>
+            Pūrvacitti’s eyebrows were so beautiful that Āgnīdhra compared them to bows without strings. He therefore asked her whether they were to be used for her own purposes or for the sake of someone else. Her eyebrows were like bows meant to kill animals in the forest. This material world is like a great forest, and its inhabitants are like forest animals such as deer and tigers meant to be killed. The killers are the eyebrows of beautiful women. Captivated by the beauty of the fair sex, all the men of the world are killed by bows without strings, but cannot see how they are killed by <span class="Italic">māyā.</span> It is a fact, however, that they are being killed (<span class="Italic">bhūtvā bhūtvā pralīyate</span>). By dint of his <span class="Italic">tapasya,</span> Āgnīdhra could understand how <span class="Italic">māyā</span> acts under the direction of the Supreme Personality of Godhead.
+          </p>
+          <p>
+            The word <span class="Italic">pramattān</span> is also significant. <span class="Italic">pramatta</span> refers to one who cannot control his senses. The entire material world is being exploited by people who are <span class="Italic">pramatta,</span> or <span class="Italic">vimūḍha.</span> Prahlāda Mahārāja therefore said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śoce tato vimukha-cetasa indriyārtha-<br>māyā-sukhāya bharam udvahato vimūḍhān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “They are rotting in material activities for transient material pleasure and spoiling their lives toiling all day and night simply for sense gratification, with no attachment for love of Godhead. I am simply lamenting for them and devising various plans to deliver them from the clutches of <span class="Italic">māyā.</span>” (<span class="Ref_Italic">Bhāg.</span> 7.9.43) <span class="Italic">Karmīs</span> who act very seriously for sense gratification are always referred to in the <span class="Italic">śāstras</span> by such terms as <span class="Italic">pramatta, vimukha</span> and <span class="Italic">vimūḍha.</span> They are killed by <span class="Italic">māyā.</span> However, one who is <span class="Italic">apramatta,</span> a sane, sober person, a <span class="Italic">dhīra,</span> knows very well that a human being’s primary duty is to render service to the Supreme Person. <span class="Italic">Māyā</span> is always ready to kill those who are <span class="Italic">pramatta</span> with her invisible bows and arrows. Āgnīdhra questioned Pūrvacitti about this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">98</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then Āgnīdhra observed the glancing eyes of Pūrvacitti and said: My dear friend, you have two very powerful arrows, namely your glancing eyes. Those arrows have feathers like the petals of a lotus flower. Although they have no shafts, they are very beautiful, and they have very sharp, piercing points. They appear very peaceful, and thus it seems that they will not be shot at anyone. You must be loitering in this forest to shoot those arrows at someone, but I cannot understand whom. My intelligence is dull, and I cannot combat you. Indeed, no one can equal you in prowess, and therefore I pray that your prowess will be for my good fortune.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Āgnīdhra thus began appreciating Pūrvacitti’s powerful glance upon him. He compared her glancing eyes to very sharp arrows. Although her eyes were as beautiful as lotuses, they were simultaneously like shaftless arrows, and Āgnīdhra was therefore afraid of them. He hoped that her glances upon him would be favorable because he was already captivated, and the more captivated he became, the more impossible it would be for him to remain without her. Āgnīdhra therefore prayed to Pūrvacitti that her glances at him would be auspicious, not futile. In other words, he prayed that she would become his wife.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Seeing the bumblebees following Pūrvacitti, Mahārāja Āgnīdhra said: My dear Lord, the bumblebees surrounding your body are like disciples surrounding your worshipable self. They are incessantly chanting the mantras of the Sāma Veda and the Upaniṣads, thus offering prayers to you. Just as great sages resort to the branches of Vedic literatures, the bumblebees are enjoying the showers of flowers falling from your hair.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">116</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O brāhmaṇa, I can simply hear the tinkling of your ankle bells. Within those bells, tittiri birds seem to be chirping among themselves. Although I do not see their forms, I can hear how they are chirping. When I look at your beautiful circular hips, I see they are the lovely color of kadamba flowers, and your waist is encircled by a belt of burning cinders. Indeed, you seem to have forgotten to dress yourself.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            With lusty desires to see Pūrvacitti, Āgnīdhra especially gazed upon the girl’s attractive hips and waist. When a man looks upon a woman with such lusty desires, he is captivated by her face, her breasts and her waist, for a woman first attracts a man to fulfill his sexual desires by the beautiful features of her face, by the beautiful slope of her breasts and also by her waist. Pūrvacitti was dressed in fine yellow silk, and therefore her hips looked like <span class="Italic">kadamba</span> flowers. Because of her belt, her waist seemed to be encircled by burning cinders. She was fully dressed, but Āgnīdhra had become so lusty that he asked, “Why have you come naked?”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">271</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Āgnīdhra then praised Pūrvacitti’s raised breasts. He said: My dear brāhmaṇa your waist is very thin, yet with great difficulty you are carefully carrying two horns, to which my eyes have become attracted. What is filling those two beautiful horns? You seem to have spread fragrant red powder upon them, powder that is like the rising morning sun. O most fortunate one, I beg to inquire where you have gotten this fragrant powder that is perfuming my āśrama, my place of residence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Āgnīdhra appreciated Pūrvacitti’s raised breasts. After seeing the girl’s breasts, he became almost mad. Nevertheless, he could not recognize whether Pūrvacitti was a boy or a girl, for as a result of his austerity, he saw no distinction between the two. He therefore addressed her with the word <span class="Italic">dvija,</span> “O <span class="Italic">brāhmaṇa.</span>” Yet why should a <span class="Italic">dvija,</span> a <span class="Italic">brāhmaṇa</span> boy, have horns on his chest? Because the boy’s waist was thin, Āgnīdhra thought, he was carrying the horns with great difficulty. and therefore they must be filled with something very valuable. Otherwise why would he carry them? When a woman’s waist is thin and her breasts are full, she looks very attractive. Āgnīdhra, his eyes attracted, contemplated the heavy breasts on the girl’s thin body and imagined how her back must sustain them. Āgnīdhra imagined that her raised breasts were two horns she had covered with cloth so that others would not see the valuables within them. Āgnīdhra, however, was very anxious to see them. Therefore he requested, “Please uncover them so that I can see what you are carrying. Rest assured that I shall not take it away. If you feel an inconvenience in removing the covering, I can help you; I myself can uncover them to see what valuable things those raised horns contain.” He was also surprised to see the red dust of perfumed <span class="Italic">kuṅkuma</span> spread over her breasts. Nevertheless, still considering Pūrvacitti a boy, Āgnīdhra addressed her as <span class="Italic">subhaga,</span> most fortunate <span class="Italic">muni.</span> The boy must have been fortunate; otherwise how simply by standing there could he perfume Āgnīdhra’s entire <span class="Italic">āśrama?</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">88</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best friend, will you kindly show me the place where you reside? I cannot imagine how the residents of that place have gotten such wonderful bodily features as your raised breasts, which agitate the mind and eyes of a person like me who sees them. Judging by the sweet speech and kind smiles of those residents, I think that their mouths must contain nectar.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Still bewildered, Āgnīdhra wanted to see the place from which the <span class="Italic">brāhmaṇa</span> boy had come, where the men had such raised breasts. Such attractive features, he thought, must be due to the severe austerities performed there. Āgnīdhra addressed the girl as <span class="Italic">suhṛttama,</span> the best friend, so that she would not refuse to take him there. Not only was Āgnīdhra captivated by the girl’s raised breasts; he was also attracted by her sweet speech. Nectar seemed to emanate from her mouth, and therefore he was increasingly surprised.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear friend, what do you eat to maintain your body? Because you are chewing betel, a pleasing scent is emanating from your mouth. This proves that you always eat the remnants of food offered to Viṣṇu. Indeed, you must also be an expansion of Lord Viṣṇu’s body. Your face is as beautiful as a pleasing lake. Your jeweled earrings resemble two brilliant sharks with unblinking eyes like those of Viṣṇu, and your own eyes resemble two restless fish. Simultaneously, therefore, two sharks and two restless fish are swimming in the lake of your face. Besides them, the white rows of your teeth seem like rows of very beautiful swans in the water, and your scattered hair resembles swarms of bumblebees following the beauty of your face.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The devotees of Lord Viṣṇu are also His expansions. They are called <span class="Italic">vibhinnāṁśa.</span> Lord Viṣṇu is offered all kinds of sacrificial ingredients, and because devotees always eat <span class="Italic">prasāda,</span> the remnants of His food, the scent of sacrificial ingredients emanates not only from Viṣṇu but also from the devotees who eat the remnants of His food or the food of His devotees. Āgnīdhra considered Pūrvacitti an expansion of Lord Viṣṇu because of the pleasing scent of her body. Aside from that, because of her jeweled earrings, shaped like sharks, because of her scattered hair, resembling bumblebees mad after the scent of her body, and because of the white rows of her teeth, which resembled swans, Āgnīdhra compared Pūrvacitti’s face to a beautiful lake decorated with lotus flowers, fish, swans and bumblebees.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">84</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My mind is already restless, and by playing with a ball, moving it all about with your lotuslike palm, you are also agitating my eyes. Your curling black hair is now scattered, but you are not attentive to arranging it. Are you not going to arrange it? Like a man attached to women, the most cunning wind is trying to take off your lower garment. Are you not mindful of it?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The girl Pūrvacitti was playing with a ball in her hand, and the ball seemed like nothing but another lotus flower captured by her lotuslike palm. Because of her movements, her hair was loose, and the belt holding her cloth was giving way, as if the cunning wind were trying to make her naked. Yet she paid no attention to arranging her hair or fixing her dress. As Āgnīdhra tried to see the girl’s naked beauty, his eyes were very agitated by her movements.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">184</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best among those performing austerities, where did you get this wonderful beauty that dismantles the austerities performed by others? Where have you learned this art? What austerity have you undergone to achieve this beauty, my dear friend? I desire that you join me to perform austerity and penance, for it may be that the creator of the universe, Lord Brahmā, being pleased with me, has sent you to become my wife.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Āgnīdhra appreciated the wonderful beauty of Pūrvacitti. Indeed, he was surprised to see such exceptional beauty, which must have been the result of past austerities and penances. He therefore asked the girl whether she had achieved such beauty just to break the penances and austerities of others. He thought that Lord Brahmā, the creator of the universe, might have been pleased with him and might therefore have sent her to become his wife. He requested Pūrvacitti to become his wife so that together they could perform austerities and penances in family life. In other words, a suitable wife helps her husband perform penances and austerities in household life if both of them are on the same elevated platform of spiritual understanding. Without spiritual understanding, husband and wife cannot be equally situated. Lord Brahmā, the creator of the universe, is interested in good progeny. Therefore unless he is pleased, one cannot get a suitable wife. In fact, Lord Brahmā is worshiped in marriage ceremonies. In India even today, wedding invitations are still issued with a picture of Lord Brahmā on the face of the card.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā, who is worshiped by the brāhmaṇas, has very mercifully given you to me, and that is why I have met you. I do not want to give up your company, for my mind and eyes are fixed upon you and cannot be drawn away. O woman with beautiful raised breasts, I am your follower. You may take me wherever you like, and your friends may also follow me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Now Āgnīdhra frankly admits his weakness. He was attracted to Pūrvacitti, and therefore before she could say, “But I have no business with you,” he expressed his desire to be united with her. He was so attracted that he was ready to go anywhere, hell or heaven, in her company. When one is absorbed in lust and the influence of sex, one surrenders to the feet of a woman without reservations. Śrīla Madhvācārya remarks in this connection that when one engages in joking and talking like a crazy person, one may say anything and everything, but his words will be meaningless.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">59</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: Mahārāja Āgnīdhra, whose intelligence was like that of a demigod, knew the art of flattering women to win them to his side. He therefore pleased that celestial girl with his lusty words and gained her favor.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Since King Āgnīdhra was a devotee, he actually had no attraction for material enjoyment, but because he wanted a wife for progeny and Lord Brahmā had sent Pūrvacitti for this purpose, he expertly pleased her with flattering words. Women are attracted by a man’s flattering words. One who is expert in this art of flattery is called <span class="Italic">vidagdha.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">30</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Attracted by the intelligence, learning, youth, beauty, behavior, opulence and magnanimity of Āgnīdhra, the King of Jambūdvīpa and master of all heroes, Pūrvacitti lived with him for many thousands of years and luxuriously enjoyed both worldly and heavenly happiness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            By the grace of Lord Brahmā, King Āgnīdhra and the heavenly girl. Pūrvacitti, found their union quite suitable. Thus they enjoyed worldly and heavenly happiness for many thousands of years.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the womb of Pūrvacitti, Mahārāja Āgnīdhra, the best of kings, begot nine sons, named Nābhi, Kiṁpuruṣa, Harivarṣa, Ilāvṛta, Ramyaka, Hiraṇmaya, Kuru, Bhadrāśva and Ketumāla.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">111</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Pūrvacitti gave birth to these nine sons, one each year, but after they grew up, she left them at home and again approached Lord Brahmā to worship him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            There are many instances in which Apsarās, heavenly angels, have descended to this earth by the order of a superior demigod like Lord Brahmā or Lord Indra, have followed the demigod’s order by marrying someone and giving birth to children, and have then returned to their celestial homes. For example, after Menakā, the celestial woman who had come to delude Viśvāmitra Muni, gave birth to the child Śakuntalā, she left both the child and her husband and returned to the heavenly planets. Pūrvacitti did not remain permanently with Mahārāja Āgnīdhra. After cooperating in his household affairs, she left Mahārāja Āgnīdhra and all nine sons and returned to Brahmā to worship him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">142</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of drinking the breast milk of their mother, the nine sons of Āgnīdhra naturally had strong, well-built bodies. Their father gave them each a kingdom in a different part of Jambūdvīpa. The kingdoms were named according to the names of the sons. Thus the sons of Āgnīdhra ruled the kingdoms they received from their father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            The <span class="Italic">ācāryas</span> specifically mention that in this verse the words <span class="Italic">mātuḥ anugrahāt</span> (“by the mercy of their mother”) refer to the breast milk of their mother. In India it is a common belief that if a baby is fed his mother’s milk for at least six months, his body will be very strong. Besides that, it is mentioned herein that all the sons of Āgnīdhra were endowed with the nature of their mother. <span class="Ref_Italic">Bhagavad-gītā</span> (1.40) also declares, <span class="Italic">strīṣu duṣṭāsu vārṣṇeya jāyate varṇa-saṅkaraḥ:</span> when women are polluted, <span class="Italic">varṇa-saṅkara,</span> unqualified children, are generated, and when the <span class="Italic">varṇa-saṅkara</span> population increases, the entire world becomes hellish. Therefore, according to <span class="Italic">Manu-saṁhitā,</span> a woman needs a great deal of protection in order to remain pure and chaste so that her children can be fully engaged for the benefit of human society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">115</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After Pūrvacitti’s departure, King Āgnīdhra, his lusty desires not at all satisfied, always thought of her. Therefore, in accordance with the Vedic injunctions, the King, after his death, was promoted to the same planet as his celestial wife. That planet, which is called Pitṛloka, is where the pitās, the forefathers, live in great delight.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            If one always thinks of something, he certainly gets a related body after death. Mahārāja Āgnīdhra was always thinking of Pitṛloka, the place where his wife had returned. Therefore after his death he achieved that same planet, probably to live with her again. <span class="Italic">Bhagavad-gītā</span> also says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaṁ yaṁ vāpi smaran bhāvaṁ<br>tyajaty ante kalevaram<br>taṁ tam evaiti kaunteya<br>sadā tad-bhāva-bhāvitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whatever state of being one remembers when he quits his body, that state he will attain without fail.” (Bg. 8.6) We can naturally conclude that if we always think of Kṛṣṇa or become fully Kṛṣṇa conscious, we can be promoted to the planet of Goloka Vṛndāvana, where Kṛṣṇa eternally lives.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After the departure of their father, the nine brothers married the nine daughters of Meru named Merudevī, Pratirūpā, Ugradaṁṣṭrī, Latā, Ramyā, Śyāmā, Nārī, Bhadrā and Devavīti.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Second Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Activities of Mahārāja Āgnīdhra.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/2">https://prabhupadabooks.com/sb/5/2</a><!-- span.text_source_copied_date
+        | on 2022-12-04 10:40:26 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.1: The Activities of Maharaja Priyavrata     Next: SB 5.3: Rsabhadeva's Appearance in the Womb of Merudevi, the Wife of King Nabhi</div>
+      </p>
+    </div>
+  </body>
+</html>

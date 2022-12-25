@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.1, The Activities of Mahārāja Priyavrata</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        
+      </h2>
+      <h1 class="text-3xl">
+        Chapter One:<br>The Activities of Mahārāja Priyavrata
+      </h1>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">597</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit inquired from Śukadeva Gosvāmī: O great sage, why did King Priyavrata, who was a great, self-realized devotee of the Lord, remain in household life, which is the root cause of the bondage of karma [fruitive activities] and which defeats the mission of human life?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            In the Fourth Canto, Śrīla Śukadeva Gosvāmī explains that Nārada Muni perfectly instructed King Priyavrata about the mission of human life. The mission of human life is to realize one’s self and then gradually to go back home, back to Godhead. Since Nārada Muni instructed the King fully on this subject, why did he again enter household life, which is the main cause of material bondage? Mahārāja Parīkṣit was greatly astonished that King Priyavrata remained in household life, especially since he was not only a self-realized soul but also a first-class devotee of the Lord. A devotee actually has no attraction for household life, but surprisingly, King Priyavrata enjoyed household life very much. One may argue, “Why is it wrong to enjoy household life?” The reply is that in household life one becomes bound by the results of fruitive activities. The essence of household life is sense enjoyment, and as long as one engrosses his mind in working hard for sense enjoyment, one becomes bound by the reactions of fruitive activities. This ignorance of self-realization is the greatest defeat in human life. The human form of life is especially meant for getting out of the bondage of fruitive activities, but as long as one is forgetful of his life’s mission and acts like an ordinary animal—eating, sleeping, mating and defending—he must continue his conditioned life of material existence. Such a life is called <span class="Italic">svarūpa-vismṛti,</span> forgetfulness of one’s real constitutional position. Therefore in Vedic civilization one is trained in the very beginning of life as a <span class="Italic">brahmacārī.</span> A <span class="Italic">brahmacārī</span> must execute austerities and refrain from sex indulgence. Therefore if one is completely trained in the principles of <span class="Italic">brahmacarya,</span> he generally does not enter household life. He is then called a <span class="Italic">naiṣṭhika-brahmacārī,</span> which indicates total celibacy. King Parīkṣit was thus astonished that the great King Priyavrata, although trained in the principles of <span class="Italic">naiṣṭhika-brahmacarya,</span> entered household life.
+          </p>
+          <p>
+            The words <span class="Italic">bhāgavata ātmārāmaḥ</span> are very significant in this verse. If one is self-satisfied as is the Supreme Personality of Godhead, he is called <span class="Italic">bhāgavata ātmārāmaḥ.</span> There are different types of satisfaction. <span class="Italic">Karmīs</span> are satisfied in their fruitive activities, <span class="Italic">jñānīs</span> are satisfied to merge into the effulgence of Brahman, and devotees are satisfied to engage in the Lord’s service. The Lord is self-satisfied because He is fully opulent, and one who is satisfied by serving Him is called <span class="Italic">bhāgavata ātmārāmaḥ.</span> <span class="Italic">Manuṣyāṇāṁ sahasreṣu: [Bg. 7.3]</span> out of many thousands of persons, one may endeavor for liberation, and of many thousands of persons attempting to become liberated, one may achieve liberation from the anxieties of material existence and become self-satisfied. Even that satisfaction, however, is not the ultimate satisfaction. The <span class="Italic">jñānīs</span> and the <span class="Italic">karmīs</span> have desires, as do the <span class="Italic">yogīs,</span> but devotees have no desires. Satisfaction in the service of the Lord is called <span class="Italic">akāma,</span> freedom from desire, and this is the ultimate satisfaction. Therefore Mahārāja Parīkṣit inquired, “How could one who was fully satisfied on the highest platform be satisfied with family life?”
+          </p>
+          <p>
+            The word <span class="Italic">parābhavaḥ</span> in this verse is also significant. When one is satisfied in family life, he is doomed because he must already have forgotten his relationship with the Lord. Prahlāda Mahārāja describes how the activities of family life implicate one more and more. <span class="Italic">Ātma-pātaṁ gṛham andha-kūpam:</span> household life is like a dark well. If one falls into this well, his spiritual death is assured. How Priyavrata Mahārāja remained a liberated <span class="Italic">paramahaṁsa</span> even within family life is described in the next verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">164</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Devotees are certainly liberated persons. Therefore, O greatest of the brāhmaṇas, they cannot possibly be absorbed in family affairs.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            In <span class="Italic">Bhakti-rasāmṛta-sindhu</span> it is said that by executing devotional service to the Lord, one can understand the transcendental position of the living being and the Supreme Personality of Godhead. The Supreme Personality of Godhead cannot be understood by any means except <span class="Italic">bhakti.</span> The Lord confirms this in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.14.21). <span class="Italic">Bhaktyāham ekayā grāhyaḥ:</span> “only by executing devotional service can one appreciate Me.” Similarly, in <span class="Ref_Italic">Bhagavad-gītā</span> (18.55) Lord Kṛṣṇa says, <span class="Italic">bhaktyā mām abhijānāti:</span> “simply by discharging devotional service, one can understand Me.” Thus for a <span class="Italic">bhakta</span> to become attached to family affairs is impossible, since a <span class="Italic">bhakta</span> and his associates are liberated. Everyone is searching after <span class="Italic">ānanda,</span> or bliss, but in the material world there can never be any bliss. It is only possible in devotional service. Attachment for family affairs and devotional service are incompatible. Therefore Mahārāja Parīkṣit was somewhat surprised to hear that Mahārāja Priyavrata was simultaneously attached to devotional service and to family life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">149</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Elevated mahātmās who have taken shelter of the lotus feet of the Supreme Personality of Godhead are fully satiated by the shade of those lotus feet. Their consciousness cannot possibly become attached to family members.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Śrīla Narottama dāsa Ṭhākura has sung, <span class="Italic">nitāi pada-kamala, koṭī-candra suśītala, ye chāyāya jagat juḍāya.</span> He describes the shade of the lotus feet of Lord Nityānanda as being so nice and cooling that all materialists, who are always in the blazing fire of material activities, may come under the shade of His lotus feet and be fully relieved and satiated. The distinction between family life and spiritual life can be experienced by any person who has undergone the tribulations of living with a family. One who comes under the shelter of the lotus feet of the Lord never becomes attracted by the activities of family life. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.59), <span class="Italic">paraṁ dṛṣṭvā nivartate:</span> one gives up lower engagements when he experiences a higher taste. Thus one becomes detached from family life as soon as he comes under the shelter of the lotus feet of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">104</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The King continued: O great brāhmaṇa, this is my great doubt. How was it possible for a person like King Priyavrata, who was so attached to wife, children and home, to achieve the topmost infallible perfection in Kṛṣṇa consciousness?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            King Parīkṣit wondered how a person so attached to wife, children and home could become so perfectly Kṛṣṇa conscious. Prahlāda Mahārāja has said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">matir na kṛṣṇe parataḥ svato vā<br>mitho ’bhipadyeta gṛha-vratānām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A <span class="Italic">gṛhavrata,</span> one who has taken a vow to execute family duties, has no chance to become Kṛṣṇa conscious. This is because most <span class="Italic">gṛhavratas</span> are guided by sense gratification and therefore gradually glide down to the darkest regions of material existence (<span class="Italic">adānta-gobhir viśatāṁ tamisram</span>). How can they possibly become perfect in Kṛṣṇa consciousness? Mahārāja Parīkṣit asked Śukadeva Gosvāmī to resolve this great doubt.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">787</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: What you have said is correct. The glories of the Supreme Personality of Godhead, who is praised in eloquent, transcendental verses by such exalted personalities as Brahmā, are very pleasing to great devotees and liberated persons. One who is attached to the nectarean honey of the Lord’s lotus feet, and whose mind is always absorbed in His glories, may sometimes be checked by some impediment, but he still never gives up the exalted position he has acquired.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Śrī Śukadeva Gosvāmī accepted both of the King’s propositions—that a person who is advanced in Kṛṣṇa consciousness cannot embrace materialistic life again and that one who has embraced materialistic life cannot take up Kṛṣṇa consciousness at any stage of his existence. Although accepting both these statements, Śukadeva Gosvāmī qualified them by saying that a person who has once absorbed his mind in the glories of the Supreme Personality of Godhead may sometimes be influenced by impediments, but he still does not give up his exalted devotional position.
+          </p>
+          <p>
+            According to Śrīla Viśvanātha Cakravartī Ṭhākura, there are two kinds of impediments to devotional service. The first is an offense at the lotus feet of a Vaiṣṇava. This is called <span class="Italic">vaiṣṇava-aparādha.</span> Śrī Caitanya Mahāprabhu warned His devotees not to commit <span class="Italic">vaiṣṇava-aparādha,</span> which He described as the mad elephant offense. When a mad elephant enters a beautiful garden, it destroys everything, leaving a barren field. Similarly, the power of <span class="Italic">vaiṣṇava-aparādha</span> is so great that even an advanced devotee becomes almost devoid of his spiritual assets if he commits it. Since Kṛṣṇa consciousness is eternal, it cannot be destroyed altogether, but advancement may be checked for the time being. Thus <span class="Italic">vaiṣṇava-aparādha</span> is one kind of impediment to devotional service. Sometimes, however, the Supreme Personality of Godhead or His devotee desires to impede one’s devotional service. For example, Hiraṇyakaśipu and Hiraṇyākṣa were formerly Jaya and Vijaya, the gatekeepers in Vaikuṇṭha, but by the desire of the Lord, they became His enemies for three lives. Thus the desire of the Lord is another kind of impediment. But in both cases, the pure devotee, once advanced in Kṛṣṇa consciousness, cannot be lost. Following the orders of his superiors (Svāyambhuva and Lord Brahmā), Priyavrata accepted family life, but this did not mean he lost his position in devotional service. Kṛṣṇa consciousness is perfect and eternal, and therefore it cannot be lost under any circumstances. Because the material world is full of obstructions to advancement in Kṛṣṇa consciousness, there may appear to be many impediments, yet Kṛṣṇa, the Supreme Personality of Godhead, declares in <span class="Ref_Italic">Bhagavad-gītā</span> (9.31), <span class="Italic">kaunteya pratijānīhi na me bhaktaḥ praṇaśyati:</span> once one has taken shelter at the lotus feet of the Lord, he cannot be lost.
+          </p>
+          <p>
+            In this verse, the word <span class="Italic">śivatamām</span> is very significant. <span class="Italic">Śivatamām</span> means “the most auspicious.” The devotional path is so auspicious that a devotee cannot be lost under any circumstances. This is described in the <span class="Italic">Śrīmad Bhagavad-gītā</span> by the Lord Himself. <span class="Italic">pārtha naiveha nāmutra vināśas tasya vidyate:</span> “My dear Arjuna, for a devotee there is no question of being lost, either in this life or in the next.” (Bg. 6.40) In <span class="Ref_Italic">Bhagavad-gītā</span> (6.43) the Lord clearly explains how this is so.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tatra taṁ buddhi-saṁyogaṁ<br>labhate paurva-dehikam<br>yatate ca tato bhūyaḥ<br>saṁsiddhau kuru-nandana</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            By the order of the Lord, a perfect devotee sometimes comes to this material world like an ordinary human being. Because of his previous practice, such a perfect devotee naturally becomes attached to devotional service, apparently without cause. Despite all kinds of impediments due to surrounding circumstances, he automatically perseveres in devotional service and gradually advances until he once again becomes perfect. Bilvamaṅgala Ṭhākura had been an advanced devotee in his previous life, but in his next life he became greatly fallen and was attached to a prostitute. Suddenly, however, his entire behavior was changed by the words of the very prostitute who had so much attracted him, and he became a great devotee. In the lives of exalted devotees, there are many such instances, proving that once one has taken to the shelter of the lotus feet of the Lord, he cannot be lost (<span class="Italic">kaunteya pratijānīhi na me bhaktaḥ praṇaśyati</span>).
+          </p>
+          <p>
+            The fact is, however, that one becomes a devotee when he is completely freed from all reactions to sinful life. As Kṛṣṇa states in <span class="Ref_Italic">Bhagavad-gītā</span> (7.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yeṣāṁ tv anta-gataṁ pāpaṁ<br>janānāṁ puṇya-karmaṇām<br>te dvanda-moha-nirmuktā<br>bhajante māṁ dṛḍha-vratāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Persons who have acted piously in previous lives and in this life, whose sinful actions are completely eradicated and who are freed from the duality of illusion, engage themselves in My service with determination.” On the other hand, as Prahlāda Mahārāja said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">matir na kṛṣṇe parataḥ svato vā<br>mitho ’bhipadyeta gṛha-vratānām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A person who is too attached to materialistic family life—home, family, wife, children and so on—cannot develop Kṛṣṇa consciousness.
+          </p>
+          <p>
+            These apparent contradictions are resolved in the life of a devotee by the grace of the Supreme Lord, and therefore a devotee is never bereft of his position on the path of liberation, which is described in this verse as <span class="Italic">śivatamāṁ padavīm.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">709</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, Prince Priyavrata was a great devotee because he sought the lotus feet of Nārada, his spiritual master, and thus achieved the highest perfection in transcendental knowledge. With advanced knowledge, he always engaged in discussing spiritual subjects and did not divert his attention to anything else. The Prince’s father then asked him to take charge of ruling the world. He tried to convince Priyavrata that this was his duty as indicated in the revealed scriptures. Prince Priyavrata, however, was continuously practicing bhakti-yoga by constantly remembering the Supreme Personality of Godhead, thus engaging all his senses in the service of the Lord. Therefore, although the order of his father could not be rejected, the Prince did not welcome it. Thus he very conscientiously raised the question of whether he might be diverted from devotional service by accepting the responsibility of ruling over the world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Śrīla Narottama dāsa Ṭhākura has sung, <span class="Italic">chāḍiyā vaiṣṇava-sevā nistāra pāyeche kebā:</span> “Without serving the lotus feet of a pure Vaiṣṇava or spiritual master, no one has ever attained perfect liberation from material bondage.” prince Priyavrata regularly served the lotus feet of Nārada, and thus the Prince perfectly understood transcendental subjects in truth (<span class="Italic">sa-tattvaḥ</span>). The word <span class="Italic">sa-tattvaḥ</span> means that Priyavrata knew all the facts about the spirit soul, the Supreme Personality of Godhead, and the relationship between the spirit soul and the Supreme Personality of Godhead, and he also knew all about this material world and the relationship of the spirit soul and the Supreme Lord within the material world. Thus the Prince decided to engage himself only in rendering service to the Lord.
+          </p>
+          <p>
+            When Priyavrata’s father, Svāyambhuva Manu, requested him to accept the responsibility of ruling over the world, he did not welcome the suggestion. This is the symptom of a great, liberated devotee. Even though engaged in worldly affairs, he does not take pleasure in them, but remains always absorbed in the Lord’s service. While thus serving the Lord, he deals externally with worldly affairs without being affected. For example, although he has no attraction for his children, he cares for them and educates them to become devotees. Similarly, he speaks to his wife with affectionate words, but he is not attached to her. By rendering devotional service, a devotee acquires all the good qualities of the Supreme Lord. Lord Kṛṣṇa had sixteen thousand wives, all of them very beautiful, and although He dealt with each of them as a beloved husband, He was not attracted or attached to any of them. In the same way, although a devotee may enter family life and act very affectionately toward his wife and children, he is never attached to these activities.
+          </p>
+          <p>
+            This verse states that by serving the lotus feet of his spiritual master, prince Priyavrata very soon attained the perfectional stage of Kṛṣṇa consciousness. This is the only way to advance in spiritual life. As stated in the <span class="Italic">Vedas:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ<br> [<span class="Ref_Italic">ŚU</span> <popup><div class="Verse-in-purp"><0.125>yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ</0.125></div></popup>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Unto those great souls who have implicit faith in both the Lord and the spiritual master, all the imports of Vedic knowledge are automatically revealed.” (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.23)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ śrī-kṛṣṇa-nāmādi<br>na bhaved grāhyam indriyaiḥ<br>sevonmukhe hi jihvādau<br>svayam eva sphuraty adaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “No one can understand Kṛṣṇa as He is by the blunt material senses. But He reveals Himself to the devotees, being pleased with them for their transcendental loving service unto Him.” (<span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.2.234)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhaktyā mām abhijānāti<br>yāvān yaś cāsmi tattvataḥ<br>tato māṁ tattvato jñātvā<br>viśate tad-anantaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One can understand the Supreme Personality as He is only by devotional service. And when one is in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God.” (Bg. 18.55)
+          </p>
+          <p>
+            These are Vedic instructions. One must have full faith in the words of the spiritual master and similar faith in the Supreme Personality of Godhead. Then the real knowledge of <span class="Italic">ātmā</span> and Paramātmā and the distinction between matter and spirit will be automatically revealed. This <span class="Italic">ātma-tattva,</span> or spiritual knowledge, will be revealed within the core of a devotee’s heart because of his having taken shelter of the lotus feet of a <span class="Italic">mahājana</span> such as Prahlāda Mahārāja.<lt>6.23]</lt>
+          </p>
+          <p>
+            “If one has unflinching faith in the Supreme Lord and the spiritual master, the essence of all Vedic knowledge is revealed to him. (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.23) A devotee always thinks of the Lord continuously. While chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> the words Kṛṣṇa and Hare immediately remind him of all the Lord’s activities. Since his entire life is engaged in the service of the Lord, a devotee cannot forget the Lord at any time. Just as an ordinary man always engages his mind in material activities, a devotee always engages his mind in spiritual activities. This is called <span class="Italic">brahma-satra,</span> or meditating upon the Supreme Lord always. Prince Priyavrata was perfectly initiated into this practice by Śrī Nārada.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">527</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: The first created being and most powerful demigod in this universe is Lord Brahmā, who is always responsible for developing universal affairs. Born directly from the Supreme Personality of Godhead, he dedicates his activities to the welfare of the entire universe, for he knows the purpose of the universal creation. This supremely powerful Lord Brahmā, accompanied by his associates and the personified Vedas, left his own abode in the highest planetary system and descended to the place of Prince Priyavrata’s meditation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Lord Viṣṇu, the Supreme Self (<span class="Italic">ātmā</span>), is the source of everything, as explained in the <span class="Italic">Vedānta-sūtra:</span> <span class="Italic">janmādy asya yataḥ [SB 1.1.1].</span> Because Brahmā was born directly from Lord Viṣṇu, he is called <span class="Italic">ātma-yoni.</span> He is also called <span class="Italic">bhagavān,</span> although generally <span class="Italic">bhagavān</span> refers to the Supreme Personality of Godhead (Viṣṇu or Lord Kṛṣṇa). Sometimes great personalities—such as demigods like Lord Brahmā, Nārada or Lord Śiva—are also addressed as <span class="Italic">bhagavān</span> because they carry out the purpose of the Supreme Personality of Godhead. Lord Brahmā is called <span class="Italic">bhagavān</span> because he is the secondary creator of this universe. He is always thinking of how to improve the situation of the conditioned souls who have come to the material world to enjoy material activities. For this reason, he disseminates the Vedic knowledge throughout the universe for everyone’s guidance.
+          </p>
+          <p>
+            Vedic knowledge is divided into two parts: <span class="Italic">pravṛtti-mārga</span> and <span class="Italic">nivṛtti-mārga.</span> <span class="Italic">Nivṛtti-mārga</span> is the path of negating sense enjoyment, and <span class="Italic">pravṛtti-mārga</span> is the path by which the living entities are given a chance to enjoy and at the same time are directed in such a way that they can go back home, back to Godhead. Because ruling over this universe is a great responsibility, Brahmā must force many Manus in different ages to take charge of universal affairs. Under each Manu there are different kings who also execute the purpose of Lord Brahmā. It is understood from previous explanations that the father of Dhruva Mahārāja, King Uttānapāda, ruled over the universe because his elder brother, Priyavrata, practiced austerity from the very beginning of his life. Thus up to the point of the Pracetās, the kings of the universe were all descendants of Uttānapāda Mahārāja. Since there were no suitable kings after the Pracetās, Svāyambhuva Manu went to the Gandhamādana Hill to bring back his eldest son, Priyavrata, who was meditating there. Svāyambhuva Manu requested Priyavrata to rule over the universe. When he refused, Lord Brahmā descended from the supreme planetary system, known as Satyaloka, to request Priyavrata to accept the order. Lord Brahmā did not come alone. He came with other great sages like Marīci, Ātreya and Vasiṣṭha. To convince Priyavrata that it was necessary for him to follow the Vedic injunctions and accept the responsibility of ruling over the world, Lord Brahmā also brought with him the personified <span class="Italic">Vedas,</span> his constant associates.
+          </p>
+          <p>
+            A significant word in this verse is <span class="Italic">sva-bhavanāt,</span> indicating that Lord Brahmā descended from his own abode. Every demigod has his own abode. Indra, the King of the demigods, has his own abode, as do Candra, the lord of the moon planet, and Sūrya, the predominating deity of the sun planet. There are many millions of demigods, and the stars and planets are their respective homes. This is confirmed in <span class="Italic">Bhagavad-gītā.</span> <span class="Italic">Yānti deva-vratā devān: [Bg. 9.25]</span> “Those who worship the demigods go to their different planetary systems.” Lord Brahmā’s abode. the highest planetary system, is called Satyaloka or sometimes Brahmaloka. Brahmaloka usually refers to the spiritual world. The abode of Lord Brahmā is Satyaloka, but because Lord Brahmā resides there, it is also sometimes called Brahmaloka.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">164</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As Lord Brahmā descended on his carrier, the great swan, all the residents of the planets named Siddhaloka, Gandharvaloka, Sādhyaloka and Cāraṇaloka, as well as great sages and demigods flying in their different airplanes, assembled within the canopy of the sky to receive Lord Brahmā and worship him. As he received respect and adoration from the residents of the various planets, Lord Brahmā appeared just like the full moon surrounded by illuminating stars. Lord Brahmā’s great swan then arrived at the border of Gandhamādana Hill and approached Prince Priyavrata, who was sitting there.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            It appears from this description that there is regular interplanetary travel between the planets of the demigods. Another significant point is that there is a planet covered mostly by great mountains, one of which is Gandhamādana Hill. Three great personalities—Priyavrata, Nārada and Svāyambhuva Manu—were sitting on this hill. According to <span class="Italic">Brahmā-saṁhitā,</span> each universe is filled with different planetary systems, and every system has a unique opulence. For example, on Siddhaloka, all the residents are very advanced in the powers of mystic <span class="Italic">yoga.</span> They can fly from one planet to another without airplanes or other flying machines. Similarly, the residents of Gandharvaloka are expert in musical science, and those on Sādhyaloka are all great saints. The interplanetary system undoubtedly exists, and residents of different planets may go from one to another. On this earth, however, we have not invented any machine that can go directly from one planet to another, although an unsuccessful attempt has been made to go directly to the moon.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">66</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā, the father of Nārada Muni, is the supreme person within this universe. As soon as Nārada saw the great swan, he could understand that Lord Brahmā had arrived. Therefore he immediately stood up, along with Svāyambhuva Manu and his son Priyavrata, whom Nārada was instructing. Then they folded their hands and began to worship Lord Brahmā with great respect.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            As stated in the previous verse, Lord Brahmā was accompanied by other demigods, but his specific carrier was the great swan. Therefore as soon as Nārada Muni saw the swan, he could understand that his father, Lord Brahmā, who is also known as Hiraṇyagarbha, was arriving. Thus he immediately stood up with Svāyambhuva Manu and his son Priyavrata to receive Lord Brahmā and offer him respect.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">329</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, because Lord Brahmā had finally descended from Satyaloka to Bhūloka, Nārada Muni, Prince Priyavrata and Svāyambhuva Manu came forward to offer him objects of worship and to praise him in highly qualified language, according to Vedic etiquette. At that time, Lord Brahmā, the original person of this universe, felt compassion for Priyavrata and, looking upon him with a smiling face, spoke to him as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            That Lord Brahmā descended from Satyaloka to see Priyavrata indicates that the matter was very serious. Nārada Muni had come to advise Priyavrata about the value of spiritual life, knowledge, renunciation and <span class="Italic">bhakti,</span> and Lord Brahmā knew that Nārada’s instructions were very impressive. Therefore unless Lord Brahmā personally went to Gandhamādana Hill to request Priyavrata, Lord Brahmā knew that prince Priyavrata would not accept his father’s order. Brahmā’s purpose was to break Priyavrata’s determination. Therefore Brahmā first looked upon Priyavrata with compassion. His smile and compassionate features also indicated that although Brahmā would request Priyavrata to accept household life, Priyavrata would not be out of touch with devotional service. By the blessings of a Vaiṣṇava, everything is possible. This is described in <span class="Italic">Bhakti-rasāmṛta-sindhu</span> as <span class="Italic">kṛpā-siddhi,</span> or perfection attained simply by the blessings of a superior person. One usually becomes liberated and perfect by executing the regulative principles set down in the <span class="Italic">śāstras.</span> Nonetheless, many persons have achieved perfection simply by the blessings of a spiritual master or superior.
+          </p>
+          <p>
+            Priyavrata was the grandson of Lord Brahmā, and as joking competition sometimes takes place between grandson and grandfather, in this case also Priyavrata was determined to remain in meditation, whereas Brahmā was determined that he rule the universe. Thus Lord Brahmā’s affectionate smile and glance meant, “My dear Priyavrata, you have decided not to accept household life, but I have decided to convince you that you must accept it.” Actually, Brahmā had come to praise Priyavrata for his high standard of renunciation, austerity, penance and devotion so that he would not be deviated from devotional service, even though he would accept household life.
+          </p>
+          <p>
+            In this verse, one important word is <span class="Italic">sūkta-vākena</span> (by Vedic hymns). In the <span class="Italic">Vedas,</span> there is the following prayer to Lord Brahmā: <span class="Italic">hiraṇyagarbhaḥ samavartatāgre bhūtasya jātaḥ patir eka āsīt.</span> Brahmā was received with the appropriate Vedic hymns, and because he was welcomed according to the Vedic etiquette, he was very pleased.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">500</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā, the supreme person within this universe, said: My dear Priyavrata, kindly hear attentively what I shall say to you. Do not be jealous of the Supreme Lord, who is beyond our experimental measurements. All of us, including Lord Śiva, your father and the great sage Mahārṣi Nārada, must carry out the order of the Supreme. We cannot deviate from His order.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Of the twelve great authorities in devotional service, four—Lord Brahmā himself, his son Nārada, Svāyambhuva Manu and Lord Śiva—were present before Priyavrata. They were accompanied by many other authoritative sages. Brahmā first wanted to impress upon Priyavrata that although these great personalities are all authorities, they cannot possibly disobey the orders of the Supreme Personality of Godhead, who is described in this verse as <span class="Italic">deva,</span> which means “always glorious.” The power, glory and potencies of the Supreme Personality of Godhead can never be diminished. In the <span class="Italic">Īśopaniṣad,</span> the Lord is described as <span class="Italic">apāpa-viddha,</span> which indicates that He is never affected by anything materially considered sinful. Similarly, <span class="Italic">Śrīmad-Bhāgavatam</span> describes the Supreme Personality of Godhead as being so powerful that nothing we might consider abominable can affect Him. An example sometimes given to explain the position of the Supreme Lord is that of the sun, which evaporates urine from the earth but is never affected by contamination. The Supreme Lord can never be accused of doing anything wrong.
+          </p>
+          <p>
+            When Lord Brahmā went to induce Priyavrata to accept the responsibility for ruling the universe, he did not go whimsically; he was following the dictations of the Supreme Lord. Indeed, Brahmā and other genuine authorities never do anything without His permission. The Supreme Lord is situated in everyone’s heart. In the beginning of <span class="Italic">Śrīmad-Bhāgavatam</span> it is said, <span class="Italic">tene brahma hṛdā ya ādi-kavaye:</span> the Lord dictated Vedic knowledge to Brahmā through his heart. The more a living entity is purified by devotional service, the more he comes in direct contact with the Supreme Personality of Godhead, as confirmed in <span class="Italic">Śrīmad Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">teṣāṁ satata-yuktānāṁ<br>bhajatāṁ prīti-pūrvakam<br>dadāmi buddhi-yogaṁ taṁ<br>yena mām upayānti te</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “To those who are constantly devoted and worship Me with love, I give the understanding by which they can come to Me.” (Bg. 10.10) Lord Brahmā, therefore, had not come to Priyavrata by his own whims: rather, it is understood that he had been ordered to persuade Priyavrata by the Supreme Personality of Godhead, whose activities cannot be understood by material senses and who is therefore described herein as <span class="Italic">aprameya.</span> Thus Lord Brahmā first advised Priyavrata to hear his words with attention and without envy.
+          </p>
+          <p>
+            Why one is induced to perform certain acts despite his desire to do something else is indicated herein. One cannot disobey the orders of the Supreme Lord, even if one is as powerful as Lord Śiva. Lord Brahmā. Manu or the great sage Nārada. All these authorities are certainly very powerful, but they do not have the power to disobey the orders of the Supreme Personality of Godhead. Since Lord Brahmā had come to Priyavrata in accordance with the orders of the Supreme Lord, he first wanted to dispel any suspicions that he might be acting as Priyavrata’s enemy. Lord Brahmā was following the orders of the Supreme Lord, and therefore it would be worthwhile for Priyavrata to accept Lord Brahmā’s order, as the Lord desired.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">511</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One cannot avoid the order of the Supreme Personality of Godhead, not by the strength of severe austerities, an exalted Vedic education, or the power of mystic yoga, physical prowess or intellectual activities. Nor can one use his power of religion, his material opulence or any other means, either by himself or with the help of others, to defy the orders of the Supreme Lord. That is not possible for any living being, from Brahmā down to the ant.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            In the <span class="Italic">Garga Upaniṣad,</span> Gargamuni says to his wife, <span class="Italic">etasya vā akṣarasya praśāsane gargi sūryā-candramasau vidhṛtau tiṣṭhataḥ:</span> <span class="Italic">“</span>My dear Gargī, everything is under the control of the Supreme Personality of Godhead. Even the sun, the moon and other controllers and demigods like Lord Brahmā and King Indra are all under His control.” An ordinary human being or animal who has accepted a material body cannot go beyond the jurisdiction of the Supreme Personality of Godhead’s control. A material body includes senses. However, the sense activities of so-called scientists who try to be free from God’s law or the laws of nature are useless. This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (7.14). <span class="Italic">Mama māyā duratyayā:</span> it is impossible to surpass the control of material nature, for the Supreme Personality of Godhead is working behind it. Sometimes we are proud of our austerities, penances and mystic yogic powers, but it is clearly stated herein that one cannot surpass the laws and directions of the Supreme Personality of Godhead, either by dint of mystic power, a scientific education, or austerities and penances. It is impossible.
+          </p>
+          <p>
+            The word <span class="Italic">manīṣayā</span> (“by intelligence”) is of special significance. Priyavrata might argue that Lord Brahmā was requesting him to accept family life and the responsibility for ruling a kingdom, although Nārada Muni had advised him not to enter household life and be entangled in material affairs. Whom to accept would be a puzzle for Priyavrata because both Lord Brahmā and Nārada Muni are authorities. Under the circumstances, the use of the word <span class="Italic">manīṣayā</span> is very appropriate, for it indicates that since both Nārada Muni and Lord Brahmā are authorized to give instruction, Priyavrata should neglect neither of them but should use his intelligence to follow the advice of both. To solve such dilemmas, Śrīla Rūpa Gosvāmī has given a very clear conception of intelligence. He says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anāsaktasya viṣayān<br>yathārham upayuñjataḥ<br>nirbandhaḥ kṛṣṇa-sambandhe<br>yuktaṁ vairāgyam ucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <span class="Italic">Viṣayān,</span> material affairs, should be accepted without attachment. and everything should be dovetailed with the service of the Lord. That is real intelligence (<span class="Italic">manīṣā</span>). Becoming a family man or king in the material world is not harmful if one accepts everything for Kṛṣṇa’s service. That necessitates clear intelligence. Māyāvādī philosophers say, <span class="Italic">brahma satyaṁ jagan mithyā:</span> this material world is false, and only the Absolute Truth is real. However, an intelligent devotee in the line of Lord Brahmā and the great sage Nārada—or, in other words, in the Brahma-sampradāya—does not consider this world false. That which is created by the Supreme Personality of Godhead cannot be false, but using it for enjoyment is. Everything is meant to be enjoyed by the Supreme Personality of Godhead, as confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (5.29). <span class="Italic">Bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram:</span> the Supreme Personality of Godhead is the supreme proprietor and enjoyer, and therefore everything should be dovetailed for His enjoyment and service. Regardless of one’s circumstances, favorable or unfavorable, one should use everything to serve the Supreme Lord. That is the perfect way to use one’s intelligence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">301</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Priyavrata, by the order of the Supreme Personality of Godhead, all living entities accept different types of bodies for birth and death, activity, lamentation, illusion, fear of future dangers, and happiness and distress.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Every living entity who has come to this material world has come here for material enjoyment, but according to his own <span class="Italic">karma,</span> activities, he must accept a certain type of body given to him by material nature under the order of the Supreme Personality of Godhead. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.27), <span class="Italic">prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ:</span> everything is being done by <span class="Italic">prakṛti,</span> material nature, under the direction of the Supreme Lord. Modern scientists do not know why there are varieties of bodies in 8,400,000 forms. The fact is that all these bodies are ordained for the living entities by the Supreme Personality of Godhead according to the living entities’ desires. He gives the living entities freedom to act as they like, but on the other hand they must accept a body according to the reactions of their activities. Thus there are different types of bodies. Some living entities have short durations of life, whereas others live for fantastic durations. Every one of them, however, from Brahmā down to the ant, acts according to the direction of the Supreme Personality of Godhead, who is sitting in everyone’s heart. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarvasya cāhaṁ hṛdi sanniviṣṭo<br>mattaḥ smṛtir jñānam apohanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I am seated in everyone’s heart, and from Me come remembrance. knowledge and forgetfulness.” It is not a fact, however, that the Supreme Personality of Godhead gives direction to certain living entities in one way and other living entities in another way. The truth is that every living entity has a certain desire, and the Supreme Lord gives him a chance to fulfill it. The best course, therefore, is to surrender unto the Supreme Personality of Godhead and act according to His desire. One who does so is liberated.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">824</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear boy, all of us are bound by the Vedic injunctions to the divisions of varṇāśrama according to our qualities and work. These divisions are difficult to avoid because they are scientifically arranged. We must therefore carry out our duties of varṇāśrama-dharma, like bulls obliged to move according to the direction of a driver pulling on ropes knotted to their noses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            In this verse, the words <span class="Italic">tantyāṁ guṇa-karma-dāmabhiḥ</span> are very important. We each get a body according to our association with the <span class="Italic">guṇas,</span> the qualities or modes of material nature, and we act accordingly. As stated in <span class="Italic">Bhagavad-gītā,</span> the four orders of the social system—namely <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span>—are arranged according to <span class="Italic">guṇa</span> and <span class="Italic">karma,</span> their qualities and work. There is some controversy about this, however, because some say that since one receives a body according to the <span class="Italic">guṇa</span> and <span class="Italic">karma</span> of his past life, it is one’s birth that determines his social status. Others say, however, that one’s birth according to the <span class="Italic">guṇa</span> and <span class="Italic">karma</span> of his past life is not the essential consideration, since one can change his <span class="Italic">guṇa</span> and <span class="Italic">karma</span> even in this life. Thus they say that the four divisions of the social order—<span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span>—should be arranged according to the <span class="Italic">guṇa</span> and <span class="Italic">karma</span> of this life. This version is confirmed in <span class="Italic">Śrīmad-Bhāgavatam</span> by Nārada Muni. While instructing Mahārāja Yudhiṣṭhira about the symptoms of <span class="Italic">guṇa</span> and <span class="Italic">karma,</span> Nārada Muni said that these symptoms must govern the division of society. In other words, if a person born in the family of a <span class="Italic">brāhmaṇa</span> has the symptoms of a <span class="Italic">śūdra,</span> he should be designated as a <span class="Italic">śūdra.</span> Similarly, if a <span class="Italic">śūdra</span> has brahminical qualities, he should be designated a <span class="Italic">brāhmaṇa.</span>
+          </p>
+          <p>
+            The <span class="Italic">varṇāśrama</span> system is scientific. Therefore if we accept the divisions of <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> according to the Vedic instructions, our lives will be successful. Unless human society is thus divided and arranged, it cannot be perfect. As stated in the <span class="Ref_Italic">Viṣṇu Purāṇa</span> (3.8.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varṇāśramācāravatā<br>puruṣeṇa paraḥ pumān<br>viṣṇur ārādhyate panthā<br>nānyat tat-toṣa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Personality of Godhead, Lord Viṣṇu, is worshiped by the proper execution of prescribed duties in the system of <span class="Italic">varṇa</span> and <span class="Italic">āśrama.</span> There is no other way to satisfy the Supreme Personality of Godhead. One must be situated in the institution of the four <span class="Italic">varṇas</span> and <span class="Italic">āśramas.</span>” All of human society is meant to worship Lord Viṣṇu. At the present moment, however, human society does not know that this is the ultimate goal or perfection of life. Therefore instead of worshiping Lord Viṣṇu. people have been educated to worship matter. According to the direction of modern society, men think they can advance in civilization by manipulating matter to build skyscrapers, big roads, automobiles and so on. Such a civilization must certainly be called materialistic because its people do not know the goal of life. The goal of life is to reach Viṣṇu. but instead of reaching Viṣṇu, people are bewildered by the external manifestation of the material energy. Therefore progress in material advancement is blind, and the leaders of such material advancement are also blind. They are leading their followers in the wrong way.
+          </p>
+          <p>
+            It is best, therefore, to accept the injunctions of the <span class="Italic">Vedas,</span> which are mentioned in this verse as <span class="Italic">yad-vāci.</span> In accordance with those injunctions, everyone should find out whether he is a <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> or <span class="Italic">śūdra</span> and should thus be educated accordingly. Then his life will be successful. Otherwise, all of human society will be confused. If human society is divided scientifically according to <span class="Italic">varṇa</span> and <span class="Italic">āśrama,</span> and if the Vedic directions are followed, one’s life, regardless of his position, will be successful. It is not that <span class="Italic">brāhmaṇas</span> will be elevated to the transcendental platform but not the <span class="Italic">śūdras.</span> If the Vedic injunctions are followed, all of them—<span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas</span> and <span class="Italic">śūdras</span>—will be elevated to the transcendental platform, and their lives will be successful. The injunctions in the <span class="Italic">Vedas</span> are explicit directions from the Supreme Personality of Godhead. The example cited in this verse is that bulls tied by ropes in their nostrils move according to the direction of the driver. Similarly, if we move according to the instructions of the <span class="Italic">Vedas,</span> the perfect paths for our lives will be set. Otherwise, if we do not move in that way but act according to our whimsical ideas, our lives will be spoiled by confusion and will end in despair. Actually, because people at the present moment are not following the instructions of the <span class="Italic">Vedas,</span> they are all confused. We must therefore accept this instruction by Lord Brahmā to Priyavrata as the factual scientific direction leading to the success of life. This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (16.23):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaḥ śāstra-vidhim utsṛjya<br>vartate kāma-kārataḥ<br>na sa siddhim avāpnoti<br>na sukhaṁ na parāṁ gatim</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            If we do not live according to the injunctions of the <span class="Italic">śāstras,</span> the <span class="Italic">Vedas,</span> we shall never achieve success in life, to say nothing of happiness or elevation to higher statuses of living.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">711</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Priyavrata, according to our association with different modes of material nature, the Supreme Personality of Godhead gives us our specific bodies and the happiness and distress we achieve. One must therefore remain situated as he is and be conducted by the Supreme Personality of Godhead, exactly as a blind man is led by a person who has eyes with which to see.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            By material means, one cannot avoid the happiness and distress unique to his particular body. There are 8,400,000 bodily forms, each destined to enjoy and suffer a certain amount of happiness and distress. This we cannot change, for the happiness and distress are ordained by the Supreme Personality of Godhead, in accordance with whose decision we have received our bodies. Since we cannot avoid the plan of the Supreme Godhead, we must agree to be directed by Him, just as a blind man is led by a person who has eyes. Under any circumstances, if we remain in the condition allotted to us by the Supreme Lord and follow His instructions, we will become perfect. The main purpose of life is to follow the instructions of the Supreme Personality of Godhead. It is such instructions that constitute one’s religion or occupational duty.
+          </p>
+          <p>
+            In <span class="Italic">Bhagavad-gītā,</span> therefore, Lord Kṛṣṇa says, <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> “Give up all other engagements. Simply surrender unto Me and follow Me.” (Bg. 18.66) This process of surrendering by following the instructions of the Supreme Personality of Godhead is not meant for any particular caste or creed. A <span class="Italic">brāhmaṇa</span> can surrender, and so can a <span class="Italic">kṣatriya, vaiśya</span> or <span class="Italic">śūdra.</span> Everyone can adopt this process. As stated in this verse, <span class="Italic">cakṣuṣmatāndhā iva nīyamānāḥ:</span> one should follow the Lord the way a blind man follows a person who has eyes. If we follow the Supreme Personality of Godhead by following the directions He gives in the <span class="Italic">Vedas</span> and <span class="Italic">Bhagavad-gītā,</span> our lives will be successful. The Lord therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">man-manā bhava mad-bhakto<br>mad-yājī māṁ namaskuru<br>mām evaiṣyasi satyaṁ te<br>pratijāne priyo ’si me</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Always think of Me, become My devotee, and offer respect and obeisances unto Me. Then you will certainly come back home, back to Godhead. I promise you this because you are My very dear friend.” (Bg. 18.65) This instruction is meant for everyone—<span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> or <span class="Italic">śūdra.</span> If anyone, from any division of life, surrenders to the Supreme Personality of Godhead and follows His instructions, his life will be successful.
+          </p>
+          <p>
+            The previous verse has given the analogy of bulls moving under the direction of the driver of a bullock cart. The bulls, being completely surrendered to the driver, remain wherever he wants to place them and eat whatever he wants them to eat. Similarly, being completely surrendered to the Supreme Personality of Godhead, we should not aspire for happiness, or regret distress; we must be satisfied with the position allotted to us by the Lord. We should follow the path of devotional service and not be dissatisfied with the happiness and distress He has given. People in the material modes of passion and ignorance generally cannot understand the plan of the Supreme Personality of Godhead with its 8,400,000 forms of life, but the human form affords one the special privilege to understand this plan, engage in devotional service and elevate oneself to the highest position of perfection by following the Lord’s instructions. The entire world is working under the influence of the modes of material nature, especially ignorance and passion, but if people engage in hearing and chanting about the glories of the Supreme Lord, their lives can be successful, and they can be elevated to the highest perfection. In the <span class="Italic">Bṛhan-nāradīya Purāṇa,</span> therefore, it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of Kali, there is no other way, no other way, no other way for spiritual perfection than the holy name, the holy name, the holy name of the Lord.” Everyone should be given the chance to hear the holy names of the Supreme Personality of Godhead, for thus one will gradually come to understand his real position in life and be elevated to the transcendental position above the mode of goodness. Thus all impediments to his progress will be cut to pieces. In conclusion, therefore, we must be satisfied in whatever position we have been put into by the Supreme Personality of Godhead, and we should try to engage ourselves in His devotional service. Then our lives will be successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">385</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Even if one is liberated, he nevertheless accepts the body he has received according to his past karma. Without misconceptions, however, he regards his enjoyment and suffering due to that karma the way an awakened person regards a dream he had while sleeping. He thus remains steadfast and never works to achieve another material body under the influence of the three modes of material nature.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            The difference between a liberated and conditioned soul is that the conditioned soul is under the concept of bodily life, whereas a liberated person knows that he is not the body but a spirit, different from the body. Priyavrata might have thought that although a conditioned soul is forced to act according to the laws of nature, why should he, who was far advanced in spiritual understanding, accept the same kind of bondage and impediments to spiritual advancement? To answer this doubt, Lord Brahmā informed him that even those who are liberated do not resent accepting, in the present body, the results of their past activities. While sleeping, one dreams many unreal things, but when he awakens he disregards them and makes progress in factual life. Similarly, a liberated person—one who has completely understood that he is not the body but a spirit soul—disregards past activities performed in ignorance and performs his present activities in such a way that they produce no reactions. This is described in <span class="Ref_Italic">Bhagavad-gītā</span> (3.9). <span class="Italic">Yajñārthāt karmaṇo ’nyatra loko ’yaṁ karma-bandhanaḥ:</span> if one performs activities for the satisfaction of the Supreme Personality, the <span class="Italic">yajña-puruṣa,</span> his work does not produce reactions, whereas <span class="Italic">karmīs,</span> who act for themselves, are bound by the reactions of their work. A liberated person, therefore, does not think about whatever he has ignorantly done in the past; instead, he acts in such a way that he will not produce another body by fruitive activities. As clearly mentioned in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mām ca yo ’vyabhicāreṇa<br>bhakti-yogena sevate<br>sa guṇān samatītyaitān<br>brahma-bhūyāya kalpate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who engages in full devotional service, who does not fall down in any circumstance, at once transcends the modes of material nature and thus comes to the level of Brahman.” (Bg. 14.26) Regardless of what we have done in our past lives, if we engage ourselves in unalloyed devotional service to the Lord in this life, we will always be situated in the <span class="Italic">brahma-bhūta</span> (liberated) state, free from reactions, and will not be obliged to accept another material body. <span class="Italic">Tyaktvā dehaṁ punar janma naiti mām eti so ’rjuna</span> (Bg. 4.9). After giving up the body, one who has acted in that way does not accept another material body, but instead goes back home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">416</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Even if he goes from forest to forest, one who is not self-controlled must always fear material bondage because he is living with six co-wives—the mind and knowledge-acquiring senses. Even householder life, however, cannot harm a self-satisfied, learned man who has conquered his senses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Śrīla Narottama dāsa Ṭhākura has sung, <span class="Italic">gṛhe vā vanete thāke, ‘hā gaurāṅga’ bale ḍāke:</span> whether one is situated in the forest or at home, if he is engaged in the devotional service of Lord Caitanya, he is a liberated person. Here this is also repeated. For one who has not controlled his senses, going to the forest to become a so-called <span class="Italic">yogī</span> is meaningless. Because his uncontrolled mind and senses are going with him, he cannot achieve anything, even by giving up household life and staying in the forest. Formerly many mercantile men from the up-country of India used to go to Bengal, and thus there is a familiar saying, “If you go to Bengal, your fortune will go with you.” Our first concern, therefore, should be to control the senses, and since the senses cannot be controlled unless engaged in the devotional service of the Lord, our most important duty is to engage the senses in devotional service. <span class="Italic">Hṛṣīkeṇa hṛṣīkeśa-sevanaṁ bhaktir ucyate:</span> [Cc. Madhya 19.170] <span class="Italic">bhakti</span> means engagement of the purified senses in the service of the Lord.
+          </p>
+          <p>
+            Herein Lord Brahmā indicates that instead of going to the forest with uncontrolled senses, it is better and more secure to engage the senses in the service of the Lord. Even household life can do no harm to a self-controlled person acting in this way; it cannot force him into material bondage. Śrīla Rūpa Gosvāmī has further enunciated this position:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īhā yasya harer dāsye<br>karmaṇā manasā girā<br>nikhilāsv apy avasthāsu<br>jīvan-muktaḥ sa ucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Regardless of one’s circumstances, if one fully engages his activities, mind and words in the devotional service of the Lord, he should be understood to be a liberated person.” Śrīla Bhaktivinoda Ṭhākura was a responsible officer and a householder, yet his service to the cause of expanding the mission of Lord Caitanya Mahāprabhu is unique. Śrīla Prabodhānanda Sarasvatī Ṭhākura says, <span class="Italic">durdāntendriya-kāla-sarpa-paṭalī protkhāta-daṁṣṭrāyate.</span> The sense organs are certainly our greatest enemies, and they are therefore compared to venomous serpents. However, if a venomous serpent is bereft of its poison fangs, it is no longer fearful. Similarly, if the senses are engaged in the service of the Lord, there is no need to fear their activities. The devotees in the Kṛṣṇa consciousness movement move within this material world, but because their senses are fully engaged in the service of the Lord, they are always aloof from the material world. They are always living in a transcendental position.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">177</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who is situated in household life and who systematically conquers his mind and five sense organs is like a king in his fortress who conquers his powerful enemies. After one has been trained in household life and his lusty desires have decreased, he can move anywhere without danger.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            The Vedic system of four <span class="Italic">varṇas</span> and four <span class="Italic">āśramas</span> is very scientific, and its entire purpose is to enable one to control the senses. Before entering household life (<span class="Italic">gṛhastha-āśrama</span>), a student is fully trained to become <span class="Italic">jitendriya,</span> a conqueror of the senses. Such a mature student is allowed to become a householder, and because he was first trained in conquering his senses, he retires from household life and becomes <span class="Italic">vānaprastha</span> as soon as the strong waves of youthful life are past and he reaches the verge of old age at fifty years or slightly more. Then, after being further trained, he accepts <span class="Italic">sannyāsa.</span> He is then a fully learned and renounced person who can move anywhere and everywhere without fear of being captivated by material desires. The senses are considered very powerful enemies. As a king in a strong fortress can conquer powerful enemies, so a householder in <span class="Italic">gṛhastha-āśrama,</span> household life, can conquer the lusty desires of youth and be very secure when he takes <span class="Italic">vānaprastha</span> and <span class="Italic">sannyāsa.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">592</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā continued: My dear Priyavrata, seek shelter inside the opening in the lotus of the feet of the Lord, whose navel is also like a lotus. Thus conquer the six sense organs [the mind and knowledge-acquiring senses]. Accept material enjoyment because the Lord, extraordinarily, has ordered you to do this. You will thus always be liberated from material association and be able to carry out the Lord’s orders in your constitutional position.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            There are three kinds of men within this material world. Those who are trying to enjoy the senses to the utmost are called <span class="Italic">karmīs,</span> above them are the <span class="Italic">jñānīs,</span> who try to conquer the urges of the senses, and above them are the <span class="Italic">yogīs,</span> who have already conquered the senses. None of them, however, are situated in a transcendental position. Only devotees. who belong to none of the above-mentioned groups, are transcendental. As explained in <span class="Ref_Italic">Bhagavad-gītā</span> (14.26):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māṁ ca yo ’vyabhicāreṇa<br>bhakti-yogena sevate<br>sa guṇān samatītyaitān<br>brahma-bhūyāya kalpate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who engages in full devotional service, who does not fall down in any circumstance, at once transcends the modes of material nature and thus comes to the level of Brahman.” Lord Brahmā herein advises Priyavrata to remain transcendental in the fortress not of family life but of the lotus feet of the Lord (<span class="Italic">abja-nābhāṅghri-saroja</span>). When a bumblebee enters the opening of a lotus flower and drinks its honey, it is fully protected by the petals of the lotus. The bee is undisturbed by sunshine and other external influences. Similarly, one who always seeks shelter at the lotus feet of the personality of Godhead is protected from all dangers. It is therefore said in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.14.58):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">samāśritā ye pada-pallava-plavaṁ<br>mahat-padaṁ puṇya-yaśo murāreḥ<br>bhavāmbudhir vatsa-padaṁ paraṁ padaṁ<br>padaṁ padaṁ yad vipadāṁ na teṣām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            For one who has taken shelter of the lotus feet of the Lord, everything becomes easier. Indeed, even crossing the great ocean of nescience (<span class="Italic">bhavāmbudhi</span>) is exactly like crossing the hoofprint created by a calf (<span class="Italic">vatsa-padam</span>). For such a devotee, there is no question of remaining in a place where every step is dangerous.
+          </p>
+          <p>
+            Our actual duty is to carry out the supreme order of the Personality of Godhead. If we are fixed in our determination to carry out the supreme order of the Lord, we are always secure, regardless of where we are situated, whether in hell or in heaven. Herein the words <span class="Italic">prakṛtiṁ bhajasva</span> are very <span class="Italic">significant.</span> <span class="Italic">Prakṛtim</span> refers to one’s constitutional position. Every living entity has the constitutional position of being an eternal servant of God. Therefore Lord Brahmā advised Priyavrata, “Be situated in your original position as an eternal servant of the Lord. If you carry out His orders, you will never fall, even in the midst of material enjoyment.” Material enjoyment achieved by dint of one’s fruitive activities differs from material enjoyment given by the Supreme Personality of Godhead. A devotee sometimes appears to be in a very opulent position, but he accepts that position to follow the orders of the Supreme Personality of Godhead. Therefore a devotee is never affected by material influences. The devotees in the Kṛṣṇa consciousness movement are preaching all over the world in accordance with the order of Śrī Caitanya Mahāprabhu. They have to meet many <span class="Italic">karmīs,</span> but by the mercy of Śrī Caitanya Mahāprabhu, they are unaffected by material influences. He has blessed them, as described in the <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 7.129):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kabhu nā bādhibe tomāra viṣaya-taraṅga<br>punarapi ei ṭhāñi pābe mora saṅge</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A sincere devotee who engages in the service of Lord Śrī Caitanya Mahāprabhu by preaching His cult all over the world will never be affected by <span class="Italic">viṣaya-taraṅga,</span> material influences. On the contrary, in due course of time he will return to the shelter of the lotus feet of Lord Śrī Caitanya Mahāprabhu and will thus have perpetual association with Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: After thus being fully instructed by Lord Brahmā, who is the spiritual master of the three worlds, Priyavrata, his own position being inferior, offered obeisances, accepted the order and carried it out with great respect.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Śrī Priyavrata was the grandson of Lord Brahmā. Therefore according to social etiquette, his position was inferior. It is the duty of the inferior to carry out the order of the superior with great respect. Priyavrata therefore immediately said, “Yes, sir. I shall carry out your order.” Priyavrata is described as a <span class="Italic">mahā-bhāgavata,</span> a great devotee. The duty of a great devotee is to carry out the order of the spiritual master, or the spiritual master of the spiritual master in the <span class="Italic">paramparā</span> system. As described in <span class="Ref_Italic">Bhagavad-gītā</span> (4.2), <span class="Italic">evaṁ paramparā prāptam:</span> one has to receive the instructions of the Supreme Lord through the disciplic chain of spiritual masters. A devotee of the Lord always considers himself a servant of the servant of the servant of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">362</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā was then worshiped by Manu, who respectfully satisfied him as well as he could. Priyavrata and Nārada also looked upon Brahmā with no tinges of resentment. Having engaged Priyavrata in accepting his father’s request, Lord Brahmā returned to his abode, Satyaloka, which is indescribable by the endeavor of mundane mind or words.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Manu was certainly very satisfied that Lord Brahmā had persuaded his son Priyavrata to take the responsibility for ruling the world. Priyavrata and Nārada were also very satisfied. Although Brahmā had forced Priyavrata to accept the management of worldly affairs, thus breaking his vow to remain <span class="Italic">brahmacārī</span> and completely engage in devotional service, Nārada and Priyavrata did not look upon Brahmā with resentment. Nārada was not at all sorry that he had been frustrated in making Priyavrata a disciple. Both Priyavrata and Nārada were exalted personalities who knew how to respect Lord Brahmā. Therefore instead of looking upon Brahmā with resentment, they very feelingly offered him their respect. Lord Brahmā then returned to his celestial abode, known as Satyaloka, which is described here as being impeccable and being unapproachable by words.
+          </p>
+          <p>
+            It is stated in this verse that Lord Brahmā returned to his residence, which is as important as his own personality. Lord Brahmā is the creator of this universe and the most exalted personality within it. His lifetime is described in <span class="Ref_Italic">Bhagavad-gītā</span> (8.17). <span class="Italic">Sahasra-yuga-paryantam ahar yad brahmaṇo viduḥ.</span> The total duration of the four yugas is 4,300,000 years, and when that is multiplied a thousand times, it equals twelve hours in the life of Brahmā. Therefore we cannot factually comprehend even twelve hours of Brahmā’s life, to say nothing of the one hundred years that constitute his entire lifetime. How, then, can we understand his abode? The Vedic literatures describe that in Satyaloka there is no birth, death, old age or disease. In other words, since Satyaloka is situated next to Brahmaloka, or the Brahman effulgence, it is almost as good as Vaikuṇṭhaloka. Lord Brahmā’s abode is practically indescribable from our present status. Therefore it has been described as <span class="Italic">avāṅ-manasa-gocara,</span> or beyond the description of our words and the imagination of our minds. The Vedic literatures thus describe the abode of Lord Brahmā: <span class="Italic">yad vai parārdhyaṁ tad upārameṣṭhyaṁ na yatra śoko na jarā na mṛtyur nārtir na codvegaḥ.</span> “In Satyaloka, which is situated many millions and billions of years away, there is no lamentation, nor is there old age, death, anxiety or the influence of enemies.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">551</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Svāyambhuva Manu, with the assistance of Lord Brahmā, thus fulfilled his desires. With the permission of the great sage Nārada, he delivered to his son the governmental responsibility for maintaining and protecting all the planets of the universe. He thus achieved relief from the most dangerous, poisonous ocean of material desires.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Svāyambhuva Manu was practically hopeless because such a great personality as Nārada was instructing his son Priyavrata not to accept household life. Now he was very pleased that Lord Brahmā had interfered by inducing his son to accept the responsibility for ruling the government of the universe. From <span class="Italic">Bhagavad-gītā</span> we get information that Vaivasvata Manu was the son of the sun-god and that his son, Mahārāja Ikṣvāku, ruled this planet earth. Svāyambhuva Manu, however, appears to have been in charge of the entire universe, and he entrusted to his son, Mahārāja Priyavrata, the responsibility for maintaining and protecting all the planetary systems. <span class="Italic">Dharā-maṇḍala</span> means “planet.” This earth, for instance, is called <span class="Italic">dharā-maṇḍala.</span> <span class="Italic">Akhila,</span> however, means “all” or “universal.” It is therefore difficult to understand where Mahārāja Priyavrata was situated, but from this literature his position certainly appears greater than that of Vaivasvata Manu, for he was entrusted with all the planetary systems of the entire universe.
+          </p>
+          <p>
+            Another significant statement is that Svāyambhuva Manu took great satisfaction from abnegating the responsibility for ruling all the planetary systems of the universe. At present, politicians are very eager to take charge of the government, and they engage their men in canvassing from door to door to get votes to win the post of president or a similar exalted office. On the contrary, however, herein we find that King Priyavrata had to be persuaded by Lord Brahmā to accept the post of emperor of the entire universe. Similarly, his father, Svāyambhuva Manu, felt relieved to entrust the universal government to Priyavrata. Thus it is evident that the kings and executive heads of government in the Vedic age never accepted their positions for sense enjoyment. Such exalted kings, who were known as <span class="Italic">rājarṣis,</span> ruled only to maintain and protect the kingdom for the welfare of the citizens. The history of Priyavrata and Svāyambhuva Manu describes how exemplary, responsible monarchs performed the duties of government with disinterest, keeping themselves always aloof from the contamination of material attachment.
+          </p>
+          <p>
+            Material affairs have herein been compared to an ocean of poison. They have been described in a similar way by Śrīla Narottama dāsa Ṭhākura in one of his songs:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">saṁsāra-viṣānale,     divā-niśi hiyā jvale,<br>juḍāite nā kainu upāya</div></blockquote>
+          </p>
+          <p>
+            “My heart is always burning in the fire of material existence. and I have made no provisions for getting out of it.”
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">golokera prema-dhana,     hari-nāma-saṅkīrtana,<br>rati nā janmila kene tāya</div></blockquote>
+          </p>
+          <p>
+            “The only remedy is <span class="Italic">hari-nāma-saṅkīrtana,</span> the chanting of the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> which is imported from the spiritual world, Goloka Vṛndāvana. How unfortunate I am that I have no attraction for this.” Manu wanted to seek shelter at the lotus feet of the Lord, and therefore when his son Priyavrata took charge of his worldly affairs, Manu was very relieved. That is the system of Vedic civilization. At the end of life, one must free himself from worldly affairs and completely engage in the service of the Lord.
+          </p>
+          <p>
+            The word <span class="Italic">surarṣi-vara-anumatena</span> is also significant. Manu entrusted the government to his son with the permission of the great saint Nārada. This is particularly mentioned because although Nārada wanted Priyavrata to become free from all material affairs, when Priyavrata took charge of the universe by the request of Lord Brahmā and Manu, Nārada was also very pleased.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">307</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Following the order of the Supreme Personality of Godhead, Mahārāja Priyavrata fully engaged in worldly affairs, yet he always thought of the lotus feet of the Lord, which are the cause of liberation from all material attachment. Although Priyavrata Mahārāja was completely freed from all material contamination, he ruled the material world just to honor the orders of his superiors.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            The words <span class="Italic">māna-vardhano mahatām</span> (“just to show honor to superiors”) are very significant. Although Mahārāja Priyavrata was already a liberated person and had no attraction for material things, he engaged himself fully in governmental affairs just to show respect to Lord Brahmā. Arjuna had also acted in the same way. Arjuna had no desire to participate in political affairs or the fighting at Kurukṣetra, but when ordered to do so by the Supreme Lord, Kṛṣṇa, he executed those duties very nicely. One who always thinks of the lotus feet of the Lord is certainly above all the contamination of the material world. As stated in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yoginām api sarveṣāṁ<br>mad-gatenāntarātmanā<br>śraddhāvān bhajate yo māṁ<br>sa me yuktatamo mataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Of all <span class="Italic">yogīs,</span> he who always abides in Me with great faith, worshiping Me in transcendental loving service, is most intimately united with Me in <span class="Italic">yoga</span> and is the highest of all.” (Bg. 6.47) Mahārāja Priyavrata. therefore, was a liberated person and was among the highest of <span class="Italic">yogīs,</span> yet superficially he became the emperor of the universe in accordance with the order of Lord Brahmā. Showing respect to his superior in this way was another of his extraordinary qualifications. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (6.17.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nārāyaṇa-parāḥ sarve<br>na kutaścana bibhyati<br>svargāpavarga-narkeṣv<br>api tulyārtha-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A devotee who is actually advanced is not afraid of anything, provided be has the opportunity to execute the order of the Supreme Personality of Godhead. This is the proper explanation of why Priyavrata engaged in worldly affairs although he was a liberated person. Also, only because of this principle does a <span class="Italic">mahā-bhāgavata,</span> who has nothing to do with the material world, come down to the second platform of devotional service to preach the glories of the Lord all over the world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">431</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, Mahārāja Priyavrata married Barhiṣmatī, the daughter of the prajāpati named Viśvakarmā. In her he begot ten sons equal to him in beauty, character, magnanimity and other qualities. He also begot a daughter, the youngest of all, named Ūrjasvatī.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Mahārāja Priyavrata not only carried out the order of Lord Brahmā by accepting the duties of government, but also married Barhiṣmatī, the daughter of Viśvakarmā, one of the <span class="Italic">prajāpatis.</span> Since Mahārāja Priyavrata was fully trained in transcendental knowledge, he could have returned home and conducted the business of government as a <span class="Italic">brahmacārī.</span> Instead, however, when he returned to household life, he accepted a wife also. The principle is that when one becomes a <span class="Italic">gṛhastha,</span> he must live perfectly in that order, which means he must live peacefully with a wife and children. When Caitanya Mahāprabhu’s first wife died, His mother requested Him to marry for a second time. He was twenty years old and was going to take <span class="Italic">sannyāsa</span> at the age of twenty-four, yet by the request of His mother, He married. “As long as I am in household life,” He told His mother, “I must have a wife, for household life does not mean staying in a house. Real household life means living in a house with a wife.”
+          </p>
+          <p>
+            Three words in this verse are very significant—<span class="Italic">u ha vāva.</span> These words are used to express wonder. Priyavrata Mahārāja had taken a vow of renunciation, but accepting a wife and begetting children have nothing to do with the path of renunciation; these are activities on the path of enjoyment. It was a source of great wonder, therefore, that Priyavrata Mahārāja, who had followed the path of renunciation, had now accepted the path of enjoyment.
+          </p>
+          <p>
+            Sometimes we are criticized because although I am a <span class="Italic">sannyāsī,</span> I have taken part in the marriage ceremonies of my disciples. It must be explained, however, that since we have started a Kṛṣṇa conscious society and since a human society must also have ideal marriages, to correctly establish an ideal society we must take part in marrying some of its members, although we have taken to the path of renunciation. This may be astonishing to persons who are not very interested in establishing <span class="Italic">daiva-varṇāśrama,</span> the transcendental system of four social orders and four spiritual orders. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura, however, wanted to reestablish <span class="Italic">daiva-varṇāśrama.</span> In <span class="Italic">daiva-varṇāśrama</span> there cannot be acknowledgement of social status according to birthright because in <span class="Italic">Bhagavad-gītā</span> it is said that the determining considerations are <span class="Italic">guṇa</span> and <span class="Italic">karma,</span> one’s qualities and work. It is this <span class="Italic">daiva-varṇāśrama</span> that should be established all over the world to continue a perfect society for Kṛṣṇa consciousness. This may be astonishing to foolish critics, but it is one of the functions of a Kṛṣṇa conscious society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ten sons of Mahārāja Priyavrata were named Āgnīdhra, Idhmajihva, Yajñabāhu, Mahāvīra, Hiraṇyaretā, Ghṛtapṛṣṭha, Savana, Medhātithi, Vītihotra and Kavi. These are also names of Agni, the fire-god.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">239</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Three among these ten—namely Kavi, Mahāvīra and Savana—lived in complete celibacy. Thus trained in brahmacārī life from the beginning of childhood, they were very conversant with the highest perfection, known as the paramahaṁsa-āśrama.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The word <span class="Italic">ūrdhva-retasaḥ</span> in this verse is very significant. <span class="Italic">Ūrdhva-retaḥ</span> refers to one who can control sex life and who instead of wasting semen by discharging it, can use this most important substance accumulated in the body to enrich the brain. One who can completely control sex life is able to work wonderfully with his brain, especially in remembering. Thus students who simply hear Vedic instructions once from their teacher could remember them verbatim without needing to read books, which therefore did not exist in former times.
+          </p>
+          <p>
+            Another significant word is <span class="Italic">arbha-bhāvāt,</span> which means “from very childhood.” Another meaning is “from being very affectionate to children.” In other words, <span class="Italic">paramahaṁsa</span> life is dedicated for the benefit of others. Just as a father sacrifices many things out of affection for his son, great saintly persons sacrifice all kinds of bodily comforts for the benefit of human society. In this connection there is a verse concerning the six Gosvāmīs:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tyaktvā tūrṇam aśeṣa-maṇḍala-pati-śreṇīṁ sadā tucchavat<br>bhūtvā dīna-gaṇeśakau karuṇayā kaupīna-kanthāśritau</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Because of their compassion for the poor fallen souls. the six Gosvāmīs gave up their exalted positions as ministers and took vows as mendicants. Thus minimizing their bodily wants as far as possible, they each accepted only a loincloth and a begging bowl. Thus they remained in Vṛndāvana to execute the orders of Śrī Caitanya Mahāprabhu by compiling and publishing various Vaiṣṇava literatures.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">585</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus situated in the renounced order from the beginning of their lives, all three of them completely controlled the activities of their senses and thus became great saints. They concentrated their minds always upon the lotus feet of the Supreme Personality of Godhead, who is the resting place of the totality of living entities and who is therefore celebrated as Vāsudeva. Lord Vāsudeva is the only shelter of those who are actually afraid of material existence. By constantly thinking of His lotus feet, these three sons of Mahārāja Priyavrata became advanced in pure devotional service. By the prowess of their devotional service, they could directly perceive the Supreme Personality of Godhead, who is situated in everyone’s heart as the Supersoul, and realize that there was qualitatively no difference between themselves and Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            The <span class="Italic">paramahaṁsa</span> stage is the topmost position in renounced life. In <span class="Italic">sannyāsa,</span> the renounced order, there are four stages—<span class="Italic">kuṭīcaka, bahūdaka, parivrājakācārya</span> and <span class="Italic">paramahaṁsa.</span> According to the Vedic system, when one accepts the renounced order, he stays outside his village in a cottage, and his necessities, especially his food, are supplied from home. This is called the <span class="Italic">kuṭīcaka</span> stage. When a <span class="Italic">sannyāsī</span> advances further, he no longer accepts anything from home: instead, he collects his necessities, especially his food, from many places. This system is called <span class="Italic">mādhukarī,</span> which literally means “the profession of the bumblebees.” As bumblebees collect honey from many flowers, a little from each, so a <span class="Italic">sannyāsī</span> should beg from door to door but not accept very much food from any particular house; he should collect a little bit from every house. This is called the <span class="Italic">bahūdaka</span> stage. When a <span class="Italic">sannyāsī</span> is still more experienced, he travels all over the world to preach the glories of Lord Vāsudeva. He is then known as <span class="Italic">parivrājakācārya.</span> The <span class="Italic">sannyāsī</span> reaches the <span class="Italic">paramahaṁsa</span> stage when he finishes his preaching work and sits down in one place, strictly for the sake of advancing in spiritual life. An actual <span class="Italic">paramahaṁsa</span> is one who completely controls his senses and engages in the unalloyed service of the Lord. Therefore all three of these sons of Priyavrata, namely Kavi, Mahāvīra and Savana, were situated in the <span class="Italic">paramahaṁsa</span> stage from the very beginning. Their senses could not disturb them, for their senses were completely engaged in serving the Lord. Therefore the three brothers are described in this verse as <span class="Italic">upaśama-śīlāḥ.</span> <span class="Italic">Upaśama</span> means “completely subdued.” Because they completely subdued their senses, they are understood to have been great sages and saints.
+          </p>
+          <p>
+            After subduing their senses, the three brothers concentrated their minds upon the lotus feet of Vāsudeva, Lord Kṛṣṇa. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19), <span class="Italic">vāsudevaḥ sarvam iti.</span> The lotus feet of Vāsudeva are everything. Lord Vāsudeva is the reservoir of all living entities. When this cosmic manifestation is dissolved, all living entities enter the supreme body of the Lord, Garbhodakaśāyī Viṣṇu, who merges within the body of Mahā-Viṣṇu. Both of these <span class="Italic">viṣṇu-tattvas</span> are <span class="Italic">vāsudeva-tattvas,</span> and therefore the great sages Kavi, Mahāvīra and Savana concentrated always upon the lotus feet of Lord Vāsudeva, Kṛṣṇa. In this way they could understand that the Supersoul within the heart is the Supreme Personality of Godhead, and they could recognize their identity with Him. The complete description of this realization is that simply by discharging the unalloyed form of devotional service, one can realize his self completely. The <span class="Italic">parama-bhakti-yoga</span> mentioned in this verse means that a living entity, by dint of unalloyed devotional service, has no other interest than the service of the Lord, as described in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">vāsudevaḥ sarvam iti [Bg. </span>7.19]). By <span class="Italic">parama-bhakti-yoga,</span> by elevating oneself to the highest platform of loving service, one can automatically be relieved from the bodily concept of life and see the Supreme Personality of Godhead face to face. As confirmed in <span class="Italic">Brahma-saṁhitā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">premāñjana-cchurita-bhakti-vilocanena<br>santaḥ sadaiva hṛdayeṣu vilokayanti<br>yaṁ śyāmasundaram acintya-guṇa-svarūpaṁ<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi<br> [Bs. 5.38]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            An advanced devotee, who is known as a <span class="Italic">sat,</span> or saint, can always see within his heart the Supreme Personality of Godhead, face to face. Kṛṣṇa, Śyāmasundara, expands Himself by His plenary portion, and thus a devotee can always see Him within his heart.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">61</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In his other wife, Mahārāja Priyavrata begot three sons, named Uttama, Tāmasa and Raivata. All of them later took charge of manvantara millenniums.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            In every day of Brahmā there are fourteen <span class="Italic">manvantaras.</span> The duration of one <span class="Italic">manvantara,</span> the lifespan of one Manu, is seventy-one <span class="Italic">yugas,</span> and each <span class="Italic">yuga</span> is 4,320,000 years. Almost all the Manus selected to rule the <span class="Italic">manvantaras</span> came from the family of Mahārāja Priyavrata. Three of them are particularly mentioned herein, namely Uttama, Tāmasa and Raivata.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">438</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After Kavi, Mahāvīra and Savana were completely trained in the paramahaṁsa stage of life, Mahārāja Priyavrata ruled the universe for eleven arbudas of years. Whenever he was determined to fix his arrow upon his bowstring with his two powerful arms, all opponents of the regulative principles of religious life would flee from his presence in fear of the unparalleled prowess he displayed in ruling the universe. He greatly loved his wife Barhiṣmatī, and with the increase of days, their exchange of nuptial love also increased. By her feminine behavior as she dressed herself, walked, got up, smiled, laughed, and glanced about, Queen Barhiṣmatī increased his energy. Thus although he was a great soul, he appeared lost in the feminine conduct of his wife. He behaved with her just like an ordinary man, but actually he was a great soul.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            In this verse, the word <span class="Italic">dharma-pratipakṣaḥ</span> (“opponents of religious principles”) refers not to a particular faith, but to <span class="Italic">varṇāśrama-dharma,</span> the division of society, socially and spiritually, into four <span class="Italic">varṇas</span> (<span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span>) and four <span class="Italic">āśramas</span> (<span class="Italic">brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa</span>). To maintain proper social order and help the citizens gradually progress toward the goal of life—namely spiritual understanding—the principles of <span class="Italic">varṇāśrama-dharma</span> must be accepted. From this verse, Mahārāja Priyavrata appears to have been so strict in maintaining this institution of <span class="Italic">varṇāśrama-dharma</span> that anyone neglecting it would immediately flee from his presence as soon as the King warned him by fighting or administering light punishment. Indeed, Mahārāja Priyavrata would not have to fight, for simply because of his strong determination, they dared not disobey the rules and regulations of <span class="Italic">varṇāśrama-dharma.</span> It is said that unless human society is regulated by <span class="Italic">varṇāśrama-dharma,</span> it is no better than a bestial society of cats and dogs. Mahārāja Priyavrata, therefore, strictly maintained <span class="Italic">varṇāśrama-dharma</span> by his extraordinary, unparalleled prowess.
+          </p>
+          <p>
+            To maintain such a life of strict vigilance, one needs encouragement from his wife. In the <span class="Italic">varṇāśrama-dharma</span> system, certain classes, such as the <span class="Italic">brāhmaṇas</span> and <span class="Italic">sannyāsīs,</span> do not need encouragement from the opposite sex. <span class="Italic">Kṣatriyas</span> and <span class="Italic">gṛhasthas,</span> however, actually need the encouragement of their wives in order to execute their duties. Indeed, a <span class="Italic">gṛhastha</span> or <span class="Italic">kṣatriya</span> cannot properly execute his responsibilities without the association of his wife. Śrī Caitanya Mahāprabhu personally admitted that a <span class="Italic">gṛhastha</span> must live with a wife. <span class="Italic">Kṣatriyas</span> were even allowed to have many wives to encourage them in discharging the duties of government. The association of a good wife is necessary in a life of <span class="Italic">karma</span> and political affairs. To execute his duties properly, therefore. Mahārāja Priyavrata took advantage of his good wife Barhiṣmatī, who was always very expert in pleasing her great husband by properly dressing herself, smiling, and exhibiting her feminine bodily features. Queen Barhiṣmatī always kept Mahārāja Priyavrata very encouraged, and thus he executed his governmental duty very properly. In this verse <span class="Italic">iva</span> has twice been used to indicate that Mahārāja Priyavrata acted exactly like a henpecked husband and thereby seemed to have lost his sense of human responsibility. Actually, however, he was fully conscious of his position as a spirit soul, although he seemingly behaved like an acquiescent <span class="Italic">karmī</span> husband. Mahārāja Priyavrata thus ruled the universe for eleven <span class="Italic">arbudas</span> of years. One <span class="Italic">arbuda</span> consists of 100,000,000 years, and Mahārāja Priyavrata ruled the universe for eleven such <span class="Italic">arbudas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">401</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While so excellently ruling the universe, King Priyavrata once became dissatisfied with the circumambulation of the most powerful sun-god. Encircling Sumeru Hill on his chariot, the sun-god illuminates all the surrounding planetary systems. However, when the sun is on the northern side of the hill, the south receives less light, and when the sun is in the south, the north receives less. King Priyavrata disliked this situation and therefore decided to make daylight in the part of the universe where there was night. He followed the orbit of the sun-god on a brilliant chariot and thus fulfilled his desire. He could perform such wonderful activities because of the power he had achieved by worshiping the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            There is a Bengali saying which describes that someone is so powerful that he can make the night day and the day night. That saying is current because of the prowess of Priyavrata. His activities demonstrate how powerful he became by worshiping the Supreme Personality of Godhead. Lord Kṛṣṇa is known as Yogeśvara, the master of all mystic powers. In <span class="Ref_Italic">Bhagavad-gītā</span> (18.78) it is said wherever there is the master of all mystic powers (<span class="Italic">yatra yogeśvaraḥ kṛṣṇaḥ</span>), victory, fortune and all other opulences are present. Devotional service is so powerful. When a devotee achieves what he wants to accomplish, it is not by his own mystic power but by the grace of the master of mystic power. Lord Kṛṣṇa: by His grace, a devotee can accomplish wonderful things unimaginable even to the most powerful scientist.
+          </p>
+          <p>
+            From the description in this verse, it appears that the sun moves. According to modern astronomers, the sun is fixed in one place, surrounded by the solar system, but here we find that the sun is not stationary: it is rotating in a prescribed orbit. This fact is corroborated by <span class="Ref_Italic">Brahma-saṁhitā</span> (5.52). <span class="Italic">Yasyājñayā bhramati saṁbhṛta-kāla-cakraḥ:</span> the sun is rotating in its fixed orbit in accordance with the order of the Supreme Personality of Godhead. According to <span class="Italic">Jyotir Veda,</span> the science of astronomy in the Vedic literature, the sun moves for six months on the northern side of the Sumeru Hill and for six months on the southern side. We have practical experience on this planet that when there is summer in the north there is winter in the south and vice versa. Modern materialistic scientists sometimes present themselves as knowing all the ingredients of the sun, yet they are unable to offer a second sun like Mahārāja Priyavrata’s.
+          </p>
+          <p>
+            Although Mahārāja Priyavrata devised a very powerful chariot as brilliant as the sun, he had no desire to compete with the sun-god, for a Vaiṣṇava never wants to supersede another Vaiṣṇava. His purpose was to give abundant benefits in material existence. Śrīla Viśvanātha Cakravartī Ṭhākura remarks that in the months of April and May the rays of Mahārāja Priyavrata’s brilliant sun were as pleasing as the rays of the moon, and in October and November, both morning and evening, that sun provided more warmth than the sunshine. In short, Mahārāja Priyavrata was extremely powerful, and his actions extended his power in all directions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">121</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Priyavrata drove his chariot behind the sun, the rims of his chariot wheels created impressions that later became seven oceans, dividing the planetary system known as Bhū-maṇḍala into seven islands.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Sometimes the planets in outer space are called islands. We have experience of various types of islands in the ocean, and similarly the various planets, divided into fourteen <span class="Italic">lokas,</span> are islands in the ocean of space. As Priyavrata drove his chariot behind the sun, he created seven different types of oceans and planetary systems, which altogether are known as Bhū-maṇḍala, or Bhūloka. In the Gāyatrī <span class="Italic">mantra,</span> we chant, <span class="Italic">oṁ bhūr bhuvaḥ svaḥ tat savitur vareṇyam.</span> Above the Bhūloka planetary system is Bhuvarloka, and above that is Svargaloka, the heavenly planetary system. All these planetary systems are controlled by Savitā, the sun-god. By chanting the Gāyatrī <span class="Italic">mantra</span> just after rising early in the morning, one worships the sun-god.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">22</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The names of the islands are Jambū, Plakṣa, Śālmali, Kuśa, Krauñca, Śāka and Puṣkara. Each island is twice as large as the one preceding it, and each is surrounded by a liquid substance, beyond which is the next island.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            The ocean in each planetary system has a different type of liquid. How they are situated is explained in the next verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">102</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The seven oceans respectively contain salt water, sugarcane juice, liquor, clarified butter, milk, emulsified yogurt, and sweet drinking water. All the islands are completely surrounded by these oceans, and each ocean is equal in breadth to the island it surrounds. Mahārāja Priyavrata, the husband of Queen Barhiṣmatī, gave sovereignty over these islands to his respective sons, namely Āgnīdhra, Idhmajihva, Yajñabāhu, Hiraṇyaretā, Ghṛtapṛṣṭha, Medhātithi and Vītihotra. Thus they all became kings by the order of their father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            It is to be understood that all the <span class="Italic">dvīpas,</span> or islands, are surrounded by different types of oceans, and it is said herein that the breadth of each ocean is the same as that of the island it surrounds. The length of the oceans, however, cannot equal the length of the islands. According to Vīrarāghava Ācārya, the breadth of the first island is 100,000 <span class="Italic">yojanas.</span> One <span class="Italic">yojana</span> equals eight miles, and therefore the breadth of the first island is calculated to be 800,000 miles. The water surrounding it must have the same breadth, but its length must be different.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Priyavrata then gave his daughter, Ūrjasvatī, in marriage to Śukrācārya, who begot in her a daughter named Devayānī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">783</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, a devotee who has taken shelter of the dust from the lotus feet of the Lord can transcend the influence of the six material whips—namely hunger, thirst, lamentation, illusion, old age and death—and he can conquer the mind and five senses. However, this is not very wonderful for a pure devotee of the Lord because even a person beyond the jurisdiction of the four castes—in other words, an untouchable—is immediately relieved of bondage to material existence if he utters the holy name of the Lord even once.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Śukadeva Gosvāmī was speaking to Mahārāja Parīkṣit about the activities of King Priyavrata, and since the King might have had doubts about these wonderful, uncommon activities, Śukadeva Gosvāmī reassured him. “My dear King,” he said, “don’t be doubtful about the wonderful activities of Priyavrata. For a devotee of the Supreme Personality of Godhead, everything is possible because the Lord is also known as Urukrama.” Urukrama is a name for Lord Vāmanadeva, who performed the wonderful act of occupying the three worlds with three footsteps. Lord Vāmanadeva requested three paces of land from Mahārāja Bali, and when Mahārāja Bali agreed to grant them, the Lord immediately covered the entire world with two footsteps, and for His third step He placed His foot upon Bali Mahārāja’s head. Śrī Jayadeva Gosvāmī says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">chalayasi vikramaṇe balim adbhuta-vāmana<br>pada-nakha-nīra-janita-jana-pāvana<br>keśava dhṛta-vamāna-rūpa jaya jagadīśa hare</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “All glories to Lord Keśava, who assumed the form of a dwarf. O Lord of the universe, who takes away everything inauspicious for the devotees! O wonderful Vāmanadeva! You tricked the great demon Bali Mahārāja by Your steps. The water that touched the nails of Your lotus feet when You pierced through the covering of the universe purifies all living entities in the form of the River Ganges.”
+          </p>
+          <p>
+            Since the Supreme Lord is all-powerful, He can do things that seem wonderful for a common man. Similarly, a devotee who has taken shelter at the lotus feet of the Lord can also do wonderful things unimaginable to a common man, by the grace of the dust of those lotus feet. Caitanya Mahāprabhu therefore teaches us to take shelter of the Lord’s lotus feet:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ayi nanda-tanuja kiṅkaraṁ<br>patitaṁ māṁ viṣame bhavāṁbudhau<br>kṛpayā tava pāda-paṅkaja-<br>sthita-dhūlī-sadṛśaṁ vicintaya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Nanda Mahārāja, I am Your eternal servant, yet somehow or other I have fallen into the ocean of birth and death. Please pick me up from this ocean of death and place me as one of the atoms of Your lotus feet.” Lord Caitanya teaches us to come in touch with the dust of the Lord’s lotus feet, for then there will undoubtedly be all success.
+          </p>
+          <p>
+            Because of the material body, every living entity in material existence is always disturbed by <span class="Italic">sad-guṇa,</span> six whips—hunger, thirst, lamentation, illusion, invalidity and death. Furthermore, another <span class="Italic">sad-guṇa</span> are the mind and five sense organs. Not to speak of a sanctified devotee, even a <span class="Italic">caṇḍāla,</span> an outcaste, who is untouchable, is immediately freed from material bondage if he utters the holy name of the Lord even once. Sometimes caste <span class="Italic">brāhmaṇas</span> argue that unless one changes his body he cannot be accepted as a <span class="Italic">brāhmaṇa,</span> for since the present body is obtained as a result of past actions, one who has in the past acted as a <span class="Italic">brāhmaṇa</span> takes birth in a <span class="Italic">brāhmaṇa</span> family. Therefore, they contend, without such a brahminical body, one cannot be accepted as a <span class="Italic">brāhmaṇa.</span> Herein it is said, however, that even <span class="Italic">vidūra-vigata,</span> a <span class="Italic">caṇḍāla</span>—a fifth-class untouchable—is freed if he utters the holy name even once. Being freed means that he immediately changes his body. Sanātana Gosvāmī confirms this:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yathā kāñcanatāṁ yāti<br>kāṁsyaṁ rasa-vidhānataḥ<br>tathā dīkṣā-vidhānena<br>dvijatvaṁ jāyate nṛṇām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            When a person, even though a <span class="Italic">caṇḍāla,</span> is initiated by a pure devotee into chanting the holy name of the Lord, his body changes as he follows the instructions of the spiritual master. Although one cannot see how his body has changed, we must accept, on the grounds of the authoritative statements of the <span class="Italic">śāstras,</span> that he changes his body. This is to be understood without arguments. This verse clearly says, <span class="Italic">sa jahāti bandham:</span> “He gives up his material bondage.” The body is a symbolic representation of material bondage according to one’s <span class="Italic">karma.</span> Although sometimes we cannot see the gross body changing, chanting the holy name of the Supreme Lord immediately changes the subtle body, and because the subtle body changes, the living entity is immediately freed from material bondage. After all, changes of the gross body are conducted by the subtle body. After the destruction of the gross body, the subtle body takes the living entity from his present gross body to another. In the subtle body, the mind is predominant, and therefore if one’s mind is always absorbed in remembering the activities or the lotus feet of the Lord, he is to be understood to have already changed his present body and become purified. Therefore it is irrefutable that a <span class="Italic">caṇḍāla,</span> or any fallen or lowborn person, can become a <span class="Italic">brāhmaṇa</span> simply by the method of bona fide initiation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">515</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While enjoying his material opulences with full strength and influence, Mahārāja Priyavrata once began to consider that although he had fully surrendered to the great saint Nārada and was actually on the path of Kṛṣṇa consciousness, he had somehow become again entangled in material activities. Thus his mind now became restless, and he began to speak in a spirit of renunciation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.5.17) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tyaktvā sva-dharmaṁ caraṇāmbujaṁ harer<br>bhajann apakvo ’tha patet tato yadi<br>yatra kva vābhadram abhūd amuṣya kiṁ<br>ko vārtha āpto ’bhajatāṁ sva-dharmataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who has forsaken his material occupations to engage in the devotional service of the Lord may sometimes fall down while in an immature stage, yet there is no danger of his being unsuccessful. On the other hand, a nondevotee, though fully engaged in occupational duties, does not gain anything.” If one somehow or other comes to the shelter of a great Vaiṣṇava, takes to Kṛṣṇa consciousness because of sentiment or realization, but in course of time falls down because of immature understanding, he is not actually fallen, for his having engaged in Kṛṣṇa consciousness is a permanent asset. If one falls down, therefore, his progress might be checked for a certain time, but it will again become manifest at an opportune moment. Although Priyavrata Mahārāja was serving according to the instructions of Nārada Muni meant for going back home, back to Godhead, he returned to material affairs at the request of his father. In due course of time, however, his consciousness for serving Kṛṣṇa reawakened by the grace of his spiritual master, Nārada.
+          </p>
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (6.41), <span class="Italic">śucīnāṁ śrīmatāṁ gehe yoga-bhraṣṭo ’bhijāyate.</span> One who falls down from the process of <span class="Italic">bhakti-yoga</span> is again offered the opulence of the demigods, and after enjoying such material opulence, he is given a chance to take birth in a noble family of a pure <span class="Italic">brāhmaṇa,</span> or in a rich family, to be given the chance to revive his Kṛṣṇa consciousness. This actually happened in the life of Priyavrata: he is a most glorious example of this truth. In due course of time, he no longer wanted to enjoy his material opulences and his wife, kingdom and sons; instead, he wanted to renounce them all. Therefore, after having described the material opulences of Mahārāja Priyavrata, Śukadeva Gosvāmī, in this verse, describes his tendency for renunciation.
+          </p>
+          <p>
+            The words <span class="Italic">devarṣi-caraṇānuśayana</span> indicate that Mahārāja Priyavrata, having fully surrendered to the great sage Devarṣi Nārada, was strictly following all the devotional processes and regulative principles under his direction. In regard to strictly following the regulative principles, Śrīla Viśvanātha Cakravartī Ṭhākura says; <span class="Italic">daṇḍavat-praṇāmās tān anupatitaḥ.</span> By immediately offering obeisances (<span class="Italic">daṇḍavat</span>) unto the spiritual master and by strictly following his directions, the student becomes advanced. Mahārāja Priyavrata was doing all these things regularly.
+          </p>
+          <p>
+            As long as one is in the material world, he has to be under the influence of the modes of material nature (<span class="Italic">guṇa-visarga</span>). It is not that Mahārāja Priyavrata was freed from material influence because he possessed all material opulences. In this material world, both the very poor man and the very rich man are under material influences, for both wealth and poverty are creations of the modes of material nature. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.27), <span class="Italic">prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ.</span> According to the modes of material nature we acquire, the material nature gives us facility for material enjoyment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">383</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The King thus began criticizing himself: Alas, how condemned I have become because of my sense gratification! I have now fallen into material enjoyment, which is exactly like a covered well. I have had enough! I am not going to enjoy any more. Just see how I have become like a dancing monkey in the hands of my wife. Because of this, I am condemned.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            How condemned is the advancement of material knowledge can be understood from the behavior of Mahārāja Priyavrata. He performed such wonderful acts as creating another sun, which shined during the night, and creating a chariot so great that its wheels formed vast oceans. These activities are so great that modern scientists cannot even imagine how such things can be done. Mahārāja Priyavrata acted very wonderfully in the material field of activities, but because he was dealing in sense gratification—ruling his kingdom and dancing to the indications of his beautiful wife—he personally condemned himself. When we think about this example of Mahārāja Priyavrata, we can just consider how degraded is the modern civilization of materialistic advancement. Modern so-called scientists and other materialists are very satisfied because they can construct great bridges, roads and machines, but such activities are nothing comparable to those of Mahārāja Priyavrata. If Mahārāja Priyavrata could condemn himself in spite of his wonderful activities, how condemned we are in our so-called advancement of material civilization. We can conclude that such advancement has nothing to do with the problems of the living entity entangled within this material world. Unfortunately, modern man does not understand his entanglement and how condemned he is, nor does he know what kind of body he is going to have in the next life. From a spiritual point of view, a great kingdom, beautiful wife and wonderful material activities are all impediments to spiritual advancement. Mahārāja Priyavrata had served the great sage Nārada sincerely. Therefore even though he had accepted material opulences, he could not be deviated from his own task. He again became Kṛṣṇa conscious. As confirmed in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nehābhikrama-nāśo ’sti<br>pratyavāyo na vidyate<br>svalpam apy asya dharmasya<br>trāyate mahato bhayāt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In devotional service there is no loss or diminution, and even a small service rendered in devotional life is sufficient to save one from the greatest danger.” (Bg. 2.40) Such renunciation as Mahārāja Priyavrata’s is possible only by the grace of the Supreme Personality of Godhead. Generally when people are powerful or when they have a beautiful wife, a beautiful home and material popularity, they become more and more entangled. Priyavrata Mahārāja, however, having been completely trained by the great sage Nārada, revived his Kṛṣṇa consciousness in spite of all impediments.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">464</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By the grace of the Supreme Personality of Godhead, Mahārāja Priyavrata reawakened to his senses. He divided all his earthly possessions among his obedient sons. He gave up everything, including his wife, with whom he had enjoyed so much sense gratification, and his great and opulent kingdom, and he completely renounced all attachment. His heart, having been cleansed, became a place of pastimes for the Supreme Personality of Godhead. Thus he was able to return to the path of Kṛṣṇa consciousness, spiritual life, and resume the position he had attained by the grace of the great saint Nārada.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            As enunciated by Śrī Caitanya Mahāprabhu in His <span class="Italic">Śikṣāṣṭaka, ceto-darpaṇa-mārjanaṁ bhava-mahā-dāvāgni-nirvāpaṇam: [Cc. Antya 20.12]</span> as soon as one’s heart is cleansed, the blazing fire of material existence is immediately extinguished. Our hearts are meant for the pastimes of the Supreme Personality of Godhead. This means that one should be fully Kṛṣṇa conscious, thinking of Kṛṣṇa, as He Himself advises (<span class="Italic">man-manā bhava mad-bhakto mad-yājī māṁ namaskuru [Bg. </span>18.65]). This should be our only business. One whose heart is not clean cannot think of the transcendental pastimes of the Supreme Lord, but if one can once again place the Supreme Personality of Godhead in his heart, he very easily becomes qualified to renounce material attachment. Māyāvādī philosophers, <span class="Italic">yogīs</span> and <span class="Italic">jñānīs</span> try to give up this material world simply by saying, <span class="Italic">brahma satyaṁ jagan mithyā:</span> “This world is false. There is no use of it. Let us take to Brahman.” Such theoretical knowledge will not help us. If we believe that Brahman is the real truth, we have to place within our hearts the lotus feet of Śrī Kṛṣṇa, as Mahārāja Ambarīṣa did (<span class="Italic">sa vai manaḥ kṛṣṇa-padāravindayoḥ</span>). One has to fix the lotus feet of the Lord within his heart. Then he gets the strength to be freed from material entanglement.
+          </p>
+          <p>
+            Mahārāja Priyavrata was able to give up his opulent kingdom, and he also gave up the association of his beautiful wife as if she were a dead body. However beautiful one’s wife and however attractive her bodily features, one is no longer interested in her when her body is dead. We praise a beautiful woman for her body, but that same body, when bereft of a spirit soul, is no longer interesting to any lusty man. Mahārāja Priyavrata was so strong, by the grace of the Lord, that even though his beautiful wife was alive, he could give up her association exactly like one who is forced to give up the association of a dead wife. Śrī Caitanya Mahāprabhu said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na dhanaṁ na janaṁ na sundarīṁ<br>kavitāṁ vā jagadīśa kāmaye<br>mama janmani janmanīśvare<br>bhavatād bhaktir ahaitukī tvayi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O almighty Lord, I have no desire to accumulate wealth, nor do I desire beautiful women, nor do I want any number of followers. I only want Your causeless devotional service birth after birth.” For one who desires to advance in spiritual life, attachment to material opulence and attachment to a beautiful wile are two great impediments. Such attachments are condemned even more than suicide. Therefore anyone desiring to cross beyond material nescience must, by the grace of Kṛṣṇa, be freed from attachment to women and money. When Mahārāja Priyavrata became completely free from these attachments, he could again peacefully follow the principles instructed by the great sage Nārada.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are many famous verses regarding Mahārāja Priyavrata’s activities:“No one but the Supreme Personality of Godhead could do what Mahārāja Priyavrata has done. Mahārāja Priyavrata dissipated the darkness of night, and with the rims of his great chariot, he excavated seven oceans.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            There are many excellent verses, famous all over the world, concerning the activities of Mahārāja Priyavrata. He is so celebrated that his activities are compared to those of the Supreme Personality of Godhead. Sometimes a sincere servant and devotee of the Lord is also called <span class="Italic">bhagavān.</span> Śrī Nārada is called <span class="Italic">bhagavān,</span> and Lord Śiva and Vyāsadeva are also sometimes called <span class="Italic">bhagavān.</span> This designation, <span class="Italic">bhagavān,</span> is sometimes conferred upon a pure devotee by the grace of the Lord so that he will be very highly esteemed. Mahārāja Priyavrata was such a devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">244</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            “To stop the quarreling among different peoples, Mahārāja Priyavrata marked boundaries at rivers and at the edges of mountains and forests so that no one would trespass upon another’s property.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            The example set by Mahārāja Priyavrata in marking off different states is still followed. As indicated here, different classes of men are destined to live in different areas, and therefore the boundaries of various tracts of land, which are described here as islands, should be defined by different rivers, forests and hills. This is also mentioned in relation to Mahārāja Pṛthu, who was born from the dead body of his father by the manipulation of great sages. Mahārāja Pṛthu’s father was very sinful, and therefore a black man called Niṣāda was first born from his dead body. The Naiṣāda race was given a place in the forest because by nature they are thieves and rogues. As animals are given places in various forests and hills, men who are like animals are also destined to live there. One cannot be promoted to civilized life unless one comes to Kṛṣṇa consciousness, for by nature one is destined to live in a particular situation according to one’s <span class="Italic">karma</span> and association with the modes of nature. If men want to live in harmony and peace, they must take to Kṛṣṇa consciousness, for they cannot achieve the highest standard while absorbed in the bodily concept of life. Mahārāja Priyavrata divided the surface of the globe into different islands so that each class of men would live peacefully and not clash with the others. The modern idea of nationhood has gradually developed from the divisions made by Mahārāja Priyavrata.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">154</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            “As a great follower and devotee of the sage Nārada, Mahārāja Priyavrata considered hellish the opulences he had achieved by dint of fruitive activities and mystic power, whether in the lower or heavenly planetary systems or in human society.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            Śrīla Rūpa Gosvāmī has said that the position of a devotee is so superexcellent that a devotee does not consider any material opulence worth having. There are different types of opulences on earth, in the heavenly planets and even in the lower planetary system, known as Pātāla. A devotee, however, knows that they are all material, and consequently he is not at all interested in them. As stated in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">paraṁ dṛṣṭvā nivartate.</span> Sometimes <span class="Italic">yogīs</span> and <span class="Italic">jñānīs</span> voluntarily give up all material opulences to practice their system of liberation and taste spiritual bliss. However, they frequently fall down because artificial renunciation of material opulences cannot endure. One must have a superior taste in spiritual life; then he can give up material opulence. Mahārāja Priyavrata had already tasted spiritual bliss, and therefore he had no interest in any of the material achievements available in the lower, higher or middle planetary systems.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports to the Fifth Canto, First Chapter, of <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Activities of Mahārāja Priyavrata.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/1">https://prabhupadabooks.com/sb/5/1</a><!-- span.text_source_copied_date
+        | on 2022-11-20 13:24:24 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 4.31: Narada Instructs the Pracetas     Next: SB 5.2: The Activities of Maharaja Agnidhra</div>
+      </p>
+    </div>
+  </body>
+</html>
