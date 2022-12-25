@@ -45,7 +45,13 @@ class Bhāgavatamr
   OUTPUTDIR = './output'
   CANTOS = { 
     1 => '“Creation”', 
-    4 => '“Creation of the Fourth Order”'
+    4 => '“Creation of the Fourth Order”',
+    5 => '“The Creative Impetus”',
+    6 => '“Prescribed Duties for Mankind”',
+    7 => '“The Science of God”',
+    8 => '“Withdrawal of the Cosmic Creations”',
+    9 => '“Liberation”',
+    10 => '“The Summum Bonum”',
   }
 
   def self.fetch_chapter(canto = 1, chapter = 1)
@@ -198,7 +204,11 @@ class Bhāgavatamr
         # todo: fix this up for better reliability? use case-insensitive match?
         elsif el.to_html.match(/Verse-in-purp/) or el.to_html.match(/One-line-verse-in-purp/)
           this_verse.purport_html_paragraphs << "<blockquote>#{el.to_html}</blockquote>"
+        elsif el&.attributes.dig('style').to_s.match?('text-align : left') && el&.children&.first.name == 'div' && el&.children&.first&.attributes.dig('class').to_s == 'Normal-Level'
+          # binding.pry
+          chapter.summary += el&.children&.first.to_html
         else
+          # binding.pry
           unhandled_bits << el.to_html
         end
       end
@@ -280,7 +290,7 @@ end
 
 
 class Chapter
-  attr_accessor :canto, :number, :fancy_number, :verses, :title, :thus_ends_text,
+  attr_accessor :canto, :number, :fancy_number, :summary, :verses, :title, :thus_ends_text,
     :date_text_copied_from_source, :text_source_url, :next_prev_links_raw
 
   def initialize canto = 1, number = 1
@@ -288,6 +298,7 @@ class Chapter
     @canto = canto
     @number = number
     @thus_ends_text = ''
+    @summary = ''
   end
 
   def add_verse verse
