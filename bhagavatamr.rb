@@ -176,7 +176,7 @@ class Bhāgavatamr
           # binding.pry unless m[:end].nil?
         end
       
-      when 'Verse-Text', 'Uvaca-line'
+      when 'Verse-Text', 'Uvaca-line', 'Prose-Verse'
         this_verse.sanskrit_roman_lines << el.content
       
       when 'Synonyms'
