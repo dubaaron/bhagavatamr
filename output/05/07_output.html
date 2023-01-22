@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.7, The Activities of King Bharata</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Seven:<br>The Activities of King Bharata
+      </h1>
+      <div class="summary">
+        <div class="Normal-Level">In this chapter, the activities of King Bharata Mahārāja, the emperor of the whole world, are described. Bharata Mahārāja performed various ritualistic ceremonies (Vedic <span class="Italic">yajñas</span>) and satisfied the Supreme Lord by his different modes of worship. In due course of time, he left home and resided in Hardwar and passed his days in devotional activities. Being ordered by his father, Lord Ṛṣabhadeva, Bharata Mahārāja married Pañcajanī, the daughter of Viśvarūpa. After this, he ruled the whole world peacefully. Formerly this planet was known as Ajanābha, and after the reign of Bharata Mahārāja it became known as Bhārata-varṣa. Bharata Mahārāja begot five sons in the womb of Pañcajanī, and he named the sons Sumati, Rāṣṭrabhṛta, Sudarśana, Āvaraṇa and Dhūmraketu. Bharata Mahārāja was very rigid in executing religious principles and following in the footsteps of his father. He therefore ruled the citizens very successfully. Because he performed various <span class="Italic">yajñas</span> to satisfy the Supreme Lord, he was personally very satisfied. Being of undisturbed mind, he increased his devotional activities unto Lord Vāsudeva. Bharata Mahārāja was competent in understanding the principles of saintly persons like Nārada, and he followed in the footsteps of the sages. He also kept Lord Vāsudeva constantly within his heart. After finishing his kingly duties, he divided his kingdom among his five sons. He then left home and went to the place of Pulaha known as Pulahāśrama. There he ate forest vegetables and fruits, and worshiped Lord Vāsudeva with everything available. Thus he increased his devotion toward Vāsudeva, and he automatically began to realize further his transcendental, blissful life. Due to his highly advanced spiritual position, there were sometimes visible in his body the <span class="Italic">aṣṭa-sāttvika</span> transformations, such as ecstatic crying and bodily trembling, which are symptoms of love of Godhead. It is understood that Mahārāja Bharata worshiped the Supreme Lord with the <span class="Italic">mantras</span> mentioned in the <span class="Italic">Ṛg Veda,</span> generally known as Gāyatrī <span class="Italic">mantra,</span> which aim at the Supreme Nārāyaṇa situated within the sun.</div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued speaking to Mahārāja Parīkṣit: My dear King, Bharata Mahārāja was a topmost devotee. Following the orders of his father, who had already decided to install him on the throne, he began to rule the earth accordingly. When Bharata Mahārāja ruled the entire globe, he followed the orders of his father and married Pañcajanī, the daughter of Viśvarūpa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just as the false ego creates the subtle sense objects, Mahārāja Bharata created five sons in the womb of Pañcajanī, his wife. These sons were named Sumati, Rāṣṭrabhṛta, Sudarśana, Āvaraṇa and Dhūmraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">25</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Formerly this planet was known as Ajanābha-varṣa, but since Mahārāja Bharata’s reign, it has become known as Bhārata-varṣa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            This planet was formerly known as Ajanābha because of the reign of King Nābhi. After Bharata Mahārāja ruled the planet, it became celebrated as Bhārata-varṣa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">137</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Bharata was a very learned and experienced king on this earth. He perfectly ruled the citizens, being himself engaged in his own respective duties. Mahārāja Bharata was as affectionate to the citizens as his father and grandfather had been. Keeping them engaged in their occupational duties, he ruled the earth.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            It is most important that the chief executive rule the citizens by keeping them fully engaged in their respective occupational duties. Some of the citizens were <span class="Italic">brāhmaṇas, some</span> were <span class="Italic">kṣatriyas,</span> and some were <span class="Italic">vaiśyas</span> and <span class="Italic">śūdras.</span> It is the duty of the government to see that the citizens act according to these material divisions for their spiritual advancement. No one should remain unemployed or unoccupied in any way. One must work as a <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> or <span class="Italic">śūdra</span> on the material path. and on the spiritual path, everyone should act as a <span class="Italic">brahmacārī, gṛhastha, vānaprastha</span> or <span class="Italic">sannyāsī.</span> Although formerly the government was a monarchy, all the kings were very affectionate toward the citizens, and they strictly kept them engaged in their respective duties. Therefore society was very smoothly conducted.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">280</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            With great faith King Bharata performed various kinds of sacrifice. He performed the sacrifices known as agni-hotra, darśa, pūrṇamāsa, cāturmāsya, paśu-yajña [wherein a horse is sacrificed] and soma-yajña [wherein a kind of beverage is offered]. Sometimes these sacrifices were performed completely and sometimes partially. In any case, in all the sacrifices the regulations of cāturhotra were strictly followed. In this way Bharata Mahārāja worshiped the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Animals like hogs and cows were offered in sacrifice to test the proper execution of the sacrifice. Otherwise, there was no purpose in killing the animal. Actually the animal was offered in the sacrificial fire to get a rejuvenated life. Generally an old animal was sacrificed in the fire. and it would come out again in a youthful body. Some of the rituals however, did not require animal sacrifice. In the present age, animal sacrifices are forbidden. As stated by Śrī Caitanya Mahāprabhu:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">aśvamedhaṁ gavālambhaṁ<br>sannyāsaṁ pala-paitṛkam<br>devareṇa sutotpattiṁ<br>kalau pañca vivarjayet</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of Kali, five acts are forbidden: the offering of a horse in sacrifice, the offering of a cow in sacrifice, the acceptance of the order of <span class="Italic">sannyāsa,</span> the offering of oblations of flesh to the forefathers, and a man’s begetting children in his brother’s wife.” (Cc. <span class="Ref_Italic">Ādi</span> 17.164) Such sacrifices are impossible in this age due to the scarcity of expert <span class="Italic">brāhmaṇas</span> or <span class="Italic">ṛtvijaḥ</span> who are able to take the responsibility. In the absence of these, the <span class="Italic">saṅkīrtana-yajña</span> is recommended. <span class="Italic">Yajñaiḥ saṅkīrtana-prāyair yajanti hi sumedhasaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 11.5.32). After all, sacrifices are executed to please the Supreme Personality of Godhead. <span class="Italic">Yajñārtha-karma:</span> such activities should be carried out for the Supreme Lord’s pleasure. In this age of Kali, the Supreme Lord in His incarnation of Śrī Caitanya Mahāprabhu should be worshiped with His associates by performance of <span class="Italic">saṅkīrtana-yajña,</span> the congregational chanting of the Hare Kṛṣṇa <span class="Italic">mantra.</span> This process is accepted by intelligent men. <span class="Italic">Yajñaiḥ saṅkīrtana-prāyair yajanti hi sumedhasaḥ.</span> The word <span class="Italic">sumedhasaḥ</span> refers to intelligent men who possess very good brain substance.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">958</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After performing the preliminaries of various sacrifices, Mahārāja Bharata offered the results in the name of religion to the Supreme Personality of Godhead, Vāsudeva. In other words, he performed all the yajñas for the satisfaction of Lord Vāsudeva, Kṛṣṇa. Mahārāja Bharata thought that since the demigods were different parts of Vāsudeva’s body, He controls those who are explained in the Vedic mantras. By thinking in this way, Mahārāja Bharata was freed from all material contamination, such as attachment, lust and greed. When the priests were about to offer the sacrificial ingredients into the fire, Mahārāja Bharata expertly understood how the offering made to different demigods was simply an offering to the different limbs of the Lord. For instance, Indra is the arm of the Supreme Personality of Godhead, and Sūrya [the sun] is His eye. Thus Mahārāja Bharata considered that the oblations offered to different demigods were actually offered unto the different limbs of Lord Vāsudeva.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            The Supreme Personality of Godhead says that as long as one does not develop the pure devotional service of <span class="Italic">śravaṇaṁ kīrtanam,</span> hearing and chanting, one must carry out his prescribed duties. Since Bharata Mahārāja was a great devotee, one may ask why he performed so many sacrifices that are actually meant for <span class="Italic">karmīs.</span> The fact is that he was simply following the orders of Vāsudeva. As Kṛṣṇa says in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">sarva dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> “Abandon all varieties of religion and just surrender unto Me.” (Bg. 18.66) Whatever we do, we should constantly remember Vāsudeva. People are generally addicted to offering obeisances to various demigods, but Bharata Mahārāja simply wanted to please Lord Vāsudeva. As stated in <span class="Italic">Bhagavad-gītā:</span> <span class="Italic">bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram</span> (Bg. 5.29). A <span class="Italic">yajña</span> may be carried out to satisfy a particular demigod, but when the <span class="Italic">yajña is</span> offered to the <span class="Italic">yajña-puruṣa,</span> Nārāyaṇa, the demigods are satisfied. The purpose of performing different <span class="Italic">yajñas</span> is to satisfy the Supreme Lord. One may perform them in the name of different demigods or directly. If we directly offer oblations to the Supreme Personality of Godhead, the demigods are automatically satisfied. If we water the root of a tree, the branches, twigs, fruits and flowers are automatically satisfied. When one offers sacrifices to different demigods, one should remember that the demigods are simply parts of the body of the Supreme. If we worship the hand of a person, we intend to satisfy the person himself. If we massage a person’s legs, we do not really serve the legs but the person who possesses the legs. All the demigods are different parts of the Lord, and if we offer service to them, we actually serve the Lord Himself. Demigod worship is mentioned in <span class="Italic">Brahma-saṁhitā, but</span> actually the <span class="Italic">ślokas</span> advocate worship of the Supreme Personality of Godhead, Govinda. For instance, worship of the goddess Durgā is mentioned this way in <span class="Ref_Italic">Brahma-saṁhitā</span> (5.44):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā<br>chāyeva yasya bhuvanāni vibharti durgā<br>icchānurūpam api yasya ca ceṣṭate sā<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Following the orders of Śrī Kṛṣṇa, the goddess Durgā creates, maintains and annihilates. Śrī Kṛṣṇa also confirms this statement in <span class="Italic">Bhagavad-gītā.</span> <span class="Italic">Mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram:</span> “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings.” (Bg. 9.10)
+          </p>
+          <p>
+            We should worship the demigods in that spirit. Because the goddess Durgā satisfies Kṛṣṇa, we should therefore offer respects to goddess Durgā. Because Lord Śiva is nothing but Kṛṣṇa’s functional body, we should therefore offer respects to Lord Śiva. Similarly, we should offer respects to Brahmā, Agni and Sūrya. There are many offerings to different demigods, and one should always remember that these offerings are usually meant to satisfy the Supreme Personality of Godhead. Bharata Mahārāja did not aspire to receive some benediction from demigods. His aim was to please the Supreme Lord. In the <span class="Italic">Mahābhārata,</span> among the thousand names of Viṣṇu, it is said <span class="Italic">yajña-bhug yajña-kṛd yajñaḥ.</span> <span class="Italic">The</span> enjoyer of <span class="Italic">yajña, the</span> performer of <span class="Italic">yajña and yajña</span> itself are the Supreme Lord. The Supreme Lord is the performer of everything, but out of ignorance the living entity thinks that he is the actor. As long as we think we are the actors, we bring about <span class="Italic">karma-bandha</span> (bondage to activity). If we act for <span class="Italic">yajña,</span> for Kṛṣṇa. there is no <span class="Italic">karma-bandha.</span> <span class="Italic">Yajñārthāt karmaṇo ’nyatra loko ’yaṁ karma-bandhanaḥ: [Bg. 3.9]</span>) “Work done as a sacrifice for Viṣṇu has to be performed. otherwise work binds one to this material world.” (Bg. 3.9)
+          </p>
+          <p>
+            Following the instructions of Bharata Mahārāja, we should act not for our personal satisfaction but for the satisfaction of the Supreme Personality of Godhead. In <span class="Ref_Italic">Bhagavad-gītā</span> (17.28) it is also stated:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">aśraddhayā hutaṁ dattaṁ<br>tapas taptaṁ kṛtaṁ ca yat<br>asad ity ucyate pārtha<br>na ca tat pretya no iha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Sacrifices, austerities and charities performed without faith in the Supreme Personality of Godhead are nonpermanent. Regardless of whatever rituals are performed, they are called <span class="Italic">asat,</span> nonpermanent. They are therefore useless both in this life and the next.
+          </p>
+          <p>
+            Kings like Mahārāja Ambarīṣa and many other <span class="Italic">rājarṣis</span> who were pure devotees of the Lord simply passed their time in the service of the Supreme Lord. When a pure devotee executes some service through the agency of another person, he should not be criticized, for his activities are meant for the satisfaction of the Supreme Lord. A devotee may have a priest perform some <span class="Italic">karma-kāṇḍa,</span> and the priest may not be a pure Vaiṣṇava, but because the devotee wants to please the Supreme Lord, he should not be criticized. The word <span class="Italic">apūrva</span> is very significant. The resultant actions of <span class="Italic">karma</span> are called <span class="Italic">apūrva.</span> When we act piously or impiously, immediate results do not ensue. We therefore wait for the results, which are called <span class="Italic">apūrva.</span> The results are manifest in the future. Even the <span class="Italic">smārtas</span> accept this <span class="Italic">apūrva.</span> Pure devotees simply act for the pleasure of the Supreme Personality of Godhead; therefore the results of their activities are spiritual, or permanent. They are not like those of the <span class="Italic">karmīs,</span> which are nonpermanent. This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (4.23):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">gata-saṅgasya muktasya<br>jñānāvasthita-cetasaḥ<br>yajñāyācarataḥ karma<br>samagraṁ pravilīyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The work of a man who is unattached to the modes of material nature and who is fully situated in transcendental knowledge merges entirely into transcendence.”
+          </p>
+          <p>
+            A devotee is always free from material contamination. He is fully situated in knowledge, and therefore his sacrifices are intended for the satisfaction of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">134</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this way, being purified by ritualistic sacrifices, the heart of Mahārāja Bharata was completely uncontaminated. His devotional service unto Vāsudeva, Lord Kṛṣṇa, increased day after day. Lord Kṛṣṇa, the son of Vasudeva, is the original Personality of Godhead manifest as the Supersoul [Paramātmā] as well as the impersonal Brahman. Yogīs meditate upon the localized Paramātmā situated in the heart, jñānīs worship the impersonal Brahman as the Supreme Absolute Truth, and devotees worship Vāsudeva, the Supreme Personality of Godhead, whose transcendental body is described in the śāstras. His body is decorated with the Śrīvatsa, the Kaustubha jewel and a flower garland, and His hands hold a conchshell, disc, club and lotus flower. Devotees like Nārada always think of Him within their hearts.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Lord Vāsudeva, or Śrī Kṛṣṇa, the son of Vasudeva, is the Supreme Personality of Godhead. He is manifest within the hearts of <span class="Italic">yogīs</span> in His Paramātmā feature, and He is worshiped as impersonal Brahman by <span class="Italic">jñānīs.</span> The Paramātmā feature is described in the <span class="Italic">śāstras as</span> having four hands, holding disc, conchshell, lotus flower and club. As confirmed in the <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.2.8):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kecit sva-dehāntar-hṛdayāvakāśe<br>prādeśa-mātraṁ puruṣaṁ vasantam<br>catur-bhujaṁ kañja-rathāṅga-śaṅkha-<br>gadā-dharaṁ dhāraṇayā smaranti</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Paramātmā is situated in the hearts of all living beings. He has four hands, which hold four symbolic weapons. All devotees who think of the Paramātmā within the heart worship the Supreme Personality of Godhead as the temple Deity. They also understand the impersonal features of the Lord and His bodily rays, the Brahman effulgence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">56</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Destiny fixed the time for Mahārāja Bharata’s enjoyment of material opulence at one thousand times ten thousand years. When that period was finished, he retired from family life and divided the wealth he had received from his forefathers among his sons. He left his paternal home, the reservoir of all opulence, and started for Pulahāśrama, which is situated in Hardwar. The śālagrāma-śilās are obtainable there.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            According to the law of <span class="Italic">dāya-bhāk,</span> when one inherits an estate, he must hand it over to the next generation. Bharata Mahārāja did this properly. First he enjoyed his paternal property for one thousand times ten thousand years. At the time of his retirement, he divided this property among his sons and left for Pulaha-āśrama.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">156</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At Pulaha-āśrama, the Supreme Personality of Godhead, Hari, out of His transcendental affection for His devotee, becomes visible to His devotee, satisfying His devotee’s desires.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The Lord always exists in different transcendental forms. As stated in <span class="Ref_Italic">Brahma-saṁhitā</span> (5.39):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">rāmādi-mūrtiṣu kalā-niyamena tiṣṭhan<br>nānāvatāram akarod bhuvaneṣu kintu<br>kṛṣṇaḥ svayaṁ samabhavat paramaḥ pumān yo<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The Lord is situated as Himself, Lord Kṛṣṇa, the Supreme Personality of Godhead, and He is accompanied by His expansions like Lord Rāma, Baladeva, Saṅkarṣaṇa, Nārāyaṇa, Mahā-Viṣṇu and so forth. The devotees worship all these forms according to their liking, and the Lord, out of His affection, presents Himself as <span class="Italic">arcā-vigraha.</span> He sometimes presents Himself personally before the devotee out of reciprocation or affection. A devotee is always fully surrendered to the loving service of the Lord, and the Lord is visible to the devotee according to the devotee’s desires. He may be present in the form of Lord Rāma, Lord Kṛṣṇa, Lord Nṛsiṁhadeva and so on. Such is the exchange of love between the Lord and His devotees.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">36</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Pulaha-āśrama is the Gaṇḍakī River, which is the best of all rivers. The śālagrāma-śilā, the marble pebbles, purify all those places. On each and every marble pebble, up and down, circles like navels are visible.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            <span class="Italic">Śālagrāma-śilā</span> refers to pebbles that appear like stones with circle; marked up and down. These are available in the river known as Gaṇḍakī-nadī. Wherever the waters of this river flow, the place becomes immediately sanctified.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">265</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the gardens of Pulaha-āśrama, Mahārāja Bharata lived alone and collected a variety of flowers, twigs and tulasī leaves. He also collected the water of the Gaṇḍakī River, as well as various roots, fruits and bulbs. With these he offered food to the Supreme Personality of Godhead, Vāsudeva, and, worshiping Him, he remained satisfied. In this way his heart was completely uncontaminated, and he did not have the least desire for material enjoyment. All material desires vanished. In this steady position, he felt full satisfaction and was situated in devotional service.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Everyone is searching after peace of mind. This is obtainable only when one is completely freed from the desire for material sense gratification and is engaged in the devotional service of the Lord. As stated in <span class="Italic">Bhagavad-gītā:</span> <span class="Ref_Italic">patraṁ puṣpaṁ phalaṁ toyaṁ yo me bhaktyā prayacchati</span> (9.26). Worship of the Lord is not at all expensive. One can offer the Lord a leaf, a flower, a little fruit and some water. The Supreme Lord accepts these offerings when they are offered with love and devotion. In this way, one can become freed from material desires. As long as one maintains material desires, he cannot be happy. As soon as one engages in the devotional service of the Lord, his mind is purified of all material desires. Then one becomes fully satisfied.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sa vai puṁsāṁ paro dharmo<br>yato bhaktir adhokṣaje<br>ahaituky apratihatā<br>yayātmā suprasīdati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsudeve bhagavati<br>bhakti-yogaḥ prayojitaḥ<br>janayaty āśu vairāgyaṁ<br>jñānaṁ ca yad ahaitukam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The supreme occupation <span class="Italic">[dharma]</span> for all humanity is that by which men can attain to loving devotional service unto the transcendent Lord. Such devotional service must be unmotivated and uninterrupted in order to completely satisfy the self. By rendering devotional service unto the Personality of Godhead, Śrī Kṛṣṇa, one immediately acquires causeless knowledge and detachment from the world.” (<span class="Ref_Italic">Bhāg.</span> 1.2.6–7)
+          </p>
+          <p>
+            These are the instructions given in <span class="Italic">Śrīmad-Bhāgavatam,</span> the supreme Vedic literature. One may not be able to go to Pulaha-āśrama, but wherever one is one can happily render devotional service to the Lord by adopting the processes mentioned above.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">55</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            That most exalted devotee, Mahārāja Bharata, in this way engaged constantly in the devotional service of the Lord. Naturally his love for Vāsudeva, Kṛṣṇa, increased more and more and melted his heart. Consequently he gradually lost all attachment for regulative duties. The hairs of his body stood on end, and all the ecstatic bodily symptoms were manifest. Tears flowed from his eyes, so much so that he could not see anything. Thus he constantly meditated on the reddish lotus feet of the Lord. At that time, his heart, which was like a lake, was filled with the water of ecstatic love. When his mind was immersed in that lake, he even forgot the regulative service to the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            When one is actually advanced in ecstatic love for Kṛṣṇa, eight transcendental, blissful symptoms are manifest in the body. Those are the symptoms of perfection arising from loving service to the Supreme Personality, of Godhead. Since Mahārāja Bharata was constantly, engaged in devotional service, all the symptoms of ecstatic love were manifest in his body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">61</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Bharata appeared very beautiful. He had a wealth of curly hair on his head, which was wet from bathing three times daily. He dressed in a deerskin. He worshiped Lord Nārāyaṇa, whose body was composed of golden effulgence and who resided within the sun. Mahārāja Bharata worshiped Lord Nārāyaṇa by chanting the hymns given in the Ṛg Veda, and he recited the following verse as the sun rose.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The predominating Deity within the sun is Hiraṇmaya. Lord Nārāyaṇa. He is worshiped by the Gāyatrī <span class="Italic">mantra:</span> <span class="Italic">oṁ bhūr bhuvaḥ svaḥ tat savitur vareṇyaṁ bhargo devasya dhīmahi.</span> He is also worshiped by other hymns mentioned in the <span class="Italic">Ṛg Veda,</span> for instance: <span class="Italic">dhyeyaḥ sadā savitṛ-maṇḍala-madhya-vartī.</span> Within the sun, Lord Nārāyaṇa is situated, and He has a golden hue.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">198</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            “The Supreme Personality of Godhead is situated in pure goodness. He illuminates the entire universe and bestows all benedictions upon His devotees. The Lord has created this universe from His own spiritual potency. According to His desire, the Lord entered this universe as the Supersoul, and by virtue of His different potencies, He is maintaining all living entities desiring material enjoyment. Let me offer my respectful obeisances unto the Lord, who is the giver of intelligence.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The predominating Deity of the sun is another expansion of Nārāyaṇa, who is illuminating the entire universe. The Lord enters the hearts of all living entities as the Supersoul, and He gives them intelligence and fulfills their material desires. This is also confirmed in <span class="Italic">Bhagavad-gītā.</span> <span class="Italic">Sarvasya cāhaṁ hṛdi sanniviṣṭaḥ.</span> “I am sitting in everyone’s heart.” (Bg. 15.15)
+          </p>
+          <p>
+            As the Supersoul, the Lord enters the hearts of all living entities. As stated in <span class="Ref_Italic">Brahma-saṁhitā</span> (5.35), <span class="Italic">aṇḍāntara-stha-paramāṇu-cayāntara-stham:</span> “He enters the universe and the atom as well.” In the <span class="Italic">Ṛg Veda,</span> the predominating Deity of the sun is worshiped by, this mantra: <span class="Italic">dhyeyaḥ sadā savitṛ-maṇḍala-madhya-varti nārāyaṇaḥ sarasijāsana-sanniviṣṭaḥ.</span> Nārāyaṇa sits on His lotus flower within the sun. By reciting this <span class="Italic">mantra,</span> every living entity should take shelter of Nārāyaṇa just as the sun rises. According to modern scientists, the material world rests on the sun’s effulgence. Due to the sunshine, all planets are rotating and vegetables are growing. We also have information that the moonshine helps vegetables and herbs grow. Actually Nārāyaṇa within the sun is maintaining the entire universe; therefore Nārāyaṇa should be worshiped by the Gāyatrī <span class="Italic">mantra</span> or the <span class="Italic">Ṛg mantra.</span>
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Seventh Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The activities of King Bharata.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/7">https://prabhupadabooks.com/sb/5/7</a><!-- span.text_source_copied_date
+        | on 2023-01-22 15:31:37 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.6: The Activities of Lord Rsabhadeva     Next: SB 5.8: A Description of the Character of Bharata Maharaja</div>
+      </p>
+    </div>
+  </body>
+</html>
