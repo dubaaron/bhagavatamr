@@ -141,6 +141,11 @@ html lang='en'
       .Italic { /* holdover from source */
         font-style: italic;
       }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+
+      }
 
   body
     div.prose.lg:prose-2xl.m-auto.container.p-4
@@ -151,7 +156,7 @@ html lang='en'
 
       / - binding.pry
       - unless summary.empty?
-        / - binding.pry
+        h3 Chapter Summary
         div.summary== summary.to_s
 
       - verses.each do |verse_num, verse|
