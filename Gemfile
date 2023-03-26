@@ -15,6 +15,9 @@ gem 'nokogiri'
 # templating
 gem 'slim'
 
+gem 'pry-byebug'
+
 group :development do
-  gem 'pry'
+  # gem 'pry'
+  gem 'pry-byebug'
 end

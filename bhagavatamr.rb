@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'pry'
+require 'pry-byebug'
 
 =begin
 Todo:
@@ -25,15 +25,17 @@ Todo:
 
 require 'thor'
 class BhāgavatamrCLI < Thor
-  desc 'fetch CANTO CHAPTER', 'fetch and save HTML for chapter, defaults to 01.01'
-  def fetch_chapter canto = 1, chapter = 1
-    Bhāgavatamr.fetch_chapter canto, chapter
+  desc 'fetch BOOK CANTO CHAPTER', 'fetch and save HTML for chapter, defaults to SB 1.1'
+  def fetch_chapter book = 'sb', canto = 1, chapter = 1
+    Bhāgavatamr.fetch_chapter book, canto, chapter
   end
 
-  desc 'process CANTO CHAPTER', 'process HTML for chapter, default 01.01'
-  def process_chapter canto = 1, chapter = 1
-    Bhāgavatamr.process canto, chapter
+  desc 'process BOOK CANTO CHAPTER', 'process HTML for chapter, default SB 1.1'
+  def process_chapter book = 'sb', canto = 1, chapter = 1
+    Bhāgavatamr.process book, canto, chapter
   end
+
+
 
   def self.exit_on_failure?
     true
@@ -54,7 +56,7 @@ class Bhāgavatamr
     10 => '“The Summum Bonum”',
   }
 
-  def self.fetch_chapter(canto = 1, chapter = 1)
+  def self.fetch_chapter(book = 'sb', canto = 1, chapter = 1)
     require 'net/http'
     # require 'rubygems'
     require 'mechanize'
@@ -63,7 +65,8 @@ class Bhāgavatamr
 
     self.turn_off_links
 
-    chapter_url = URI("https://prabhupadabooks.com/sb/#{canto}/#{chapter}?d=1")
+
+    chapter_url = URI("https://prabhupadabooks.com/#{book}/#{canto}/#{chapter}?d=1")
   
     puts "Fetching Śrīmad-Bhāgavatam Canto #{canto}, Chapter #{chapter}, from #{chapter_url}"
     
@@ -76,7 +79,8 @@ class Bhāgavatamr
     require 'fileutils'
     FileUtils.mkdir_p OUTPUTDIR
   
-    output_file_name = self.get_rawhtml_filepath canto, chapter
+    output_file_name = self.get_rawhtml_filepath book, canto, chapter
+    binding.pry
     puts "Saving to '#{output_file_name}' ..."
     File.write(output_file_name, page.body)
     puts 'Done. Haribol!'.yellow.on_blue.bold, ''
@@ -84,13 +88,19 @@ class Bhāgavatamr
   end
 
 
-  def self.get_rawhtml_filepath canto, chapter
-    self.get_output_path canto, chapter, 'raw.html'
+  def self.get_rawhtml_filepath book, canto, chapter
+    self.get_output_path book, canto, chapter, 'raw.html'
   end
 
 
-  def self.get_output_path canto = 1, chapter = 1, name = 'raw.html'
-    "#{OUTPUTDIR}/%02d/%02d_#{name}" % [canto, chapter]
+  def self.get_output_path book = 'sb', canto = 1, chapter = 1, name = 'raw.html'
+    # make sure canto and chapter values are padded with zeroes for good filenames
+    # CC, etc, have 'adi', etc for "Canto" value
+    canto = "%02d" % [canto] if canto.is_a? Integer
+    chapter = "%02d" % [chapter]
+
+
+    "#{OUTPUTDIR}/#{book}/#{canto}/#{chapter}_#{name}"
   end
 
 
@@ -117,13 +127,14 @@ class Bhāgavatamr
   end
 
 
-  def self.process canto = 1, chapt_num = 1
-    raw_file = self.get_rawhtml_filepath canto, chapt_num
+  def self.process book = 'sb', canto = 1, chapt_num = 1
+    raw_file = self.get_rawhtml_filepath book, canto, chapt_num
     puts "Processing HTML from #{raw_file} ...", ''
 
+    binding.pry
     puts "Cleaning stuff up ..."
     fixed_html = self.fix_broken_ñ File.open(raw_file).read
-    File.write(self.get_output_path(canto, chapt_num, 'cleaned.html'), fixed_html)
+    File.write(self.get_output_path(book, canto, chapt_num, 'cleaned.html'), fixed_html)
 
     chapter = Chapter.new(canto, chapt_num)
     chapter.date_text_copied_from_source = File.mtime raw_file
@@ -154,6 +165,7 @@ class Bhāgavatamr
     unhandled_bits = []
 
     # the texts are inside a td width=90% currently; start with that
+    # for CC, they are in a <div class="text-box-5-percent">
     noko.css('td[width="90%"]').children.each do |el|
       output << el.content
       
@@ -224,6 +236,7 @@ class Bhāgavatamr
     end
 
     # put final verse onto the stack
+    binding.pry
     chapter.add_verse this_verse
 
     puts '', 'Unhandled bits:'.red, unhandled_bits, ''
