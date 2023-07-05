@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.18, The Prayers Offered to the Lord by the Residents of Jambūdvīpa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Eighteen:<br>The Prayers Offered to the Lord by the Residents of Jambūdvīpa
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">In this chapter Śukadeva Gosvāmī describes the different <span class="Italic">varṣas</span> of Jambūdvīpa and the incarnation of the Supreme Lord worshiped in each. The predominating ruler of Bhadrāśva-varṣa is Bhadraśravā. He and his many servants always worship the incarnation known as Lord Hayagrīva. At the end of each <span class="Italic">kalpa,</span> when the demon Ajñāna steals the Vedic knowledge, Lord Hayagrīva appears and preserves it. Then He delivers it to Lord Brahmā. In the land known as Hari-varṣa, the exalted devotee Prahlāda Mahārāja worships Lord Nṛsiṁhadeva. (The appearance of Lord Nṛsiṁhadeva is described in the Seventh Canto of <span class="Italic">Śrīmad-Bhāgavatam.</span>) Following in the footsteps of Prahlāda Mahārāja, the inhabitants of Hari-varṣa always worship Lord Nṛsiṁhadeva to receive from Him the benediction of being engaged in His loving service. In the tract of land known as Ketumāla-varṣa, the Supreme Personality of Godhead (Lord Hṛṣīkeśa) appears in the form of Cupid. The goddess of fortune and the demigods living there engage in His service day and night. Manifesting Himself in sixteen parts, Lord Hṛṣīkeśa is the source of all encouragement, strength and influence. The conditioned living entity has the defect of being always fearful, but simply by the mercy of the Supreme Personality of Godhead, he can rid himself of this defect of material life. Therefore the Lord alone can be addressed as master. In the tract of land known as Ramyaka-varṣa, Manu and all the inhabitants worship Matsyadeva to this very day. Matsyadeva, whose form is pure goodness, is the ruler and maintainer of the whole universe, and as such He is the director of all the demigods, headed by King Indra. In Hiraṇmaya-varṣa Lord Viṣṇu has assumed the form of a tortoise (Kūrma <span class="Italic">mūrti</span>) and is worshiped there by Aryamā, along with all the other residents. Similarly, in the tract of land known as Uttarakuru-varṣa, Lord Śrī Hari has assumed the form of a boar, and in that form He accepts service from all the inhabitants living there.</div><div class="Normal-Level">All the information in this chapter can be fully realized by one who associates with devotees of the Lord. Therefore in the <span class="Italic">śāstras</span> it is recommended that one associate with devotees. This is better than residing on the banks of the Ganges. In the hearts of pure devotees reside all good sentiments as well as all the superior qualities of the demigods. In the hearts of nondevotees, however, there cannot be any good qualities, for such people are simply enchanted by the external, illusory energy of the Lord. Following in the footsteps of devotees, one should know that the Supreme Personality of Godhead is the only worshipable Deity. Everyone should accept this proposal and worship the Lord. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">vedaiś ca sarvair aham eva vedyaḥ:</span> the purpose of studying all Vedic literature is to worship the Supreme Personality of Godhead, Kṛṣṇa. If after studying all the Vedic literature, one does not awaken his dormant love for the Supreme Lord, it is to be understood that he has labored for nothing. He has simply wasted his time. Lacking attachment for the Supreme Personality of Godhead, he remains attached to family life in this material world. Thus the lesson of this chapter is that one should get out of family life and completely take shelter of the lotus feet of the Lord.</div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Bhadraśravā, the son of Dharmarāja, rules the tract of land known as Bhadrāśva-varṣa. Just as Lord Śiva worships Saṅkarṣaṇa in Ilāvṛta-varṣa, Bhadraśravā, accompanied by his intimate servants and all the residents of the land, worships the plenary expansion of Vāsudeva known as Hayaśīrṣa. Lord Hayaśīrṣa is very dear to the devotees, and He is the director of all religious principles. Fixed in the topmost trance, Bhadraśravā and his associates offer their respectful obeisances to the Lord and chant the following prayers with careful pronunciation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">247</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ruler Bhadraśravā and his intimate associates utter the following prayer: We offer our respectful obeisances unto the Supreme Personality of Godhead, the reservoir of all religious principles, who cleanses the heart of the conditioned soul in this material world. Again and again we offer our respectful obeisances unto Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            Foolish materialistic persons do not know how they are being controlled and punished at every step by the laws of nature. They think they are very happy in the conditioned state of material life, not knowing the purpose of repeated birth, death, old age and disease. Therefore in <span class="Ref_Italic">Bhagavad-gītā</span> (7.15) Lord Kṛṣṇa describes such materialistic persons as <span class="Italic">mūḍhas</span> (rascals): <span class="Italic">na māṁ duṣkṛtino mūḍhāḥ prapadyante narādhamāḥ.</span> These <span class="Italic">mūḍhas</span> do not know that if they want to purify themselves, they must worship Lord Vāsudeva (Kṛṣṇa) by performing penances and austerities. This purification is the aim of human life. This life is not meant for blind indulgence in sense gratification. In the human form, the living being must engage himself in Kṛṣṇa consciousness to purify his existence: <span class="Italic">tapo divyaṁ putrakā yena sattvaṁ śuddhyet.</span> This is the instruction of King Ṛṣabhadeva to His sons. In the human form of life, one must undergo all kinds of austerities to purify his existence. <span class="Italic">Yasmād brahma-saukhyaṁ tv anantam.</span> We are all seeking happiness, but because of our ignorance and foolishness, we cannot know what unobstructed happiness really is. Unobstructed happiness is called <span class="Italic">brahma-saukhya,</span> spiritual happiness. Although we may get some so-called happiness in this material world, that happiness is temporary. The foolish materialists cannot understand this. Therefore Prahlāda Mahārāja points out, <span class="Italic">māyā-sukhāya bharam udvahato vimūḍhān: [SB </span>7.9.43] merely for temporary materialistic happiness, these rascals are making huge arrangements, and thus they are baffled life after life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">311</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas! How wonderful it is that the foolish materialist does not heed the great danger of impending death! He knows that death will surely come, yet he is nevertheless callous and neglectful. If his father dies, he wants to enjoy his father’s property, and if his son dies, he wants to enjoy his son’s possessions as well. In either case, he heedlessly tries to enjoy material happiness with the acquired money.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Material happiness means to have good facilities for eating, sleeping, sexual intercourse and defense. Within this world, the materialistic person lives only for these four principles of sense gratification, not caring for the impending danger of death. After his father’s death, a son tries to inherit his money and use it for sense gratification. Similarly, one whose son dies tries to enjoy the possessions of his son. Sometimes the father of a dead son even enjoys his son’s widow. Materialistic persons behave in this way. Thus Śukadeva Gosvāmī says, “How wonderful are these pastimes of material happiness transacted by the will of the Supreme Personality of Godhead!” In other words, materialistic persons want to commit all kinds of sinful activities, but without the sanction of the Supreme Personality of Godhead, no one can do anything. Why does the Supreme Personality of Godhead permit sinful activities? The Supreme Lord does not want any living being to act sinfully, and He begs him through his good conscience to refrain from sin. But when someone insists upon acting sinfully, the Supreme Lord gives him the sanction to act at his own risk (<span class="Italic">mattaḥ smṛtir jñānam apohanaṁ ca</span> [Bg. 15.15]). No one can do anything without the sanction of the Lord, but He is so kind that when the conditioned soul persists in doing something, the Lord permits the individual soul to act at his own risk.
+          </p>
+          <p>
+            According to Śrīla Viśvanātha Cakravartī Ṭhākura, sons always outlive their fathers in other planetary systems and other lands in this universe, especially on Svargaloka. However, on this planet earth a son often dies before his father, and the materialistic father is pleased to enjoy the possessions of his son. Neither the father nor the son can see the reality—that both of them are awaiting death. When death comes, however, all their plans for material enjoyment are finished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">381</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O unborn one, learned Vedic scholars who are advanced in spiritual knowledge certainly know that this material world is perishable, as do other logicians and philosophers. In trance they realize the factual position of this world, and they preach the truth as well. Yet even they are sometimes bewildered by Your illusory energy. This is Your own wonderful pastime. Therefore, I can understand that Your illusory energy is very wonderful, and I offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Not only does the illusory energy of the Supreme Personality of Godhead act on the conditioned soul within this material world, but sometimes it also acts on the most advanced learned scholars, who factually know the constitutional position of this material world through realization. As soon as someone thinks, “I am this material body (<span class="Italic">ahaṁ mameti [SB </span>5.5.8]) and everything in relationship with this material body is mine,” he is in illusion (<span class="Italic">moha</span>). This illusion caused by the material energy acts especially on the conditioned souls, but it sometimes also acts on liberated souls as well. A liberated soul is a person who has sufficient knowledge of this material world and is therefore unattached to the bodily conception of life. But because of association with the modes of material nature for a very long time, even liberated souls sometimes become captivated by the illusory energy due to inattentiveness in the transcendental position. Therefore Lord Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.14), <span class="Italic">mām eva ye prapadyante māyām etāṁ taranti te:</span> “Only those who surrender unto Me can overcome the influence of the material energy.” Therefore no one should think of himself as a liberated person immune to the influence of <span class="Italic">māyā.</span> Everyone should very cautiously execute devotional service by rigidly following regulative principles. Thus he will remain fixed at the lotus feet of the Lord. Otherwise, a little inattention will create havoc. We have already seen an example of this in the case of Mahārāja Bharata. Mahārāja Bharata was undoubtedly a great devotee, but because he turned his attention slightly toward a small deer, he had to suffer two more births, one as a deer and another as the <span class="Italic">brāhmaṇa</span> Jaḍa Bharata. Afterward he was liberated and went back home, back to Godhead.
+          </p>
+          <p>
+            The Lord is always prepared to excuse His devotee, but if a devotee takes advantage of the Lord’s leniency and purposefully commits mistakes again and again, the Lord will certainly punish him by letting him fall down into the clutches of the illusory energy. In other words, theoretical knowledge acquired by studying the <span class="Italic">Vedas</span> is insufficient to protect one from the clutches of <span class="Italic">māyā.</span> One must strongly adhere to the lotus feet of the Lord in devotional service. Then one’s position is secure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Lord, although You are completely detached from the creation, maintenance and annihilation of this material world and are not directly affected by these activities, they are all attributed to You. We do not wonder at this, for Your inconceivable energies perfectly qualify You to be the cause of all causes. You are the active principle in everything, although You are separate from everything. Thus we can realize that everything is happening because of Your inconceivable energy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">84</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At the end of the millennium, ignorance personified assumed the form of a demon, stole all the Vedas and took them down to the planet of Rasātala. The Supreme Lord, however, in His form of Hayagrīva retrieved the Vedas and returned them to Lord Brahmā when he begged for them. I offer my respectful obeisances unto the Supreme Lord, whose determination never fails.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Although Vedic knowledge is imperishable, within this material world it is sometimes manifest and sometimes not. When the people of this material world become too absorbed in ignorance, the Vedic knowledge disappears. Lord Hayagrīva or Lord Matsya, however, always protects the Vedic knowledge, and in due course of time it is again distributed through the medium of Lord Brahmā. Brahmā is the trustworthy representative of the Supreme Lord. Therefore when he again asked for the treasure of Vedic knowledge, the Lord fulfilled his desire.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">279</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, Lord Nṛsiṁhadeva resides in the tract of land known as Hari-varṣa. In the Seventh Canto of Śrīmad-Bhāgavatam, I shall describe to you how Prahlāda Mahārāja caused the Lord to assume the form of Nṛsiṁhadeva. Prahlāda Mahārāja, the topmost devotee of the Lord, is a reservoir of all the good qualities of great personalities. His character and activities have delivered all the fallen members of his demoniac family. Lord Nṛsiṁhadeva is very dear to this exalted personality. Thus Prahlāda Mahārāja, along with his servants and all the denizens of Hari-varṣa, worships Lord Nṛsiṁhadeva by chanting the following mantra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Jayadeva Gosvāmī’s ten prayers worshiping the incarnations of Lord Kṛṣṇa (Keśava) contain His name in every stanza. For example, <span class="Italic">keśava dhṛta-nara-hari-rūpa jaya jagad-īśa hare, keśava dhṛta-mīna-śarīra jaya jagad-īśa hare,</span> and <span class="Italic">keśava dhṛta-vāmana-rūpa jaya jagad-īśa hare.</span> The word <span class="Italic">jagad-īśa</span> refers to the proprietor of all the universes. His original form is the two-handed form of Lord Kṛṣṇa, standing with a flute in His hands and engaged in tending the cows. As stated in <span class="Italic">Brahma-saṁhitā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">cintāmaṇi-prakara-sadmasu kalpa-vṛkṣa-<br>lakṣāvṛteṣu surabhīr abhipālayantam<br>lakṣmī-sahasra-śata-sambhrama-sevyamānaṁ<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi<br><span class="Italic"> [Bs. </span>5.29]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship Govinda, the primeval Lord, the first progenitor, who is tending the cows, yielding all desires, in abodes built with spiritual gems and surrounded by millions of purpose trees. He is always served with great reverence and affection by hundreds and thousands of goddesses of fortune.” From this verse we learn that Govinda, or Kṛṣṇa, is the <span class="Italic">ādi-puruṣa</span> (the original person). The Lord has innumerable incarnations, exactly like the innumerable waves of a flowing river, but the original form is Kṛṣṇa, or Keśava.
+          </p>
+          <p>
+            Śukadeva Gosvāmī refers to Nṛsiṁhadeva because of Prahlāda Mahārāja. Prahlāda Mahārāja was put into great distress by his powerful father, the demon Hiraṇyakaśipu. Apparently helpless before him, Prahlāda Mahārāja called on the Lord, who immediately assumed the gigantic form of Nṛsiṁhadeva, half-lion and half-man, to kill the gigantic demon. Although Kṛṣṇa is the original person, one without a second, He assumes different forms just to satisfy His devotees or to execute a specific purpose. Therefore Jayadeva Gosvāmī always repeats the name of Keśava, the original Personality of Godhead, in his prayers describing the Lord’s different incarnations for different purposes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">334</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I offer my respectful obeisances unto Lord Nṛsiṁhadeva, the source of all power. O my Lord who possesses nails and teeth just like thunderbolts, kindly vanquish our demonlike desires for fruitive activity in this material world. Please appear in our hearts and drive away our ignorance so that by Your mercy we may become fearless in the struggle for existence in this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (4.22.39) Sanat-kumāra speaks the following words to Mahārāja Pṛthu:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yat-pāda-paṅkaja-palāśa-vilāsa-bhaktyā<br>karmāśayaṁ grathitam udgrathayanti santaḥ<br>tadvan na rikta-matayo yatayo ’pi ruddha-<br>srotogaṇās tam araṇaṁ bhaja vāsudevam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Devotees always engaged in the service of the toes of the Lord’s lotus feet can very easily become free from hard-knotted desires for fruitive activities. Because this is very difficult, the nondevotees—the <span class="Italic">jñānīs</span> and <span class="Italic">yogīs</span>—cannot stop the waves of sense gratification, although they try to do so. Therefore you are advised to engage in the devotional service of Kṛṣṇa, the son of Vasudeva.”
+          </p>
+          <p>
+            Every living being within this material world has a strong desire to enjoy matter to his fullest satisfaction. For this purpose, the conditioned soul must accept one body after another, and thus his strongly fixed fruitive desires continue. One cannot stop the repetition of birth and death without being completely desireless. Therefore Śrīla Rūpa Gosvāmī describes pure <span class="Italic">bhakti</span> (devotional service) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā<br> [Madhya 19.167]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.” Unless one is completely freed of all material desires, which are caused by the dense darkness of ignorance, one cannot fully engage in the devotional service of the Lord. Therefore we should always offer our prayers to Lord Nṛsiṁhadeva, who killed Hiraṇyakaśipu, the personification of material desire. <span class="Italic">Hiraṇya</span> means “gold,” and <span class="Italic">kaśipu</span> means “a soft cushion or bed.” Materialistic persons always desire to make the body comfortable, and for this they require huge amounts of gold. Thus Hiraṇyakaśipu was the perfect representative of materialistic life. He was therefore the cause of great disturbance to the topmost devotee, Prahlāda Mahārāja, until Lord Nṛsiṁhadeva killed him. Any devotee aspiring to be free of material desires should offer his respectful prayers to Nṛsiṁhadeva as Prahlāda Mahārāja did in this verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">879</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May there be good fortune throughout the universe, and may all envious persons be pacified. May all living entities become calm by practicing bhakti-yoga, for by accepting devotional service they will think of each other’s welfare. Therefore let us all engage in the service of the supreme transcendence, Lord Śrī Kṛṣṇa, and always remain absorbed in thought of Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The following verse describes a Vaiṣṇava:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāñchā-kalpa-tarubhyaś ca<br>kṛpā-sindhubhya eva ca<br>patitānāṁ pāvanebhyo<br>vaiṣṇavebhyo namo namaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Just like a desire tree, a Vaiṣṇava can fulfill all the desires of anyone who takes shelter of his lotus feet. Prahlāda Mahārāja is a typical Vaiṣṇava. He prays not for himself, but for all living entities—the gentle, the envious and the mischievous. He always thought of the welfare of mischievous persons like his father, Hiraṇyakaśipu. Prahlāda Mahārāja did not ask for anything for himself; rather, he prayed for the Lord to excuse his demoniac father. This is the attitude of a Vaiṣṇava, who always thinks of the welfare of the entire universe.
+          </p>
+          <p>
+            <span class="Italic">Śrīmad-Bhāgavatam</span> and <span class="Italic">bhāgavata-dharma</span> are meant for persons who are completely free of envy (<span class="Italic">parama-nirmatsarāṇām</span>). Therefore Prahlāda Mahārāja prays in this verse, <span class="Italic">khalaḥ prasīdatām:</span> “May all the envious persons be pacified.” The material world is full of envious persons, but if one frees himself of envy, he becomes liberal in his social dealings and can think of others’ welfare. Anyone who takes up Kṛṣṇa consciousness and engages himself completely in the service of the Lord cleanses his mind of all envy (<span class="Italic">manaś ca bhadraṁ bhajatād adhokṣaje</span>). Therefore we should pray to Lord Nṛsiṁhadeva to sit in our hearts. We should pray, <span class="Italic">bahir nṛsiṁho hṛdaye nṛsiṁhaḥ:</span> “Let Lord Nṛsiṁhadeva sit in the core of my heart, killing all my bad propensities. Let my mind become clean so that I may peacefully worship the Lord and bring peace to the entire world.”
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura has given us a very fine purport in this regard. Whenever one offers a prayer to the Supreme Personality of Godhead, one always requests some benediction from Him. Even pure (<span class="Italic">niṣkāma</span>) devotees pray for some benediction, as instructed by Lord Śrī Caitanya Mahāprabhu in His <span class="Italic">Śikṣāṣṭaka:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ayi nanda-tanuja kiṅkaraṁ<br>patitaṁ māṁ viṣame bhavāmbudhau<br>kṛpayā tava pāda-paṅkaja-<br>sthita-dhūlī-sadṛśaṁ vicintaya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Mahārāja Nanda [Kṛṣṇa], I am Your eternal servitor, yet somehow or other I have fallen into the ocean of birth and death. Please pick Me up from the ocean of death and place Me as one of the atoms at Your lotus feet.” In another prayer Lord Caitanya says, <span class="Italic">mama janmani janmanīśvare bhavatād bhaktir ahaitukī tvayi:</span> “Life after life, kindly let Me have unalloyed love and devotion at Your Lordship’s lotus feet.” When Prahlāda Mahārāja chants <span class="Italic">oṁ namo bhagavate narasiṁhāya,</span> he prays for a benediction from the Lord, but because he is also an exalted Vaiṣṇava, he wants nothing for his personal sense gratification. The first desire expressed in his prayer is <span class="Italic">svasty astu viśvasya:</span> “Let there be good fortune throughout the entire universe.” Prahlāda Mahārāja thus requested the Lord to be merciful to everyone, including his father, a most envious person. According to Cāṇakya Paṇḍita, there are two kinds of envious living entities: one is a snake, and the other is the man like Hiraṇyakaśipu, who is by nature envious of everyone, even of his father or son. Hiraṇyakaśipu was envious of his little son Prahlāda, but Prahlāda Mahārāja asked a benediction for the benefit of his father. Hiraṇyakaśipu was very envious of devotees, but Prahlāda wished that his father and other demons like him would give up their envious nature by the grace of the Lord and stop harassing the devotees (<span class="Italic">khalaḥ prasīdatām</span>). The difficulty is that the <span class="Italic">khala</span> (envious living entity) is rarely pacified. One kind of <span class="Italic">khala,</span> the snake, can be pacified simply by <span class="Italic">mantras</span> or by the action of a particular herb (<span class="Italic">mantrauṣadhi-vaśaḥ sarpaḥ khalakena nivāryate</span>). An envious person, however, cannot be pacified by any means. Therefore Prahlāda Mahārāja prays that all envious persons may undergo a change of heart and think of the welfare of others.
+          </p>
+          <p>
+            If the Kṛṣṇa consciousness movement spreads all over the world, and if by the grace of Kṛṣṇa everyone accepts it, the thinking of envious people will change. Everyone will think of the welfare of others. Therefore Prahlāda Mahārāja prays, <span class="Italic">śivaṁ mitho dhiyā.</span> In material activities, everyone is envious of others, but in Kṛṣṇa consciousness, no one is envious of anyone else; everyone thinks of the welfare of others. Therefore Prahlāda Mahārāja prays that everyone’s mind may become gentle by being fixed at the lotus feet of Kṛṣṇa (<span class="Italic">bhajatād adhokṣaje</span>). As indicated elsewhere in <span class="Italic">Śrīmad-Bhāgavatam</span> (<span class="Italic">sa vai manaḥ kṛṣṇa-padāravindayoḥ</span>) and as advised by Lord Kṛṣṇa in <span class="Ref_Italic">Bhagavad-gītā</span> (18.65), <span class="Italic">man-manā bhava mad-bhaktaḥ,</span> one should constantly think of the lotus feet of Lord Kṛṣṇa. Then one’s mind will certainly be cleansed (<span class="Italic">ceto-darpaṇa-mārjanam [Cc. Antya 20.12]</span>). Materialists always think of sense gratification, but Prahlāda Mahārāja prays that the Lord’s mercy will change their minds and they will stop thinking of sense gratification. If they think of Kṛṣṇa always, everything will be all right. Some people argue that if everyone thought of Kṛṣṇa in that way, the whole universe would be vacated because everyone would go back home, back to Godhead. However, Śrīla Viśvanātha Cakravartī Ṭhākura says that this is impossible because the living entities are innumerable. If one set of living entities is actually delivered by the Kṛṣṇa consciousness movement, another set will fill the entire universe.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">246</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, we pray that we may never feel attraction for the prison of family life, consisting of home, wife, children, friends, bank balance, relatives and so on. If we do have some attachment, let it be for devotees, whose only dear friend is Kṛṣṇa. A person who is actually self-realized and who has controlled his mind is perfectly satisfied with the bare necessities of life. He does not try to gratify his senses. Such a person quickly advances in Kṛṣṇa consciousness, whereas others, who are too attached to material things, find advancement very difficult.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            When Śrī Kṛṣṇa Caitanya Mahāprabhu was requested to explain the duty of a Vaiṣṇava, a Kṛṣṇa conscious person, He immediately said, <span class="Italic">asat-saṅga-tyāga—ei vaiṣṇava-ācāra.</span> The first business of a Vaiṣṇava is to give up the association of persons who are not devotees of Kṛṣṇa and who are too attached to material things—wife, children, bank balance and so on. Prahlāda Mahārāja also prays to the Personality of Godhead that he may avoid the association of nondevotees attached to the materialistic way of life. If he must be attached to someone, he prays to be attached only to a devotee.
+          </p>
+          <p>
+            A devotee is not interested in unnecessarily increasing the demands of the senses for gratification. Of course, as long as one is in this material world, one must have a material body, and it must be maintained for executing devotional service. The body can be maintained very easily by eating <span class="Italic">kṛṣṇa-prasāda.</span> As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.26):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">patraṁ puṣpaṁ phalaṁ toyaṁ<br>yo me bhaktyā prayacchati<br>tad ahaṁ bhakty-upahṛtam<br>aśnāmi prayatātmanaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “If one offers Me with love and devotion a leaf, a flower, fruit or water, I will accept it.” Why should the menu be unnecessarily increased for the satisfaction of the tongue? Devotees should eat as simply as possible. Otherwise, attachment for material things will gradually increase, and the senses, being very strong, will soon require more and more material enjoyment. Then the real business of life—to advance in Kṛṣṇa consciousness—will stop.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">488</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By associating with persons for whom the Supreme Personality of Godhead, Mukunda, is the all in all, one can hear of His powerful activities and soon come to understand them. The activities of Mukunda are so potent that simply by hearing of them one immediately associates with the Lord. For a person who constantly and very eagerly hears narrations of the Lord’s powerful activities, the Absolute Truth, the Personality of Godhead in the form of sound vibrations, enters within his heart and cleanses it of all contamination. On the other hand, although bathing in the Ganges diminishes bodily contaminations and infections, this process and the process of visiting holy places can cleanse the heart only after a long time. Therefore who is the sane man who will not associate with devotees to quickly perfect his life?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Bathing in the Ganges can certainly cure one of many infectious diseases, but it cannot cleanse one’s materially attached mind, which creates all kinds of contaminations in material existence. However, one who directly associates with the Supreme Lord by hearing of His activities cleanses the dirt from his mind and very soon comes to Kṛṣṇa consciousness. Sūta Gosvāmī confirms this in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.17):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śṛṇvatāṁ sva-kathāḥ kṛṣṇaḥ<br>puṇya-śravaṇa-kīrtanaḥ<br>hṛdy antaḥ-stho hy abhadrāṇi<br>vidhunoti suhṛt-satām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The Supreme Lord within everyone’s heart becomes very pleased when a person hears narrations of His activities, and He personally cleanses the dirt from the mind of the listener. <span class="Italic">Hṛdy antaḥ-stho hy abhadrāṇi vidhunoti:</span> He washes off all dirt from the mind. Material existence is caused by dirty things within the mind. If one can cleanse his mind, he immediately comes to his original position of Kṛṣṇa consciousness, and thus his life becomes successful. Therefore all the great saints in the devotional line very strongly recommend the process of hearing. Śrī Caitanya Mahāprabhu introduced the congregational chanting of the Hare Kṛṣṇa <span class="Italic">mantra</span> to give everyone a chance to hear Kṛṣṇa’s holy name, for simply by hearing Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare, one becomes purified (<span class="Italic">ceto-darpaṇa-mārjanam [Cc. Antya 20.12]</span>). Therefore our Kṛṣṇa consciousness movement is chiefly engaged in chanting the Hare Kṛṣṇa <span class="Italic">mantra</span> all over the world.
+          </p>
+          <p>
+            After one’s mind becomes cleansed by chanting Hare Kṛṣṇa, one gradually comes to the platform of Kṛṣṇa consciousness and then reads books like <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">Śrīmad-Bhāgavatam, Caitanya-caritāmṛta</span> and <span class="Italic">The Nectar of Devotion.</span> In this way, one becomes more and more purified of material contamination. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.18):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">naṣṭa-prāyeṣv abhadreṣu<br>nityaṁ bhāgavata-sevayā<br>bhagavaty uttama-śloke<br>bhaktir bhavati naiṣṭhikī</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By regularly hearing the <span class="Italic">Bhāgavatam</span> and rendering service unto the pure devotee, all that is troublesome to the heart is practically destroyed, and loving service unto the glorious Lord, who is praised with transcendental songs, is established as an irrevocable fact.” In this way, simply by hearing of the powerful activities of the Lord, the devotee’s heart becomes almost completely cleansed of material contamination, and thus his original position as an eternal servant who is part and parcel of the Lord becomes manifest. While the devotee engages in devotional service, the passionate and ignorant modes of material nature are gradually vanquished, and then he acts only in the mode of goodness. At that time he becomes happy and gradually advances in Kṛṣṇa consciousness.
+          </p>
+          <p>
+            All the great <span class="Italic">ācāryas</span> strongly recommend that people be given a chance to hear about the Supreme Lord. Then success is assured. The more we cleanse the dirt of material attachment from our hearts, the more we will be attracted by Kṛṣṇa’s name, form, qualities, paraphernalia and activities. This is the sum and substance of the Kṛṣṇa consciousness movement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">431</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All the demigods and their exalted qualities, such as religion, knowledge and renunciation, become manifest in the body of one who has developed unalloyed devotion for the Supreme Personality of Godhead, Vāsudeva. On the other hand, a person devoid of devotional service and engaged in material activities has no good qualities. Even if he is adept at the practice of mystic yoga or the honest endeavor of maintaining his family and relatives, he must be driven by his own mental speculations and must engage in the service of the Lord’s external energy. How can there be any good qualities in such a man?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            As explained in the next verse, Kṛṣṇa is the original source of all living entities. This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (15.7), wherein Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mamaivāṁśo jīva-loke<br>jīva-bhūtaḥ sanātanaḥ<br>manaḥ ṣaṣṭhānīndriyāṇi<br>prakṛti-sthāni karṣati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The living entities in this conditioned world are My eternal, fragmental parts. Due to conditioned life, they are struggling very hard with the six senses, which include the mind.” All living entities are part and parcel of Kṛṣṇa, and therefore when they revive their original Kṛṣṇa consciousness, they possess all the good qualities of Kṛṣṇa in a small quantity. When one engages himself in the nine processes of devotional service (<span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam/ arcanaṁ vandanaṁ dāsyaṁ sakhyam ātma-nivedanam [SB </span>7.5.23]), one’s heart becomes purified, and he immediately understands his relationship with Kṛṣṇa. He then revives his original quality of Kṛṣṇa consciousness.
+          </p>
+          <p>
+            In the <span class="Italic">Ādi-līlā</span> of <span class="Italic">Caitanya-caritāmṛta,</span> Chapter Eight, there is a description of some of the qualities of devotees. For example, Śrī Paṇḍita Haridāsa is described as being very well-behaved, tolerant, peaceful, magnanimous and grave. In addition, he spoke very sweetly, his endeavors were very pleasing, he was always patient, he respected everyone, he always worked for everyone’s benefit, his mind was free of duplicity, and he was completely devoid of all malicious activities. These are all originally qualities of Kṛṣṇa, and when one becomes a devotee they automatically become manifest. Śrī Kṛṣṇadāsa Kavirāja, the author of <span class="Italic">Caitanya-caritāmṛta,</span> says that all good qualities become manifest in the body of a Vaiṣṇava and that only by the presence of these good qualities can one distinguish a Vaiṣṇava from a non-Vaiṣṇava. Kṛṣṇadāsa Kavirāja lists the following twenty-six good qualities of a Vaiṣṇava: (1) He is very kind to everyone. (2) He does not make anyone his enemy. (3) He is truthful. (4) He is equal to everyone. (5) No one can find any fault in him. (6) He is magnanimous. (7) He is mild. (8) He is always clean. (9) He is without possessions. (10) He works for everyone’s benefit. (11) He is very peaceful. (12) He is always surrendered to Kṛṣṇa. (13) He has no material desires. (14) He is very meek. (15) He is steady. (16) He controls his senses. (17) He does not eat more than required. (18) He is not influenced by the Lord’s illusory energy. (19) He offers respect to everyone. (20) He does not desire any respect for himself. (21) He is very grave. (22) He is merciful. (23) He is friendly. (24) He is poetic. (25) He is expert. (26) He is silent.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">264</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just as aquatics always desire to remain in the vast mass of water, all conditioned living entities naturally desire to remain in the vast existence of the Supreme Lord. Therefore if someone very great by material calculations fails to take shelter of the Supreme Soul but instead becomes attached to material household life, his greatness is like that of a young, low-class couple. One who is too attached to material life loses all good spiritual qualities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Although crocodiles are very fierce animals, they are powerless when they venture out of the water onto land. When they are out of the water, they cannot exhibit their original power. Similarly, the all-pervading Supersoul, Paramātmā, is the source of all living entities, and all living entities are part and parcel of Him. When the living entity remains in contact with the all-pervading Vāsudeva, the Personality of Godhead, he manifests his spiritual power, exactly as the crocodile exhibits its strength in the water. In other words, the greatness of the living entity can be perceived when he is in the spiritual world, engaged in spiritual activities. Many householders, although well-educated in the knowledge of the <span class="Italic">Vedas,</span> become attached to family life. They are compared herein to crocodiles out of water, for they are devoid of all spiritual strength. Their greatness is like that of a young husband and wife who, though uneducated, praise one another and become attracted to their own temporary beauty. This kind of greatness is appreciated only by low-class men with no qualifications.
+          </p>
+          <p>
+            Everyone should therefore seek the shelter of the Supreme Soul, the source of all living entities. No one should waste his time in the so-called happiness of materialistic household life. In the Vedic civilization, this type of crippled life is allowed only until one’s fiftieth year, when one must give up family life and enter either the order of <span class="Italic">vānaprastha</span> (independent retired life for cultivation of spiritual knowledge) or <span class="Italic">sannyāsa</span> (the renounced order, in which one completely takes shelter of the Supreme Personality of Godhead).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, O demons, give up the so-called happiness of family life and simply take shelter of the lotus feet of Lord Nṛsiṁhadeva, which are the actual shelter of fearlessness. Entanglement in family life is the root cause of material attachment, indefatigable desires, moroseness, anger, despair, fear and the desire for false prestige, all of which result in the repetition of birth and death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">103</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: In the tract of land called Ketumāla-varṣa, Lord Viṣṇu lives in the form of Kāmadeva, only for the satisfaction of His devotees. These include Lakṣmījī [the goddess of fortune], the Prajāpati Saṁvatsara and all of Saṁvatsara’s sons and daughters. The daughters of Prajāpati are considered the controlling deities of the nights, and his sons are considered the controllers of the days. The Prajāpati’s offspring number 36,000, one for each day and each night in the lifetime of a human being. At the end of each year, the Prajāpati’s daughters become very agitated upon seeing the extremely effulgent disc of the Supreme Personality of Godhead, and thus they all suffer miscarriages.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            This Kāmadeva, who appears as Kṛṣṇa’s son named Pradyumna, is <span class="Italic">viṣṇu-tattva.</span> How this is so is explained by Madhvācārya, who quotes from the <span class="Italic">Brahmāṇḍa Purāṇa:</span> <span class="Italic">kāmadeva-sthitaṁ viṣṇum upāste.</span> Although this Kāmadeva is <span class="Italic">viṣṇu-tattva,</span> His body is not spiritual but material. Lord Viṣṇu as Pradyumna or Kāmadeva accepts a material body, but He still acts spiritually. It does not make any difference whether He accepts a spiritual or a material body; He can act spiritually in any condition of existence. Māyāvādī philosophers regard even Lord Kṛṣṇa’s body as material, but their opinions cannot impede the spiritual activity of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Ketumāla-varṣa, Lord Kāmadeva [Pradyumna] moves very graciously. His mild smile is very beautiful, and when He increases the beauty of His face by slightly raising His eyebrows and glancing playfully, He pleases the goddess of fortune. Thus He enjoys His transcendental senses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">176</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Accompanied during the daytime by the sons of the Prajāpati [the predominating deities of the days] and accompanied at night by his daughters [the deities of the nights], Lakṣmīdevī worships the Lord during the period known as the Saṁvatsara in His most merciful form as Kāmadeva. Fully absorbed in devotional service, she chants the following mantras.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            The word <span class="Italic">māyāmayam</span> used in this verse should not be understood according to the interpretations of the Māyāvādīs. <span class="Italic">Māyā</span> means affection as well as illusion. When a mother deals with her child affectionately, she is called <span class="Italic">māyāmaya.</span> In whatever form the Supreme Lord Viṣṇu appears, He is always affectionate toward His devotees. Thus the word <span class="Italic">māyāmayam</span> is used here to mean “very affectionate toward the devotees.” Śrīla Jīva Gosvāmī writes in this regard that <span class="Italic">māyāmayam</span> can also mean <span class="Italic">kṛpā-pracuram,</span> deeply merciful. Similarly, Śrīla Vīrarāghava says, <span class="Italic">māyā-pracuranātmīya-saṅkalpena parigṛhītam ity arthaḥ jñāna-paryāyo’tra māyā-śabdaḥ:</span> when one is very affectionate due to an intimate relationship, one is described as <span class="Italic">māyāmaya.</span> Śrīla Viśvanātha Cakravartī Ṭhākura explains <span class="Italic">māyāmayam</span> by dividing it into the words <span class="Italic">māyā</span> and <span class="Italic">āmayam.</span> He explains these words to indicate that because the living entity is covered by the disease of illusion, the Lord is always eager to deliver His devotee from the clutches of <span class="Italic">māyā</span> and cure him of the disease caused by the illusory energy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">262</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Let me offer my respectful obeisances unto the Supreme Personality of Godhead, Lord Hṛṣīkeśa, the controller of all my senses and the origin of everything. As the supreme master of all bodily, mental and intellectual activities, He is the only enjoyer of their results. The five sense objects and eleven senses, including the mind, are His partial manifestations. He supplies all the necessities of life, which are His energy and thus nondifferent from Him, and He is the cause of everyone’s bodily and mental prowess, which is also nondifferent from Him. Indeed, He is the husband and provider of necessities for all living entities. The purpose of all the Vedas is to worship Him. Therefore let us all offer Him our respectful obeisances. May He always be favorable toward us in this life and the next.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            In this verse the word <span class="Italic">māyāmaya</span> is further explained in regard to how the Lord expands His mercy in different ways. <span class="Italic">parāsya śaktir vividhaiva śrūyate:</span> the energies of the Supreme Lord are understood in different ways. In this verse He is described as the original source of everything, even our body, senses, mind, activities, prowess, bodily strength, mental strength and determination for securing the necessities of life. Indeed, the Lord’s energies can be perceived in everything. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (7.8), <span class="Italic">raso ’ham apsu kaunteya:</span> the taste of water is also Kṛṣṇa. Kṛṣṇa is the active principle of everything we need for our maintenance.
+          </p>
+          <p>
+            This verse offering respectful obeisances unto the Lord was composed by Ramā, the goddess of fortune, and is full of spiritual power. Under the guidance of a spiritual master, everyone should chant this <span class="Italic">mantra</span> and thus become a complete and perfect devotee of the Lord. One may chant this <span class="Italic">mantra</span> for complete liberation from material bondage, and after liberation one may continue to chant it while worshiping the Supreme Lord in Vaikuṇṭhaloka. All <span class="Italic">mantras,</span> of course, are meant for this life and the next life, as Kṛṣṇa Himself confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (9.14):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">satataṁ kīrtayanto māṁ<br>yatantaś ca dṛḍha-vratāḥ<br>namasyantaś ca māṁ bhaktyā<br>nitya-yuktā upāsate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Always chanting My glories, endeavoring with great determination, bowing down before Me, the great souls perpetually worship Me with devotion.” A devotee who both in this life and the next chants the <span class="Italic">mahā-mantra,</span> or any <span class="Italic">mantra,</span> is called <span class="Italic">nitya-yuktopāsaka.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">520</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, You are certainly the fully independent master of all the senses. Therefore all women who worship You by strictly observing vows because they wish to acquire a husband to satisfy their senses are surely under illusion. They do not know that such a husband cannot actually give protection to them or their children. Nor can he protect their wealth or duration of life, for he himself is dependent on time, fruitive results and the modes of nature, which are all subordinate to You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            In this verse, Lakṣmīdevī (Ramā) shows compassion toward women who worship the Lord for the benediction of possessing a good husband. Although such women desire to be happy with children, wealth, a long duration of life and everything dear to them, they cannot possibly do so. In the material world, a so-called husband is dependent on the control of the Supreme Personality of Godhead. There are many examples of a woman whose husband, being dependent on the result of his own fruitive actions, cannot maintain his wife, her children, her wealth or her duration of life. Therefore, factually the only real husband of all women is Kṛṣṇa, the supreme husband. Because the <span class="Italic">gopīs</span> were liberated souls, they understood this fact. Therefore they rejected their material husbands and accepted Kṛṣṇa as their real husband. Kṛṣṇa is the real husband not only of the <span class="Italic">gopīs,</span> but of every living entity. Everyone should perfectly understand that Kṛṣṇa is the real husband of all living entities, who are described in the <span class="Italic">Bhagavad-gītā</span> as <span class="Italic">prakṛti</span> (female), not <span class="Italic">puruṣa</span> (male). In <span class="Ref_Italic">Bhagavad-gītā</span> (10.12), only Kṛṣṇa is addressed as <span class="Italic">puruṣa:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">paraṁ brahma paraṁ dhāma<br>pavitraṁ paramaṁ bhavān<br>puruṣaṁ śāśvataṁ divyam<br>ādi-devam ajaṁ vibhum</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “You are the Supreme Brahman, the ultimate, the supreme abode and purifier, the Absolute Truth and the eternal divine person. You are the primal God, transcendental and original, and You are the unborn and all-pervading beauty.”
+          </p>
+          <p>
+            Kṛṣṇa is the original <span class="Italic">puruṣa,</span> and the living entities are <span class="Italic">prakṛti.</span> Thus Kṛṣṇa is the enjoyer, and all living entities are meant to be enjoyed by Him. Therefore any woman who seeks a material husband for her protection, or any man who desires to become the husband of a woman, is under illusion. To become a husband means to maintain a wife and children nicely by supplying wealth and security. However, a material husband cannot possibly do this, for he is dependent on his <span class="Italic">karma.</span> <span class="Italic">Karmaṇā-daiva-netreṇa:</span> his circumstances are determined by his past fruitive activities. Therefore if one proudly thinks he can protect his wife, he is under illusion. Kṛṣṇa is the only husband, and therefore the relationship between a husband and wife in this material world cannot be absolute. Because we have the desire to marry, Kṛṣṇa mercifully allows the so-called husband to possess a wife, and the wife to possess a so-called husband, for mutual satisfaction. In the <span class="Italic">Īśopaniṣad</span> it is said, <span class="Italic">tena tyaktena bhuñjīthā:</span> the Lord provides everyone with his quota. Actually, however, every living entity is <span class="Italic">prakṛti,</span> or female, and Kṛṣṇa is the only husband.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ekale īśvara kṛṣṇa, āra saba bhṛtya<br>yāre yaiche nācāya, se taiche kare nṛtya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (Cc. <span class="Ref_Italic">Ādi</span> 5.142)
+          </p>
+          <p>
+            Kṛṣṇa is the original master or husband of everyone, and all other living entities, having taken the form of so-called husbands, or wives, are dancing according to His desire. A so-called husband may unite with his wife for sense gratification, but his senses are conducted by Hṛṣīkeśa, the master of the senses, who is therefore the actual husband.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">245</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            He alone who is never afraid but who, on the contrary, gives complete shelter to all fearful persons can actually become a husband and protector. Therefore, my Lord, you are the only husband, and no one else can claim this position. If you were not the only husband, You would be afraid of others. Therefore persons learned in all Vedic literature accept only Your Lordship as everyone’s master, and they think no one else a better husband and protector than You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Here the meaning of husband or guardian is clearly explained. people want to become a husband, a guardian, a governor or a political leader without knowing the actual meaning of such a superior position. There are many people all over the world—indeed, throughout the universe—who claim for some time that they are husbands, political leaders or guardians, but in due course of time the Supreme Lord desires their removal from their posts, and their careers are immediately finished. Therefore those who are actually learned and advanced in spiritual life do not accept any leader, husband or maintainer other than the Supreme Personality of Godhead.
+          </p>
+          <p>
+            Lord Kṛṣṇa personally states in <span class="Ref_Italic">Bhagavad-gītā</span> (18.66), <span class="Italic">ahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi:</span> “I shall deliver you from all sinful reactions.” Kṛṣṇa is not afraid of anyone. On the contrary, everyone is afraid of Kṛṣṇa. Therefore He can actually give protection to a subordinate living entity. Since so-called leaders or dictators are completely under the control of material nature, they can never give complete protection to others, although they claim this ability due to false prestige. <span class="Italic">Na te viduḥ svārtha-gatiṁ hi viṣṇum: [SB </span>7.5.31] people do not know that real advancement in life consists of accepting the Supreme Personality of Godhead as one’s master. Instead of deceiving themselves and others by pretending to be all-powerful, all political leaders, husbands and guardians should spread the Kṛṣṇa consciousness movement so that everyone can learn how to surrender to Kṛṣṇa, the supreme husband.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">599</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, You automatically fulfill all the desires of a woman who worships Your lotus feet in pure love. However, if a woman worships Your lotus feet for a particular purpose, You also quickly fulfill her desires, but in the end she becomes broken-hearted and laments. Therefore one need not worship Your lotus feet for some material benefit.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Śrīla Rūpa Gosvāmī describes pure devotional service as <span class="Italic">anyābhilāṣitā-śūnyaṁ jñāna-karmādy-anāvṛtam</span> [Madhya 19.167]<span class="Italic">.</span> One should not worship the Supreme Personality of Godhead to fulfill some material desire for success in fruitive activities or mental speculation. To serve the lotus feet of the Lord means to serve Him exactly as He desires. The neophyte devotee is therefore ordered to worship the Lord strictly according to the regulative principles given by the spiritual master and the <span class="Italic">śāstras.</span> By executing devotional service in that way, he gradually becomes attached to Kṛṣṇa, and when his original dormant love for the Lord becomes manifest, he spontaneously serves the Lord without any motive. This condition is the perfect stage of one’s relationship with the Lord. The Lord then looks after the comfort and security of His devotee without being asked. Kṛṣṇa promises in <span class="Ref_Italic">Bhagavad-gītā</span> (9.22):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ananyāś cintayanto māṁ<br>ye janāḥ paryupāsate<br>teṣāṁ nityābhiyuktānāṁ<br>yoga-kṣemaṁ vahāmy aham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The Supreme Lord personally takes care of anyone who is completely engaged in His devotional service. Whatever he has, the Lord protects, and whatever he needs, the Lord supplies. Therefore why should one bother the Lord for something material? Such prayers are unnecessary.
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura explains that even if a devotee wishes the Lord to fulfill a particular desire, the devotee should not be considered a <span class="Italic">sakāma-bhakta</span> (a devotee with some motive). In the <span class="Ref_Italic">Bhagavad-gītā</span> (7.16) Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">catur-vidhā bhajante māṁ<br>janāḥ sukṛtino ’rjuna<br>ārto jijñāsur arthārthī<br>jñānī ca bharatarṣabha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O best among the Bharatas [Arjuna], four kinds of pious men render devotional service unto Me—the distressed, the desirer of wealth, the inquisitive and he who is searching for knowledge of the Absolute.” The <span class="Italic">ārta</span> and the <span class="Italic">arthārthī,</span> who approach the Supreme Personality of Godhead for relief from misery or for some money, are not <span class="Italic">sakāma-bhaktas,</span> although they appear to be. Being neophyte devotees, they are simply ignorant. Later in <span class="Italic">Bhagavad-gītā</span> the Lord says, <span class="Italic">udārāḥ sarva evaite:</span> they are all magnanimous (<span class="Italic">udārāḥ</span>). Although in the beginning a devotee may harbor some desire, in due course of time it will vanish. Therefore the <span class="Italic">Śrīmad-Bhāgavatam</span> enjoins:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">akāmaḥ sarva-kāmo vā<br>mokṣa-kāma udāra-dhīḥ<br>tīvreṇa bhakti-yogena<br>yajeta puruṣaṁ param</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “A person who has broader intelligence, whether he is full of all material desire, is free from material desire, or has a desire for liberation, must by all means worship the supreme whole, the Personality of Godhead.” (<span class="Ref_Italic">Bhāg.</span> 2.3.10)
+          </p>
+          <p>
+            Even if one wants something material, he should pray to no one but the Lord to fulfill his desire. If one approaches a demigod for the fulfillment of his desires, he is to be considered <span class="Italic">naṣṭa-buddhi,</span> bereft of all good sense. Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.20):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kāmais tais tair hṛta-jñānāḥ<br>prapadyante ’nya-devatāḥ<br>taṁ taṁ niyamam āsthāya<br>prakṛtyā niyatāḥ svayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those whose minds are distorted by material desires surrender unto demigods and follow the particular rules and regulations of worship according to their own natures.”
+          </p>
+          <p>
+            Lakṣmīdevī advises all devotees who approach the Lord with material desires that according to her practical experience, the Lord is Kāmadeva, and thus there is no need to ask Him for anything material. She says that everyone should simply serve the Lord without any motive. Since the Supreme Personality of Godhead is sitting in everyone’s heart, He knows everyone’s thoughts, and in due course of time He will fulfill all desires. Therefore let us completely depend on the service of the Lord without bothering Him with our material requests.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">385</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O supreme unconquerable Lord, when they become absorbed in thoughts of material enjoyment, Lord Brahmā and Lord Śiva, as well as other demigods and demons, undergo severe penances and austerities to receive my benedictions. But I do not favor anyone, however great he may be; unless he is always engaged in the service of Your lotus feet. Because I always keep You within my heart, I cannot favor anyone but a devotee.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            In this verse the goddess of fortune, Lakṣmīdevī, clearly states that she does not bestow her favor on any materialistic person. Although sometimes a materialist becomes very opulent in the eyes of another materialist, such opulence is bestowed upon him by the goddess Durgādevī, a material expansion of the goddess of fortune, not by Lakṣmīdevī herself. Those who desire material wealth worship Durgādevī with the following <span class="Italic">mantra:</span> <span class="Italic">dhanaṁ dehi rūpaṁ dehi rūpa-pati-bhājaṁ dehi.</span> “O worshipable mother Durgādevī, please give me wealth, strength, fame, a good wife and so on.” By pleasing goddess Durgā one can obtain such benefits, but since they are temporary, they result only in <span class="Italic">māyā-sukha</span> (illusory happiness). As stated by Prahlāda Mahārāja, <span class="Italic">māyā-sukhāya bharam udvahato vimūḍhān: [SB </span>7.9.43] those who work very hard for material benefits are <span class="Italic">vimūḍhas,</span> foolish rascals, because such happiness will not endure. On the other hand, devotees like Prahlāda and Dhruva Mahārāja achieved extraordinary material opulences, but such opulences were not <span class="Italic">māyā-sukha.</span> When a devotee acquires unparalleled opulences, they are the direct gifts of the goddess of fortune, who resides in the heart of Nārāyaṇa.
+          </p>
+          <p>
+            The material opulences a person obtains by offering prayers to the goddess Durgā are temporary. As described in <span class="Ref_Italic">Bhagavad-gītā</span> (7.23), <span class="Italic">antavat tu phalaṁ teṣāṁ tad bhavaty alpa-medhasām:</span> men of meager intelligence desire temporary happiness. We have actually seen that one of the disciples of Bhaktisiddhānta Sarasvatī Ṭhākura wanted to enjoy the property of his spiritual master, and the spiritual master, being merciful toward him, gave him the temporary property, but not the power to preach the cult of Caitanya Mahāprabhu all over the world. That special mercy of the power to preach is given to a devotee who does not want anything material from his spiritual master but wants only to serve him. The story of the demon Rāvaṇa illustrates this point. Although Rāvaṇa tried to abduct the goddess of fortune Sītādevī from the custody of Lord Rāmacandra, he could not possibly do so. The Sītādevī he forcibly took with him was not the original Sītādevī, but an expansion of <span class="Italic">māyā,</span> or Durgādevī. As a result, instead of winning the favor of the real goddess of fortune, Rāvaṇa and his whole family were vanquished by the power of Durgādevī (<span class="Italic">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā [Bs. </span>5.44]).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">843</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O infallible one, Your lotus palm is the source of all benediction. Therefore Your pure devotees worship it, and You very mercifully place Your hand on their heads. I wish that You may also place Your hand on My head, for although You already bear my insignia of golden streaks on Your chest, I regard this honor as merely a kind of false prestige for me. You show Your real mercy to Your devotees, not to me. Of course, You are the supreme absolute controller, and no one can understand Your motives.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            In many places, the <span class="Italic">śāstras</span> describe the Supreme Personality of Godhead as being more inclined toward His devotees than toward His wife, who always remains on His chest. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.14.15) it is stated:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na tathā me priyatama<br>ātma-yonir na śaṅkaraḥ<br>na ca saṅkarṣaṇo na śrīr<br>naivātmā ca yathā bhavān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Here Kṛṣṇa plainly says that His devotees are more dear to Him than Lord Brahmā, Lord Śiva, Lord Saṅkarṣaṇa (the original cause of creation), the goddess of fortune or even His own Self. Elsewhere in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.9.20) Śukadeva Gosvāmī says,
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nemam viriñco na bhavo<br>na śrīr apy aṅga saṁśrayā<br>prasādaṁ lebhire gopī<br>yat tat prāpa vimuktidāt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The Supreme Lord, who can award liberation to anyone, showed more mercy toward the <span class="Italic">gopīs</span> than to Lord Brahmā, Lord Śiva or even the goddess of fortune, who is His own wife and is associated with His body. Similarly, <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.47.60) also states:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāyaṁ śriyo ’ṅga u nitānta-rateḥ prasādaḥ<br>svar-yoṣitāṁ nalina-gandha-rucāṁ kuto ’nyāḥ<br>rāsotsave ’sya bhuja-daṇḍa-gṛhīta-kaṇṭha-<br>labdhāśiṣāṁ ya udagād vraja-sundarīṇām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The <span class="Italic">gopīs</span> received benedictions from the Lord that neither Lakṣmīdevī nor the most beautiful dancers in the heavenly planets could attain. In the <span class="Italic">rāsa</span> dance, the Lord showed His favor to the most fortunate <span class="Italic">gopīs</span> by placing His arms on their shoulders and dancing with each of them individually. No one can compare with the <span class="Italic">gopīs,</span> who received the causeless mercy of the Lord.”
+          </p>
+          <p>
+            In the <span class="Italic">Caitanya-caritāmṛta</span> it is said that no one can receive the real favor of the Supreme Personality of Godhead without following in the footsteps of the <span class="Italic">gopīs.</span> Even the goddess of fortune could not receive the same favor as the <span class="Italic">gopīs,</span> although she underwent severe austerities and penances for many years. Lord Śrī Caitanya Mahāprabhu discusses this point with Vyeṅkaṭa Bhaṭṭa in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 9.111–131): “The Lord inquired from Vyeṅkaṭa Bhaṭṭa, ‘Your worshipable goddess of fortune, Lakṣmī, always remains on the chest of Nārāyaṇa, and she is certainly the most chaste woman in the creation. However, My Lord is Lord Śrī Kṛṣṇa, a cowherd boy engaged in tending cows. Why is it that Lakṣmī, being such a chaste wife, wants to associate with My Lord? Just to associate with Kṛṣṇa, Lakṣmī abandoned all transcendental happiness in Vaikuṇṭha and for a long time accepted vows and regulative principles and performed unlimited austerities.’
+          </p>
+          <p>
+            “Vyeṅkaṭa Bhaṭṭa replied, ‘Lord Kṛṣṇa and Lord Nārāyaṇa are one and the same, but the pastimes of Kṛṣṇa are more relishable due to their sportive nature. They are very pleasing for Kṛṣṇa’s <span class="Italic">śaktis.</span> Since Kṛṣṇa and Nārāyaṇa are both the same personality, Lakṣmī’s association with Kṛṣṇa did not break her vow of chastity. Rather, it was in great fun that the goddess of fortune wanted to associate with Lord Kṛṣṇa. The goddess of fortune considered that her vow of chastity would not be damaged by her relationship with Kṛṣṇa. Rather, by associating with Kṛṣṇa she could enjoy the benefit of the <span class="Italic">rāsa</span> dance. If she wanted to enjoy herself with Kṛṣṇa what fault is there? Why are you joking so about this?’
+          </p>
+          <p>
+            “Lord Caitanya Mahāprabhu replied, ‘I know that there is no fault in the goddess of fortune, but still she could not enter into the <span class="Italic">rāsa</span> dance. We hear this from revealed scriptures. The authorities of Vedic knowledge met Lord Rāmacandra in Daṇḍakāraṇya, and by their penances and austerities, they were allowed to enter into the <span class="Italic">rāsa</span> dance. But can you tell me why the goddess of fortune, Lakṣmī, could not get that opportunity? ’
+          </p>
+          <p>
+            “To this Vyeṅkaṭa Bhaṭṭa replied, ‘I cannot enter into the mystery of this incident. I am an ordinary living being. My intelligence is limited, and I am always disturbed. How can I understand the pastimes of the Supreme Lord? They are deeper than millions of oceans.’
+          </p>
+          <p>
+            “Lord Caitanya replied, ‘Lord Kṛṣṇa has a specific characteristic. He attracts everyone’s heart by the mellow of His personal conjugal love. By following in the footsteps of the inhabitants of the planet known as Vrajaloka or Goloka Vṛndāvana, one can attain the shelter of the lotus feet of Śrī Kṛṣṇa. However, the inhabitants of that planet do not know that Lord Kṛṣṇa is the Supreme Personality of Godhead. Unaware that Kṛṣṇa is the Supreme Lord, the residents of Vṛndāvana like Nanda Mahārāja, Yaśodādevī and the <span class="Italic">gopīs</span> treat Kṛṣṇa as their beloved son or lover. Mother Yaśodā accepts Him as her son and sometimes binds Him to a grinding mortar. Kṛṣṇa’s cowherd boy friends think He is an ordinary boy and get up on His shoulders. In Goloka Vṛndāvana no one has any desire other than to love Kṛṣṇa.’ ”
+          </p>
+          <p>
+            The conclusion is that one cannot associate with Kṛṣṇa unless he has fully received the favor of the inhabitants of Vrajabhūmi. Therefore if one wants to be delivered by Kṛṣṇa directly, he must take to the service of the residents of Vṛndāvana, who are unalloyed devotees of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: In Ramyaka-varṣa, where Vaivasvata Manu rules, the Supreme Personality of Godhead appeared as Lord Matsya at the end of the last era [the Cākṣuṣa-manvantara]. Vaivasvata Manu now worships Lord Matsya in pure devotional service and chants the following mantra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">170</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I offer my respectful obeisances unto the Supreme Personality of Godhead, who is pure transcendence. He is the origin of all life, bodily strength, mental power and sensory ability. Known as Matsyāvatāra, the gigantic fish incarnation, He appears first among all the incarnations. Again I offer my obeisances unto Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Śrīla Jayadeva Gosvāmī sings:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">pralayo payodhi-jale dhṛtavān asi vedaṁ<br>vihita-vahitra-caritram akhedam<br>keśava dhṛta-mīna-śarīra jaya jagad-īśa hare</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Soon after the cosmic creation, the entire universe was inundated with water. At that time Lord Kṛṣṇa (Keśava) incarnated as a gigantic fish to protect the <span class="Italic">Vedas.</span> Therefore Manu addresses Lord Matsya as <span class="Italic">mukhyatama,</span> the first incarnation to appear. Fish are generally considered a mixture of the modes of ignorance and passion, but we must understand that every incarnation of the Supreme Personality of Godhead is completely transcendental. There is never any deterioration of the Supreme Lord’s original transcendental quality. Therefore the word <span class="Italic">sattvāya</span> is used here, meaning pure goodness on the transcendental platform. There are many incarnations of the Supreme Lord: Varāha <span class="Italic">mūrti</span> (the boar form), Kūrma <span class="Italic">mūrti</span> (the tortoise form), Hayagrīva <span class="Italic">mūrti</span> (the form of a horse) and so on. Yet we should never think any of Them material. They are always situated on the platform of <span class="Italic">śuddha-sattva,</span> pure transcendence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">439</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, just as a puppeteer controls his dancing dolls and a husband controls his wife, Your Lordship controls all the living entities in the universe, such as the brāhmaṇas, kṣatriyas, vaiśyas and śūdras. Although You are in everyone’s heart as the supreme witness and commander and are outside everyone as well, the so-called leaders of societies, communities and countries cannot realize You. Only those who hear the vibration of the Vedic mantras can appreciate You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The Supreme Personality of Godhead is <span class="Italic">antarbahiḥ,</span> present within and without everything. One must overcome the delusion caused by the Lord’s external energy and realize His presence both externally and internally. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.8.19) Śrīmatī Kuntīdevī has explained that Kṛṣṇa appears in this world <span class="Italic">naṭo nāṭyadharo yathā,</span> “exactly like an actor dressed as a player.” In <span class="Ref_Italic">Bhagavad-gītā</span> (18.61) Kṛṣṇa says, <span class="Italic">īśvaraḥ sama-bhūtānāṁ hṛd-deśe ’rjuna tiṣṭhati:</span> “The Supreme Lord is situated in everyone’s heart, O Arjuna.” The Lord is situated within everyone’s heart, and outside as well. Within the heart He is the Supersoul, the incarnation who acts as the adviser and witness. Yet although God is residing within their hearts, foolish people say, “I cannot see God. Please show Him to me.”
+          </p>
+          <p>
+            Everyone is under the control of the Supreme Personality of Godhead, exactly like dancing dolls controlled by a puppeteer or a woman controlled by her husband. A woman is compared to a doll (<span class="Italic">dārumayī</span>) because she has no independence. She should always be controlled by a man. Still, due to false prestige, a class of women wants to remain independent. What to speak of women, all living entities are <span class="Italic">prakṛti</span> (female) and therefore dependent on the Supreme Lord, as Kṛṣṇa Himself explains in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">apareyam itas tv anyāṁ prakṛtiṁ viddhi me parām</span>). The living entity is never independent. Under all circumstances, he is dependent on the mercy of the Lord. The Lord creates the social divisions of human society—<span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas</span> and <span class="Italic">śūdras</span>—and ordains that they follow rules and regulations suited to their particular position. In this way, all members of society remain always under the Supreme Lord’s control. Still, some people foolishly deny the existence of God.
+          </p>
+          <p>
+            Self-realization means to understand one’s subordinate position in relation to the Lord. When one is thus enlightened, he surrenders to the Supreme Personality of Godhead and is liberated from the clutches of the material energy. In other words, unless one surrenders to the lotus feet of the Lord, the material energy in its many varieties will continue to control him. No one in the material world can deny that he is under control. The Supreme Lord, Nārāyaṇa, who is beyond this material existence, controls everyone. The following Vedic <span class="Italic">mantra</span> confirms this point: <span class="Italic">eko ha vai nārāyaṇa āsīt.</span> Foolish persons think Nārāyaṇa to be on the platform of ordinary material existence. Because they do not realize the natural constitutional position of the living entity, they concoct names like <span class="Italic">daridra-nārāyaṇa, svāmi-nārāyaṇa</span> or <span class="Italic">mithyā-nārāyaṇa.</span> However, Nārāyaṇa is actually the supreme controller of everyone. This understanding is self-realization.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">320</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My Lord, from the great leaders of the universe, such as Lord Brahmā and other demigods, down to the political leaders of this world, all are envious of Your authority. Without Your help, however, they could neither separately nor concertedly maintain the innumerable living entities within the universe. You are actually the only maintainer of all human beings, of animals like cows and asses, and of plants, reptiles, birds, mountains and whatever else is visible within this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            It is fashionable for materialistic persons to compete with the power of God. When so-called scientists try to manufacture living entities in their laboratories, their only purpose is to defy the talent and ability of the Supreme Personality of Godhead. This is called illusion. It exists even in the higher planetary systems, where great demigods like Lord Brahmā, Lord Śiva and others reside. In this world everyone is puffed up with false prestige despite the failure of all his endeavors. When so-called philanthropists, who supposedly want to help the poor, are approached by members of the Kṛṣṇa consciousness movement, they say, “You are simply wasting your time, while I am feeding vast masses of starving people.” Unfortunately, their meager efforts, either singly or together, do not solve anyone’s problems.
+          </p>
+          <p>
+            Sometimes so-called <span class="Italic">svāmīs</span> are very eager to feed poor people, thinking them to be <span class="Italic">daridra-nārāyaṇa,</span> the Lord’s incarnations as beggars. They prefer to serve the manufactured <span class="Italic">daridra-nārāyaṇa</span> than the original, supreme Nārāyaṇa. They say, “Don’t encourage service to Lord Nārāyaṇa. It is better to serve the starving people of the world.” Unfortunately such materialists, either singly or combined in the form of the United Nations, cannot fulfill their plans. The truth is that the many millions of human beings, animals, birds and trees—indeed, all living entities—are maintained solely by the Supreme Personality of Godhead. <span class="Italic">Eko bahūnāṁ yo vidadhāti kāmān:</span> one person, the Supreme Lord, is supplying the necessities of life for all other living entities. To challenge the authority of Nārāyaṇa, the Supreme Personality of Godhead, is the business of <span class="Italic">asuras</span> (demons). Yet sometimes <span class="Italic">suras,</span> or devotees, are also bewildered by the illusory energy and falsely claim to be the maintainer of the entire universe. Such incidents are described in the Tenth Canto of <span class="Italic">Śrīmad-Bhāgavatam,</span> where Śukadeva Gosvāmī tells how Lord Brahmā and King Indra became puffed up and were eventually chastised by Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">141</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O almighty Lord, at the end of the millennium this planet earth, which is the source of all kinds of herbs, drugs and trees, was inundated by water and drowned beneath the devastating waves. At that time, You protected me along with the earth and roamed the sea with great speed. O unborn one, You are the actual maintainer of the entire universal creation, and therefore You are the cause of all living entities. I offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            Envious persons cannot appreciate how wonderfully the Lord creates, maintains and annihilates the universe, but devotees of the Lord can understand this perfectly well. Devotees can see how the Lord is acting behind the wonderful workings of the material nature. In <span class="Ref_Italic">Bhagavad-gītā</span> (9.10) the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sa-carācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.” All the wonderful transformations of nature are happening under the superintendence of the Supreme Personality of Godhead. Envious persons cannot see this, but a devotee, even though very humble and even if uneducated, knows that behind all the activities of nature is the supreme hand of the Supreme Being.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">180</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: In Hiraṇmaya-varṣa, the Supreme Lord, Viṣṇu, lives in the form of a tortoise [kūrma-śarīra]. This most dear and beautiful form is always worshiped there in devotional service by Aryamā, the chief resident of Hiraṇmaya-varṣa, along with the other inhabitants of that land. They chant the following hymns.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            The word <span class="Italic">priyatama</span> (dearmost) is very significant in this verse. Each devotee regards a particular form of the Lord as most dear. Because of an atheistic mentality, some people think that the tortoise, boar and fish incarnations of the Lord are not very beautiful. They do not know that any form of the Lord is always the fully opulent Personality of Godhead. Since one of His opulences is infinite beauty, all the Lord’s incarnations are very beautiful and are appreciated as such by devotees. Nondevotees, however, think that Lord Kṛṣṇa’s incarnations are ordinary material creatures, and therefore they distinguish between the beautiful and the not beautiful. A certain form of the Lord is worshiped by a particular devotee because he loves to see that form of the Lord. As stated in <span class="Ref_Italic">Brahma-saṁhitā</span> (5.33): <span class="Italic">advaitam acyutam anādim ananta-rūpam ādyaṁ purāṇa-puruṣaṁ nava-yauvanaṁ ca.</span> The very beautiful form of the Lord is always youthful. Sincere servants of a particular form of the Lord always see that form as very beautiful, and thus they engage in constant devotional service to Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">148</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my Lord, I offer my respectful obeisances unto You, who have assumed the form of a tortoise. You are the reservoir of all transcendental qualities, and being entirely untinged by matter, You are perfectly situated in pure goodness. You move here and there in the water, but no one can discern Your position. Therefore I offer my respectful obeisances unto You. Because of Your transcendental position, You are not limited by past, present and future. You are present everywhere as the shelter of all things, and therefore I offer my respectful obeisances unto You again and again.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            In the <span class="Italic">Brahma-saṁhitā</span> it is said, <span class="Italic">goloka eva nivasaty akhilātma-bhūtaḥ: [Bs. </span>5.37] the Lord always remains in Goloka, the topmost planet in the spiritual world. At the same time, He is all-pervading. This paradox is only possible for the Supreme Personality of Godhead, who is full of all opulences. The Lord’s all-pervasiveness is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (18.61) where Kṛṣṇa states, <span class="Italic">īśvaraḥ sarva-bhūtānāṁ hṛd-deśe ’rjuna tiṣṭhati:</span> “The Supreme Lord is seated in everyone’s heart, O Arjuna.” Elsewhere in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15) the Lord says, <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” Therefore, although the Lord is present everywhere, He cannot be seen with ordinary eyes. As Aryamā says, the Lord is <span class="Italic">anupalakṣita-sthāna:</span> no one can locate Him. This is the greatness of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">215</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, this visible cosmic manifestation is a demonstration of Your own creative energy. Since the countless varieties of forms within this cosmic manifestation are simply a display of Your external energy, this virāṭ-rūpa [universal body] is not Your real form. Except for a devotee in transcendental consciousness, no one can perceive Your actual form. Therefore I offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Māyāvādī philosophers think the universal form of the Lord to be real and His personal form illusory. We can understand their mistake by a simple example. A fire consists of three elements: heat and light, which are the energy of the fire, and the fire itself. Anyone can understand that the original fire is the reality and that the heat and light are simply the fire’s energy. Heat and light are the formless energies of fire, and in that sense they are unreal. Only the fire has form, and therefore it is the real form of the heat and light. As Kṛṣṇa states in <span class="Ref_Italic">Bhagavad-gītā</span> (9.4), <span class="Italic">mayā tatam idaṁ sarvaṁ jagad avyakta-mūrtinā:</span> “By Me, in My unmanifested form. this entire universe is pervaded.” Thus the impersonal conception of the Lord is like the expansion of heat and light from a fire. In <span class="Italic">Bhagavad-gītā</span> the Lord also says, <span class="Italic">mat-sthāni sarva-bhūtāni na cāhaṁ teṣv avasthitaḥ:</span> the entire material creation is resting on Kṛṣṇa’s energy, either material, spiritual or marginal, but because His form is absent from the expansion of His energy, He is not personally present. This inconceivable expansion of the Supreme Lord’s energy is called <span class="Italic">acintya-śakti.</span> Therefore no one can understand the real form of the Lord without becoming His devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">257</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, You manifest Your different energies in countless forms: as living entities born from wombs, from eggs and from perspiration; as plants and trees that grow out of the earth; as all living entities, both moving and standing, including the demigods, the learned sages and the pitās; as outer space, as the higher planetary system containing the heavenly planets, and as the planet earth with its hills, rivers, seas, oceans and islands. Indeed, all the stars and planets are simply manifestations of Your different energies, but originally You are one without a second. Therefore there is nothing beyond You. This entire cosmic manifestation is therefore not false but is simply a temporary manifestation of Your inconceivable energy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            This verse completely rejects the theory of <span class="Italic">brahma satyaṁ jagan mithyā,</span> which states that spirit, or Brahman, is real, whereas the manifested material world, with its great variety of things, is false. Nothing is false. One thing may be permanent and another temporary, but both the permanent and the temporary are facts. For example, if someone becomes angry for a certain period, no one can say that his anger is false. It is simply temporary. Everything we experience in our daily lives is of this same character; it is temporary but real.
+          </p>
+          <p>
+            The different kinds of living entities coming from various sources are very clearly described in this verse. Some are born from a womb and some (like certain insects) from human perspiration. Others hatch from eggs, and still others sprout from the earth. A living entity takes birth under different circumstances according to his past activities (<span class="Italic">karma</span>). Although the body of the living entity is material, it is never false. No one will accept the argument that since a person’s material body is false, murder has no repercussions. Our temporary bodies are given to us according to our <span class="Italic">karma,</span> and we must remain in our given bodies to enjoy the pains and pleasures of life. Our bodies cannot be called false; they are only temporary. In other words, the energy of the Supreme Lord is as permanent as the Lord Himself, although His energy is sometimes manifest and sometimes not. As summarized in the <span class="Italic">Vedas, sarvaṁ khalv idaṁ brahma:</span> “Everything is Brahman.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">204</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my Lord, Your name, form and bodily features are expanded in countless forms. No one can determine exactly how many forms exist, yet You Yourself, in Your incarnation as the learned scholar Kapiladeva, have analyzed the cosmic manifestation as containing twenty-four elements. Therefore if one is interested in Sāṅkhya philosophy, by which one can enumerate the different truths, he must hear it from You. Unfortunately, nondevotees simply count the different elements and remain ignorant of Your actual form. I offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            Philosophers and scientists have been trying to study the entire cosmic situation and have been theorizing and calculating in different ways for millions and millions of years. However, the speculative research work of a so-called scientist or philosopher is always interrupted when he dies, and the laws of nature go on without regard for his work.
+          </p>
+          <p>
+            For billions of years changes take place in the material creation, until at last the whole universe is dissolved and remains in an unmanifested state. Constant change and destruction (<span class="Italic">bhūtvā bhūtvā pralīyate</span>) is perpetually going on in nature, yet the material scientists want to study natural laws without knowing the Supreme Personality of Godhead, who is the background of nature. As Kṛṣṇa states in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sa-carācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.”
+          </p>
+          <p>
+            Now the material creation is manifest, eventually it will be annihilated and remain for many millions of years in a dormant state, and finally it will again be created. This is the law of nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: Dear King, the Supreme Lord in His boar incarnation, who accepts all sacrificial offerings, lives in the northern part of Jambūdvīpa. There, in the tract of land known as Uttarakuru-varṣa, mother earth and all the other inhabitants worship Him with unfailing devotional service by repeatedly chanting the following Upaniṣad mantra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">118</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Lord, we offer our respectful obeisances unto You as the gigantic person. Simply by chanting mantras, we shall be able to understand You fully. You are yajña [sacrifice], and You are the kratu [ritual]. Therefore all the ritualistic ceremonies of sacrifice are part of Your transcendental body, and You are the only enjoyer of all sacrifices. Your form is composed of transcendental goodness. You are known as tri-yuga because in Kali-yuga You appeared as a concealed incarnation and because You always fully possess the three pairs of opulences.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu is the incarnation for this age of Kali, as confirmed in many places throughout the <span class="Italic">purāṇas,</span> the <span class="Italic">Mahābhārata, Śrīmad-Bhāgavatam</span> and the <span class="Italic">Upaniṣads.</span> The summary of His appearance is given in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 6.99) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kali-yuge līlāvatāra nā kare bhagavān<br>ataeva ‘tri-yuga’ kari’ kahi tāra nāma</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            In this age of Kali, the Supreme Personality of Godhead (Bhagavān) does not appear as a <span class="Italic">līlāvatāra,</span> an incarnation to display pastimes. Therefore He is known as <span class="Italic">tri-yuga.</span> Unlike other incarnations, Lord Śrī Caitanya Mahāprabhu appears in this age of Kali as a devotee of the Lord. Therefore He is called a concealed incarnation (<span class="Italic">channāvatāra</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">218</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By manipulating a fire-generating stick, great saints and sages can bring forth the fire lying dormant within wood. In the same way, O Lord, those expert in understanding the Absolute Truth try to see You in everything—even in their own bodies. Yet you remain concealed. You are not to be understood by indirect processes involving mental or physical activities. Because You are self-manifested, only when You see that a person is wholeheartedly engaged in searching for You do You reveal Yourself. Therefore I offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            The word <span class="Italic">kriyārthaiḥ</span> means “by performing ritualistic ceremonies to satisfy the demigods.” The word <span class="Italic">vipaścitaḥ</span> is explained in the <span class="Italic">Taittirīya Upaniṣad</span> as follows: <span class="Italic">satyaṁ jñānam anantaṁ brahma.</span> <span class="Italic">yo veda nihitaṁ guhāyāṁ parame vyoman. so ’śnute sarvān kāmān saha brahmaṇā vipaściteti.</span> As Kṛṣṇa states in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19), <span class="Italic">bahūnāṁ janmanām ante jñānavān māṁ prapadyate:</span> “After many births and deaths, he who is actually in knowledge surrenders unto Me.” When one understands that the Lord is situated in everyone’s heart and actually sees the Lord present everywhere, he has perfect knowledge. The word <span class="Italic">jāta-vedaḥ</span> means “fire which is produced by rubbing wood.” In Vedic times, learned sages could bring forth fire from wood. <span class="Italic">Jāta-vedaḥ</span> also indicates the fire in the stomach, which digests everything we eat and which produces an appetite. The word <span class="Italic">gūḍha</span> is explained in the <span class="Italic">Śvetāśvatara Upaniṣad.</span> <span class="Italic">Eko devaḥ sarva-bhūteṣu gūḍhaḥ:</span> The Supreme Personality of Godhead is understood by chanting the Vedic <span class="Italic">mantras.</span> <span class="Italic">Sarva-vyāpī sarva-bhūtāntar-ātmā:</span> He is all-pervading, and He is within the heart of living entities. <span class="Italic">Karmādhyakṣaḥ sarva-bhūtādhivāsaḥ:</span> He witnesses all activities of the living entity. <span class="Italic">Sākṣī cetā kevalo nirguṇaś ca:</span> The Supreme Lord is the witness as well as the living force, yet He is transcendental to all material qualities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">264</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The objects of material enjoyment [sound, form, taste, touch and smell], the activities of the senses, the controllers of sensory activities [the demigods], the body, eternal time and egotism are all creations of Your material energy. Those whose intelligence has become fixed by perfect execution of mystic yoga can see that all these elements result from the actions of Your external energy. They can also see Your transcendental form as Supersoul in the background of everything. Therefore I repeatedly offer my respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            The objects of material enjoyment, the sensory activities, attachment to sensual pleasure, the body, false egotism and so on are produced by the Lord’s external energy, <span class="Italic">māyā.</span> The background of all these activities is the living being, and the director of the living beings is the Supersoul. The living being is not the all in all. He is directed by the Supersoul. In <span class="Ref_Italic">Bhagavad-gītā</span> (15.15) Kṛṣṇa confirms this:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarvasya cāhaṁ hṛdi sanniviṣṭo<br>mattaḥ smṛtir jñānam apohanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” The living entity depends on the Supersoul for directions. A person advanced in spiritual knowledge, or a person expert in the practice of mystic <span class="Italic">yoga</span> (<span class="Italic">yama, niyama, āsana</span> and so on) can understand transcendence either as Paramātmā or as the Supreme Personality of Godhead. The Supreme Lord is the original cause of all natural events. Therefore He is described as <span class="Italic">sarva-kāraṇa-kāraṇam</span> <span class="Italic">[Bs. </span>5.1]<span class="Italic">,</span> the cause of all causes. Behind everything visible to our material eyes is some cause, and one who can see the original cause of all causes, Lord Kṛṣṇa, can actually see. Kṛṣṇa, the <span class="Italic">sac-cid-ānanda-vigraha</span><i> <span class="Italic"></span></i>[Bs. 5.1]<span class="Italic">,</span> is the background of everything, as He Himself confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sa-carācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">465</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Lord, You do not desire the creation, maintenance or annihilation of this material world, but You perform these activities for the conditioned souls by Your creative energy. Exactly as a piece of iron moves under the influence of a lodestone, inert matter moves when You glance over the total material energy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            Sometimes the question arises why the Supreme Lord has created this material world, which is so full of suffering for the living entities entrapped in it. The answer given herein is that the Supreme Personality of Godhead does not wish to create this material world just to inflict suffering on the living entities. The Supreme Lord creates this world only because the conditioned souls want to enjoy it.
+          </p>
+          <p>
+            The workings of nature are not going on automatically. It is only because the Lord glances over the material energy that it acts in wonderful ways, just as a lodestone causes a piece of iron to move here and there. Because materialistic scientists and so-called Sāṅkhya philosophers do not believe in God, they think that material nature is working without supervision. But that is not the fact. In <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 6.18–19) the creation of the material world is explained as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yadyapi sāṅkhya māne ‘pradhāna’——kāraṇa<br>jaḍa ha-ite kabhu nahe jagat-sṛjana</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nija-sṛṣṭi-śakti prabhu sañcāre pradhāne<br>īśvarera śaktye tabe haye ta’ nirmāṇe</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Atheistic Sāṅkhya philosophers think that the total material energy causes the cosmic manifestation, but they are wrong. Dead matter has no moving power, and therefore it cannot act independently. The Lord infuses the material ingredients with His own creative potency. Then, by the power of the Lord, matter moves and interacts.” Sea waves are moved by the air, the air is created from ether, the-ether is produced by the agitation of the three modes of material nature, and the three modes of material nature interact due to the Supreme Lord’s glance over the total material energy. Therefore the background of all natural occurrences is the Supreme Personality of Godhead, as confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram [Bg. 9.10]</span>). This is also further explained in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 5.59–61):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">jagat-kāraṇa nahe prakṛti jaḍa-rūpā<br>śakti sañcāriyā tāre kṛṣṇa kare kṛpā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa-śaktye prakṛti haya gauṇa kāraṇa<br>agni-śaktye lauha yaiche karaye jāraṇa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataeva kṛṣṇa mūla-jagat-kāraṇa<br>prakṛti——kāraṇa yaiche ajā-gala-stana</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Because <span class="Italic">prakṛti</span> [material nature] is dull and inert, it cannot actually be the cause of the material world. Lord Kṛṣṇa shows His mercy by infusing His energy into the dull, inert material nature. Thus <span class="Italic">prakṛti,</span> by the energy of Lord Kṛṣṇa, becomes the secondary cause, just as iron becomes red-hot by the energy of fire. Therefore Lord Kṛṣṇa is the original cause of the cosmic manifestation. <span class="Italic">prakṛti</span> is like the nipples on the neck of a goat, for they cannot give any milk.” Thus it is a great mistake on the part of the material scientists and philosophers to think that matter moves independently.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My Lord, as the original boar within this universe, You fought and killed the great demon Hiraṇyakṣa. Then You lifted me [the earth] from the Garbhodaka Ocean on the end of Your tusk, exactly as a sporting elephant plucks a lotus flower from the water. I bow down before You.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Eighteenth Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled, “The prayers Offered to the Lord by the Residents of Jambūdvīpa.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/18">https://prabhupadabooks.com/sb/5/18</a><!-- span.text_source_copied_date
+        | on 2023-04-09 15:17:52 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.17: The Descent of the River Ganges     Next: SB 5.19: A Description of the Island of Jambudvipa</div>
+      </p>
+    </div>
+  </body>
+</html>

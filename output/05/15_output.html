@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.15, The Glories of the Descendants of King Priyavrata</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Fifteen:<br>The Glories of the Descendants of King Priyavrata
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">In this chapter the descendants of Bharata Mahārāja and many other kings are described. The son of Mahārāja Bharata was named Sumati. He followed the path of liberation given by Ṛṣabhadeva. Some people mistakenly thought Sumati to be the direct incarnation of Lord Buddha. The son of Sumati was Devatājit, and his son was Devadyumna. Devadyumna’s son was Parameṣṭhī, and his son was Pratīha. Pratīha was a very great devotee of Lord Viṣṇu, and he had three sons, named Pratihartā, Prastotā and Udgātā. Pratihartā had two sons, Aja and Bhūmā. The son of Bhūmā was Udgītha, and the son of Udgītha was Prastāva. The son of Prastāva was Vibhu, and the son of Vibhu was Pṛthuṣeṇa, whose son was Nakta. The wife of Nakta, Druti, gave birth to Gaya, who was a very famous and saintly king. Actually King Gaya was a partial incarnation of Lord Viṣṇu, and because of his great devotion to Lord Viṣṇu he received the title Mahāpuruṣa. King Gaya had sons named Citraratha, Sumati and Avarodhana. The son of Citraratha was the emperor Samrāṭ, and his son was Marīci, whose son was Bindu. Bindu’s son was Madhu, and Madhu’s son was Vīravrata. Vīravrata’s two sons were Manthu and Pramanthu, and the son of Manthu was Bhauvana. The son of Bhauvana was Tvaṣṭā, and the son of Tvaṣṭā was Viraja, who glorified the whole dynasty. Viraja had one hundred sons and one daughter. Of these, the son named Śatajit became very famous.</div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">250</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī continued: The son of Mahārāja Bharata known as Sumati followed the path of Ṛṣabhadeva, but some unscrupulous people imagined him to be Lord Buddha himself. These people, who were actually atheistic and of bad character, took up the Vedic principles in an imaginary, infamous way to support their activities. Thus these sinful people accepted Sumati as Lord Buddhadeva and propagated the theory that everyone should follow the principles of Sumati. In this way they were carried away by mental concoction.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Those who are Āryans strictly follow the Vedic principles, but in this age of Kali a community has sprung up known as the <span class="Italic">ārya-samāja,</span> which is ignorant of the import of the <span class="Italic">Vedas</span> in the <span class="Italic">paramparā</span> system. Their leaders decry all bona fide <span class="Italic">ācāryas,</span> and they pose themselves as the real followers of the Vedic principles. These <span class="Italic">ācāryas</span> who do not follow the Vedic principles are presently known as the <span class="Italic">ārya-samājas,</span> or the Jains. Not only do they not follow the Vedic principles, but they have no relationship with Lord Buddha. Imitating the behavior of Sumati, they claim to be the descendants of Ṛṣabhadeva. Those who are Vaiṣṇavas carefully avoid their company because they are ignorant of the path of the <span class="Italic">Vedas.</span> In <span class="Ref_Italic">Bhagavad-gītā</span> (15.15) Kṛṣṇa says, <span class="Italic">vedaiś ca sarvair aham eva vedyaḥ:</span> “The real purpose of the <span class="Italic">Vedas</span> is to understand Me.” This is the injunction of all Vedic literatures. One who does not know the greatness of Lord Kṛṣṇa cannot be accepted as an Āryan. Lord Buddha, an incarnation of Lord Kṛṣṇa, adopted a particular means to propagate the philosophy of <span class="Italic">bhāgavata-dharma.</span> He preached almost exclusively among atheists. Atheists do not want any God, and Lord Buddha therefore said that there is no God, but he adopted the means to instruct his followers for their benefit. Therefore he preached in a duplicitous way, saying that there is no God. Nonetheless, he himself was an incarnation of God.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From Sumati, a son named Devatājit was born by the womb of his wife named Vṛddhasenā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, in the womb of Āsurī, the wife of Devatājit, a son named Devadyumna was begotten. Devadyumna begot in the womb of his wife, Dhenumatī, a son named Parameṣṭhī. Parameṣṭhī begot a son named Pratīha in the womb of his wife, Suvarcalā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Pratīha personally propagated the principles of self-realization. In this way, not only was he purified, but he became a great devotee of the Supreme Person, Lord Viṣṇu, and directly realized Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            The word <span class="Italic">anusasmāra</span> is very significant. God consciousness is not imaginary or concocted. The devotee who is pure and advanced realizes God as He is. Mahārāja Pratīha did so, and due to his direct realization of Lord Viṣṇu, he propagated self-realization and became a preacher. A real preacher cannot be bogus; he must first of all realize Lord Viṣṇu as He is. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (4.34), <span class="Italic">upadekṣyanti te jñānaṁ jñāninas tattva-darśinaḥ:</span> “one who has seen the truth can impart knowledge.” The word <span class="Italic">tattva-darśī</span> refers to one who has perfectly realized the Supreme Personality of Godhead. Such a person can become a <span class="Italic">guru</span> and propound Vaiṣṇava philosophy all over the world. The paragon of bona fide preachers and <span class="Italic">guru</span> is King Pratīha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the womb of his wife Suvarcalā, Pratīha begot three sons, named Pratihartā, Prastotā and Udgātā. These three sons were very expert in performing Vedic rituals. Pratihartā begot two sons, named Aja and Bhūmā, in the womb of his wife, named Stutī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">105</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the womb of his wife, Ṛṣikulyā, King Bhūmā begot a son named Udgītha. From Udgītha’s wife, Devakulyā, a son named Prastāva was born, and Prastāva begot a son named Vibhu through his wife, Niyutsā. In the womb of his wife, Ratī, Vibhu begot a son named Pṛthuṣeṇa. Pṛthuṣeṇa begot a son named Nakta in the womb of his wife, named Ākūti. Nakta’s wife was Druti, and from her womb the great King Gaya was born. Gaya was very famous and pious; he was the best of saintly kings. Lord Viṣṇu and His expansions, who are meant to protect the universe, are always situated in the transcendental mode of goodness, known as viśuddha-sattva. Being the direct expansion of Lord Viṣṇu, King Gaya was also situated in the viśuddha-sattva. Because of this, Mahārāja Gaya was fully equipped with transcendental knowledge. Therefore he was called Mahāpuruṣa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            From this verse it appears that the incarnations of God are various. Some are part and parcel of the direct expansions, and some are direct expansions of Lord Viṣṇu. A direct incarnation of the Supreme Personality of Godhead is called <span class="Italic">aṁśa</span> or <span class="Italic">svāṁśa,</span> whereas an incarnation from <span class="Italic">aṁśa</span> is called <span class="Italic">kalā.</span> Among the <span class="Italic">kalās</span> there are the <span class="Italic">vibhinnāṁśa-jīvas,</span> or living entities. These are counted among the <span class="Italic">jīva-tattvas.</span> Those who come directly from Lord Viṣṇu are called <span class="Italic">viṣṇu-tattva</span> and are sometimes designated as Mahāpuruṣa. Another name for Kṛṣṇa is Mahāpuruṣa, and a devotee is sometimes called <span class="Italic">mahā-pauruṣika.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">273</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Gaya gave full protection and security to the citizens so that their personal property would not be disturbed by undesirable elements. He also saw that there was sufficient food to feed all the citizens. [This is called poṣaṇa.] He would sometimes distribute gifts to the citizens to satisfy them. [This is called prīṇana.] He would sometimes call meetings and satisfy the citizens with sweet words. [This is called upalālana.] He would also give them good instructions on how to become first-class citizens. [This is called anuśāsana.] Such were the characteristics of King Gaya’s royal order. Besides all this, King Gaya was a householder who strictly observed the rules and regulations of household life. He performed sacrifices and was an unalloyed pure devotee of the Supreme Personality of Godhead. He was called Mahāpuruṣa because as a king he gave the citizens all facilities, and as a householder he executed all his duties so that at the end he became a strict devotee of the Supreme Lord. As a devotee, he was always ready to give respect to other devotees and to engage in the devotional service of the Lord. This is the bhakti-yoga process. Due to all these transcendental activities, King Gaya was always free from the bodily conception. He was full in Brahman realization, and consequently he was always jubilant. He did not experience material lamentation. Although he was perfect in all respects, he was not proud, nor was he anxious to rule the kingdom.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            As Lord Kṛṣṇa states in <span class="Italic">Bhagavad-gītā,</span> when He descends on earth, He has two types of business—to give protection to the faithful and annihilate the demons (<span class="Italic">paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām [Bg. </span>4.8]). Since the king is the representative of the Supreme Personality of Godhead, he is sometimes called <span class="Italic">nara-deva,</span> that is, the Lord as a human being. According to the Vedic injunctions, he is worshiped as God on the material platform. As a representative of the Supreme Lord, the king had the duty to protect the citizens in a perfect way so that they would not be anxious for food and protection and so that they would be jubilant. The king would supply everything for their benefit, and because of this he would levy taxes. If the king or government otherwise levies taxes on the citizens, he becomes responsible for the sinful activities of the citizens. In Kali-yuga, monarchy is abolished because the kings themselves are subjected to the influence of Kali-yuga. It is understood from the <span class="Italic">Rāmāyaṇa</span> that when Bibhīṣaṇa became friends with Lord Rāmacandra, he promised that if by chance or will he broke the laws of friendship with Lord Rāmacandra, he would become a <span class="Italic">brāhmaṇa</span> or a king in Kali-yuga. In this age, as Bibhīṣaṇa indicated, both <span class="Italic">brāhmaṇas</span> and kings are in a wretched condition. Actually there are no kings or <span class="Italic">brāhmaṇas</span> in this age, and due to their absence the whole world is in a chaotic condition and is always in distress. Compared to present standards, Mahārāja Gaya was a true representative of Lord Viṣṇu; therefore he was known as Mahāpuruṣa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">72</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, those who are learned scholars in the histories of the Purāṇas eulogize and glorify King Gaya with the following verses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The historical references to exalted kings serve as a good example for present rulers. Those who are ruling the world at the present moment should take lessons from King Gaya, King Yudhiṣṭhira and King Pṛthu and rule the citizens so that they will be happy. presently the governments are levying taxes without improving the citizens in any cultural, religious, social or political way. According to the <span class="Italic">Vedas,</span> this is not recommended.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great King Gaya used to perform all kinds of Vedic rituals. He was highly intelligent and expert in studying all the Vedic literatures. He maintained the religious principles and possessed all kinds of opulence. He was a leader among gentlemen and a servant of the devotees. He was a totally qualified plenary expansion of the Supreme Personality of Godhead. Therefore who could equal him in the performance of gigantic ritualistic ceremonies?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">110</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All the chaste and honest daughters of Mahārāja Dakṣa, such as Śraddhā, Maitrī and Dayā, whose blessings were always effective, bathed Mahārāja Gaya with sanctified water. Indeed, they were very satisfied with Mahārāja Gaya. The planet earth personified came as a cow, and, as though she saw her calf, she delivered milk profusely when she saw all the good qualities of Mahārāja Gaya. In other words, Mahārāja Gaya was able to derive all benefits from the earth and thus satisfy the desires of his citizens. However, he personally had no desire.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            The earth over which Mahārāja Gaya ruled is compared to a cow. The good qualities whereby he maintained and ruled the citizens are compared to the calf. A cow delivers milk in the presence of her calf; similarly the cow, or earth, fulfilled the desires of Mahārāja Gaya, who was able to utilize all the resources of the earth to benefit his citizens. This was possible because he was bathed in sanctified water by the honest daughters of Dakṣa. Unless a king or ruler is blessed by authorities, he cannot rule the citizens very satisfactorily. Through the good qualities of the ruler, the citizens become very happy and well qualified.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">216</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although King Gaya had no personal desire for sense gratification, all his desires were fulfilled by virtue of his performance of Vedic rituals. All the kings with whom Mahārāja Gaya had to fight were forced to fight on religious principles. They were very satisfied with his fighting, and they would present all kinds of gifts to him. Similarly, all the brāhmaṇas in his kingdom were very satisfied with King Gaya’s munificent charities. Consequently the brāhmaṇas contributed a sixth of their pious activities for King Gaya’s benefit in the next life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            As a <span class="Italic">kṣatriya</span> or emperor, Mahārāja Gaya sometimes had to fight with subordinate kings to maintain his government, but the subordinate kings were not dissatisfied with him because they knew that he fought for religious principles. Consequently they accepted their subordination and offered all kinds of gifts to him. Similarly, the <span class="Italic">brāhmaṇas</span> who performed Vedic rituals were so satisfied with the King that they very readily agreed to part with a sixth of their pious activities for his benefit in the next life. Thus the <span class="Italic">brāhmaṇas</span> and <span class="Italic">kṣatriyas</span> were all satisfied with Mahārāja Gaya because of his proper administration. In other words. Mahārāja Gaya satisfied the <span class="Italic">kṣatriya</span> kings by his fighting and satisfied the <span class="Italic">brāhmaṇas</span> by his charities. The <span class="Italic">vaiśyas</span> were also encouraged by kind words and affectionate dealings, and due to Mahārāja Gaya’s constant sacrifices, the <span class="Italic">śūdras</span> were satisfied by sumptuous food and charity. In this way Mahārāja Gaya kept all the citizens very satisfied. When <span class="Italic">brāhmaṇas</span> and saintly persons are honored, they part with their pious activities, giving them to those who honor them and render them service. Therefore, as stated in <span class="Ref_Italic">Bhagavad-gītā</span> (4.34), <span class="Italic">tad viddhi praṇipātena paripraśnena sevayā:</span> one should try to approach a spiritual master submissively and render service unto him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">53</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Mahārāja Gaya’s sacrifices, there was a great supply of the intoxicant known as soma. King Indra used to come and become intoxicated by drinking large quantities of soma-rasa. Also, the Supreme Personality of Godhead, Lord Viṣṇu [the yajña-puruṣa] also came and personally accepted all the sacrifices offered unto Him with pure and firm devotion in the sacrificial arena.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Mahārāja Gaya was so perfect that he satisfied all the demigods, who were headed by the heavenly King Indra. Lord Viṣṇu Himself also personally came to the sacrificial arena to accept the offerings. Although Mahārāja Gaya did not want them, he received all the blessings of the demigods and the Supreme Lord Himself.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">80</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the Supreme Lord is pleased by a person’s actions, automatically all the demigods, human beings, animals, birds, bees, creepers, trees, grass and all other living entities, beginning with Lord Brahmā, are pleased. The Supreme Personality of Godhead is the Supersoul of everyone, and He is by nature fully pleased. Nonetheless, He came to the arena of Mahārāja Gaya and said, “I am fully pleased.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            It is explicitly stated herein that simply by satisfying the Supreme Personality of Godhead, one satisfies the demigods and all other living entities without differentiation. If one pours water on the root of a tree, all the branches, twigs, flowers and leaves are nourished. Although the Supreme Lord is self-satisfied, He was so pleased with the behavior of Mahārāja Gaya that He personally came to the sacrificial arena and said, “I am fully satisfied.” Who can compare to Mahārāja Gaya?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14–15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the womb of Gayantī, Mahārāja Gaya begot three sons, named Citraratha, Sugati and Avarodhana. In the womb of his wife Ūrṇā, Citraratha begot a son named Samrāṭ. The wife of Samrāṭ was Utkalā, and in her womb Samrāṭ begot a son named Marīci. In the womb of his wife Bindumatī, Marīci begot a son named Bindu. In the womb of his wife Saraghā, Bindu begot a son named Madhu. In the womb of his wife named Sumanā, Madhu begot a son named Vīravrata. In the womb of his wife Bhojā, Vīravrata begot two sons named Manthu and Pramanthu. In the womb of his wife Satyā, Manthu begot a son named Bhauvana, and in the womb of his wife Dūṣaṇā, Bhauvana begot a son named Tvaṣṭā. In the womb of his wife Virocanā, Tvaṣṭā begot a son named Viraja. The wife of Viraja was Viṣūcī, and in her womb Viraja begot one hundred sons and one daughter. Of all these sons, the son named Śatajit was predominant.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">83</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There is a famous verse about King Viraja. “Because of his high qualities and wide fame, King Viraja became the jewel of the dynasty of King Priyavrata, just as Lord Viṣṇu, by His transcendental potency, decorates and blesses the demigods.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Within a garden, a flowering tree attains a good reputation because of its fragrant flowers. Similarly, if there is a famous man in a family, he is compared to a fragrant flower in a forest. Because of him, an entire family can become famous in history. Because Lord Kṛṣṇa took birth in the Yadu dynasty, the Yadu dynasty and the Yādavas have remained famous for all time. Because of King Viraja’s appearance, the family of Mahārāja Priyavrata has remained famous for all time.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Fifteenth Chapter of the <span class="Italic">Śrīmad-Bhāgavatam,</span> “The Glories of the Descendants of King Priyavrata.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/15">https://prabhupadabooks.com/sb/5/15</a><!-- span.text_source_copied_date
+        | on 2023-02-19 16:14:14 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.14: The Material World as the Great Forest of Enjoyment     Next: SB 5.16: A Description of Jambudvipa</div>
+      </p>
+    </div>
+  </body>
+</html>

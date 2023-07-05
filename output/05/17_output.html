@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.17, The Descent of the River Ganges</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Seventeen:<br>The Descent of the River Ganges
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">The Seventeenth Chapter describes the origin of the Ganges River and how it flows in and around Ilāvṛta-varṣa. There is also a description of the prayers Lord Śiva offers to Lord Saṅkarṣaṇa, part of the quadruple expansions of the Supreme Personality of Godhead. Lord Viṣṇu once approached Bali Mahārāja while the King was performing a sacrifice. The Lord appeared before him as Trivikrama, or Vāmana, and begged alms from the King in the form of three steps of land. With two steps, Lord Vāmana covered all three planetary systems and pierced the covering of the universe with the toes of His left foot. A few drops of water from the Causal Ocean leaked through this hole and fell on the head of Lord Śiva, where they remained for one thousand millenniums. These drops of water are the sacred Ganges River. It first flows onto the heavenly planets, which are located on the soles of Lord Viṣṇu’s feet. The Ganges River is known by many names, such as the Bhāgīrathī and the Jāhnavī. It purifies Dhruvaloka and the planets of the seven sages because both Dhruva and the sages have no other desire than to serve the Lord’s lotus feet.</div><div class="Normal-Level"><tb>The Ganges River, emanating from the lotus feet of the Lord, inundates the heavenly planets, especially the moon, and then flows through Brahmapurī atop Mount Meru. Here the river divides into four branches (known as Sītā, Alakanandā, Cakṣu and Bhadrā), which then flow down to the ocean of salt water. The branch known as Sītā flows through Śekhara-parvata and Gandhamādana-parvata and then flows down to Bhadrāśva-varṣa, where it mixes with the ocean of salt water in the West. The Cakṣu branch flows through Mālyavān-giri and, after reaching Ketumāla-varṣa, mixes with the ocean of salt water in the West. The branch known as Bhadrā flows onto Mount Meru, Mount Kumuda, and the Nīla, Śveta and Śṛṅgavān mountains before it reaches Kuru-deśa, where it flows into the ocean of salt water in the north. The Alakanandā branch flows through Brahmālaya, crosses over many mountains, including Hemakūṭa and Himakūṭa, and then reaches Bhārata-varṣa, where it flows into the southern side of the ocean of salt water. Many other rivers and their branches flow through the nine <span class="Italic">varṣas.</span></tb></div><div class="Normal-Level"><tb>The tract of land known as Bhārata-varṣa is the field of activities, and the other eight <span class="Italic">varṣas</span> are for persons who are meant to enjoy heavenly comfort. In each of these eight beautiful provinces, the celestial denizens enjoy various standards of material comfort and pleasure. A different incarnation of the Supreme Personality of Godhead distributes His mercy in each of the nine <span class="Italic">varṣas</span> of Jambūdvīpa.</tb></div><div class="Normal-Level"><tb>In the Ilāvṛta-varṣa, Lord Śiva is the only male. There he lives with his wife, Bhavānī, who is attended by many maidservants. If any other male enters that province, Bhavānī curses him to become a woman. Lord Śiva worships Lord Saṅkarṣaṇa by offering various prayers, one of which is as follows: “My dear Lord, please liberate all Your devotees from material life and bind all the nondevotees to the material world. Without Your mercy, no one can be released from the bondage of material existence.”</tb></div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">197</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: My dear King, Lord Viṣṇu, the enjoyer of all sacrifices, appeared as Vāmanadeva in the sacrificial arena of Bali Mahārāja. Then He extended His left foot to the end of the universe and pierced a hole in its covering with the nail of His big toe. Through the hole, the pure water of the Causal Ocean entered this universe as the Ganges River. Having washed the lotus feet of the Lord, which are covered with reddish powder, the water of the Ganges acquired a very beautiful pink color. Every living being can immediately purify his mind of material contamination by touching the transcendental water of the Ganges, yet its waters remain ever pure. Because the Ganges directly touches the lotus feet of the Lord before descending within this universe, she is known as Viṣṇupadī. Later she received other names like Jāhnavī and Bhāgīrathī. After one thousand millenniums, the water of the Ganges descended on Dhruvaloka, the topmost planet in this universe. Therefore all learned sages and scholars proclaim Dhruvaloka to be Viṣṇupada [“situated on Lord Viṣṇu’s lotus feet”].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            In this verse, Śukadeva Gosvāmī describes the glories of the Ganges River. The water of the Ganges is called <span class="Italic">patita-pāvanī,</span> the deliverer of all sinful living beings. It is a proven fact that a person who regularly bathes in the Ganges is purified both externally and internally. Externally his body becomes immune to all kinds of disease, and internally he gradually develops a devotional attitude toward the Supreme Personality of Godhead. Throughout India, many thousands of people live on the banks of the Ganges, and by regularly bathing in her waters, they are undoubtedly being purified both spiritually and materially. Many sages, including Śaṅkarācārya, have composed prayers in praise of the Ganges, and the land of India itself has become glorious because such rivers as the Ganges, Yamunā, Godāvarī, Kāverī, Kṛṣṇā and Narmadā flow there. Anyone living on the land adjacent to these rivers is naturally advanced in spiritual consciousness. Śrīla Madhvācārya says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vārāhe vāma-pādaṁ tu<br>tad-anyeṣu tu dakṣiṇam<br>pādaṁ kalpeṣu bhagavān<br>ujjahāra trivikramaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Standing on His right foot and extending His left to the edge of the universe, Lord Vāmana became known as Trivikrama, the incarnation who performed three heroic deeds.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Dhruva Mahārāja, the famous son of Mahārāja Uttānapāda, is known as the most exalted devotee of the Supreme Lord because of his firm determination in executing devotional service. Knowing that the sacred Ganges water washes the lotus feet of Lord Viṣṇu, Dhruva Mahārāja, situated on his own planet, to this very day accepts that water on his head with great devotion. Because he constantly thinks of Kṛṣṇa very devoutly within the core of his heart, he is overcome with ecstatic anxiety. Tears flow from his half-open eyes, and eruptions appear on his entire body.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            When a person is firmly fixed in devotional service to the Supreme Personality of Godhead, he is described as <span class="Italic">vīra-vrata,</span> fully determined. Such a devotee increases his ecstasy in devotional service more and more. Thus as soon as he remembers Lord Viṣṇu, his eyes fill with tears. This is a symptom of a <span class="Italic">mahā-bhāgavata.</span> Dhruva Mahārāja maintained himself in that devotional ecstasy, and Śrī Caitanya Mahāprabhu also gave us a practical example of transcendental ecstasy when He lived at Jagannātha Purī. His pastimes there are fully narrated in <span class="Italic">Caitanya-caritāmṛta.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">417</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The seven great sages [Marīci, Vasiṣṭha, Atri and so on] reside on planets beneath Dhruvaloka. Well aware of the influence of the water of the Ganges, to this day they keep Ganges water on the tufts of hair on their heads. They have concluded that this is the ultimate wealth, the perfection of all austerities, and the best means of prosecuting transcendental life. Having obtained uninterrupted devotional service to the Supreme Personality of Godhead, they neglect all other beneficial processes like religion, economic development, sense gratification and even merging into the Supreme. Just as jñānīs think that merging into the existence of the Lord is the highest truth, these seven exalted personalities accept devotional service as the perfection of life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Transcendentalists are divided into two primary groups: the <span class="Italic">nirviśeṣa-vādīs,</span> or impersonalists, and the <span class="Italic">bhaktas,</span> or devotees. The impersonalists do not accept spiritual varieties of life. They want to merge into the existence of the Supreme Lord in His Brahman feature (the <span class="Italic">brahmajyoti</span>). The devotees, however, desire to take part in the transcendental activities of the Supreme Lord. In the upper planetary system, the topmost planet is Dhruvaloka, and beneath Dhruvaloka are the seven planets occupied by the great sages, beginning with Marīci, Vasiṣṭha and Atri. All these sages regard devotional service as the highest perfection of life. Therefore they all carry the holy water of the Ganges on their heads. This verse proves that for one who has achieved the platform of pure devotional service, nothing else is important, even so-called liberation (<span class="Italic">kaivalya</span>). Śrīla Śrīdhara Svāmī states that only by achieving pure devotional service of the Lord can one give up all other engagements as insignificant. Prabodhānanda Sarasvatī confirms his statement as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kaivalyaṁ narakāyate tri-daśa-pūr ākāśa-puṣpāyate<br>durdāntendriya-kāla-sarpa-paṭalī protkhāta-daṁṣṭrāyate<br>viśvaṁ pūrṇa-sukhāyate vidhi-mahendrādiś ca kīṭāyate<br>yat kāruṇya-kaṭākṣa-vaibhavavatāṁ taṁ gauram eva stumaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Śrī Caitanya Mahāprabhu has perfectly enunciated and broadcast the process of <span class="Italic">bhakti-yoga.</span> Consequently, for one who has taken shelter at the lotus feet of Śrī Caitanya Mahāprabhu, the highest perfection of the Māyāvādīs, <span class="Italic">kaivalya,</span> or becoming one with the Supreme, is considered hellish, to say nothing of the <span class="Italic">karmīs</span>’ aspiration to be promoted to the heavenly planets. Devotees consider such goals to be worthless phantasmagoria. There are also <span class="Italic">yogīs,</span> who try to control their senses, but they can never succeed without coming to the stage of devotional service. The senses are compared to poisonous snakes, but the senses of a <span class="Italic">bhakta</span> engaged in the service of the Lord are like snakes with their poisonous fangs removed. The <span class="Italic">yogī</span> tries to suppress his senses, but even great mystics like Viśvāmitra fail in the attempt. Viśvāmitra was conquered by his senses when he was captivated by Menakā during his meditation. She later gave birth to Śakuntalā. The wisest persons in the world, therefore, are the <span class="Italic">bhakti-yogīs,</span> as Lord Kṛṣṇa confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (6.47):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yoginām api sarveṣāṁ<br>mad-gatenāntarātmanā<br>śraddhāvān bhajate yo māṁ<br>sa me yuktatamo mataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Of all <span class="Italic">yogīs,</span> he who always abides in Me with great faith, worshiping Me in transcendental loving service, is most intimately united with Me in <span class="Italic">yoga</span> and is the highest of all.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">210</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After purifying the seven planets near Dhruvaloka [the polestar], the Ganges water is carried through the spaceways of the demigods in billions of celestial airplanes. Then it inundates the moon [Candraloka] and finally reaches Lord Brahmā’s abode atop Mount Meru.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            We should always remember that the Ganges River comes from the Causal Ocean, beyond the covering of the universe. After the water of the Causal Ocean leaks through the hole created by Lord Vāmanadeva, it flows down to Dhruvaloka (the polestar) and then to the seven planets beneath Dhruvaloka. Then it is carried to the moon by innumerable celestial airplanes, and then it falls to the top of Mount Meru, which is known as Sumeru-parvata. In this way, the water of the Ganges finally reaches the lower planets and the peaks of the Himalayas, and from there it flows through Hardwar and throughout the plains of India, purifying the entire land. How the Ganges water reaches the various planets from the top of the universe is explained herein. Celestial airplanes carry the water from the planets of the sages to other planets. So-called advanced scientists of the modern age are trying to go to the higher planets, but at the same time they are experiencing a power shortage on earth. If they were actually capable scientists, they could personally go by airplane to other planets, but this they are unable to do. Having now given up their moon excursions, they are attempting to go to other planets, but without success.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On top of Mount Meru, the Ganges divides into four branches, each of which gushes in a different direction [east, west, north and south]. These branches, known by the names Sītā, Alakanandā, Cakṣu and Bhadrā, flow down to the ocean.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The branch of the Ganges known as the Sītā flows through Brahmapurī atop Mount Meru, and from there it runs down to the nearby peaks of the Kesarācala Mountains, which stand almost as high as Mount Meru itself. These mountains are like a bunch of filaments around Mount Meru. From the Kesarācala Mountains, the Ganges falls to the peak of Gandhamādana Mountain and then flows into the land of Bhadrāśva-varṣa. Finally it reaches the ocean of salt water in the west.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The branch of the Ganges known as Cakṣu falls onto the summit of Mālyavān Mountain and from there cascades onto the land of Ketumāla-varṣa. The Ganges flows incessantly through Ketumāla-varṣa and in this way also reaches the ocean of salt water in the West.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The branch of the Ganges known as Bhadrā flows from the northern side of Mount Meru. Its waters fall onto the peaks of Kumuda Mountain, Mount Nīla, Śveta Mountain and Śṛṅgavān Mountain in succession. Then it runs down into the province of Kuru and, after crossing through that land, flows into the saltwater ocean in the north.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">185</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Similarly, the branch of the Ganges known as Alakanandā flows from the southern side of Brahmapurī [Brahma-sadana]. Passing over the tops of mountains in various lands, it falls down with fierce force upon the peaks of the mountains Hemakūṭa and Himakūṭa. After inundating the tops of those mountains, the Ganges falls down onto the tract of land known as Bhārata-varṣa, which she also inundates. Then the Ganges flows into the ocean of salt water in the south. Persons who come to bathe in this river are fortunate. It is not very difficult for them to achieve with every step the results of performing great sacrifices like the Rājasūya and Aśvamedha yajñas.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The place where the Ganges flows into the salt water of the Bay of Bengal is still known as Gaṅgā-sāgara, or the meeting place of the Ganges and the Bay of Bengal. On Makara-saṅkrānti, in the month of January–February, thousands of people still go there to bathe, hoping to be liberated. That they can actually be liberated in this way is confirmed herein. For those who bathe in the Ganges at any time, the results of great sacrifices like the Aśvamedha and Rājasūya <span class="Italic">yajñas</span> are not at all difficult to achieve. Most people in India are still inclined to bathe in the Ganges, and there are many places where they can do so. At Prayāga (Allahabad), many thousands of people gather during the month of January to bathe in the confluence of the Ganges and Yamunā. Afterward, many of them go to the confluence of the Bay of Bengal and the Ganges to take bath there. Thus it is a special facility for all the people of India that they can bathe in the water of the Ganges at so many places of pilgrimage.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Many other rivers, both big and small, flow from the top of Mount Meru. These rivers are like daughters of the mountain, and they flow to the various tracts of land in hundreds of branches.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">781</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Among the nine varṣas, the tract of land known as Bhārata-varṣa is understood to be the field of fruitive activities. Learned scholars and saintly persons declare the other eight varṣas to be meant for very highly elevated pious persons. After returning from the heavenly planets, they enjoy the remaining results of their pious activities in these eight earthly varṣas.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The heavenly places of enjoyment are divided into three groups: the celestial heavenly planets, the heavenly places on earth, and the <span class="Italic">bila</span> heavenly places, which are found in the lower regions. Among these three classes of heavenly places (<span class="Italic">bhauma-svarga-pada-ni</span>), the heavenly places on earth are the eight <span class="Italic">varṣas</span> other than Bhārata-varṣa. In <span class="Ref_Italic">Bhagavad-gītā</span> (9.21) Kṛṣṇa says, <span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti:</span> when the persons living in the heavenly planets exhaust the results of their pious activities, they return to this earth. In this way, they are elevated to the heavenly planets, and then they again fall to the earthly planets. This process is known as <span class="Italic">brahmāṇḍa bhramaṇa,</span> wandering up and down throughout the universes. Those who are intelligent—in other words, those who have not lost their intelligence—do not involve themselves in this process of wandering up and down. They take to the devotional service of the Lord so that they can ultimately penetrate the covering of this universe and enter the spiritual kingdom. Then they are situated on one of the planets known as Vaikuṇṭhaloka or, still higher. Kṛṣṇaloka (Goloka Vṛndāvana). A devotee is never caught in the process of being promoted to the heavenly planets and again coming down. Therefore Śrī Caitanya Mahāprabhu says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ei rūpe brahmāṇḍa bhramite kona bhāgyavān jīva<br>guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja<br> [Cc. <span class="Ref_Italic">Madhya</span> 19.151]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Among all the living entities wandering throughout the universe, one who is most fortunate comes in contact with a representative of the Supreme Personality of Godhead and thus gets the opportunity to execute devotional service. Those who are sincerely seeking the favor of Kṛṣṇa come in contact with a <span class="Italic">guru,</span> a bona fide representative of Kṛṣṇa. The Māyāvādīs indulging in mental speculation and the <span class="Italic">karmīs</span> desiring the results of their actions cannot become <span class="Italic">gurus.</span> A <span class="Italic">guru</span> must be a direct representative of Kṛṣṇa who distributes the instructions of Kṛṣṇa without any change. Thus only the most fortunate persons come in contact with the <span class="Italic">guru.</span> As confirmed in the Vedic literatures, <span class="Italic">tad-vijñānārthaṁ sa gurum evābhigacchet: </span><span class="Ref_Italic">[MU</span> <popup><div class="Verse">tad-vijñānārthaṁ sa gurum evābhigacchet<br>samit-pāṇiḥ śrotriyaṁ brahma-niṣṭham</div></popup>
+          </p>
+          <p>
+            “To understand these things properly, one must humbly approach, with firewood in hand, a spiritual master who is learned in the <i>Vedas</i> and firmly devoted to the Absolute Truth.” <br><span class="Ref_Italic">[Muṇḍaka Upaniṣad</span> 1.2.12]
+          </p>
+          <p>
+            <lt>1.2.12] one has to search out a <span class="Italic">guru</span> to understand the affairs of the spiritual world. <span class="Italic">Śrīmad-Bhāgavatam</span> also confirms this point. <span class="Italic">Tasmād guruṁ prapadyeta jijñāsuḥ śreya uttamam: [SB </span>11.3.21] one who is very interested in understanding the activities in the spiritual world must search out a <span class="Italic">guru</span>—a bona fide representative of Kṛṣṇa. From all angles of vision, therefore, the word <span class="Italic">guru</span> is especially meant for the bona fide representative of Kṛṣṇa and no one else. <span class="Italic">Padma Purāṇa</span> states, <span class="Italic">avaiṣṇavo gurur na syāt:</span> one who is not a Vaiṣṇava, or who is not a representative of Kṛṣṇa, cannot be a <span class="Italic">guru.</span> Even the most qualified <span class="Italic">brāhmaṇa</span> cannot become a <span class="Italic">guru</span> if he is not a representative of Kṛṣṇa. <span class="Italic">Brāhmaṇas</span> are supposed to acquire six kinds of auspicious qualifications: they become very learned scholars (<span class="Italic">paṭhana</span>) and very qualified teachers (<span class="Italic">pāṭhana</span>); they become expert in worshiping the Lord or the demigods (<span class="Italic">yajana</span>), and they teach others how to execute this worship (<span class="Italic">yājana</span>); they qualify themselves as bona fide persons to receive alms from others (<span class="Italic">pratigraha</span>), and they distribute the wealth in charity (<span class="Italic">dāna</span>). Yet even a <span class="Italic">brāhmaṇa</span> possessing these qualifications cannot become a <span class="Italic">guru</span> unless he is the representative of Kṛṣṇa (<span class="Italic">gurur na syāt</span>). <span class="Italic">Vaiṣṇavaḥ śva-paco guruḥ:</span> but a Vaiṣṇava, a bona fide representative of the Supreme Personality of Godhead, Viṣṇu, can become a <span class="Italic">guru,</span> even if he is <span class="Italic">śva-paca,</span> a member of a family of dog-eaters. Of the three divisions of heavenly planets (<span class="Italic">svarga-loka</span>), <span class="Italic">bhauma-svarga</span> is sometimes accepted as the tract of land in Bhārata-varṣa known as Kashmir. In this region there are certainly good facilities for material sense enjoyment, but this is not the business of a pure transcendentalist. Rūpa Gosvāmī describes the engagement of a pure transcendentalist as follows:</lt>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā<br> [Madhya 19.167]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.” Those who fully engage in devotional service to Kṛṣṇa just to please Him are not interested in the three divisions of heavenly places, namely, <span class="Italic">divya-svarga, bhauma-svarga</span> and <span class="Italic">bila-svarga.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">279</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In these eight varṣas, or tracts of land, human beings live ten thousand years according to earthly calculations. All the inhabitants are almost like demigods. They have the bodily strength of ten thousand elephants. Indeed, their bodies are as sturdy as thunderbolts. The youthful duration of their lives is very pleasing, and both men and women enjoy sexual union with great pleasure for a long time. After years of sensual pleasure—when a balance of one year of life remains—the wife conceives a child. Thus the standard of pleasure for the residents of these heavenly regions is exactly like that of the human beings who lived during Tretā-yuga.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            There are four <span class="Italic">yugas:</span> Satya-yuga, Tretā-yuga, Dvāpara-yuga and Kali-yuga. During the first <span class="Italic">yuga,</span> Satya-yuga, people were very pious. Everyone practiced the mystic <span class="Italic">yoga</span> system for spiritual understanding and realization of God. Because everyone was always absorbed in <span class="Italic">samādhi,</span> no one was interested in material sense enjoyment. During Tretā-yuga, people enjoyed sense pleasure without tribulations. Material miseries began in Dvāpara-yuga, but they were not very stringent. Stringent material miseries really began from the advent of Kali-yuga.
+          </p>
+          <p>
+            Another point in this verse is that in all eight of these heavenly <span class="Italic">varṣas,</span> although men and women enjoy sex pleasure, there is no pregnancy. Pregnancy takes place only in lower-grade life. For example, animals like dogs and hogs become pregnant twice a year, and each time they beget at least half a dozen offspring. Even lower species of life such as snakes give birth to hundreds of young at one time. This verse informs us that in grades of life higher than ours, pregnancy occurs once in a lifetime. People still have sex life, but there is no pregnancy. In the spiritual world, people are not very attracted to sex life, due to their exalted devotional attitude. Practically speaking, there is no sex life in the spiritual world, but even if sometimes it does occur, there is no pregnancy at all. On the planet earth, however, human beings do become pregnant, although the tendency is to avoid having children. In this sinful age of Kali, people have even taken to the process of killing the child in the womb. This is the most degraded practice; it can only perpetuate the miserable material conditions of those who perform it.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In each of those tracts of land, there are many gardens filled with flowers and fruits according to the season, and there are beautifully decorated hermitages as well. Between the great mountains demarcating the borders of those lands lie enormous lakes of clear water filled with newly grown lotus flowers. Aquatic birds such as swans, ducks, water chickens, and cranes become greatly excited by the fragrance of lotus flowers, and the charming sound of bumblebees fills the air. The inhabitants of those lands are important leaders among the demigods. Always attended by their respective servants, they enjoy life in gardens alongside the lakes. In this pleasing situation, the wives of the demigods smile playfully at their husbands and look upon them with lusty desires. All the demigods and their wives are constantly supplied with sandalwood pulp and flower garlands by their servants. In this way, all the residents of the eight heavenly varṣas enjoy, attracted by the activities of the opposite sex.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Here is a description of the lower heavenly planets. The inhabitants of those planets enjoy life in a pleasing atmosphere of clear lakes filled with newly grown lotus flowers and gardens filled with fruits, flowers, various kinds of birds and humming bees. In that atmosphere they enjoy life with their very beautiful wives, who are always sexually stimulated. Nonetheless, they are all devotees of the Supreme Personality of Godhead, as will be explained in subsequent verses. The inhabitants of this earth also desire such heavenly enjoyment, but when they somehow or other achieve imitation pleasures like sex and intoxication, they completely forget the service of the Supreme Lord. In the heavenly planets, however, although the residents enjoy superior sense gratification, they never forget their positions as eternal servants of the Supreme Being.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">508</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            To show mercy to His devotees in each of these nine tracts of land, the Supreme Personality of Godhead known as Nārāyaṇa expands Himself in His quadruple principles of Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha. In this way He remains near His devotees to accept their service.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            In this connection, Viśvanātha Cakravartī Ṭhākura informs us that the demigods worship the Supreme Lord in His various Deity forms (<span class="Italic">arcā-vigraha</span>) because except in the spiritual world, the Supreme Personality of Godhead cannot be directly worshiped in person. In the material world, the Lord is always worshiped as the <span class="Italic">arcā-vigraha,</span> or Deity in the temple. There is no difference between the <span class="Italic">arcā-vigraha</span> and the original person, and therefore those who are engaged in worshiping the Deity in the temple in full opulence, even on this planet, should be understood to be directly in touch with the Supreme Personality of Godhead without a doubt. As enjoined in the <span class="Italic">śāstras, arcye viṣṇau śilā-dhīr guruṣu nara-matiḥ:</span> “No one should treat the Deity in the temple as stone or metal. nor should one think that the spiritual master is an ordinary human being.” One should strictly follow this śāstric injunction and worship the Deity, the Supreme Personality of Godhead, without offenses. The spiritual master is the direct representative of the Lord, and no one should consider him an ordinary human being. By avoiding offenses against the Deity and the spiritual master, one can advance in spiritual life, or Kṛṣṇa consciousness.
+          </p>
+          <p>
+            In this regard, the following quotation appears in the <span class="Italic">Laghu-bhāgavatāmṛta:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">pādme tu parama-vyomnaḥ<br>pūrvādye dik-catuṣṭaye<br>vāsudevādayo vyūhaś<br>catvāraḥ kathitāḥ kramāt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tathā pāda-vibhūtau ca<br>nivasanti kramādi me<br>jalāvṛti-stha-vaikuṇṭha-<br>sthita vedavatī-pure</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">satyordhve vaiṣṇave loke<br>nityākhye dvārakā-pure<br>śuddhodād uttare śveta-<br>dvīpe cairāvatī-pure</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṣīrāmbudhi-sthitānte<br>kroḍa-paryaṅka-dhāmani<br>sātvatīye kvacit tantre<br>nava vyūhāḥ prakīrtitāḥ<br>catvāro vāsudevādyā<br>nārāyaṇa-nṛsiṁhakau</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">hayagrīvo mahā-kroḍo<br>brahmā ceti navoditāḥ<br>tatra brahmā tu vijñeyaḥ<br>pūrvokta-vidhayā hariḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In the <span class="Italic">Padma Purāṇa</span> it is said that in the spiritual world the Lord personally expands in all directions and is worshiped as Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha. The same God is represented by the Deity in this material world, which is only one quarter of His creation. Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha are also present in the four directions of this material world. There is a Vaikuṇṭhaloka covered with water in this material world, and on that planet is a place called Vedavatī, where Vāsudeva is located. Another planet known as Viṣṇuloka is situated above Satyaloka, and there Saṅkarṣaṇa is present. Similarly, in Dvārakā-purī, Pradyumna is the predominator. On the island known as Śvetadvīpa, there is an ocean of milk, and in the midst of that ocean is a place called Airāvatī-pura, where Aniruddha lies on Ananta. In some of the <span class="Italic">sātvata-tantras,</span> there is a description of the nine <span class="Italic">varṣas</span> and the predominating Deity worshiped in each: (1) Vāsudeva, (2) Saṅkarṣaṇa, (3) Pradyumna, (4) Aniruddha, (5) Nārāyaṇa, (6) Nṛsiṁha, (7) Hayagrīva, (8) Mahāvarāha, and (9) Brahmā. “The Lord Brahmā mentioned in this connection is the Supreme Personality of Godhead. When there is no fit human being to empower as Lord Brahmā, the Lord Himself takes the position of Lord Brahmā. <span class="Italic">Tatra brahmā tu vijñeyaḥ pūrvokta-vidhayā hariḥ.</span> That Brahmā mentioned here is Hari Himself.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: In the tract of land known as Ilāvṛta-varṣa, the only male person is Lord Śiva, the most powerful demigod. Goddess Durgā, the wife of Lord Śiva, does not like any man to enter that land. If any foolish man dares to do so, she immediately turns him into a woman. I shall explain this later [in the Ninth Canto of Śrīmad-Bhāgavatam].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">125</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Ilāvṛta-varṣa, Lord Śiva is always encircled by ten billion maidservants of goddess Durgā, who minister to him. The quadruple expansion of the Supreme Lord is composed of Vāsudeva, Pradyumna, Aniruddha and Saṅkarṣaṇa. Saṅkarṣaṇa, the fourth expansion, is certainly transcendental, but because his activities of destruction in the material world are in the mode of ignorance, He is known as tāmasī, the Lord’s form in the mode of ignorance. Lord Śiva knows that Saṅkarṣaṇa is the original cause of his own existence, and thus he always meditates upon Him in trance by chanting the following mantra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Sometimes we see a picture of Lord Śiva engaged in meditation. This verse explains that Lord Śiva is always meditating upon Lord Saṅkarṣaṇa in trance. Lord Śiva is in charge of the destruction of the material world. Lord Brahmā creates the material world, Lord Viṣṇu maintains it, and Lord Śiva destroys it. Because destruction is in the mode of ignorance, Lord Śiva and his worshipable Deity, Saṅkarṣaṇa, are technically called <span class="Italic">tāmasī.</span> Lord Śiva is the incarnation of <span class="Italic">tamo-guṇa.</span> Since both Lord Śiva and Saṅkarṣaṇa are always enlightened and situated in the transcendental position, they have nothing to do with the modes of material nature—goodness, passion and ignorance—but because their activities involve them with the mode of ignorance, they are sometimes called <span class="Italic">tāmasī.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The most powerful Lord Śiva says: O Supreme Personality of Godhead, I offer my respectful obeisances unto You in Your expansion as Lord Saṅkarṣaṇa. You are the reservoir of all transcendental qualities. Although You are unlimited, You remain unmanifest to the nondevotees.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my Lord, You are the only worshipable person, for You are the Supreme Personality of Godhead, the reservoir of all opulences. Your secure lotus feet are the only source of protection for all Your devotees, whom You satisfy by manifesting Yourself in various forms. O my Lord, You deliver Your devotees from the clutches of material existence. Nondevotees, however, remain entangled in material existence by Your will. Kindly accept me as Your eternal servant.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">85</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            We cannot control the force of our anger. Therefore when we look at material things, we cannot avoid feeling attraction or repulsion for them. But the Supreme Lord is never affected in this way. Although He glances over the material world for the purpose of creating, maintaining and destroying it, He is not affected, even to the slightest degree. Therefore, one who desires to conquer the force of the senses must take shelter of the lotus feet of the Lord. Then he will be victorious.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            The Supreme Personality of Godhead is always equipped with inconceivable potencies. Although creation takes place by His glancing over the material energy, He is not affected by the modes of material nature. Because of His eternally transcendental position, when the Supreme Personality of Godhead appears in this material world, the modes of material nature cannot affect Him. Therefore the Supreme Lord is called Transcendence, and anyone who wants to be secure from the influence of the modes of material nature must take shelter of Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">118</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            For persons with impure vision, the Supreme Lord’s eyes appear like those of someone who indiscriminately drinks intoxicating beverages. Thus bewildered, such unintelligent persons become angry at the Supreme Lord, and due to their angry mood the Lord Himself appears angry and very fearful. However, this is an illusion. When the wives of the serpent demon were agitated by the touch of the Lord’s lotus feet, due to shyness they could proceed no further in their worship of Him. Yet the Lord remained unagitated by their touch, for He is equipoised in all circumstances. Therefore who will not worship the Supreme Personality of Godhead ?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Anyone who remains unagitated, even in the presence of cause for agitation, is called <span class="Italic">dhīra,</span> or equipoised. The Supreme Personality of Godhead, being always in a transcendental position, is never agitated by anything. Therefore someone who wants to become <span class="Italic">dhīra</span> must take shelter of the lotus feet of the Lord. In <span class="Ref_Italic">Bhagavad-gītā</span> (2.13) Kṛṣṇa says, <span class="Italic">dhīras tatra na muhyati:</span> a person who is equipoised in all circumstances is never bewildered. Prahlāda Mahārāja is a perfect example of a <span class="Italic">dhīra.</span> When the fierce form of Nṛsiṁhadeva appeared in order to kill Hiraṇyakaśipu, Prahlāda was unagitated. He remained calm and quiet, whereas others, including even Lord Brahmā, were frightened by the features of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">154</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Śiva continued: All the great sages accept the Lord as the source of creation, maintenance and destruction, although He actually has nothing to do with these activities. Therefore the Lord is called unlimited. Although the Lord in His incarnation as Śeṣa holds all the universes on His hoods, each universe feels no heavier than a mustard seed to Him. Therefore, what person desiring perfection will not worship the Lord?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            The incarnation of the Supreme Personality of Godhead known as Śeṣa or Ananta has unlimited strength, fame, wealth, knowledge, beauty and renunciation. As described in this verse, Ananta’s strength is so great that the innumerable universes rest on His hoods. He has the bodily features of a snake with thousands of hoods, and since His strength is unlimited, all the universes resting on His hoods feel no heavier than mustard seeds. We can just imagine how insignificant a mustard seed is on the hood of a serpent. In this connection, the reader is referred to <span class="Italic">Śrī Caitanya-caritāmṛta, Ādi-līlā,</span> Chapter Five, verses 117–125. There it is stated that Lord Viṣṇu’s incarnation as the serpentine Ananta Śeṣa Nāga supports all the universes on His hoods. By our calculation, a universe may be very, very heavy, but because the Lord is <span class="Italic">ananta</span> (unlimited), He feels the weight to be no heavier than a mustard seed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22–23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">134</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From that Supreme Personality of Godhead appears Lord Brahmā, whose body is made from the total material energy, the reservoir of intelligence predominated by the passionate mode of material nature. From Lord Brahmā, I myself am born as a representation of false ego known as Rudra. By my own power I create all the other demigods, the five elements and the senses. Therefore, I worship the Supreme Personality of Godhead, who is greater than any of us and under whose control are situated all the demigods, material elements and senses, and even Lord Brahmā and I myself, like birds bound by a rope. Only by the Lord’s grace can we create, maintain and annihilate the material world. Therefore I offer my respectful obeisances unto the Supreme Being.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            A summary of creation is given in this verse. From Saṅkarṣaṇa, Mahā-Viṣṇu expands, and from Mahā-Viṣṇu, Garbhodakaśāyī Viṣṇu expands. Lord Brahmā, who was born of Garbhodakaśāyī Viṣṇu, fathers Lord Śiva, from whom all the other demigods gradually evolve. Lord Brahmā, Lord Śiva and Lord Viṣṇu are incarnations of the different material qualities. Lord Viṣṇu is actually above all material qualities, but He accepts control of <span class="Italic">sattva-guṇa</span> (the mode of goodness) to maintain the universe. Lord Brahmā is born from the <span class="Italic">mahat-tattva.</span> Brahmā creates the entire universe, Lord Viṣṇu maintains it, and Lord Śiva annihilates it. The Supreme Personality of Godhead controls all the most important demigods—especially Lord Brahmā and Lord Śiva—exactly as the owner of a bird controls it by binding it with a rope. Sometimes vultures are controlled in this way.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">554</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The illusory energy of the Supreme Personality of Godhead binds all of us conditioned souls to this material world. Therefore, without being favored by Him, persons like us cannot understand how to get out of that illusory energy. Let me offer my respectful obeisances unto the Lord, who is the cause of creation and annihilation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Kṛṣṇa clearly states in <span class="Ref_Italic">Bhagavad-gītā</span> (7.14):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">daivī hy eṣā guṇa-mayī<br>mama māyā duratyayā<br>mām eva ye prapadyante<br>māyām etāṁ taranti te</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This divine energy of Mine, consisting of the three modes of material nature, is difficult to overcome. But those who have surrendered unto Me can easily cross beyond it.” All conditioned souls working within the illusory energy of the Lord consider the body to be the self, and thus they continuously wander throughout the universe, taking birth in different species of life and creating more and more problems. Sometimes they become disgusted with the problems and seek out a process by which they can get out of this entanglement. Unfortunately, such so-called research workers are unaware of the Supreme Personality of Godhead and His illusory energy, and thus all of them work only in darkness. never finding a way out. So-called scientists and advanced research scholars are ludicrously trying to find the cause of life. They take no notice of the fact that life is already being produced. What will be their credit if they find out the chemical composition of life? All their chemicals are nothing but different transformations of the five elements—earth, water, fire, air and ether. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.20), the living entity is never created (<span class="Italic">na jāyate mriyate vā kadācin</span>). There are five gross material elements and three minor material elements (mind, intelligence and ego), and there are eternal living entities. The living entity desires a certain type of body, and by the order of the Supreme Personality of Godhead, that body is created from material nature, which is nothing but a kind of machine handled by the Supreme Lord. The Lord gives the living entity a particular type of mechanical body, and the living entity must work with it according to the law of fruitive activities. Fruitive activities are described in this verse: <span class="Italic">karma-pamanīṁ māyām.</span> The living entity is seated on a machine (the body), and according to the order of the Supreme Lord, he operates the machine. This is the secret of transmigration of the soul from one body to another. The living entity thus becomes entangled in fruitive activities in this material world. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (15.7), <span class="Italic">manaḥ ṣaṣṭhānīndriyāṇi prakṛti-sthāni karṣati:</span> the living entity is struggling very hard against the six senses, which include the mind.
+          </p>
+          <p>
+            In all the activities of creation and annihilation, the living entity is entangled in fruitive activities, which are executed by the illusory energy, <span class="Italic">māyā.</span> He is exactly like a computer handled by the Supreme Personality of Godhead. The so-called scientists say that nature acts independently, but they cannot explain what nature is. Nature is nothing but a machine operated by the Supreme Personality of Godhead. When one understands the operator, his problems of life are solved. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bahūnāṁ janmanām ante<br>jñānavān māṁ prapadyate<br>vāsudevaḥ sarvam iti<br>sa mahātmā sudurlabhaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “After many births and deaths, he who is actually in knowledge surrenders unto Me, knowing Me to be the cause of all causes and all that is. Such a great soul is very rare.” A sane man, therefore, surrenders to the Supreme Personality of Godhead and thus gets out of the clutches of the illusory energy, <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Seventeenth Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Descent of the River Ganges.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/17">https://prabhupadabooks.com/sb/5/17</a><!-- span.text_source_copied_date
+        | on 2023-04-02 16:32:49 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.16: A Description of Jambudvipa     Next: SB 5.18: The Prayers Offered to the Lord by the Residents of Jambudvipa</div>
+      </p>
+    </div>
+  </body>
+</html>
