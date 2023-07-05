@@ -155,9 +155,15 @@ html lang='en'
       h1.text-3xl #{fancy_number}:<br>#{title}
 
       / - binding.pry
-      - unless summary.empty?
+      - unless summary.empty? && summary_paragraphs.empty?
         h3 Chapter Summary
-        div.summary== summary.to_s
+        - unless summary.empty?
+          div.summary== summary.to_s
+        - unless summary_paragraphs.empty?
+          .summary
+            - summary_paragraphs.each do |para|
+              p == para
+
 
       - verses.each do |verse_num, verse|
         div.verse data-verse_num="#{verse_num}"

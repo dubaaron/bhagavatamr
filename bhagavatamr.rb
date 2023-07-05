@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'pry'
+# require 'pry'
+require 'pry-byebug'
 
 =begin
 Todo:
@@ -10,7 +11,7 @@ Todo:
 - [x] put output in folders
 - [ ] fix input parsing
 - [ ] make a one-shot command to fetch & parse
-- [ ] try pulling from folio infobase files ... 
+- [ ] try pulling from folio infobase files ...
   - https://github.com/imazen/folioxml
   - https://stackoverflow.com/questions/6521655/need-to-export-from-folio-to-xml-or-convert-fff-to-xml
 - [x] make the weekly readings
@@ -43,8 +44,10 @@ end
 require 'colorize'
 class Bhāgavatamr
   OUTPUTDIR = './output'
-  CANTOS = { 
-    1 => '“Creation”', 
+  CANTOS = {
+    1 => '“Creation”',
+    2 => '“The Cosmic Manifestation”',
+    3 => '“The Status Quo”',
     4 => '“Creation of the Fourth Order”',
     5 => '“The Creative Impetus”',
     6 => '“Prescribed Duties for Mankind”',
@@ -58,29 +61,29 @@ class Bhāgavatamr
     require 'net/http'
     # require 'rubygems'
     require 'mechanize'
-  
+
     @@agent = Mechanize.new
 
     self.turn_off_links
 
     chapter_url = URI("https://prabhupadabooks.com/sb/#{canto}/#{chapter}?d=1")
-  
+
     puts "Fetching Śrīmad-Bhāgavatam Canto #{canto}, Chapter #{chapter}, from #{chapter_url}"
-    
+
     # chapter_raw_html = Net::HTTP.get(chapter_url)
     page = @@agent.get(chapter_url)
-  
+
     # require 'pry'; binding.pry
     puts '', page.body[1..1008].light_blue, '...', ''
-  
+
     require 'fileutils'
     FileUtils.mkdir_p OUTPUTDIR
-  
+
     output_file_name = self.get_rawhtml_filepath canto, chapter
     puts "Saving to '#{output_file_name}' ..."
     File.write(output_file_name, page.body)
     puts 'Done. Haribol!'.yellow.on_blue.bold, ''
-      
+
   end
 
 
@@ -96,11 +99,11 @@ class Bhāgavatamr
 
   def self.turn_off_links
     url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
-  
+
     puts "Setting links to 'off' ... "
-  
+
     page = @@agent.get(url_to_switch_links_off)
-  
+
     puts page.body.light_blue, ''
   end
 
@@ -136,7 +139,7 @@ class Bhāgavatamr
 
     chapter.fancy_number = noko.css('.chapnum').text
     chapter.title = noko.css('.Chapter-Desc').text
-    output << noko.css('.breadcrumb').text << "\n" << 
+    output << noko.css('.breadcrumb').text << "\n" <<
       "#{chapter.fancy_number}\n" << chapter.title
 
     # todo: set this manually? because we know where we got it from ...
@@ -153,20 +156,26 @@ class Bhāgavatamr
     this_verse = nil
     unhandled_bits = []
 
+    we_are_in_chapter_summary = false
+
     # the texts are inside a td width=90% currently; start with that
     noko.css('td[width="90%"]').children.each do |el|
       output << el.content
-      
+
       # strip links
       el.search('a').each { |node| node.replace(node.children) }
 
       # look to see what kind of element, process as necessary, etc.
-      case el&.attributes.dig('class')&.value
+      element_class = el&.attributes.dig('class')&.value
+      case element_class
       when 'Textnum'
+        # div.Textnum ends the chapter summary
+        we_are_in_chapter_summary = false
+
         # start new verse
         unless this_verse.nil?
           # put previous verse onto the stack
-          chapter.add_verse this_verse
+          chapter.add_verse(this_verse)
         end
         # todo: test this regex?
         if m = el.content.match(/TEXTS? (?<range>(?<start>\d+)(?:[-–](?<end>\d+))?)/)
@@ -178,35 +187,61 @@ class Bhāgavatamr
       
       when 'Verse-Text', 'Uvaca-line', 'Prose-Verse'
         this_verse.sanskrit_roman_lines << el.content
-      
+
       when 'Synonyms'
         this_verse.synonyms_html = el.children.to_html
-      
+
       when 'Translation'
         this_verse.english_translation_html << el.children.to_html
         this_verse.english_translation_text << el.text
+
       when 'First', 'Purport', 'After-Verse', 'Normal-Level', 'VerseRef', 'Verse', 'One'
         # todo: make sure we catch all variations; maybe write a way to check & compare text with original to make sure we're not missing anything?
         # todo: make sure verse-in-purport is handled properly ... I think it is, now, but could verify?
-        this_verse.purport_html_paragraphs << el.children.to_html
+        if we_are_in_chapter_summary
+          chapter.summary_paragraphs << el.children.to_html
+        else
+          this_verse.purport_html_paragraphs << el.children.to_html
+        end
+
       when 'Thus-end'
         chapter.thus_ends_text << el.children.to_html
+
       when 'Search-Heading'
         # todo: extract this info somehow?
-        # binding.pry
         chapter.next_prev_links_raw = el.to_html
-      when 'Verse-Section', 'Synonyms-Section', 'chapnum', 'Chapter-Desc'
+
+      when 'Verse-Section', 'Synonyms-Section', 'chapnum'
         # ignore these for now; they are just headings
+
+      when 'Chapter-Desc'
+        we_are_in_chapter_summary = true
+
       else
-        if el.text.match(/^([\s]|\\n)*$/) 
+        if el.text.match(/^([\s]|\\n)*$/)
           # ignore if just whitespace and literal '\n's
-          
+
+        ###
         # todo: fix this up for better reliability? use case-insensitive match?
-        elsif el.to_html.match(/Verse-in-purp/) or el.to_html.match(/One-line-verse-in-purp/)
-          this_verse.purport_html_paragraphs << "<blockquote>#{el.to_html}</blockquote>"
-        elsif el&.attributes.dig('style').to_s.match?('text-align : left') && el&.children&.first.name == 'div' && el&.children&.first&.attributes.dig('class').to_s == 'Normal-Level'
-          # binding.pry
-          chapter.summary += el&.children&.first.to_html
+        elsif el.to_html.match(/Verse-in-purp/) || el.to_html.match(/One-line-verse-in-purp/)
+
+          # el&.children&.first.to_html ??
+          text_to_add = "<blockquote>#{el.to_html}</blockquote>"
+          if we_are_in_chapter_summary
+            chapter.summary_paragraphs << text_to_add
+          else
+            this_verse.purport_html_paragraphs << text_to_add
+          end
+
+        ###
+        # this pattern is indicative of being in a chapter summary, I guess?
+        elsif el&.attributes.dig('style').to_s.match?('text-align : left') && 
+          el&.children&.first.name == 'div' && 
+          el&.children&.first&.attributes.dig('class').to_s == 'Normal-Level'
+          
+          we_are_in_chapter_summary = true
+          chapter.summary_paragraphs << el&.children&.first.to_html
+
         else
           # binding.pry
           unhandled_bits << el.to_html
@@ -268,8 +303,8 @@ end
 
 
 class Verse
-  attr_accessor :num_start, :num_end, :num_range, :sanskrit_roman_lines, 
-    :synonyms_html, :english_translation_html, :english_translation_text, 
+  attr_accessor :num_start, :num_end, :num_range, :sanskrit_roman_lines,
+    :synonyms_html, :english_translation_html, :english_translation_text,
     :purport_html_paragraphs
 
   # def initialize num_start, num_end = nil
@@ -290,7 +325,8 @@ end
 
 
 class Chapter
-  attr_accessor :canto, :number, :fancy_number, :summary, :verses, :title, :thus_ends_text,
+  attr_accessor :canto, :number, :fancy_number, :summary, :summary_paragraphs, 
+    :verses, :title, :thus_ends_text,
     :date_text_copied_from_source, :text_source_url, :next_prev_links_raw
 
   def initialize canto = 1, number = 1
@@ -299,6 +335,7 @@ class Chapter
     @number = number
     @thus_ends_text = ''
     @summary = ''
+    @summary_paragraphs = []
   end
 
   def add_verse verse
