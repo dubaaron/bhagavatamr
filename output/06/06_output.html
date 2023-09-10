@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.6, The Progeny of the Daughters of Dakṣa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Six:<br>The Progeny of the Daughters of Dakṣa
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">As described in this chapter, Prajāpati Dakṣa begot sixty daughters in the womb of his wife Asiknī. These daughters were given in charity to various persons to increase the population. Since these offspring of Dakṣa were women, Nārada Muni did not try to lead them toward the renounced order of life. Thus the daughters were saved from Nārada Muni. Ten of the daughters were given in marriage to Dharmarāja, thirteen to Kaśyapa Muni, and twenty-seven to the moon-god, Candra. In this way fifty daughters were distributed, and of the other ten daughters, four were given to Kaśyapa and two each to Bhūta, Aṅgirā and Kṛśāśva. One should know that it is because of the union of these sixty daughters with various exalted personalities that the entire universe was filled with various kinds of living entities, such as human beings, demigods, demons, beasts, birds and serpents.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">139</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: My dear King, thereafter, at the request of Lord Brahmā, Prajāpati Dakṣa, who is known as Prācetasa, begot sixty daughters in the womb of his wife Asiknī. All the daughters were very affectionate toward their father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            After the incidents concerning the loss of his many sons, Dakṣa repented his misunderstanding with Nārada Muni. Lord Brahmā then saw Dakṣa and instructed him to beget children again. This time Dakṣa was very cautious to beget female children instead of male children so that Nārada Muni would not disturb them by urging them to accept the renounced order. Females are not meant for the renounced order of life; they should be faithful to their good husbands, for if a husband is competent for liberation, his wife will also achieve liberation with him. As stated in the <span class="Italic">śāstra,</span> the results of a husband’s pious activities are shared by his wife. Therefore a woman’s duty is to be very chaste and faithful to her husband. Then without separate endeavor she will share in all the profit the husband earns.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            He gave ten daughters in charity to Dharmarāja [Yamarāja], thirteen to Kaśyapa [first twelve and then one more], twenty-seven to the moon-god, and two each to Aṅgirā, Kṛśāśva and Bhūta. The other four daughters were given to Kaśyapa. [Thus Kaśyapa received seventeen daughters in all.]
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Now please hear from me the names of all these daughters and their descendants, who filled all the three worlds.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ten daughters given to Yamarāja were named Bhānu, Lambā, Kakud, Yāmi, Viśvā, Sādhyā, Marutvatī, Vasu, Muhūrtā and Saṅkalpā. Now hear the names of their sons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, a son named Deva-ṛṣabha was born from the womb of Bhānu, and from him came a son named Indrasena. From the womb of Lambā came a son named Vidyota, who generated all the clouds.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From the womb of Kakud came the son named Saṅkaṭa, whose son was named Kīkaṭa. From Kīkaṭa came the demigods named Durgā. From Yāmi came the son named Svarga, whose son was named Nandi.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The sons of Viśvā were the Viśvadevas, who had no progeny. From the womb of Sādhyā came the Sādhyas, who had a son named Arthasiddhi.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The two sons who took birth from the womb of Marutvatī were Marutvān and Jayanta. Jayanta, who is an expansion of Lord Vāsudeva, is known as Upendra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods named the Mauhūrtikas took birth from the womb of Muhūrtā. These demigods deliver the results of actions to the living entities of their respective times.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10–11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The son of Saṅkalpā was known as Saṅkalpa, and from him lust was born. The sons of Vasu were known as the eight Vasus. Just hear their names from me: Droṇa, Prāṇa, Dhruva, Arka, Agni, Doṣa, Vāstu and Vibhāvasu. From Abhimati, the wife of the Vasu named Droṇa, were generated the sons named Harṣa, Śoka, Bhaya and so on.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ūrjasvatī, the wife of Prāṇa, gave birth to three sons, named Saha, Āyus and Purojava. The wife of Dhruva was known as Dharaṇi, and from her womb various cities took birth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From the womb of Vāsanā, the wife of Arka, came many sons, headed by Tarṣa. Dhārā, the wife of the Vasu named Agni, gave birth to many sons, headed by Draviṇaka.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From Kṛttikā, another wife of Agni, came the son named Skanda, Kārttikeya, whose sons were headed by Viśākha. From the womb of Śarvarī, the wife of the Vasu named Doṣa, came the son named Śiśumāra, who was an expansion of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From Āṅgirasī, the wife of the Vasu named Vāstu, was born the great architect Viśvakarmā. Viśvakarmā became the husband of Ākṛtī, from whom the Manu named Cākṣuṣa was born. The sons of Manu were known as the Viśvadevas and Sādhyas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ūṣā, the wife of Vibhāvasu, gave birth to three sons—Vyuṣṭa, Rociṣa and Ātapa. From Ātapa came Pañcayāma, the span of day, who awakens all living entities to material activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17–18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">38</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sarūpā, the wife of Bhūta, gave birth to the ten million Rudras, of whom the eleven principle Rudras were Raivata, Aja, Bhava, Bhīma, Vāma, Ugra, Vṛṣākapi, Ajaikapāt, Ahirbradhna, Bahurūpa and Mahān. Their associates, the ghosts and goblins, who are very fearful, were born of the other wife of Bhūta.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura comments that Bhūta had two wives. One of them, Sarūpā, gave birth to the eleven Rudras, and the other wife gave birth to the associates of the Rudras known as the ghosts and hobgoblins.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The prajāpati Aṅgirā had two wives, named Svadhā and Satī. The wife named Svadhā accepted all the Pitās as her sons, and Satī accepted the Atharvāṅgirasa Veda as her son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Kṛśāśva had two wives, named Arcis and Dhiṣaṇā. In the wife named Arcis he begot Dhūmaketu and in Dhiṣaṇā he begot four sons, named Vedaśirā, Devala, Vayuna and Manu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21–22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Kaśyapa, who is also named Tārkṣya, had four wives—Vinatā [Suparṇā], Kadrū, Pataṅgī and Yāminī. Pataṅgī gave birth to many kinds of birds, and Yāminī gave birth to locusts. Vinatā [Suparṇā] gave birth to Garuḍa, the carrier of Lord Viṣṇu, and to Anūru, or Aruṇa, the chariot driver of the sun-god. Kadrū gave birth to different varieties of serpents.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Parīkṣit, best of the Bhāratas, the constellations named Kṛttikā were all wives of the moon-god. However, because Prajāpati Dakṣa had cursed him to suffer from a disease causing gradual destruction, the moon-god could not beget children in any of his wives.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24–26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter the King of the moon pacified Prajāpati Dakṣa with courteous words and thus regained the portions of light he had lost during his disease. Nevertheless he could not beget children. The moon loses his shining power during the dark fortnight, and in the bright fortnight it is manifest again. O King Parīkṣit, now please hear from me the names of Kaśyapa’s wives, from whose wombs the population of the entire universe has come. They are the mothers of almost all the population of the entire universe, and their names are very auspicious to hear. They are Aditi, Diti, Danu, Kāṣṭhā, Ariṣṭā, Surasā, Ilā, Muni, Krodhavaśā, Tāmrā, Surabhi, Saramā and Timi. From the womb of Timi all the aquatics took birth, and from the womb of Saramā the ferocious animals like the tigers and lions took birth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, from the womb of Surabhi the buffalo, cow and other animals with cloven hooves took birth, from the womb of Tāmrā the eagles, vultures and other large birds of prey took birth, and from the womb of Muni the angels took birth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The sons born of Krodhavaśā were the serpents known as dandaśūka, as well as other serpents and the mosquitoes. All the various creepers and trees were born from the womb of Ilā. The Rākṣasas, bad spirits, were born from the womb of Surasā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29–31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Gandharvas were born from the womb of Ariṣṭā, and animals whose hooves are not split, such as the horse, were born from the womb of Kāṣṭhā. O King, from the womb of Danu came sixty-one sons, of whom these eighteen were very important: Dvimūrdhā, Śambara, Ariṣṭa, Hayagrīva, Vibhāvasu, Ayomukha, Śaṅkuśirā, Svarbhānu, Kapila, Aruṇa, Pulomā, Vṛṣaparvā, Ekacakra, Anutāpana, Dhūmrakeśa, Virūpākṣa, Vipracitti and Durjaya.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The daughter of Svarbhānu named Suprabhā was married by Namuci. The daughter of Vṛṣaparvā named Śarmiṣṭhā was given to the powerful King Yayāti, the son of Nahuṣa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33–36.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vaiśvānara, the son of Danu, had four beautiful daughters, named Upadānavī, Hayaśirā, Pulomā and Kālakā. Hiraṇyākṣa married Upadānavī, and Kratu married Hayaśirā. Thereafter, at the request of Lord Brahmā, Prajāpati Kaśyapa married Pulomā and Kālakā, the other two daughters of Vaiśvānara. From the wombs of these two wives of Kaśyapa came sixty thousand sons, headed by Nivātakavaca, who are known as the Paulomas and the Kālakeyas. They were physically very strong and expert in fighting, and their aim was to disturb the sacrifices performed by the great sages. My dear King, when your grandfather Arjuna went to the heavenly planets, he alone killed all these demons, and thus King Indra became extremely affectionate toward him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In his wife Siṁhikā, Vipracitti begot one hundred and one sons, of whom the eldest is Rāhu and the others are the one hundred Ketus. All of them attained positions in the influential planets.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38–39.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Now please hear me as I describe the descendants of Aditi in chronological order. In this dynasty the Supreme Personality of Godhead Nārāyaṇa descended by His plenary expansion. The names of the sons of Aditi are as follows: Vivasvān, Aryamā, Pūṣā, Tvaṣṭā, Savitā, Bhaga, Dhātā, Vidhātā, Varuṇa, Mitra, Śatru and Urukrama.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Saṁjñā, the wife of Vivasvān, the sun-god, gave birth to the Manu named Śrāddhadeva, and the same fortunate wife also gave birth to the twins Yamarāja and the River Yamunā. Then Yamī, while wandering on the earth in the form of a mare, gave birth to the Aśvinī-kumāras.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Chāyā, another wife of the sun-god, begot two sons named Śanaiścara and Sāvarṇi Manu, and one daughter, Tapatī, who married Saṁvaraṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From the womb of Mātṛkā, the wife of Aryamā, were born many learned scholars. Among them Lord Brahmā created the human species, which are endowed with an aptitude for self-examination.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Pūṣā had no sons. When Lord Śiva was angry at Dakṣa, Pūṣā had laughed at Lord Śiva and shown his teeth. Therefore he lost his teeth and had to live by eating only ground flour.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Racanā, the daughter of the Daityas, became the wife of Prajāpati Tvaṣṭā. By his semina he begot in her womb two very powerful sons named Sanniveśa and Viśvarūpa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although Viśvarūpa was the son of the daughter of their eternal enemies the demons, the demigods accepted him as their priest in accordance with the order of Brahmā when they were abandoned by their spiritual master, Bṛhaspati, whom they had disrespected.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports to the Sixth Canto, Sixth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “The Progeny of the Daughters of Dakṣa.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/6">https://prabhupadabooks.com/sb/6/6</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:21:54 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.5: Narada Muni Cursed by Prajapati Daksa     Next: SB 6.7: Indra Offends His Spiritual Master, Brhaspati.</div>
+      </p>
+    </div>
+  </body>
+</html>

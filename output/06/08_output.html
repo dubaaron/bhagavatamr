@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.8, The Nārāyaṇa-kavaca Shield</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Eight:<br>The Nārāyaṇa-kavaca Shield
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter describes how Indra, the King of heaven, was victorious over the soldiers of the demons, and it also describes the shield of the Viṣṇu <span class="Italic">mantra.</span>
+          </div>
+        </p>
+        <p>
+          <div class="Normal-Level">To take protection from this shield, one must first touch <span class="Italic">kuśa</span> grass and wash one’s mouth with <span class="Italic">ācamana-mantras.</span> One should observe silence and then place the eight-syllable Viṣṇu <span class="Italic">mantra</span> on the parts of his body and place the twelve-syllable <span class="Italic">mantra</span> on his hands. The eight-syllable <span class="Italic">mantra</span> is <span class="Italic">oṁ namo nārāyaṇāya.</span> This <span class="Italic">mantra</span> should be distributed all over the front and back of the body. The twelve-syllable <span class="Italic">mantra,</span> which begins with the <span class="Italic">praṇava, oṁkāra,</span> is <span class="Italic">oṁ namo bhagavate vāsudevāya.</span> One syllable should be placed on each of the fingers and should be preceded by the <span class="Italic">praṇava, oṁkāra.</span> Thereafter, one must chant <span class="Italic">oṁ viṣṇave namaḥ,</span> which is a six-syllable <span class="Italic">mantra.</span> One must progressively place the syllables of the <span class="Italic">mantra</span> on the heart, the head, between the two eyebrows, on the <span class="Italic">śikhā</span> and between the eyes, and then one should chant <span class="Italic">maḥ astrāya phaṭ</span> and with this <span class="Italic">mantra</span> protect himself from all directions. <span class="Italic">Nādevo devam arcayet:</span> one who has not risen to the level of a <span class="Italic">deva</span> cannot chant this <span class="Italic">mantra.</span> According to this direction of the <span class="Italic">śāstra,</span> one must think himself qualitatively nondifferent from the Supreme.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">After finishing this dedication, one must offer a prayer to the eight-armed Lord Viṣṇu, who sits on the shoulders of Garuḍadeva. One also has to think of the fish incarnation, Vāmana, Kūrma, Nṛsiṁha, Varāha. Paraśurāma, Rāmacandra (the elder brother of Lakṣmaṇa). Nara-Nārāyaṇa, Dattātreya (an empowered incarnation), Kapila, Sanat-kumāra, Hayagrīva, Nāradadeva (the incarnation of a devotee). Dhanvantari, Ṛṣabhadeva, Yajña, Balarāma, Vyāsadeva, Buddhadeva and Keśava. One should also think of Govinda, the master of Vṛndāvana. and one should think of Nārāyaṇa, the master of the spiritual sky. One should think of Madhusūdana, Tridhāmā, Mādhava, Hṛṣīkeśa, Padmanābha, Janārdana, Dāmodara and Viśveśvara, as well as the Supreme Personality of Godhead Kṛṣṇa Himself. After offering prayers to the Lord’s personal expansions known as the <span class="Italic">svāṁśa</span> and <span class="Italic">śaktyāveśa-avatāras,</span> one should pray to the weapons of Lord Nārāyaṇa, such as the Sudarśana, <span class="Italic">gadā, śaṅkha, khaḍga</span> and bow.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">After explaining this process, Śukadeva Gosvāmī told Mahārāja Parīkṣit how Viśvarūpa, the brother of Vṛtrāsura, described the glories of the Nārāyaṇa-kavaca to Indra.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1–2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit inquired from Śukadeva Gosvāmī: My lord, kindly explain the Viṣṇu mantra armor that protected King Indra and enabled him to conquer his enemies, along with their carriers, and enjoy the opulence of the three worlds. Please explain to me that Nārāyaṇa armor, by which King Indra achieved success in battle, conquering the enemies who were endeavoring to kill him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: King Indra, the leader of the demigods, inquired about the armor known as Nārāyaṇa-kavaca from Viśvarūpa, who was engaged by the demigods as their priest. Please hear Viśvarūpa’s reply with great attention.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4–6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Viśvarūpa said: If some form of fear arrives, one should first wash his hands and legs clean and then perform ācamana by chanting this mantra: oṁ apavitraḥ pavitro vā sarvāvasthāṁ gato ’pi vā/ yaḥ smaret puṇḍarīkākṣaṁ sa bahyābhyantaraḥ śuciḥ/ śrī-viṣṇu śrī-viṣṇu śrī-viṣṇu. Then one should touch kuśa grass and sit gravely and silently, facing north. When completely purified, one should touch the mantra composed of eight syllables to the eight parts of his body and touch the mantra composed of twelve syllables to his hands. Thus, in the following manner, he should bind himself with the Nārāyaṇa coat of armor. First, while chanting the mantra composed of eight syllables [oṁ namo nārāyaṇāya], beginning with the praṇava, the syllable oṁ, one should touch his hands to eight parts of his body, starting with the two feet and progressing systematically to the knees, thighs, abdomen, heart, chest, mouth and head. Then one should chant the mantra in reverse, beginning from the last syllable [ya], while touching the parts of his body in the reverse order. These two processes are known as utpatti-nyāsa and saṁhāra-nyāsa respectively.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then one should chant the mantra composed of twelve syllables [oṁ namo bhagavate vāsudevāya]. Preceding each syllable by the oṁkāra, one should place the syllables of the mantra on the tips of his fingers, beginning with the index finger of the right hand and concluding with the index finger of the left. The four remaining syllables should be placed on the joints of the thumbs.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8–10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One must then chant the mantra of six syllables [oṁ viṣṇave namaḥ]. One should place the syllable “oṁ” on his heart, the syllable “vi” on the top of his head, the syllable “ṣa” between his eyebrows, the syllable “ṇa” on his tuft of hair [śikhā], and the syllable “ve” between his eyes. The chanter of the mantra should then place the syllable “na” on all the joints of his body and meditate on the syllable “ma” as being a weapon. He should thus become the perfect personification of the mantra. Thereafter, adding visarga to the final syllable “ma,” he should chant the mantra “maḥ astrāya phaṭ” in all directions, beginning from the east. In this way, all directions will be bound by the protective armor of the mantra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After finishing this chanting, one should think himself qualitatively one with the Supreme Personality of Godhead, who is full in six opulences and is worthy to be meditated upon. Then one should chant the following protective prayer to Lord Nārāyaṇa, the Nārāyaṇa-kavaca.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">109</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Lord, who sits on the back of the bird Garuḍa, touching him with His lotus feet, holds eight weapons—the conchshell, disc, shield, sword, club, arrows, bow and ropes. May that Supreme Personality of Godhead protect me at all times with His eight arms. He is all-powerful because He fully possesses the eight mystic powers [aṇimā, laghimā, etc.].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Thinking oneself one with the Supreme is called <span class="Italic">ahaṅgrahopāsanā.</span> Through <span class="Italic">ahaṅgrahopāsanā</span> one does not become God, but he thinks of himself as qualitatively one with the Supreme. Understanding that as a spirit soul he is equal in quality to the supreme soul the way the water of a river is of the same nature as the water of the sea, one should meditate upon the Supreme Lord, as described in this verse, and seek His protection. The living entities are always subordinate to the Supreme. Consequently their duty is to always seek the mercy of the Lord in order to be protected by Him in all circumstances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">28</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the Lord, who assumes the body of a great fish, protect me in the water from the fierce animals that are associates of the demigod Varuṇa. By expanding His illusory energy, the Lord assumed the form of the dwarf Vāmana. May Vāmana protect me on the land. Since the gigantic form of the Lord, Viśvarūpa, conquers the three worlds, may He protect me in the sky.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            This <span class="Italic">mantra</span> seeks the protection of the Supreme Personality of Godhead in the water, land and sky in His incarnations as the fish, Vāmanadeva and the Viśvarūpa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May Lord Nṛsiṁhadeva, who appeared as the enemy of Hiraṇyakaśipu, protect me in all directions. His loud laughing vibrated in all directions and caused the pregnant wives of the asuras to have miscarriages. May that Lord be kind enough to protect me in difficult places like the forest and battlefront.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">42</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme indestructible Lord is ascertained through the performance of ritualistic sacrifices and is therefore known as Yajñeśvara. In His incarnation as Lord Boar, He raised the planet earth from the water at the bottom of the universe and kept it on His pointed tusks. May that Lord protect me from rogues on the street. May Paraśurāma protect me on the tops of mountains, and may the elder brother of Bharata, Lord Rāmacandra, along with His brother Lakṣmaṇa, protect me in foreign countries.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            There are three Rāmas. One Rāma is Paraśurāma (Jāmadāgnya). another Rāma is Lord Rāmacandra, and a third Rāma is Lord Balarāma. In this verse the words <span class="Italic">rāmo’dri-kūṭeṣv atha</span> indicate Lord Paraśurāma. The brother of Bharata Mahārāja and Lakṣmaṇa is Lord Rāmacandra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May Lord Nārāyaṇa protect me from unnecessarily following false religious systems and falling from my duties due to madness. May the Lord in His appearance as Nara protect me from unnecessary pride. May Lord Dattātreya, the master of all mystic power, protect me from falling while performing bhakti-yoga, and may Lord Kapila, the master of all good qualities, protect me from the material bondage of fruitive activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">110</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May Sanat-kumāra protect me from lusty desires. As I begin some auspicious activity, may Lord Hayagrīva protect me from being an offender by neglecting to offer respectful obeisances to the Supreme Lord. May Devarṣi Nārada protect me from committing offenses in worshiping the Deity, and may Lord Kūrma, the tortoise, protect me from falling to the unlimited hellish planets.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Lusty desires are very strong in everyone, and they are the greatest impediment to the discharge of devotional service. Therefore those who are very much influenced by lusty desires are advised to take shelter of Sanat-kumāra, the great <span class="Italic">brahmacārī</span> devotee. Nārada Muni, who is the guide for <span class="Italic">arcana,</span> is the author of the <span class="Italic">Nārada-pañcarātra,</span> which prescribes the regulative principles for worshiping the Deity. Everyone engaged in Deity worship, whether at home or in the temple, should always seek the mercy of Devarṣi Nārada in order to avoid the thirty-two offenses while worshiping the Deity. These offenses in Deity worship are mentioned in <span class="Italic">The Nectar of Devotion.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">90</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the Supreme Personality of Godhead in His incarnation as Dhanvantari relieve me from undesirable eatables and protect me from physical illness. May Lord Ṛṣabhadeva, who conquered His inner and outer senses, protect me from fear produced by the duality of heat and cold. May Yajña protect me from defamation and harm from the populace, and may Lord Balarāma as Śeṣa protect me from envious serpents.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            To live within this material world, one must face many dangers, as described herein. For example, undesirable food poses a danger to health, and therefore one must give up such food. The Dhanvantari incarnation can protect us in this regard. Since Lord Viṣṇu is the Supersoul of all living entities, if He likes He can save us from <span class="Italic">adhibhautika</span> disturbances, disturbances from other living entities. Lord Balarāma is the Śeṣa incarnation, and therefore He can save us from angry serpents or envious persons, who are always ready to attack.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">441</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the Personality of Godhead in His incarnation as Vyāsadeva protect me from all kinds of ignorance resulting from the absence of Vedic knowledge. May Lord Buddhadeva protect me from activities opposed to Vedic principles and from laziness that causes one to madly forget the Vedic principles of knowledge and ritualistic action. May Kalkideva, the Supreme Personality of Godhead, who appeared as an incarnation to protect religious principles, protect me from the dirt of the age of Kali.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            This verse mentions various incarnations of the Supreme Personality of Godhead who appear for various purposes. Śrīla Vyāsadeva, Mahāmuni, compiled the Vedic literature for the benefit of all human society. If one wants to be protected from the reactions of ignorance even in this age of Kali, one may consult the books left by Śrīla Vyāsadeva, <span class="Italic">Upaniṣads, Vedānta-sūtra</span> (<span class="Italic">Brahma-sūtra</span>), <span class="Italic">Mahābhārata, Śrīmad-Bhāgavatam Mahā-Purāṇa</span> (Vyāsadeva’s commentary on the <span class="Italic">Brahma-sūtra</span>) and the other seventeen <span class="Italic">Purāṇas.</span> Only by the mercy of Śrīla Vyāsadeva do we have so many volumes of transcendental knowledge to save us from the clutches of ignorance.
+          </p>
+          <p>
+            As described by Śrīla Jayadeva Gosvāmī in his <span class="Italic">Daśāvatāra-stotra,</span> Lord Buddha apparently decried the Vedic knowledge:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nindasi yajña-vidher ahaha śruti-jātaṁ<br>sadaya-hṛdaya-darśita-paśu-ghātam<br>keśava dhṛta-buddha-śarīra jaya jagad-īśa hare</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The mission of Lord Buddha was to save people from the abominable activity of animal killing and to save the poor animals from being unnecessarily killed. When <span class="Italic">pāṣaṇḍīs</span> were cheating by killing animals on the plea of sacrificing them in Vedic <span class="Italic">yajñas,</span> the Lord said, “If the Vedic injunctions allow animal killing, I do not accept the Vedic principles.” Thus he actually saved people who acted according to Vedic principles. One should therefore surrender to Lord Buddha so that he can help one avoid misusing the injunctions of the <span class="Italic">Vedas.</span>
+          </p>
+          <p>
+            The Kalki <span class="Italic">avatāra</span> is the fierce incarnation who vanquishes the class of the atheists born in this age of Kali. Now, in the beginning of Kali-yuga, many irreligious principles are in effect, and as Kali-yuga advances, many pseudo religious principles will certainly be introduced, and people will forget the real religious principles enunciated by Lord Kṛṣṇa before the beginning of Kali-yuga, namely principles of surrender unto the lotus feet of the Lord. Unfortunately, because of Kali-yuga, foolish people do not surrender to the lotus feet of Kṛṣṇa. Even most people who claim to belong to the Vedic system of religion are actually opposed to the Vedic principles. Every day they manufacture a new type of <span class="Italic">dharma</span> on the plea that whatever one manufactures is also a path of liberation. Atheistic men generally say, <span class="Italic">yata mata tata patha.</span> According to this view, there are hundreds and thousands of different opinions in human society, and each opinion is a valid religious principle. This philosophy of rascals has killed the religious principles mentioned in the <span class="Italic">Vedas,</span> and such philosophies will become increasingly influential as Kali-yuga progresses. In the last stage of Kali-yuga, Kalkideva, the fierce incarnation of Keśava, will descend to kill all the atheists and will save only the devotees of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May Lord Keśava protect me with His club in the first portion of the day, and may Govinda, who is always engaged in playing His flute, protect me in the second portion of the day. May Lord Nārāyaṇa, who is equipped with all potencies, protect me in the third part of the day, and may Lord Viṣṇu, who carries a disc to kill His enemies, protect me in the fourth part of the day.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            According to Vedic astronomical calculations, day and night are each divided into thirty <span class="Italic">ghaṭikās</span> (twenty-four minutes), instead of twelve hours. Generally, each day and each night is divided into six parts consisting of five <span class="Italic">ghaṭikās.</span> In each of these six portions of the day and night, the Lord may be addressed for protection according to different names. Lord Keśava, the proprietor of the holy place of Mathurā, is the Lord of the first portion of the day, and Govinda, the Lord of Vṛndāvana. is the master of the second portion.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May Lord Madhusūdana, who carries a bow very fearful for the demons, protect me during the fifth part of the day. In the evening, may Lord Mādhava, appearing as Brahmā, Viṣṇu and Maheśvara, protect me, and in the beginning of night may Lord Hṛṣīkeśa protect me. At the dead of night [in the second and third parts of night] may Lord Padmanābha alone protect me.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the Supreme Personality of Godhead, who bears the Śrīvatsa on His chest, protect me after midnight until the sky becomes pinkish. May Lord Janārdana, who carries a sword in His hand, protect me at the end of night [during the last four ghaṭikās of night]. May Lord Dāmodara protect me in the early morning, and may Lord Viśveśvara protect me during the junctions of day and night.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Set into motion by the Supreme Personality of Godhead and wandering in all the four directions, the disc of the Supreme Lord has sharp edges as destructive as the fire of devastation at the end of the millennium. As a blazing fire burns dry grass to ashes with the assistance of the breeze, may that Sudarśana cakra burn our enemies to ashes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O club in the hand of the Supreme Personality of Godhead, you produce sparks of fire as powerful as thunderbolts, and you are extremely dear to the Lord. I am also His servant. Therefore kindly help me pound to pieces the evil living beings known as Kuṣmāṇḍas, Vaināyakas, Yakṣas, Rākṣasas, Bhūtas and Grahas. Please pulverize them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of conchshells, O Pāñcajanya in the hands of the Lord, you are always filled with the breath of Lord Kṛṣṇa. Therefore you create a fearful sound vibration that causes trembling in the hearts of enemies like the Rākṣasas, pramatha ghosts, Pretas, Mātās, Piśācas and brāhmaṇa ghosts with fearful eyes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O king of sharp-edged swords, you are engaged by the Supreme Personality of Godhead. Please cut the soldiers of my enemies to pieces. Please cut them to pieces! O shield marked with a hundred brilliant moonlike circles, please cover the eyes of the sinful enemies. Pluck out their sinful eyes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27–28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the glorification of the transcendental name, form, qualities and paraphernalia of the Supreme Personality of Godhead protect us from the influence of bad planets, meteors, envious human beings, serpents, scorpions, and animals like tigers and wolves. May it protect us from ghosts and the material elements like earth, water, fire and air, and may it also protect us from lightning and our past sins. We are always afraid of these hindrances to our auspicious life. Therefore, may they all be completely destroyed by the chanting of the Hare Kṛṣṇa mahā-mantra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Garuḍa, the carrier of Lord Viṣṇu, is the most worshipable lord, for he is as powerful as the Supreme Lord Himself. He is the personified Vedas and is worshiped by selected verses. May he protect us from all dangerous conditions, and may Lord Viṣvaksena, the Personality of Godhead, also protect us from all dangers by His holy names.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            May the Supreme Personality of Godhead’s holy names, His transcendental forms, His carriers and all the weapons decorating Him as personal associates protect our intelligence, senses, mind and life air from all dangers.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            There are various associates of the transcendental Personality of Godhead, and His weapons and carrier are among them. In the spiritual world, nothing is material. The sword, bow, club, disc and everything decorating the personal body of the Lord are spiritual living force. Therefore the Lord is called <span class="Italic">advaya jñāna,</span> indicating that there is no difference between Him and His names, forms, qualities, weapons and so on. Anything pertaining to Him is in the same category of spiritual existence. They are all engaged in the service of the Lord in varieties of spiritual forms.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The subtle and gross cosmic manifestation is material, but nevertheless it is nondifferent from the Supreme Personality of Godhead because He is ultimately the cause of all causes. Cause and effect are factually one because the cause is present in the effect. Therefore the Absolute Truth, the Supreme Personality of Godhead, can destroy all our dangers by any of His potent parts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32–33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">410</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, the living entities, the material energy, the spiritual energy and the entire creation are all individual substances. In the ultimate analysis, however, together they constitute the supreme one, the Personality of Godhead. Therefore those who are advanced in spiritual knowledge see unity in diversity. For such advanced persons, the Lord’s bodily decorations, His name, His fame, His attributes and forms and the weapons in His hand are manifestations of the strength of His potency. According to their elevated spiritual understanding, the omniscient Lord, who manifests various forms, is present everywhere. May He always protect us everywhere from all calamities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            A person highly elevated in spiritual knowledge knows that nothing exists but the Supreme Personality of Godhead. This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (9.4) where Lord Kṛṣṇa says, <span class="Italic">mayā tatam idaṁ sarvam,</span> indicating that everything we see is an expansion of His energy. This is confirmed in the <span class="Ref_Italic">Viṣṇu Purāṇa</span> (1.22.52):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ekadeśa-sthitasyāgner<br>jyotsnā vistāriṇī yathā<br>parasya brahmaṇaḥ śaktis<br>tathedam akhilaṁ jagat</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            As a fire, although existing in one place, can expand its light and heat everywhere, so the omnipotent Lord, the Supreme Personality of Godhead, although situated in His spiritual abode, expands Himself everywhere, in both the material and spiritual worlds, by His various energies. Since both cause and effect are the Supreme Lord, there is no difference between cause and effect. Consequently the ornaments and weapons of the Lord, being expansions of His spiritual energy, are not different from Him. There is no difference between the Lord and His variously presented energies. This is also confirmed in the <span class="Italic">Padma Purāṇa:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāma cintāmaṇiḥ kṛṣṇaś<br>caitanya-rasa-vigrahaḥ<br>pūrṇaḥ śuddho nitya-mukto<br>’bhinnatvān nāma-nāminoḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The holy name of the Lord is fully identical with the Lord, not partially. The word <span class="Italic">pūrṇa</span> means “complete.” The Lord is omnipotent and omniscient, and similarly, His name, form, qualities, paraphernalia and everything pertaining to Him are complete, pure, eternal and free from material contamination. The prayer to the ornaments and carriers of the Lord is not false, for they are as good as the Lord. Since the Lord is all-pervasive, He exists in everything, and everything exists in Him. Therefore even worship of the Lord’s weapons or ornaments has the same potency as worship of the Lord. Māyāvādīs refuse to accept the form of the Lord, or they say that the form of the Lord is <span class="Italic">māyā,</span> or false, but one should note very carefully that this is not acceptable. Although the Lord’s original form and His impersonal expansion are one, the Lord maintains His form, qualities and abode eternally. Therefore this prayer says, <span class="Italic">pātu sarvaiḥ svarūpair naḥ sadā sarvatra sama-gaḥ:</span> “May the Lord, who is all-pervasive in His various forms, protect us everywhere.” The Lord is always present everywhere by His name, form, qualities, attributes and paraphernalia, and they all have equal power to protect the devotees. Śrīla Madhvācārya explains this as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">eka eva paro viṣṇur<br>bhūṣāheti dhvajeṣv ajaḥ<br>tat-tac-chakti-pradatvena<br>svayam eva vyavasthitaḥ<br>satyenānena māṁ devaḥ<br>pātu sarveśvaro hariḥ</div>
+            </div>
+            </blockquote>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prahlāda Mahārāja loudly chanted the holy name of Lord Nṛsiṁhadeva. May Lord Nṛsiṁhadeva, roaring for His devotee Prahlāda Mahārāja, protect us from all fear of dangers created by stalwart leaders in all directions through poison, weapons, water, fire, air and so on. May the Lord cover their influence by His own transcendental influence. May Nṛsiṁhadeva protect us in all directions and in all corners, above, below, within and without.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Viśvarūpa continued: O Indra, this mystic armor related to Lord Nārāyaṇa has been described by me to you. By putting on this protective covering, you will certainly be able to conquer the leaders of the demons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If one employs this armor, whomever he sees with his eyes or touches with his feet is immediately freed from all the above-mentioned dangers.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This prayer, Nārāyaṇa-kavaca, constitutes subtle knowledge transcendentally connected with Nārāyaṇa. One who employs this prayer is never disturbed or put in danger by the government, by plunderers, by evil demons or by any type of disease.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King of heaven, a brāhmaṇa named Kauśika formerly used this armor when he purposely gave up his body in the desert by mystic power.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Surrounded by many beautiful women, Citraratha, the King of Gandharvaloka, was once passing in his airplane over the brāhmaṇa’s body at the spot where the brāhmaṇa had died.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Suddenly Citraratha was forced to fall from the sky headfirst with his airplane. Struck with wonder, he was ordered by the great sages named the Vālikhilyas to throw the brāhmaṇa’s bones in the nearby River Sarasvatī. He had to do this and bathe in the river before returning to his own abode.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: My dear Mahārāja Parīkṣit, one who employs this armor or hears about it with faith and veneration when afraid because of any conditions in the material world is immediately freed from all dangers and is worshiped by all living entities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">231</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Indra, who performed one hundred sacrifices, received this prayer of protection from Viśvarūpa. After conquering the demons, he enjoyed all the opulences of the three worlds.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            This mystical mantric armor given by Viśvarūpa to Indra, the King of heaven, acted powerfully, with the effect that Indra was able to conquer the <span class="Italic">asuras</span> and enjoy the opulence of the three worlds without impediments. In this regard, Madhvācārya points out:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vidyāḥ karmāṇi ca sadā<br>guroḥ prāptāḥ phala-pradāḥ<br>anyathā naiva phaladāḥ<br>prasannoktāḥ phala-pradāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One must receive all kinds of <span class="Italic">mantras</span> from a bona fide spiritual master; otherwise the <span class="Italic">mantras</span> will not be fruitful. This is also indicated in <span class="Ref_Italic">Bhagavad-gītā</span> (4.34):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tad viddhi praṇipātena<br>paripraśnena sevayā<br>upadekṣyanti te jñānaṁ<br>jñāninas tattva-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service unto him. The self-realized soul can impart knowledge unto you because he has seen the truth.” All <span class="Italic">mantras</span> should be received through the authorized <span class="Italic">guru,</span> and the disciple must satisfy the <span class="Italic">guru</span> in all respects, after surrendering at his lotus feet. In the <span class="Italic">Padma Purāṇa</span> it is also said, <span class="Italic">sampradāya-vihīnā ye mantrās te niṣphalā matāḥ.</span> There are four <span class="Italic">sampradāyas,</span> or disciplic successions, namely the Brahma-sampradāya, the Rudra-sampradāya, the Śrī sampradāya and the Kumāra-sampradāya. If one wants to advance in spiritual power, one must receive his <span class="Italic">mantras</span> from one of these bona fide <span class="Italic">sampradāyas;</span> otherwise he will never successfully advance in spiritual life.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Eighth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “The Nārāyaṇa-kavaca Shield.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/8">https://prabhupadabooks.com/sb/6/8</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:22:11 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.7: Indra Offends His Spiritual Master, Brhaspati.     Next: SB 6.9: Appearance of the Demon Vrtrasura</div>
+      </p>
+    </div>
+  </body>
+</html>

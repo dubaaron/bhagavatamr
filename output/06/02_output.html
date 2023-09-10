@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.2, Ajāmila Delivered by the Viṣṇudūtas</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Two:<br>Ajāmila Delivered by the Viṣṇudūtas
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">In this chapter the messengers from Vaikuṇṭha explain to the Yamadūtas the glories of chanting the holy name of the Lord. The Viṣṇudūtas said, “Now impious acts are being performed even in an assembly of devotees, for a person who is not punishable is going to be punished in the assembly of Yamarāja. The mass of people are helpless and must depend upon the government for their safety and security, but if the government takes advantage of this to harm the citizens, where will they go? We see perfectly that Ajāmila should not be punished, although you are attempting to take him to Yamarāja for punishment.”</div>
+        </p>
+        <p>
+          <div class="Normal-Level">It was due to Ajāmila’s glorifying the holy name of the Supreme Lord that he was not punishable. The Viṣṇudūtas explained this as follows: “Simply by once chanting the holy name of Nārāyaṇa, this <span class="Italic">brāhmaṇa</span> has become free from the reactions of sinful life. Indeed, he has been freed not only from the sins of this life, but from the sins of many, many thousands of other lives. He has already undergone true atonement for all his sinful actions. If one atones according to the directions of the <span class="Italic">śāstras,</span> one does not actually become free from sinful reactions, but if one chants the holy name of the Lord, even a glimpse of such chanting can immediately free one from all sins. Chanting the glories of the Lord’s holy name awakens all good fortune. Therefore there is no doubt that Ajāmila, being completely free from all sinful reactions, should not be punished by Yamarāja.”</div>
+        </p>
+        <p>
+          <div class="Normal-Level">As they were saying this, the Viṣṇudūtas released Ajāmila from the ropes of the Yamadūtas and left for their own abode. The <span class="Italic">brāhmaṇa</span> Ajāmila, however, offered his respectful obeisances to the Viṣṇudūtas. He could understand how fortunate he was to have chanted the holy name of Nārāyaṇa at the end of his life. Indeed, he could realize the full significance of this good fortune. Having thoroughly understood the discussion between the Yamadūtas and the Viṣṇudūtas, he became a pure devotee of the Supreme Personality of Godhead. He lamented very much for how very sinful he had been, and he condemned himself again and again.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Finally, because of his association with the Viṣṇudūtas, Ajāmila, his original consciousness aroused, gave up everything and went to Hardwar, where he engaged in devotional service without deviation, always thinking of the Supreme Personality of Godhead. Thus the Viṣṇudūtas went there, seated him on a golden throne and took him away to Vaikuṇṭhaloka.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">In summary, although the sinful Ajāmila meant to call his son, the holy name of Lord Nārāyaṇa, even though chanted in the preliminary stage, <span class="Italic">nāmābhāsa,</span> was able to give him liberation. Therefore one who chants the holy name of the Lord with faith and devotion is certainly exalted. He is protected even in his material, conditional life.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: My dear King, the servants of Lord Viṣṇu are always very expert in logic and arguments. After hearing the statements of the Yamadūtas, they replied as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">245</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Viṣṇudūtas said: Alas, how painful it is that irreligion is being introduced into an assembly where religion should be maintained. Indeed, those in charge of maintaining the religious principles are needlessly punishing a sinless, unpunishable person.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The Viṣṇudūtas accused the Yamadūtas of violating the religious principles by attempting to drag Ajāmila to Yamarāja for punishment. Yamarāja is the officer appointed by the Supreme Personality of Godhead to judge religious and irreligious principles and to punish people who are irreligious. However, if completely sinless people are punished, the entire assembly of Yamarāja is contaminated. This principle applies not only in the assembly of Yamarāja, but throughout human society also.
+          </p>
+          <p>
+            In human society, properly maintaining religious principles is the duty of the king’s court or the government. Unfortunately, in this <span class="Italic">yuga,</span> Kali-yuga, the religious principles are tampered with, and the government cannot properly judge who is to be punished and who is not. It is said that in the Kali-yuga if one cannot spend money in court, one cannot get justice. Indeed, in courts of justice it is often found that magistrates are bribed for favorable judgments. Sometimes religious men who preach the Kṛṣṇa consciousness movement for the benefit of the entire populace are arrested and harassed by the police and courts. The Viṣṇudūtas, who are Vaiṣṇavas, lamented for these very regrettable facts. Because of their spiritual compassion for all the fallen souls, Vaiṣṇavas go out to preach according to the standard method of all religious principles, but unfortunately, because of the influence of Kali-yuga, Vaiṣṇavas who have dedicated their lives to preaching the glories of the Lord are sometimes harassed and punished by courts on false charges of disturbing the peace.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">256</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A king or governmental official should be so well qualified that he acts as a father, maintainer and protector of the citizens because of affection and love. He should give the citizens good advice and instructions according to the standard scriptures and should be equal to everyone. Yamarāja does this, for he is the supreme master of justice, and so do those who follow in his footsteps. However, if such persons become polluted and exhibit partiality by punishing an innocent, blameless person, where will the citizens go to take shelter for their maintenance and security?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The king, or in modern times the government, should act as the guardian of the citizens by teaching them the proper goal of life. The human form of life is especially meant for realization of one’s self and one’s relationship with the Supreme Personality of Godhead because this cannot be realized in animal life. The duty of the government, therefore, is to take charge of training all the citizens in such a way that by a gradual process they will be elevated to the spiritual platform and will realize the self and his relationship with God. This principle was followed by kings like Mahārāja Yudhiṣṭhira, Mahārāja Parīkṣit, Lord Rāmacandra, Mahārāja Ambarīṣa and Prahlāda Mahārāja. The leaders of the government must be very honest and religious because otherwise all the affairs of the state will suffer. Unfortunately, in the name of democracy, rogues and thieves are electing other rogues and thieves to the most important posts in the government. Recently this has been proven in America, where the president had to be condemned and dragged down from his post by the citizens. This is only one case, but there are many others. Because of the importance of the Kṛṣṇa consciousness movement, people should be Kṛṣṇa conscious and should not vote for anyone who is not Kṛṣṇa conscious. Then there will be actual peace and prosperity in the state. When a Vaiṣṇava sees mismanagement in the government, he feels great compassion in his heart and tries his best to purify the situation by spreading the Hare Kṛṣṇa movement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">122</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mass of people follow the example of a leader in society and imitate his behavior. They accept as evidence whatever the leader accepts.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Although Ajāmila was not punishable, the Yamadūtas were insisting on taking him away to Yamarāja for punishment. This was <span class="Italic">adharma,</span> contrary to religious principles. The Viṣṇudūtas feared that if such irreligious acts were allowed, the management of human society would be spoiled. In modern times, the Kṛṣṇa consciousness movement is trying to introduce the right principles of management for human society, but unfortunately the governments of Kali-yuga do not properly support the Hare Kṛṣṇa movement because they do not appreciate its valuable service. The Hare Kṛṣṇa movement is the right movement for ameliorating the fallen condition of human society, and therefore governments and public leaders in every part of the world should support this movement to completely rectify humanity’s sinful condition.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5–6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">267</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            People in general are not very advanced in knowledge by which to discriminate between religion and irreligion. The innocent, unenlightened citizen is like an ignorant animal sleeping in peace with its head on the lap of its master, faithfully believing in the master’s protection. If a leader is actually kindhearted and deserves to be the object of a living entity’s faith, how can he punish or kill a foolish person who has fully surrendered in good faith and friendship?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            The Sanskrit word <span class="Italic">viśvasta-ghāta</span> refers to one who breaks faith or causes a breach of trust. The mass of people should always feel security because of the government’s protection. Therefore, how regrettable it is for the government itself to cause a breach of trust and put the citizens in difficulty for political reasons. We actually saw during the partition days in India that although Hindus and Muslims were living together peacefully, manipulation by politicians suddenly aroused feelings of hatred between them, and thus the Hindus and Muslims killed one another over politics. This is a sign of Kali-yuga. In this age, animals are kept nicely sheltered, completely confident that their masters will protect them, but unfortunately as soon as the animals are fat, they are immediately sent for slaughter. Such cruelty is condemned by Vaiṣṇavas like the Viṣṇudūtas. Indeed, the hellish conditions already described await the sinful men responsible for such suffering. One who betrays the confidence of a living entity who takes shelter of him in good faith, whether that living entity be a human being or an animal, is extremely sinful. Because such betrayals now go unpunished by the government, all of human society is terribly contaminated. The people of this age are therefore described as <span class="Italic">mandāḥ sumanda-matayo manda-bhāgyā hy upadrutāḥ [SB </span>1.1.10]<span class="Italic">.</span> As a consequence of such sinfulness, men are condemned (<span class="Italic">mandāḥ</span>), their intelligence is unclear (<span class="Italic">sumanda-matayaḥ</span>), they are unfortunate (<span class="Italic">manda-bhāgyāḥ</span>), and therefore they are always disturbed by many problems (<span class="Italic">upadrutāḥ</span>). This is their situation in this life, and after death they are punished in hellish conditions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">249</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila has already atoned for all his sinful actions. Indeed, he has atoned not only for sins performed in one life but for those performed in millions of lives, for in a helpless condition he chanted the holy name of Nārāyaṇa. Even though he did not chant purely, he chanted without offense, and therefore he is now pure and eligible for liberation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            The Yamadūtas had considered only the external situation of Ajāmila. Since he was extremely sinful throughout his life, they thought he should be taken to Yamarāja and did not know that he had become free from the reactions of all his sins. The Viṣṇudūtas therefore instructed that because he had chanted the four syllables of the name Nārāyaṇa at the time of his death, he was freed from all sinful reactions. In this regard Śrīla Viśvanātha Cakravartī Ṭhākura quotes the following verses from the <span class="Italic">smṛti-śāstra:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāmno hi yāvatī śaktiḥ<br>pāpa-nirharaṇe hareḥ<br>tāvat kartuṁ na śaknoti<br>pātakaṁ pātakī naraḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Simply by chanting one holy name of Hari, a sinful man can counteract the reactions to more sins than he is able to commit.” (<span class="Italic">Bṛhad-viṣṇu Purāṇa</span>)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">avaśenāpi yan-nāmni<br>kīrtite sarva-pātakaiḥ<br>pumān vimucyate sadyaḥ<br>siṁha-trastair mṛgair iva</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “If one chants the holy name of the Lord, even in a helpless condition or without desiring to do so, all the reactions of his sinful life depart, just as when a lion roars, all the small animals flee in fear.” (<span class="Italic">Garuḍa Purāṇa</span>)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sakṛd uccāritaṁ yena<br>harir ity akṣara-dvayam<br>baddha-parikaras tena<br>mokṣāya gamanaṁ prati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By once chanting the holy name of the Lord, which consists of the two syllables <span class="Italic">ha-ri,</span> one guarantees his path to liberation.” (<span class="Italic">Skanda Purāṇa</span>)
+          </p>
+          <p>
+            These are some of the reasons why the Viṣṇudūtas objected to the Yamadūtas’ taking Ajāmila to the court of Yamarāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">189</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Viṣṇudūtas continued: Even previously, while eating and at other times, this Ajāmila would call his son, saying, “My dear Nārāyaṇa, please come here.” Although calling the name of his son, he nevertheless uttered the four syllables nā-rā-ya-ṇa. Simply by chanting the name of Nārāyaṇa in this way, he sufficiently atoned for the sinful reactions of millions of lives.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Previously, when engaged in sinful activities to maintain his family, Ajāmila chanted the name of Nārāyaṇa without offenses. To chant the holy name of the Lord just to counteract one’s sinful activities, or to commit sinful activities on the strength of chanting the holy name, is offensive (<span class="Italic">nāmno balād yasya hi pāpa-buddhiḥ</span>). But although Ajāmila engaged in sinful activities, he never chanted the holy name of Nārāyaṇa to counteract them; he simply chanted the name Nārāyaṇa to call his son. Therefore his chanting was effective. Because of chanting the holy name of Nārāyaṇa in this way, he had already vanquished the accumulated sinful reactions of many, many lives. In the beginning he was pure, but although he later committed many sinful acts, he was offenseless because he did not chant the holy name of Nārāyaṇa to counteract them. One who always chants the holy name of the Lord without offenses is always pure. As confirmed in this verse Ajāmila was already sinless, and because he chanted the name of Nārāyaṇa he remained sinless. It did not matter that he was calling his son; the name itself was effective.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9–10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The chanting of the holy name of Lord Viṣṇu is the best process of atonement for a thief of gold or other valuables, for a drunkard, for one who betrays a friend or relative, for one who kills a brāhmaṇa, or for one who indulges in sex with the wife of his guru or another superior. It is also the best method of atonement for one who murders women, the king or his father, for one who slaughters cows, and for all other sinful men. Simply by chanting the holy name of Lord Viṣṇu, such sinful persons may attract the attention of the Supreme Lord, who therefore considers, “Because this man has chanted My holy name, My duty is to give him protection.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">282</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By following the Vedic ritualistic ceremonies or undergoing atonement, sinful men do not become as purified as by chanting once the holy name of Lord Hari. Although ritualistic atonement may free one from sinful reactions, it does not awaken devotional service, unlike the chanting of the Lord’s names, which reminds one of the Lord’s fame, qualities, attributes, pastimes and paraphernalia.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura comments that the chanting of the holy name of the Lord has special significance that distinguishes it from the Vedic ritualistic ceremonies of atonement for severe, more severe or most severe sinful actions. There are twenty types of religious scriptures called <span class="Italic">dharma-śāstras,</span> beginning with the <span class="Italic">Manu-saṁhitā</span> and <span class="Italic">parāśara-saṁhitā,</span> but herein it is stressed that although one may become free from the reactions of the most sinful activities by following the religious principles of these scriptures, this cannot promote a sinful man to the stage of loving service to the Lord. On the other hand, chanting the holy name of the Lord even once not only frees one immediately from the reactions of the greatest sins, but also raises one to the platform of rendering loving service to the Supreme Personality of Godhead, who is described as <span class="Italic">uttamaśloka</span> because He is famous for His glorious activities. Thus one serves the Lord by remembering His form, His attributes and pastimes. Śrīla Viśvanātha Cakravartī Ṭhākura explains that this is all possible simply by chanting the Lord’s holy name because of the Lord’s omnipotence. What cannot be achieved through the performance of Vedic rituals can be easily achieved through the chanting of the Lord’s holy name. To chant the holy name and dance in ecstasy is so easy and sublime that one can achieve all the benefits of spiritual life simply by following this process. Therefore Śrī Caitanya Mahāprabhu declares, <span class="Italic">paraṁ vijayate śrī-kṛṣṇa-saṅkīrtanam:</span> “All glories to Śrī Kṛṣṇa <span class="Italic">saṅkīrtana!</span>” The <span class="Italic">saṅkīrtana</span> movement we have started offers the best process for becoming purified of all sinful reactions and coming immediately to the platform of spiritual life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">299</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ritualistic ceremonies of atonement recommended in the religious scriptures are insufficient to cleanse the heart absolutely because after atonement one’s mind again runs toward material activities. Consequently, for one who wants liberation from the fruitive reactions of material activities, the chanting of the Hare Kṛṣṇa mantra, or glorification of the name, fame and pastimes of the Lord, is recommended as the most perfect process of atonement because such chanting eradicates the dirt from one’s heart completely.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The statements in this verse have been confirmed previously in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.17):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śṛṇvatāṁ sva-kathāḥ kṛṣṇaḥ<br>puṇya-śravaṇa-kīrtanaḥ<br>hṛdy antaḥ-stho hy abhadrāṇi<br>vidhunoti suhṛt satām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Śrī Kṛṣṇa, the Personality of Godhead, who is the Paramātmā [Supersoul] in everyone’s heart and the benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee who relishes His messages, which are in themselves virtuous when properly heard and chanted.” It is the special mercy of the Supreme Lord that as soon as He knows that one is glorifying His name, fame and attributes, He personally helps cleanse the dirt from one’s heart. Therefore simply by such glorification one not only becomes purified, but also achieves the results of pious activities (<span class="Italic">puṇya-śravaṇa-kīrtana</span>). <span class="Italic">Puṇya-śravaṇa-kīrtana</span> refers to the process of devotional service. Even if one does not understand the meaning of the Lord’s name, pastimes or attributes, one is purified simply by hearing or chanting of them. Such purification is called <span class="Italic">sattva-bhāvana.</span>
+          </p>
+          <p>
+            One’s main purpose in human life should be to purify his existence and achieve liberation. As long as one has a material body, one is understood to be impure. In such an impure, material condition, one cannot enjoy a truly blissful life, although everyone seeks it. Therefore <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.1) says, <span class="Italic">tapo divyaṁ putrakā yena sattvaṁ śuddhyet:</span> one must perform <span class="Italic">tapasya,</span> austerity, to purify his existence in order to come to the spiritual platform. The <span class="Italic">tapasya</span> of chanting and glorifying the name, fame and attributes of the Lord is a very easy purifying process by which everyone can be happy. Therefore everyone who desires the ultimate cleansing of his heart must adopt this process. Other processes, such as <span class="Italic">karma, jñāna</span> and <span class="Italic">yoga,</span> cannot cleanse the heart absolutely.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">188</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At the time of death, this Ajāmila helplessly and very loudly chanted the holy name of the Lord, Nārāyaṇa. That chanting alone has already freed him from the reactions of all sinful life. Therefore, O servants of Yamarāja, do not try to take him to your master for punishment in hellish conditions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The Viṣṇudūtas, who are superior authorities, gave orders to the Yamadūtas, who did not know that Ajāmila was no longer subject to tribulation in hellish life for his past sins. Although he had chanted the holy name Nārāyaṇa to indicate his son, the holy name is so transcendentally powerful that he was automatically freed because he had chanted the holy name while dying (<span class="Italic">ante nārāyaṇa-smṛtiḥ</span>). As Kṛṣṇa confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (7.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yeṣāṁ tv anta-gataṁ pāpaṁ<br>janānāṁ puṇya-karmaṇām<br>te dvandva-moha-nirmuktā<br>bhajante māṁ dṛḍha-vratāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Persons who have acted piously in previous lives and in this life, whose sinful actions are completely eradicated and who are freed from the duality of delusion, engage themselves in My service with determination.” Unless one is freed from all sinful reactions, one cannot be promoted to the platform of devotional service. Elsewhere in <span class="Ref_Italic">Bhagavad-gītā</span> (8.5) it is stated:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anta-kāle ca mām eva<br>smaran muktvā kalevaram<br>yaḥ prayāti sa mad-bhāvaṁ<br>yāti nāsty atra saṁśayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            If one remembers Kṛṣṇa, Nārāyaṇa, at the time of death, one is certainly eligible to return immediately home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who chants the holy name of the Lord is immediately freed from the reactions of unlimited sins, even if he chants indirectly [to indicate something else], jokingly, for musical entertainment, or even neglectfully. This is accepted by all the learned scholars of the scriptures.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If one chants the holy name of Hari and then dies because of an accidental misfortune, such as falling from the top of a house, slipping and suffering broken bones while traveling on the road, being bitten by a serpent, being afflicted with pain and high fever, or being injured by a weapon, one is immediately absolved from having to enter hellish life, even though he is sinful.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (8.6):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaṁ yaṁ vāpi smaran bhāvaṁ<br>tyajaty ante kalevaram<br>taṁ tam evaiti kaunteya<br>sadā tad-bhāva-bhāvitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whatever state of being one remembers when he quits his body, that state he will attain without fail.” If one practices chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> he is naturally expected to chant Hare Kṛṣṇa when he meets with some accident. Even without such practice, however, if one somehow or other chants the holy name of the Lord (Hare Kṛṣṇa) when he meets with an accident and dies, he will be saved from hellish life after death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">171</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Authorities who are learned scholars and sages have carefully ascertained that one should atone for the heaviest sins by undergoing a heavy process of atonement and one should atone for lighter sins by undergoing lighter atonement. Chanting the Hare Kṛṣṇa mantra, however, vanquishes all the effects of sinful activities, regardless of whether heavy or light.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            In this regard, Śrīla Viśvanātha Cakravartī Ṭhākura describes an incident that took place when Sāmba was rescued from the punishment of the Kauravas. Sāmba fell in love with the daughter of Duryodhana, and since according to <span class="Italic">kṣatriya</span> custom one is not offered a <span class="Italic">kṣatriya’s</span> daughter unless he displays his chivalrous valor, Sāmba abducted her. Consequently Sāmba was arrested by the Kauravas. Later, when Lord Balarāma came to rescue him, there was an argument about Sāmba’s release. Since the argument was not settled, Balarāma showed His power in such a way that all of Hastināpura trembled and would have been vanquished as if by a great earthquake. Then the matter was settled, and Sāmba married Duryodhana’s daughter. The purport is that one should take shelter of Kṛṣṇa-Balarāma, the Supreme Personality of Godhead, whose protective power is so great that it cannot be equaled in the material world. However powerful the reactions of one’s sins, they will immediately be vanquished if one chants the name of Hari, Kṛṣṇa, Balarāma or Nārāyaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">135</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although one may neutralize the reactions of sinful life through austerity, charity, vows and other such methods, these pious activities cannot uproot the material desires in one’s heart. However, if one serves the lotus feet of the Personality of Godhead, he is immediately freed from all such contaminations.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.2.42), <span class="Italic">bhaktiḥ pareśānubhavo viraktir anyatra ca:</span> devotional service is so powerful that one who performs devotional service is immediately freed from all sinful desires. All desires within this material world are sinful because material desire means sense gratification, which always involves action that is more or less sinful. Pure <span class="Italic">bhakti,</span> however, is <span class="Italic">anyābhilāṣitā-śūnya;</span> in other words, it is free from material desires, which result from <span class="Italic">karma</span> and <span class="Italic">jñāna.</span> One who is situated in devotional service no longer has material desires, and therefore he is beyond sinful life. Material desires should be completely stopped. Otherwise, although one’s austerities, penances and charity may free one from sin for the time being, one’s desires will reappear because his heart is impure. Thus he will act sinfully and suffer.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">88</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As a fire burns dry grass to ashes, so the holy name of the Lord, whether chanted knowingly or unknowingly, burns to ashes, without fail, all the reactions of one’s sinful activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            Fire will act, regardless of whether handled by an innocent child or by someone well aware of its power. For example, if a field of straw or dry grass is set afire, either by an elderly man who knows the power of fire or by a child who does not, the grass will be burned to ashes. Similarly, one may or may not know the power of chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> but if one chants the holy name he will become free from all sinful reactions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">171</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If a person unaware of the effective potency of a certain medicine takes that medicine or is forced to take it, it will act even without his knowledge because its potency does not depend on the patient’s understanding. Similarly, even though one does not know the value of chanting the holy name of the Lord, if one chants knowingly or unknowingly, the chanting will be very effective.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            In the Western countries, where the Hare Kṛṣṇa movement is spreading, learned scholars and other thoughtful men are realizing its effectiveness. For example, Dr. J. Stillson Judah, a learned scholar, has been very much attracted to this movement because he has actually seen that it is turning hippies addicted to drugs into pure Vaiṣṇavas who voluntarily become servants of Kṛṣṇa and humanity. Even a few years ago, such hippies did not know the Hare Kṛṣṇa <span class="Italic">mantra,</span> but now they are chanting it and becoming pure Vaiṣṇavas. Thus they are becoming free from all sinful activities, such as illicit sex, intoxication, meat-eating and gambling. This is practical proof of the effectiveness of the Hare Kṛṣṇa movement, which is supported in this verse. One may or may not know the value of chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> but if one somehow or other chants it, he will immediately be purified, just as one who takes a potent medicine will feel its effects, regardless of whether he takes it knowingly or unknowingly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: My dear King, having thus perfectly judged the principles of devotional service with reasoning and arguments, the order carriers of Lord Viṣṇu released the brāhmaṇa Ajāmila from the bondage of the Yamadūtas and saved him from imminent death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">57</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Mahārāja Parīkṣit, O subduer of all enemies, after the servants of Yamarāja had been answered by the order carriers of Lord Viṣṇu, they went to Yamarāja and explained to him everything that had happened.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            In this verse the word <span class="Italic">pratyuditāḥ</span> is very significant. The servants of Yamarāja are so powerful that they can never be hindered anywhere, but this time they were baffled and disappointed in their attempt to take away a man they considered sinful. Therefore they immediately returned to Yamarāja and described to him everything that had happened.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">80</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Having been released from the nooses of Yamarāja’s servants, the brāhmaṇa Ajāmila, now free from fear, came to his senses and immediately offered obeisances to the Viṣṇudūtas by bowing his head at their lotus feet. He was extremely pleased by their presence, for he had seen them save his life from the hands of the servants of Yamarāja.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Vaiṣṇavas are also Viṣṇudūtas because they carry out the orders of Kṛṣṇa. Lord Kṛṣṇa is very eager for all the conditioned souls rotting in this material world to surrender to Him and be saved from material pangs in this life and punishment in hellish conditions after death. A Vaiṣṇava therefore tries to bring conditioned souls to their senses. Those who are fortunate like Ajāmila are saved by the Viṣṇudūtas, or Vaiṣṇavas, and thus they return back home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">272</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O sinless Mahārāja Parīkṣit, the order carriers of the Supreme Personality of Godhead, the Viṣṇudūtas, saw that Ajāmila was attempting to say something, and thus they suddenly disappeared from his presence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            The <span class="Italic">śāstras</span> say:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">pāpiṣṭhā ye durācārā<br>deva-brāhmaṇa-nindakāḥ<br>apathya-bhojanās teṣām<br>akāle maraṇaṁ dhruvam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “For persons who are <span class="Italic">pāpiṣṭha,</span> very sinful, and <span class="Italic">durācāra,</span> misbehaved or very unclean in their habits, who are against the existence of God, who disrespect Vaiṣṇavas and <span class="Italic">brāhmaṇas,</span> and who eat anything and everything, untimely death is sure.” It is said that in Kali-yuga one has a maximum lifetime of one hundred years, but as people become degraded, the duration of their lives decreases (<span class="Italic">prāyeṇālpāyuṣaḥ</span>). Because Ajāmila was now free from all sinful reactions, his lifetime was extended, even though he was to have died immediately. When the Viṣṇudūtas saw Ajāmila trying to say something to them, they disappeared to give him a chance to glorify the Supreme Lord. Since all his sinful reactions had been vanquished, he was now prepared to glorify the Lord. Indeed, one cannot glorify the Lord unless one is completely free from all sinful activities. This is confirmed by Kṛṣṇa Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (7.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yeṣāṁ tv anta-gataṁ pāpaṁ<br>janānāṁ puṇya-karmaṇām<br>te dvandva-moha-nirmuktā<br>bhajante māṁ dṛḍha-vratāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Persons who have acted piously in previous lives and in this life, whose sinful actions are completely eradicated and who are freed from the duality of delusion, engage themselves in My service with determination.” The Viṣṇudūtas made Ajāmila aware of devotional service so that He might immediately become fit to return home, back to Godhead. To increase his eagerness to glorify the Lord, they disappeared so that he would feel separation in their absence. In the mode of separation, glorification of the Lord is very intense.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24–25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">288</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After hearing the discourses between the Yamadūtas and the Viṣṇudūtas, Ajāmila could understand the religious principles that act under the three modes of material nature. These principles are mentioned in the three Vedas. He could also understand the transcendental religious principles, which are above the modes of material nature and which concern the relationship between the living being and the Supreme Personality of Godhead. Furthermore, Ajāmila heard glorification of the name, fame, qualities and pastimes of the Supreme Personality of Godhead. He thus became a perfectly pure devotee. He could then remember his past sinful activities, which he greatly regretted having performed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (2.45) Lord Kṛṣṇa told Arjuna:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">traiguṇya-viṣayā vedā<br>nistraiguṇyo bhavārjuna<br>nirdvandvo nitya-sattva-stho<br>niryoga-kṣema ātmavān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The <span class="Italic">Vedas</span> mainly deal with the subject of the three modes of material nature. Rise above these modes, O Arjuna. Be transcendental to all of them. Be free from all dualities and from all anxieties for gain and safety, and be established in the Self.” The Vedic principles certainly prescribe a gradual process for rising to the spiritual platform, but if one remains attached to the Vedic principles, there is no chance of his being elevated to spiritual life. Kṛṣṇa therefore advised Arjuna to perform devotional service, which is the process of transcendental religion. The transcendental position of devotional service is also confirmed in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.6). <span class="Italic">Sa vai puṁsāṁ paro dharmo yato bhaktir adhokṣaje.</span> <span class="Italic">Bhakti,</span> devotional service, is <span class="Italic">paro dharmaḥ,</span> transcendental <span class="Italic">dharma;</span> it is not material <span class="Italic">dharma.</span> People generally think that religion should be pursued for material profit. This may be suitable for persons interested in material life, but one who is interested in spiritual life should be attached to <span class="Italic">paro dharmaḥ,</span> the religious principles by which one becomes a devotee of the Supreme Lord (<span class="Italic">yato bhaktir adhokṣaje</span>). The <span class="Italic">bhāgavata</span> religion teaches that the Lord and the living entity are eternally related and that the duty of the living entity is to surrender to the Lord. When one is situated on the platform of devotional service, one is freed from impediments and completely satisfied (<span class="Italic">ahaituky apratihatā yayātmā suprasīdati</span>). Having been elevated to that platform, Ajāmila began to lament for his past materialistic activities and glorify the name, fame, form and pastimes of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">165</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila said: Alas, being a servant of my senses, how degraded I became! I fell down from my position as a duly qualified brāhmaṇa and begot children in the womb of a prostitute.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The men of the higher classes—the <span class="Italic">brāhmaṇas, kṣatriyas</span> and <span class="Italic">vaiśyas</span>—do not beget children in the wombs of lower-class women. Therefore the custom in Vedic society is to examine the horoscopes of a girl and boy being considered for marriage to see whether their combination is suitable. Vedic astrology reveals whether one has been born in the <span class="Italic">vipra-varṇa, kṣatriya-varṇa, vaiśya-varṇa</span> or <span class="Italic">śūdra-varṇa,</span> according to the three qualities of material nature. This must be examined because a marriage between a boy of the <span class="Italic">vipra-varṇa</span> and a girl of the <span class="Italic">śūdra-varṇa</span> is incompatible; married life would be miserable for both husband and wife. Consequently a boy should marry a girl of the same category. Of course, this is <span class="Italic">trai-guṇya,</span> a material calculation according to the <span class="Italic">Vedas,</span> but if the boy and girl are devotees there need be no such considerations. A devotee is transcendental, and therefore in a marriage between devotees, the boy and girl form a very happy combination.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">105</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas, all condemnation upon me! I acted so sinfully that I degraded my family tradition. Indeed, I gave up my chaste and beautiful young wife to have sexual intercourse with a fallen prostitute accustomed to drinking wine. All condemnation upon me!
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            This is the mentality of one who is becoming a pure devotee. When one is elevated to the platform of devotional service by the grace of the Lord and the spiritual master, one first regrets his past sinful activities. This helps one advance in spiritual life. The Viṣṇudūtas had given Ajāmila the chance to become a pure devotee, and the duty of a pure devotee is to regret his past sinful activities in illicit sex, intoxication, meat-eating and gambling. Not only should one give up his past bad habits, but he must always regret his past sinful acts. This is the standard of pure devotion.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">50</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My father and mother were old and had no other son or friend to look after them. Because I did not take care of them, they lived with great difficulty. Alas, like an abominable lower-class man, I ungratefully left them in that condition.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            According to Vedic civilization, everyone has the responsibility for taking care of <span class="Italic">brāhmaṇas,</span> old men, women, children and cows. This is the duty of everyone, especially an upper-class person. Because of his association with a prostitute, Ajāmila abandoned all his duties. Regretting this, Ajāmila now considered himself quite fallen.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It is now clear that as a consequence of such activities, a sinful person like me must be thrown into hellish conditions meant for those who have broken religious principles and must there suffer extreme miseries.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Was this a dream I saw, or was it reality? I saw fearsome men with ropes in their hands coming to arrest me and drag me away. Where have they gone?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">41</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            And where have those four liberated and very beautiful persons gone who released me from arrest and saved me from being dragged down to the hellish regions?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            As we have learned from the descriptions in the Fifth Canto, the hellish planets are situated in the lower portions of this universe. Therefore they are called <span class="Italic">adho bhuvaḥ.</span> Ajāmila could understand that the Yamadūtas had come from that region.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">312</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I am certainly most abominable and unfortunate to have merged in an ocean of sinful activities, but nevertheless, because of my previous spiritual activities, I could see those four exalted personalities who came to rescue me. Now I feel exceedingly happy because of their visit.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            As stated in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 22.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">’sādhu-saṅga’, ’sādhu-saṅga’——sarva-śāstre kaya<br>lava-mātra sādhu-saṅge sarva-siddhi haya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Association with devotees is recommended by all the <span class="Italic">śāstras</span> because by even a moment of such association one can receive the seed for all perfection.” In the beginning of his life Ajāmila was certainly very pure, and he associated with devotees and <span class="Italic">brāhmaṇas;</span> because of that pious activity, even though he was fallen, he was inspired to name his son Nārāyaṇa. Certainly this was due to good counsel given from within by the Supreme Personality of Godhead. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” The Lord, who is situated in everyone’s heart, is so kind that if one has ever rendered service to Him, the Lord never forgets him. Thus the Lord, from within, gave Ajāmila the opportunity to name his youngest son Nārāyaṇa so that in affection he would constantly call “Nārāyaṇa! Nārāyaṇa!” and thus be saved from the most fearful and dangerous condition at the time of his death. Such is the mercy of Kṛṣṇa. <span class="Italic">Guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja:</span> by the mercy of the <span class="Italic">guru</span> and Kṛṣṇa, one receives the seed of <span class="Italic">bhakti.</span> This association saves a devotee from the greatest fear. In our Kṛṣṇa consciousness movement we therefore change a devotee’s name to a form that reminds him of Viṣṇu. If at the time of death the devotee can remember his own name, such as Kṛṣṇadāsa or Govinda dāsa, he can be saved from the greatest danger. Therefore the change of names at the time of initiation is essential. The Kṛṣṇa consciousness movement is so meticulous that it gives one a good opportunity to remember Kṛṣṇa somehow or other.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">58</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Were it not for my past devotional service, how could I, a most unclean keeper of a prostitute, have gotten an opportunity to chant the holy name of Vaikuṇṭhapati when I was just ready to die? Certainly it could not have been possible.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            The name Vaikuṇṭhapati, which means “the master of the spiritual world,” is not different from the name Vaikuṇṭha. Ajāmila, who was now a realized soul, could understand that because of his past spiritual activities in devotional service, he had gotten this opportunity to chant the holy name of Vaikuṇṭhapati in his horrible condition at the time of death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila continued: I am a shameless cheater who has killed his brahminical culture. Indeed, I am sin personified. Where am I in comparison to the all-auspicious chanting of the holy name of Lord Nārāyaṇa?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            Those engaged in broadcasting the holy name of Nārāyaṇa, Kṛṣṇa, through the Kṛṣṇa consciousness movement should always consider what our position was before we came and what it is now. We had fallen into abominable lives as meat-eaters, drunkards and woman hunters who performed all kinds of sinful activities, but now we have been given the opportunity to chant the Hare Kṛṣṇa <span class="Italic">mantra.</span> Therefore we should always appreciate this opportunity. By the grace of the Lord we are opening many branches, and we should use this good fortune to chant the holy name of the Lord and serve the Supreme Personality of Godhead directly. We must be conscious of the difference between our present and past conditions and should always be very careful not to fall from the most exalted life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">50</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I am such a sinful person, but since I have now gotten this opportunity, I must completely control my mind, life and senses and always engage in devotional service so that I may not fall again into the deep darkness and ignorance of material life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Every one of us should have this determination. We have been elevated to an exalted position by the mercy of Kṛṣṇa and the spiritual master, and if we remember that this is a great opportunity and pray to Kṛṣṇa that we will not fall again, our lives will be successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36–37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">152</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of identifying oneself with the body, one is subjected to desires for sense gratification, and thus one engages in many different types of pious and impious action. This is what constitutes material bondage. Now I shall disentangle myself from my material bondage, which has been caused by the Supreme Personality of Godhead’s illusory energy in the form of a woman. Being a most fallen soul, I was victimized by the illusory energy and have become like a dancing dog led around by a woman’s hand. Now I shall give up all lusty desires and free myself from this illusion. I shall become a merciful, well-wishing friend to all living entities and always absorb myself in Kṛṣṇa consciousness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            This should be the standard of determination for all Kṛṣṇa conscious persons. A Kṛṣṇa conscious person should free himself from the clutches of <span class="Italic">māyā,</span> and he should also be compassionate to all others suffering in those clutches. The activities of the Kṛṣṇa consciousness movement are meant not only for oneself but for others also. This is the perfection of Kṛṣṇa consciousness. One who is interested in his own salvation is not as advanced in Kṛṣṇa consciousness as one who feels compassion for others and who therefore propagates the Kṛṣṇa consciousness movement. Such an advanced devotee will never fall down, for Kṛṣṇa will give him special protection. That is the sum and substance of the Kṛṣṇa consciousness movement. Everyone is like a play toy in the hands of the illusory energy and is acting as she moves him. One should come to Kṛṣṇa consciousness to release oneself and also to release others.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">150</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Simply because I chanted the holy name of the Lord in the association of devotees, my heart is now becoming purified. Therefore I shall not fall victim again to the false lures of material sense gratification. Now that I have become fixed in the Absolute Truth, henceforward I shall not identify myself with the body. I shall give up false conceptions of “I” and “mine” and fix my mind on the lotus feet of Kṛṣṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            How a living entity becomes a victim of the material condition is lucidly explained in this verse. The beginning is to misidentify the body as one’s self. Therefore <span class="Italic">Bhagavad-gītā</span> begins with the spiritual instruction that one is not the body, but is within the body. This consciousness can be possible only if one chants the holy name of Kṛṣṇa, the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> and always keeps oneself in the association of devotees. This is the secret of success. Therefore we stress that one should chant the holy name of the Lord and keep oneself free from the contaminations of this material world, especially the contaminations of lusty desires for illicit sex, meat-eating, intoxication and gambling. With determination, one should vow to follow these principles and thus be saved from the miserable condition of material existence. The first necessity is to become freed from the bodily concept of life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">157</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of a moment’s association with devotees [the Viṣṇudūtas], Ajāmila detached himself from the material conception of life with determination. Thus freed from all material attraction, he immediately started for Hardwar.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            The word <span class="Italic">mukta-sarvānubandhanaḥ</span> indicates that after this incident, Ajāmila, not caring for his wife and children, went straight to Hardwar for further advancement in his spiritual life. Our Kṛṣṇa consciousness movement now has centers in Vṛndāvana and Navadvīpa so that those who want to live a retired life, whether they be devotees or not, can go there and with determination give up the bodily concept of life. One is welcome to live in those holy places for the rest of his life in order to achieve the highest success by the very simple method of chanting the holy name of the Lord and taking <span class="Italic">prasāda.</span> Thus one may return home, back to Godhead. We do not have a center in Hardwar, but Vṛndāvana and Śrīdhāma Māyāpur are better for devotees than any other places. The Caitanya Candrodaya temple offers one a good opportunity to associate with devotees. Let us all take advantage of this opportunity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">68</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Hardwar, Ajāmila took shelter at a Viṣṇu temple, where he executed the process of bhakti-yoga. He controlled his senses and fully applied his mind in the service of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            The devotees who have joined the Kṛṣṇa consciousness movement may live comfortably in our many temples and engage in the devotional service of the Lord. Thus they can control the mind and senses and achieve the highest success in life. This is the process descending from time immemorial. Learning from the life of Ajāmila, we should vow with determination to do what is necessary to follow this path.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">224</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila fully engaged in devotional service. Thus he detached his mind from the process of sense gratification and became fully absorbed in thinking of the form of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            If one worships the Deity in the temple, one’s mind will naturally be absorbed in thought of the Lord and His form. There is no distinction between the form of the Lord and the Lord Himself. Therefore <span class="Italic">bhakti-yoga</span> is the most easy system of <span class="Italic">yoga.</span> <span class="Italic">Yogīs</span> try to concentrate their minds upon the form of the Supersoul, Viṣṇu, within the heart, but this same objective is easily achieved when one’s mind is absorbed in the Deity worshiped in the temple. In every temple there is a transcendental form of the Lord, and one may easily think of this form. By seeing the Lord during <span class="Italic">ārati,</span> by offering <span class="Italic">bhoga</span> and by constantly thinking of the form of the Deity, one becomes a first-class <span class="Italic">yogī.</span> This is the best process of <span class="Italic">yoga,</span> as confirmed by the Supreme Personality of Godhead in <span class="Ref_Italic">Bhagavad-gītā</span> (6.47):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yoginām api sarveṣāṁ<br>mad-gatenāntarātmanā<br>śraddhāvān bhajate yo māṁ<br>sa me yuktatamo mataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Of all <span class="Italic">yogīs,</span> he who always abides in Me with great faith, worshiping Me in transcendental loving service, is most intimately united with Me in <span class="Italic">yoga</span> and is the highest of all.” The first-class <span class="Italic">yogī</span> is he who controls his senses and detaches himself from material activities by always thinking of the form of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">72</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When his intelligence and mind were fixed upon the form of the Lord, the brāhmaṇa Ajāmila once again saw before him four celestial persons. He could understand that they were those he had seen previously, and thus he offered them his obeisances by bowing down before them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            The Viṣṇudūtas who had rescued Ajāmila came before him again when his mind was firmly fixed upon the form of the Lord. The Viṣṇudūtas had gone away for some time to give Ajāmila a chance to become firmly fixed in meditation upon the Lord. Now that his devotion had matured, they returned to take him. Understanding that the same Viṣṇudūtas had returned, Ajāmila offered them his obeisances by bowing down before them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_43_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">115</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon seeing the Viṣṇudūtas, Ajāmila gave up his material body at Hardwar on the bank of the Ganges. He regained his original spiritual body, which was a body appropriate for an associate of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_43_purport">
+          <p>
+            The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.”
+          </p>
+          <p>
+            The result of perfection in Kṛṣṇa consciousness is that after giving up one’s material body, one is immediately transferred to the spiritual world in one’s original spiritual body to become an associate of the Supreme Personality of Godhead. Some devotees go to Vaikuṇṭhaloka, and others go to Goloka Vṛndāvana to become associates of Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_44_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">112</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Accompanied by the order carriers of Lord Viṣṇu, Ajāmila boarded an airplane made of gold. Passing through the airways, he went directly to the abode of Lord Viṣṇu, the husband of the goddess of fortune.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_44_purport">
+          <p>
+            For many years, material scientists have tried to go to the moon, but they are still unable to go there. However, the spiritual airplanes from the spiritual planets can take one back home, back to Godhead, in a second. The speed of such a spiritual plane can only be imagined. Spirit is finer than the mind, and everyone has experience of how swiftly the mind travels from one place to another. Therefore one can imagine the swiftness of the spiritual form by comparing it to the speed of the mind. In less than even a moment, a perfect devotee can return home, back to Godhead, immediately after giving up his material body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila was a brāhmaṇa who because of bad association had given up all brahminical culture and religious principles. Becoming most fallen, he stole, drank and performed other abominable acts. He even kept a prostitute. Thus he was destined to be carried away to hell by the order carriers of Yamarāja, but he was immediately rescued simply by a glimpse of the chanting of the holy name Nārāyaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_46_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">288</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore one who desires freedom from material bondage should adopt the process of chanting and glorifying the name, fame, form and pastimes of the Supreme Personality of Godhead, at whose feet all the holy places stand. One cannot derive the proper benefit from other methods, such as pious atonement, speculative knowledge and meditation in mystic yoga, because even after following such methods one takes to fruitive activities again, unable to control his mind, which is contaminated by the base qualities of nature, namely passion and ignorance.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_46_purport">
+          <p>
+            It has actually been seen that even after achieving so-called perfection, many <span class="Italic">karmīs, jñānīs</span> and <span class="Italic">yogīs</span> become attached to material activities again. Many so-called <span class="Italic">svāmīs</span> and <span class="Italic">yogīs</span> give up material activities as false (<span class="Italic">jagan mithyā</span>), but after some time they nevertheless resume material activities by opening hospitals and schools or performing other activities for the benefit of the public. Sometimes they participate in politics, although still falsely declaring themselves <span class="Italic">sannyāsīs,</span> members of the renounced order. The perfect conclusion, however, is that if one actually desires to get out of the material world, he must take to devotional service, which begins with <span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ: [SB </span>7.5.23] chanting and hearing the glories of the Lord. The Kṛṣṇa consciousness movement has actually proved this. In the Western countries, many young boys who were addicted to drugs and who had many other bad habits, which they could not give up, abandoned all those propensities and very seriously engaged in chanting the glories of the Lord as soon as they joined the Kṛṣṇa consciousness movement. In other words, this process is the perfect method of atonement for actions performed in <span class="Italic">rajaḥ</span> and <span class="Italic">tamaḥ</span> (passion and ignorance). As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.19):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tadā rajas-tamo-bhāvāḥ<br>kāma-lobhādayaś ca ye<br>ceta etair anāviddhaṁ<br>sthitaṁ sattve prasīdati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            As a result of <span class="Italic">rajaḥ</span> and <span class="Italic">tamaḥ,</span> one becomes increasingly lusty and greedy, but when one takes to the process of chanting and hearing, one comes to the platform of goodness and becomes happy. As he advances in devotional service, all his doubts are completely eradicated (<span class="Italic">bhidyate hṛdaya-granthiś chidyante sarva-saṁśayāḥ</span>). Thus the knot of his desire for fruitive activities is cut to pieces.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47–48.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because this very confidential historical narration has the potency to vanquish all sinful reactions, one who hears or describes it with faith and devotion is no longer doomed to hellish life, regardless of his having a material body and regardless of how sinful he may have been. Indeed, the Yamadūtas, who carry out the orders of Yamarāja, do not approach him even to see him. After giving up his body, he returns home, back to Godhead, where he is very respectfully received and worshiped.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="49">
+        <div class="verse_controls">
+          <button class="verse_num btn">[49.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_49_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">991</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While suffering at the time of death, Ajāmila chanted the holy name of the Lord, and although the chanting was directed toward his son, he nevertheless returned home, back to Godhead. Therefore if one faithfully and inoffensively chants the holy name of the Lord, where is the doubt that he will return to Godhead?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_49_purport">
+          <p>
+            At the time of death one is certainly bewildered because his bodily functions are in disorder. At that time, even one who throughout his life has practiced chanting the holy name of the Lord may not be able to chant the Hare Kṛṣṇa <span class="Italic">mantra</span> very distinctly. Nevertheless, such a person receives all the benefits of chanting the holy name. While the body is fit therefore, why should we not chant the holy name of the Lord loudly and distinctly? If one does so, it is quite possible that even at the time of death he will be properly able to chant the holy name of the Lord with love and faith. In conclusion, one who chants the holy name of the Lord constantly is guaranteed to return home, back to Godhead, without a doubt.
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura’s commentary to texts nine and ten of this chapter form a dialogue concerning how one can become free from all sinful reactions simply by chanting the holy name of the Lord.
+          </p>
+          <p>
+            Someone may say, “It may be accepted that by chanting the holy name of the Lord one becomes freed from all the reactions of sinful life. However, if one commits sinful acts in full consciousness, not only once but many, many times, he is unable to free himself from the reactions of such sins even after atoning for them for twelve years or more. How is it possible, then, that simply by once chanting the holy name of the Lord one immediately becomes freed from the reactions of such sins?”
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura replies by quoting verses nine and ten of this chapter: “The chanting of the holy name of Lord Viṣṇu is the best process of atonement for a thief of gold or other valuables, for a drunkard, for one who betrays a friend or relative, for one who kills a <span class="Italic">brāhmaṇa,</span> or for one who indulges in sex with the wife of his <span class="Italic">guru</span> or another superior. It is also the best method of atonement for one who murders women, the king or his father, for one who slaughters cows, and for all other sinful men. Simply by chanting the holy name of Lord Viṣṇu, such sinful persons may attract the attention of the Supreme Lord, who therefore considers “Because this man has chanted My holy name, My duty is to give him protection.’ ”
+          </p>
+          <p>
+            One may atone for sinful life and vanquish all sinful reactions by chanting the holy name, although this is not called atonement. Ordinary atonement may temporarily protect a sinful person, but it does not completely cleanse his heart of the deep-rooted desire to commit sinful acts. Therefore atonement is not as powerful as the chanting of the holy name of the Lord. In the <span class="Italic">śāstras</span> it is said that if a person only once chants the holy name and completely surrenders unto the lotus feet of the Lord, the Lord immediately considers him His ward and is always inclined to give him protection. This is confirmed by Śrīdhara Svāmī. Thus when Ajāmila was in great danger of being carried off by the order carriers of Yamarāja, the Lord immediately sent His personal order carriers to protect him, and because Ajāmila was freed from all sinful reactions, the Viṣṇudūtas spoke on his behalf.
+          </p>
+          <p>
+            Ajāmila had named his son Nārāyaṇa, and because he loved the boy very much, he would call him again and again. Although he was calling for his son, the name itself was powerful because the name Nārāyaṇa is not different from the Supreme Lord Nārāyaṇa. When Ajāmila named his son Nārāyaṇa, all the reactions of his sinful life were neutralized, and as he continued calling his son and thus chanting the holy name of Nārāyaṇa thousands of times, he was actually unconsciously advancing in Kṛṣṇa consciousness.
+          </p>
+          <p>
+            One may argue, “Since he was constantly chanting the name of Nārāyaṇa, how was it possible for him to be associating with a prostitute and thinking of wine?” By his sinful actions he was bringing suffering upon himself again and again, and therefore one may say that his ultimate chanting of Nārāyaṇa was the cause of his being freed. However, his chanting would then have been a <span class="Italic">nāma-aparādha.</span> <span class="Italic">Nāmno balād yasya hi pāpa-buddhiḥ:</span> one who continues to act sinfully and tries to neutralize his sins by chanting the holy name of the Lord is a <span class="Italic">nāma-aparādhī,</span> an offender to the holy name. In response it may be said that Ajāmila’s chanting was inoffensive because he did not chant the name of Nārāyaṇa with the purpose of counteracting his sins. He did not know that he was addicted to sinful actions, nor did he know that his chanting of the name of Nārāyaṇa was neutralizing them. Thus he did not commit a <span class="Italic">nāma-aparādha,</span> and his repeated chanting of the holy name of Nārāyaṇa while calling his son may be called pure chanting. Because of this pure chanting, Ajāmila unconsciously accumulated the results of <span class="Italic">bhakti.</span> Indeed, even his first utterance of the holy name was sufficient to nullify all the sinful reactions of his life. To cite a logical example, a fig tree does not immediately yield fruits, but in time the fruits are available. Similarly, Ajāmila’s devotional service grew little by little, and therefore although he committed very sinful acts, the reactions did not affect him. In the <span class="Italic">śāstras</span> it is said that if one chants the holy name of the Lord even once, the reactions of past, present or future sinful life do not affect him. To give another example, if one extracts the poison fangs of a serpent, this saves the serpent’s future victims from poisonous effects, even if the serpent bites repeatedly. Similarly, if a devotee chants the holy name even once inoffensively, this protects him eternally. He need only wait for the results of the chanting to mature in due course of time.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Second Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “Ajāmila Delivered by the Viṣṇudūtas.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/2">https://prabhupadabooks.com/sb/6/2</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:21:13 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.1: The History of the Life of Ajamila     Next: SB 6.3: Yamaraja Instructs His Messengers</div>
+      </p>
+    </div>
+  </body>
+</html>
