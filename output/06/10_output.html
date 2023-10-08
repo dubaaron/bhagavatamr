@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.10, The Battle Between the Demigods and Vṛtrāsura</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Ten:<br>The Battle Between the Demigods and Vṛtrāsura
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">As described in this chapter, after Indra obtained the body of Dadhīci, a thunderbolt was prepared from Dadhīci’s bones, and a fight took place between Vṛtrāsura and the demigods.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Following the order of the Supreme Personality of Godhead, the demigods approached Dadhīci Muni and begged for his body. Dadhīci Muni, just to hear from the demigods about the principles of religion, jokingly refused to relinquish his body, but for higher purposes he thereafter agreed to give it up, for after death the body is usually eaten by low animals like dogs and jackals. Dadhīci Muni first merged his gross body made of five elements into the original stock of five elements and then engaged his soul at the lotus feet of the Supreme Personality of Godhead. Thus he gave up his gross body. With the help of Viśvakarmā, the demigods then prepared a thunderbolt from Dadhīci’s bones. Armed with the thunderbolt weapon, they prepared themselves to fight and got up on the backs of elephants.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">At the end of Satya-yuga and the beginning of Tretā-yuga. a great fight took place between the demigods and the <span class="Italic">asuras.</span> Unable to tolerate the effulgence of the demigods, the <span class="Italic">asuras</span> fled the battle. leaving Vṛtrāsura, their commander in chief, to fight for himself. Vṛtrāsura, however, seeing the demons fleeing, instructed them in the importance of fighting and dying in the battlefield. One who is victorious in battle gains material possessions, and one who dies in the battlefield attains a residence at once in the celestial heavens. In either way, the fighter benefits.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: After instructing Indra in this way, the Supreme Personality of Godhead, Hari, the cause of the cosmic manifestation, then and there disappeared from the presence of the onlooking demigods.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, following the Lord’s instructions, the demigods approached Dadhīci, the son of Atharvā. He was very liberal, and when they begged him to give them his body, he at once partially agreed. However, just to hear religious instructions from them, he smiled and jokingly spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O elevated demigods, at the time of death, severe, unbearable pain takes away the consciousness of all living entities who have accepted material bodies. Don’t you know about this pain?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">83</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this material world, every living entity is very much addicted to his material body. Struggling to keep his body forever, everyone tries to protect it by all means, even at the sacrifice of all his possessions. Therefore, who would be prepared to deliver his body to anyone, even if it were demanded by Lord Viṣṇu?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            It is said, <span class="Italic">ātmānaṁ sarvato rakṣet tato dharmaṁ tato dhanam:</span> one must protect his body by all means; then he may protect his religious principles and thereafter his possessions. This is the natural desire of all living entities. No one wants to give up his body unless it is forcibly given away. Even though the demigods said that they were demanding Dadhīci’s body for their benefit in accordance with the order of Lord Viṣṇu, Dadhīci superficially refused to give them his body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods replied: O exalted brāhmaṇa, pious persons like you, whose activities are praiseworthy, are very kind and affectionate to people in general. What can’t such pious souls give for the benefit of others? They can give everything, including their bodies.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">166</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Those who are too self-interested beg something from others, not knowing of others’ pain. But if the beggar knew the difficulty of the giver, he would not ask for anything. Similarly, he who is able to give charity does not know the beggar’s difficulty, for otherwise he would not refuse to give the beggar anything he might want as charity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            This verse describes two people—one who gives charity and one who begs for it. A beggar should not ask charity from a person who is in difficulty. Similarly, one who is able to give charity should not deny a beggar. These are the moral instructions of the <span class="Italic">śāstra.</span> Cāṇakya Paṇḍita says, <span class="Italic">san-nimitte varaṁ tyāgo vināśe niyate sati:</span> everything within this material world will be destroyed, and therefore one should use everything for good purposes. If one is advanced in knowledge, he must always be prepared to sacrifice anything for a better cause. At the present moment the entire world is in a dangerous position under the spell of a godless civilization. The Kṛṣṇa consciousness movement needs many exalted, learned persons who will sacrifice their lives to revive God consciousness throughout the world. We therefore invite all men and women advanced in knowledge to join the Kṛṣṇa consciousness movement and sacrifice their lives for the great cause of reviving the God consciousness of human society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Dadhīci said: Just to hear from you about religious principles, I refused to offer my body at your request. Now, although my body is extremely dear to me, I must give it up for your better purposes since I know that it will leave me today or tomorrow.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">441</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O demigods, one who has no compassion for humanity in its suffering and does not sacrifice his impermanent body for the higher causes of religious principles or eternal glory is certainly pitied even by the immovable beings.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            In this regard, a very exalted example was set by Lord Śrī Caitanya Mahāprabhu and the six Gosvāmīs of Vṛndāvana. Concerning Śrī Caitanya Mahāprabhu it is said in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.5.34):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tyaktvā sudustyaja-surepsita-rājya-lakṣmīṁ<br>dharmiṣṭha ārya-vacasā yad agād araṇyam<br>māyā-mṛgaṁ dayitayepsitam anvadhāvad<br>vande mahā-puruṣa te caraṇāravindam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “We offer our respectful obeisances unto the lotus feet of the Lord. upon whom one should always meditate. He left His householder life, leaving aside His eternal consort, whom even the denizens of heaven adore. He went into the forest to deliver the fallen souls, who are put into illusion by material energy.” To accept <span class="Italic">sannyāsa</span> means to commit civil suicide. but <span class="Italic">sannyāsa</span> is compulsory, at least for every <span class="Italic">brāhmaṇa,</span> every first-class human being. Śrī Caitanya Mahāprabhu had a very young and beautiful wife and a very affectionate mother. Indeed, the affectionate dealings of His family members were so pleasing that even the demigods could not expect such happiness at home. Nevertheless, for the deliverance of all the fallen souls of the world, Śrī Caitanya Mahāprabhu took <span class="Italic">sannyāsa</span> and left home when He was only twenty-four years old. He lived a very strict life as a <span class="Italic">sannyāsī,</span> refusing all bodily comforts. Similarly, His disciples the six Gosvāmīs were ministers who held exalted positions in society, but they also left everything to join the movement of Śrī Caitanya Mahāprabhu. Śrīnivāsa Ācārya says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tyaktvā tūrṇam aśeṣa-maṇḍala-pati-śreṇīṁ sadā tucchavat<br>bhūtvā dīna-gaṇeśakau karuṇayā kaupīna-kanthāśritau</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            These Gosvāmīs left their very comfortable lives as ministers. Zamindars and learned scholars and joined Śrī Caitanya Mahāprabhu’s movement, just to show mercy to the fallen souls of the world (<span class="Italic">dīna-gaṇeśakau karuṇayā</span>). Accepting very humble lives as mendicants, wearing no more than loincloths and torn quilts (<span class="Italic">kaupīna-kantha</span>). they lived in Vṛndāvana and followed Śrī Caitanya Mahāprabhu’s order to excavate Vṛndāvana’s lost glories.
+          </p>
+          <p>
+            Similarly. everyone else with a materially comfortable condition in this world should join the Kṛṣṇa consciousness movement to elevate the fallen souls. The words <span class="Italic">bhūta-dayayā, māyā-mṛgaṁ dayitayepsitam</span> and <span class="Italic">dīna-gaṇeśakau karuṇayā</span> all convey the same sense. These are very significant words for those interested in elevating human society to a proper understanding of life. One should join the Kṛṣṇa consciousness movement, following the examples of such great personalities as Śrī Caitanya Mahāprabhu, the six Gosvāmīs and, before them, the great sage Dadhīci. Instead of wasting one’s life for temporary bodily comforts. one should always be prepared to give up one’s life for better causes. After all, the body will be destroyed. Therefore one should sacrifice it for the glory of distributing religious principles throughout the world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">513</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If one is unhappy to see the distress of other living beings and happy to see their happiness, his religious principles are appreciated as imperishable by exalted persons who are considered pious and benevolent.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            One generally follows different types of religious principles or performs various occupational duties according to the body given to him by the modes of material nature. In this verse, however, real religious principles are explained. Everyone should be unhappy to see others in distress and happy to see others happy. <span class="Italic">Ātmavat sarva-bhūteṣu:</span> one should feel the happiness and distress of others as his own. It is on this basis that the Buddhist religious principle of nonviolence—<span class="Italic">ahiṁsaḥ parama-dharmaḥ</span>—is established. We feel pain when someone disturbs us, and therefore we should not inflict pain upon other living beings. Lord Buddha’s mission was to stop unnecessary animal killing, and therefore he preached that the greatest religious principle is nonviolence.
+          </p>
+          <p>
+            One cannot continue killing animals and at the same time be a religious man. That is the greatest hypocrisy. Jesus Christ said, “Do not kill,” but hypocrites nevertheless maintain thousands of slaughterhouses while posing as Christians. Such hypocrisy is condemned in this verse. One should be happy to see others happy, and one should be unhappy to see others unhappy. This is the principle to be followed. Unfortunately, at the present moment so-called philanthropists and humanitarians advocate the happiness of humanity at the cost of the lives of poor animals. That is not recommended herein. This verse clearly says that one should be compassionate to all living entities. Regardless of whether human. animal, tree or plant, all living entities are sons of the Supreme Personality of Godhead. Lord Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (14.4):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-yoniṣu kaunteya<br>mūrtayaḥ sambhavanti yāḥ<br>tāsāṁ brahma mahad yonir<br>ahaṁ bīja-pradaḥ pitā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “It should be understood that all species of life, O son of Kuntī, are made possible by birth in this material nature, and that I am the seed-giving father.” The different forms of these living entities are only their external dresses. Every living being is actually a spirit soul, a part and parcel of God. Therefore one should not favor only one kind of living being. A Vaiṣṇava sees all living entities as part and parcel of God. As the Lord says in <span class="Italic">Bhagavad-gītā</span> (5.18 and 18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vidyā-vinaya-sampanne<br>brāhmaṇe gavi hastini<br>śuni caiva śvapāke ca<br>paṇḍitāḥ sama-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The humble sage, by virtue of true knowledge, sees with equal vision a learned and gentle <span class="Italic">brāhmaṇa,</span> a cow, an elephant, a dog and a dog-eater [outcaste].”
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām<br><span class="Italic"> [Bg. </span>18.54]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments nor desires to have anything; he is equally disposed to every living entity. In that state he attains pure devotional service unto Me.” A Vaiṣṇava, therefore, is truly a perfect person because he laments to see others unhappy and feels joy at seeing others happy. A Vaiṣṇava is <span class="Italic">para-duḥkha-duḥkhī;</span> <span class="Italic">he</span> is always unhappy to see the conditioned souls in an unhappy state of materialism. Therefore a Vaiṣṇava is always busy preaching Kṛṣṇa consciousness throughout the world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">248</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This body, which is eatable by jackals and dogs after death, does not actually do any good for me, the spirit soul. It is usable only for a short time and may perish at any moment. The body and its possessions, its riches and relatives, must all be engaged for the benefit of others, or else they will be sources of tribulation and misery.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Similar advice is also given in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.22.35):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">etāvaj janma-sāphalyaṁ<br>dehinām iha dehiṣu<br>prāṇair arthair dhiyā vācā<br>śreya-ācaraṇaṁ sadā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “It is the duty of every living being to perform welfare activities for the benefit of others with his life, wealth, intelligence and words.” This is the mission of life. One’s own body and the bodies of his friends and relatives, as well as one’s own riches and everything else one has, should be engaged for the benefit of others. This is the mission of Śrī Caitanya Mahāprabhu. As stated in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 9.41):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who has taken birth as a human being in the land of India [Bhārata-varṣa] should make his life successful and work for the benefit of all other people.
+          </p>
+          <p>
+            The word <span class="Italic">upakuryāt</span> means <span class="Italic">para-upakāra,</span> helping others. Of course, in human society there are many institutions to help others, but because philanthropists do not know how to help others, their propensity for philanthropy is ineffectual. They do not know the ultimate goal of life (<span class="Italic">śreya ācaraṇam</span>), which is to please the Supreme Lord. If all philanthropic and humanitarian activities were directed toward achieving the ultimate goal of life—to please the Supreme Personality of Godhead—they would all be perfect. Humanitarian work without Kṛṣṇa is nothing. Kṛṣṇa must be brought to the center of all our activities; otherwise no activity will have value.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">310</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Dadhīci Muni, the son of Atharvā, thus resolved to give his body to the service of the demigods. He placed himself, the spirit soul, at the lotus feet of the Supreme Personality of Godhead and in this way gave up his gross material body made of five elements.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            As indicated by the words <span class="Italic">pare bhagavati brahmaṇy ātmānaṁ sannayan,</span> Dadhīci placed himself, as spirit soul, at the lotus feet of the Supreme Personality of Godhead. In this regard, one may refer to the incident of Dhṛtarāṣṭra’s leaving his body, as described in the First Canto of <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.13.55). Dhṛtarāṣṭra analytically divided his gross material body into the five different elements of which it was made—earth, water, fire, air and ether—and distributed them to the different reservoirs of these elements; in other words, he merged these five elements into the original <span class="Italic">mahat-tattva.</span> By identifying his material conception of life, he gradually separated his spirit soul from material connections and placed himself at the lotus feet of the Supreme Personality of Godhead. The example given in this connection is that when an earthen pot is broken, the small portion of the sky within the pot is united with the large sky outside the pot. Māyāvādī philosophers misunderstand this description of <span class="Italic">Śrīmad-Bhāgavatam.</span> Therefore Śrī Rāmānuja Svāmī, in his book <span class="Italic">Vedānta-tattva-sāra,</span> has described that this merging of the soul means that after separating himself from the material body made of eight elements—earth, water, fire, air, ether, false ego, mind and intelligence—the individual soul engages himself in devotional service to the Supreme Personality of Godhead in His eternal form (<span class="Italic">īśvaraḥ paramaḥ kṛṣṇaḥ sac-cid-ānanda-vigrahaḥ/ anādir ādir govindaḥ sarva-kāraṇa-kāraṇam [Bs. </span>5.1]). The material cause of the material elements absorbs the material body, and the spiritual soul assumes its original position. As described by Śrī Caitanya Mahāprabhu, <span class="Italic">jīvera ‘svarūpa’ haya—kṛṣṇera ‘nitya-dāsa’: [</span>Cc. <span class="Ref_Italic">Madhya</span> 20.108] the constitutional position of the living entity is that he is the eternal servant of Kṛṣṇa. When one overcomes the material body through cultivation of spiritual knowledge and devotional service, one can revive his own position and thus engage in the service of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">224</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Dadhīci Muni controlled his senses, life force, mind and intelligence and became absorbed in trance. Thus he cut all his material bonds. He could not perceive how his material body became separated from his self.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (8.5):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anta-kāle ca mām eva<br>smaran muktvā kalevaram<br>yaḥ prayāti sa mad-bhāvaṁ<br>yāti nāsty atra saṁśayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whoever, at the time of death, quits his body remembering Me alone, at once attains My nature. Of this there is no doubt.” Of course, one must practice before one is overcome by death, but the perfect <span class="Italic">yogī,</span> namely the devotee, dies in trance, thinking of Kṛṣṇa. He does not feel his material body being separated from his soul; the soul is immediately transferred to the spiritual world. <span class="Italic">Tyaktvā dehaṁ punar janma naiti mām eti: [Bg. </span>4.9] the soul does not enter the womb of a material mother again. but is transferred back home, back to Godhead. This <span class="Italic">yoga, bhakti-yoga,</span> is the highest <span class="Italic">yoga</span> system, as explained by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (6.47):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yoginām api sarveṣāṁ<br>mad-gatenāntarātmanā<br>śraddhāvān bhajate yo māṁ<br>sa me yuktatamo mataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Of all <span class="Italic">yogīs,</span> he who always abides in Me with great faith. worshiping Me in transcendental loving service, is most intimately united with Me in <span class="Italic">yoga</span> and is the highest of all.” The <span class="Italic">bhakti-yogī</span> always thinks of Kṛṣṇa, and therefore at the time of death he can very easily transfer himself to Kṛṣṇaloka, without even perceiving the pains of death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13–14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, King Indra very firmly took up the thunderbolt manufactured by Viśvakarmā from the bones of Dadhīci. Charged with the exalted power of Dadhīci Muni and enlightened by the power of the Supreme Personality of Godhead, Indra rode on the back of his carrier, Airāvata, surrounded by all the demigods, while all the great sages offered him praise. Thus he shone very beautifully, pleasing the three worlds as he rode off to kill Vṛtrāsura.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, as Rudra, being very angry at Antaka [Yamarāja] had formerly run toward Antaka to kill him, Indra angrily and with great force attacked Vṛtrāsura, who was surrounded by the leaders of the demoniac armies.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">196</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, at the end of Satya-yuga and the beginning of Tretā-yuga, a fierce battle took place between the demigods and the demons on the bank of the Narmadā.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Herein the Narmadā does not mean the Narmadā River in India. The five sacred rivers in India—Gaṅgā, Yamunā, Narmadā, Kāverī and Kṛṣṇā—are all celestial. Like the Ganges River, the Narmadā River also flows in the higher planetary systems. The battle between the demigods and the demons took place in the higher planets.
+          </p>
+          <p>
+            The words <span class="Italic">prathame yuge</span> mean “in the beginning of the first millennium,” that is to say, in the beginning of the Vaivasvata <span class="Italic">manvantara.</span> In one day of Brahmā there are fourteen Manus, who each live for seventy-one millenniums. The four <span class="Italic">yugas</span>—Satya, Tretā, Dvāpara and Kali—constitute one millennium. We are presently in the <span class="Italic">manvantara</span> of Vaivasvata Manu, who is mentioned in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">imaṁ vivasvate yogaṁ proktavān aham avyayam/ vivasvān manave prāha</span> [Bg. 4.1]). We are now in the twenty-eighth millennium of Vaivasvata Manu, but this fight took place in the beginning of Vaivasvata Manu’s first millennium. One can historically calculate how long ago the battle took place. Since each millennium consists of 4,300,000 years and we are now in the twenty-eighth millennium, some 120,400,000 years have passed since the battle took place on the bank of the River Narmadā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17–18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, when all the asuras came onto the battlefield, headed by Vṛtrāsura, they saw King Indra carrying the thunderbolt and surrounded by the Rudras, Vasus, Ādityas, Aśvinī-kumāras, Pitās, Vahnis, Maruts, Ṛbhus, Sādhyas and Viśvadevas. Surrounded by his company, Indra shone so brightly that his effulgence was intolerable to the demons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19–22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Many hundreds and thousands of demons, demi-demons, Yakṣas, Rākṣasas [man-eaters] and others, headed by Sumāli and Māli, resisted the armies of King Indra, which even death personified cannot easily overcome. Among the demons were Namuci, Śambara, Anarvā, Dvimūrdhā, Ṛṣabha, Asura, Hayagrīva, Śaṅkuśirā, Vipracitti, Ayomukha, Pulomā, Vṛṣaparvā, Praheti, Heti and Utkala. Roaring tumultuously and fearlessly like lions, these invincible demons, all dressed in golden ornaments, gave pain to the demigods with weapons like clubs, bludgeons, arrows, barbed darts, mallets and lances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Armed with lances, tridents, axes, swords and other weapons like śataghnīs and bhuśuṇḍis, the demons attacked from different directions and scattered all the chiefs of the demigod armies.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As the stars in the sky cannot be seen when covered by dense clouds, the demigods, being completely covered by networks of arrows falling upon them one after another, could not be seen.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The showers of various weapons and arrows released to kill the soldiers of the demigods did not reach them because the demigods, acting quickly, cut the weapons into thousands of pieces in the sky.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As their weapons and mantras decreased, the demons began showering mountain peaks, trees and stones upon the demigod soldiers, but the demigods were so powerful and expert that they nullified all these weapons by breaking them to pieces in the sky as before.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the soldiers of the demons, commanded by Vṛtrāsura, saw that the soldiers of King Indra were quite well, having not been injured at all by their volleys of weapons, not even by the trees, stones and mountain peaks, the demons were very much afraid.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">50</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When insignificant persons use rough words to cast false, angry accusations against saintly persons, their fruitless words do not disturb the great personalities. Similarly, all the efforts of the demons against the demigods, who were favorably situated under the protection of Kṛṣṇa, were futile.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            There is a Bengali saying that if a vulture curses a cow to die, the curse will not be effective. Similarly, accusations made by demoniac persons against devotees of Kṛṣṇa cannot have any effect. The demigods are devotees of Lord Kṛṣṇa, and therefore the curses of the demons were futile.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The asuras, who are never devotees of Lord Kṛṣṇa, the Supreme Personality of Godhead, lost their pride in fighting when they found all their endeavors futile. Leaving aside their leader even in the very beginning of the fight, they decided to flee because all their prowess had been taken away by the enemy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Seeing his army broken and all the asuras, even those known as great heroes, fleeing the battlefield out of intense fear, Vṛtrāsura, who was truly a great-minded hero, smiled and spoke the following words.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            According to his position and the time and circumstances, Vṛtrāsura, the hero among heroes, spoke words that were much to be appreciated by thoughtful men. He called to the heroes of the demons, “O Vipracitti! O Namuci! O Pulomā! O Maya, Anarvā and Śambara! Please hear me and do not flee.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">98</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vṛtrāsura said: All living entities who have taken birth in this material world must die. Surely, no one in this world has found any means to be saved from death. Even providence has not provided a means to escape it. Under the circumstances, death being inevitable, if one can gain promotion to the higher planetary systems and be always celebrated here by dying a suitable death, what man will not accept such a glorious death?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            If by dying one can be elevated to the higher planetary systems and be ever-famous after his death, who is so foolish that he will refuse such a glorious death? Similar advice was also given by Kṛṣṇa to Arjuna. “My dear Arjuna,” the Lord said, “do not desist from fighting. If you gain victory in the fight, you will enjoy a kingdom, and even if you die you will be elevated to the heavenly planets.” Everyone should be ready to die while performing glorious deeds. A glorious person is not meant to meet death like cats and dogs.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are two ways to meet a glorious death, and both are very rare. One is to die after performing mystic yoga, especially bhakti-yoga, by which one can control the mind and living force and die absorbed in thought of the Supreme Personality of Godhead. The second is to die on the battlefield, leading the army and never showing one’s back. These two kinds of death are recommended in the śāstra as glorious.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Tenth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “The Battle Between the Demigods and Vṛtrāsura.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/10">https://prabhupadabooks.com/sb/6/10</a><!-- span.text_source_copied_date
+        | on 2023-10-08 13:36:11 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.9: Appearance of the Demon Vrtrasura     Next: SB 6.11: The Transcendental Qualities of Vrtrasura</div>
+      </p>
+    </div>
+  </body>
+</html>

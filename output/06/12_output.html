@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.12, Vṛtrāsura’s Glorious Death</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twelve:<br>Vṛtrāsura’s Glorious Death
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter describes how Indra, the King of heaven, killed Vṛtrāsura despite great reluctance.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">After Vṛtrāsura finished speaking, he released his trident against King Indra with great anger, but Indra, using his thunderbolt, which was many times more powerful than the trident, broke the trident to pieces and cut off one of Vṛtrāsura’s arms. Nevertheless, Vṛtrāsura used his remaining arm to strike Indra with an iron mace, making the thunderbolt fall from Indra’s hand. Indra, being very ashamed of this, did not pick up the thunderbolt from the ground, but Vṛtrāsura encouraged King Indra to pick it up and fight. Vṛtrāsura then spoke to King Indra as follows, instructing him very well.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">“The Supreme Personality of Godhead,” he said, “is the cause of victory and defeat. Not knowing that the Supreme Lord is the cause of all causes, fools and rascals try to take credit for victory or defeat themselves, but everything is actually under the control of the Lord. No one but Him has any independence. The <span class="Italic">puruṣa</span> (the enjoyer) and <span class="Italic">prakṛti</span> (the enjoyed) are under the control of the Lord, for it is by His supervision that everything works systematically. Not seeing the hand of the Supreme in every action, a fool considers himself the ruler and controller of everything. When one understands, however, that the real controller is the Supreme Personality of Godhead, he is freed from the relativities of the world, such as distress, happiness, fear and impurity.” Thus Indra and Vṛtrāsura not only fought, but also engaged in philosophical discourses. Then they began to fight again.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">This time Indra was more powerful, and he severed Vṛtrāsura’s remaining arm. Vṛtrāsura then assumed a gigantic form and swallowed King Indra, but Indra, being protected by the talisman known as Nārāyaṇa-kavaca, was able to protect himself even within Vṛtrāsura’s body. Thus he emerged from Vṛtrāsura’s abdomen and severed the demon’s head from his body with his powerful thunderbolt. Severing the demon’s head took one complete year to accomplish.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">109</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: Desiring to give up his body, Vṛtrāsura considered death in the battle preferable to victory. O King Parīkṣit, he vigorously took up his trident and with great force attacked Lord Indra, the King of heaven, just as Kaiṭabha had forcefully attacked the Supreme Personality of Godhead when the universe was inundated.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Although Vṛtrāsura repeatedly encouraged Indra to kill him with the thunderbolt, King Indra was morose at having to kill such a great devotee and was hesitant to throw it. Vṛtrāsura, disappointed that King Indra was reluctant despite his encouragement, took the initiative very forcefully by throwing his trident at Indra. Vṛtrāsura was not at all interested in victory; he was interested in being killed so that he could immediately return home, back to Godhead. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9), <span class="Italic">tyaktvā dehaṁ punar janma naiti:</span> after giving up his body, a devotee immediately returns to Lord Kṛṣṇa and never returns to accept another body. This was Vṛtrāsura’s interest.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then Vṛtrāsura, the great hero of the demons, whirled his trident, which had points like the flames of the blazing fire at the end of the millennium. With great force and anger he threw it at Indra, roaring and exclaiming loudly, “O sinful one, thus shall I kill you!”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Flying in the sky, Vṛtrāsura’s trident resembled a brilliant meteor. Although the blazing weapon was difficult to look upon, King Indra, unafraid, cut it to pieces with his thunderbolt. Simultaneously, he cut off one of Vṛtrāsura’s arms, which was as thick as the body of Vāsuki, the King of the serpents.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although one of his arms was severed from his body, Vṛtrāsura angrily approached King Indra and struck him on the jaw with an iron mace. He also struck the elephant that carried Indra. Thus Indra dropped the thunderbolt from his hand.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The denizens of various planets, like the demigods, demons, Cāraṇas and Siddhas, praised Vṛtrāsura’s deed, but when they observed that Indra was in great danger, they lamented, “Alas! Alas!”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Having dropped the thunderbolt from his hand in the presence of his enemy, Indra was practically defeated and was very much ashamed. He dared not pick up his weapon again. Vṛtrāsura, however, encouraged him, saying, “Take up your thunderbolt and kill your enemy. This is not the time to lament your fate.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">410</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vṛtrāsura continued: O Indra, no one is guaranteed of being always victorious but the original enjoyer, the Supreme Personality of Godhead, Bhagavān. He is the cause of creation, maintenance and annihilation, and He knows everything. Being dependent and being obliged to accept material bodies, belligerent subordinates are sometimes victorious and sometimes defeated.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarvasya cāhaṁ hṛdi sanniviṣṭo<br>mattaḥ smṛtir jñānam apohanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I am seated in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” When two parties fight, the fighting actually goes on under the direction of the Supreme Personality of Godhead, who is Paramātmā, the Supersoul. Elsewhere in the <span class="Ref_Italic">Gītā</span> (3.27) the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself the doer of activities that are in actuality carried out by nature.” The living entities work only under the direction of the Supreme Lord. The Lord gives orders to material nature, and she arranges facilities for the living entities. The living entities are not independent, although they foolishly think themselves the doers (<span class="Italic">kartā</span>).
+          </p>
+          <p>
+            Victory is always with the Supreme Personality of Godhead. As for the subordinate living entities, they fight under the arrangement of the Supreme Personality of Godhead. Victory or defeat is not actually theirs; it is an arrangement by the Lord through the agency of material nature. Pride in victory, or moroseness in defeat, is useless. One should fully depend on the Supreme Personality of Godhead, who is responsible for the victory and defeat of all living entities. The Lord advises, <span class="Italic">niyataṁ kuru karma tvaṁ karma jyāyo hy akarmaṇaḥ:</span> “Perform your prescribed duty, for action is better than inaction.” The living entity is ordered to act according to his position. Victory or defeat depends on the Supreme Lord. <span class="Italic">Karmaṇy evādhikāras te mā phaleṣu kadācana:</span> “You have a right to perform your prescribed duty, but you are not entitled to the fruits of actions.” One must act sincerely, according to his position. Victory or defeat depends on the Lord.
+          </p>
+          <p>
+            Vṛtrāsura encouraged Indra, saying, “Don’t be morose because of my victory. There is no need to stop fighting. Instead, you should go on with your duty. When Kṛṣṇa desires, you will certainly be victorious.” This verse is very instructive for sincere workers in the Kṛṣṇa consciousness movement. We should not be jubilant in victory or morose in defeat. We should make a sincere effort to implement the will of Kṛṣṇa, or Śrī Caitanya Mahāprabhu, and we should not be concerned with victory and defeat. Our only duty is to work sincerely, so that our activities may be recognized by Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">140</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All living beings in all the planets of this universe, including the presiding deities of all the planets, are fully under the control of the Lord. They work like birds caught in a net, who cannot move independently.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The difference between the <span class="Italic">suras</span> and the <span class="Italic">asuras</span> is that the <span class="Italic">suras</span> know that nothing can happen without the desire of the Supreme Personality of Godhead, whereas the <span class="Italic">asuras</span> cannot understand the supreme will of the Lord. In this fight, Vṛtrāsura is actually the <span class="Italic">sura,</span> whereas Indra is the <span class="Italic">asura.</span> No one can act independently; rather, everyone acts under the direction of the Supreme Personality of Godhead. Therefore victory and defeat come according to the results of one’s <span class="Italic">karma,</span> and the judgment is given by the Supreme Lord (<span class="Italic">karmaṇā-daiva-netreṇa</span>). Since we act under the control of the Supreme according to our <span class="Italic">karma,</span> no one is independent, from Brahmā down to the insignificant ant. Whether we are defeated or victorious, the Supreme Lord is always victorious because everyone acts under His directions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Our sensory prowess, mental power, bodily strength, living force, immortality and mortality are all subject to the superintendence of the Supreme Personality of Godhead. Not knowing this, foolish people think the dull material body to be the cause of their activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">143</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Indra, as a wooden doll that looks like a woman or as an animal made of grass and leaves cannot move or dance independently, but depends fully on the person who handles it, all of us dance according to the desire of the supreme controller, the Personality of Godhead. No one is independent.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            This is confirmed in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 5.142):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ekale īśvara kṛṣṇa, āra saba bhṛtya<br>yāre yaiche nācāya, se taiche kare nṛtya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Lord Kṛṣṇa alone is the supreme controller, and all others are His servants. They dance as He makes them do so.” We are all servants of Kṛṣṇa; we have no independence. We are dancing according to the desire of the Supreme Personality of Godhead, but out of ignorance and illusion we think we are independent of the supreme will. Therefore it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ paramaḥ kṛṣṇaḥ<br>sac-cid-ānanda-vigrahaḥ<br>anādir ādir govindaḥ<br>sarva-kāraṇa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Kṛṣṇa, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body. He is the origin of all. He has no other origin, for He is the prime cause of all causes.” (<span class="Ref_Italic">Brahma-saṁhitā</span> 5.1)
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">230</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The three puruṣas—Kāraṇodakaśāyī Viṣṇu, Garbhodakaśāyī Viṣṇu and Kṣīrodakaśāyī-Viṣṇu—the material nature, the total material energy, the false ego, the five material elements, the material senses, the mind, the intelligence and consciousness cannot create the material manifestation without the direction of the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            As confirmed in the <span class="Italic">Viṣṇu Purāṇa, parasya brahmaṇaḥ śaktis tathedam akhilaṁ jagat:</span> whatever manifestations we experience are nothing but various energies of the Supreme Personality of Godhead. These energies cannot create anything independently. This is also confirmed by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10): <span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram.</span> “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving living beings.” Only under the direction of the Lord, the Supreme Person, can <span class="Italic">prakṛti,</span> which is manifested in twenty-four elements, create different situations for the living entity. In the <span class="Italic">Vedas</span> the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">madīyaṁ mahimānaṁ ca<br>parabrahmeti śabditam<br>vetsyasy anugṛhītaṁ me<br>sampraśnair vivṛtaṁ hṛdi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Since everything is a manifestation of My energy, I am known as Parabrahman. Therefore everyone should hear from Me about My glorious activities.” The Lord also says in <span class="Ref_Italic">Bhagavad-gītā</span> (10.2), <span class="Italic">aham ādir hi devānām:</span> “I am the origin of all the demigods.” Therefore the Supreme Personality of Godhead is the origin of everything, and no one is independent of Him. Śrīla Madhvācārya also says, <span class="Italic">anīśa jīva-rūpeṇa:</span> the living entity is <span class="Italic">anīśa,</span> never the controller, but is always controlled. Therefore when a living entity becomes proud of being an independent <span class="Italic">īśvara,</span> or god, that is his foolishness. Such foolishness is described in the following verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">227</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A foolish, senseless person cannot understand the Supreme Personality of Godhead. Although always dependent, he falsely thinks himself the Supreme. If one thinks, “According to one’s previous fruitive actions, one’s material body is created by the father and mother, and the same body is annihilated by another agent, as another animal is devoured by a tiger,” this is not proper understanding. The Supreme Personality of Godhead Himself creates and devours the living beings through other living beings.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            According to the conclusion of the philosophy known as <span class="Italic">karma-mīmāṁsā,</span> one’s <span class="Italic">karma,</span> or previous fruitive activity, is the cause of everything, and therefore there is no need to work. Those who arrive at this conclusion are foolish. When a father creates a child, he does not do so independently; he is induced to do so by the Supreme Lord. As the Lord Himself says in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> “I am in everyone’s heart, and from Me come remembrance, knowledge and forgetfulness.” Unless one receives dictation from the Supreme Personality of Godhead, who sits within everyone’s heart, one cannot be induced to create anything. Therefore the father and mother are not the creators of the living entity. According to the living entity’s <span class="Italic">karma,</span> fruitive activities, he is put into the semen of the father, who injects the living entity into the womb of the mother. Then according to the body of the mother and father (<span class="Italic">yathā-yoni yathā-bījam</span>), the living entity accepts a body and takes birth to suffer or enjoy. Therefore the Supreme Lord is the original cause of one’s birth. Similarly, the Supreme Lord is the cause of one’s being killed. No one is independent; everyone is dependent. The true conclusion is that the only independent person is the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">248</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just as a person not inclined to die must nonetheless give up his longevity, opulence, fame and everything else at the time of death, so, at the appointed time of victory, one can gain all these when the Supreme Lord awards them by His mercy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            It is not good to be falsely puffed up, saying that by one’s own effort one has become opulent, learned, beautiful and so on. All such good fortune is achieved through the mercy of the Lord. From another point of view, no one wants to die, and no one wants to be poor or ugly. Therefore, why does the living entity, against his will, receive such unwanted troubles? It is due to the mercy or chastisement of the Supreme Personality of Godhead that one gains or loses everything material. No one is independent; everyone is dependent on the mercy or chastisement of the Supreme Lord. There is a common saying in Bengal that the Lord has ten hands. This means that He has control everywhere—in the eight directions and up and down. If He wants to take everything away from us with His ten hands, we cannot protect anything with our two hands. Similarly, if He wants to bestow benedictions upon us with His ten hands, we cannot factually receive them all with our two hands; in other words, the benedictions exceed our ambitions. The conclusion is that even though we do not wish to be separated from our possessions, sometimes the Lord forcibly takes them from us; and sometimes He showers such benedictions upon us that we are unable to receive them all. Therefore either in opulence or in distress we are not independent; everything is dependent on the sweet will of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since everything is dependent on the supreme will of the Personality of Godhead, one should be equipoised in fame and defamation, victory and defeat, life and death. In their effects, represented as happiness and distress, one should maintain oneself in equilibrium, without anxiety.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">223</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who knows that the three qualities—goodness, passion and ignorance—are not qualities of the soul but qualities of material nature, and who knows that the pure soul is simply an observer of the actions and reactions of these qualities, should be understood to be a liberated person. He is not bound by these qualities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            As the Lord explains in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments or desires to have anything; he is equally disposed to every living entity. In that state he attains pure devotional service unto Me.” When one attains self-realization, the <span class="Italic">brahma-bhūta</span> stage, one knows that whatever happens during his life is due to the contamination of the modes of material nature. The living being, the pure soul, has nothing to do with these modes. In the midst of the hurricane of the material world, everything changes very quickly, but if one remains silent and simply observes the actions and reactions of the hurricane, he is understood to be liberated. The real qualification of the liberated soul is that he remains Kṛṣṇa conscious, undisturbed by the actions and reactions of the material energy. Such a liberated person is always jubilant. He never laments or aspires for anything. Since everything is supplied by the Supreme Lord, the living entity, being fully dependent on Him, should not protest or accept anything in terms of his personal sense gratification; rather, he should receive everything as the mercy of the Lord and remain steady in all circumstances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">87</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my enemy, just look at me. I have already been defeated, for my weapon and arm have been cut to pieces. You have already overwhelmed me, but nonetheless, with a desire to kill you, I am trying my best to fight. I am not at all morose, even under such adverse conditions. Therefore you should give up your moroseness and continue fighting.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Vṛtrāsura was so great and powerful that in effect he was acting as the spiritual master of Indra. Although Vṛtrāsura was on the verge of defeat, he was not at all affected. He knew that he was going to be defeated by Indra, and he voluntarily accepted that, but since he was supposed to be Indra’s enemy, he tried his best to kill Indra. Thus he performed his duty. One should perform his duty under all circumstances, even though one may know what the result will be.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my enemy, consider this battle a gambling match in which our lives are the stakes, the arrows are the dice, and the animals acting as carriers are the game board. No one can understand who will be defeated and who will be victorious. It all depends on providence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">80</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: Hearing the straightforward, instructive words of Vṛtrāsura, King Indra praised him and again took the thunderbolt in his hand. Without bewilderment or duplicity, he then smiled and spoke to Vṛtrāsura as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            King Indra, the greatest of the demigods, was astonished to hear the instructions of Vṛtrāsura, who was supposed to be a demon. He was struck with wonder that a demon could speak so intelligently. Then he remembered great devotees like Prahlāda Mahārāja and Bali Mahārāja, who had been born in the families of demons, and thus he came to his senses. Even so-called demons sometimes have exalted devotion for the Supreme Personality of Godhead. Therefore Indra smiled reassuringly at Vṛtrāsura.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">136</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Indra said: O great demon, I see by your discrimination and endurance in devotional service, despite your dangerous position, that you are a perfect devotee of the Supreme Personality of Godhead, the Supersoul and friend of everyone.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (6.22):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaṁ labdhvā cāparaṁ lābhaṁ<br>manyate nādhikaṁ tataḥ<br>yasmin sthito na duḥkhena<br>guruṇāpi vicālyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Established in Kṛṣṇa consciousness, one never departs from the truth, and upon gaining this he thinks there is no greater gain. Being situated in such a position, one is never shaken, even in the midst of the greatest difficulty.” An unalloyed devotee is never disturbed by any kind of trying circumstance. Indra was surprised to see that Vṛtrāsura, undisturbed, was fixed in devotional service to the Lord, for such a mentality is impossible for a demon. However, by the grace of the Supreme Personality of Godhead, anyone can become an exalted devotee (<span class="Italic">striyo vaiśyās tathā śūdrās te ’pi yānti parāṁ gatim</span>). An unalloyed devotee is sure to return home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">245</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            You have surmounted the illusory energy of Lord Viṣṇu, and because of this liberation, you have given up the demoniac mentality and have attained the position of an exalted devotee.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Lord Viṣṇu is the <span class="Italic">mahā-puruṣa.</span> Therefore one who becomes a Vaiṣṇava attains the position of a <span class="Italic">mahā-pauruṣya.</span> This position was attained by Mahārāja Parīkṣit. It is said in the <span class="Italic">Padma Purāṇa</span> that the distinction between a demigod and a demon is that a demigod is a devotee of Lord Viṣṇu whereas a demon is just the opposite: <span class="Italic">viṣṇu-bhaktaḥ smṛto daiva āsuras tad-viparyayaḥ.</span> Vṛtrāsura was considered a demon, but actually he was more than qualified as a devotee, or <span class="Italic">mahā-pauruṣya.</span> If one somehow becomes a devotee of the Supreme Lord, whatever his position, he can be brought to the position of a perfect person. This is possible if an unalloyed devotee tries to serve the Lord by delivering him in this way. Therefore Śukadeva Gosvāmī says in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.4.18):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kirāta-hūṇāndhra-pulinda-pulkaśā<br>ābhīra-śumbhā yavanāḥ khasādayaḥ<br>ye ’nye ca pāpā yad-apāśrayāśrayāḥ<br>śudhyanti tasmai prabhaviṣṇave namaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Kirātas, Hūṇas, Āndhras, Pulindas, Pulkaśas, Ābhīras, Śumbhas, Yavanas and members of the Khasa races, and even others addicted to sinful acts can be purified by taking shelter of the devotees of the Lord, for He is the supreme power. I beg to offer my respectful obeisances unto Him.” Anyone can be purified if he takes shelter of a pure devotee and molds his character according to the pure devotee’s direction. Then, even if one is a Kirāta, Āndhra, Pulinda or whatever, he can be purified and elevated to the position of a <span class="Italic">mahā-pauruṣya.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">85</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Vṛtrāsura, demons are generally conducted by the mode of passion. Therefore, what a great wonder it is that although you are a demon, you have adopted the mentality of a devotee and have fixed your mind on the Supreme Personality of Godhead, Vāsudeva, who is always situated in pure goodness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            King Indra wondered how Vṛtrāsura could have been elevated to the position of an exalted devotee. As for Prahlāda Mahārāja, he was initiated by Nārada Muni, and therefore it was possible for him to become a great devotee, although he was born in a family of demons. For Vṛtrāsura, however, Indra could not detect such causes. Therefore he was struck with wonder that Vṛtrāsura was such an exalted devotee that he could fix his mind without deviation upon the lotus feet of Lord Kṛṣṇa, Vāsudeva.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">197</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A person fixed in the devotional service of the Supreme Lord, Hari, the Lord of the highest auspiciousness, swims in the ocean of nectar. For him what is the use of the water in small ditches?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Vṛtrāsura has formerly prayed (<span class="Ref_Italic">Bhāg.</span> 6.11.25), <span class="Italic">na nāka-pṛṣṭhaṁ na ca pārameṣṭhyaṁ na sāma-bhaumaṁ na rasādhipatyam.</span> “I do not want the facilities for happiness on Brahmaloka, Svargaloka or even Dhruvaloka, not to speak of this earth or the lower planets. I simply want to return home, back to Godhead.” This is the determination of a pure devotee. A pure devotee is never attracted to any exalted position within this material world. He simply wants to associate with the Supreme Personality of Godhead like the inhabitants of Vṛndāvana—Śrīmatī Rādhārāṇī, the <span class="Italic">gopīs,</span> Kṛṣṇa’s father and mother (Nanda Mahārāja and Yaśodā), Kṛṣṇa’s friends and Kṛṣṇa’s servants. He wants to associate with Kṛṣṇa’s atmosphere of Vṛndāvana’s beauty. These are the highest ambitions of a devotee of Kṛṣṇa. Devotees of Lord Viṣṇu may aspire for a position in Vaikuṇṭhaloka, but a devotee of Kṛṣṇa never aspires even for the facilities of Vaikuṇṭha; he wants to return to Goloka Vṛndāvana and associate with Lord Kṛṣṇa in His eternal pastimes. Any material happiness is like water in a ditch, whereas the spiritual happiness eternally enjoyed in the spiritual world is like an ocean of nectar in which a devotee wants to swim.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Vṛtrāsura and King Indra spoke about devotional service even on the battlefield, and then as a matter of duty they again began fighting. My dear King, both of them were great fighters and were equally powerful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Parīkṣit, Vṛtrāsura, who was completely able to subdue his enemy, took his iron club, whirled it around, aimed it at Indra and then threw it at him with his left hand.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            With his thunderbolt named Śataparvan, Indra simultaneously cut to pieces Vṛtrāsura’s club and his remaining hand.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">32</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vṛtrāsura, bleeding profusely, his two arms cut off at their roots, looked very beautiful, like a flying mountain whose wings have been cut to pieces by Indra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            It appears from the statement of this verse that sometimes there are flying mountains and that their wings are cut by the thunderbolt of Indra. Vṛtrāsura’s huge body resembled such a mountain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27–29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vṛtrāsura was very powerful in physical strength and influence. He placed his lower jaw on the ground and his upper jaw in the sky. His mouth became very deep, like the sky itself, and his tongue resembled a large serpent. With his fearful, deathlike teeth, he seemed to be trying to devour the entire universe. Thus assuming a gigantic body, the great demon Vṛtrāsura shook even the mountains and began crushing the surface of the earth with his legs, as if he were the Himalayas walking about. He came before Indra and swallowed him and Airāvata, his carrier, just as a big python might swallow an elephant.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the demigods, along with Brahmā, other prajāpatis and other great saintly persons, saw that Indra had been swallowed by the demon, they became very morose. “Alas,” they lamented. “What a calamity ! What a calamity !”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The protective armor of Nārāyaṇa, which Indra possessed, was identical with Nārāyaṇa Himself, the Supreme Personality of Godhead. Protected by that armor and by his own mystic power, King Indra, although swallowed by Vṛtrāsura, did not die within the demon’s belly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            With his thunderbolt, King Indra, who was also extremely powerful, pierced through Vṛtrāsura’s abdomen and came out. Indra, the killer of the demon Bala, then immediately cut off Vṛtrāsura’s head, which was as high as the peak of a mountain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although the thunderbolt revolved around Vṛtrāsura’s neck with great speed, separating his head from his body took one complete year—360 days, the time in which the sun, moon and other luminaries complete a northern and southern journey. Then, at the suitable time for Vṛtrāsura to be killed, his head fell to the ground.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Vṛtrāsura was killed, the Gandharvas and Siddhas in the heavenly planets beat kettledrums in jubilation. With Vedic hymns they celebrated the prowess of Indra, the killer of Vṛtrāsura, praising Indra and showering flowers upon him with great pleasure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">169</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, subduer of enemies, the living spark then came forth from Vṛtrāsura’s body and returned home, back to Godhead. While all the demigods looked on, he entered the transcendental world to become an associate of Lord Saṅkarṣaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura explains that Indra, not Vṛtrāsura, was actually killed. He says that when Vṛtrāsura swallowed King Indra and his carrier, the elephant, he thought, “Now I have killed Indra, and therefore there is no more need of fighting. Now let me return home, back to Godhead.” Thus he stopped all his bodily activities and became situated in trance. Taking advantage of the silence of Vṛtrāsura’s body, Indra pierced the demon’s abdomen, and because of Vṛtrāsura’s trance, Indra was able to come out. Now, Vṛtrāsura was in <span class="Italic">yoga-samadhi,</span> and therefore although King Indra wanted to cut his throat, the demon's neck was so stiff that Indra's thunderbolt took 360  days to cut it to pieces. Actually it was the body left by Vṛtrāsura that was cut to pieces by Indra; Vṛtrāsura himself was not killed. In his original consciousness, Vṛtrāsura returned home, back to Godhead, to become an associate of Lord Saṅkarṣaṇa. Here the word <span class="Italic">alokam</span> means the transcendental world, Vaikuṇṭhaloka, where Saṅkarṣaṇa eternally resides.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Twelfth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “Vṛtrāsura’s Glorious Death.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/12">https://prabhupadabooks.com/sb/6/12</a><!-- span.text_source_copied_date
+        | on 2023-10-08 13:36:24 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.11: The Transcendental Qualities of Vrtrasura     Next: SB 6.13: King Indra Afflicted by Sinful Reaction</div>
+      </p>
+    </div>
+  </body>
+</html>
