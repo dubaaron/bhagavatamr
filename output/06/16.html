@@ -24,16 +24,16 @@
     </script>
     <script>
       $(document).ready(function() {
-      
+
         current_verse_highlighted = false;
-      
+
         $('.verse_num').click(function() {
           console.log('haribol!')
           current_verse_highlighted = $(this).parents('.verse')[0]
           toggleVerseHighlight(current_verse_highlighted)
-      
+
         })
-      
+
         $(document).keydown(function(event) {
           if (current_verse_highlighted != false) {
             const callback = {
@@ -43,26 +43,26 @@
             callback?.(event)
           }
         })
-      
+
       });
-      
-      
+
+
       function toggleVerseHighlight(verseElement, scrollToCenter = false) {
         el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
         if (scrollToCenter) {
           el.scrollIntoView({behavior: 'smooth', block: 'center'})
         }
       }
-      
-      
+
+
       function moveHighlightToNextVerse(event) {
         event.preventDefault()
         toggleVerseHighlight(current_verse_highlighted)
         current_verse_highlighted = $(current_verse_highlighted).next()
         toggleVerseHighlight(current_verse_highlighted, true)
-      
+
       }
-      
+
       function moveHighlightToPrevVerse(event) {
         event.preventDefault()
         toggleVerseHighlight(current_verse_highlighted)
@@ -85,7 +85,7 @@
         visibility: visible;
       }
       .verse_controls {
-        margin-bottom: -0.65rem; 
+        margin-bottom: -0.65rem;
       }
       .verse_translation {
         font-weight: bold;
@@ -117,7 +117,7 @@
         text-align: right;
       }
       .purport_wordcount {
-        text-color: 
+        text-color:
       }
       .current_highlight {
         border: 1px dotted;
@@ -128,15 +128,15 @@
         font-weight: bold;
       }
       .current_highlight p {
-      
+
       }
       .Italic { /* holdover from source */
         font-style: italic;
       }
-      .summary div.Normal-Level { 
+      .summary div.Normal-Level {
         /* these are basically paragraphs in the chapter summary */
         margin-bottom: 1rem;
-      
+
       }
     </style>
   </head>
@@ -746,6 +746,14 @@
             The Lord and the devotees both conquer. The Lord is conquered by the devotees, and the devotees are conquered by the Lord. Because of being conquered by one another, they both derive transcendental bliss from their relationship. The highest perfection of this mutual conquering is exhibited by Kṛṣṇa and the <span class="Italic">gopīs.</span> The <span class="Italic">gopīs</span> conquered Kṛṣṇa, and Kṛṣṇa conquered the <span class="Italic">gopīs.</span> Thus whenever Kṛṣṇa played His flute, He conquered the minds of the <span class="Italic">gopīs,</span> and without seeing the <span class="Italic">gopīs</span> Kṛṣṇa could not be happy. Other transcendentalists, such as <span class="Italic">jñānīs</span> and <span class="Italic">yogīs,</span> cannot conquer the Supreme Personality of Godhead; only pure devotees can conquer Him.
           </p>
           <p>
+            Pure devotees are described as <span class="Italic">sama-mati,
+            </span> which means that they never deviate from devotional service under any circumstances. It is not that devotees worship the Supreme Lord only when happy; they worship Him even when in distress. Happiness and distress do not hamper the process of devotional service. Therefore <span class="Italic">Śrīmad-Bhāgavatam</span> says
+            that devotional service is <span class="Italic">ahaituky apratihatā,</span> unmotivated and uninterrupted. When a devotee offers devotional service to the Lord without any motive (<span class="Italic">anyābhilāṣitā-śūnyam [</span><span class="Ref_It
+            alic">Bhakti-rasāmṛta-sindhu </span><popup><div class="Verse">anyābhilāṣitā-śūnyaṁ<
+            br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā</div></p
+            opup>
+          </p>
+          <p>
             “<b>One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.</b>” <span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.1.11<lt>1.1.11], his service cannot be hampered by any material condition (<span class="Italic">apratihatā</span>). Thus a devotee who offers service in all conditions of life can conquer the Supreme Personality of Godhead.</lt>
           </p>
           <p>
@@ -1105,6 +1113,11 @@
           </p>
         </div>
         <div class="verse_purport_content collapse" id="verse_45_purport">
+          <p>
+            This is the process of the perfect way. One must take lessons from authorities like Nārada, Vyāsa and Asita, and follow their principles. Then one will be able to see the Supreme Personality of Godhead even with one’s own eyes. One only needs training. <span class="Italic">Ataḥ śrī-kṛṣṇa-nāmādi na bhaved grāhyam indriyaiḥ</span> [BRS. <popup><div class="Verse">ataḥ śrī-kṛṣṇa-nāmādi<br>na bhave
+d grāhyam indriyaiḥ<br>sevonmukhe hi jihvādau<br>svayam eva sphuraty adaḥ</div></po
+pup>
+          </p>
           <p>
             “No one can understand the transcendental nature of the name, form, quality and pastimes of Śrī Kṛṣṇa through his materially contaminated senses. Only when one becomes spiritually saturated by transcendental service to the Lord are the transcendental name, form, quality and pastimes of the Lord revealed to him.” (<span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.2.234)<lt>1.2.234]<span class="Italic">.</span> With our blunt eyes and other senses we cannot perceive the Supreme Personality of Godhead, but if we engage our senses in the service of the Lord according to the instructions of the authorities, it will be possible to see Him. As soon as one sees the Supreme Personality of Godhead, all the sinful reactions in the core of one’s heart are certainly vanquished.</lt>
           </p>
