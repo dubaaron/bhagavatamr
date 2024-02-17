@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.11, Jaḍa Bharata Instructs King Rahūgaṇa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Eleven:<br>Jaḍa Bharata Instructs King Rahūgaṇa
+      </h1>
+      <div class="summary">
+        <div class="Normal-Level">In this chapter the <span class="Italic">brāhmaṇa</span> Jaḍa Bharata instructs Mahārāja Rahūgaṇa in detail. He tells the King: “You are not very experienced, yet you pose yourself as a learned person because you are very proud of your knowledge. Actually a person who is on the transcendental platform does not care for social behavior that sacrifices spiritual advancement. Social behavior comes within the jurisdiction of <span class="Italic">karma-kāṇḍa,</span> material benefit. No one can spiritually advance by such activities. The conditioned soul is always overpowered by the modes of material nature. and consequently he is simply concerned with material benefits and auspicious and inauspicious material things. In other words, the mind, which is the leader of the senses, is absorbed in material activities life after life. Thus he continuously gets different types of bodies and suffers miserable material conditions. On the basis of mental concoction, social behavior has been formulated. If one’s mind is absorbed in these activities, he certainly remains conditioned within the material world. According to different opinions, there are eleven or twelve mental activities, which can be transformed into hundreds and thousands. A person who is not Kṛṣṇa conscious is subjected to all these mental concoctions and is thus governed by the material energy. The living entity who is free from mental concoctions attains the platform of pure spirit soul, devoid of material contamination. There are two types of living entities—<span class="Italic">jīvātmā</span> and <span class="Italic">Paramātmā,</span> the individual soul and the Supreme Soul. That Supreme Soul in His ultimate realization is Lord Vāsudeva, Kṛṣṇa. He enters into everyone’s heart and controls the living entity in his different activities. He is therefore the supreme shelter of all living entities. One can understand the Supreme Soul and one’s position in relationship with Him when one is completely freed from the unwanted association of ordinary men. In this way one can become fit to cross the ocean of nescience. The cause of conditional Life is attachment to the external energy. One has to conquer these mental concoctions: unless one does so, he will never be freed from material anxieties. Although mental concoctions have no value, their influence is still very formidable. No one should neglect to control the mind. If one does, the mind becomes so powerful that one immediately forgets his real position. Forgetting that he is an eternal servant of Kṛṣṇa and that service to Kṛṣṇa is his only business, one is doomed by material nature to serve the objects of the senses. One should kill mental concoctions by the sword of service to the Supreme Personality of Godhead and His devotee [<span class="Italic">guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja</span>]”</div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">174</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The brāhmaṇa Jaḍa Bharata said: My dear King, although you are not at all experienced, you are trying to speak like a very experienced man. Consequently you cannot be considered an experienced person. An experienced person does not speak the way you are speaking about the relationship between a master and a servant or about material pains and pleasures. These are simply external activities. Any advanced, experienced man, considering the Absolute Truth, does not talk in this way.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Kṛṣṇa similarly chastised Arjuna. <span class="Italic">Aśocyān anvaśocas tvaṁ prajñā-vādāṁś ca bhāṣase:</span> “While speaking learned words, you are lamenting for what is not worthy of grief.” (Bg. 2.11) Similarly, among people in general, 99.9 percent try to talk like experienced advisers, but they are actually devoid of spiritual knowledge and are therefore like inexperienced children speaking nonsensically. Consequently their words cannot be given any importance. One has to learn from Kṛṣṇa or His devotee. If one speaks on the basis of this experience—that is, on the basis of spiritual knowledge—one’s words are valuable. At the present moment, the entire world is full of foolish people. <span class="Italic">Bhagavad-gītā</span> describes these people as <span class="Italic">mūḍhas.</span> They are trying to rule human society, but because they are devoid of spiritual knowledge, the entire world is in a chaotic condition. To be released from these miserable conditions, one has to become Kṛṣṇa conscious and take lessons from an exalted personality like Jaḍa Bharata, Lord Kṛṣṇa and Kapiladeva. That is the only way to solve the problems of material life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">675</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, talks of the relationship between the master and the servant, the king and the subject and so forth are simply talks about material activities. People interested in material activities, which are expounded in the Vedas, are intent on performing material sacrifices and placing faith in their material activities. For such people, spiritual advancement is definitely not manifest.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            In this verse, two words are significant—<span class="Italic">veda-vāda</span> and <span class="Italic">tattva-vāda.</span> According to <span class="Italic">Bhagavad-gītā,</span> those who are simply attached to the <span class="Italic">Vedas</span> and who do not understand the purpose of the <span class="Italic">Vedas</span> or the <span class="Italic">Vedānta-sūtra</span> are called <span class="Italic">veda-vāda-ratāḥ.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yām imāṁ puṣpitāṁ vācaṁ<br>pravadanty avipaścitaḥ<br>veda-vāda-ratāḥ pārtha<br>nānyad astīti vādinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kāmātmānaḥ svarga-parā<br>janma-karma-phala-pradām<br>kriyā-viśeṣa-bahulāṁ<br>bhogaiśvarya-gatiṁ prati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Men of small knowledge are very much attached to the flowery words of the <span class="Italic">Vedas,</span> which recommend various fruitive activities for elevation to heavenly planets, resultant good birth, power and so forth. Being desirous of sense gratification and opulent life, they say there is nothing more than this.” (Bg. 2.42–43)
+          </p>
+          <p>
+            The <span class="Italic">veda-vāda</span> followers of the <span class="Italic">Vedas</span> are generally inclined to <span class="Italic">karma-kāṇḍa,</span> the performance of sacrifice according to the Vedic injunctions. They are thereby promoted to higher planetary systems. They generally practice the Cāturmāsya system. <span class="Italic">Akṣayyaṁ ha vai cāturmāsya-yājinaḥ sukṛtaṁ bhavati:</span> one who performs the <span class="Italic">cāturmāsya-yajña</span> becomes pious. By becoming pious, one may be promoted to the higher planetary systems (<span class="Italic">ūrdhvaṁ gacchanti sattva-sthāḥ</span>). Some of the followers of the <span class="Italic">Vedas</span> are attached to <span class="Italic">karma-kāṇḍa,</span> the fruitive activities of the <span class="Italic">Vedas,</span> in order to be promoted to a higher standard of life. Others argue that this is not the purpose of the <span class="Italic">Vedas.</span> <span class="Italic">Tad yathaiveha karma jitaḥ lokaḥ kṣīyate evam evam utra puṇya jitaḥ lokaḥ kṣīyate.</span> In this world someone may become very highly elevated by taking birth in an aristocratic family, by being well educated, beautiful or very rich. These are the gifts for pious activities enacted in the past life. However, these will be finished when the stock of pious activity is finished. If we become attached to pious activities, we may get these various worldly facilities in the next life and may take birth in the heavenly planets. But all this will eventually be finished. <span class="Italic">Kṣīṇe puṇye martya-lokaṁ viśanti</span> (Bg. 9.21): when the stock of pious activity is finished, one again has to come to this <span class="Italic">martya-loka.</span> According to the Vedic injunctions, the performance of pious activity is not really the objective of the <span class="Italic">Vedas.</span> The objective of the <span class="Italic">Vedas</span> is explained in <span class="Italic">Bhagavad-gītā.</span> <span class="Italic">Vedaiś ca sarvair aham eva vedyaḥ: [Bg. </span>15.15] the objective of the <span class="Italic">Vedas</span> is to understand Kṛṣṇa, the Supreme Personality of Godhead. Those who are <span class="Italic">veda-vādīs</span> are not actually advanced in knowledge, and those who are followers of <span class="Italic">jñāna-kāṇḍa</span> (Brahman understanding) are also not perfect. However, when one comes to the platform of <span class="Italic">upāsanā</span> and accepts the worship of the Supreme Personality of Godhead, he becomes perfect (<span class="Italic">ārādhanānāṁ sarveṣāṁ viṣṇor ārādhanaṁ param</span>). In the <span class="Italic">Vedas</span> the worship of different demigods and the performance of sacrifice are certainly, mentioned, but such worship is inferior because the worshipers do not know that the ultimate goal is Viṣṇu (<span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇum [SB </span>7.5.31]). When one comes to the platform of <span class="Italic">viṣṇor ārādhanam,</span> or <span class="Italic">bhakti-yoga,</span> one has attained the perfection of life. Otherwise, as indicated in <span class="Italic">Bhagavad-gītā,</span> one is not a <span class="Italic">tattva-vādī</span> but a <span class="Italic">veda-vādī, a</span> blind follower of the Vedic injunctions. A <span class="Italic">veda-vādī</span> cannot be purified from material contamination unless he becomes a <span class="Italic">tattva-vādī,</span> that is, one who knows <span class="Italic">tattva,</span> the Absolute Truth. <span class="Italic">Tattva</span> is also experienced in three features—<span class="Italic">brahmeti paramātmeti bhagavān iti śabdyate.</span> Even after coming to the platform of understanding <span class="Italic">tattva,</span> one must worship Bhagavān, Viṣṇu and His expansions, or one is not yet perfect. <span class="Italic">Bahūnāṁ janmanām ante jñānavān māṁ prapadyate: [Bg. </span>7.19] after many births, one who is actually in knowledge surrenders unto Kṛṣṇa. The conclusion is that unintelligent men with a poor fund of knowledge cannot understand Bhagavān, Brahman or Paramātmā, but after studying the <span class="Italic">Vedas</span> and attaining the understanding of the Absolute Truth, the Supreme Personality of Godhead, one is supposed to be on the platform of perfect knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">341</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A dream becomes automatically known to a person as false and immaterial, and similarly one eventually realizes that material happiness in this life or the next, on this planet or a higher planet, is insignificant. When one realizes this, the Vedas, although an excellent source, are insufficient to bring about direct knowledge of the truth.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (2.45), Kṛṣṇa advised Arjuna to become transcendental to the material activities impelled by the three material modes of nature (<span class="Italic">traiguṇya-viṣayā vedā nistraiguṇyo bhavārjuna</span>). The purpose of Vedic study is to transcend the activities of the three modes of material nature. Of course in the material world the mode of goodness is accepted as the best, and one can be promoted to the higher planetary systems by being on the <span class="Italic">sattva-guṇa</span> platform. However, that is not perfection. One must come to the conclusion that even the <span class="Italic">sattva-guṇa</span> platform is also not good. One may dream that he has become a king with a good family, wife and children, but immediately at the end of that dream he comes to the conclusion that it is false. Similarly, all kinds of material happiness are undesirable for a person who wants spiritual salvation. If a person does not come to the conclusion that he has nothing to do with any kind of material happiness, he cannot come to the platform of understanding the Absolute Truth, or <span class="Italic">tattva jñāna.</span> <span class="Italic">Karmīs, jñānīs</span> and <span class="Italic">yogīs</span> are after some material elevation. The <span class="Italic">karmīs</span> work hard day and night for some bodily comfort, and the <span class="Italic">jñānīs</span> simply speculate about how to get out of the entanglement of <span class="Italic">karma</span> and merge into the Brahman effulgence. The <span class="Italic">yogīs</span> are very much addicted to the acquisition of material perfection and magical powers. All of them are trying to be materially perfect, but a devotee very easily comes to the platform of <span class="Italic">nirguṇa</span> in devotional service, and consequently for the devotee the results of <span class="Italic">karma, jñāna and yoga</span> become very insignificant. Therefore only the devotee is on the platform of <span class="Italic">tattva jñāna,</span> not the others. Of course the <span class="Italic">jñānī’s</span> position is better than that of the <span class="Italic">karmī</span> but that position is also insufficient. The <span class="Italic">jñānī must</span> actually become liberated, and after liberation he may be situated in devotional service (<span class="Italic">mad-bhaktiṁ labhate parām [Bg. </span>18.54]).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">113</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As long as the mind of the living entity is contaminated by the three modes of material nature (goodness, passion and ignorance), his mind is exactly like an independent, uncontrolled elephant. It simply expands its jurisdiction of pious and impious activities by using the senses. The result is that the living entity remains in the material world to enjoy and suffer pleasures and pains due to material activity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            In <span class="Italic">Caitanya-caritāmṛta</span> it is said that material pious and impious activities are both opposed to the principle of devotional service. Devotional service means <span class="Italic">mukti,</span> freedom from material entanglement, but pious and impious activities result in entanglement within this material world. If the mind is captivated by the pious and impious activities mentioned in the <span class="Italic">Vedas,</span> one remains eternally in darkness; one cannot attain the absolute platform. To change the consciousness from ignorance to passion or from passion to goodness does not really solve the problem. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (14.26), <span class="Italic">sa guṇān samatītyaitān brahma-bhūyāya kalpate.</span> One must come to the transcendental platform; otherwise life’s mission is never fulfilled.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">205</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because the mind is absorbed in desires for pious and impious activities, it is naturally subjected to the transformations of lust and anger. In this way, it becomes attracted to material sense enjoyment. In other words, the mind is conducted by the modes of goodness, passion and ignorance. There are eleven senses and five material elements, and out of these sixteen items, the mind is the chief. Therefore the mind brings about birth in different types of bodies among demigods, human beings, animals and birds. When the mind is situated in a higher or lower position, it accepts a higher or lower material body.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Transmigration among the 8,400,000 species is due to the mind’s being polluted by certain material qualities. Due to the mind, the soul is subjected to pious and impious activities. The continuation of material existence is like the waves of material nature. In this regard. Śrīla Bhaktivinoda Ṭhākura says, <span class="Italic">māyāra vaśe, yāccha bhese’, khāccha hābuḍubu, bhāi:</span> “My dear brother, the spirit soul is completely under the control of <span class="Italic">māyā,</span> and you are being carried away by its waves.” This is also confirmed in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself the doer of activities, which are in actuality carried out by nature.” (Bg. 3.27)
+          </p>
+          <p>
+            Material existence means being fully controlled by material nature. The mind is the center for accepting the dictations of material nature. In this way the living entity is carried away in different types of bodies continuously, millennium after millennium.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa bhuli’ sei jīva anādi-bahirmukha<br>ataeva māyā tāre deya saṁsāra-duḥkha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Caitanya-caritāmṛta, Madhya</span> 20.117)
+          </p>
+          <p>
+            Due to the living entity’s forgetfulness of Kṛṣṇa, one is bound by the laws of material nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">193</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The materialistic mind covering the living entity’s soul carries it to different species of life. This is called continued material existence. Due to the mind, the living entity suffers or enjoys material distress and happiness. Being thus illusioned, the mind further creates pious and impious activities and their karma, and thus the soul becomes conditioned.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Mental activities under the influence of material nature cause happiness and distress within the material world. Being covered by illusion, the living entity eternally continues conditioned life under different designations. Such living entities are known as <span class="Italic">nitya-baddha,</span> eternally’ conditioned. On the whole, the mind is the cause of conditioned life; therefore the entire yogic process is meant to control the mind and the senses. If the mind is controlled, the senses are automatically controlled, and therefore the soul is saved from the reactions of pious and impious activity. If the mind is engaged at the lotus feet of Lord Kṛṣṇa (<span class="Italic">sa vai manaḥ kṛṣṇa-padāravindayoḥ</span>), the senses are automatically engaged in the Lord’s service. When the mind and senses are engaged in devotional service, the living entity naturally becomes Kṛṣṇa conscious. As soon as one always thinks of Kṛṣṇa, he becomes a perfect <span class="Italic">yogī, as</span> confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">yoginām api sarveṣāṁ mad-gatenāntarātmanā [Bg. </span>6.47]). This <span class="Italic">antarātmā,</span> the mind, is conditioned by material nature. As stated here, <span class="Italic">māyā-racitāntarātmā sva-dehinaṁ saṁsṛti-cakra-kūṭaḥ:</span> the mind, being most powerful, covers the living entity and puts him in the waves of material existence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">248</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mind makes the living entity within this material world wander through different species of life, and thus the living entity experiences mundane affairs in different forms as a human being, demigod, fat person, skinny person and so forth. Learned scholars say that bodily appearance, bondage and liberation are caused by the mind.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Just as the mind is the cause of bondage, it can also be the cause of liberation. The mind is described here as <span class="Italic">para-avara,</span> <span class="Italic">para</span> means transcendental, and <span class="Italic">avara</span> means material. When the mind is engaged in the Lord’s service (<span class="Italic">sa vai manaḥ kṛṣṇa-padāravindayoḥ</span>), it is called <span class="Italic">para,</span> transcendental. When the mind is engaged in material sense gratification, it is called <span class="Italic">avara,</span> or material. At the present moment, in our conditioned state, our mind is fully absorbed in material sense gratification, but it can be purified and brought to its original Kṛṣṇa consciousness by the process of devotional service. We have often given the example of Ambarīṣa Mahārāja. <span class="Italic">Sa vai manaḥ kṛṣṇa-padāravindayor vacāṁsi vaikuṇṭha-guṇānuvarṇane.</span> The mind must be controlled in Kṛṣṇa consciousness. The tongue can be utilized to spread the message of Kṛṣṇa and glorify the Lord or take <span class="Italic">prasāda,</span> the remnants of food offered to Kṛṣṇa. <span class="Italic">Sevonmukhe hi jihvādau:</span> when one utilizes the tongue in the service of the Lord, the other senses can become purified. As stated in the <span class="Italic">Nārada-pañcarātra, sarvopādhi-vinirmuktaṁ tat-paratvena nirmalam:</span> [Cc. Madhya 19.170] when the mind and senses are purified, one’s total existence is purified, and one’s designations are also purified. One no longer considers himself a human being, a demigod, cat, dog, Hindu, Muslim and so forth. When the senses and mind are purified and one is fully engaged in Kṛṣṇa’s service, one can be liberated and return home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">172</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the living entity’s mind becomes absorbed in the sense gratification of the material world, it brings about his conditioned life and suffering within the material situation. However, when the mind becomes unattached to material enjoyment, it becomes the cause of liberation. When the flame in a lamp burns the wick improperly, the lamp is blackened, but when the lamp is filled with ghee and is burning properly, there is bright illumination. Similarly, when the mind is absorbed in material sense gratification, it causes suffering, and when detached from material sense gratification, it brings about the original brightness of Kṛṣṇa consciousness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            It is therefore concluded that the mind is the cause of material existence and liberation also. Everyone is suffering in this material world because of the mind; it is therefore proper to train the mind or to cleanse the mind from material attachment and engage it fully in the Lord’s service. This is called spiritual engagement. As confirmed in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māṁ ca yo ’vyabhicāreṇa<br>bhakti-yogena sevate<br>sa guṇān samatītyaitān<br>brahma-bhūyāya kalpate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who engages in full devotional service, who does not fall down in any circumstance, at once transcends the modes of material nature and thus comes to the level of Brahman.” (Bg. 14.26)
+          </p>
+          <p>
+            We should engage the mind fully in Kṛṣṇa conscious activities. Then it will be the cause of our liberation, for our returning home. back to Godhead. However, if we keep the mind engaged in material activities for sense gratification, it will cause continuous bondage and will make us remain in this material world in different bodies, suffering the consequences of our different actions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">90</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are five working senses and five knowledge-acquiring senses. There is also the false ego. In this way, there are eleven items for the mind’s functions. O hero, the objects of the senses [such as sound and touch], the organic activities [such as evacuation] and the different types of bodies, society, friendship and personality are considered by learned scholars the fields of activity for the functions of the mind.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The mind is the controller of the five knowledge-acquiring senses and the five working senses. Each sense has its particular field of activity. In all cases, the mind is the controller or owner. By the false ego one thinks oneself the body and thinks in terms of “my body, my house, my family, my society, my nation” and so on. These false identifications are due to the expansions of the false ego. Thus one thinks that be is this or that. Thus the living entity becomes entangled in material existence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">67</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sound, touch, form, taste and smell are the objects of the five knowledge-acquiring senses. Speech, touch, movement, evacuation and sexual intercourse are the objects of the working senses. Besides this, there is another conception by which one thinks, “This is my body, this is my society, this is my family, this is my nation,” and so forth. This eleventh function, that of the mind, is called the false ego. According to some philosophers, this is the twelfth function, and its field of activity is the body.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            There are different objects for the eleven items. Through the nose we can smell, by the eyes we can see, by the ears we can hear, and in this way we gather knowledge. Similarly, there are the <span class="Italic">karmendriyas,</span> the working senses—the hands, legs, genitals, rectum, mouth and so forth. When the false ego expands, it makes one think. “This is my body, family, society, country,” etc.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">221</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The physical elements, nature, the original cause, culture, destiny and the time element are all material causes. Agitated by these material causes, the eleven functions transform into hundreds of functions and then into thousands and then into millions. But all these transformations do not take place automatically by mutual combination. Rather, they are under the direction of the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            One should not think that all the interactions of the physical elements, gross and subtle, that cause the transformation of mind and consciousness are working independently. They are under the direction of the Supreme Personality of Godhead. In <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), Kṛṣṇa says that the Lord is situated in everyone’s heart (<span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca</span>). As mentioned herein, Supersoul (<span class="Italic">kṣetrajña</span>) is directing everything. The living entity is also <span class="Italic">kṣetrajña,</span> but the supreme <span class="Italic">kṣetrajña</span> is the Supreme Personality of Godhead. He is the witness and order giver. Under His direction, everything takes place. The different inclinations of the living entity are created by his own nature or his expectations, and he is trained by the Supreme Personality of Godhead through the agency of material nature. The body, nature and the physical elements are under the direction of the Supreme Personality of Godhead. They do not function automatically. Nature is neither independent nor automatic. As confirmed in <span class="Italic">Bhagavad-gītā,</span> the Supreme Personality of Godhead is behind nature.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sa-carācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.” (Bg. 9.10)
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">340</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The individual soul bereft of Kṛṣṇa consciousness has many ideas and activities created in the mind by the external energy. They have been existing from time immemorial. Sometimes they are manifest in the wakening state and in the dream state, but during deep sleep [unconsciousness] or trance, they disappear. A person who is liberated in this life [jīvan-mukta] can see all these things vividly.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (13.3), <span class="Italic">kṣetrajñaṁ cāpi māṁ viddhi sarva-kṣetreṣu bhārata.</span> There are two kinds of <span class="Italic">kṣetrajña,</span> or living beings. One is the individual living being, and the other is the supreme living being. The ordinary living being knows about his body to some extent, but the Supreme, Paramātmā, knows the condition of all bodies. The individual living being is localized, and the Supreme. Paramātmā. is all-pervading. In this <span class="Italic">śloka</span> the word <span class="Italic">kṣetrajña</span> refers to an ordinary living being, not the supreme living being. This ordinary living being is of two kinds—<span class="Italic">nitya-baddha</span> or <span class="Italic">nitya-mukta.</span> One is eternally conditioned and the other eternally liberated. The eternally liberated living being; are in the Vaikuṇṭha <span class="Italic">jagat,</span> the spiritual world, and they never fall into the material world. Those in the material world are conditioned souls, <span class="Italic">nitya-baddha.</span> The <span class="Italic">nitya-baddhas</span> can become liberated by controlling the mind because the cause of conditioned life is the mind. When the mind is trained and the soul is not under the mind’s control, the soul can be liberated even in this material world. When it is liberated, one is called <span class="Italic">jīvan-mukta.</span> A <span class="Italic">jīvan-mukta</span> knows how he has become conditioned; therefore he tries to purify himself and return home, back to Godhead. The eternally conditioned soul is eternally conditioned because he is controlled by the mind. The conditioned state and liberated state are compared to the sleeping, unconscious state and the awakened state. Those who are sleeping and unconscious are eternally conditioned, but those who are awake understand that they are eternally part and parcel of the Supreme Personality of Godhead, Kṛṣṇa. Therefore even in this material world, they engage in Kṛṣṇa’s service. As confirmed by Śrīla Rūpa Gosvāmī: <span class="Italic">īhā yasya harer dāsye.</span> If one takes to Kṛṣṇa’s service, he is liberated, even though he appears to be a conditioned soul within the material world. <span class="Italic">Jīvan-muktaḥ sa ucyate.</span> In any condition, one is to be considered liberated if his only business is to serve Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13–14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">248</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are two kinds of kṣetrajña—the living entity, as explained above, and the Supreme Personality of Godhead, who is explained as follows. He is the all-pervading cause of creation. He is full in Himself and is not dependent on others. He is perceived by hearing and direct perception. He is self-effulgent and does not experience birth, death, old age or disease. He is the controller of all the demigods, beginning with Lord Brahmā. He is called Nārāyaṇa, and He is the shelter of living entities after the annihilation of this material world. He is full of all opulences, and He is the resting place of everything material. He is therefore known as Vāsudeva, the Supreme Personality of Godhead. By His own potency, He is present within the hearts of all living entities, just as the air or vital force is within the bodies of all beings, moving and nonmoving. In this way He controls the body. In His partial feature, the Supreme Personality of Godhead enters all bodies and controls them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15). <span class="Italic">Sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca.</span> Every living being is controlled by the supreme living being, Paramātmā, who resides within everyone’s heart. He is the <span class="Italic">puruṣa,</span> the <span class="Italic">puruṣa-avatāra,</span> who creates this material world. The first <span class="Italic">puruṣa-avatāra</span> is Mahā-Viṣṇu, and that Mahā-Viṣṇu is the plenary portion of the plenary portion of the Supreme Personality of Godhead, Kṛṣṇa. Kṛṣṇa’s first expansion is Baladeva, and His next expansions are Vāsudeva, Saṅkarṣaṇa, Aniruddha and Pradyumna. Vāsudeva is the original cause of the <span class="Italic">brahmajyoti,</span> and the <span class="Italic">brahmajyoti</span> is the expansion of the rays of the body of Vāsudeva.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya prabhā prabhavato jagad-aṇḍa-koṭi-<br>koṭiṣv aśeṣa-vasudhādi-vibhūti-bhinnam<br>tad brahma niṣkalam anantam aśeṣa-bhūtaṁ<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship Govinda, the primeval Lord, who is endowed with great power. The glowing effulgence of His transcendental form is the impersonal Brahman, which is absolute, complete and unlimited and which displays the varieties of countless planets, with their different opulences, in millions and millions of universes.” (<span class="Ref_Italic">Brahma-saṁhitā</span> 5.40) The Supreme Personality of Godhead is thus described in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayā tatam idaṁ sarvaṁ<br>jagad avyakta-mūrtinā<br>mat-sthāni sarva-bhūtāni<br>na cāhaṁ teṣv avasthitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By Me, in My unmanifested form, this entire universe is pervaded. All beings are in Me, but I am not in them.” (Bg. 9.4)
+          </p>
+          <p>
+            This is the position of the plenary expansions of Kṛṣṇa as the all-pervading Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">91</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Rahūgaṇa, as long as the conditioned soul accepts the material body and is not freed from the contamination of material enjoyment, and as long as he does not conquer his six enemies and come to the platform of self-realization by awakening his spiritual knowledge, he has to wander among different places and different species of life in this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            When one’s mind is absorbed in the material conception, he thinks that he belongs to a particular nation, family, country or creed. These are all called <span class="Italic">upādhis,</span> designations, and one has to become freed from them (<span class="Italic">sarvopādhi-vinirmuktam</span> [Cc. Madhya 19.170]). As long as one is not freed, he has to continue conditioned life in material existence. The human form of life is meant for cleansing away these misconceptions. If this is not done, one has to repeat the cycle of birth and death and thus suffer all material conditions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">89</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The soul’s designation, the mind, is the cause of all tribulations in the material world. As long as this fact is unknown to the conditioned living entity, he has to accept the miserable condition of the material body and wander within this universe in different positions. Because the mind is affected by disease, lamentation, illusion, attachment, greed and enmity, it creates bondage and a false sense of intimacy within this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            The mind is the cause of both material bondage and liberation. The impure mind thinks, “I am this body.” The pure mind knows that he is not the material body; therefore the mind is considered to be the root of all material designations. Until the living entity is aloof from the association and contaminations of this material world, the mind will be absorbed in such material things as birth, death, disease, illusion, attachment, greed and enmity. In this way the living entity is conditioned, and he suffers material miseries.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">220</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This uncontrolled mind is the greatest enemy of the living entity. If one neglects it or gives it a chance, it will grow more and more powerful and will become victorious. Although it is not factual, it is very strong. It covers the constitutional position of the soul. O King, please try to conquer this mind by the weapon of service to the lotus feet of the spiritual master and of the Supreme Personality of Godhead. Do this with great care.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            There is one easy weapon with which the mind can be conquered—neglect. The mind is always telling us to do this or that; therefore we should be very expert in disobeying the mind’s orders. Gradually the mind should be trained to obey the orders of the soul. It is not that one should obey the orders of the mind. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura used to say that to control the mind one should beat it with shoes many times just after awakening and again before going to sleep. In this way one can control the mind. This is the instruction of all the <span class="Italic">śāstras.</span> If one does not do so, one is doomed to follow the dictations of the mind. Another bona fide process is to abide strictly by the orders of the spiritual master and engage in the Lord’s service. Then the mind will be automatically controlled. Śrī Caitanya Mahāprabhu has instructed Śrīla Rūpa Gosvāmī:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahmāṇḍa bhramite kona bhāgyavān jīva<br>guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            When one receives the seed of devotional service by the mercy of the <span class="Italic">guru</span> and Kṛṣṇa, the Supreme Personality of Godhead, one’s real life begins. If one abides by the orders of the spiritual master, by the grace of Kṛṣṇa he is freed from service to the mind.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Eleventh Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “Jaḍa Bharata Instructs King Rahūgaṇa.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/11">https://prabhupadabooks.com/sb/5/11</a><!-- span.text_source_copied_date
+        | on 2023-02-05 15:49:14 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.10: The Discussion Between Jada Bharata and Maharaja Rahugana     Next: SB 5.12: Conversation Between Maharaja Rahugana and Jada Bharata</div>
+      </p>
+    </div>
+  </body>
+</html>

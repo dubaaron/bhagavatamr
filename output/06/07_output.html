@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.7, Indra Offends His Spiritual Master, Bṛhaspati.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Seven:<br>Indra Offends His Spiritual Master, Bṛhaspati.
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">As related in this chapter, Indra, the King of heaven, committed an offense at the feet of his spiritual master, Bṛhaspati. Bṛhaspati therefore left the demigods, who then had no priest. However, at the request of the demigods, Viśvarūpa, the son of the <span class="Italic">brāhmaṇa</span> Tvaṣṭā, became their priest.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Once upon a time, Indra, the King of the demigods, was sitting with his wife Śacīdevī and being praised by various demigods like the Siddhas, Cāraṇas and Gandharvas when Bṛhaspati, the spiritual master of the demigods, entered the assembly. Indra, being too absorbed in material opulence, forgot himself and did not respect Bṛhaspati, who thus became aware of Indra’s pride in his material opulence and immediately disappeared from the assembly to teach him a lesson. Indra became most repentant, understanding that because of his opulence he had forgotten to respect his spiritual master. He left the palace to beg pardon from his spiritual master, but could not find Bṛhaspati anywhere.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Because of his disrespectful behavior toward his spiritual master. Indra lost all his opulence and was conquered by the demons, who defeated the demigods in a great fight and occupied Indra’s throne. King Indra, along with the other demigods, later took shelter of Lord Brahmā. Understanding the situation, Lord Brahmā chastised the demigods for their offense to their spiritual master. Following Lord Brahmā’s orders, the demigods accepted Viśvarūpa, who was a <span class="Italic">brāhmaṇa</span> and the son of Tvaṣṭā, as their priest. Then they performed <span class="Italic">yajñas</span> under the priesthood of Viśvarūpa and were able to conquer the demons.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">57</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Parīkṣit inquired from Śukadeva Gosvāmī: O great sage, why did the spiritual master of the demigods, Bṛhaspati, reject the demigods, who were his own disciples? What offense did the demigods commit against their spiritual master? Please describe to me this incident.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura comments:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">saptame guruṇā tyaktair<br>devair daitya-parājitaiḥ<br>viśvarūpo gurutvena<br>vṛto brahmopadeśataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This Seventh Chapter describes how Bṛhaspati was offended by the demigods, how he left them and the demigods were defeated, and how the demigods, following the instructions of Lord Brahmā, accepted Viśvarūpa as the priest to perform their sacrifice.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2–8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: O King, once upon a time, the King of heaven, Indra, being extremely proud because of his great opulence of the three worlds, transgressed the law of Vedic etiquette. Seated on his throne, he was surrounded by the Maruts, Vasus, Rudras, Ādityas, Ṛbhus, Viśvadevas, Sādhyas, Aśvinī-kumāras, Siddhas, Cāraṇas and Gandharvas and by great saintly persons. Also surrounding him were the Vidyādharas, Apsarās, Kinnaras, Patagas [birds] and Uragas [snakes]. All of them were offering Indra their respects and services, and the Apsarās and Gandharvas were dancing and singing with very sweet musical instruments. Over Indra’s head was a white umbrella as effulgent as the full moon. Fanned by yak-tail whisks and served with all the paraphernalia of a great king, Indra was sitting with his wife, Śacīdevī, who occupied half the throne, when the great sage Bṛhaspati appeared in that assembly. Bṛhaspati, the best of the sages, was the spiritual master of Indra and the demigods and was respected by the demigods and demons alike. Nevertheless, although Indra saw his spiritual master before him, he did not rise from his own seat or offer a seat to his spiritual master, nor did Indra offer him a respectful welcome. Indra did nothing to show him respect.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bṛhaspati knew everything that would happen in the future. Seeing Indra’s transgression of etiquette, he completely understood that Indra was puffed up by his material opulence. Although able to curse Indra, he did not do so. Instead, he left the assembly and in silence returned to his home.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Indra, the King of heaven, could immediately understand his mistake. Realizing he had disrespected his spiritual master, he condemned himself in the presence of all the members of the assembly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas, what a regrettable deed I have committed because of my lack of intelligence and my pride in my material opulences. I failed to show respect to my spiritual master when he entered this assembly, and thus I have insulted him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">477</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although I am King of the demigods, who are situated in the mode of goodness, I was proud of a little opulence and polluted by false ego. Under the circumstances, who in this world would accept such riches at the risk of falling down ? Alas! I condemn my wealth and opulence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu prayed to the Supreme Personality of Godhead, <span class="Italic">na dhanaṁ na janaṁ na sundarīṁ kavitāṁ vā jagad-īśa kāmaye:</span> “O my Lord, I do not aspire for material opulence or wealth, nor do I want a great number of followers to accept me as their leader, nor do I want a very beautiful wife to please me.” <span class="Italic">Mama janmani janmanīśvare bhavatād bhaktir ahaitukī tvayi:</span> “I do not even want liberation. All I want, life after life, is to be a faithful servant of Your Lordship.” According to the laws of nature, when one is extremely opulent one becomes degraded, and this is true both individually and collectively. The demigods are situated in the mode of goodness, but sometimes even one who is situated in such an exalted position as King Indra, the king of all the demigods, falls down because of material opulence. We are now actually seeing this in America. The entire American nation has tried to advance in material opulence without striving to produce ideal human beings. The result is that Americans are now regretting the wholesale criminality of American society and are wondering how America has become so lawless and unmanageable. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.5.31), <span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇum:</span> persons who are unenlightened do not know the aim of life, which is to return home, back to Godhead. Therefore, both individually and collectively, they try to enjoy so-called material comforts, and they become addicted to wine and women. The men produced in such a society are less than fourth class. They are the unwanted population known as <span class="Italic">varṇa-saṅkara,</span> and as stated in <span class="Italic">Bhagavad-gītā,</span> an increase of <span class="Italic">varṇa-saṅkara</span> population creates a hellish society. This is the society in which Americans now find themselves.
+          </p>
+          <p>
+            Fortunately, however, the Hare Kṛṣṇa movement has come to America, and many fortunate young men are giving serious attention to this movement, which is creating ideal men of first-class character, men who completely refrain from meat-eating, illicit sex, intoxication and gambling. If the American people are serious about curbing the degraded criminal life of their nation, they must take to the Kṛṣṇa consciousness movement and try to create the kind of human society advised in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">cātur-varṇyaṁ mayā sṛṣṭaṁ guṇa-karma-vibhāgaśaḥ [Bg. </span>4.13]). They must divide their society into first-class men, second-class men, third-class men and fourth-class men. Since they are now creating only men who are less than fourth class, how can they avoid the dangers of a criminal society? Long, long ago, Lord Indra regretted his disrespect to his spiritual master, Bṛhaspati. Similarly, it is advised that the American people regret their mistaken advancement in civilization. They should take advice from the spiritual master, the representative of Kṛṣṇa. If they do so, they will be happy, and theirs will be an ideal nation to lead the entire world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">336</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If a person says, “One who is situated on the exalted throne of a king should not stand up to show respect to another king or a brāhmaṇa,” it is to be understood that he does not know the superior religious principles.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says in this regard that when a president or king is sitting on his throne, he does not need to show respect to everyone who comes within his assembly, but he must show respect to superiors like his spiritual master, <span class="Italic">brāhmaṇas</span> and Vaiṣṇavas. There are many examples of how he should act. When Lord Kṛṣṇa was sitting on His throne and Nārada fortunately entered His assembly, even Lord Kṛṣṇa immediately stood up with His officers and ministers to offer respectful obeisances to Nārada. Nārada knew that Kṛṣṇa is the Supreme Personality of Godhead, and Kṛṣṇa knew that Nārada was His devotee, but although Kṛṣṇa is the Supreme Lord and Nārada is the Lord’s devotee, the Lord observed the religious etiquette. Since Nārada was a <span class="Italic">brahmacārī,</span> a <span class="Italic">brāhmaṇa</span> and an exalted devotee, even Kṛṣṇa, while acting as a king, offered His respectful obeisances unto Nārada. Such is the conduct visible in the Vedic civilization. A civilization in which the people do not know how the representative of Nārada and Kṛṣṇa should be respected, how society should be formed and how one should advance in Kṛṣṇa consciousness—a society concerned only with manufacturing new cars and new skyscrapers every year and then breaking them to pieces and making new ones—may be technologically advanced, but it is not a human civilization. A human civilization is advanced when its people follow the <span class="Italic">cātur-varṇya</span> system, the system of four orders of life. There must be ideal, first-class men to act as advisors, second-class men to act as administrators, third-class men to produce food and protect cows, and fourth-class men who obey the three higher classes of society. One who does not follow the standard system of society should be considered a fifth-class man. A society without Vedic laws and regulations will not be very helpful to humanity. As stated in this verse, <span class="Italic">dharmaṁ te na paraṁ viduḥ:</span> such a society does not know the aim of life and the highest principle of religion.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">418</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Leaders who have fallen into ignorance and who mislead people by directing them to the path of destruction [as described in the previous verse] are, in effect, boarding a stone boat, and so too are those who blindly follow them. A stone boat would be unable to float and would sink in the water with its passengers. Similarly, those who mislead people go to hell, and their followers go with them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            As stated in the Vedic literature (<span class="Ref_Italic">Bhāg.</span> 11.20.17):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nṛ-deham ādyaṁ sulabhaṁ sudurlabhaṁ<br>plavaṁ sukalpaṁ guru-karṇa-dhāram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            We, the conditioned souls, have fallen in the ocean of nescience, but the human body fortunately provides us a good opportunity to cross the ocean because the human body is like a very good boat. When directed by a spiritual master acting as the captain, the boat can very easily cross the ocean. Furthermore, the boat is helped across by favorable winds, which are the instructions of Vedic knowledge. If one does not take advantage of all these facilities to cross the ocean of nescience, he is certainly committing suicide.
+          </p>
+          <p>
+            One who boards a boat made of stone is doomed. To be elevated to the stage of perfection, humanity must first give up false leaders who present boats of stone. All of human society is in such a dangerous position that to be rescued it must abide by the standard instructions of the <span class="Italic">Vedas.</span> The cream of these instructions appears in the form of <span class="Italic">Bhagavad-gītā.</span> One should not take shelter of any other instructions, for <span class="Italic">Bhagavad-gītā</span> gives direct instructions on how to fulfill the aim of human life. Lord Śrī Kṛṣṇa therefore says, <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> [Bg. 18.66] “Give up all other processes of religion and simply surrender to Me.” Even if one does not accept Lord Kṛṣṇa as the Supreme Personality of Godhead, His instructions are so exalted and beneficial for humanity that if one follows His instructions one will be saved. Otherwise one will be cheated by unauthorized meditation and gymnastic methods of <span class="Italic">yoga.</span> Thus one will board a boat of stone. which will sink and drown all its passengers. Unfortunately. although the American people are extremely eager to get out of materialistic chaos, they are sometimes found to patronize the makers of stone boats. That will not help them. They must take the proper boat offered by Kṛṣṇa in the form of the Kṛṣṇa consciousness movement. Then they will be easily saved. In this regard Śrīla Viśvanātha Cakravartī Ṭhākura comments: <span class="Italic">aśmamayaḥ plavo yeṣāṁ te yathā majjantaṁ plavam anumajjanti tatheti rāja-nīty-upadeṣṭṛṣu sva-sabhyeṣu kopo vyañjitaḥ.</span> If society is guided by political diplomacy, with one nation maneuvering against another, it will certainly sink like a stone boat. political maneuvering and diplomacy will not save human society. People must take to Kṛṣṇa consciousness to understand the aim of life, to understand God. and to fulfill the human mission.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">295</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Indra said: Therefore with great frankness and without duplicity I shall now bow my head at the lotus feet of Bṛhaspati, the spiritual master of the demigods. Because he is in the mode of goodness, he is fully aware of all knowledge and is the best of the brāhmaṇas. Now I shall touch his lotus feet and offer my obeisances unto him to try to satisfy him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Coming to his senses, King Indra realized that he was not a very sincere disciple of his spiritual master, Bṛhaspati. Therefore he decided that henceforward he would be <span class="Italic">niśaṭha,</span> nonduplicitous. <span class="Italic">Niśaṭhaḥ śīrṣṇa-tac-caraṇaṁ spṛśan:</span> he decided to touch his head to the feet of his spiritual master. From this example, we should learn this principle enunciated by Viśvanātha Cakravartī Ṭhākura:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya prasādād bhagavat-prasādo<br>yasyāprasādān na gatiḥ kuto ’pi<span class="Italic"> </span>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By the mercy of the spiritual master one is benedicted by the mercy of Kṛṣṇa. Without the grace of the spiritual master, one cannot make any advancement.” A disciple should never be a hypocrite or be unfaithful to his spiritual master. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.17.27), the spiritual master is also called <span class="Italic">ācārya.</span> <span class="Italic">Ācāryaṁ māṁ vijānīyān:</span> the Supreme Personality of Godhead says that one should respect the spiritual master, accepting him as the Lord Himself. <span class="Italic">Nāvamanyeta karhicit:</span> one should not disrespect the <span class="Italic">ācārya</span> at any time. <span class="Italic">Na martya-buddhyāsūyeta:</span> one should never think the <span class="Italic">ācārya</span> an ordinary person. Familiarity sometimes breeds contempt, but one should be very careful in one’s dealings with the <span class="Italic">ācārya.</span> <span class="Italic">Agādha-dhiṣaṇaṁ dvijam:</span> <span class="Italic">the ācārya</span> is a perfect <span class="Italic">brāhmaṇa</span> and has unlimited intelligence in guiding the activities of his disciple. Therefore Kṛṣṇa advises in <span class="Ref_Italic">Bhagavad-gītā</span> (4.34):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tad viddhi praṇipātena<br>paripraśnena sevayā<br>upadekṣyanti te jñānaṁ<br>jñāninas tattva-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service unto him. The self-realized soul can impart knowledge unto you because he has seen the truth.” One should fully surrender unto the spiritual master. and with service (<span class="Italic">sevayā</span>) one should approach him for further spiritual enlightenment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While Indra, the King of the demigods, thought in this way and repented in his own assembly, Bṛhaspati, the most powerful spiritual master, understood his mind. Thus he became invisible to Indra and left home, for Bṛhaspati was spiritually more powerful than King Indra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although Indra searched vigorously with the assistance of the other demigods, he could not find Bṛhaspati. Then Indra thought, “Alas, my spiritual master has become dissatisfied with me, and now I have no means of achieving good fortune.” Although Indra was surrounded by demigods, he could not find peace of mind.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Hearing of the pitiable condition of King Indra, the demons, following the instructions of their guru, Śukrācārya, equipped themselves with weapons and declared war against the demigods.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods’ heads, thighs and arms and the other parts of their bodies were injured by the sharp arrows of the demons. The demigods, headed by Indra, saw no other course than to immediately approach Lord Brahmā with bowed heads for shelter and proper instruction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the most powerful Lord Brahmā saw the demigods coming toward him, their bodies gravely injured by the arrows of the demons, he pacified them by his great causeless mercy and spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">255</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā said: O best of the demigods, unfortunately, because of madness resulting from your material opulence, you failed to receive Bṛhaspati properly when he came to your assembly. Because he is aware of the Supreme Brahman and fully in control of his senses, he is the best of the brāhmaṇas. Therefore it is very astonishing that you have acted impudently toward him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Lord Brahmā recognized the brahminical qualifications of Bṛhaspati, who was the spiritual master of the demigods because of his awareness of the Supreme Brahman. Bṛhaspati was very much in control of his senses and mind, and therefore he was a most qualified <span class="Italic">brāhmaṇa.</span> Lord Brahmā chastised the demigods for not properly respecting this <span class="Italic">brāhmaṇa,</span> who was their <span class="Italic">guru.</span> Lord Brahmā wanted to impress upon the demigods that one’s <span class="Italic">guru</span> should not be disrespected under any circumstances. When Bṛhaspati entered the assembly of the demigods, they and their king, Indra, took him for granted. Since he came every day, they thought, they did not need to show him special respect. As it is said, familiarity breeds contempt. Being very much displeased, Bṛhaspati immediately left Indra’s palace. Thus all the demigods, headed by Indra, became offenders at the lotus feet of Bṛhaspati, and Lord Brahmā, being aware of this, condemned their neglect. In a song we sing every day, Narottama dāsa Ṭhākura says, <span class="Italic">cakṣu-dāna dila yei, janme janme prabhu sei:</span> the <span class="Italic">guru</span> gives spiritual insight to the disciple, and therefore the <span class="Italic">guru</span> should be considered his master, life after life. Under no circumstances should the <span class="Italic">guru</span> be disrespected, but the demigods, being puffed up by their material possessions, were disrespectful to their <span class="Italic">guru.</span> Therefore <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.17.27) advises, <span class="Italic">ācāryaṁ māṁ vijānīyān nāvamanyeta karhicit/ na martya-buddhyāsūyeta:</span> the <span class="Italic">ācārya</span> should always be offered respectful obeisances; one should never envy the <span class="Italic">ācārya,</span> considering him an ordinary human being.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">88</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of your misbehavior toward Bṛhaspati, you have been defeated by the demons. My dear demigods, since the demons were weak, having been defeated by you several times, how else could you, who were so advanced in opulence, be defeated by them?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The <span class="Italic">devas</span> are celebrated for fighting with the <span class="Italic">asuras</span> perpetually. In such fights the <span class="Italic">asuras</span> were always defeated, but this time the demigods were defeated. Why? The reason, as stated here, was that they had offended their spiritual master. Their impudent disrespect of their spiritual master was the cause of their defeat by the demons. As stated in the <span class="Italic">śāstras,</span> when one disrespects a respectable superior, one loses his longevity and the results of his pious activities, and in this way one is degraded.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">187</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Indra, your enemies, the demons, were extremely weak because of their disrespect toward Śukrācārya, but since they have now worshiped Śukrācārya with great devotion, they have again become powerful. By their devotion to Śukrācārya, they have increased their strength so much that now they are even able to easily seize my abode from me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            Lord Brahmā wanted to point out to the demigods that by the strength of the <span class="Italic">guru</span> one can become most powerful within this world, and by the displeasure of the <span class="Italic">guru</span> one can lose everything. This is confirmed by the song of Viśvanātha Cakravartī Ṭhākura:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya prasādād bhagavat-prasādo<br>yasyāprasādān na gatiḥ kuto ’pi<span class="Italic"> </span>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By the mercy of the spiritual master one is benedicted by the mercy of Kṛṣṇa. Without the grace of the spiritual master, one cannot make any advancement.” Although the demons are insignificant in comparison to Lord Brahmā, because of the strength of their <span class="Italic">guru</span> they were so powerful that they could even seize Brahmaloka from Lord Brahmā. We therefore pray to the spiritual master:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mūkaṁ karoti vācālaṁ<br>paṅguṁ laṅghayate girim<br>yat-kṛpā tam ahaṁ vande<br>śrī-guruṁ dīna-tāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            By the mercy of the <span class="Italic">guru,</span> even a dumb man can become the greatest orator, and even a lame man can cross mountains. As advised by Lord Brahmā, one should remember this śāstric injunction if one desires success in his life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">147</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of their firm determination to follow the instructions of Śukrācārya, his disciples, the demons, are now unconcerned about the demigods. In fact, kings or others who have determined faith in the mercy of brāhmaṇas, cows and the Supreme Personality of Godhead, Kṛṣṇa, and who always worship these three are always strong in their position.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            From the instructions of Lord Brahmā it is understood that everyone should very faithfully worship the <span class="Italic">brāhmaṇas,</span> the Supreme Personality of Godhead and the cows. The Supreme Personality of Godhead is <span class="Italic">go-brāhmaṇa-hitāya ca:</span> He is always very kind to cows and <span class="Italic">brāhmaṇas.</span> Therefore one who worships Govinda must satisfy Him by worshiping the <span class="Italic">brāhmaṇas</span> and cows. If a government worships the <span class="Italic">brāhmaṇas,</span> the cows and Kṛṣṇa, Govinda, it is never defeated anywhere; otherwise it must always be defeated and condemned everywhere. At the present moment, all over the world, governments have no respect for <span class="Italic">brāhmaṇas,</span> cows and Govinda, and consequently there are chaotic conditions all over the world. In summary, although the demigods were very powerful in material opulence, the demons defeated them in battle because the demigods had behaved disrespectfully toward a <span class="Italic">brāhmaṇa,</span> Bṛhaspati, who was their spiritual master.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">27</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O demigods, I instruct you to approach Viśvarūpa, the son of Tvaṣṭā, and accept him as your guru. He is a pure and very powerful brāhmaṇa undergoing austerity and penances. Pleased by your worship, he will fulfill your desires, provided that you tolerate his being inclined to side with the demons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Lord Brahmā advised the demigods to accept the son of Tvaṣṭā as their spiritual master although he was always inclined toward the benefit of the <span class="Italic">asuras.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī continued: Thus advised by Lord Brahmā and relieved of their anxiety, all the demigods went to the sage Viśvarūpa, the son of Tvaṣṭā. My dear King, they embraced him and spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods said: Beloved Viśvarūpa, may there be all good fortune for you. We, the demigods, have come to your āśrama as your guests. Please try to fulfill our desires according to the time, since we are on the level of your parents.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O brāhmaṇa, the highest duty of a son, even though he has sons of his own, is to serve his parents, and what to speak of a son who is a brahmacārī?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29–30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">80</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ācārya, the spiritual master who teaches all the Vedic knowledge and gives initiation by offering the sacred thread, is the personification of all the Vedas. Similarly, a father personifies Lord Brahmā; a brother, King Indra; a mother, the planet earth; and a sister, mercy. A guest personifies religious principles, an invited guest personifies the demigod Agni, and all living entities personify Lord Viṣṇu, the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            According to the moral instructions of Cāṇakya Paṇḍita, <span class="Italic">ātmavat sarva-bhūteṣu:</span> one should observe all living entities to be on the same level as oneself. This means that no one should be neglected as inferior; because Paramātmā is seated in everyone’s body, everyone should be respected as a temple of the Supreme Personality of Godhead. This verse describes the different ways in which one should respect a <span class="Italic">guru,</span> a father, a brother, a sister, a guest and so on.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Dear son, we have been defeated by our enemies, and therefore we are very much aggrieved. Please mercifully fulfill our desires by relieving our distress through the strength of your austerities. Please fulfill our prayers.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">36</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since you are completely aware of the Supreme Brahman, you are a perfect brāhmaṇa, and therefore you are the spiritual master of all orders of life. We accept you as our spiritual master and director so that by the power of your austerity we may easily defeat the enemies who have conquered us.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            One must approach a particular type of <span class="Italic">guru</span> to execute a particular type of duty. Therefore although Viśvarūpa was inferior to the demigods, the demigods accepted him as their <span class="Italic">guru</span> to conquer the demons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">242</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods continued: Do not fear criticism for being younger than us. Such etiquette does not apply in regard to Vedic mantras. Except in relationship to Vedic mantras, seniority is determined by age, but one may offer respectful obeisances even to a younger person who is advanced in chanting Vedic mantras. Therefore although you are junior in relationship to us, you may become our priest without hesitation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            It is said, <span class="Italic">vṛddhatvaṁ vayasā vinā:</span> one may be senior without being advanced in age. Even if one is not old, one gains seniority if he is senior in knowledge. Viśvarūpa was junior in relationship to the demigods because he was their nephew, but the demigods wanted to accept him as their priest, and therefore he would have to accept obeisances from them. The demigods explained that this should not be a cause for hesitation; he could become their priest because he was advanced in Vedic knowledge. Similarly. Cāṇakya Paṇḍita advises, <span class="Italic">nīcād apy uttamaṁ jñānam:</span> one may accept education from a member of a lower social order. The <span class="Italic">brāhmaṇas,</span> the members of the most elevated <span class="Italic">varṇa,</span> are teachers, but a person in a lower family, such as a family of <span class="Italic">kṣatriyas, vaiśyas</span> or even <span class="Italic">śūdras,</span> may be accepted as a teacher if he has knowledge. Śrī Caitanya Mahāprabhu approved of this when He expressed this opinion before Rāmānanda Rāya (Cc. <span class="Ref_Italic">Madhya</span> 8.128):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kibā vipra, kibā nyāsī, śūdra kene naya<br>yei kṛṣṇa-tattva-vettā, sei ’guru’ haya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            It does not matter whether one is a <span class="Italic">brāhmaṇa, śūdra, gṛhastha</span> or <span class="Italic">sannyāsī.</span> These are all material designations. A spiritually advanced person has nothing to do with such designations. Therefore, if one is advanced in the science of Kṛṣṇa consciousness, regardless of his position in human society, he may become a spiritual master.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: When all the demigods requested the great Viśvarūpa to be their priest, Viśvarūpa, who was advanced in austerities, was very pleased. He replied to them as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">112</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Viśvarūpa said: O demigods, although the acceptance of priesthood is decried as causing the loss of previously acquired brahminical power, how can someone like me refuse to accept your personal request? You are all exalted commanders of the entire universe. I am your disciple and must take many lessons from you. Therefore I cannot refuse you. I must agree for my own benefit.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            The professions of a qualified <span class="Italic">brāhmaṇa</span> are <span class="Italic">paṭhana, pāṭhana, yajana, yājana, dāna</span> and <span class="Italic">pratigraha.</span> The words <span class="Italic">yajana</span> and <span class="Italic">yājana</span> mean that a <span class="Italic">brāhmaṇa</span> becomes the priest of the populace for the sake of their elevation. One who accepts the post of spiritual master neutralizes the sinful reactions of the <span class="Italic">yajamāna,</span> the one on whose behalf he performs <span class="Italic">yajña.</span> Thus the results of the pious acts previously performed by the priest or spiritual master are diminished. Therefore priesthood is not accepted by learned <span class="Italic">brāhmaṇas.</span> Nevertheless, the greatly learned <span class="Italic">brāhmaṇa</span> Viśvarūpa became the priest of the demigods because of his profound respect for them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">222</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O exalted governors of various planets, the true brāhmaṇa, who has no material possessions, maintains himself by the profession of accepting śiloñchana. In other words, he picks up grains left in the field and on the ground in the wholesale marketplace. By this means, householder brāhmaṇas who actually abide by the principles of austerity and penance maintain themselves and their families and perform all necessary pious activities. A brāhmaṇa who desires to achieve happiness by gaining wealth through professional priesthood must certainly have a very low mind. How shall I accept such priesthood?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            A first-class <span class="Italic">brāhmaṇa</span> does not accept any rewards from his disciples or <span class="Italic">yajamānas.</span> Practicing austerities and penances, he instead goes to the agricultural field and collects food grains left by the agriculturalists to be collected by <span class="Italic">brāhmaṇas.</span> Similarly, such <span class="Italic">brāhmaṇas</span> go to marketplaces where grains are purchased and sold wholesale, and there they collect grains left by the merchants. In this way, such exalted <span class="Italic">brāhmaṇas</span> maintain their bodies and families. Such priests never demand anything from their disciples to live in opulence, imitating <span class="Italic">kṣatriyas</span> or <span class="Italic">vaiśyas.</span> In other words, a pure <span class="Italic">brāhmaṇa</span> voluntarily accepts a life of poverty and lives in complete dependence on the mercy of the Lord. Not very many years ago, a <span class="Italic">brāhmaṇa</span> in Kṛṣṇanagara, near Navadvīpa, was offered some help from the local Zamindar, Vraja Kṛṣṇacandra. The <span class="Italic">brāhmaṇa</span> refused to accept the help. He said that since he was very happy in his householder life, taking rice given by his disciples and cooking vegetables of tamarind leaves, there was no question of taking help from the Zamindar. The conclusion is that although a <span class="Italic">brāhmaṇa</span> may receive much opulence from his disciples, he should not utilize the rewards of his priesthood for his personal benefit; he must use them for the service of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All of you are my superiors. Therefore although accepting priesthood is sometimes reproachable, I cannot refuse even a small request from you. I agree to be your priest. I shall fulfill your request by dedicating my life and possessions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">140</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: O King, after making this promise to the demigods, the exalted Viśvarūpa, surrounded by the demigods, performed the necessary priestly activities with great enthusiasm and attention.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            The word <span class="Italic">samādhinā</span> is very important. <span class="Italic">Samādhi</span> means complete absorption with an undiverted mind. Viśvarūpa, who was a most learned <span class="Italic">brāhmaṇa,</span> not only accepted the request of the demigods, but took their request seriously and performed the activities of priesthood with an undiverted mind. In other words, he accepted the priesthood not for material gain, but to profit the demigods. Such is the duty of a priest. The word <span class="Italic">puraḥ</span> means “family,” and <span class="Italic">hita</span> means “benefit.” Thus the word <span class="Italic">purohita</span> indicates that the priest is the well-wisher of the family. Another meaning of the word <span class="Italic">puraḥ</span> is “first.” A priest’s first duty is to see that his disciples benefit spiritually and materially by all means. Then he is satisfied. A priest should never be interested in performing Vedic rituals for his personal benefit.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">328</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The opulence of the demons, who are generally known as the enemies of the demigods, was protected by the talents and tactics of Śukrācārya, but Viśvarūpa, who was most powerful, composed a protective prayer known as the Nārāyaṇa-kavaca. By this intelligent mantra, he took away the opulence of the demons and gave it to Mahendra, the King of heaven.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            The distinction between the demigods (<span class="Italic">devas</span>) and demons (<span class="Italic">asuras</span>) is that the demigods are all devotees of Lord Viṣṇu whereas the demons are devotees of demigods like Lord Śiva, Goddess Kālī and Goddess Durgā. Sometimes the demons are also devotees of Lord Brahmā. For example, Hiraṇyakaśipu was a devotee of Lord Brahmā, Rāvaṇa was a devotee of Lord Śiva, and Mahiṣāsura was a devotee of Goddess Durgā. The demigods are devotees of Lord Viṣṇu (<span class="Italic">viṣṇu-bhaktaḥ smṛto daiva</span>), whereas the demons (<span class="Italic">āsuras tad-viparyayaḥ</span>) are always against the <span class="Italic">viṣṇu-bhaktas,</span> or Vaiṣṇavas. To oppose the Vaiṣṇavas, the demons become devotees of Lord Śiva, Lord Brahmā, Kālī, Durgā, and so on. In the days of yore, many long years ago, there was animosity between the <span class="Italic">devas</span> and the <span class="Italic">asuras,</span> and the same spirit still continues, for the devotees of Lord Śiva and Goddess Durgā are always envious of Vaiṣṇavas, who are devotees of Lord Viṣṇu. This strain between the devotees of Lord Śiva and Lord Viṣṇu has always existed. In the higher planetary systems, fights between the demons and the demigods continue for a long, long time.
+          </p>
+          <p>
+            Herein we see that Viśvarūpa made for the demigods a protective covering, saturated with a Viṣṇu <span class="Italic">mantra.</span> Sometimes the Viṣṇu <span class="Italic">mantra</span> is called Viṣṇu-jvara, and the Śiva <span class="Italic">mantra</span> is called Śiva-jvara. We find in the <span class="Italic">śāstras</span> that sometimes the Śiva-jvara and Viṣṇu-jvara are employed in the fights between the demons and the demigods.
+          </p>
+          <p>
+            The word <span class="Italic">sura-dviṣām,</span> which in this verse means “of the enemies of the demigods,” also refers to the atheists. <span class="Italic">Śrīmad-Bhāgavatam</span> elsewhere says that Lord Buddha appeared for the purpose of bewildering the demons or atheists. The Supreme Personality of Godhead always awards His benediction to devotees. The Lord Himself confirms this in <span class="Ref_Italic">Bhagavad-gītā</span> (9.31):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kaunteya pratijānīhi<br>na me bhaktaḥ praṇaśyati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Kuntī, declare it boldly that My devotee never perishes.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Viśvarūpa, who was most liberal, spoke to King Indra [Sahasrākṣa] the secret hymn that protected Indra and conquered the military power of the demons.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports to the Sixth Canto, Seventh Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “Indra Offends His Spiritual Master, Bṛhaspati.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/7">https://prabhupadabooks.com/sb/6/7</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:22:01 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.6: The Progeny of the Daughters of Daksa     Next: SB 6.8: The Narayana-kavaca Shield</div>
+      </p>
+    </div>
+  </body>
+</html>

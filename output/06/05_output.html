@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.5, Nārada Muni Cursed by Prajāpati Dakṣa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Five:<br>Nārada Muni Cursed by Prajāpati Dakṣa
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter relates how all the sons of Dakṣa were delivered from the clutches of the material energy by following the advice of Nārada, who was therefore cursed by Dakṣa.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Influenced by the external energy of Lord Viṣṇu, Prajāpati Dakṣa begot ten thousand sons in the womb of his wife, Pāñcajanī. These sons, who were all of the same character and mentality, were known as the Haryaśvas. Ordered by their father to create more and more population, the Haryaśvas went west to the place where the River Sindhu (now the Indus) meets the Arabian Sea. In those days this was the site of a holy lake named Nārāyaṇa-saras, where there were many saintly persons. The Haryaśvas began practicing austerities, penances and meditation, which are the engagements of the highly exalted renounced order of life. However, when Śrīla Nārada Muni saw these boys engaged in such commendable austerities simply for material creation, he thought it better to release them from this tendency. Nārada Muni described to the boys their ultimate goal of life and advised them not to become ordinary <span class="Italic">karmīs</span> to beget children. Thus all the sons of Dakṣa became enlightened and left, never to return.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Prajāpati Dakṣa, who was very sad at the loss of his sons, begot one thousand more sons in the womb of his wife, Pāñcajanī, and ordered them to increase progeny. These sons, who were named the Savalāśvas, also engaged in worshiping Lord Viṣṇu to beget children, but Nārada Muni convinced them to become mendicants and not beget children. Foiled twice in his attempts to increase population, Prajāpati Dakṣa became most angry at Nārada Muni and cursed him, saying that in the future he would not be able to stay anywhere. Since Nārada Muni, being fully qualified, was fixed in tolerance, he accepted Dakṣa’s curse.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī continued: Impelled by the illusory energy of Lord Viṣṇu, Prajāpati Dakṣa begot ten thousand sons in the womb of Pāñcajanī [Asiknī]. My dear King, these sons were called the Haryaśvas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, all the sons of Prajāpati Dakṣa were alike in being very gentle and obedient to the orders of their father. When their father ordered them to beget children, they all went in the western direction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the west, where the River Sindhu meets the sea, there is a great place of pilgrimage known as Nārāyaṇa-saras. Many sages and others advanced in spiritual consciousness live there.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4–5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In that holy place, the Haryaśvas began regularly touching the lake’s waters and bathing in them. Gradually becoming very much purified, they became inclined toward the activities of paramahaṁsas. Nevertheless, because their father had ordered them to increase the population, they performed severe austerities to fulfill his desires. One day, when the great sage Nārada saw those boys performing such fine austerities to increase the population, Nārada approached them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6–8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">264</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Nārada said: My dear Haryaśvas, you have not seen the extremities of the earth. There is a kingdom where only one man lives and where there is a hole from which, having entered, no one emerges. A woman there who is extremely unchaste adorns herself with various attractive dresses, and the man who lives there is her husband. In that kingdom, there is a river flowing in both directions, a wonderful home made of twenty-five materials, a swan that vibrates various sounds, and an automatically revolving object made of sharp razors and thunderbolts. You have not seen all this, and therefore you are inexperienced boys without advanced knowledge. How, then, will you create progeny?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Nārada Muni saw that the boys known as the Haryaśvas were already purified because of living in that holy place and were practically ready for liberation. Why then should they be encouraged to become entangled in family life, which is so dark that once having entered it one cannot leave it? Through this analogy, Nārada Muni asked them to consider why they should follow their father’s order to be entangled in family life. Indirectly, he asked them to find within the cores of their hearts the situation of the Supersoul, Lord Viṣṇu, for then they would truly be experienced. In other words, one who is too involved in his material environment and does not look within the core of his heart is increasingly entangled in the illusory energy. Nārada Muni’s purpose was to get the sons of Prajāpati Dakṣa to divert their attention toward spiritual realization instead of involving themselves in the ordinary but complicated affairs of propagation. The same advice was given by Prahlāda Mahārāja to his father (<span class="Ref_Italic">Bhāg.</span> 7.5.5):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tat sādhu manye ’sura-varya dehināṁ<br>sadā samudvigna-dhiyām asad-grahāt<br>hitvātma-pātaṁ gṛham andha-kūpaṁ<br>vanaṁ gato yad dharim āśrayeta</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            In the dark well of family life, one is always full of anxiety because of having accepted a temporary body. If one wants to free himself from this anxiety, one should immediately leave family life and take shelter of the Supreme Personality of Godhead in Vṛndāvana. Nārada Muni advised the Haryaśvas not to enter household life. Since they were already advanced in spiritual knowledge, why should they be entangled in that way?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas, your father is omniscient, but you do not know his actual order. Without knowing the actual purpose of your father, how will you create progeny?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Hearing these enigmatic words of Nārada Muni, the Haryaśvas considered them with their natural intelligence, without help from others.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">332</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [The Haryaśvas understood the meaning of Nārada’s words as follows.] The word “bhūḥ” [“the earth”] refers to the field of activities. The material body, which is a result of the living being’s actions, is his field of activities, and it gives him false designations. Since time immemorial, he has received various types of material bodies, which are the roots of bondage to the material world. If one foolishly engages in temporary fruitive activities and does not look toward the cessation of this bondage, what will be the benefit of his actions?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Nārada Muni spoke to the Haryaśvas, the sons of Prajāpati Dakṣa, about ten allegorical subjects—the king, the kingdom, the river, the house, the physical elements and so forth. After considering these by themselves, the Haryaśvas could understand that the living entity encaged in his body seeks happiness, but takes no interest in how to become free from his encagement. This is a very important verse, since all the living entities in the material world are very active, having obtained their particular types of bodies. A man works all day and night for sense gratification, and animals like hogs and dogs also work for sense gratification all day and night. Birds, beasts and all other conditioned living entities engage in various activities without knowledge of the soul encaged within the body. Especially in the human form of body, one’s duty is to act in such a way that he can release himself from his encagement, but without the instructions of Nārada or his representative in the disciplic succession, people blindly engage in bodily activities to enjoy <span class="Italic">māyā-sukha</span>—flickering, temporary happiness. They do not know how to become free from their material encagement. Ṛṣabhadeva therefore said that such activity is not at all good, since it encages the soul again and again in a body subjected to the threefold miseries of the material condition.
+          </p>
+          <p>
+            The Haryaśvas, the sons of Prajāpati Dakṣa, could immediately understand the purport of Nārada’s instructions. Our Kṛṣṇa consciousness movement is especially meant for such enlightenment. We are trying to enlighten humanity so that people may come to the understanding that they should work hard in <span class="Italic">tapasya</span> for self-realization and freedom from the continuous bondage of birth, death, old age and disease in one body after another. <span class="Italic">Māyā,</span> however, is very strong; she is expert in putting impediments in the way of this understanding. Therefore sometimes one comes to the Kṛṣṇa consciousness movement but again falls into the clutches of <span class="Italic">māyā,</span> not understanding the importance of this movement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">209</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had said that there is a kingdom where there is only one male. The Haryaśvas realized the purport of this statement.] The only enjoyer is the Supreme Personality of Godhead, who observes everything, everywhere. He is full of six opulences and fully independent of everyone else. He is never subject to the three modes of material nature, for He is always transcendental to this material creation. If the members of human society do not understand Him, the Supreme, through their advancement in knowledge and activities, but simply work very hard like cats and dogs all day and night for temporary happiness, what will be the benefit of their activities?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Nārada Muni had mentioned a kingdom where there is only one king with no competitor. The complete spiritual world, and specifically the cosmic manifestation, has only one proprietor or enjoyer—the Supreme Personality of Godhead, who is beyond this material manifestation. The Lord has therefore been described as <span class="Italic">turya,</span> existing on the fourth platform. He has also been described as <span class="Italic">abhava.</span> The word <span class="Italic">bhava,</span> which means “takes birth,” comes from the word <span class="Italic">bhū,</span> “to be.” As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (8.19), <span class="Italic">bhūtvā bhūtvā pralīyate:</span> the living entities in the material world must be repeatedly born and destroyed. The Supreme Personality of Godhead, however, is neither <span class="Italic">bhūtvā</span> nor <span class="Italic">pralīyate;</span> He is eternal. In other words, He is not obliged to take birth like human beings or animals, which repeatedly take birth and die because of ignorance of the soul. The Supreme Personality of Godhead, Kṛṣṇa, is not subjected to such changes of body, and one who thinks otherwise is considered a fool (<span class="Italic">avajānanti māṁ mūḍhā mānuṣīṁ tanum āśritam [Bg. </span>9.11]). Nārada Muni advises that human beings not waste their time simply jumping like cats and monkeys, without real benefit. The duty of the human being is to understand the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">313</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had described that there is a bila, or hole, from which, having entered, one does not return. The Haryaśvas understood the meaning of this allegory.] Hardly once has a person who has entered the lower planetary system called Pātāla been seen to return. Similarly, if one enters the Vaikuṇṭha-dhāma [pratyag-dhāma], he does not return to this material world. If there is such a place, from which, having gone, one does not return to the miserable material condition of life, what is the use of jumping like monkeys in the temporary material world and not seeing or understanding that place? What will be the profit?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (15.6), <span class="Italic">yad gatvā na nivartante tad dhāma paramaṁ mama:</span> there is a region from which, having gone, one does not return to the material world. This region has been repeatedly described. Elsewhere in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9), Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.”
+          </p>
+          <p>
+            If one can properly understand Kṛṣṇa, who has already been described as the Supreme King, he does not return here after giving up his material body. This fact has been described in this verse of <span class="Italic">Śrīmad-Bhāgavatam.</span> <span class="Italic">Pumān naivaiti yad gatvā:</span> he does not return to this material world, but returns home, back to Godhead, to live an eternally blissful life of knowledge. Why do people not care about this? What will be the benefit of taking birth again in this material world, sometimes as a human being, sometimes a demigod and sometimes a cat or dog? What is the benefit of wasting time in this way? Kṛṣṇa has very definitely asserted in <span class="Ref_Italic">Bhagavad-gītā</span> (8.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mām upetya punar janma<br>duḥkhālayam aśāśvatam<br>nāpnuvanti mahātmānaḥ<br>saṁsiddhiṁ paramāṁ gatāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “After attaining Me, the great souls, who are <span class="Italic">yogīs</span> in devotion, never return to this temporary world, which is full of miseries, because they have attained the highest perfection.” One’s real concern should be to free himself from the repetition of birth and death and attain the topmost perfection of life by living with the Supreme King in the spiritual world. In these verses the sons of Dakṣa repeatedly say, <span class="Italic">kim asat-karmabhir bhavet:</span> “What is the use of impermanent fruitive activities?”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">296</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had described a woman who is a professional prostitute. The Haryaśvas understood the identity of this woman.] Mixed with the mode of passion, the unsteady intelligence of every living entity is like a prostitute who changes dresses just to attract one’s attention. If one fully engages in temporary fruitive activities, not understanding how this is taking place, what does he actually gain?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            A woman who has no husband declares herself independent, which means that she becomes a prostitute. A prostitute generally dresses herself in various fashions intended to attract a man’s attention to the lower part of her body. Today it has become a much advertised fashion for a woman to go almost naked, covering the lower part of her body only slightly, in order to draw the attention of a man to her private parts for sexual enjoyment. The intelligence engaged to attract a man to the lower part of the body is the intelligence of a professional prostitute. Similarly, the intelligence of a living entity who does not turn his attention toward Kṛṣṇa or the Kṛṣṇa consciousness movement simply changes dresses like a prostitute. What is the benefit of such foolish intelligence? One should be intelligently conscious in such a way that he need no longer change from one body to another.
+          </p>
+          <p>
+            <span class="Italic">Karmīs</span> change their professions at any moment, but a Kṛṣṇa conscious person does not change his profession, for his only profession is to attract the attention of Kṛṣṇa by chanting the Hare Kṛṣṇa <span class="Italic">mantra</span> and living a very simple life, without following daily changes of fashion. In our Kṛṣṇa consciousness movement, fashionable persons are taught to adopt one fashion—the dress of a Vaiṣṇava with a shaved head and <span class="Italic">tilaka.</span> They are taught to be always clean in mind, dress and eating in order to be fixed in Kṛṣṇa consciousness. What is the use of changing one’s dress, sometimes wearing long hair and a long beard and sometimes dressing otherwise? This is not good. One should not waste his time in such frivolous activities. One should always be fixed in Kṛṣṇa consciousness and take the cure of devotional service with firm determination.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">371</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had also spoken of a man who is the husband of the prostitute. The Haryaśvas understood this as follows.] If one becomes the husband of a prostitute, he loses all independence. Similarly, if a living entity has polluted intelligence, he prolongs his materialistic life. Frustrated by material nature, he must follow the movements of the intelligence, which brings various conditions of happiness and distress. If one performs fruitive activities under such conditions, what will be the benefit?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Polluted intelligence has been compared to a prostitute. One who has not purified his intelligence is said to be controlled by that prostitute. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (2.41), <span class="Italic">vyavasāyātmikā buddhir ekeha kuru-nandana:</span> those who are actually serious are conducted by one kind of intelligence, namely, intelligence in Kṛṣṇa consciousness. <span class="Italic">Bahu-śākhā hy anantāś ca buddhayo ’vyavasāyinām:</span> one who is not fixed in proper intelligence discovers many modes of life. Thus involved in material activities, he is exposed to the different modes of material nature and subjected to varieties of so-called happiness and distress. If a man becomes the husband of a prostitute, he cannot be happy, and similarly one who follows the dictations of material intelligence and material consciousness will never be happy.
+          </p>
+          <p>
+            One must judiciously understand the activities of material nature. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.27):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself to be the doer of activities, which are in actuality carried out by nature.” Although one follows the dictations of material nature, he happily thinks himself the master or husband of material nature. Scientists, for example, try to be the masters of material nature, life after life, not caring to understand the Supreme Person, under whose direction everything within this material world is moving. Trying to be the masters of material nature, they are imitation gods who declare to the public that scientific advancement will one day be able to avoid the so-called control of God. In fact, however, the living being, unable to control the rulings of God, is forced to associate with the prostitute of polluted intelligence and accept various material bodies. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (13.22):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">puruṣaḥ prakṛti-stho hi<br>bhuṅkte prakṛti-jān guṇān<br>kāraṇaṁ guṇa-saṅgo ’sya<br>sad-asad-yoni-janmasu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The living entity in material nature thus follows the ways of life, enjoying the three modes of nature. This is due to his association with that material nature. Thus he meets with good and evil amongst various species.” If one fully engages in temporary fruitive activities and does not solve this real problem, what profit will he gain?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">263</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had said that there is a river flowing in both directions. The Haryaśvas understood the purport of this statement.] Material nature functions in two ways—by creation and dissolution. Thus the river of material nature flows both ways. A living entity who unknowingly falls in this river is submerged in its waves, and since the current is swifter near the banks of the river, he is unable to get out. What will be the benefit of performing fruitive activities in that river of māyā?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            One may be submerged in the waves of the river of <span class="Italic">māyā,</span> but one may also get free from the waves by coming to the banks of knowledge and austerity. Near these banks, however, the waves are very strong. If one does not understand how he is being tossed by the waves, but simply engages in temporary fruitive activities, what benefit will he derive?
+          </p>
+          <p>
+            In the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.44) there is this statement:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā<br>chāyeva yasya bhuvanāni bibharti durgā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The <span class="Italic">māyā-śakti,</span> Durgā, is in charge of <span class="Italic">sṛṣṭi-sthiti-pralaya,</span> creation and dissolution, and she acts under the direction of the Supreme Lord (<span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram [Bg. 9.10]</span>). When one falls in the river of nescience, he is always tossed here and there by the waves, but the same <span class="Italic">māyā</span> can also save him when be surrenders to Kṛṣṇa, or becomes Kṛṣṇa conscious. Kṛṣṇa consciousness is knowledge and austerity. A Kṛṣṇa conscious person takes knowledge from the Vedic literature, and at the same time he must practice austerities.
+          </p>
+          <p>
+            To attain freedom from material life, one must take to Kṛṣṇa consciousness. Otherwise, if one very busily engages in the so-called advancement of science, what benefit will he derive? If one is carried away by the waves of nature, what is the meaning of being a great scientist or philosopher? Mundane science and philosophy are also material creations. One must understand how <span class="Italic">māyā</span> works and how one can be released from the tossing waves of the river of nescience. That is one’s first duty.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">437</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had said that there is a house made of twenty-five elements. The Haryaśvas understood this analogy.] The Supreme Lord is the reservoir of the twenty-five elements, and as the Supreme Being, the conductor of cause and effect, He causes their manifestation. If one engages in temporary fruitive activities, not knowing that Supreme Person, what benefit will he derive?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Philosophers and scientists conduct scholarly research to find the original cause, but they should do so scientifically, not whimsically or through fantastic theories. The science of the original cause is explained in various Vedic literatures. <span class="Italic">Athāto brahma jijñāsā/janmādy asya yataḥ [SB 1.1.1].</span> The <span class="Italic">Vedānta-sūtra</span> explains that one should inquire about the Supreme Soul. Such inquiry about the Supreme is called <span class="Italic">brahma jijñāsā.</span> The Absolute Truth, <span class="Italic">tattva,</span> is explained in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vadanti tat tattva-vidas<br>tattvaṁ yaj jñānam advayam<br>brahmeti paramātmeti<br>bhagavān iti śabdyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Learned transcendentalists who know the Absolute Truth call this nondual substance Brahman, Paramātmā or Bhagavān.” The Absolute Truth appears to neophytes as impersonal Brahman and to advanced mystic <span class="Italic">yogīs</span> as Paramātmā, the Supersoul, but devotees, who are further advanced, understand the Absolute Truth as the Supreme Lord, Viṣṇu.
+          </p>
+          <p>
+            This material cosmic manifestation is an expansion of the energy of Lord Kṛṣṇa, or Lord Viṣṇu.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">eka-deśa-sthitasyāgner<br>jyotsnā vistāriṇī yathā<br>parasya brahmaṇaḥ śaktis<br>tathedam akhilaṁ jagat</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whatever we see in this world is but an expansion of various energies of the Supreme Personality of Godhead, who is like a fire that spreads illumination for a long distance although it is situated in one place.” (<span class="Italic">Viṣṇu Purāṇa</span>) The entire cosmic manifestation is an expansion of the Supreme Lord. Therefore if one does not conduct research to find the supreme cause, but instead falsely engages in frivolous, temporary activities, what is the use of demanding recognition as an important scientist or philosopher? If one does not know the ultimate cause, what is the use of his scientific and philosophical research?
+          </p>
+          <p>
+            The <span class="Italic">puruṣa,</span> the original person—Bhagavān, Viṣṇu—can be understood only by devotional service. <span class="Italic">Bhaktyā mām abhijānāti yāvān yaś cāsmi tattvataḥ: [Bg. </span>18.55] only by devotional service can one understand the Supreme Person, who is behind everything. One must try to understand that the material elements are the separated, inferior energy of the Lord and that the living entity is the Lord’s spiritual energy. Whatever we experience, including matter and the spirit soul, the living force, is but a combination of two energies of Lord Viṣṇu—the inferior energy and the superior energy. One should seriously study the facts concerning creation, maintenance and devastation, as well as the permanent place from which one never need return (<span class="Italic">yad gatvā na nivartante [Bg. 15.6]</span>). Human society should study this, but instead of culturing such knowledge, people are attracted to temporary happiness and sense gratification, culminating in bottomless, topless passion. There is no profit in such activities; one must engage himself in the Kṛṣṇa consciousness movement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">210</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had spoken of a swan. That swan is explained in this verse.] The Vedic literatures [śāstras] vividly describe how to understand the Supreme Lord, the source of all material and spiritual energy. Indeed, they elaborately explain these two energies. The swan [haṁsa] is one who discriminates between matter and spirit, who accepts the essence of everything, and who explains the means of bondage and the means of liberation. The words of scriptures consist of variegated vibrations. If a foolish rascal leaves aside the study of these śāstras to engage in temporary activities, what will be the result?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            The Kṛṣṇa consciousness movement is very eager to present Vedic literature in modern languages, especially Western languages such as English, French and German. The leaders of the Western world, the Americans and Europeans, have become the idols of modern civilization because the Western people are very sophisticated in temporary activities for the advancement of material civilization. A sane man, however, can see that all such grand activities, although perhaps very important for temporary life, have nothing to do with eternal life. The entire world is imitating the materialistic civilization of the West, and therefore the Kṛṣṇa consciousness movement is very much interested in giving the Western people knowledge by translating the original Sanskrit Vedic literatures into Western languages.
+          </p>
+          <p>
+            The word <span class="Italic">vivikta-padam</span> refers to the path of logical discourses concerning the aim of life. If one does not discuss that which is important in life, one is put into darkness and must struggle for existence. What, then, is the benefit of his advancement in knowledge? The people of the West are seeing their students becoming hippies, despite gorgeous arrangements for university education. The Kṛṣṇa consciousness movement, however, is trying to convert misguided, drug-addicted students to the service of Kṛṣṇa and engage them in the best welfare activities for human society.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">212</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had spoken of a physical object made of sharp blades and thunderbolts. The Haryaśvas understood this allegory as follows.] Eternal time moves very sharply, as if made of razors and thunderbolts. Uninterrupted and fully independent, it drives the activities of the entire world. If one does not try to study the eternal element of time, what benefit can he derive from performing temporary material activities?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            This verse explains the words <span class="Italic">kṣaura-pavyaṁ svayaṁ bhrami,</span> which especially refer to the orbit of eternal time. It is said that time and tide wait for no man. According to the moral instructions of the great politician Cāṇakya Paṇḍita:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">āyuṣaḥ kṣaṇa eko ’pi<br>na labhyaḥ svarṇa-koṭibhiḥ<br>na cen nirarthakaṁ nītiḥ<br>kā ca hānis tato ’dhikā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Even a moment of one’s lifetime could not be returned in exchange for millions of dollars. Therefore one should consider how much loss one suffers if he wastes even a moment of his life for nothing. Living like an animal, not understanding the goal of life, one foolishly thinks that there is no eternity and that his life span of fifty, sixty, or, at the most, one hundred years, is everything. This is the greatest foolishness. Time is eternal, and in the material world one passes through different phases of his eternal life. Time is compared herein to a sharp razor. A razor is meant to shave the hair from one’s face, but if not carefully handled, the razor will cause disaster. One is advised not to create a disaster by misusing his lifetime. One should be extremely careful to utilize the span of his life for spiritual realization, or Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1035</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Nārada Muni had asked how one could ignorantly defy one’s own father. The Haryaśvas understood the meaning of this question.] One must accept the original instructions of the śāstra. According to Vedic civilization, one is offered a sacred thread as a sign of second birth. One takes his second birth by dint of having received instructions in the śāstra from a bona fide spiritual master. Therefore, śāstra, scripture, is the real father. All the śāstras instruct that one should end his material way of life. If one does not know the purpose of the father’s orders, the śāstras, he is ignorant. The words of a material father who endeavors to engage his son in material activities are not the real instructions of the father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            <span class="Ref_Italic">Bhagavad-gītā</span> (16.7) says, <span class="Italic">pravṛttiṁ ca nivṛttiṁ ca janā na vidur āsurāḥ:</span> demons, who are less than human beings but are not called animals, do not know the meaning of <span class="Italic">pravṛtti</span> and <span class="Italic">nivṛtti,</span> work to be done and work not to be done. In the material world, every living entity has a desire to lord it over the material world as much as possible. This is called <span class="Italic">pravṛtti-mārga.</span> All the <span class="Italic">śāstras,</span> however, advise <span class="Italic">nivṛtti-mārga,</span> or release from the materialistic way of life. Apart from the <span class="Italic">śāstras</span> of the Vedic civilization, which is the oldest of the world, other <span class="Italic">śāstras</span> agree on this point. For example, in the Buddhist <span class="Italic">śāstras</span> Lord Buddha advises that one achieve <span class="Italic">nirvāṇa</span> by giving up the materialistic way of life. In the Bible, which is also <span class="Italic">śāstra,</span> one will find the same advice: one should cease materialistic life and return to the kingdom of God. In any <span class="Italic">śāstra</span> one may examine, especially the Vedic <span class="Italic">śāstra,</span> the same advice is given: one should give up his materialistic life and return to his original, spiritual life. Śaṅkarācārya also propounds the same conclusion. <span class="Italic">Brahma satyaṁ jagan mithyā:</span> this material world or materialistic life is simply illusion, and therefore one should stop his illusory activities and come to the platform of Brahman.
+          </p>
+          <p>
+            The word <span class="Italic">śāstra</span> refers to the scriptures, particularly the Vedic books of knowledge. The <span class="Italic">Vedas—Sāma, Yajur, Ṛg</span> and <span class="Italic">Atharva</span>—and any other books deriving knowledge from these <span class="Italic">Vedas</span> are considered Vedic literatures. <span class="Italic">Bhagavad-gītā</span> is the essence of all Vedic knowledge, and therefore it is the scripture whose instructions should be especially accepted. In this essence of all <span class="Italic">śāstras,</span> Kṛṣṇa personally advises that one give up all other duties and surrender unto Him (<span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]).
+          </p>
+          <p>
+            One should be initiated into following the principles of <span class="Italic">śāstra.</span> In offering initiation, our Kṛṣṇa consciousness movement asks one to come to the conclusion of <span class="Italic">śāstra</span> by taking the advice of the supreme speaker of the <span class="Italic">śāstra,</span> Kṛṣṇa, forgetting the principles of the materialistic way of life. Therefore the principles we advise are no illicit sex, no intoxication, no gambling and no meat-eating. These four types of engagement will enable an intelligent person to get free from the materialistic life and return home, back to Godhead.
+          </p>
+          <p>
+            In regard to the instructions of the father and mother, it may be said that every living entity, including even the insignificant cats, dogs and serpents, takes birth of a father and mother. Therefore, getting a material father and mother is not a problem. In every form of life, birth after birth, the living entity gets a father and mother. In human society, however, if one is satisfied with his material father and mother and their instructions and does not make further progress by accepting a spiritual master and being educated in the <span class="Italic">śāstras,</span> he certainly remains in darkness. The material father and mother are important only if they are interested in educating their son to become free from the clutches of death. As instructed by Ṛṣabhadeva (<span class="Ref_Italic">Bhāg.</span> 5.5.18): <span class="Italic">pitā na sa syāj jananī na sā syāt/ na mocayed yaḥ samupeta-mṛtyum.</span> One should not strive to become a mother or father if one cannot save one’s dependent son from the impending danger of death. A parent who does not know how to save his son has no value because such fathers and mothers may be had in any form of life, even among the cats, dogs and so on. Only a father and mother who can elevate their son to the spiritual platform are bona fide parents. Therefore according to the Vedic system it is said, <span class="Italic">janmanā jāyate śūdraḥ:</span> one is born of a material father and mother as a <span class="Italic">śūdra.</span> The purpose of life, however, is to become a <span class="Italic">brāhmaṇa,</span> a first-class man.
+          </p>
+          <p>
+            A first-class intelligent man is called a <span class="Italic">brāhmaṇa</span> because he knows the Supreme Brahman, the Absolute Truth. According to the Vedic instructions, <span class="Italic">tad-vijñānārthaṁ sa gurum evābhigacchet: </span><span class="Ref_Italic">[MU</span> <popup><div class="Verse">tad-vijñānārthaṁ sa gurum evābhigacchet<br>samit-pāṇiḥ śrotriyaṁ brahma-niṣṭham</div></popup>
+          </p>
+          <p>
+            “To understand these things properly, one must humbly approach, with firewood in hand, a spiritual master who is learned in the <i>Vedas</i> and firmly devoted to the Absolute Truth.” <br><span class="Ref_Italic">[Muṇḍaka Upaniṣad</span> 1.2.12]
+          </p>
+          <p>
+            <lt>1.2.12] to know this science, one must approach a bona fide <span class="Italic">guru,</span> a spiritual master who will initiate the disciple with the sacred thread so that he may understand the Vedic knowledge. <span class="Italic">Janmanā jāyate śūdraḥ saṁskārād dhi bhaved dvijaḥ.</span> Becoming a <span class="Italic">brāhmaṇa</span> through the endeavor of a bona fide spiritual master is called <span class="Italic">saṁskāra.</span> After initiation, one is engaged in study of the <span class="Italic">śāstra,</span> which teaches the student how to gain release from materialistic life and return home, back to Godhead.</lt>
+          </p>
+          <p>
+            The Kṛṣṇa consciousness movement is teaching this higher knowledge of retiring from materialistic life to return to Godhead, but unfortunately many parents are not very satisfied with this movement. Aside from the parents of our students, many businessmen are also dissatisfied because we teach our students to abandon intoxication, meat-eating, illicit sex and gambling. If the Kṛṣṇa consciousness movement spreads, the so-called businessmen will have to close their slaughterhouses, breweries and cigarette factories. Therefore they are also very much afraid. However, we have no alternative than to teach our disciples to free themselves from materialistic life. We must instruct them in the opposite of material life to save them from the repetition of birth and death.
+          </p>
+          <p>
+            Nārada Muni, therefore, advised the Haryaśvas, the sons of Prajāpati Dakṣa, that instead of begetting progeny, it would be better to leave and achieve the perfection of spiritual understanding according to the instructions of the <span class="Italic">śāstras.</span> The importance of the <span class="Italic">śāstras</span> is mentioned in <span class="Ref_Italic">Bhagavad-gītā</span> (16.23):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaḥ śāstra-vidhim utsṛjya<br>vartate kāma-kārataḥ<br>na sa siddhim avāpnoti<br>na sukhaṁ na parāṁ gatim</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who disregards the injunctions of the <span class="Italic">śāstras</span> and acts whimsically, as he likes, never achieves the perfection of life, not to speak of happiness. Nor does he return home to the spiritual world.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">327</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, after hearing the instructions of Nārada, the Haryaśvas, the sons of Prajāpati Dakṣa, were firmly convinced. They all believed in his instructions and reached the same conclusion. Having accepted him as their spiritual master, they circumambulated that great sage and followed the path by which one never returns to this world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            From this verse we can understand the meaning of initiation and the duties of a disciple and spiritual master. The spiritual master never instructs his disciple, “Take a <span class="Italic">mantra</span> from me, pay me some money, and by practicing this <span class="Italic">yoga</span> system you will become very expert in materialistic life.” This is not the duty of a spiritual master. Rather, the spiritual master teaches the disciple how to give up materialistic life, and the disciple’s duty is to assimilate his instructions and ultimately follow the path back home, back to Godhead, from whence no one returns to this material world.
+          </p>
+          <p>
+            After hearing the instructions of Nārada Muni, the Haryaśvas, the sons of Prajāpati Dakṣa, decided not to be entangled in materialistic life by begetting hundreds of children and having to take care of them. This would have been unnecessarily entangling. The Haryaśvas did not consider pious and impious activities. Their materialistic father had instructed them to increase the population, but because of the words of Nārada Muni, they could not heed that instruction. Nārada Muni, as their spiritual master, gave them the śāstric instructions that they should give up this material world, and as bona fide disciples they followed his instructions. One should not endeavor to wander to different planetary systems within this universe, for even if one goes to the topmost planetary system, Brahmaloka, one must return again (<span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti [Bg. </span>9.21]). The endeavors of <span class="Italic">karmīs</span> are a useless waste of time. One should endeavor to return home, back to Godhead. This is the perfection of life. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (8.16):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ābrahma-bhuvanāl lokāḥ<br>punar āvartino ’rjuna<br>mām upetya tu kaunteya<br>punar janma na vidyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “From the highest planet in the material world down to the lowest, all are places of misery wherein repeated birth and death take place. But one who attains to My abode, O son of Kuntī, never takes birth again.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">602</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The seven musical notes—ṣa, ṛ, gā, ma, pa, dha and ni—are used in musical instruments, but originally they come from the Sāma Veda. The great sage Nārada vibrates sounds describing the pastimes of the Supreme Lord. By such transcendental vibrations, such as Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare, he fixes his mind at the lotus feet of the Lord. Thus he directly perceives Hṛṣīkeśa, the master of the senses. After delivering the Haryaśvas, Nārada Muni continued traveling throughout the planetary systems, his mind always fixed at the lotus feet of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The goodness of the great sage Nārada Muni is described herewith. He always chants about the pastimes of the Lord and delivers the fallen souls back to Godhead. In this regard, Śrīla Bhaktivinoda Ṭhākura has sung:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">nārada-muni,     bājāya vīṇā,<br>‘rādhikā-ramaṇa’-nāme<br>nāma amani,     udita haya,<br>bhakata-gīta-sāme</div></blockquote>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">amiya-dhārā,     variṣe ghana,<br>śravaṇa-yugale giyā<br>bhakata-jana,     saghane nāce,<br>bhariyā āpana hiyā</div></blockquote>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">mādhurī-pūra,     āsaba paśi’,<br>mātāya jagata-jane<br>keha vā kāṅde,     keha vā nāce,<br>keha māte mane mane</div></blockquote>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">pañca-vadana,     nārade dhari’,<br>premera saghana rola<br>kamalāsana,     nāciyā bale,<br>’bola bola hari bola’</div></blockquote>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">sahasrānana,     parama-sukhe,<br>’hari hari’ bali’ gāya<br>nāma-prabhāve,     mātila viśva,<br>nāma-rasa sabe pāya</div></blockquote>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">śrī-kṛṣṇa-nāma,     rasane sphuri’,<br>purā’la āmāra āśa<br>śrī-rūpa-pade,     yācaye ihā,<br>bhakativinoda dāsa</div></blockquote>
+          </p>
+          <p>
+            The purport of this song is that Nārada Muni, the great soul, plays a stringed instrument called a <span class="Italic">vīṇā,</span> vibrating the sound <span class="Italic">rādhikā-ramaṇa,</span> which is another name for Kṛṣṇa. As soon as he strokes the strings, all the devotees begin responding, making a very beautiful vibration. Accompanied by the stringed instrument, the singing seems like a shower of nectar, and all the devotees dance in ecstasy to the fullest extent of their satisfaction. While dancing, they appear madly intoxicated with ecstasy, as if drinking the beverage called <span class="Italic">mādhurī-pūra.</span> Some of them cry, some of them dance, and some of them, although unable to dance publicly, dance within their hearts. Lord Śiva embraces Nārada Muni and begins talking in an ecstatic voice, and seeing Lord Śiva dancing with Nārada, Lord Brahmā also joins, saying, “All of you kindly chant ‘Hari bol! Hari bol!’ ” The King of heaven, Indra, also gradually joins with great satisfaction and begins dancing and chanting “Hari bol! Hari bol!” In this way, by the influence of the transcendental vibration of the holy name of God, the whole universe becomes ecstatic. Bhaktivinoda Ṭhākura says, “When the universe becomes ecstatic, my desire is satisfied. I therefore pray unto the lotus feet of Rūpa Gosvāmī that this chanting of <span class="Italic">harer nāma</span> [Adi 17.21] may go on nicely like this.”
+          </p>
+          <p>
+            Lord Brahmā is the <span class="Italic">guru</span> of Nārada Muni, who is the <span class="Italic">guru</span> of Vyāsadeva, and Vyāsadeva is the <span class="Italic">guru</span> of Madhvācārya. Thus the Gauḍīya-Mādhva-sampradāya is in the disciplic succession from Nārada Muni. The members of this disciplic succession—in other words, the members of the Kṛṣṇa consciousness movement—should follow in the footsteps of Nārada Muni by chanting the transcendental vibration Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare. They should go everywhere to deliver the fallen souls by vibrating the Hare Kṛṣṇa <span class="Italic">mantra</span> and the instructions of <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">Śrīmad-Bhāgavatam</span> and <span class="Italic">Caitanya-caritāmṛta.</span> That will please the Supreme Personality of Godhead. One can spiritually advance if one actually follows the instructions of Nārada Muni. If one pleases Nārada Muni, then the Supreme Personality of Godhead, Hṛṣīkeśa, is also pleased (<span class="Italic">yasya prasādād bhagavat-prasādaḥ ). The immediate spiritual master is the representative of Nārada Muni; there is no difference between the instructions of Nārada Muni and those of the present spiritual master. Both Nārada Muni and the present spiritual master speak the same teachings of Kṛṣṇa, who says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.65–66):</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">man-manā bhava mad-bhakto<br>mad-yājī māṁ namaskuru<br>mām evaiṣyasi satyaṁ te<br>pratijāne priyo ’si me</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-dharmān parityajya<br>mām ekaṁ śaraṇaṁ vraja<br>ahaṁ tvāṁ sarva-pāpebhyo<br>mokṣayiṣyāmi mā śucaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Always think of Me and become My devotee. Worship Me and offer your homage unto Me. Thus you will come to Me without fail. I promise you this because you are My very dear friend. Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction. Do not fear.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">294</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Haryaśvas, the sons of Prajāpati Dakṣa, were very well behaved, cultured sons, but unfortunately, because of the instructions of Nārada Muni, they deviated from the order of their father. When Dakṣa heard this news, which was brought to him by Nārada Muni, he began to lament. Although he was the father of such good sons, he had lost them all. Certainly this was lamentable.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            The Haryaśvas, the sons of Prajāpati Dakṣa, were certainly well behaved, learned and advanced, and in accordance with the order of their father they went to perform austerities to beget good sons for their family. But Nārada Muni took advantage of their good behavior and culture to properly direct them not to be involved with this material world, but to use their culture and knowledge to end their material affairs. The Haryaśvas abided by the order of Nārada Muni, but when news of this was brought to Prajāpati Dakṣa, the <span class="Italic">prajāpati,</span> instead of being happy with the actions of Nārada Muni, was extremely sorrowful. Similarly, we are trying to bring as many young men as possible to the Kṛṣṇa consciousness movement for their ultimate benefit, but the parents of the young men joining this movement, being very sorry, are lamenting and making counterpropaganda. Of course, Prajāpati Dakṣa did not make propaganda against Nārada Muni, but later, as we shall see, Dakṣa cursed Nārada Muni for his benevolent activities. This is the way of materialistic life. A materialistic father and mother want to engage their sons in begetting children, striving for improved economic conditions and rotting in materialistic life. They are not unhappy when their children become spoiled, useless citizens, but they lament when they join the Kṛṣṇa consciousness movement to achieve the ultimate goal of life. This animosity between parents and the Kṛṣṇa consciousness movement has existed since time immemorial. Even Nārada Muni was condemned, not to speak of others. Nevertheless, Nārada Muni never gives up his mission. To deliver as many fallen souls as possible, he continues playing his musical instrument and vibrating the transcendental sound Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">110</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Prajāpati Dakṣa was lamenting for his lost children, Lord Brahmā pacified him with instructions, and thereafter Dakṣa begot one thousand more children in the womb of his wife, Pāñcajanī. This time his sons were known as the Savalāśvas.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Prajāpati Dakṣa was so named because he was very expert in begetting children. (The word <span class="Italic">dakṣa</span> means “expert.”) First he begot ten thousand children in the womb of his wife, and when the children were lost—when they returned home, back to Godhead—he begot another set of children, known as the Savalāśvas. Prajāpati Dakṣa is very expert in begetting children, and Nārada Muni is very expert in delivering all the conditioned souls back home, back to Godhead. Therefore the materialistic experts do not agree with the spiritual expert Nārada Muni. but this does not mean that Nārada Muni will give up his engagement of chanting the Hare Kṛṣṇa <span class="Italic">mantra.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">225</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In accordance with their father’s order to beget children, the second group of sons also went to Nārāyaṇa-saras, the same place where their brothers had previously attained perfection by following the instructions of Nārada. Undertaking great vows of austerity, the Savalāśvas remained at that holy place.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Prajāpati Dakṣa sent his second group of sons to the same place where his previous sons had attained perfection. He did not hesitate to send his second group of sons to the same place, although they too might become victims of Nārada’s instructions. According to the Vedic culture, one should be trained in spiritual understanding as a <span class="Italic">brahmacārī</span> before entering household life to beget children. This is the Vedic system. Thus Prajāpati Dakṣa sent his second group of sons for cultural improvement, despite the risk that because of the instructions of Nārada they might become as intelligent as their older brothers. As a dutiful father, he did not hesitate to allow his sons to receive cultural instructions concerning the perfection of life; he depended upon them to choose whether to return home, back to Godhead, or to rot in this material world in various species of life. In all circumstances, the duty of the father is to give cultural education to his sons, who must later decide which way to go. Responsible fathers should not hinder their sons who are making cultural advancement in association with the Kṛṣṇa consciousness movement. This is not a father’s duty. The duty of a father is to give his son complete freedom to make his choice after becoming spiritually advanced by following the instructions of the spiritual master.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">165</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At Nārāyaṇa-saras, the second group of sons performed penances in the same way as the first. They bathed in the holy water, and by its touch all the dirty material desires in their hearts were cleansed away. They murmured mantras beginning with oṁkāra and underwent a severe course of austerities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            Every Vedic <span class="Italic">mantra</span> is called <span class="Italic">brahma</span> because each <span class="Italic">mantra</span> is preceded by the <span class="Italic">brahmākṣara</span> (<span class="Italic">aum</span> or <span class="Italic">oṁkāra</span>). For example, <span class="Italic">oṁ namo bhagavate vāsudevāya.</span> Lord Kṛṣṇa says in <span class="Italic">Bhagavad-gītā (7.8), praṇavaḥ sarva-vedeṣu:</span> “In all the Vedic <span class="Italic">mantras,</span> I am represented by <span class="Italic">praṇava,</span> or <span class="Italic">oṁkāra.</span>” Thus chanting of the Vedic <span class="Italic">mantras</span> beginning with <span class="Italic">oṁkāra</span> is directly chanting of Kṛṣṇa’s name. There is no difference. Whether one <span class="Italic">chants oṁkāra</span> or addresses the Lord as “Kṛṣṇa,” the meaning is the same, but Śrī Caitanya Mahāprabhu has recommended that in this age one chant the Hare Kṛṣṇa <span class="Italic">mantra</span> (<span class="Italic">harer nāma eva kevalam</span> [Adi 17.21]). Although there is no difference between Hare Kṛṣṇa and the Vedic <span class="Italic">mantras</span> beginning with <span class="Italic">oṁkāra,</span> Śrī Caitanya Mahāprabhu, the leader of the spiritual movement for this age, has recommended that one chant Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27–28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">183</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            For a few months the sons of Prajāpati Dakṣa drank only water and ate only air. Thus undergoing great austerities, they recited this mantra: “Let us offer our respectful obeisances unto Nārāyaṇa, the Supreme Personality of Godhead, who is always situated in His transcendental abode. Since He is the Supreme Person [paramahaṁsa], let us offer our respectful obeisances unto Him.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            From these verses it is apparent that the chanting of the <span class="Italic">mahā-mantra</span> or the Vedic <span class="Italic">mantras</span> must be accompanied by severe austerities. In Kali-yuga, people cannot undergo severe austerities like those mentioned herein—drinking only water and eating only air for many months. One cannot imitate such a process. But at least one must undergo some austerity by giving up four unwanted principles, namely illicit sex, meat-eating, intoxication and gambling. Anyone can easily practice this <span class="Italic">tapasya,</span> and then the chanting of the Hare Kṛṣṇa <span class="Italic">mantra</span> will be effective without delay. One should not give up the process of austerity. If possible, one should bathe in the waters of the Ganges or Yamunā, or in the absence of the Ganges and Yamunā one may bathe in the water of the sea. This is an item of austerity. Our Kṛṣṇa consciousness movement has therefore established two very large centers, one in Vṛndāvana and another in Māyāpur, Navadvīpa. There one may bathe in the Ganges or Yamunā, chant the Hare Kṛṣṇa <span class="Italic">mantra</span> and thus become perfect and return home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, Nārada Muni approached these sons of Prajāpati Dakṣa, who were engaged in tapasya to beget children, and spoke enigmatic words to them just as he had spoken to their elder brothers.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">261</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O sons of Dakṣa, please hear my words of instruction attentively. You are all very affectionate to your elder brothers, the Haryaśvas. Therefore you should follow their path.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            Nārada Muni encouraged Prajāpati Dakṣa’s second group of sons by awakening their natural affinity for their brothers. He urged them to follow their older brothers if they were at all affectionate toward them. Family affection is very strong, and therefore Nārada Muni followed this tactic of reminding them of their family relationship with the Haryaśvas. Generally the word <span class="Italic">nigama</span> refers to the <span class="Italic">Vedas,</span> but here <span class="Italic">nigama</span> refers to the instructions contained in the <span class="Italic">Vedas.</span> <span class="Italic">Śrīmad-Bhāgavatam</span> says, <span class="Italic">nigama-kalpa-taror galitaṁ phalam: [SB 1.1.3]</span> the Vedic instructions are like a tree, of which <span class="Italic">Śrīmad-Bhāgavatam</span> is the ripened fruit. Nārada Muni is engaged in distributing this fruit, and therefore he instructed Vyāsadeva to write this <span class="Italic">Mahā-Purāṇa, Śrīmad-Bhāgavatam,</span> for the benefit of ignorant human society.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anarthopaśamaṁ sākṣād<br>bhakti-yogam adhokṣaje<br>lokasyājānato vidvāṁś<br>cakre sātvata-saṁhitām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The material miseries of the living entity, which are superfluous to him, can be directly mitigated by the linking process of devotional service. But the mass of people do not know this, and therefore the learned Vyāsadeva compiled this Vedic literature, which is in relation to the Supreme Truth.” (<span class="Ref_Italic">Bhāg.</span> 1.7.6) People are suffering because of ignorance and are following a wrong path for happiness. This is called <span class="Italic">anartha.</span> These material activities will never make them happy, and therefore Nārada instructed Vyāsadeva to record the instructions of <span class="Italic">Śrīmad-Bhāgavatam.</span> Vyāsadeva actually followed Nārada and did this. <span class="Italic">Śrīmad-Bhāgavatam</span> is the supreme instruction of the <span class="Italic">Vedas.</span> <span class="Italic">Galitaṁ phalam:</span> the ripened fruit of the <span class="Italic">Vedas</span> is <span class="Italic">Śrīmad-Bhāgavatam.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">63</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A brother aware of the principles of religion follows in the footsteps of his elder brothers. Because of being highly elevated, such a pious brother gets the opportunity to associate and enjoy with demigods like the Maruts, who are all affectionate to their brothers.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            According to their belief in various material relationships, people are promoted to various planets. Here it is said that one who is very faithful to his brothers should follow a path similar to theirs and get the opportunity for promotion to Marudloka. Nārada Muni advised Prajāpati Dakṣa’s second group of sons to follow their elder brothers and be promoted to the spiritual world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: O best of the advanced Āryans, after saying this much to the sons of Prajāpati Dakṣa, Nārada Muni, whose merciful glance never goes in vain, left as he had planned. The sons of Dakṣa followed their elder brothers. Not attempting to produce children, they engaged themselves in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Savalāśvas took to the correct path, which is obtainable by a mode of life meant to achieve devotional service, or the mercy of the Supreme Personality of Godhead. Like nights that have gone to the west, they have not returned even until now.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At this time, Prajāpati Dakṣa observed many inauspicious signs, and he heard from various sources that his second group of sons, the Savalāśvas, had followed the path of their elder brothers in accordance with the instructions of Nārada.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">150</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When he heard that the Savalāśvas had also left this world to engage in devotional service, Dakṣa was angry at Nārada, and he almost fainted due to lamentation. When Dakṣa met Nārada, Dakṣa’s lips began trembling in anger, and he spoke as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura comments that Nārada Muni had delivered the entire family of Svāyambhuva Manu, beginning with Priyavrata and Uttānapāda. He had delivered Uttānapāda’s son Dhruva and had even delivered Prācīnabarhi, who was engaged in fruitive activities. Nevertheless, he could not deliver Prajāpati Dakṣa. Prajāpati Dakṣa saw Nārada before him because Nārada had personally come to deliver him. Nārada Muni took the opportunity to approach Prajāpati Dakṣa in his bereavement because the time of bereavement is a suitable time for appreciating <span class="Italic">bhakti-yoga.</span> As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (7.16), four kinds of men—<span class="Italic">ārta</span> (one who is distressed), <span class="Italic">arthārthī</span> (one in need of money), <span class="Italic">jijñāsu</span> (one who is inquisitive) and <span class="Italic">jñānī</span> (a person in knowledge)—try to understand devotional service. Prajāpati Dakṣa was in great distress because of the loss of his sons, and therefore Nārada took the opportunity to instruct him regarding liberation from material bondage.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">906</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prajāpati Dakṣa said: Alas, Nārada Muni, you wear the dress of a saintly person, but you are not actually a saint. Indeed, although I am now in gṛhastha life, I am a saintly person. By showing my sons the path of renunciation, you have done me an abominable injustice.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu said, <span class="Italic">sannyāsīra alpa chidra sarva-loke gāya</span> (Cc. <span class="Italic">Madhya 12.51).</span> In society one will find many <span class="Italic">sannyāsīs, vānaprasthas, gṛhasthas</span> and <span class="Italic">brahmacārīs,</span> but if all of them properly live in accordance with their duties, they are understood to be <span class="Italic">sādhus.</span> Prajāpati Dakṣa was certainly a <span class="Italic">sādhu</span> because he had executed such great austerities that the Supreme Personality of Godhead, Lord Viṣṇu, had appeared before him. Nevertheless, he had a fault-finding mentality. He improperly thought Nārada Muni to be <span class="Italic">asādhu,</span> or nonsaintly, because Nārada had foiled his intentions. Desiring to train his sons to become <span class="Italic">gṛhasthas</span> fully equipped with knowledge, Dakṣa had sent them to execute austerities by Nārāyaṇa-saras. Nārada Muni, however, taking advantage of their highly elevated position in austerity, instructed them to become Vaiṣṇavas in the renounced order. This is the duty of Nārada Muni and his followers. They must show everyone the path of renouncing this material world and returning home, back to Godhead. Prajāpati Dakṣa, however, could not see the exaltedness of the duties Nārada Muni performed in relation to his sons. Unable to appreciate Nārada Muni’s behavior, Dakṣa accused Nārada of being <span class="Italic">asādhu.</span>
+          </p>
+          <p>
+            The words <span class="Italic">bhikṣor mārga,</span> “the path of the renounced order,” are very significant in this regard. A <span class="Italic">sannyāsī</span> is called <span class="Italic">tridaṇḍi-bhikṣu</span> because his duty is to beg alms from the homes of <span class="Italic">gṛhasthas</span> and to give the <span class="Italic">gṛhasthas</span> spiritual instructions. A <span class="Italic">sannyāsī</span> is allowed to beg from door to door, but a <span class="Italic">gṛhastha</span> cannot do so. <span class="Italic">Gṛhasthas</span> may earn their living according to the four divisions of spiritual life. A <span class="Italic">brāhmaṇa gṛhastha</span> may earn his livelihood by becoming a learned scholar and teaching people in general how to worship the Supreme Personality of Godhead. He may also assume the duty of worship himself. Therefore it is said that only <span class="Italic">brāhmaṇas</span> may engage in Deity worship, and they may accept as <span class="Italic">prasāda</span> whatever people offer the Deity. Although a <span class="Italic">brāhmaṇa</span> may sometimes accept charity, it is not for his personal maintenance but for the worship of the Deity. Thus a <span class="Italic">brāhmaṇa</span> does not stock anything for his future use. Similarly, <span class="Italic">kṣatriyas</span> may collect taxes from the citizens, and they must also protect the citizens, enforce rules and regulations, and maintain law and order. <span class="Italic">Vaiśyas</span> should earn their livelihood through agriculture and cow protection, and <span class="Italic">śūdras</span> should maintain their livelihood by serving the three higher classes. Unless one becomes a <span class="Italic">brāhmaṇa,</span> one cannot take <span class="Italic">sannyāsa.</span> <span class="Italic">Sannyāsīs</span> and <span class="Italic">brahmacārīs</span> may beg alms door to door, but a <span class="Italic">gṛhastha</span> cannot.
+          </p>
+          <p>
+            Prajāpati Dakṣa condemned Nārada Muni because Nārada, a <span class="Italic">brahmacārī</span> who could beg from door to door, had made <span class="Italic">sannyāsīs</span> of Dakṣa’s sons, who were being trained to be <span class="Italic">gṛhasthas.</span> Dakṣa was extremely angry at Nārada because he thought that Nārada had done him a great injustice. According to Dakṣa’s opinion, Nārada Muni had misled Dakṣa’s inexperienced sons (<span class="Italic">asādhv akāry arbhakāṇām</span>). Dakṣa regarded his sons as innocent boys who had been misled when Nārada showed them the renounced order of life. Because of all these considerations, Prajāpati Dakṣa charged that Nārada Muni was <span class="Italic">asādhu</span> and should not have adopted the dress of a <span class="Italic">sādhu.</span>
+          </p>
+          <p>
+            Sometimes a saintly person is misunderstood by <span class="Italic">gṛhasthas,</span> especially when he instructs their young sons to accept Kṛṣṇa consciousness. Generally a <span class="Italic">gṛhastha</span> thinks that unless one enters <span class="Italic">gṛhastha</span> life he cannot properly enter the renounced order. If a young man immediately adopts the path of the renounced order in accordance with the instructions of Nārada or a member of his disciplic succession, his parents become very angry. This same phenomenon is occurring in our Kṛṣṇa consciousness movement because we are instructing all the young boys in the Western countries to follow the path of renunciation. We allow <span class="Italic">gṛhastha</span> life, but a <span class="Italic">gṛhastha</span> also follows the path of renunciation. Even a <span class="Italic">gṛhastha</span> has to give up so many bad habits that his parents think his life has been practically destroyed. We allow no meat-eating, no illicit sex, no gambling and no intoxication, and consequently the parents wonder how, if there are so many no’s, one’s life can be positive. In the Western countries especially, these four prohibited activities practically constitute the life and soul of the modern population. Therefore parents sometimes dislike our movement, just as Prajāpati Dakṣa disliked the activities of Nārada and accused Nārada of dishonesty. Nevertheless, although parents may be angry at us, we must perform our duty without hesitation because we are in the disciplic succession from Nārada Muni.
+          </p>
+          <p>
+            People addicted to householder life wonder how one can give up the enjoyment of <span class="Italic">gṛhastha</span> life, which is a concession for sex enjoyment, simply to become a mendicant in Kṛṣṇa consciousness. They do not know that the householder’s concession for sex life cannot be regulated unless one accepts the life of a mendicant. The Vedic civilization therefore enjoins that at the end of one’s fiftieth year one must give up household life. This is compulsory. However, because modern civilization is misled, householders want to remain in family life until death, and therefore they are suffering. In such cases, the disciples of Nārada Muni advise all the members of the younger generation to join the Kṛṣṇa consciousness movement immediately. There is nothing wrong in this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">362</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prajāpati Dakṣa said: My sons were not at all freed from their three debts. Indeed, they did not properly consider their obligations. O Nārada Muni, O personality of sinful action, you have obstructed their progress toward good fortune in this world and the next because they are still indebted to the saintly persons, the demigods and their father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            As soon as a <span class="Italic">brāhmaṇa</span> takes birth, he assumes three kinds of debts—debts to great saints, debts to the demigods and debts to his father. The son of a <span class="Italic">brāhmaṇa</span> must undergo celibacy (<span class="Italic">brahmacarya</span>) to clear his debts to the saintly persons, he must perform ritualistic ceremonies to clear his debts to the demigods, and he must beget children to become free from his debts to his father. Prajāpati Dakṣa argued that although the renounced order is recommended for liberation, one cannot attain liberation unless one fulfills his obligations to the demigods, the saints and his father. Since Dakṣa’s sons had not liberated themselves from these three debts, how could Nārada Muni have led them to the renounced order of life? Apparently, Prajāpati Dakṣa did not know the final decision of the <span class="Italic">śāstras.</span> As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.5.41):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">devarṣi-bhūtāpta-nṛṇāṁ pitṝṇāṁ<br>na kiṅkaro nāyam ṛṇī ca rājan<br>sarvātmanā yaḥ śaraṇaṁ śaraṇyaṁ<br>gato mukundaṁ parihṛtya kartam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Everyone is indebted to the demigods, to living entities in general, to his family, to the <span class="Italic">pitās</span> and so on, but if one fully surrenders to Kṛṣṇa, Mukunda, who can give one liberation, even if one performs no <span class="Italic">yajñas,</span> one is freed from all debts. Even if one does not repay his debts, he is freed from all debts if he renounces the material world for the sake of the Supreme Personality of Godhead, whose lotus feet are the shelter of everyone. This is the verdict of the <span class="Italic">śāstra.</span> Therefore Nārada Muni was completely right in instructing the sons of Prajāpati Dakṣa to renounce this material world immediately and take shelter of the Supreme Personality of Godhead. Unfortunately, Prajāpati Dakṣa, the father of the Haryaśvas and Savalāśvas, did not understand the great service rendered by Nārada Muni. Dakṣa therefore addressed him as <span class="Italic">pāpa</span> (the personality of sinful activities) and <span class="Italic">asādhu</span> (a nonsaintly person). Since Nārada Muni was a great saint and Vaiṣṇava, he tolerated all such accusations from Prajāpati Dakṣa. He merely performed his duty as a Vaiṣṇava by delivering all the sons of Prajāpati Dakṣa, enabling them to return home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">276</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prajāpati Dakṣa continued: Thus committing violence against other living entities and yet claiming to be an associate of Lord Viṣṇu, you are defaming the Supreme Personality of Godhead. You needlessly created a mentality of renunciation in innocent boys, and therefore you are shameless and devoid of compassion. How could you travel with the personal associates of the Supreme Lord ?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            This mentality of Prajāpati Dakṣa still continues even today. When young boys join the Kṛṣṇa consciousness movement, their fathers and so-called guardians are very angry at the propounder of the Kṛṣṇa consciousness movement because they think that their sons have been unnecessarily induced to deprive themselves of the material enjoyments of eating, drinking and merrymaking. <span class="Italic">Karmīs,</span> fruitive workers, think that one should fully enjoy his present life in this material world and also perform some pious activities to be promoted to higher planetary systems for further enjoyment in the next life. A <span class="Italic">yogī,</span> however, especially a <span class="Italic">bhakti-yogī,</span> is callous to the opinions of this material world. He is not interested in traveling to the higher planetary systems of the demigods to enjoy a long life in an advanced materialistic civilization. As stated by Prabodhānanda Sarasvatī, <span class="Italic">kaivalyaṁ narakāyate tridaśa-pūr ākāśa-puṣpāyate:</span> for a devotee, merging into the Brahman existence is hellish, and life in the higher planetary systems of the demigods is a will-o’-the-wisp, a phantasmagoria with no real existence at all. A pure devotee is not interested in yogic perfection, travel to higher planetary systems, or oneness with Brahman. He is interested only in rendering service to the Personality of Godhead. Since Prajāpati Dakṣa was a <span class="Italic">karmī,</span> he could not appreciate the great service Nārada Muni had rendered his eleven thousand sons. Instead, he accused Nārada Muni of being sinful and charged that because Nārada Muni was associated with the Supreme Personality of Godhead, the Lord would also be defamed. Thus Dakṣa criticized that Nārada Muni was an offender to the Lord although he was known as an associate of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">457</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All the devotees of the Lord but you are very kind to the conditioned souls and are eager to benefit others. Although you wear the dress of a devotee, you create enmity with people who are not your enemies, or you break friendship and create enmity between friends. Are you not ashamed of posing as a devotee while performing these abominable actions?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            Such are the criticisms that must be borne by the servants of Nārada Muni in the disciplic succession. Through the Kṛṣṇa consciousness movement, we are trying to train young people to become devotees and return home, back to Godhead, by following rigid regulative principles, but our service is appreciated neither in India nor abroad in the Western countries where we are endeavoring to spread this Kṛṣṇa consciousness movement. In India the caste <span class="Italic">brāhmaṇas</span> have become enemies of the Kṛṣṇa consciousness movement because we elevate foreigners, who are supposed to be <span class="Italic">mlecchas</span> and <span class="Italic">yavanas,</span> to the position of <span class="Italic">brāhmaṇas.</span> We train them in austerities and penances and recognize them as <span class="Italic">brāhmaṇas</span> by awarding them sacred threads. Thus the caste <span class="Italic">brāhmaṇas</span> of India are very displeased by our activities in the Western world. In the West also, the parents of the young people who join this movement have also become enemies. We have no business creating enemies, but the process is such that nondevotees will always be inimical toward us. Nevertheless, as stated in the <span class="Italic">śāstras,</span> a devotee should be both tolerant and merciful. Devotees engaged in preaching should be prepared to be accused by ignorant persons, and yet they must be very merciful to the fallen conditioned souls. If one can execute his duty in the disciplic succession of Nārada Muni, his service will surely be recognized. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.68–69):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ya idaṁ paramaṁ guhyaṁ<br>mad-bhakteṣv abhidhāsyati<br>bhaktiṁ mayi parāṁ kṛtvā<br>mām evaiṣyaty asaṁśayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na ca tasmān manuṣyeṣu<br>kaścin me priya-kṛttamaḥ<br>bhavitā na ca me tasmād<br>anyaḥ priyataro bhuvi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “For one who explains the supreme secret to the devotees, devotional service is guaranteed, and at the end he will come back to Me. There is no servant in this world more dear to Me than he, nor will there ever be one more dear.” Let us continue preaching the message of Lord Kṛṣṇa and not be afraid of enemies. Our only duty is to satisfy the Lord by this preaching, which will be accepted as service by Lord Caitanya and Lord Kṛṣṇa. We must sincerely serve the Lord and not be deterred by so-called enemies.
+          </p>
+          <p>
+            In this verse the word <span class="Italic">sauhṛda-ghnam</span> (“a breaker of friendship”) is used. Because Nārada Muni and the members of his disciplic succession disrupt friendships and family life, they are sometimes accused of being <span class="Italic">sauhṛda-ghnam,</span> creators of enmity between relatives. Actually such devotees are friends of every living entity (<span class="Italic">suhṛdaṁ sarva-bhūtānām</span>), but they are misunderstood to be enemies. Preaching can be a difficult, thankless task, but a preacher must follow the orders of the Supreme Lord and be unafraid of materialistic persons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">260</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prajāpati Dakṣa continued: If you think that simply awakening the sense of renunciation will detach one from the material world, I must say that unless full knowledge is awakened, simply changing dresses as you have done cannot possibly bring detachment.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            Prajāpati Dakṣa was correct in stating that changing one’s dress cannot detach one from this material world. The <span class="Italic">sannyāsīs</span> of Kali-yuga who change their robes from white to saffron and then think they can do whatever they like are more abominable than materialistic <span class="Italic">gṛhasthas.</span> This is not recommended anywhere. Prajāpati Dakṣa was right in pointing out this defect, but he did not know that Nārada Muni had aroused the spirit of renunciation in the Haryaśvas and Savalāśvas through full knowledge. Such enlightened renunciation is desirable. One should enter the renounced order with full knowledge (<span class="Italic">jñāna-vairāgya</span>), for the perfection of life is possible for one who renounces this material world in that way. This elevated stage can be reached very easily, as supported by the statements of <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.7):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsudeve bhagavati<br>bhakti-yogaḥ prayojitaḥ<br>janayaty āśu vairāgyaṁ<br>jñānaṁ ca yad ahaitukam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By rendering devotional service unto the Personality of Godhead, Śrī Kṛṣṇa, one immediately acquires causeless knowledge and detachment from the world.” If one seriously engages in devotional service to Lord Vāsudeva, <span class="Italic">jñāna</span> and <span class="Italic">vairāgya</span> are automatically manifest in one’s person. There is no doubt of this. Prajāpati Dakṣa’s accusation that Nārada had not actually elevated his sons to the platform of knowledge was not factual. All the sons of Prajāpati Dakṣa had first been raised to the platform of <span class="Italic">jñāna</span> and had then automatically renounced this world. In summary, unless one’s knowledge is awakened, renunciation cannot take place, for without elevated knowledge one cannot give up attachment for material enjoyment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">268</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Material enjoyment is indeed the cause of all unhappiness, but one cannot give it up unless one has personally experienced how much suffering it is. Therefore one should be allowed to remain in so-called material enjoyment while simultaneously advancing in knowledge to experience the misery of this false material happiness. Then, without help from others, one will find material enjoyment detestful. Those whose minds are changed by others do not become as renounced as those who have personal experience.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            It is said that unless a woman becomes pregnant, she cannot understand the trouble of giving birth to a child. <span class="Italic">Bandhyā ki bujhibe prasava-vedanā.</span> The word <span class="Italic">bandhyā</span> means a sterile woman. Such a woman cannot give birth to a child. How, then, can she perceive the pain of delivery? According to the philosophy of Prajāpati Dakṣa, a woman should first become pregnant and then experience the pain of childbirth. Then, if she is intelligent, she will not want to be pregnant again. Actually. however. this is not a fact. Sex enjoyment is so strong that a woman becomes pregnant and suffers at the time of childbirth. but she becomes pregnant again, despite her experience. According to Dakṣa’s philosophy. one should become implicated in material enjoyment so that after experiencing the distress of such enjoyment. one will automatically renounce. Material nature, however. is so strong that although a man suffers at every step, he will not cease his attempts to enjoy (<span class="Italic">tṛpyanti neha kṛpaṇa-bahu-duḥkha-bhājaḥ</span>). Under the circumstances, unless one gets the association of a devotee like Nārada Muni or his servant in the disciplic succession, one’s dormant spirit of renunciation cannot be awakened. It is not a fact that because material enjoyment involves so many painful conditions one will automatically become detached. One needs the blessings of a devotee like Nārada Muni. Then one can renounce his attachment for the material world. The young boys and girls of the Kṛṣṇa consciousness movement have given up the spirit of material enjoyment not because of practice but by the mercy of Lord Śrī Caitanya Mahāprabhu and His servants.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">158</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although I live in household life with my wife and children, I honestly follow the Vedic injunctions by engaging in fruitive activities to enjoy life without sinful reactions. I have performed all kinds of yajñas, including the deva-yajña, ṛṣi-yajña, pitṛ-yajña and nṛ-yajña. Because these yajñas are called vratas [vows], I am known as a gṛhavrata. Unfortunately, you have given me great displeasure by misguiding my sons, for no reason, to the path of renunciation. This can be tolerated once.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            Prajāpati Dakṣa wanted to prove that he had been most tolerant in not having said anything when Nārada Muni, for no reason, induced his ten thousand innocent sons to adopt the path of renunciation. Sometimes householders are accused of being <span class="Italic">gṛhamedhīs,</span> for <span class="Italic">gṛhamedhīs</span> are satisfied with family life without spiritual advancement. <span class="Italic">Gṛhasthas,</span> however, are different because although <span class="Italic">gṛhasthas</span> live in householder life with their wives and children, they are eager for spiritual advancement. Wanting to prove that he had been magnanimous to Nārada Muni, Prajāpati Dakṣa stressed that when Nārada had misled his first sons, Dakṣa had taken no action; he had been kind and tolerant. He was aggrieved, however, because Nārada Muni had misled his sons for a second time. Therefore he wanted to prove that Nārada Muni, although dressed like a <span class="Italic">sādhu,</span> was not actually a <span class="Italic">sādhu;</span> he himself, although a householder, was a greater <span class="Italic">sādhu</span> than Nārada Muni.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_43_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">268</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            You have made me lose my sons once, and now you have again done the same inauspicious thing. Therefore you are a rascal who does not know how to behave toward others. You may travel all over the universe, but I curse you to have no residence anywhere.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_43_purport">
+          <p>
+            Because Prajāpati Dakṣa was a <span class="Italic">gṛhamedhī</span> who wanted to remain in household life, he thought that if Nārada Muni could not remain in one place, but had to travel all over the world, that would be a great punishment for him. Actually, however, such a punishment is a boon for a preacher. A preacher is known as <span class="Italic">parivrājakācārya</span>—an <span class="Italic">ācārya,</span> or teacher, who always travels for the benefit of human society. Prajāpati Dakṣa cursed Nārada Muni by saying that although he had the facility to travel all over the universe, he would never be able to stay in one place. In the <span class="Italic">paramparā</span> system from Nārada Muni, I have also been cursed. Although I have many centers that would be suitable places of residence, I cannot stay anywhere, for I have been cursed by the parents of my young disciples. Since the Kṛṣṇa consciousness movement was started, I have traveled all over the world two or three times a year, and although I am provided comfortable places to stay wherever I go, I cannot stay anywhere for more than three days or a week. I do not mind this curse by the parents of my disciples, but now it is necessary that I stay in one place to finish another task—this translation of <span class="Italic">Śrīmad-Bhāgavatam.</span> If my young disciples, especially those who have taken <span class="Italic">sannyāsa,</span> take charge of traveling all over the world, it may be possible for me to transfer the curse of the parents to these young preachers. Then I may sit down conveniently in one place for the work of translation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_44_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">439</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: My dear King, since Nārada Muni is an approved saintly person, when cursed by Prajāpati Dakṣa he replied, “tad bāḍham: Yes, what you have said is good. I accept this curse.” He could have cursed Prajāpati Dakṣa in return, but because he is a tolerant and merciful sādhu, he took no action.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_44_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (3.25.21):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">titikṣavaḥ kāruṇikāḥ<br>suhṛdaḥ sarva-dehinām<br>ajāta-śatravaḥ śāntāḥ<br>sādhavaḥ sādhu-bhūṣaṇāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The symptoms of a <span class="Italic">sādhu</span> are that he is tolerant, merciful and friendly to all living entities. He has no enemies, he is peaceful, he abides by the scriptures, and all his characteristics are sublime.” Because Nārada Muni is the most elevated of <span class="Italic">sādhus,</span> devotees, to deliver Prajāpati Dakṣa he silently tolerated the curse. Śrī Caitanya Mahāprabhu has taught this principle to all His devotees:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tṛṇād api sunīcena<br>taror api sahiṣṇunā<br>amāninā mānadena<br>kīrtanīyaḥ sadā hariḥ<br> [Cc. adi 17.31]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and should be ready to offer all respects to others. In such a state of mind one can chant the holy name of the Lord constantly.” Following the orders of Śrī Caitanya Mahāprabhu, one who preaches the glories of the Lord all over the world or all over the universe should be humbler than grass and more tolerant than a tree because a preacher cannot live an easygoing life. Indeed, a preacher must face many impediments. Not only is he sometimes cursed, but sometimes he must also suffer personal injury. For example, when Nityānanda Prabhu went to preach Kṛṣṇa consciousness to the two roguish brothers Jagāi and Mādhāi, they injured Him and made His head bleed, but nevertheless, He tolerantly delivered the two rogues, who became perfect Vaiṣṇavas. This is the duty of a preacher. Lord Jesus Christ even tolerated crucifixion. Therefore the curse against Nārada was not very astonishing, and he tolerated it.
+          </p>
+          <p>
+            Now, it may be asked why Nārada Muni stayed in the presence of Prajāpati Dakṣa and tolerated all his accusations and curses. Was that for Dakṣa’s deliverance? The answer is yes. Śrīla Viśvanātha Cakravartī Ṭhākura says that after being insulted by Prajāpati Dakṣa, Nārada Muni should have left immediately, but he purposely stayed to hear all Dakṣa’s strong words so that Dakṣa might be relieved of his anger. Prajāpati Dakṣa was not an ordinary man; he had accumulated the results of many pious activities. Therefore Nārada Muni expected that after delivering his curse, Dakṣa, satisfied and freed from anger, would repent his misbehavior and thus get a chance to become a Vaiṣṇava and be delivered. When Jagāi and Mādhāi offended Lord Nityānanda, Lord Nityānanda stood tolerantly, and therefore both brothers fell at His lotus feet and repented. Consequently they later became perfect Vaiṣṇavas.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Fifth Chapter, of the</span> Śrīmad-Bhāgavatam. <span class="Italic">entitled “Nārada Muni Cursed by Prajāpati Dakṣa.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/5">https://prabhupadabooks.com/sb/6/5</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:21:38 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.4: The Hamsa-guhya Prayers     Next: SB 6.6: The Progeny of the Daughters of Daksa</div>
+      </p>
+    </div>
+  </body>
+</html>

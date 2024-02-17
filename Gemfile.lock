@@ -29,6 +29,8 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
+    nokogiri (1.13.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.4-x86_64-linux)
@@ -55,6 +57,7 @@ GEM
     webrobots (0.1.2)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-20
   x86_64-linux
 
@@ -62,6 +65,7 @@ DEPENDENCIES
   colorize
   mechanize
   nokogiri
+  pry
   pry-byebug
   slim
   thor

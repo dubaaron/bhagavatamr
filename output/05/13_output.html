@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.13, Further Talks Between King Rahūgaṇa and Jaḍa Bharata</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Thirteen:<br>Further Talks Between King Rahūgaṇa and Jaḍa Bharata
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">The <span class="Italic">brāhmaṇa</span> Jaḍa Bharata became very kind to King Rahūgaṇa, and to disassociate him from the material world, he spoke figuratively of the forest of the material world. He explained that this material world is like a great forest in which one becomes entangled due to association with material life. In this forest there are plunderers (the six senses) as well as carnivorous animals like jackals, wolves and lions (wife, children and other relatives) who are always anxious to suck the blood from the head of the family. The forest plunderers and the carnivorous blood-sucking animals combine to exploit the energy of a man within this material world. In this forest there is also a black hole, covered by grass, into which one may fall. Coming into the forest and being captivated by so many material attractions, one identifies himself with this material world, society, friendship, love and family. Having lost the path and not knowing where to go, being harassed by animals and birds, one is also victimized by many desires. Thus one works very hard within the forest and wanders here and there. He becomes captivated by temporary happiness and becomes aggrieved by so-called distress. Actually one simply suffers in the forest from so-called happiness and distress. Sometimes he is attacked by a snake (deep sleep), and due to the snakebite he loses consciousness and becomes puzzled and bewildered about discharging his duties. Sometimes he is attracted by women other than his wife, and thus be thinks he enjoys extramarital love with another woman. He is attacked by various diseases, by lamentation and by summer and winter. Thus one within the forest of the material world suffers the pains of material existence. Expecting to become happy, the living entity changes his position from one place to another, but actually a materialistic person within the material world is never happy. Being constantly engaged in materialistic activities, he is always disturbed. He forgets that one day he has to die. Although he suffers severely, being illusioned by the material energy, he still hankers after material happiness. In this way he completely forgets his relationship with the Supreme Personality of Godhead.</div><div class="Normal-Level"><tb>By hearing this from Jaḍa Bharata, Mahārāja Rahūgaṇa revived his Kṛṣṇa consciousness and thus benefited from Jaḍa Bharata’s association. He could understand that his illusion was over, and he begged pardon from Jaḍa Bharata for his misbehavior. All this was told to Mahārāja Parīkṣit by Śukadeva Gosvāmī.</tb></div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">158</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Jaḍa Bharata, who had fully realized Brahman, continued: My dear King Rahūgaṇa, the living entity wanders on the path of the material world, which is very difficult for him to traverse, and he accepts repeated birth and death. Being captivated by the material world under the influence of the three modes of material nature (sattva-guṇa, rajo-guṇa and tamo-guṇa), the living entity can see only the three fruits of activities under the spell of material nature. These fruits are auspicious, inauspicious and mixed. He thus becomes attached to religion, economic development, sense gratification and the monistic theory of liberation (merging with the Supreme). He works very hard day and night exactly like a merchant who enters a forest to acquire some articles to sell later for profit. However, he cannot really achieve happiness within this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            One can very easily understand how difficult and insurmountable the path of sense gratification is. Not knowing what the path of sense gratification is, one becomes implicated in the repetition of birth and accepts different types of bodies again and again. Thus one suffers in material existence. In this life one may think that he is very happy being an American, Indian, Englishman or German, but in the next life one has to accept another body among 8,400,000 species. The next body has to be immediately accepted according to <span class="Italic">karma.</span> One will be forced to accept a certain type of body, and protesting will not help. That is the stringent law of nature. Due to the living entity’s ignorance of his eternal blissful life, he becomes attracted to material activities under the spell of <span class="Italic">māyā.</span> In this world, he can never experience happiness, yet he works very hard to do so. This is called <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">192</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Rahūgaṇa, in this forest of material existence there are six very powerful plunderers. When the conditioned soul enters the forest to acquire some material gain, the six plunderers misguide him. Thus the conditioned merchant does not know how to spend his money, and it is taken away by these plunderers. Like tigers, jackals and other ferocious animals in a forest that are ready to take away a lamb from the custody of its protector, the wife and children enter the heart of the merchant and plunder him in so many ways.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            In the forest there are many plunderers, dacoits, jackals and tigers. The jackals are compared to one’s wife and children. In the dead of night, jackals cry very loudly, and similarly one’s wife and children in this material world also cry like jackals. The children say, “Father, this is wanted; give me this. I am your dear son.” Or the wife says, “I am your dear wife. Please give me this. This is now needed.” In this way one is plundered by the thieves in the forest. Not knowing the aim of human life, one is constantly being misguided. The aim of life is Viṣṇu (<span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇum [SB </span>7.5.31]). Everyone works very hard to earn money, but no one knows that his real self-interest is in serving the Supreme Personality of Godhead. Instead of spending money for advancing the Kṛṣṇa consciousness movement, one spends his hard-earned money on clubs, brothels, liquor, slaughterhouses and so forth. Due to sinful activities, one becomes implicated in the process of transmigration and thus has to accept one body after another. Being thus absorbed in a distressed condition, one never attains happiness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">147</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this forest there are dense bowers composed of thickets of bushes, grass and creepers. In these bowers the conditioned soul is always disturbed by cruelly biting mosquitoes [envious people]. Sometimes he sees an imaginary palace in the forest, and sometimes he is bewildered by seeing a fleeting fiend or ghost, which appears like a meteor in the sky.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The material household is actually a hole of fruitive activity. To earn a livelihood one engages in different industries and trades, and sometimes one performs great sacrifices to go to higher planetary systems. Apart from this, at least everyone is engaged in earning a livelihood in some profession or occupation. In these dealings, one has to meet many undesirable people, and their behavior is compared to the biting of mosquitoes. This creates very undesirable conditions. Even in the midst of these disturbances, one imagines that he is going to construct a grand house and live there permanently, although he knows that he cannot. Gold is compared to a quickly fleeting fiend, which appears like a meteor in the sky. It displays itself for a moment and is then gone. Generally <span class="Italic">karmīs</span> are attracted to gold or money, but these are compared herein to ghosts and witches.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">294</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, the merchant on the forest path of the material world, his intelligence victimized by home, wealth, relatives and so forth, runs from one place to another in search of success. Sometimes his eyes are covered by the dust of a whirlwind—that is to say, in his lust he is captivated by the beauty of his wife, especially during her menstrual period. Thus his eyes are blinded, and he cannot see where to go or what he is doing.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            It is said that household attraction resides in the wife because sex is the center of household life: <span class="Italic">yan maithunādi-gṛhamedhi-sukhaṁ hi tuccham [SB </span>7.9.45]<span class="Italic">.</span> A materialistic person, making his wife the center of attraction, works very hard day and night. His only enjoyment in material life is sexual intercourse. Therefore <span class="Italic">karmīs</span> are attracted to women as friends or wives. Indeed, they cannot work without sex. Under the circumstances the wife is compared to a whirlwind, especially during her menstrual period. Those who strictly follow the rules and regulations of householder life engage in sex only once a month, at the end of the menstrual period. As one looks forward to this opportunity, his eyes are overwhelmed by the beauty of his wife. Thus it is said that the whirlwind covers the eyes with dust. Such a lusty person does not know that all his material activities are being observed by different demigods, especially the sun-god, and are being recorded for the <span class="Italic">karma</span> of one’s next body. Astrological calculations are called <span class="Italic">jyoti-śāstra.</span> Because the <span class="Italic">jyoti,</span> or effulgence, in the material world comes from the different stars and planets, the science is called <span class="Italic">jyoti-śāstra,</span> the science of the luminaries. By the calculations of <span class="Italic">jyoti,</span> our future is indicated. In other words, all the luminaries—the stars, sun and moon—witness the activities of the conditioned soul. Thus he is awarded a particular type of body. A lusty, person whose eyes are covered by the dust of the whirlwind or material existence does not at all consider that his activities are being observed by different stars and planets and are being recorded. Not knowing this, the conditioned soul commits all kinds of sinful activities for the satisfaction of his lusty desires.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">173</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Wandering in the forest of the material world, the conditioned soul sometimes hears an invisible cricket making harsh sounds, and his ears become very much aggrieved. Sometimes his heart is pained by the sounds of owls, which are just like the harsh words of his enemies. Sometimes he takes shelter of a tree that has no fruits or flowers. He approaches such a tree due to his strong appetite, and thus he suffers. He would like to acquire water, but he is simply illusioned by a mirage, and he runs after it.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            In <span class="Italic">Śrīmad-Bhāgavatam</span> it is said that the <span class="Italic">Bhāgavata</span> philosophy is meant for people who are completely free from envy (<span class="Italic">paramo nirmatsarāṇām</span>). The material world is full of envious people. Even within one’s inner circle there is <span class="Italic">much</span> backbiting, and this is compared to the sound vibration of a cricket in the forest. One cannot see the cricket, but one bears its sounds and thus becomes aggrieved. When one takes to Kṛṣṇa consciousness, one always hears unpalatable words from relatives. This is the nature of the world; one cannot avoid mental distress due to the backbiting of envious people. Being very much aggrieved, sometimes one goes to a sinful person for help, but he has no means to help because he has no intelligence. Thus the living entity is disappointed. This is like running after a mirage in the desert in an effort to find water. Such activities do not produce any tangible results. Due to being directed by the illusory energy, a conditioned soul suffers in so many ways.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">388</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes the conditioned soul jumps into a shallow river, or being short of food grains, he goes to beg food from people who are not at all charitable. Sometimes he suffers from the burning heat of household life, which is like a forest fire, and sometimes he becomes sad to have his wealth, which is as dear as life, plundered by kings in the name of heavy income taxes.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            When one is hot due to the scorching sun, one sometimes jumps into a river to gain relief. However, if the river is almost dried up and the water is too shallow, one may break his bones by jumping in. The conditioned soul is always experiencing miserable conditions. Sometimes his efforts to get help from friends are exactly like jumping into a dry river. By such actions, he does not derive any benefit. He only breaks his bones. Sometimes, suffering from a shortage of food, one may go to a person who is neither able to give charity nor willing to do so. Sometimes one is stationed in household life, which is compared to a forest fire (<span class="Italic">saṁsāra-dāvānala-līḍha-loka ). When a man is heavily taxed by the government, he becomes very sad. Heavy taxation obliges one to hide his income, but despite this endeavor the government agents are often so vigilant and strong that they take all the money anyway, and the conditioned soul becomes very aggrieved.</span>
+          </p>
+          <p>
+            Thus people are trying to become happy within the material world, but this is like trying to be happy in a forest fire. No one need go to a forest to set it ablaze: fire takes place automatically. Similarly, no one wants to be unhappy in family life or worldly life, but by the laws of nature unhappiness and distress are forced upon everyone. To become dependent on another’s maintenance is very degrading; therefore, according to the Vedic system, everyone should live independently. Only the <span class="Italic">śūdras</span> are unable to live independently. They are obliged to serve someone for maintenance. It is said in the <span class="Italic">śāstras:</span> <span class="Italic">kalau śūdra-sambhavāḥ.</span> In this age of Kali, everyone is dependent on another’s mercy for the maintenance of the body; therefore everyone is classified as a <span class="Italic">śūdra.</span> In the Twelfth Canto of <span class="Italic">Śrīmad-Bhāgavatam</span> it is said that in Kali-yuga the government will levy taxes without reciprocally benefiting the citizens. <span class="Italic">Anāvṛṣṭyā vinaṅkṣyanti durbhikṣa-kara-pīḍitāḥ.</span> In this age there will also be a shortage of rain; therefore a scarcity of food will arise, and the citizens will be very much harassed by government taxation. In this way the citizens will abandon their attempts to lead a peaceful life and will leave their homes and hearths and go to the forest in sheer disappointment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">350</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes, being defeated or plundered by a superior, powerful agent, a living entity loses all his possessions. He then becomes very morose, and lamenting their loss, he sometimes becomes unconscious. Sometimes he imagines a great palatial city in which he desires to live happily with his family members and riches. He thinks himself fully satisfied if this is possible, but such so-called happiness continues only for a moment.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            The word <span class="Italic">gandharva-puram</span> is very significant in this verse. Sometimes in the forest a very big castle appears, and this is called a castle in the air. Actually this castle does not exist anywhere but in one’s imagination. This is called <span class="Italic">gandharva-pura.</span> In the material forest, the conditioned soul sometimes contemplates great castles and skyscrapers, and he wastes his energy for such things, hoping to live in them very peacefully with his family forever. However, the laws of nature do not allow this. When he enters such castles, he temporarily thinks that he is very happy, even though his happiness is impermanent. His happiness may last for a few years, but because the owner of the castle has to leave the castle at the time of death, everything is eventually lost. This is the way of worldly transactions. Such happiness is described by Vidyāpati as the happiness one derives upon seeing a drop of water in the desert. The desert is heated by scorching sunshine, and if we want to reduce the desert temperature, we need huge amounts of water—millions and millions of gallons. What effect will one drop have? Water certainly has value, but one drop of water cannot reduce the heat of the desert. In this material world everyone is ambitious, but the heat is very scorching. What will an imaginary castle in the air do to help? Śrīla Vidyāpati has therefore sung: <span class="Italic">tāṭala saikate, vāri-bindu-sama, suta-mita-ramaṇi-samāje.</span> The happiness of family life, friends and society is compared to a drop of water in the scorching desert. The entire material world is busy trying to attain happiness because happiness is the prerogative of the living being. Unfortunately, due to falling in contact with the material world, the living entity simply struggles for existence. Even if one becomes happy for a while, a very powerful enemy may plunder everything. There are many instances in which big businessmen suddenly become paupers in the street. Yet the nature of material existence is such that foolish people are attracted to these transactions and they forget the real business of self-realization.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">503</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes the merchant in the forest wants to climb the hills and mountains, but due to insufficient footwear, his feet are pricked by small stone fragments and by thorns on the mountain. Being pricked by them, he becomes very aggrieved. Sometimes a person who is very attached to his family becomes overwhelmed with hunger, and due to his miserable condition he becomes furious with his family members.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The ambitious conditioned soul wants to be very happy in this material world with his family, but he is compared to a traveler in the forest who desires to climb a hill full of thorns and small stones. As stated in the previous verse, the happiness derived from society, friendship and love is like a drop of water in the scorching heat of the desert. One may want to become very great and powerful in society, but this is like attempting to climb a hill full of thorns. Śrīla Viśvanātha Cakravartī Ṭhākura compares one’s family to high mountains. Becoming happy in their association is like a hungry man’s endeavoring to climb a mountain full of thorns. Almost 99.9 percent of the population is unhappy in family life, despite all the attempts being made to satisfy the family members. In the Western countries, due to the dissatisfaction of the family members. there is actually no family life. There are many cases of divorce, and out of dissatisfaction, the children leave the protection of their parents. Especially in this age of Kali, family life is being reduced. Everyone is becoming self-centered because that is the law of nature. Even if one has sufficient money to maintain a family, the situation is such that no one is happy in family life. Consequently according to the <span class="Italic">varṇāśrama</span> institution, one has to retire from family life in middle age: <span class="Italic">pañcāśordhvaṁ vanaṁ vrajet.</span> One should voluntarily retire from family life at the age of fifty and go to Vṛndāvana or a forest. This is recommended by Śrīla Prahlāda Mahārāja (<span class="Ref_Italic">Bhāg.</span> 7.5.5):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tat sādhu manye ’sura-varya dehināṁ<br>sadā samudvigna-dhiyām asad-grahāt<br>hitvātma-pātaṁ gṛham andha-kūpaṁ<br>vanaṁ gato yad dharim āśrayeta</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            There is no benefit in transferring from one forest to another. One must go to the Vṛndāvana forest and take shelter of Govinda. That will make one happy. The International Society for Krishna Consciousness is therefore constructing a Kṛṣṇa-Balarāma temple to invite its members as well as outsiders to come and live peacefully in a spiritual atmosphere. That will help one become elevated to the transcendental world and return home, back to Godhead. Another sentence in this verse is very significant: <span class="Italic">kauṭumbikaḥ krudhyati vai janāya.</span> When one’s mind is disturbed in so many ways, he satisfies himself by becoming angry with his poor wife and children. The wife and children are naturally dependent on the father, but the father, being unable to maintain the family properly, becomes mentally distressed and therefore chastises the family members unnecessarily. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (12.2.9): <span class="Italic">ācchinna-dāra-draviṇā yāsyanti giri-kānanam.</span> Being disgusted with family life, one separates from the family by divorce or some other means. If one has to separate, why not separate willingly? Systematic separation is better than forced separation. Forced separation cannot make anyone happy, but by mutual consent or by the Vedic arrangement one must separate from his family affairs at a certain age and fully depend on Kṛṣṇa. This makes one’s life successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">295</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The conditioned soul in the material forest is sometimes swallowed by a python or crushed. At such a time he is left lying in the forest like a dead person, devoid of consciousness and knowledge. Sometimes other poisonous snakes bite him. Being blind to his consciousness, he falls down into a dark well of hellish life with no hope of being rescued.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            When one becomes unconscious due to being bitten by a snake, one cannot understand what is taking place outside the body. This unconscious condition is the condition of deep sleep. Similarly, the conditioned soul is actually sleeping on the lap of the illusory energy. Bhaktivinoda Ṭhākura has sung, <span class="Italic">kota nidrā yāo māyā-piśācīra kole:</span> “O living entity, how long will you sleep in this condition on the lap of the illusory energy?” People do not understand that they are actually sleeping in this material world, being devoid of knowledge of spiritual life. Caitanya Mahāprabhu therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">enechi auṣadhi māyā nāśibāra lāgi’<br>hari-nāma-mahā-mantra lao tumi māgi’</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I have brought medicine to awaken every living being from perpetual sleep. Please receive the holy name of the Lord, the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> and awaken.” The <span class="Ref_Italic">Kaṭha Upaniṣad</span> (1.3.14) also says, <span class="Italic">uttiṣṭha jāgrata prāpya varān nibodhata:</span> “O living entity, you are sleeping in this material world. Please get up and take advantage of your human form of life.” The sleeping condition means loss of all knowledge. In <span class="Ref_Italic">Bhagavad-gītā</span> (2.69) it is also said, <span class="Italic">yā niśā sarva-bhūtānāṁ tasyāṁ jāgarti saṁyamī:</span> “What is night for all beings is the time of awakening for the self-controlled.” Even in the higher planets, everyone is under the spell of the illusory energy. No one is really interested in the real values of life. The sleeping condition, called <span class="Italic">kāla-sarpa</span> (the time factor), keeps the conditioned soul in a state of ignorance, and therefore pure consciousness is lost. In the forest there are many blind wells, and if one falls down in one there is no chance of being rescued. In a state of sleep, one remains perpetually bitten by some animals, especially snakes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">185</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes, in order to have a little insignificant sex enjoyment, one searches after debauched women. In this attempt, one is insulted and chastised by the women’s kinsmen. This is like going to take honey from a beehive and being attacked by the bees. Sometimes, after spending lots of money, one may acquire another woman for some extra sense enjoyment. Unfortunately, the object of sense enjoyment, the woman, is taken away or kidnapped by another debauchee.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            In a great forest, honeycombs are very important. People often go there to collect honey from the combs, and sometimes the bees attack and punish them. In human society, those who are not Kṛṣṇa conscious remain in the forest of material life simply for the honey of sex life. Such debauchees are not at all satisfied with one wife. They want many women. Day after day, with great difficulty, they try to secure such women, and sometimes, while trying to taste this kind of honey, one is attacked by a woman’s kinsmen and chastised very heavily. By bribing others, one may secure another woman for enjoyment, yet another debauchee may kidnap her or offer her something better. This woman hunting is going on in the forest of the material world, sometimes legally, and sometimes illegally. Consequently in this Kṛṣṇa consciousness movement the devotees are forbidden to have illicit sex. Thus they avoid so many difficulties. One should remain satisfied with one woman, being duly married. One can satisfy one’s lusty desires with his wife without creating disturbances in society and being punished for doing so.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">84</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes the living entity is busy counteracting the natural disturbances of freezing cold, scorching heat, strong wind, excessive rainfall and so forth. When he is unable to do so, he becomes very unhappy. Sometimes he is cheated in business transactions one after another. In this way, by cheating, living entities create enmity among themselves.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            This is an example of the struggle for existence, the attempt to counteract the onslaught of material nature. This creates enmity in society, and consequently society is filled with envious people. One person is envious of another, and this is the way of the material world. The Kṛṣṇa consciousness movement aims at creating an atmosphere of non-envy. Of course it is not possible for everyone to become Kṛṣṇa conscious, but the Kṛṣṇa consciousness movement can create an exemplary society wherein there is no envy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">82</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the forest path of material existence, sometimes a person is without wealth and due to this does not have a proper home, bed or sitting place, nor proper family enjoyment. He therefore goes to beg money from others, but when his desires are not fulfilled by begging, he wants to borrow or steal the property of others. Thus he is insulted in society.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The principles of beg, borrow or steal are very appropriate in this material world. When one is in want, he begs, borrows or steals. If begging is unsuccessful, he borrows. If he cannot pay, he steals, and when he is caught, he is insulted. This is the law of material existence. No one can live here very honestly; therefore by trickery, cheating, begging, borrowing or stealing, one tries to satisfy his senses. Thus no one in this material world is living peacefully.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">94</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Due to monetary transactions, relationships become very strained and end in enmity. Sometimes the husband and wife walk on the path of material progress, and to maintain their relationship they work very hard. Sometimes due to scarcity of money or due to diseased conditions, they are embarrassed and almost die.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            In this material world, there are many transactions between peoples and societies as well as between nations, but gradually these end in enmity between the two parties. Similarly, in the marriage relationship, monetary transactions are sometimes overpowered by the dangerous conditions of material life. One then becomes diseased or monetarily embarrassed. In the modern age most countries have developed economically, but due to business exchanges, relationships seem to be strained. Finally wars are declared between nations, and as a result of these upheavals there is destruction all over the world, and people suffer heavily.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">150</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, on the forest path of material life, first a person is bereft of his father and mother, and after their death he becomes attached to his newly born children. In this way he wanders on the path of material progress and is eventually embarrassed. Nonetheless, no one knows how to get out of this, even up to the moment of death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            In this material world, family life is an institution of sex. <span class="Italic">Yan maithunādi-gṛhamedhi-sukham</span> (<span class="Ref_Italic">Bhāg.</span> 7.9.45). Through sex, the father and mother beget children, and the children get married and go down the same path of sexual life. After the death of the father and mother, the children get married and beget their own children. Thus generation after generation these things go on in the same way without anyone’s attaining liberation from the embarrassment of material life. No one accepts the spiritual processes of knowledge and renunciation, which end in <span class="Italic">bhakti-yoga.</span> Actually human life is meant for <span class="Italic">jñāna</span> and <span class="Italic">vairāgya,</span> knowledge and renunciation. Through these one can attain the platform of devotional service. Unfortunately people in this age avoid the association of liberated people (<span class="Italic">sādhu-saṅga</span>) and continue in their stereotyped way of family life. Thus they are embarrassed by the exchange of money and sex.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">119</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There were and are many political and social heroes who have conquered enemies of equal power, yet due to their ignorance in believing that the land is theirs, they fight one another and lay down their lives in battle. They are not able to take up the spiritual path accepted by those in the renounced order. Although they are big heroes and political leaders, they cannot take to the path of spiritual realization.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Big political leaders might be able to conquer equally powerful political enemies, but unfortunately they cannot subdue their strong senses, the enemies that always accompany them. Not being able to conquer these nearby enemies, they simply try to conquer other enemies. and ultimately they die in the struggle for existence. They do not take to the path of spiritual realization or become <span class="Italic">sannyāsīs.</span> Sometimes these big leaders take up the guise of a <span class="Italic">sannyāsī</span> and call themselves <span class="Italic">mahātmās,</span> but their only business is conquering their political enemies. Because they spoil their lives with the illusion of “this is my land and my family,” they cannot progress spiritually and attain liberation from the clutches of <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">276</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes the living entity in the forest of material existence takes shelter of creepers and desires to hear the chirping of the birds in those creepers. Being afraid of roaring lions in the forest, he makes friends with cranes, herons and vultures.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            In the forest of the material world there are many animals and birds, trees and creepers. Sometimes the living entity wants to take shelter of the creepers; in other words, he wants to be happy by being embraced by the creeperlike arms of his wife. Within the creepers there are many chirping birds; this indicates that he wants to satisfy himself by hearing the sweet voice of his wife. In old age, however, he sometimes becomes afraid of imminent death, which is compared to a roaring lion. To save himself from the lion’s attack, he takes shelter of some bogus <span class="Italic">svāmīs, yogīs,</span> incarnations, pretenders and cheaters. Being misled by the illusory energy in this way, he spoils his life. It is said, <span class="Italic">hariṁ vinā mṛtiṁ na taranti:</span> no one can be saved from the imminent danger of death without taking shelter of the Supreme Personality of Godhead. The word <span class="Italic">hari</span> indicates the lion as well as the Supreme Lord. To be saved from the hands of Hari, the lion of death, one must take shelter of the supreme Hari, the Supreme Personality of Godhead. People with a poor fund of knowledge take shelter of nondevotee cheaters and pretenders in order to be saved from the clutches of death. In the forest of the material world, the living entity first of all wants to be very happy by taking shelter of the creeperlike arms of his wife and hearing her sweet voice. Later, he sometimes takes shelter of so-called <span class="Italic">gurus and sādhus</span> who are like crane, herons and vultures. Thus he is cheated both ways by not taking shelter of the Supreme Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">191</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being cheated by them, the living entity in the forest of the material world tries to give up the association of these so-called yogīs, svāmīs and incarnations and come to the association of real devotees, but due to misfortune he cannot follow the instructions of the spiritual master or advanced devotees; therefore he gives up their company and again returns to the association of monkeys who are simply interested in sense gratification and women. He derives satisfaction by associating with sense gratifiers and enjoying sex and intoxication. In this way he spoils his life simply by indulging in sex and intoxication. Looking into the faces of other sense gratifiers, he becomes forgetful and thus approaches death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Sometimes a foolish person becomes disgusted with bad association and comes to the association of devotees and <span class="Italic">brāhmaṇas</span> and takes initiation from a spiritual master. As advised by the spiritual master, he tries to follow the regulative principles, but due to misfortune he cannot follow the instructions of the spiritual master. He therefore gives up the company of devotees and goes to associate with simian people who are simply interested in sex and intoxication. Those who are so-called spiritualists are compared to monkeys. Outwardly, monkeys sometimes resemble <span class="Italic">sādhus</span> because they live naked in the forest and pick fruits, but their only desire is to keep many female monkeys and enjoy sex life. Sometimes so-called spiritualists seeking a spiritual life come to associate with Kṛṣṇa conscious devotees, but they cannot execute the regulative principles or follow the path of spiritual life. Consequently they leave the association of devotees and go to associate with sense gratifiers, who are compared to monkeys. Again they revive their sex and intoxication, and looking at one another’s faces, they are thus satisfied. In this way they pass their lives up to the point of death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">78</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the living entity becomes exactly like a monkey jumping from one branch to another, he remains in the tree of household life without any profit but sex. Thus he is kicked by his wife just like the he-ass. Unable to gain release, he remains helplessly in that position. Sometimes he falls victim to am incurable disease, which is like falling into a mountain cave. He becomes afraid of death, which is like the elephant in the back of that cave, and he remains stranded, grasping at the twigs and branches of a creeper.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            The precarious condition of a householder’s life is described herein. A householder’s life is full of misery, and the only attraction is sex with the wife who kicks him during sexual intercourse, just as the she-ass does her mate. Due to continuous sex life, he falls victim to many incurable diseases. At that time, being afraid of death, which is like an elephant. he remains hanging from the twigs and branches of the tree, just like a monkey.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">106</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O killer of enemies, Mahārāja Rahūgaṇa, if the conditioned soul somehow or other gets out of his dangerous position, he again returns to his home to enjoy sex life, for that is the way of attachment. Thus, under the spell of the Lord’s material energy, he continues to loiter in the forest of material existence. He does not discover his real interest even at the point of death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            This is the way of material life. When one is captured by sexual attraction, he becomes implicated in so many ways and cannot understand the real aim of life. Therefore <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.5.31) says, <span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇum:</span> generally people do not understand the ultimate goal of life. As stated in the <span class="Italic">Vedas, oṁ tad viṣṇoḥ paramaṁ padaṁ sadā paśyanti sūrayaḥ:</span> those who are spiritually advanced simply look to the lotus feet of Viṣṇu. The conditioned soul. however, not being interested in reviving his relationship with Viṣṇu, becomes captivated by material activities and remains in everlasting bondage, being misled by so-called leaders.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">144</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Rahūgaṇa, you are also a victim of the external energy, being situated on the path of attraction to material pleasure. So that you may become an equal friend to all living entities, I now advise you to give up your kingly position and the rod by which you punish criminals. Give up attraction to the sense objects and take up the sword of knowledge sharpened by devotional service. Then you will be able to cut the hard knot of illusory energy and cross to the other side of the ocean of nescience.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> Lord Kṛṣṇa compares the material world to a tree of illusion from which one must cut oneself free:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na rūpam asyeha tathopalabhyate<br>nānto na cādir na ca sampratiṣṭhā<br>aśvattham enaṁ suvirūḍha-mūlam<br>asaṅga-śastreṇa dṛḍhena chittvā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tataḥ padaṁ tat parimārgitavyaṁ<br>yasmin gatā na nivartanti bhūyaḥ<br>tam eva cādyaṁ puruṣaṁ prapadye<br>yataḥ pravṛttiḥ prasṛtā purāṇī</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The real form of this tree cannot be perceived in this world. No one can understand where it ends, where it begins, or where its foundation is. But with determination, one must cut down this tree with the weapon of detachment. So doing, one must seek that place from which, having once gone, one never returns, and there surrender to that Supreme Personality of Godhead from whom everything has begun and in whom everything is abiding since time immemorial.” (Bg. 15.3–4)
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">203</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Rahūgaṇa said: This birth as a human being is the best of all. Even birth among the demigods in the heavenly planets is not as glorious as birth as a human being on this earth. What is the use of the exalted position of a demigod? In the heavenly planets, due to profuse material comforts, there is no possibility of associating with devotees.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Human birth is a great opportunity for self-realization. One may take birth in a high planetary system among the demigods, but due to the profusion of material comforts, one cannot gain release from material bondage. Even on this earth those who are very opulent do not generally care to take to Kṛṣṇa consciousness. An intelligent person actually interested in getting freed from the material clutches must associate with pure devotees. By such association, one can gradually become detached from the material attraction of money and women. Money and women are the basic principles of material attachment. Śrī Caitanya Mahāprabhu therefore advised those who are actually serious about returning back to Godhead to give up money and women in order to be fit to enter the kingdom of God. Money and women can be fully utilized in the service of the Lord, and one who can utilize them in this way can become freed from material bondage. <span class="Italic">Satāṁ prasaṅgān mama vīrya-saṁvido bhavanti hṛt-karṇa-rasāyanāḥ kathāḥ</span> (<span class="Ref_Italic">Bhāg.</span> 3.25.25). Only in the association of devotees can one relish the glorification of the Supreme Personality of Godhead. Just through a little association with a pure devotee. one can become successful in his journey back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">56</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It is not at all wonderful that simply by being covered by the dust of your lotus feet, one immediately attains the platform of pure devotional service to Adhokṣaja, which is not available even to great demigods like Brahmā. By associating with you just for a moment, I am now freed from all argument, false prestige and lack of discrimination, which are the roots of entanglement in the material world. Now I am free from all these problems.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Association with pure devotees certainly frees one from the material clutches. This is certainly true of King Rahūgaṇa’s association with Jaḍa Bharata. King Rahūgaṇa was immediately freed from the misgivings of material association. The arguments offered by pure devotees to their disciples are so convincing that even a dull-headed disciple is immediately enlightened with spiritual knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">196</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I offer my respectful obeisances unto the great personalities, whether they walk on the earth’s surface as children, young boys, avadhūtas or great brāhmaṇas. Even if they are hidden under different guises, I offer my respects to all of them. By their mercy, may there be good fortune in the royal dynasties that are always offending them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            King Rahūgaṇa was very repentant because he had forced Jaḍa Bharata to carry his palanquin. He therefore began offering prayers to all kinds of <span class="Italic">brāhmaṇas</span> and self-realized persons, even though they might be playing like children or hiding in some guises. The four Kumāras walked everywhere in the guise of five-year-old boys, and similarly there are many <span class="Italic">brāhmaṇas,</span> knowers of Brahman, who traverse the globe either as young men, children or <span class="Italic">avadhūtas.</span> Being puffed up due to their position, the royal dynasties generally offend these great personalities. Therefore King Rahūgaṇa began to offer his respectful obeisances unto them so that the offensive royal dynasties might not glide down into a hellish condition. If one offends a great personality. the Supreme Personality of Godhead does not excuse one, although the great personalities themselves might not take offense. Mahārāja Ambarīṣa was offended by Durvāsā, who even approached Lord Viṣṇu for pardon. Lord Viṣṇu would not grant him pardon; therefore he had to fall down at the lotus feet of Mahārāja Ambarīṣa, even though Mahārāja Ambarīṣa was a <span class="Italic">kṣatriya-gṛhastha.</span> One should be very careful not to offend the lotus feet of Vaiṣṇavas and <span class="Italic">brāhmaṇas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">156</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī continued: My dear King, O son of mother Uttarā, there were some waves of dissatisfaction in the mind of Jaḍa Bharata due to his being insulted by King Rahūgaṇa, who made him carry his palanquin, but Jaḍa Bharata neglected this, and his heart again became calm and quiet like an ocean. Although King Rahūgaṇa had insulted him, he was a great paramahaṁsa. Being a Vaiṣṇava, he was naturally very kindhearted, and he therefore told the King about the constitutional position of the soul. He then forgot the insult because King Rahūgaṇa pitifully begged pardon at his lotus feet. After this, he began to wander all over the earth, just as before.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (3.25.21), Kapiladeva describes the symptoms of great personalities: <span class="Italic">titikṣavaḥ kāruṇikāḥ suhṛdaḥ sarva-dehinām.</span> A saintly devotee is certainly very tolerant. He is the friend of all living entities, and he does not create enemies within the world. A pure devotee has all the qualities of a <span class="Italic">sādhu.</span> Jaḍa Bharata is an example of this. Due to the material body, his senses were certainly agitated when he was insulted by King Rahūgaṇa, but later, due to the King’s humble submission, Jaḍa Bharata excused him. It is the duty of everyone desiring to return to Godhead to become submissive like King Rahūgaṇa and beg pardon of Vaiṣṇavas one may have offended. Vaiṣṇavas are generally very kindhearted; therefore if one immediately submits himself at the lotus feet of a Vaiṣṇava, one is immediately cleared of offensive reactions. If one does not do so, the reactions will remain, and the results will not be very palatable.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">139</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After receiving lessons from the great devotee Jaḍa Bharata, King Rahūgaṇa of the state of Sauvīra became completely aware of the constitutional position of the soul. He thus gave up the bodily conception completely. My dear King, whoever takes shelter of the servant of the servant of the Lord is certainly glorified because he can without difficulty give up the bodily conception.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            As stated in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 22.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">“sādhu-saṅga”, “sādhu-saṅga”——sarva-śāstre kaya<br>lava-mātra sādhu-saṅge sarva-siddhi haya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            It is a fact that if one takes shelter of a pure devotee, one attains all perfection, even if the association is a short one. A <span class="Italic">sādhu</span> is a pure devotee of the Lord. It has been our practical experience that the first instruction of our spiritual master infused us with Kṛṣṇa consciousness so that now we are at least on the path of Kṛṣṇa consciousness and can understand the philosophy. As a result, there are many devotees engaged in this Kṛṣṇa consciousness movement. The whole world is revolving under the bodily conception; therefore there must be devotees all over the world to deliver people from the false bodily conception and fully engage them in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">42</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit then told Śukadeva Gosvāmī: My dear lord, O great devotee sage, you are omniscient. You have very nicely described the position of the conditioned soul, who is compared to a merchant in the forest. From these instructions intelligent men can understand that the senses of a person in the bodily conception are like rogues and thieves in that forest, and one’s wife and children are like jackals and other ferocious animals. However, it is not very easy for the unintelligent to understand the purport of this story because it is difficult to extricate the exact meaning from the allegory. I therefore request Your Holiness to give the direct meaning.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            There are many stories and incidents in <span class="Italic">Śrīmad-Bhāgavatam</span> that are described figuratively. Such allegorical descriptions may not be understood by unintelligent men; therefore it is the duty of the student to approach a bona fide spiritual master for the direct explanation.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Thirteenth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled, “Further Talks Between King Rahūgaṇa and Jaḍa Bharata.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/13">https://prabhupadabooks.com/sb/5/13</a><!-- span.text_source_copied_date
+        | on 2023-02-19 16:13:57 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.12: Conversation Between Maharaja Rahugana and Jada Bharata     Next: SB 5.14: The Material World as the Great Forest of Enjoyment</div>
+      </p>
+    </div>
+  </body>
+</html>

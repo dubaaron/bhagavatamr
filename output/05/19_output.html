@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.19, A Description of the Island of Jambūdvīpa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Nineteen:<br>A Description of the Island of Jambūdvīpa
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">This chapter describes the glories of Bhārata-varṣa, and it also describes how Lord Rāmacandra is being worshiped in the tract of land known as Kimpuruṣa-varṣa. The inhabitants of Kimpuruṣa-varṣa are fortunate because they worship Lord Rāmacandra with His faithful servant Hanumān. Lord Rāmacandra exemplifies an incarnation of Godhead who descends for the mission of <span class="Italic">paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām [Bg. </span>4.8]—protecting the devotees and destroying the miscreants. Lord Rāmacandra exhibits the actual purpose of an incarnation of the Supreme Personality of Godhead, and the devotees take the opportunity to offer loving transcendental service to Him. One should surrender fully to the Lord, forgetting one’s so-called material happiness, opulence and education, which are not at all useful for pleasing the Lord. The Lord is pleased only by the process of surrender unto Him.</div><div class="Normal-Level">When Devarṣi Nārada descended to instruct Sārvaṇi Manu, he described the opulence of Bhārata-varṣa, India. Sārvaṇi Manu and the inhabitants of Bhārata-varṣa engage in devotional service to the Supreme Personality of Godhead, who is the origin of creation, maintenance and annihilation and who is always worshiped by self-realized souls. In the planet known as Bhārata-varṣa there are many rivers and mountains, as there are in other tracts of land, yet Bhārata-varṣa has special significance because in this tract of land there exists the Vedic principle of <span class="Italic">varṇāśrama-dharma,</span> which divides society into four <span class="Italic">varṇas</span> and four <span class="Italic">āśramas.</span> Furthermore, Nārada Muni’s opinion is that even if there is some temporary disturbance in the execution of the <span class="Italic">varṇāśrama-dharma</span> principles, they can be revived at any moment. The effect of adhering to the institution of <span class="Italic">varṇāśrama</span> is gradual elevation to the spiritual platform and liberation from material bondage. By following the principles of <span class="Italic">varṇāśrama-dharma,</span> one gets the opportunity to associate with devotees. Such association gradually awakens one’s dormant propensity to serve the Supreme Personality of Godhead and frees one from all the basic principles of sinful life. One then gets the opportunity to offer unalloyed devotional service to the Supreme Lord, Vāsudeva. Because of this opportunity, the inhabitants of Bhārata-varṣa are praised even in the heavenly planets. Even in the topmost planet of this universe, Brahmaloka, the position of Bhārata-varṣa is discussed with great relish.</div><div class="Normal-Level">All the conditioned living entities are evolving within the universe in different planets and different species of life. Thus one may be elevated to Brahmaloka, but then one must again descend to earth, as confirmed in <span class="Italic">Śrīmad Bhagavad-gītā</span> (<span class="Italic">ābrahma-bhuvanāl lokāḥ punar āvartino ’rjuna [Bg. </span>8.16]). If those who live in Bhārata-varṣa rigidly follow the principles of <span class="Italic">varṇāśrama-dharma</span> and develop their dormant Kṛṣṇa consciousness, they need not return to this material world after death. Any place where one cannot hear about the Supreme Personality of Godhead from realized souls, even if it be Brahmaloka, is not very congenial to the living entity. If one who has taken birth in the land of Bhārata-varṣa as a human being does not take advantage of the opportunity for spiritual elevation, his position is certainly the most miserable. In the land known as Bhāratavarṣa, even if one is a <span class="Italic">sarva-kāma-bhakta,</span> a devotee seeking the fulfillment of some material desire, he is freed from all material desires by his association with devotees, and ultimately he becomes a pure devotee and returns home, back to Godhead, without difficulty.</div><div class="Normal-Level">At the end of this chapter, Śrī Śukadeva Gosvāmī describes to Mahārāja Parīkṣit the eight sub-islands within the island of Jambūdvīpa.</div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī said: My dear King, in Kimpuruṣa-varṣa the great devotee Hanumān is always engaged with the inhabitants of that land in devotional service to Lord Rāmacandra, the elder brother of Lakṣmaṇa and dear husband of Sītādevī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">198</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A host of Gandharvas is always engaged in chanting the glories of Lord Rāmacandra. That chanting is always extremely auspicious. Hanumānjī and Arṣṭiṣeṇa, the chief person in Kimpuruṣa-varṣa, constantly hear those glories with complete attention. Hanumān chants the following mantras.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            In the <span class="Italic">Purāṇas</span> there are two different opinions concerning Lord Rāmacandra. In the <span class="Ref_Italic">Laghu-bhāgavatāmṛta</span> (5.34–36) this is confirmed in the description of the incarnation of Manu.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsudevādi-rūpāṇām<br>avatārāḥ prakīrtitāḥ<br>viṣṇu-dharmottare rāma-<br>lakṣmaṇādyāḥ kramādamī</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">pādme tu rāmo bhagavān<br>nārāyaṇa itīritaḥ<br>śeṣaś cakraṁ ca śaṅkhaś ca<br>kramāt syur lakṣmaṇādayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">madhya-deśa-sthitāyodhyā-<br>pure ’sya vasatiḥ smṛtā<br>mahā-vaikuṇṭhaloke ca<br>rāghavedrasya kīrtitā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The <span class="Italic">Viṣṇu-dharmottara</span> describes that Lord Rāmacandra and His brothers—Lakṣmaṇa, Bharata and Śatrughna—are incarnations of Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha respectively. The <span class="Italic">Padma Purāṇa,</span> however, says that Lord Rāmacandra is an incarnation of Nārāyaṇa and that the other three brothers are incarnations of Śeṣa, Cakra and Śaṅkha. Therefore Śrīla Baladeva Vidyābhūṣaṇa has concluded, <span class="Italic">tad idaṁ kalpa-bhedenaiva sambhāvyam.</span> In other words, these opinions are not contradictory. In some millenniums Lord Rāmacandra and His brothers appear as incarnations of Vāsudeva, Saṅkarṣaṇa, Pradyumna and Aniruddha, and in other millenniums They appear as incarnations of Nārāyaṇa, Śeṣa, Cakra and Śaṅkha. The residence of Lord Rāmacandra on this planet is Ayodhyā. Ayodhyā City is still existing in the district of Hyderabad, which is situated on the northern side of Uttar Pradesh.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Let me please Your Lordship by chanting the bīja-mantra oṁkāra. I wish to offer my respectful obeisances unto the Personality of Godhead, who is the best among the most highly elevated personalities. Your Lordship is the reservoir of all the good qualities of Āryans, people who are advanced. Your character and behavior are always consistent, and You always control Your senses and mind. Acting just like an ordinary human being, You exhibit exemplary character to teach others how to behave. There is a touchstone that can be used to examine the quality of gold, but You are like a touchstone that can verify all good qualities. You are worshiped by brāhmaṇas who are the foremost of all devotees. You, the Supreme Person, are the King of kings, and therefore I offer my respectful obeisances unto You.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">698</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Lord, whose pure form [sac-cid-ānanda-vigraha [Bs. 5.1]] is uncontaminated by the modes of material nature, can be perceived by pure consciousness. In the Vedānta He is described as being one without a second. Because of His spiritual potency, He is untouched by the contamination of material nature, and because He is not subjected to material vision, He is known as transcendental. He has no material activities, nor has He a material form or name. Only in pure consciousness, Kṛṣṇa consciousness, can one perceive the transcendental form of the Lord. Let us be firmly fixed at the lotus feet of Lord Rāmacandra, and let us offer our respectful obeisances unto those transcendental lotus feet.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            The Supreme Personality of Godhead, Kṛṣṇa, appears in various expansions, as stated in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.39):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">rāmādi-mūrtiṣu kalā-niyamena tiṣṭhan<br>nānāvatāram akarod bhuvaneṣu kintu<br>kṛṣṇaḥ svayaṁ samabhavat paramaḥ pumān yo<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship the Supreme Personality of Godhead, Govinda, who is always situated in various incarnations such as Rāma, Nṛsiṁha and many subincarnations as well, but who is the original personality of Godhead known as Kṛṣṇa and who incarnates personally also.” Kṛṣṇa, who is <span class="Italic">viṣṇu-tattva,</span> has expanded Himself in many Viṣṇu forms, of which Lord Rāmacandra is one. We know that the <span class="Italic">viṣṇu-tattva</span> is carried by the transcendental bird Garuḍa and is equipped with different types of weapons in four hands. Therefore we may doubt whether Lord Rāmacandra could be in the same category, since He was carried by Hanumān, not by Garuḍa, and had neither four hands nor the <span class="Italic">śaṅkha, cakra, gadā</span> and <span class="Italic">padma.</span> Consequently this verse clarifies that Rāmacandra is as good as Kṛṣṇa (<span class="Italic">rāmādi-mūrtiṣu kalā</span>). Although Kṛṣṇa is the original Supreme Personality of Godhead, Rāmacandra is not different from Him. Rāmacandra is unaffected by the modes of material nature, and therefore He is <span class="Italic">praśānta,</span> never disturbed by those modes.
+          </p>
+          <p>
+            Unless one is saturated with love for the Supreme Personality of Godhead, one cannot appreciate the transcendental value of Lord Rāmacandra; one cannot see Him with material eyes. Because demons like Rāvaṇa have no spiritual vision, they consider Lord Rāmacandra an ordinary <span class="Italic">kṣatriya</span> king. Rāvaṇa therefore attempted to kidnap Lord Rāmacandra’s eternal consort, Sītādevī. Actually, however, Rāvaṇa could not carry off Sītādevī in her original form. As soon as she was touched by Rāvaṇa’s hands, she gave him a material form, but she maintained her original form beyond his vision. Therefore in this verse the words <span class="Italic">pratyak praśāntam</span> indicate that Lord Rāmacandra and His potency, the goddess Sītā, keep themselves aloof from the influence of the material energy.
+          </p>
+          <p>
+            In the <span class="Italic">Upaniṣads</span> it is said: <span class="Italic">yam evaiṣa vṛṇute tena labhyaḥ.</span> The Supreme Lord, Paramātmā, the Personality of Godhead, can be seen or perceived only by persons who are saturated with devotional service. As stated in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.38):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">premāñjana-cchurita-bhakti-vilocanena<br>santaḥ sadaiva hṛdayeṣu vilokayanti<br>yaṁ śyāmasundaram acintya-guṇa-svarūpaṁ<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship the primeval Lord, Govinda, who is always seen by the devotee whose eyes are anointed with the pulp of love. He is seen in His eternal form of Śyāmasundara, situated within the heart of the devotee.” Similarly, in the <span class="Italic">Chāndogya Upaniṣad</span> it is stated, <span class="Italic">etās tisro devatā anena jīvena.</span> In this verse of the <span class="Italic">Chāndogya Upaniṣad</span> the word <span class="Italic">anena</span> is used to distinguish the <span class="Italic">ātmā</span> and Paramātmā as two separate identities. The words <span class="Italic">tisro devatā</span> indicate that the body of the living entity is made of three material elements—fire, earth and water. Although the Paramātmā enters the heart of the <span class="Italic">jīvātmā,</span> who is influenced and designated by a material body, the Paramātmā has nothing to do with the <span class="Italic">jīvātmā’s</span> body. Because the Paramātmā has no material connections, He is described here as <span class="Italic">anāma-rūpaṁ niraham.</span> The Paramātmā has no material identity, whereas the <span class="Italic">jīvātmā</span> does. The <span class="Italic">jīvātmā</span> may introduce himself as an Indian, American, German and so on, but the Paramātmā has no such material designations, and therefore He has no material name. The <span class="Italic">jīvātmā</span> is different from his name, but the Paramātmā is not; His name and He Himself are one and the same. This is the meaning of <span class="Italic">niraham,</span> which means “without material designations.” This word cannot possibly be twisted to mean that the Paramātmā has no <span class="Italic">ahaṅkāra,</span> no “I-ness” or identity. He has His transcendental identity as the Supreme. This is the explanation given by Śrīla Jīva Gosvāmī. According to another interpretation, given by Viśvanātha Cakravartī Ṭhākura, <span class="Italic">niraham</span> means <span class="Italic">nirniścayena aham.</span> <span class="Italic">Niraham</span> does not mean that the Supreme Lord has no identity. Rather, the stress given by the word <span class="Italic">aham</span> proves strongly that He does have His personal identity because <span class="Italic">nir</span> not only means “negative” but also means “strong ascertainment.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">554</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It was ordained that Rāvaṇa, chief of the Rākṣasas, could not be killed by anyone but a man, and for this reason Lord Rāmacandra, the Supreme Personality of Godhead, appeared in the form of a human being. Lord Rāmacandra’s mission, however, was not only to kill Rāvaṇa but also to teach mortal beings that material happiness centered around sex life or centered around one’s wife is the cause of many miseries. He is the self-sufficient Supreme Personality of Godhead, and nothing is lamentable for Him. Therefore why else could He be subjected to tribulations by the kidnapping of mother Sītā?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            When the Lord appears in this universe in the form of a human being, He has two purposes, as stated in <span class="Ref_Italic">Bhagavad-gītā</span><span class="Italic"> [Bg. </span>4.8]—<span class="Italic">paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām:</span> to destroy the demons and protect the devotees. To protect the devotees, the Lord not only satisfies them by His personal presence but also teaches them so that they will not fall down from devotional service. By His personal example, Lord Rāmacandra taught the devotees that it is better not to enter married life, which is certainly followed by many tribulations. As confirmed in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (7.9.45):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yan maithunādi-gṛhamedhi-sukhaṁ hi tucchaṁ<br>kaṇḍūyanena karayor iva duḥkha-duḥkham<br>tṛpyanti neha kṛpaṇā bahu-duḥkha-bhājaḥ<br>kaṇḍūtivan manasijaṁ viṣaheta-dhīraḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <span class="Italic">Kṛpaṇas,</span> those who are not advanced in spiritual knowledge and who are therefore just the opposite of <span class="Italic">brāhmaṇas,</span> generally take to family life, which is a concession for sex. Thus they enjoy sex again and again, although that sex is followed by many tribulations. This is a warning to devotees. To teach this lesson to devotees and to human society in general, Lord Śrī Rāmacandra, although the Supreme Personality of Godhead Himself, underwent a series of tribulations because He accepted a wife, mother Sītā. Lord Rāmacandra underwent these austerities, of course, only to instruct us; actually He never has any reason to lament for anything.
+          </p>
+          <p>
+            Another aspect of the Lord’s instructions is that one who accepts a wife must be a faithful husband and give her full protection. Human society is divided into two classes of men—those who strictly follow the religious principles and those who are devotees. By His personal example, Lord Rāmacandra wanted to instruct both of them how to fully adopt the discipline of the religious system and how to be a beloved and dutiful husband. Otherwise He had no reason to undergo apparent tribulations. One who strictly follows religious principles must not neglect to provide all facilities for the complete protection of his wife. There may be some suffering because of this, but one must nevertheless endure it. That is the duty of a faithful husband. By His personal example, Lord Rāmacandra demonstrated this duty. Lord Rāmacandra could have produced hundreds and thousands of Sītās from His pleasure energy, but just to show the duty of a faithful husband, He not only rescued Sītā from the hands of Rāvaṇa but also killed Rāvaṇa and all the members of his family.
+          </p>
+          <p>
+            Another aspect of the teachings of Lord Rāmacandra is that although Lord Viṣṇu, the Supreme Personality of Godhead, and His devotees may apparently suffer from material tribulations, they have nothing to do with such tribulations. They are <span class="Italic">mukta-puruṣas,</span> liberated persons, under all circumstances. It is therefore said in the <span class="Italic">Caitanya-bhāgavata:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yata dekha vaiṣṇavera vyavahāra duḥkha<br>niścaya jāniha tāhā paramānanda-sukha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A Vaiṣṇava is always firmly situated in transcendental bliss because of engagement in devotional service. Although he may appear to suffer material pains, his position is called transcendental bliss in separation (<span class="Italic">viraha</span>). The emotions a lover and beloved feel when separated from one another are actually very blissful, although apparently painful. Therefore the separation of Lord Rāmacandra from Sītādevī, as well as the consequent tribulation they suffered, is but another display of transcendental bliss. That is the opinion of Śrīla Viśvanātha Cakravartī Ṭhākura.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">263</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since Lord Śrī Rāmacandra is the Supreme Personality of Godhead, Vāsudeva, He is not attached to anything in this material world. He is the most beloved Supersoul of all self-realized souls, and He is their very intimate friend. He is full of all opulences. Therefore He could not possibly have suffered because of separation from His wife, nor could He have given up His wife and Lakṣmaṇa, His younger brother. To give up either would have been absolutely impossible.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            In defining the Supreme Personality of Godhead, we say that He is full in all six opulences—wealth, fame, strength, influence, beauty and renunciation. He is called renounced because He is not attached to anything in this material world; He is specifically attached to the spiritual world and the living entities there. The affairs of the material world take place under the superintendence of Durgādevī (<span class="Italic">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā/ chāyeva yasya bhuvanāni bibharti durgā [Bs. </span>5.44]). Everything is going on under the strict rules and regulations of the material energy, represented by Durgā. Therefore the Lord is completely detached and need not give attention to the material world. Sītādevī belongs to the spiritual world. Similarly, Lord Lakṣmaṇa, Rāmacandra’s younger brother, is a manifestation of Saṅkarṣaṇa, and Lord Rāmacandra Himself is Vāsudeva, the Supreme Personality of Godhead.
+          </p>
+          <p>
+            Since the Lord is always spiritually qualified, He is attached to servants who always render transcendental loving service unto Him. He is attached to the truth in life, not to brahminical qualities. Indeed, He is never attached to any material qualities. Although He is the Supersoul of all living entities, He is specifically manifest to those who are self-realized, and He is especially dear to the hearts of His transcendental devotees. Because Lord Rāmacandra descended to teach human society how dutiful a king should be, He apparently gave up the company of mother Sītā and Lakṣmaṇa. Factually, however, He could not have given them up. One should therefore learn about the activities of Lord Rāmacandra from a self-realized soul. Then one can understand the transcendental activities of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">462</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One cannot establish a friendship with the Supreme Lord Rāmacandra on the basis of material qualities such as one’s birth in an aristocratic family, one’s personal beauty, one’s eloquence, one’s sharp intelligence or one’s superior race or nation. None of these qualifications is actually a prerequisite for friendship with Lord Śrī Rāmacandra. Otherwise how is it possible that although we uncivilized inhabitants of the forest have not taken noble births, although we have no physical beauty and although we cannot speak like gentlemen, Lord Rāmacandra has nevertheless accepted us as friends?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            In a prayer to Kṛṣṇa expressing her feelings, Śrīmatī Kuntīdevī called Him <span class="Italic">akiñcana-gocara.</span> The prefix <span class="Italic">a</span> means “not,” and <span class="Italic">kiñcana</span> “something of this material world.” One may be very proud of his prestigious position, material wealth, beauty, education and so on, but although these are certainly good qualifications in material dealings, they are not necessary for achieving friendship with the Supreme Personality of Godhead. One who possesses all these material qualities is expected to become a devotee, and when he actually does, the qualities are properly utilized. Those who are puffed up by a high birth, wealth, education and personal beauty (<span class="Italic">janmaiśvarya-śruta-śrī</span>) unfortunately do not care for developing Kṛṣṇa consciousness, nor does the Supreme Personality of Godhead care about all these material qualifications. The Supreme Lord is achieved by devotion (<span class="Italic">bhaktyā mām abhijānāti [Bg. </span>18.55]). One’s devotion and sincere desire to serve the Supreme Personality of Godhead are the only qualifications. Rūpa Gosvāmī has also said that the price for achieving God’s favor is simply one’s sincere eagerness to have it (<span class="Italic">laulyam ekaṁ mūlyam</span>). In the <span class="Italic">Caitanya-bhāgavata</span> it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kholāvecā sevakera dekha bhāgya-sīmā<br>brahmā śiva kāṅde yāra dekhiyā mahimā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">dhane jane pāṇḍitye kṛṣṇa nāhi pāi<br>kevala bhaktira vaśa caitanya-gosāñi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Behold the great fortune of the devotee Kholāvecā. Lord Brahmā and Śiva shed tears upon seeing his greatness. One cannot attain Lord Kṛṣṇa by any amount of wealth, followers, or learning. Śrī Caitanya Mahāprabhu is controlled only by pure devotion. “Lord Śrī Caitanya Mahāprabhu had a very sincere devotee whose name was Kholāvecā Śrīdhara and whose only business was to sell pots made of the skin of banana trees. Whatever income he had, he used fifty percent for the worship of mother Ganges, and with the other fifty percent he provided for his necessities. On the whole, he was so very poor that he lived in a cottage that had a broken roof with many holes in it. He could not afford brass utensils, and therefore he drank water from an iron pot. Nevertheless, he was a great devotee of Lord Śrī Caitanya Mahāprabhu. He is a typical example of how a poor man with no material possessions can become a most exalted devotee of the Lord. The conclusion is that one cannot attain shelter at the lotus feet of Lord Kṛṣṇa or Śrī Caitanya Gosāñi through material opulence; that shelter is attainable only by pure devotional service.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā<br> [Madhya 19.167]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">179</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, whether one is a demigod or a demon, a man or a creature other than man, such as a beast or bird, everyone should worship Lord Rāmacandra, the Supreme Personality of Godhead, who appears on this earth just like a human being. There is no need of great austerities or penances to worship the Lord, for Me accepts even a small service offered by His devotee. Thus He is satisfied, and as soon as He is satisfied, the devotee is successful. Indeed, Lord Śrī Rāmacandra brought all the devotees of Ayodhyā back home, back to Godhead [Vaikuṇṭha].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Lord Śrī Rāmacandra is so kind and merciful to His devotees that He is very easily satisfied by a little service rendered by anyone, human or not. This is the special advantage of worshiping Lord Rāmacandra, and there is the same advantage in worshiping Lord Śrī Caitanya Mahāprabhu. Lord Kṛṣṇa and Lord Rāmacandra, in the manner of <span class="Italic">kṣatriyas,</span> sometimes showed Their mercy by killing <span class="Italic">asuras,</span> but Lord Śrī Caitanya Mahāprabhu awarded love of God without difficulty even to the <span class="Italic">asuras.</span> All the incarnations of the Supreme Personality of Godhead—but especially Lord Rāmacandra, Lord Kṛṣṇa and, later, Lord Śrī Caitanya Mahāprabhu—delivered many of the living entities present before Them, indeed almost all of them. Śrī Caitanya Mahāprabhu is therefore represented in the six-armed form of <span class="Italic">ṣaḍ-bhūja-mūrti,</span> which is a combination of Lord Rāmacandra, Lord Kṛṣṇa and Lord Śrī Caitanya Mahāprabhu. The best purpose of human life can be fulfilled by worshiping the <span class="Italic">ṣaḍ-bhūja-mūrti,</span> the form of the Lord with six arms—two arms of Rāmacandra, two arms of Kṛṣṇa and two arms of Śrī Caitanya Mahāprabhu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">202</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Śukadeva Gosvāmī continued:] The glories of the Supreme Personality of Godhead are inconceivable. He has appeared in the form of Nara-Nārāyaṇa in the land of Bhārata-varṣa, at the place known as Badarikāśrama, to favor His devotees by teaching them religion, knowledge, renunciation, spiritual power, sense control and freedom from false ego. He is advanced in the opulence of spiritual assets, and He engages in executing austerity until the end of this millennium. This is the process of self-realization.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            People in India may visit the temple of Nara-Nārāyaṇa at Badarikāśrama just to learn how the Supreme Personality of Godhead in His incarnation as Nara-Nārāyaṇa engages in austerities to teach the people of the world how to achieve self-realization. It is impossible to realize oneself simply by absorbing oneself in speculation and material activities. One must be very serious about self-realization and the practice of austerity. Unfortunately, the people of this age of Kali do not even know the meaning of austerity. Under these circumstances, the Lord has appeared as Śrī Caitanya Mahāprabhu to bestow upon the fallen souls the easiest method of self-realization, technically called <span class="Italic">ceto-darpaṇa-mārjanam [Cc. Antya 20.12],</span> cleansing of the dirt from the core of one’s heart. This method is extremely simple. Anyone can chant the glorious <span class="Italic">kṛṣṇa-saṅkīrtana</span>—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare. In this age there are different forms of so-called advanced scientific knowledge, such as anthropology, Marxism, Freudianism, nationalism and industrialism, but if we work very hard under their guidance instead of adopting the process practiced by Nara-Nārāyaṇa, we shall waste our valuable human form of life. Thus we shall certainly be cheated and misled.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">249</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In his own book, known as Nārada Pañcarātra, Bhagavān Nārada has very vividly described how to work to achieve the ultimate goal of life—devotion—through knowledge and through execution of the mystic yoga system. He has also described the glories of the Lord, the Supreme Personality of Godhead. The great sage Nārada instructed the tenets of this transcendental literature to Sāvarṇi Manu in order to teach those inhabitants of Bhārata-varṣa who strictly follow the principles of varṇāśrama-dharma how to achieve the devotional service of the Lord. Thus Nārada Muni, along with the other inhabitants of Bhārata-varṣa, always engages in the service of Nara-Nārāyaṇa, and he chants as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu has clearly declared:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra<br> [Cc. <span class="Ref_Italic">Ādi</span> 9.41]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The real success or fulfillment of the mission of human life can be achieved in India, Bhārata-varṣa, because in Bhārata-varṣa the purpose of life and the method for achieving success are evident. People should take advantage of the opportunity afforded by Bhārata-varṣa, and this is especially so for those who are following the principles of <span class="Italic">varṇāśrama-dharma.</span> If we do not take to the principles of <span class="Italic">varṇāśrama-dharma</span> by accepting the four social orders (<span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span>) and the four orders of spiritual life (<span class="Italic">brahmacārī, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa</span>), there can be no question of success in life. Unfortunately, because of the influence of Kali-yuga, everything is now being lost. The inhabitants of Bhārata-varṣa are gradually becoming degraded <span class="Italic">mlecchas</span> and <span class="Italic">yavanas.</span> How then will they teach others? Therefore, this Kṛṣṇa consciousness movement has been started not only for the inhabitants of Bhārata-varṣa but for all the people of the world, as announced by Śrī Caitanya Mahāprabhu. There is still time, and if the inhabitants of Bhārata-varṣa take this movement of Kṛṣṇa consciousness seriously, the entire world will be saved from gliding down to a hellish condition. The Kṛṣṇa consciousness movement follows the process of <span class="Italic">pañcarātrika-vidhi</span> and that of <span class="Italic">bhāgavata-vidhi</span> simultaneously, so that people can take advantage of the movement and make their lives successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Let me offer my respectful obeisances unto Nara-Nārāyaṇa, the best of all saintly persons, the Supreme Personality of Godhead. He is the most self-controlled and self-realized, He is free from false prestige, and He is the asset of persons who have no material possessions. He is the spiritual master of all paramahaṁsas, who are the most exalted human beings, and He is the master of the self-realized. Let me offer my repeated obeisances at His lotus feet.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">246</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada, the most powerful saintly sage, also worships Nara-Nārāyaṇa by chanting the following mantra: The Supreme Personality of Godhead is the master of the creation, maintenance and annihilation of this visible cosmic manifestation, yet He is completely free from false prestige. Although to the foolish He appears to have accepted a material body like us, He is unaffected by bodily tribulations like hunger, thirst and fatigue. Although He is the witness who sees everything, His senses are unpolluted by the objects He sees. Let me offer my respectful obeisances unto that unattached, pure witness of the world, the Supreme Soul, the Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The Supreme Personality of Godhead, Kṛṣṇa, is described as <span class="Italic">sac-cid-ānanda-vigraha</span><i> <span class="Italic"></span></i>[Bs. 5.1]<span class="Italic">,</span> the body of eternity, transcendental bliss and full knowledge. Now in this verse He is more fully described. Kṛṣṇa is the creator of the entire cosmic manifestation, yet He is unattached to it. If we were to construct a very tall skyscraper, we would be very attached to it, but Kṛṣṇa is so renounced that although He has created everything, He is not attached to anything (<span class="Italic">na badhyate</span>). Furthermore, although Kṛṣṇa has His transcendental form, <span class="Italic">sac-cid-ānanda-vigraha</span><i> <span class="Italic"></span></i>[Bs. 5.1]<span class="Italic">,</span> He is not disturbed by the bodily necessities of life, which are called <span class="Italic">daihika;</span> for example, He is never hungry, thirsty or fatigued (<span class="Italic">na hanyate deha-gato ’pi daihikaiḥ</span>). Then again, since everything is Kṛṣṇa’s property, He sees everything and is present everywhere, but because His body is transcendental, He is above vision, the objects of vision and the process of vision. When we see someone beautiful, we are attracted. The sight of a beautiful woman immediately attracts a man, and the sight of a man naturally attracts a woman. Kṛṣṇa, however, is transcendental to all these faults. Although He is the seer of everything, He is not afflicted with faulty vision (<span class="Italic">na dṛg yasya guṇair vidūṣyate</span>). Therefore, although He is the witness and seer, He is aloof from all affection for the activities He sees. He is always unattached and separate; He is only a witness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">216</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my Lord, master of all mystic yoga, this is the explanation of the yogic process spoken of by Lord Brahmā [Hiraṇyagarbha], who is self-realized. At the time of death, all yogīs give up the material body with full detachment simply by placing their minds at Your lotus feet. That is the perfection of yoga.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Śrīla Madhvācārya says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya samyag bhagavati<br>jñānaṁ bhaktis tathaiva ca<br>niścintas tasya mokṣaḥ syāt<br>sarva-pāpa-kṛto ’pi tu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “For one who very seriously practices devotional service during his lifetime in order to understand the constitutional position of the Supreme Personality of Godhead, liberation from this material world is guaranteed, even if he has previously been addicted to sinful habits.” This is also confirmed in <span class="Italic">Bhagavad-gītā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">api cet su-durācāro<br>bhajate mām ananya-bhāk<br>sādhur eva sa mantavyaḥ<br>samyag vyavasito hi saḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Even if one commits the most abominable actions, if he is engaged in devotional service he is to be considered saintly because he is properly situated.” (Bg. 9.30) The only purpose of life is to be fully absorbed in thoughts of Kṛṣṇa and His form, pastimes, activities and qualities. If one is able to think of Kṛṣṇa in this way, twenty-four hours a day, he is already liberated (<span class="Italic">svarūpeṇa vyavasthitiḥ</span>). Whereas materialists are absorbed in material thoughts and activities, devotees, on the contrary, are always absorbed in thoughts of Kṛṣṇa and Kṛṣṇa’s activities. Therefore they are already on the platform of liberation. One has to think of Kṛṣṇa with full absorption at the time of death. Then he will certainly return home, back to Godhead, without a doubt.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">189</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Materialists are generally very attached to their present bodily comforts and to the bodily comforts they expect in the future. Therefore they are always absorbed in thoughts of their wives, children and wealth and are afraid of giving up their bodies, which are full of stool and urine. If a person engaged in Kṛṣṇa consciousness, however, is also afraid of giving up his body, what is the use of his having labored to study the śāstras? It was simply a waste of time.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            At the time of death a materialist thinks of his wife and children. He is absorbed in thinking of how they will live and who will take care of them after he leaves. Consequently he is never prepared to give up his body; rather, he wants to continue to live in his body to serve his society, family, friends and so on. Therefore by practicing the mystic <span class="Italic">yoga</span> system one must become detached from bodily relationships. If despite practicing <span class="Italic">bhakti-yoga</span> and studying all the Vedic literature, one is afraid of giving up his bad body, which is the cause of all his suffering, what is the use of his attempts to advance in spiritual life? The secret of success in practicing <span class="Italic">yoga</span> is to become free from bodily attachments. Śrīla Narottama dāsa Ṭhākura says, <span class="Italic">deha-smṛti nāhi yāra, saṁsāra-bandhana kāhāṅ tāra:</span> one whose practice has freed him from the anxieties of bodily needs is no longer in conditional life. Such a person is freed from conditional bondage. A person in Kṛṣṇa consciousness must fully discharge his devotional duties without material attachment. Then his liberation is guaranteed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">122</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, O Lord, O Transcendence, kindly help us by giving us the power to execute bhakti-yoga so that we can control our restless minds and fix them upon You. We are all infected by Your illusory energy; therefore we are very attached to the body, which is full of stool and urine, and to anything related with the body. Except for devotional service, there is no way to give up this attachment. Therefore kindly bestow upon us this benediction.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            The Lord advises in <span class="Italic">Bhagavad-gītā:</span> <span class="Italic">man-manā bhava mad-bhakto mad-yājī māṁ namaskuru [Bg. </span>18.65]<span class="Italic">.</span> The perfect <span class="Italic">yoga</span> system consists of always thinking of Kṛṣṇa, always engaging in devotional service, always worshiping Kṛṣṇa and always offering obeisances unto Him. Unless we practice this <span class="Italic">yoga</span> system, our illusory attachment for this bad body, which is full of stool and urine, is impossible to give up. The perfection of <span class="Italic">yoga</span> consists of giving up attachment for this body and bodily relationships and transferring that attachment to Kṛṣṇa. We are very attached to material enjoyment, but when we transfer that same attachment to Kṛṣṇa, we traverse the path of liberation. One has to practice this <span class="Italic">yoga</span> system and none other.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the tract of land known as Bhārata-varṣa, as in Ilāvṛta-varṣa, there are many mountains and rivers. Some of the mountains are known as Malaya, Maṅgala-prastha, Maināka, Trikūṭa, Ṛṣabha, Kūṭaka, Kollaka, Sahya, Devagiri, Ṛṣyamūka, Śrī-śaila, Veṅkaṭa, Mahendra, Vāridhāra, Vindhya, Śuktimān, Ṛkṣagiri, Pāriyātra, Droṇa, Citrakūṭa, Govardhana, Raivataka, Kakubha, Nīla, Gokāmukha, Indrakīla and Kāmagiri. Besides these, there are many other hills, with many large and small rivers flowing from their slopes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17–18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">25</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Two of the rivers—the Brahmaputra and the Śoṇa—are called nadas, or main rivers. These are other great rivers that are very prominent: Candravasā, Tāmraparṇī, Avaṭodā, Kṛtamālā, Vaihāyasī, Kāverī, Veṇī, Payasvinī, Śarkarāvartā, Tuṅgabhadrā, Kṛṣṇāveṇyā, Bhīmarathī, Godāvarī, Nirvindhyā, Payoṣṇī, Tāpī, Revā, Surasā, Narmadā, Carmaṇvatī, Mahānadī, Vedasmṛti, Ṛṣikulyā, Trisāmā, Kauśikī, Mandākinī, Yamunā, Sarasvatī, Dṛṣadvatī, Gomatī, Sarayū, Rodhasvatī, Saptavatī, Suṣomā, Śatadrū, Candrabhāgā, Marudvṛdhā, Vitastā, Asiknī and Viśvā. The inhabitants of Bhārata-varṣa are purified because they always remember these rivers. Sometimes they chant the names of these rivers as mantras, and sometimes they go directly to the rivers to touch them and bathe in them. Thus the inhabitants of Bhārata-varṣa become purified.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            All these rivers are transcendental. Therefore one can be purified by remembering them, touching them or bathing in them. This practice is still going on.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">287</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The people who take birth in this tract of land are divided according to the qualities of material nature—the modes of goodness [sattva-guṇa], passion [rajo-guṇa], and ignorance [tamo-guṇa]. Some of them are born as exalted personalities, some are ordinary human beings, and some are extremely abominable, for in Bhārata-varṣa one takes birth exactly according to one’s past karma. If one’s position is ascertained by a bona fide spiritual master and one is properly trained to engage in the service of Lord Viṣṇu according to the four social divisions [brāhmaṇa, kṣatriya, vaiśya and śūdra] and the four spiritual divisions [brahmacārī, gṛhastha, vānaprastha and sannyāsa], one’s life becomes perfect.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            For further information, one should refer to <span class="Italic">Bhagavad-gītā</span> (14.18 and 18.42–45). Śrīla Rāmānujācārya writes in his book <span class="Italic">Vedānta-saṅgraha:</span>
+          </p>
+          <p>
+            <blockquote><div class="Prose-Verse-in-purp"><0><dc>evaṁ-vidha-parābhakti-svarūpa-jñāna-viśeṣasyotpādakaḥ pūrvoktāharahar upacīyamāna-jñāna-pūrvaka-karmānugṛhīta-bhakti-yoga eva; yathoktaṁ bhagavatā parāśareṇa——varṇāśrameti. nikhila-jagad-uddhāraṇāyāvanitale ’vatīrṇaṁ para-brahma-bhūtaḥ puruṣottamaḥ svayam etad uktavān——“svakarma-nirataḥ siddhiṁ yathā vindati tac chṛṇu” “yataḥ pravṛttir bhūtānāṁ yena sarvam idaṁ tatam / svakarmaṇā tam abhyarcya siddhiṁ vindati mānavaḥ”<fc><bc></bc></fc></dc></0></div></blockquote>
+          </p>
+          <p>
+            Quoting from the <span class="Ref_Italic">Viṣṇu Purāṇa</span> (389), the great sage Parāśara Muni has recommended:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varṇāśramācāravatā<br>puruṣeṇa paraḥ pumān<br>viṣṇur ārādhyate panthā<br>nānyat tat-toṣa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Personality of Godhead, Lord Viṣṇu, is worshiped by the proper execution of prescribed duties in the system of <span class="Italic">varṇa</span> and <span class="Italic">āśrama.</span> There is no other way to satisfy the Lord.” In the land of Bhārata-varṣa, the institution of <span class="Italic">varṇāśrama-dharma</span> may be easily adopted. At the present moment, certain demoniac sections of the population of Bhāratavarṣa are disregarding the system of <span class="Italic">varṇāśrama-dharma.</span> Because there is no institution to teach people how to become <span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas</span> and <span class="Italic">śūdras</span> or <span class="Italic">brahmacārīs, gṛhasthas, vānaprasthas</span> and <span class="Italic">sannyāsīs,</span> these demons want a classless society. This is resulting in chaotic conditions. In the name of secular government, unqualified people are taking the supreme governmental posts. No one is being trained to act according to the principles of <span class="Italic">varṇāśrama-dharma,</span> and thus people are becoming increasingly degraded and are heading in the direction of animal life. The real aim of life is liberation, but unfortunately the opportunity for liberation is being denied to people in general, and therefore their human lives are being spoiled. The Kṛṣṇa consciousness movement, however, is being propagated all over the world to reestablish the <span class="Italic">varṇāśrama-dharma</span> system and thus save human society from gliding down to hellish life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">290</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After many, many births, when the results of one’s pious activities mature, one gets an opportunity to associate with pure devotees. Then one is able to cut the knot of bondage to ignorance, which bound him because of varied fruitive activities. As a result of associating with devotees, one gradually renders service to Lord Vāsudeva, who is transcendental, free from attachment to the material world, beyond the mind and words, and independent of everything else. That bhakti-yoga, devotional service to Lord Vāsudeva, is the real path of liberation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Brahman realization is the beginning of liberation, and Paramātmā realization is still further advancement toward the realm of liberation, but one achieves real liberation when he understands his position as an eternal servant of the Supreme Personality of Godhead (<span class="Italic">muktir hitvānyathā rūpaṁ svarūpeṇa vyavasthitiḥ</span>). In the material world, in the bodily concept of life, everyone is working in the wrong direction. When one becomes <span class="Italic">brahma-bhūta,</span> spiritually realized, one understands that he is not the body and that working in the bodily concept of life is useless and misdirected. Then his devotional service begins. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is thus transcendentally situated realizes the Supreme Brahman and becomes fully joyful. He never laments or desires to have anything; he is equally disposed to every living entity. In that state he attains pure devotional service unto Me.” Devotional service is actual liberation. When one is attracted by the beauty of the Supreme Personality of Godhead and his mind is always engaged at the Lord’s lotus feet, he is no longer interested in subjects that do not help him in self-realization. In other words, he loses all attraction for material activities. In the <span class="Ref_Italic">Taittirīya Upaniṣad</span> (2.7) it is said: <span class="Italic">eṣa hy evānandayati.</span> <span class="Italic">yadā hy evaiṣa etasmin na dṛśye ’nātmye anirukte ’nilayane ’bhayaṁ pratiṣṭhāṁ vindate ’tha so ’bhayaṁ gato bhavati.</span> A living entity becomes established in spiritual, blissful life when he fully understands that his happiness depends on spiritual self-realization, which is the basic principle of <span class="Italic">ānanda</span> (bliss), and when he is eternally situated in the service of the Lord, who has no other lord above Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">159</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since the human form of life is the sublime position for spiritual realization, all the demigods in heaven speak in this way: How wonderful it is for these human beings to have been born in the land of Bhārata-varṣa. They must have executed pious acts of austerity in the past, or the Supreme Personality of Godhead Himself must have been pleased with them. Otherwise, how could they engage in devotional service in so many ways? We demigods can only aspire to achieve human births in Bhārata-varṣa to execute devotional service, but these human beings are already engaged there.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            These facts are further explained in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 9.41):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who has taken his birth as a human being in the land of India [Bhārata-varṣa] should make his life successful and work for the benefit of all other people.”
+          </p>
+          <p>
+            There are many facilities in India, Bhārata-varṣa, for executing devotional service. In Bhārata-varṣa, all the <span class="Italic">ācāryas</span> contributed their experience, and Śrī Caitanya Mahāprabhu personally appeared to teach the people of Bhārata-varṣa how to progress in spiritual life and be fixed in devotional service to the Lord. From all points of view, Bhārata-varṣa is the special land where one can very easily understand the process of devotional service and adopt it to make his life successful. If one makes his life successful in devotional service and then preaches devotional service in other parts of the world, people throughout the world will actually benefit.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">316</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods continue: After performing the very difficult tasks of executing Vedic ritualistic sacrifices, undergoing austerities, observing vows and giving charity, we have achieved this position as inhabitants of the heavenly planets. But what is the value of this achievement? Here we are certainly very engaged in material sense gratification, and therefore we can hardly remember the lotus feet of Lord Nārāyaṇa. Indeed, because of our excessive sense gratification, we have almost forgotten His lotus feet.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The land of Bhārata-varṣa is so exalted that by taking birth there one can not only attain the heavenly planets but also go directly back home, back to Godhead. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.25):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yānti deva-vratā devān<br>pitṝn yānti pitṛ-vratāḥ<br>bhūtāni yānti bhūtejyā<br>yānti mad-yājino ’pi mām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who worship the demigods will take birth among the demigods; those who worship ghosts and spirits will take birth among such beings; those who worship ancestors go to the ancestors; and those who worship Me will live with Me.” people in the land of Bhārata-varṣa generally follow the Vedic principles and consequently perform great sacrifices by which they can be elevated to the heavenly planets. However, what is the use of such great attainments? As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (9.21), <span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti:</span> after the results of one’s sacrifices, charity and other pious activities expire, one must return to the lower planetary systems and again feel the pangs of birth and death. However, one who becomes Kṛṣṇa conscious can go back to Kṛṣṇa (<span class="Italic">yānti-mad-yājino ’pi mām</span>). Therefore the demigods even regret having been elevated to the higher planetary systems. The denizens of the heavenly planets regret that they could not take full advantage of being born in the land of Bhārata-varṣa. Instead, they became captivated by a higher standard of sense gratification, and therefore they forgot the lotus feet of Lord Nārāyaṇa at the time of death. The conclusion is that one who has taken birth in the land of Bhārata-varṣa must follow the instructions given personally by the Supreme Personality of Godhead. <span class="Italic">Yad gatvā na nivartante tad dhāma paramaṁ mama [Bg. 15.6].</span> One should try to return home, back to Godhead, to the Vaikuṇṭha planets—or to the topmost Vaikuṇṭha planet, Goloka Vṛndāvana—to live eternally in full, blissful knowledge in the company of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">229</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A short life in the land of Bharata-varṣa is preferable to a life achieved in Brahmaloka for millions and billions of years because even if one is elevated to Brahmaloka, he must return to repeated birth and death. Although life in Bhārata-varṣa, in a lower planetary system, is very short, one who lives there can elevate himself to full Kṛṣṇa consciousness and achieve the highest perfection, even in this short life, by fully surrendering unto the lotus feet of the Lord. Thus one attains Vaikuṇṭhaloka, where there is neither anxiety nor repeated birth in a material body.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            This is further confirmation of the statement given by Lord Caitanya Mahāprabhu:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra<br> [Cc. <span class="Ref_Italic">Ādi</span> 9.41]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One who has taken birth in the land of Bhārata-varṣa has a full opportunity to study the direct instructions given by Kṛṣṇa in <span class="Italic">Bhagavad-gītā</span> and thus finally decide what to do in his human form of life. One should certainly give up all other propositions and surrender to Kṛṣṇa. Kṛṣṇa will then immediately take charge and relieve one of the results of past sinful life (<span class="Italic">ahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ</span>). Therefore one should take to Kṛṣṇa consciousness, as Kṛṣṇa Himself recommends. <span class="Italic">Man-manā bhava mad-bhakto mad-yājī māṁ namaskuru: [Bg. </span>18.65] “Always think of Me, become My devotee, worship Me and offer Me obeisances.” This is very easy, even for a child. Why not take this path? One should try to follow the instructions of Kṛṣṇa exactly and thus become fully eligible to be promoted to the kingdom of God (<span class="Italic">tyaktvā dehaṁ punar janma naiti mām eti so’rjuna [Bg. </span>4.9]). One should go directly to Kṛṣṇa and engage in His service. This is the best opportunity offered to the inhabitants of Bhārata-varṣa. One who is fit to return home, back to Godhead, is no longer liable to the results of <span class="Italic">karma,</span> good or bad.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">517</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            An intelligent person does not take interest in a place, even in the topmost planetary system, if the pure Ganges of topics concerning the Supreme Lord’s activities does not flow there, if there are not devotees engaged in service on the banks of such a river of piety, or if there are no festivals of saṅkīrtana-yajña to satisfy the Lord [especially since saṅkīrtana-yajña is recommended in this age].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu appeared in the land of Bhārata-varṣa, specifically in Bengal, in the district of Nadia, where Navadvīpa is situated. It is therefore to be concluded, as stated by Śrīla Bhaktivinoda Ṭhākura, that within this universe, this earth is the best planet, and on this planet the land of Bhārata-varṣa is the best; in the land of Bhāratavarṣa, Bengal is still better, in Bengal the district of Nadia is still better, and in Nadia the best place is Navadvīpa because Śrī Caitanya Mahāprabhu appeared there to inaugurate the performance of the sacrifice of chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra.</span> The <span class="Italic">śāstras</span> recommend:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa-varṇaṁ tviṣākṛṣṇaṁ<br>sāṅgopāṅgāstra-pārṣadam<br>yajñaiḥ saṅkīrtana-prāyair<br>yajanti hi sumedhasaḥ<br> [SB 11.5.32]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Lord Śrī Caitanya Mahāprabhu is always accompanied by His very confidential associates such as Śrī Nityānanda, Śrī Gadādhara and Śrī Advaita and by many devotees like Śrīvāsa. They are always engaged in chanting the name of the Lord and are always describing Lord Kṛṣṇa. Therefore this is the best among all the places in the universe. The Kṛṣṇa consciousness movement has established its center in Māyāpur, the birthsite of Lord Śrī Caitanya Mahāprabhu, to give men the great opportunity to go there and perform a constant festival of <span class="Italic">saṅkīrtana-yajña,</span> as recommended herein (<span class="Italic">yajñeśa-makhā mahotsavāḥ</span>) and to distribute <span class="Italic">prasāda</span> to millions of hungry people hankering for spiritual emancipation. This is the mission of the Kṛṣṇa consciousness movement. <span class="Italic">Caitanya-bhāgavata</span> confirms this as follows: “One should not desire to be elevated even to a place in the heavenly planetary systems if it has no propaganda to expand the glories of the Supreme Personality of Godhead, no trace of Vaiṣṇavas, pure devotees of the Lord, and no festivals for spreading Kṛṣṇa consciousness. It would be better to live perpetually cramped within the airtight bag of a mother’s womb, where one can at least remember the lotus feet of the Lord, than to live in a place where there is no opportunity to remember His lotus feet. I pray not to be allowed to take birth in such a condemned place.” Similarly, in <span class="Italic">Caitanya-caritāmṛta,</span> Kṛṣṇadāsa Kavirāja Gosvāmī says that since Śrī Caitanya Mahāprabhu is the inaugurator of the <span class="Italic">saṅkīrtana</span> movement, anyone who performs <span class="Italic">saṅkīrtana</span> to please the Lord is very, very glorious. Such a person has perfect intelligence, whereas others are in the ignorance of material existence. Of all the sacrifices mentioned in the Vedic literatures, the performance of <span class="Italic">saṅkīrtana-yajña</span> is the best. Even the performance of one hundred <span class="Italic">aśvamedha</span> sacrifices cannot compare to the sacrifice of <span class="Italic">saṅkīrtana.</span> According to the author of <span class="Italic">Śrī Caitanya-caritāmṛta,</span> if one compares <span class="Italic">saṅkīrtana-yajña</span> to other <span class="Italic">yajñas,</span> he is a <span class="Italic">pāṣaṇḍī,</span> an infidel, and is liable to be punished by Yamarāja. There are many Māyāvādīs who think that the performance of <span class="Italic">saṅkīrtana-yajña</span> is a pious activity similar to the performance of the <span class="Italic">aśvamedha-yajña</span> and other such pious functions, but this is a <span class="Italic">nāma-aparādha.</span> Chanting of the holy name of Nārāyaṇa and chanting of other names are never equal, despite what Māyāvādīs think.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">328</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bhārata-varṣa offers the proper land and circumstances in which to execute devotional service, which can free one from the results of jñāna and karma. If one obtains a human body in the land of Bhārata-varṣa, with clear sensory organs with which to execute the saṅkīrtana-yajña, but in spite of this opportunity he does not take to devotional service, he is certainly like liberated forest animals and birds that are careless and are therefore again bound by a hunter.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            In the land of Bhārata-varṣa one can very easily perform the <span class="Italic">saṅkīrtana-yajña,</span> which consists of <span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ [SB </span>7.5.23]<span class="Italic">,</span> or one can perform other methods of devotional service, such as <span class="Italic">smaraṇaṁ vandanam arcanaṁ dāsyaṁ sakhyam</span> and <span class="Italic">ātma-nivedanam.</span> In Bhārata-varṣa one has the opportunity to visit many holy places, especially Lord Caitanya’s birthsite and Lord Kṛṣṇa’s birthsite—Navadvīpa and Vṛndāvana—where there are many pure devotees who have no desire other than to execute devotional service (<span class="Italic">anyābhilāṣitā-śūnyaṁ jñāna-karmādy-anāvṛtam</span> [Madhya 19.167]), and one may thus become free from the bondage of material conditions. Other paths, such as the path of <span class="Italic">jñāna</span> and the path of <span class="Italic">karma,</span> are not very profitable. Pious activities can elevate one to the higher planetary systems, and by speculative knowledge one can merge into the Brahman existence, but that is not real profit, for one has to come down again even from the liberated condition of being merged in Brahman, and certainly one must come down from the heavenly kingdom. One should endeavor to go back home, back to Godhead (<span class="Italic">yānti mad-yājino ’pi mām</span>). Otherwise there is no difference between human life and the lives of jungle animals and birds. Animals and birds also have freedom, but because of their lower birth, they cannot use it. Taking advantage of all the facilities offered him, a human being who has taken birth in the land of Bhārata-varṣa should become a fully enlightened devotee and go back home, back to Godhead. This is the subject matter of the Kṛṣṇa consciousness movement. The inhabitants of places other than Bhārata-varṣa have facilities for material enjoyment, but they do not have the same facility to take to Kṛṣṇa consciousness. Therefore Śrī Caitanya Mahāprabhu has advised that one who has taken birth as a human being in Bhārata-varṣa must first realize himself as a part and parcel of Kṛṣṇa, and after taking to Kṛṣṇa consciousness, he must distribute this knowledge all over the world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">233</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In India [Bhārata-varṣa], there are many worshipers of the demigods, the various officials appointed by the Supreme Lord, such as Indra, Candra and Sūrya, all of whom are worshiped differently. The worshipers offer the demigods their oblations, considering the demigods part and parcel of the whole, the Supreme Lord. Therefore the Supreme Personality of Godhead accepts these offerings and gradually raises the worshipers to the real standard of devotional service by fulfilling their desires and aspirations. Because the Lord is complete, He offers the worshipers the benedictions they desire even if they worship only part of His transcendental body.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (9.13) Lord Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mahātmānas tu māṁ pārtha<br>daivīṁ prakṛtim āśritāḥ<br>bhajanty ananya-manaso<br>jñātvā bhūtādim avyayam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Pṛthā, those who are not deluded, the great souls, are under the protection of the divine nature. They are fully engaged in devotional service because they know Me as the Supreme Personality of Godhead, original and inexhaustible.” <span class="Italic">Mahātmā,</span> advanced devotees, worship only the Supreme Personality of Godhead. Others, however, who are also sometimes called <span class="Italic">mahātmās,</span> worship the Lord as <span class="Italic">ekatvena pṛthaktvena.</span> In other words, they accept the demigods as different parts of Kṛṣṇa and worship them for various benedictions. Although the devotees of the demigods thus achieve the desired results offered by Kṛṣṇa, they have been described in <span class="Italic">Bhagavad-gītā</span> as <span class="Italic">hṛta jñāna,</span> not very intelligent. Kṛṣṇa does not desire to be worshiped indirectly through the different parts of His body; Kṛṣṇa wants direct devotional worship. Therefore a devotee who directly worships Lord Kṛṣṇa through staunch devotional service, as recommended in <span class="Italic">Śrīmad-Bhāgavatam,</span> (<span class="Italic">tīvreṇa bhakti-yogena yajeta puruṣaṁ param [SB </span>2.3.10]), is very quickly elevated to the transcendental position. Nevertheless, devotees who worship the demigods, the different parts of the Lord, receive the benedictions they desire because the Lord is the original master of all benedictions. If anyone wants a particular benediction, for the Lord to award it is not at all difficult.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">635</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead fulfills the material desires of a devotee who approaches Him with such motives, but He does not bestow benedictions upon the devotee that will cause him to demand more benedictions again. However, the Lord willingly gives the devotee shelter at His own lotus feet, even though such a person does not aspire for it, and that shelter satisfies all his desires. That is the Supreme Personality’s special mercy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            The devotees mentioned in the previous verse approach the Supreme Personality of Godhead with material motives, but this verse explains how such devotees are saved from those desires. <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.3.10) advises:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">akāmaḥ sarva-kāmo vā<br>mokṣa-kāma udāra-dhīḥ<br>tīvreṇa bhakti-yogena<br>yajeta puruṣaṁ param</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whether one is freed from all material desires, is full of material desires, or desires to become one with the Supreme, he should engage in devotional service.” In this way, not only will the devotee’s desires be fulfilled, but the day will come when he will have no other desire than to serve the lotus feet of the Lord. One who engages in the service of the Lord with some motive is called a <span class="Italic">sakāma-bhakta,</span> and one who serves the Lord without any motives is called an <span class="Italic">akāma-bhakta.</span> Kṛṣṇa is so merciful that He turns a <span class="Italic">sakāma-bhakta</span> into an <span class="Italic">akāma-bhakta.</span> A pure devotee, an <span class="Italic">akāma-bhakta,</span> who has no material motives, is satisfied simply to serve the lotus feet of the Lord. This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (6.22). <span class="Italic">Yaṁ labdhvā cāparaṁ lābhaṁ manyate nādhikaṁ tataḥ:</span> if one engages in the service of the lotus feet of the Lord, he does not want anything more. This is the highest stage of devotional service. The Lord is so kind even to a <span class="Italic">sakāma-bhakta,</span> a motivated devotee, that He satisfies his desires in such a way that one day he becomes an <span class="Italic">akāma-bhakta.</span> Dhruva Mahārāja, for example, became a <span class="Italic">bhakta</span> with the motive of getting a better kingdom than that of his father, but finally he became an <span class="Italic">akāma-bhakta</span> and said to the Lord, <span class="Italic">svāmin kṛtārtho’smi varaṁ na yāce:</span> “My dear Lord, I am very satisfied simply to serve Your lotus feet. I do not want any material benefits.” Sometimes it is found that a small child eats dirty things, but his parents take away the dirty things and offer him a <span class="Italic">sandeśa</span> or some other sweetmeat. Devotees who aspire for material benedictions are compared to such children. The Lord is so kind that He takes away their material desires and gives them the highest benediction. Therefore, even for material motives, one should not worship anyone other than the Supreme Personality of Godhead; one must fully engage himself in the devotional service of the Lord so that all his desires will be fulfilled and at the end he can go back home, back to Godhead. This is explained in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 22.37–39, 41) as follows.
+          </p>
+          <p>
+            <span class="Italic">Anyakāmī</span>—a devotee may desire something other than service to the lotus feet of the Lord; <span class="Italic">yadi kare kṛṣṇera bhajana</span>—but if he engages in Lord Kṛṣṇa’s service; <span class="Italic">nā māgiteha kṛṣṇa tāre dena sva-caraṇa</span>—Kṛṣṇa gives him shelter at His lotus feet, even though he does not aspire for it. <span class="Italic">Kṛṣṇa kahe</span>—the Lord says; <span class="Italic">āmā bhaje</span>—“He is engaged in My service”; <span class="Italic">māge viṣaya-sukha</span>—“but he wants the benefits of material sense gratification.” <span class="Italic">Amṛta chāḍi’ viṣa māge:</span>—“such a devotee is like a person who asks for poison instead of nectar.” <span class="Italic">Ei baḍa mūrkha:</span> “That is his foolishness.” <span class="Italic">Ami-vijña:</span> “But I am experienced.” <span class="Italic">Ei mūrkhe ‘viṣaya’ kene diba:</span> “Why should I give such a foolish person the dirty things of material enjoyment?” <span class="Italic">Sva-caraṇa-mṛta:</span> “It would be better for Me to give him shelter at My lotus feet.” <span class="Italic">‘Viṣaya’ bhulāiba:</span> “I shall cause him to forget all material desires.” <span class="Italic">Kāma lāgi’ kṛṣṇa bhaje</span>—if one engages in the service of the Lord for sense gratification; <span class="Italic">paya kṛṣṇa-rase</span>—the result is that he ultimately gets a taste for serving the lotus feet of the Lord. <span class="Italic">Kāma chāḍi’ ‘da’ haite haya abhilāṣe:</span> He then gives up all material desires and wants to become an eternal servant of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">358</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            We are now living in the heavenly planets, undoubtedly as a result of our having performed ritualistic ceremonies, pious activities and yajñas and having studied the Vedas. However, our lives here will one day be finished. We pray that at that time, if any merit remains from our pious activities, we may again take birth in Bhārata-varṣa as human beings able to remember the lotus feet of the Lord. The Lord is so kind that He personally comes to the land of Bhārata-varṣa and expands the good fortune of its people.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            It is certainly as a result of pious activities that one takes birth in the heavenly planets, but from those planets one must nevertheless come down again to earth, as stated in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti [Bg. </span>9.21]). Even the demigods must return to earth to work like ordinary men when the results of their pious activities expire. Nevertheless, the demigods desire to come to the land of Bhārata-varṣa if even a small portion of the merits of their pious activities remains. In other words, to take birth in Bhārata-varṣa, one must perform more pious activities than the demigods. In Bhārata-varṣa one is naturally Kṛṣṇa conscious, and if one further cultivates his Kṛṣṇa consciousness, by the grace of Kṛṣṇa he certainly expands his good fortune by becoming perfect in Kṛṣṇa consciousness and very easily going back home, back to Godhead. In many other places in the Vedic literature it is found that even the demigods want to come to this land of Bhārata-varṣa. A foolish person may desire to be promoted to the heavenly planets as a result of his pious activities, but even the demigods from the heavenly planets want to come to Bhārata-varṣa and achieve bodies that may be very easily used to cultivate Kṛṣṇa consciousness. Therefore Śrī Caitanya Mahāprabhu repeatedly says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhārata-bhūmite haila manuṣya-janma yāra<br>janma sārthaka kari’ kara para-upakāra<br> [Cc. <span class="Ref_Italic">Ādi</span> 9.41]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A human being born in the land of Bhārata-varṣa has the special prerogative to develop Kṛṣṇa consciousness. Therefore those already born in Bhārata-varṣa should take lessons from the <span class="Italic">śāstras</span> and <span class="Italic">guru</span> and should fully take advantage of the mercy of Śrī Caitanya Mahāprabhu in order to be fully equipped with Kṛṣṇa consciousness. By taking full advantage of Kṛṣṇa consciousness, one goes back home, back to Godhead (<span class="Italic">yānti mad-yājino ’pi mām</span>). The Kṛṣṇa consciousness movement is therefore spreading this facility to human society by opening many, many centers all over the world so that people may associate with the pure devotees of the Kṛṣṇa consciousness movement, understand the science of Kṛṣṇa consciousness and ultimately go back home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29–30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">91</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: My dear King, in the opinion of some learned scholars, eight smaller islands surround Jambūdvīpa. When the sons of Mahārāja Sagara were searching all over the world for their lost horse, they dug up the earth, and in this way eight adjoining islands came into existence. The names of these islands are Svarṇaprastha, Candraśukla, Āvartana, Ramaṇaka, Mandara-hariṇa, Pāñcajanya, Siṁhala and Laṅkā.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            In the <span class="Italic">Kūrma Purāṇa</span> there is this statement about the desires of the demigods:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anadhikāriṇo devāḥ<br>svarga-sthā bhāratodbhavam<br>vāñchanty ātma-vimokṣārtha-<br>mudrekārthe ’dhikāriṇaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Although the demigods are situated in exalted positions in the heavenly planets, they nevertheless desire to descend to the land of Bhārata-varṣa on the planet earth. This indicates that even the demigods are unfit to reside in Bhārata-varṣa. Therefore if persons already born in Bhāratavarṣa live like cats and dogs, not taking full advantage of their birth in this land, they are certainly unfortunate.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, O best of the descendants of Bharata Mahārāja, I have thus described to you, as I myself have been instructed, the island of Bhārata-varṣa and its adjoining islands. These are the islands that constitute Jambūdvīpa.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Nineteenth Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “A Description of the Island of Jambūdvīpa.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/19">https://prabhupadabooks.com/sb/5/19</a><!-- span.text_source_copied_date
+        | on 2023-04-09 15:18:00 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.18: The Prayers Offered to the Lord by the Residents of Jambudvipa     Next: SB 5.20: Studying the Structure of the Universe</div>
+      </p>
+    </div>
+  </body>
+</html>

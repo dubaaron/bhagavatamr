@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.15, The Saints Nārada and Aṅgirā Instruct King Citraketu</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Fifteen:<br>The Saints Nārada and Aṅgirā Instruct King Citraketu
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">In this chapter, Aṅgirā Ṛṣi, along with Nārada, consoles Citraketu as far as possible. Aṅgirā and Nārada Ṛṣi came to relieve the King from excessive lamentation by instructing him about the spiritual significance of life.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The great saints Aṅgirā and Nārada explained that the relationship between father and son is not factual; it is simply a representation of the illusory energy. The relationship did not exist before, nor will it stay in the future. By the arrangement of time, the relationship exists only in the present. One should not lament for temporary relationships. The entire cosmic manifestation is temporary; although not unreal, it is not factual. By the direction of the Supreme Personality of Godhead, everything created in the material world is transient. By a temporary arrangement, a father begets a child, or a living entity becomes the child of a so-called father. This temporary arrangement is made by the Supreme Lord. Neither the father nor the son exists independently.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">As the King listened to the great sages, he was relieved from his false lamentation, and then he inquired about their identity. The great sages presented who they were and instructed that all sufferings are due to the bodily conception of life. When one understands his spiritual identity and surrenders to the Supreme Personality of Godhead, the supreme spiritual person, one becomes actually happy. When one searches for happiness in matter, one must certainly lament for bodily relationships. Self-realization means spiritual realization of one’s relationship with Kṛṣṇa. Such realization ends one’s miserable material life.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: While King Citraketu, overcome by lamentation, lay like a dead body at the side of the dead body of his son, the two great sages Nārada and Aṅgirā instructed him about spiritual consciousness as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">79</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, what relationship does the dead body for which you lament have with you, and what relationship do you have with him? You may say that you are now related as father and son, but do you think this relationship existed before? Does it truly exist now? Will it continue in the future?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The instructions given by Nārada and Aṅgirā Muni are the true spiritual instructions for the illusioned conditioned soul. This world is temporary, but because of our previous <span class="Italic">karma</span> we come here and accept bodies, creating temporary relationships in terms of society, friendship, love, nationality and community, which are all finished at death. These temporary relationships did not exist in the past, nor will they exist in the future. Therefore at the present moment the so-called relationships are illusions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">254</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, as small particles of sand sometimes come together and are sometimes separated due to the force of the waves, the living entities who have accepted material bodies sometimes come together and are sometimes separated by the force of time.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The misunderstanding of the conditioned soul is the bodily conception of life. The body is material, but within the body is the soul. This is spiritual understanding. Unfortunately, one who is in ignorance, under the spell of material illusion, accepts the body to be the self. He cannot understand that the body is matter. Like small particles of sand, bodies come together and are separated by the force of time, and people falsely lament for unification and separation. Unless one knows this, there is no question of happiness. Therefore in <span class="Ref_Italic">Bhagavad-gītā</span> (2.13) this is the first instruction given by the Lord:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">dehino ’smin yathā dehe<br>kaumāraṁ yauvanaṁ jarā<br>tathā dehāntara-prāptir<br>dhīras tatra na muhyati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “As the embodied soul continually passes, in this body, from boyhood to youth to old age, the soul similarly passes into another body at death. The self-realized soul is not bewildered by such a change.” We are not the body; we are spiritual beings trapped in the body. Our real interest lies in understanding this simple fact. Then we can make further spiritual progress. Otherwise, if we remain in the bodily conception of life, our miserable material existence will continue forever. Political adjustments, social welfare work, medical assistance and the other programs we have manufactured for peace and happiness will never endure. We shall have to undergo the sufferings of material life one after another. Therefore material life is said to be <span class="Italic">duḥkhālayam aśāśvatam [Bg. </span>8.15]<span class="Italic">;</span> it is a reservoir of miserable conditions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">389</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When seeds are sown in the ground, they sometimes grow into plants and sometimes do not. Sometimes the ground is not fertile, and the sowing of seeds is unproductive. Similarly, sometimes a prospective father, being impelled by the potency of the Supreme Lord, can beget a child, but sometimes conception does not take place. Therefore one should not lament over the artificial relationship of parenthood, which is ultimately controlled by the Supreme Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Mahārāja Citraketu was actually not destined to get a son. Therefore although he married hundreds and thousands of wives, all of them proved barren, and he could not beget even one child. When Aṅgirā Ṛṣi came to see the King, the King requested the great sage to enable him to have at least one son. Because of the blessing of Aṅgirā Ṛṣi, a child was sent by the grace of <span class="Italic">māyā,</span> but the child was not to live for long. Therefore in the beginning Aṅgirā Ṛṣi told the King that he would beget a child who would cause jubilation and lamentation.
+          </p>
+          <p>
+            King Citraketu was not destined to get a child by providence, or the will of the Supreme. Just as sterile grain cannot produce more grain, a sterile person, by the will of the Supreme Lord, cannot beget a child. Sometimes a child is born even to an impotent father and sterile mother, and sometimes a potent father and fertile mother are childless. Indeed, sometimes a child is born despite contraceptive methods, and therefore the parents kill the child in the womb. In the present age, killing children in the womb has become a common practice. Why? When contraceptive methods are taken, why don’t they act? Why is a child sometimes produced so that the father and mother have to kill it in the womb? We must conclude that our arrangement of so-called scientific knowledge cannot determine what will take place; what is enacted actually depends on the supreme will. It is by the supreme will that we are situated in certain conditions in terms of family, community and personality. These are all arrangements of the Supreme Lord according to our desires under the spell of <span class="Italic">māyā,</span> illusion. In devotional life, therefore, one should not desire anything, since everything depends on the Supreme Personality of Godhead. As stated in <span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> (1.1.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā<br> [Madhya 19.167]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.” One should act only to develop Kṛṣṇa consciousness. For everything else, one should fully depend upon the Supreme Person. We should not create plans that will ultimately make us frustrated.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">138</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, both you and us—your advisers, wives and ministers—as well as everything moving and not moving throughout the entire cosmos at this time, are in a temporary situation. Before our birth this situation did not exist, and after our death it will exist no longer. Therefore our situation now is temporary, although it is not false.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            The Māyāvādī philosophers say, <span class="Italic">brahma satyaṁ jagan mithyā:</span> Brahman, the living being, is factual, but his present bodily situation is false. According to the Vaiṣṇava philosophy, however, the present situation is not false but temporary. It is like a dream. A dream does not exist before one falls asleep, nor does it continue after one awakens. The period for dreaming exists only between these two, and therefore it is false in the sense that it is impermanent. Similarly, the entire material creation, including our own creation and those of others, is impermanent. We do not lament for the situation in a dream before the dream takes place or after it is over, and so during the dream, or during a dreamlike situation, one should not accept it as factual and lament about it. This is real knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">224</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, the master and proprietor of everything, is certainly not interested in the temporary cosmic manifestation. Nonetheless, just as a boy at the beach creates something in which he is not interested, the Lord, keeping everything under His control, causes creation, maintenance and annihilation. He creates by engaging a father to beget a son, He maintains by engaging a government or king to see to the public’s welfare, and He annihilates through agents for killing, such as snakes. The agents for creation, maintenance and annihilation have no independent potency, but because of the spell of the illusory energy, one thinks himself the creator, maintainer and annihilator.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            No one can independently create, maintain or annihilate. <span class="Ref_Italic">Bhagavad-gītā</span> (3.27) therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself the doer of activities that are in actuality carried out by nature.” <span class="Italic">Prakṛti,</span> material nature, as directed by the Supreme Personality of Godhead, induces all living entities to create, maintain or annihilate according to the modes of nature. But the living entity, without knowledge of the Supreme Person and His agent the material energy, thinks that he is the doer. In fact, he is not at all the doer. As an agent of the supreme doer, the Supreme Lord, one should abide by the Lord’s orders. The present chaotic conditions of the world are due to the ignorance of leaders who forget that they have been appointed to act by the Supreme Personality of Godhead. Because they have been appointed by the Lord, their duty is to consult the Lord and act accordingly. The book for consultation is <span class="Italic">Bhagavad-gītā,</span> in which the Supreme Lord gives directions. Therefore those who are engaged in creation, maintenance and annihilation should consult the Supreme Person, who has appointed them, and should act accordingly. Then everyone will be satisfied, and there will be no disturbances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">179</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As from one seed another seed is generated, O King, so from one body [the body of the father], through another body [the body of the mother], a third body is generated [the body of a son]. As the elements of the material body are eternal, the living entity who appears through these material elements is also eternal.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            From <span class="Italic">Bhagavad-gītā</span> we understand that there are two energies, namely the superior energy and inferior energy. Inferior energy consists of the five gross and three subtle material elements. The living entity. who represents the superior energy, appears in different types of bodies through these elements by the manipulation or supervision of the material energy. Actually both the material and spiritual energies—matter and spirit—exist eternally as potencies of the Supreme Personality of Godhead. The potent entity is the Supreme Person. Since the spiritual energy, the living being, who is part and parcel of the Supreme Lord, desires to enjoy this material world, the Lord gives him a chance to accept different types of material bodies and enjoy or suffer in different material conditions. Factually, the spiritual energy, the living entity who desires to enjoy material things, is manipulated by the Supreme Lord. The so-called father and mother have nothing to do with the living entity. As a result of his own choice and <span class="Italic">karma,</span> the living being takes different bodies through the agency of so-called fathers and mothers.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">67</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Divisions of generalization and specification, such as nationality and individuality, are the imaginations of persons who are not advanced in knowledge.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Actually there are two energies—material and spiritual. Both of them are ever-existing because they are emanations from the eternal truth, the Supreme Lord. Because the individual soul, the individual living entity, has desired to act in forgetfulness of his original identity since time immemorial, he is accepting different positions in material bodies and being designated according to many divisions of nationality, community, society, species and so on.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: Thus enlightened by the instructions of Nārada and Aṅgirā, King Citraketu became hopeful with knowledge. Wiping his shriveled face with his hand, the King began to speak.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Citraketu said: You have both come here dressed like avadhūtas, liberated persons, just to cover your identities, but I see that of all men, you are the most elevated in awareness. You know everything as it is. Therefore you are the greatest of all great personalities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Brāhmaṇas who are exalted to the position of Vaiṣṇavas, the most dear servants of Kṛṣṇa, sometimes dress like madmen. Just to benefit materialists like us, who are always attached to sense gratification, and just to dissipate our ignorance, these Vaiṣṇavas wander on the surface of the globe according to their desire.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12–15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">312</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great souls, I have heard that among the great and perfect persons wandering the surface of the earth to instruct knowledge to people covered by ignorance are Sanat-kumāra, Nārada, Ṛbhu, Aṅgirā, Devala, Asita, Apāntaratamā [Vyāsadeva], Mārkaṇḍeya, Gautama, Vasiṣṭha, Bhagavān Paraśurāma, Kapila, Śukadeva, Durvāsā, Yājñavalkya, Jātukarṇa and Aruṇi. Others are Romaśa, Cyavana, Dattātreya, Āsuri, Patañjali, the great sage Dhaumya who is like the head of the Vedas, the sage Pañcaśikha, Hiraṇyanābha, Kauśalya, Śrutadeva and Ṛtadhvaja. You must certainly be among them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The word <span class="Italic">jñāna-hetavaḥ</span> is very significant because great personalities like those listed in these verses wander on the surface of the globe not to mislead the populace, but to distribute real knowledge. Without this knowledge, human life is wasted. The human form of life is meant for realization of one’s relationship with Kṛṣṇa, or God. One who lacks this knowledge is categorized among the animals. The Lord Himself says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na māṁ duṣkṛtino mūḍhāḥ<br>prapadyante narādhamāḥ<br>māyayāpahṛta-jñānā<br>āsuraṁ bhāvam āśritāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those miscreants who are grossly foolish, lowest among mankind, whose knowledge is stolen by illusion, and who partake of the atheistic nature of demons, do not surrender unto Me.”
+          </p>
+          <p>
+            Ignorance is the bodily conception of life (<span class="Italic">yasyātma-buddhiḥ kuṇape tri-dhātuke.</span> <span class="Italic">...sa eva go-kharaḥ [SB </span>10.84.13]). Practically everyone throughout the universe, especially on this planet, Bhūrloka, thinks that there is no separate existence of the body and soul and therefore no need of self-realization. But that is not a fact. Therefore all the <span class="Italic">brāhmaṇas</span> listed here, being devotees, travel all over the world to awaken Kṛṣṇa consciousness in the hearts of such foolish materialists.
+          </p>
+          <p>
+            The <span class="Italic">ācāryas</span> mentioned in these verses are described in the <span class="Italic">Mahābhārata.</span> The word <span class="Italic">pañcaśikha</span> is also important. One who is liberated from the conceptions of <span class="Italic">annamaya, prāṇamaya, manomaya, vijñānamaya</span> and <span class="Italic">ānandamaya</span> and who is perfectly aware of the subtle coverings of the soul is called <span class="Italic">pañcaśikha.</span> According to the statements of the <span class="Italic">Mahābhārata</span> (<span class="Italic">Sānti-parva,</span> Chapters 218–219), an <span class="Italic">ācārya</span> named Pañcaśikha took birth in the family of Mahārāja Janaka, the ruler of Mithila. The Sāṅkhya philosophers accept Pañcaśikhācārya as one of them. Real knowledge pertains to the living entity dwelling within the body. Unfortunately, because of ignorance, the living entity identifies himself with the body and therefore feels pleasure and pain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">276</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because you are great personalities, you can give me real knowledge. I am as foolish as a village animal like a pig or dog because I am merged in the darkness of ignorance. Therefore, please ignite the torch of knowledge to save me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            This is the way to receive knowledge. One must submit oneself at the lotus feet of great personalities who can actually deliver transcendental knowledge. It is therefore said, <span class="Italic">tasmād guruṁ prapadyeta jijñāsuḥ śreya uttamam: [SB </span>11.3.21] “One who is inquisitive to understand the highest goal and benefit of life must approach a bona fide spiritual master and surrender unto him.” Only one who is actually eager to receive knowledge to eradicate the darkness of ignorance is eligible to approach a <span class="Italic">guru,</span> or spiritual master. The <span class="Italic">guru</span> should not be approached for material benefits. One should not approach a <span class="Italic">guru</span> just to cure some disease or receive some miraculous benefit. This is not the way to approach the <span class="Italic">guru.</span> <span class="Italic">Tad-vijñānārtham:</span> one should approach the <span class="Italic">guru</span> to understand the transcendental science of spiritual life. Unfortunately, in this age of Kali there are many bogus <span class="Italic">gurus</span> who display magic to their disciples, and many foolish disciples want to see such magic for material benefits. These disciples are not interested in pursuing spiritual life to save themselves from the darkness of ignorance. It is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">oṁ ajñāna-timirāndhasya<br>jñānāñjana-śalākayā<br>cakṣur unmīlitaṁ yena<br>tasmai śrī-gurave namaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I was born in the darkest ignorance, and my spiritual master opened my eyes with the torch of knowledge. I offer my respectful obeisances unto him.” This gives the definition of the <span class="Italic">guru.</span> Everyone is in the darkness of ignorance. Therefore everyone needs to be enlightened with transcendental knowledge. One who enlightens his disciple and saves him from rotting in the darkness of ignorance in this material world is a true <span class="Italic">guru.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Aṅgirā said: My dear King, when you desired to have a son, I approached you. Indeed, I am the same Aṅgirā Ṛṣi who gave you this son. As for this ṛṣi, he is the great sage Nārada, the direct son of Lord Brahmā
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18–19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">310</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, you are an advanced devotee of the Supreme Personality of Godhead. To be absorbed in lamentation for the loss of something material is unsuitable for a person like you. Therefore we have both come to relieve you from this false lamentation, which is due to your being merged in the darkness of ignorance. For those who are advanced in spiritual knowledge to be affected by material loss and gain is not at all desirable.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            Several words in this verse are very important. The word <span class="Italic">mahā-puruṣa</span> refers to advanced devotees and also to the Supreme Personality of Godhead. <span class="Italic">Mahā</span> means “the supreme,” and <span class="Italic">puruṣa</span> means “person.” One who always engages in the service of the Supreme Lord is called <span class="Italic">mahā-pauruṣika.</span> Śukadeva Gosvāmī and Mahārāja Parīkṣit are sometimes addressed as <span class="Italic">mahā-pauruṣika.</span> A devotee should always aspire to engage in the service of advanced devotees. As Śrīla Narottama dāsa Ṭhākura has sung:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tāṅdera caraṇa sevi bhakta-sane vāsa<br>janame janame haya, ei abhilāṣa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A devotee should always aspire to live in the association of advanced devotees and engage in the service of the Lord through the <span class="Italic">paramparā</span> system. One should serve the mission of Śrī Caitanya Mahāprabhu through the instructions of the great Gosvāmīs of Vṛndāvana. This is called <span class="Italic">tāṅdera caraṇa sevi.</span> While serving the lotus feet of the Gosvāmīs, one should live in the association of devotees (<span class="Italic">bhakta-sane vāsa</span>). This is the business of a devotee. A devotee should not aspire for material profit or lament for material loss. When Aṅgirā Ṛṣi and Nārada saw that Mahārāja Citraketu, an advanced devotee, had fallen in the darkness of ignorance and was lamenting for the material body of his son, by their causeless mercy they came to advise him so that he could be saved from this ignorance.
+          </p>
+          <p>
+            Another significant word is <span class="Italic">brahmaṇya.</span> The Supreme Personality of Godhead is sometimes addressed by the prayer <span class="Italic">namo brahmaṇya-devāya,</span> which offers obeisances unto the Lord because He is served by the devotees. Therefore this verse states, <span class="Italic">brahmaṇyo bhagavad-bhakto nāvāsāditum arhasi.</span> This is the symptom of an advanced devotee. <span class="Italic">Brahma-bhūtaḥ prasannātmā [Bg. </span>18.54]<span class="Italic">.</span> For a devotee—an advanced, self-realized soul—there is no cause for material jubilation or lamentation. He is always transcendental to conditional life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When I first came to your home, I could have given you the supreme transcendental knowledge, but when I saw that your mind was absorbed in material things, I gave you only a son, who caused you jubilation and lamentation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21–23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">137</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, now you are actually experiencing the misery of a person who has sons and daughters. O King, owner of the state of Śūrasena, one’s wife, his house, the opulence of his kingdom, and his various other opulences and objects of sense perception are all the same in that they are temporary. One’s kingdom, military power, treasury, servants, ministers, friends and relatives are all causes of fear, illusion, lamentation and distress. They are like a gandharva-nagara, a nonexistent palace that one imagines to exist in the forest. Because they are impermanent, they are no better than illusions, dreams and mental concoctions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            This verse describes the entanglement of material existence. In material existence, the living entity possesses many things—the material body, children, wife and so on (<span class="Italic">dehāpatya-kalatrādiṣu</span>). One may think that these will give him protection, but that is impossible. In spite of all these possessions, the spirit soul has to give up his present situation and accept another. The next situation may be unfavorable, but even if it is favorable, one must give it up and again accept another body. In this way, one’s tribulation in material existence continues. A sane man should he perfectly aware that these things will never be able to give him happiness. One must be situated in his spiritual identity and eternally serve the Supreme Personality of Godhead as a devotee. Aṅgirā Ṛṣi and Nārada Muni gave this instruction to Mahārāja Citraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">233</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            These visible objects like wife, children and property are like dreams and mental concoctions. Actually what we see has no permanent existence. It is sometimes seen and sometimes not. Only because of our past actions do we create such mental concoctions, and because of these concoctions, we perform further activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Everything material is a mental concoction because it is sometimes visible and sometimes not. At night when we dream of tigers and snakes, they are not actually present, but we are afraid because we are affected by what we envision in our dreams. Everything material is like a dream because it actually has no permanent existence.
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura writes as follows in his commentary: <span class="Italic">arthena vyāghra-sarpādinā vinaiva dṛśyamānāḥ svapnādi-bhaṅge sati na dṛśyante tad evaṁ dārādayo ’vāstava-vastu-bhūtāḥ svapnādayo ’vastu-bhūtāś ca sarve manobhavāḥ mano-vāsanā janyatvān manobhavāḥ.</span> At night one dreams of tigers and snakes, and while dreaming he actually sees them, but as soon as the dream is broken they no longer exist. Similarly, the material world is a creation of our mental concoctions. We have come to this material world to enjoy material resources, and by mental concoction we discover many, many objects of enjoyment because our minds are absorbed in material things. This is why we receive various bodies. According to our mental concoctions we work in various ways, desiring various achievements, and by nature and the order of the Supreme Personality of Godhead (<span class="Italic">karmaṇā-daiva-netreṇa</span>) we get the advantages we desire. Thus we become more and more involved with material concoctions. This is the reason for our suffering in the material world. By one kind of activity we create another, and they are all products of our mental concoctions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">409</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The living entity in the bodily conception of life is absorbed in the body, which is a combination of the physical elements, the five senses for gathering knowledge, and the five senses of action, along with the mind. Through the mind the living entity suffers three kinds of tribulations—adhibhautika, adhidaivika and adhyātmika. Therefore this body is a source of all miseries.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            In the Fifth Canto (5.5.4), while instructing his sons, Ṛṣabhadeva said, <span class="Italic">asann api kleśada āsa dehaḥ:</span> the body, although temporary, is the cause of all the miseries of material existence. As already discussed in the previous verse, the entire material creation is based on mental concoction. The mind sometimes induces us to think that if we purchase an automobile we can enjoy the physical elements, such as earth, water, air and fire, combined in forms of iron, plastic, petrol and so on. Working with the five material elements (<span class="Italic">pañca-bhūtas</span>), as well as with our five knowledge-gathering senses like the eyes, ears and tongue and our five active senses like the hands and legs, we become involved in the material condition. Thus we are subjected to the tribulations known as <span class="Italic">adhyātmika, adhidaivika</span> and <span class="Italic">adhibhautika.</span> The mind is the center because the mind creates all these things. As soon as the material object is struck, however, the mind is affected, and we suffer. For example, with the material elements, the working senses and the knowledge-gathering senses we create a very nice car, and when the car is accidentally smashed in a collision, the mind suffers, and through the mind the living entity suffers.
+          </p>
+          <p>
+            The fact is that the living entity, while concocting with the mind, creates the material condition. Because matter is destructible, through the material condition the living entity suffers. Otherwise, the living entity is detached from all material conditions. When one comes to the Brahman platform, the platform of spiritual life, fully understanding that he is a spiritual soul (<span class="Italic">), he is no longer affected by lamentation or hankering. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is thus transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments nor desires to have anything.” Elsewhere in <span class="Ref_Italic">Bhagavad-gītā</span> (15.7) the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mamaivāṁśo jīva-loke<br>jīva-bhūtaḥ sanātanaḥ<br>manaḥ-ṣaṣṭhānīndriyāṇi<br>prakṛti-sthāni karṣati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The living entities in this conditioned world are My eternal fragmental parts. Due to conditioned life, they are struggling very hard with the six senses, which include the mind.” The living entity is actually part and parcel of the Supreme Personality of Godhead and is unaffected by material conditions, but because the mind (<span class="Italic">manaḥ</span>) is affected, the senses are affected, and the living entity struggles for existence within this material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">142</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, O King Citraketu, carefully consider the position of the ātmā. In other words, try to understand who you are—whether body, mind or soul. Consider where you have come from, where you are going after giving up this body, and why you are under the control of material lamentation. Try to understand your real position in this way, and then you will be able to give up your unnecessary attachment. You will also be able to give up the belief that this material world, or anything not directly in touch with service to Kṛṣṇa, is eternal. Thus you will obtain peace.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The Kṛṣṇa consciousness movement is factually endeavoring to bring human society to a sober condition. Because of a misdirected civilization, people are jumping in materialistic life like cats and dogs, performing all sorts of abominable, sinful actions and becoming increasingly entangled. The Kṛṣṇa consciousness movement includes self-realization because one is first directed by Lord Kṛṣṇa to understand that one is not the body but the owner of the body. When one understands this simple fact, he can direct himself toward the goal of life. Because people are not educated in terms of the goal of life, they are working like madmen and becoming more and more attached to the material atmosphere. The misguided man accepts the material condition as everlasting. One must give up his faith in material things and give up attachment for them. Then one will be sober and peaceful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Nārada continued: My dear King, attentively receive from me a mantra, which is most auspicious. After accepting it from me, in seven nights you will be able to see the Lord face to face.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, in former days Lord Śiva and other demigods took shelter of the lotus feet of Saṅkarṣaṇa. Thus they immediately got free from the illusion of duality and achieved unequaled and unsurpassed glories in spiritual life. You will very soon attain that very same position.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Fifteenth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “The Saints Nārada and Aṅgirā Instruct King Citraketu.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/15">https://prabhupadabooks.com/sb/6/15</a><!-- span.text_source_copied_date
+        | on 2023-12-17 19:48:11 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.14: King Citraketu's Lamentation     Next: SB 6.16: King Citraketu Meets the Supreme Lord</div>
+      </p>
+    </div>
+  </body>
+</html>

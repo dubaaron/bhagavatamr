@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.17, Mother Pārvatī Curses Citraketu</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Seventeen:<br>Mother Pārvatī Curses Citraketu
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">The Seventeenth Chapter is summarized as follows. This chapter describes Citraketu’s receiving the body of an <span class="Italic">asura,</span> or demon, because of joking with Lord Śiva.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">After personally talking with the Supreme Personality of Godhead, King Citraketu enjoyed life in his airplane with the women of the Vidyādhara planet. Engaging in the congregational chanting of the glories of the Lord, he began flying his plane and traveling in outer space. One day while traveling like this, he wandered into the bowers of Sumeru Mountain, where he came upon Lord Śiva embracing Pārvatī, surrounded by an assembly of Siddhas, Cāraṇas and great sages. Seeing Lord Śiva in that situation, Citraketu laughed very loudly, but Pārvatī became very angry at him and cursed him. Because of this curse, Citraketu later appeared as the demon Vṛtrāsura.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Citraketu, however, was not at all afraid of Pārvatī’s curse, and thus he spoke as follows: “Everyone in human society enjoys happiness and distress according to his past deeds and in this way travels in the material world. Therefore no one is responsible for his happiness and distress. One is controlled by the influence of material nature in the material world, yet one thinks himself the doer of everything. In this material world, which is made of the external energy of the Supreme Lord, one is sometimes cursed and sometimes favored, and thus he sometimes enjoys in the upper planetary systems and sometimes suffers in the lower planets, but all these situations are the same because they are within this material world. None of these positions has any factual existence, for all of them are temporary. The Supreme Personality of Godhead is the ultimate controller because the material world is created, maintained and annihilated under His control while He nonetheless remains neutral to these different transformations of the material world in time and space. The material, external energy of the Supreme Personality of Godhead is in charge of this material world. The Lord helps the world by creating situations for the living entities within it.”</div>
+        </p>
+        <p>
+          <div class="Normal-Level">When Citraketu spoke in this way, all the members in the great assembly in which Lord Śiva and Pārvatī were present were astonished. Then Lord Śiva began speaking about the devotees of the Lord. A devotee is neutral in all conditions of life, whether in the heavenly planets or hellish planets, whether liberated from the material world or conditioned by it, and whether blessed with happiness or subjected to distress. These are all merely dualities created by the external energy. Being influenced by the external energy, the living entity accepts a gross and subtle material body, and in this illusory position he apparently suffers miseries, although everyone is part and parcel of the Supreme Lord. The so-called demigods consider themselves independent lords, and in this way they are misled from understanding that all living entities are part of the Supreme. This chapter concludes by glorifying the devotee and the Supreme Personality of Godhead.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī said: After offering obeisances to the direction from which Ananta, the Supreme Personality of Godhead, had disappeared, Citraketu began traveling in outer space as the head of the Vidyādharas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2–3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">66</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being praised by great sages and saints and by the inhabitants of Siddhaloka and Cāraṇaloka, Citraketu, the most powerful mystic yogī, wandered about enjoying life for millions of years. With bodily strength and senses free from deterioration, he traveled within the valleys of Sumeru Mountain, which is the place of perfection for various kinds of mystic power. In those valleys he enjoyed life with the women of Vidyādhara-loka by chanting the glories of the Supreme Lord, Hari.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            It is to be understood that Mahārāja Citraketu, although surrounded by beautiful women from Vidyādhara-loka, did not forget to glorify the Lord by chanting the holy name of the Lord. It has been proved in many places that one who is not contaminated by any material condition, who is a pure devotee engaged in chanting the glories of the Lord, should be understood to be perfect.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4–5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">159</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One time while King Citraketu was traveling in outer space on a brilliantly effulgent airplane given to him by Lord Viṣṇu, he saw Lord Śiva, surrounded by Siddhas and Cāraṇas. Lord Śiva was sitting in an assembly of great saintly persons and embracing Pārvatī on his lap with his arm. Citraketu laughed loudly and spoke, within the hearing of Pārvatī.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says in this connection,
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhaktiṁ bhūtiṁ harir dattvā<br>sva-vicchedānubhūtaye<br>devyāḥ śāpena vṛtratvaṁ<br>nītvā taṁ svāntike ’nayat</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The purport is that the Supreme Personality of Godhead wanted to bring Citraketu to Vaikuṇṭhaloka as soon as possible. The Lord’s plan was that Citraketu be cursed by Pārvatī to become Vṛtrāsura so that in his next life he could quickly return home, back to Godhead. There have been many instances in which a devotee acting as a demon has been brought to the kingdom of God by the mercy of the Lord. For Pārvatī to be embraced by Lord Śiva was natural in a relationship between husband and wife; this was nothing extraordinary for Citraketu to see. Nonetheless, Citraketu laughed loudly to see Lord Śiva in that situation, even though he should not have done so. Thus he was eventually cursed, and this curse was the cause of his returning home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Citraketu said: Lord Śiva, the spiritual master of the general populace, is the best of all living entities who have accepted material bodies. He enunciates the system of religion. Yet how wonderful it is that he is embracing his wife, Pārvatī, in the midst of an assembly of great saintly persons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Śiva, whose hair is matted on his head, has certainly undergone great austerities and penances. Indeed, he is the president in the assembly of strict followers of Vedic principles. Nonetheless, he is seated with his wife on his lap in the midst of saintly persons and is embracing her as if he were a shameless, ordinary human being.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Citraketu appreciated the exalted position of Lord Śiva, and therefore he remarked at how wonderful it was that Lord Śiva was acting like an ordinary human being. He appreciated Lord Śiva’s position, but when he saw Lord Śiva sitting in the midst of saintly persons and acting like a shameless, ordinary man, he was astonished. Śrīla Viśvanātha Cakravartī Ṭhākura remarks that although Citraketu criticized Lord Śiva, he did not offend Lord Śiva like Dakṣa. Dakṣa considered Lord Śiva insignificant, but Citraketu expressed his wonder at Lord Śiva’s being situated in that way.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">60</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ordinary conditioned persons generally embrace their wives and enjoy their company in solitary places. How wonderful it is that Lord Mahādeva, although a great master of austerity, is embracing his wife openly in the midst of an assembly of great saints.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The word <span class="Italic">mahā-vrata-dharaḥ</span> indicates a <span class="Italic">brahmacārī</span> who has never fallen down. Lord Śiva is counted among the best of <span class="Italic">yogīs,</span> yet he embraced his wife in the midst of great saintly persons. Citraketu appreciated how great Lord Śiva was to be unaffected even in that situation. Therefore Citraketu was not an offender; he merely expressed his wonder.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">303</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrīla Śukadeva Gosvāmī continued: My dear King, after hearing Citraketu’s statement, Lord Śiva, the most powerful personality, whose knowledge is fathomless, simply smiled and remained silent, and all the members of the assembly followed the lord by not saying anything.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Citraketu’s purpose in criticizing Lord Śiva is somewhat mysterious and cannot be understood by a common man. Śrīla Viśvanātha Cakravartī Ṭhākura, however, has made the following observations. Lord Śiva, being the most exalted Vaiṣṇava and one of the most powerful demigods, is able to do anything he desires. Although he was externally exhibiting the behavior of a common man and not following etiquette, such actions cannot diminish his exalted position. The difficulty is that a common man, seeing Lord Śiva’s behavior, might follow his example. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.21):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yad yad ācarati śreṣṭhas<br>tat tad evetaro janaḥ<br>sa yat pramāṇaṁ kurute<br>lokas tad anuvartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whatever action a great man performs, common men follow. And whatever standards he sets by exemplary acts, all the world pursues.” A common man might also criticize Lord Śiva, like Dakṣa, who suffered the consequences for his criticism. King Citraketu desired that Lord Śiva cease this external behavior so that others might be saved from criticizing him and thus becoming offenders. If one thinks that Viṣṇu, the Supreme Personality of Godhead, is the only perfect personality whereas the demigods, even such demigods as Lord Śiva, are inclined to improper social affairs, he is an offender. Considering all this, King Citraketu was somewhat harsh in his behavior with Lord Śiva.
+          </p>
+          <p>
+            Lord Śiva, who is always deep in knowledge, could understand Citraketu’s purpose, and therefore he was not at all angry; rather, he simply smiled and remained silent. The members of the assembly surrounding Lord Śiva could also understand Citraketu’s purpose. Consequently, following the behavior of Lord Śiva, they did not protest; instead, following their master, they remained silent. If the members of the assembly thought that Citraketu had blasphemed Lord Śiva, they would certainly have left at once, blocking their ears with their hands.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">291</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Not knowing the prowess of Lord Śiva and Pārvatī, Citraketu strongly criticized them. His statements were not at all pleasing, and therefore the goddess Pārvatī, being very angry, spoke as follows to Citraketu, who thought himself better than Lord Śiva in controlling the senses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Although Citraketu never meant to insult Lord Śiva, he should not have criticized the lord, even though the lord was transgressing social customs. It is said, <span class="Italic">tejīyasāṁ na doṣāya:</span> one who is very powerful should be understood to be faultless. For example, one should not find faults with the sun, although it evaporates urine from the street. The most powerful cannot be criticized by an ordinary man, or even by a great personality. Citraketu should have known that Lord Śiva, although sitting in that way, was not to be criticized. The difficulty was that Citraketu, having become a great devotee of Lord Viṣṇu, Saṅkarṣaṇa, was somewhat proud at having achieved Lord Saṅkarṣaṇa’s favor and therefore thought that he could now criticize anyone, even Lord Śiva. This kind of pride in a devotee is never tolerated. A Vaiṣṇava should always remain very humble and meek and offer respect to others.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tṛṇād api sunīcena<br>taror api sahiṣṇunā<br>amāninā mānadena<br>kīrtanīyaḥ sadā hariḥ<br> [Cc. adi 17.31]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and ready to offer all respect to others. In such a state of mind one can chant the holy name of the Lord constantly.” A Vaiṣṇava should not try to minimize anyone else’s position. It is better to remain humble and meek and chant the Hare Kṛṣṇa <span class="Italic">mantra.</span> The word <span class="Italic">nirjitātmābhimānine</span> indicates that Citraketu thought himself a better controller of the senses than Lord Śiva, although actually he was not. Because of all these considerations, mother Pārvatī was somewhat angry at Citraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The goddess Pārvatī said: Alas, has this upstart now received a post from which to punish shameless persons like us? Has he been appointed ruler, carrier of the rod of punishment? Is he now the only master of everything?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas, Lord Brahmā, who has taken his birth from the lotus flower, does not know the principles of religion, nor do the great saints like Bhṛgu and Nārada, nor the four Kumāras, headed by Sanat-kumāra. Manu and Kapila have also forgotten the religious principles. I suppose it to be because of this that they have not tried to stop Lord Śiva from behaving improperly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">51</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This Citraketu is the lowest of kṣatriyas, for he has impudently overridden Brahmā and the other demigods by insulting Lord Śiva, upon whose lotus feet they always meditate. Lord Śiva is personified religion and the spiritual master of the entire world, and therefore Citraketu must be punished.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            All the members of the assembly were exalted <span class="Italic">brāhmaṇas</span> and self-realized souls, but they did not say anything about the conduct of Lord Śiva, who was embracing the goddess Pārvatī on his lap. Citraketu nonetheless criticized Lord Śiva, and therefore the opinion of Pārvatī was that he should be punished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">137</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This person is puffed up because of his achievements, thinking, “I am the best.” He does not deserve to approach the shelter of Lord Viṣṇu’s lotus feet, which are worshiped by all saintly persons, for he is impudent, thinking himself greatly important.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            If a devotee thinks that he is very much advanced in devotional service, he is considered puffed up and unfit to sit beneath the shelter of the Lord’s lotus feet. Again, this instruction by Lord Caitanya is applicable:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tṛṇād api sunīcena<br>taror api sahiṣṇunā<br>amāninā mānadena<br>kīrtanīyaḥ sadā hariḥ<br> [Cc. adi 17.31]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and ready to offer all respect to others. In such a state of mind one can chant the holy name of the Lord constantly.” Unless one is humble and meek, one cannot qualify to sit at the lotus feet of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">481</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O impudent one, my dear son, now take birth in a low, sinful family of demons so that you will not commit such an offense again toward exalted, saintly persons in this world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            One should be very careful not to commit offenses at the lotus feet of Vaiṣṇavas, of whom Lord Śiva is the best. While instructing Śrīla Rūpa Gosvāmī, Śrī Caitanya Mahāprabhu described an offense at the lotus feet of a Vaiṣṇava as <span class="Italic">hātī mātā,</span> a mad elephant. When a mad elephant enters a nice garden, it spoils the entire garden. Similarly, if one becomes like a mad elephant and commits offenses at the lotus feet of a Vaiṣṇava, his entire spiritual career is halted. One should therefore be very careful not to commit offenses at the lotus feet of a Vaiṣṇava.
+          </p>
+          <p>
+            Mother Pārvatī was justified in punishing Citraketu, for Citraketu impudently criticized the supreme father, Mahādeva, who is the father of the living entities conditioned within this material world. The goddess Durgā is called mother, and Lord Śiva is called father. A pure Vaiṣṇava should be very careful to engage in his specific duty without criticizing others. This is the safest position. Otherwise, if one tends to criticize others, he may commit the great offense of criticizing a Vaiṣṇava.
+          </p>
+          <p>
+            Because Citraketu was undoubtedly a Vaiṣṇava, he might have been surprised that Pārvatī had cursed him. Therefore the goddess Pārvatī addressed him as <span class="Italic">putra,</span> or son. Everyone is the son of mother Durgā, but she is not an ordinary mother. As soon as there is a small discrepancy in a demon’s behavior, mother Durgā immediately punishes the demon so that he may come to his senses. This is explained by Lord Kṛṣṇa in <span class="Ref_Italic">Bhagavad-gītā</span> (7.14):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">daivī hy eṣā guṇa-mayī<br>mama māyā duratyayā<br>mām eva ye prapadyante<br>māyām etāṁ taranti te</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This divine energy of Mine, consisting of the three modes of material nature, is difficult to overcome. But those who have surrendered unto Me can easily cross beyond it.” To surrender to Kṛṣṇa means to surrender to His devotees also, for no one can be a proper servant of Kṛṣṇa unless he is a proper servant of a devotee. <span class="Italic">Chāḍiyā vaiṣṇava-sevā nistāra pāyeche kebā:</span> without serving a servant of Kṛṣṇa, one cannot be elevated to being a servant of Kṛṣṇa Himself. Therefore mother Pārvatī spoke to Citraketu exactly like a mother who says to her naughty child, “My dear child, I am punishing you so that you won’t do anything like this again.” This tendency of a mother to punish her child is found even in mother Yaśodā, who became the mother of the Supreme Personality of Godhead. Mother Yaśodā punished Kṛṣṇa by binding Him and showing Him a stick. Thus it is the duty of a mother to chastise her beloved son, even in the case of the Supreme Lord. It is to be understood that mother Durgā was justified in punishing Citraketu. This punishment was a boon to Citraketu because after taking birth as the demon Vṛtrāsura, he was promoted directly to Vaikuṇṭha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: My dear King Parīkṣit, when Citraketu was cursed by Pārvatī, he descended from his airplane, bowed before her with great humility and pleased her completely.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">507</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Citraketu said: My dear mother, with my own hands folded together I accept the curse upon me. I do not mind the curse, for happiness and distress are given by the demigods as a result of one’s past deeds.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Since Citraketu was a devotee of the Lord, he was not at all disturbed by the curse of mother Pārvatī. He knew very well that one suffers or enjoys the results of one’s past deeds as ordained by <span class="Italic">daiva-netra</span>—superior authority, or the agents of the Supreme Personality of Godhead. He knew that he had not committed any offense at the lotus feet of Lord Śiva or the goddess Pārvatī, yet he had been punished, and this means that the punishment had been ordained. Thus the King did not mind it. A devotee is naturally so humble and meek that he accepts any condition of life as a blessing from the Lord. <span class="Italic">Tat te ’nukampāṁ susamīkṣamāṇaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 10.14.8). A devotee always accepts punishment from anyone as the mercy of the Lord. If one lives in this conception of life, he sees whatever reverses occur to be due to his past misdeeds, and therefore he never accuses anyone. On the contrary, he becomes increasingly attached to the Supreme Personality of Godhead because of his being purified by his suffering. Suffering, therefore, is also a process of purification.
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says in this connection that one who has developed Kṛṣṇa consciousness and who exists in love with Kṛṣṇa is no longer subject to suffering and happiness under the laws of <span class="Italic">karma.</span> Indeed, he is beyond <span class="Italic">karma.</span> The <span class="Italic">Brahma-saṁhitā</span> says, <span class="Italic">karmāṇi nirdahati kintu ca bhakti-bhājām: [Bs. </span>5.54] a devotee is free from the reactions of his <span class="Italic">karma</span> because he has taken to devotional service. This same principle is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (14.26). <span class="Italic">Sa guṇān samatītyaitān brahma-bhūyāya kalpate:</span> one who is engaged in devotional service has already been freed from the reactions of his material <span class="Italic">karma,</span> and thus he immediately becomes <span class="Italic">brahma-bhūta,</span> or transcendental. This is also expressed in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.21). <span class="Italic">Kṣīyante cāsya karmāṇi:</span> before attaining the stage of love, one becomes free from all the results of <span class="Italic">karma.</span>
+          </p>
+          <p>
+            The Lord is very kind and affectionate toward His devotees, and therefore a devotee, in any condition, is not subjected to the results of <span class="Italic">karma.</span> A devotee never aspires for the heavenly planets. The heavenly planets, liberation and hell are nondifferent for a devotee, for he does not discriminate between different positions in the material world. A devotee is always eager to return home, back to Godhead, and remain there as the Lord’s associate. This ambition becomes increasingly fervent in his heart, and therefore he does not care about material changes in his life. Śrīla Viśvanātha Cakravartī Ṭhākura comments that Mahārāja Citraketu’s being cursed by Pārvatī should be considered the mercy of the Lord. The Lord wanted Citraketu to return to Godhead as soon as possible, and therefore he terminated all the reactions of his past deeds. Acting through the heart of Pārvatī, the Lord, who is situated in everyone’s heart, cursed Citraketu in order to end all his material reactions. Thus Citraketu became Vṛtrāsura in his next life and returned home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">136</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Deluded by ignorance, the living entity wanders in the forest of this material world, enjoying the happiness and distress resulting from his past deeds, everywhere and at all times. [Therefore, my dear mother, neither you nor I am to be blamed for this incident.]
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (3.27):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered soul, under the influence of the three modes of material nature, thinks himself the doer of activities that are in actuality carried out by nature.” Actually a conditioned soul is completely under the control of material nature. Wandering here and there—always and everywhere—he is subjected to the results of his past deeds. This is carried out by the laws of nature, but one foolishly thinks himself the doer, which in fact he is not. To get free from the <span class="Italic">karma-cakra,</span> the wheel of the results of one’s <span class="Italic">karma,</span> one should take to <span class="Italic">bhakti-mārga</span>—devotional service, or Kṛṣṇa consciousness. That is the only remedy. <span class="Italic">Sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]<span class="Italic">.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">105</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this material world, neither the living entity himself nor others [friends and enemies] are the cause of material happiness and distress. But because of gross ignorance, the living entity thinks that he and others are the cause.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            In this verse the word <span class="Italic">ajña</span> is very significant. In the material world, all living entities are <span class="Italic">ajña,</span> ignorant, in different degrees. This ignorance continues very strongly in the mode of ignorance presented by material nature. One must therefore promote himself to the stage of goodness through his character and behavior and then gradually come to the transcendental platform, or <span class="Italic">adhokṣaja</span> platform, in which he realizes both his position and the position of others. Everything is done under the superintendence of the Supreme Personality of Godhead. The process by which the results of action are ordained is called <span class="Italic">niyatam,</span> always working.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">221</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This material world resembles the waves of a constantly flowing river. Therefore, what is a curse and what is a favor? What are the heavenly planets, and what are the hellish planets? What is actually happiness, and what is actually distress? Because the waves flow constantly, none of them has an eternal effect.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Śrīla Bhaktivinoda Ṭhākura sings, <span class="Italic">(miche) māyāra vaśe, yāccha bhese’, khāccha hābuḍubu, bhāi:</span> “My dear living entities within this material world, why are you being carried away by the waves of the modes of material nature?” <span class="Italic">(Jīva) kṛṣṇa-dāsa, ei viśvāsa, karle ta’ āra duḥkha nāi:</span> “If the living entity tries to understand that he is an eternal servant of Kṛṣṇa, there will no longer be misery for him.” Kṛṣṇa wants us to give up all other engagements and surrender unto Him. If we do so, where will the cause and effect of this material world be? There is nothing like cause and effect for the surrendered soul. Śrīla Viśvanātha Cakravartī Ṭhākura says in this regard that being put into this material world is like being thrown into a mine of salt. If one falls into a mine of salt, he tastes only salt wherever he goes. Similarly, this material world is full of miseries. The so-called temporary happiness of the world is also misery, but in ignorance we cannot understand this. That is the actual position. When one comes to his senses—when he becomes Kṛṣṇa conscious—he is no longer concerned with the various conditions of this material world. He is not concerned with happiness or distress, curses or favors, or heavenly or hellish planets. He sees no distinction between them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">171</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is one. Unaffected by the conditions of the material world, He creates all the conditioned souls by His own personal potency. Because of being contaminated by the material energy, the living entity is put into ignorance and thus into different conditions of bondage. Sometimes, by knowledge, the living entity is given liberation. In sattva-guṇa and rajo-guṇa, he is subjected to happiness and distress.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            The question may be raised why the living entities are situated in different conditions and who has arranged this. The answer is that it has been done by the Supreme Personality of Godhead, without anyone’s help. The Lord has His own energies (<span class="Italic">parāsya śaktir vividhaiva śrūyate</span>), and one of them, namely the external energy, creates the material world and the varieties of happiness and distress for the conditioned souls under the supervision of the Lord. The material world consists of three modes of material nature—<span class="Italic">sattva-guṇa, rajo-guṇa</span> and <span class="Italic">tamo-guṇa.</span> <span class="Italic">By sattva-guṇa</span> the Lord maintains the material world, by <span class="Italic">rajo-guṇa</span> He creates it, and by <span class="Italic">tamo-guṇa</span> He annihilates it. After the varieties of living entities are created, they are subject to happiness and distress according to their association. When they are in <span class="Italic">sattva-guṇa,</span> the mode of goodness, they feel happiness, when in <span class="Italic">rajo-guṇa</span> they are distressed, and when in <span class="Italic">tamo-guṇa</span> they have no sense of what to do or what is right and wrong.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is equally disposed toward all living entities. Therefore no one is very dear to Him, and no one is a great enemy for Him; no one is His friend, and no one is His relative. Being unattached to the material world, He has no affection for so-called happiness or hatred for so-called distress. The two terms happiness and distress are relative. Since the Lord is always happy, for Him there is no question of distress.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">197</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although the Supreme Lord is unattached to our happiness and distress according to karma, and although no one is His enemy or favorite, He creates pious and impious activities through the agency of His material potency. Thus for the continuation of the materialistic way of life He creates happiness and distress, good fortune and bad, bondage and liberation, birth and death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            Although the Supreme Personality of Godhead is the ultimate doer of everything, in His original transcendental existence He is not responsible for the happiness and distress, or bondage and liberation, of the conditioned souls. These are due to the results of the fruitive activities of the living entities within this material world. By the order of a judge, one person is released from jail, and another is imprisoned, but the judge is not responsible, for the distress and happiness of these different people is due to their own activities. Although the government is ultimately the supreme authority, the justice is administered by the departments of the government, and the government is not responsible for the individual judgments. Therefore the government is equal to all the citizens. Similarly, the Supreme Lord is neutral to everyone, but for the maintenance of law and order His supreme government has various departments, which control the activities of the living entities. Another example given in this regard is that lilies open or close because of the sunshine, and thus the bumblebees enjoy or suffer, but the sunshine and the sun globe are not responsible for the happiness and distress of the bumblebees.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">55</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O mother, you are now unnecessarily angry, but since all my happiness and distress are destined by my past activities, I do not plead to be excused or relieved from your curse. Although what I have said is not wrong, please let whatever you think is wrong be pardoned.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            Being fully aware of how the results of one’s <span class="Italic">karma</span> accrue by the laws of nature, Citraketu did not want to be released from Pārvatī’s curse. Nonetheless, he wanted to satisfy her because although his verdict was natural, she was displeased with him. As a matter of course, Mahārāja Citraketu begged pardon from Pārvatī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: O King Parīkṣit, subduer of the enemy, after Citraketu satisfied Lord Śiva and his wife, Pārvatī, he boarded his airplane and left as they looked on. When Lord Śiva and Pārvatī saw that Citraketu, although informed of the curse, was unafraid, they smiled, being fully astonished by his behavior.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, in the presence of the great sage Nārada, the demons, the inhabitants of Siddhaloka, and his personal associates, Lord Śiva, who is most powerful, spoke to his wife, Pārvatī, while they all listened.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">254</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Śiva said: My dear beautiful Pārvatī, have you seen the greatness of the Vaiṣṇavas? Being servants of the servants of the Supreme Personality of Godhead, Hari, they are great souls and are not interested in any kind of material happiness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            Lord Śiva, the husband of Pārvatī, told his wife, “My dear Pārvatī, you are very beautiful in your bodily features. Certainly you are glorious. But I do not think that you can compete with the beauty and glory of devotees who have become servants of the servants of the Supreme Personality of Godhead.” Of course, Lord Śiva smiled when he joked with his wife in that way, for others cannot speak like that. “The Supreme Lord,” Śiva continued, “is always exalted in His activities, and here is another example of His wonderful influence upon King Citraketu, His devotee. Just see, although you cursed the King, he was not at all afraid or sorry. Rather, he offered respect to you, called you mother and accepted your curse, thinking himself faulty. He did not say anything in retaliation. This is the excellence of a devotee. By mildly tolerating your curse, he has certainly excelled the glory of your beauty and your power to curse him. I can impartially judge that this devotee, Citraketu, has defeated you and your excellence simply by becoming a pure devotee of the Lord.” As stated by Śrī Caitanya Mahāprabhu, <span class="Italic">taror api sahiṣṇunā.</span> Just like a tree, a devotee can tolerate all kinds of curses and reversals in life. This is the excellence of a devotee. Indirectly, Lord Śiva forbade Pārvatī to commit the mistake of cursing a devotee like Citraketu. He indicated that although she was powerful, the King, without showing any power, had excelled her power by his tolerance.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">167</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Devotees solely engaged in the devotional service of the Supreme Personality of Godhead, Nārāyaṇa, never fear any condition of life. For them the heavenly planets, liberation and the hellish planets are all the same, for such devotees are interested only in the service of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            Pārvatī might naturally have inquired how devotees become so exalted. Therefore this verse explains that they are <span class="Italic">nārāyaṇa-para,</span> simply dependent on Nārāyaṇa. They do not mind reverses in life because in the service of Nārāyaṇa they have learned to tolerate whatever hardships there may be. They do not care whether they are in heaven or in hell: they simply engage in the service of the Lord. This is their excellence. <span class="Italic">Ānukūlyena kṛṣṇānuśīlanam:</span> they are liberally engaged in the service of the Lord, and therefore they are excellent. By using the word <span class="Italic">bhṛtya-bhṛtyānām,</span> Lord Śiva pointed out that although Citraketu provided one example of tolerance and excellence, all the devotees who have taken shelter of the Lord as eternal servants are glorious. They have no eagerness to be happy by being placed in the heavenly planets, becoming liberated or becoming one with Brahman, the supreme effulgence. These benefits do not appeal to their minds. They are simply interested in giving direct service to the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">243</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of the actions of the Supreme Lord’s external energy, the living entities are conditioned in contact with material bodies. The dualities of happiness and distress, birth and death, curses and favors, are natural by-products of this contact in the material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> we find, <span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram: [Bg. 9.10]</span> the material world works under the direction of the goddess Durgā, the material energy of the Lord, but she acts under the direction of the Supreme Personality of Godhead. This is also confirmed in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.44):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā<br>chāyeva yasya bhuvanāni bibharti durgā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Durgā—the goddess Pārvatī, the wife of Lord Śiva—is extremely powerful. She can create, maintain and annihilate any number of universes by her sweet will, but she acts under the direction of the Supreme Personality of Godhead, Kṛṣṇa, not independently. Kṛṣṇa is impartial, but because this is the material world of duality, such relative terms as happiness and distress, curses and favors, are created by the will of the Supreme. Those who are not <span class="Italic">nārāyaṇa-para,</span> pure devotees, must be disturbed by this duality of the material world, whereas devotees who are simply attached to the service of the Lord are not at all disturbed by it. For example, Haridāsa Ṭhākura was beaten with cane in twenty-two bazaars, but he was never disturbed; instead, he smilingly tolerated the beating. Despite the disturbing dualities of the material world, devotees are not disturbed at all. Because they fix their minds on the lotus feet of the Lord and concentrate on the holy name of the Lord, they do not feel the so-called pains and pleasures caused by the dualities of this material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">368</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As one mistakenly considers a flower garland to be a snake or experiences happiness and distress in a dream, so, in the material world, by a lack of careful consideration, we differentiate between happiness and distress, considering one good and the other bad.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            The happiness and distress of the material world of duality are both mistaken ideas. In the <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Antya</span> 4.176) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">”dvaite” bhadrābhadra-jñāna, saba——”manodharma”<br>”ei bhāla, ei manda”,——ei saba ”bhrama”</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The distinctions between happiness and distress in the material world of duality are simply mental concoctions, for the so-called happiness and distress are actually one and the same. They are like the happiness and distress in dreams. A sleeping man creates his happiness and distress by dreaming, although actually they have no existence.
+          </p>
+          <p>
+            The other example given in this verse is that a flower garland is originally very nice, but by mistake, for want of mature knowledge, one may consider it a snake. In this connection there is a statement by Prabodhānanda Sarasvatī: <span class="Italic">viśvaṁ pūrṇa-sukhāyate.</span> Everyone in this material world is distressed by miserable conditions, but Śrīla Prabodhānanda Sarasvatī says that this world is full of happiness. How is this possible? He answers, <span class="Italic">yat-kāruṇya-katākṣa-vaibhavavatāṁ taṁ gauram eva stumaḥ.</span> A devotee accepts the distress of this material world as happiness only due to the causeless mercy of Śrī Caitanya Mahāprabhu. By His personal behavior, Śrī Caitanya Mahāprabhu showed that He was never distressed but always happy in chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra.</span> One should follow in the footsteps of Śrī Caitanya Mahāprabhu and engage constantly in chanting the <span class="Italic">mahā-mantra</span>—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare. Then he will never feel the distresses of the world of duality. In any condition of life one will be happy if he chants the holy name of the Lord.
+          </p>
+          <p>
+            In dreams we sometimes enjoy eating sweet rice and sometimes suffer as if one of our beloved family members had died. Because the same mind and body exist in the same material world of duality when we are awake, the so-called happiness and distress of this world are no better than the false, superficial happiness of dreams. The mind is the via medium in both dreams and wakefulness, and everything created by the mind in terms of <span class="Italic">saṅkalpa</span> and <span class="Italic">vikalpa,</span> acceptance and rejection, is called <span class="Italic">manodharma,</span> or mental concoction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">273</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Persons engaged in devotional service to Lord Vāsudeva, Kṛṣṇa, have naturally perfect knowledge and detachment from this material world. Therefore such devotees are not interested in the so-called happiness or so-called distress of this world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Here is the distinction between a devotee and a philosopher who speculates on the subject matter of transcendence. A devotee does not need to cultivate knowledge to understand the falsity or temporary existence of this material world. Because of his unalloyed devotion to Vāsudeva, this knowledge and detachment are automatically manifested in his person. As confirmed elsewhere in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.7):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsudeve bhagavati<br>bhakti-yogaḥ prayojitaḥ<br>janayaty āśu vairāgyaṁ<br>jñānaṁ ca yad ahaitukam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One who engages in unalloyed devotional service to Vāsudeva, Kṛṣṇa, automatically becomes aware of this material world, and therefore he is naturally detached. This detachment is possible because of his high standard of knowledge. The speculative philosopher tries to understand that this material world is false by cultivating knowledge, but this understanding is automatically manifested in the person of a devotee, without separate endeavor. The Māyāvādī philosophers may be very proud of their so-called knowledge, but because they do not understand Vāsudeva (<span class="Italic">vāsudevaḥ sarvam iti [Bg. </span>7.19]), they do not understand the world of duality, which is a manifestation of Vāsudeva’s external energy. Therefore, unless the so-called <span class="Italic">jñānīs</span> take shelter of Vāsudeva, their speculative knowledge is imperfect. <span class="Italic">Ye ’nye ’ravindākṣa vimukta-māninaḥ.</span> They simply think of becoming free from the contamination of the material world, but because they do not take shelter at the lotus feet of Vāsudeva, their knowledge is impure. When they actually become pure, they surrender to the lotus feet of Vāsudeva. Therefore, the Absolute Truth is easier to understand for a devotee than for <span class="Italic">jñānīs</span> who simply speculate to understand Vāsudeva. Lord Śiva confirms this statement in the following verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">185</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Neither I [Lord Śiva], nor Brahmā, nor the Aśvinī-kumāras, nor Nārada or the other great sages who are Brahmā’s sons, nor even the demigods can understand the pastimes and personality of the Supreme Lord. Although we are part of the Supreme Lord, we consider ourselves independent, separate controllers, and thus we cannot understand His identity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            <span class="Ref_Italic">Brahma-saṁhitā</span> (5.33) states:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">advaitam acyutam anādim ananta-rūpam<br>ādyaṁ purāṇa-puruṣaṁ nava-yauvanaṁ ca<br>vedeṣu durlabham adurlabham ātma-bhaktau<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship the Supreme Personality of Godhead, Govinda, who is the original person. He is absolute, infallible and beginningless, and although expanded into unlimited forms, He is still the same original person, the oldest person, who always appears as a fresh youth. The eternal, blissful, all-knowing forms of the Lord can not be understood even by the best Vedic scholars, but they are always manifest to pure, unalloyed devotees.” Lord Śiva places himself as one of the nondevotees, who cannot understand the identity of the Supreme Lord. The Lord, being <span class="Italic">ananta,</span> has an unlimited number of forms. Therefore, how is it possible for an ordinary, common man to understand Him? Lord Śiva, of course, is above the ordinary human beings, yet be is unable to understand the Supreme Personality of Godhead. Lord Śiva is not among the ordinary living entities, nor is he in the category of Lord Viṣṇu. He is between Lord Viṣṇu and the common living entity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">119</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            He holds no one as very dear and no one as inimical. He has no one for His own relative, and no one is alien to Him. He is actually the soul of the soul of all living entities. Thus He is the auspicious friend of all living beings and is very near and dear to all of them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            The Supreme Personality of Godhead, in His second feature, is the Supersoul of all living entities. As one’s self is extremely dear, the Superself of the self is still more dear. No one can be the enemy of the friendly Superself, who is equal to everyone. Relationships of dearness or enmity between the Supreme Lord and the living beings are due to the intervention of the illusory energy. Because the three modes of material nature intervene between the Lord and the living beings, these different relationships appear. Actually, the living entity in his pure condition is always very near and dear to the Lord, and the Lord is dear to him. There is no question of partiality or enmity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34–35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">489</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This magnanimous Citraketu is a dear devotee of the Lord. He is equal to all living entities and is free from attachment and hatred. Similarly, I am also very dear to Lord Nārāyaṇa. Therefore, no one should be astonished to see the activities of the most exalted devotees of Nārāyaṇa, for they are free from attachment and envy. They are always peaceful, and they are equal to everyone.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            It is said, <span class="Italic">vaiṣṇavera kriyā, mudrā vijñeha nā bujhaya:</span> one should not be astonished to see the activities of exalted, liberated Vaiṣṇavas. As one should not be misled by the activities of the Supreme Personality of Godhead, one should also not be misled by the activities of His devotees. Both the Lord and His devotees are liberated. They are on the same platform, the only difference being that the Lord is the master and the devotees are servants. Qualitatively, they are one and the same. In <span class="Ref_Italic">Bhagavad-gītā</span> (9.29) the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">samo ’haṁ sarva-bhūteṣu<br>na me dveṣyo ’sti na priyaḥ<br>ye bhajanti tu māṁ bhaktyā<br>mayi te teṣu cāpy aham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I envy no one, nor am I partial to anyone. I am equal to all. But whoever renders service unto Me in devotion is a friend, is in Me, and I am also a friend to him.” From this statement by the Supreme Personality of Godhead, it is clear that the devotees of the Lord are always extremely dear to Him. In effect, Lord Śiva told Pārvatī, “Both Citraketu and I are always very dear to the Supreme Lord. In other words, both he and I are on the same level as servants of the Lord. We are always friends, and sometimes we enjoy joking words between us. When Citraketu loudly laughed at my behavior, he did so on friendly terms, and therefore there was no reason to curse him.” Thus Lord Śiva tried to convince his wife, Pārvatī, that her cursing of Citraketu was not very sensible.
+          </p>
+          <p>
+            Here is a difference between male and female that exists even in the higher statuses of life—in fact, even between Lord Śiva and his wife. Lord Śiva could understand Citraketu very nicely, but Pārvatī could not. Thus even in the higher statuses of life there is a difference between the understanding of a male and that of a female. It may be clearly said that the understanding of a woman is always inferior to the understanding of a man. In the Western countries there is now agitation to the effect that man and woman should be considered equal, but from this verse it appears that woman is always less intelligent than man.
+          </p>
+          <p>
+            It is clear that Citraketu wanted to criticize the behavior of his friend Lord Śiva because Lord Śiva was sitting with his wife on his lap. Then, too, Lord Śiva wanted to criticize Citraketu for externally posing as a great devotee but being interested in enjoying with the Vidyādharī women. These were all friendly jokes; there was nothing serious for which Citraketu should have been cursed by Pārvatī. Upon hearing the instructions of Lord Śiva, Pārvatī must have been very much ashamed for cursing Citraketu to become a demon. Mother Pārvatī could not appreciate Citraketu’s position, and therefore she cursed him, but when she understood the instructions of Lord Śiva she was ashamed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">45</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: O King, after hearing this speech by her husband, the demigoddess [Umā, the wife of Lord Śiva] gave up her astonishment at the behavior of King Citraketu and became steady in intelligence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura remarks that the word <span class="Italic">śānta-dhīḥ</span> means <span class="Italic">svīya-pūrva-svabhāva-smṛtyā.</span> When Pārvatī remembered her former behavior in cursing Citraketu, she became very much ashamed and covered her face with the skirt of her sari, admitting that she was wrong in cursing Citraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">177</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great devotee Citraketu was so powerful that he was quite competent to curse mother Pārvatī in retaliation, but instead of doing so he very humbly accepted the curse and bowed his head before Lord Śiva and his wife. This is very much to be appreciated as the standard behavior of a Vaiṣṇava.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            Upon being informed by Lord Śiva, mother Pārvatī could understand that she was wrong in cursing Citraketu. King Citraketu was so exalted in his character that in spite of being wrongly cursed by Pārvatī, he immediately descended from his airplane and bowed his head before the mother, accepting her curse. This has already been explained: <span class="Italic">nārāyaṇa-parāḥ sarve na kutaścana bibhyati.</span> Citraketu very sportingly felt that since the mother wanted to curse him, he could accept this curse just to please her. This is called <span class="Italic">sādhu-lakṣaṇam,</span> the characteristic of a <span class="Italic">sādhu,</span> or a devotee. As explained by Śrī Caitanya Mahāprabhu, <span class="Italic">tṛṇād api sunīcena taror api sahiṣṇunā.</span> A devotee should always be very humble and meek and should offer all respect to others, especially to superiors. Being protected by the Supreme Personality of Godhead, a devotee is always powerful, but a devotee does not wish to show his power unnecessarily. However, when a less intelligent person has some power, he wants to use it for sense gratification. This is not the behavior of a devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">172</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being cursed by mother Durgā [Bhavānī, the wife of Lord Śiva], that same Citraketu accepted birth in a demoniac species of life. Although still fully equipped with transcendental knowledge and practical application of that knowledge in life, he appeared as a demon at the fire sacrifice performed by Tvaṣṭā, and thus he became famous as Vṛtrāsura.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            The word <span class="Italic">yoni</span> is generally understood to mean <span class="Italic">jāti</span>—family, group or species. Although Vṛtrāsura appeared in a family of demons, it is clearly said that his knowledge of spiritual life still existed. <span class="Italic">Jñāna-vijñāna-saṁyutaḥ:</span> his spiritual knowledge and the practical application of that knowledge in life were not lost. Therefore it is said that even if a devotee falls down for some reason, he is still not lost.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yatra kva vābhadram abhūd amuṣya kiṁ<br>ko vārtha āpto ’bhajatāṁ sva-dharmataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 1.5.17)
+          </p>
+          <p>
+            Once one is advanced in devotional service, his spiritual assets are never lost under any circumstances. Whatever spiritual advancement he has achieved continues. This is confirmed in <span class="Italic">Bhagavad-gītā.</span> Even if a <span class="Italic">bhakti-yogī</span> falls, he takes birth in a rich family or family of <span class="Italic">brāhmaṇas,</span> in which he again starts devotional activities from the point where he left off. Although Vṛtrāsura was known as an <span class="Italic">asura,</span> or demon, he did not lose his consciousness of Kṛṣṇa or devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, you inquired from me how Vṛtrāsura, a great devotee, took birth in a demoniac family. Thus I have tried to explain to you everything about this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">202</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Citraketu was a great devotee [mahātmā]. If one hears this history of Citraketu from a pure devotee, the listener also is freed from the conditional life of material existence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            The historical incidents in the <span class="Italic">purāṇas,</span> such as the history of Citraketu explained in the <span class="Italic">Bhāgavata Purāṇa,</span> are sometimes misunderstood by outsiders, or nondevotees. Therefore Śukadeva Gosvāmī advised that the history of Citraketu be heard from a devotee. Anything about devotional service or the characteristics of the Lord and His devotees must be heard from a devotee, not from a professional reciter. This is advised herein. Śrī Caitanya Mahāprabhu’s secretary also advised that one learn the history of <span class="Italic">Śrīmad-Bhāgavatam</span> from a devotee: <span class="Italic">yāha, bhāgavata pada vaiṣṇavera sthāne.</span> One should not hear the statements of <span class="Italic">Śrīmad-Bhāgavatam</span> from professional reciters, or else they will not be effective. Quoting <span class="Italic">from Padma Purāṇa,</span> Śrī Sanātana Gosvāmī has strictly forbidden us to hear about the activities of the Lord and His devotees from the mouths of nondevotees:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">avaiṣṇava-mukhodgīrṇaṁ<br>pūtaṁ hari-kathāmṛtam<br>śravaṇaṁ naiva kartavyaṁ<br>sarpocchiṣṭaṁ yathā payaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should not hear anything about Kṛṣṇa from a non-Vaiṣṇava. Milk touched by the lips of a serpent has poisonous effects; similarly, talks about Kṛṣṇa given by a non-Vaiṣṇava are also poisonous.” One must be a bona fide devotee, and then he can preach and impress devotional service upon his listeners.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who rises from bed early in the morning and recites this history of Citraketu, controlling his words and mind and remembering the Supreme Personality of Godhead, will return home, back to Godhead, without difficulty.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Seventeenth Chapter, of the</span> Śrīmad-Bhāgavatam <span class="Italic">entitled, “Mother Pārvatī Curses Citraketu.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/17">https://prabhupadabooks.com/sb/6/17</a><!-- span.text_source_copied_date
+        | on 2023-12-17 19:48:20 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.16: King Citraketu Meets the Supreme Lord     Next: SB 6.18: Diti Vows to Kill King Indra</div>
+      </p>
+    </div>
+  </body>
+</html>

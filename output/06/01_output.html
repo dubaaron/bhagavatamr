@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.1, The History of the Life of Ajāmila</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter One:<br>The History of the Life of Ajāmila
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">Throughout <span class="Italic">Śrīmad-Bhāgavatam</span> there are descriptions of ten subject matters, including creation, subsequent creation and the planetary systems. Śukadeva Gosvāmī, the speaker of <span class="Italic">Śrīmad-Bhāgavatam,</span> has already described creation, subsequent creation and the planetary systems in the Third, Fourth and Fifth Cantos. Now, in this Sixth Canto, which consists of nineteen chapters, he will describe <span class="Italic">poṣaṇa,</span> or protection by the Lord.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The first chapter relates the history of Ajāmila, who was considered a greatly sinful man, but was liberated when four order carriers of Viṣṇu came to rescue him from the hands of the order carriers of Yamarāja. A full description of how he was liberated, having been relieved of the reactions of his sinful life, is given in this chapter. Sinful activities are painful both in this life and in the next. We should know for certain that the cause of all painful life is sinful action. On the path of fruitive work one certainly commits sinful activities, and therefore according to the considerations of <span class="Italic">karma-kāṇḍa,</span> different types of atonement are recommended. Such methods of atonement, however, do not free one from ignorance, which is the root of sinful life. Consequently one is prone to commit sinful activities even after atonement, which is therefore very inadequate for purification. On the path of speculative knowledge one becomes free from sinful life by understanding things as they are. Therefore the acquirement of speculative knowledge is also considered a method of atonement. While performing fruitive activities one can become free from the actions of sinful life through austerity, penance, celibacy, control of the mind and senses, truthfulness and the practice of mystic <span class="Italic">yoga.</span> By awakening knowledge one may also neutralize sinful reactions. Neither of these methods, however, can free one from the tendency to commit sinful activities.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">By <span class="Italic">bhakti-yoga</span> one can completely avoid the tendency for sinful life; other methods are not very feasible. Therefore the Vedic literature concludes that devotional service is more important than the methods of <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa.</span> Only the path of devotional service is auspicious for everyone. Fruitive activities and speculative knowledge cannot independently liberate anyone, but devotional service, independent of <span class="Italic">karma</span> and <span class="Italic">jñāna,</span> is so potent that one who has fixed his mind at the lotus feet of Kṛṣṇa is guaranteed not to meet the Yamadūtas, the order carriers of Yamarāja, even in dreams.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">To prove the strength of devotional service, Śukadeva Gosvāmī described the history of Ajāmila. Ajāmila was a resident of Kānyakubja (the modern Kanauj). He was trained by his parents to become a perfect <span class="Italic">brāhmaṇa</span> by studying the <span class="Italic">Vedas</span> and following the regulative principles, but because of his past, this youthful <span class="Italic">brāhmaṇa</span> was somehow attracted by a prostitute, and because of her association he became most fallen and abandoned all regulative principles. Ajāmila begot in the womb of the prostitute ten sons, the last of whom was called Nārāyaṇa. At the time of Ajāmila’s death, when the order carriers of Yamarāja came to take him, he loudly called the name Nārāyaṇa in fear because he was attached to his youngest son. Thus he remembered the original Nārāyaṇa, Lord Viṣṇu. Although he did not chant the holy name of Nārāyaṇa completely offenselessly, it acted nevertheless. As soon as he chanted the holy name of Nārāyaṇa, the order carriers of Lord Viṣṇu immediately appeared on the scene. A discussion ensued between the order carriers of Lord Viṣṇu and those of Yamarāja, and by hearing that discussion Ajāmila was liberated. He could then understand the bad effect of fruitive activities and could also understand how exalted is the process of devotional service.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">602</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Parīkṣit said: O my lord, O Śukadeva Gosvāmī, you have already described [in the Second Canto] the path of liberation [nivṛtti-mārga]. By following that path, one is certainly elevated gradually to the highest planetary system, Brahmaloka, from which one is promoted to the spiritual world along with Lord Brahmā. Thus one’s repetition of birth and death in the material world ceases.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Since Mahārāja Parīkṣit was a Vaiṣṇava, when he heard the description, at the end of the Fifth Canto, of the different hellish conditions of life, he was very much concerned with how to liberate the conditioned souls from the clutches of <span class="Italic">māyā</span> and take them back home, back to Godhead. Therefore he reminded his spiritual master, Śukadeva Gosvāmī, about the <span class="Italic">nivṛtti-mārga,</span> or path of liberation, which he had described in the Second Canto. Mahārāja Parīkṣit, who at the time of death was fortunate to have met Śukadeva Gosvāmī, inquired from Śukadeva Gosvāmī about the path of liberation at that crucial time. Śukadeva Gosvāmī very much appreciated his question and congratulated him by saying:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varīyān eṣa te praśnaḥ<br>kṛto loka-hitaṁ nṛpa<br>ātmavit-sammataḥ puṁsāṁ<br>śrotavyādiṣu yaḥ paraḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “My dear King, your question is glorious because it is very beneficial for all kinds of people. The answer to this question is the prime subject matter for hearing, and it is approved by all transcendentalists.” (<span class="Ref_Italic">Bhāg.</span> 2.1.1)
+          </p>
+          <p>
+            Parīkṣit Mahārāja was astonished that the living entities in the conditional stage do not accept the path of liberation, devotional service, instead of suffering in so many hellish conditions. This is the symptom of a Vaiṣṇava. <span class="Italic">Vāñchā-kalpa-tarubhyaś ca kṛpā-sindhubhya eva ca:</span> a Vaiṣṇava is an ocean of mercy. <span class="Italic">Para-duḥkha-duḥkhī:</span> he is unhappy because of the unhappiness of others. Therefore Parīkṣit Mahārāja, being compassionate toward the conditioned souls suffering in hellish life, suggested that Śukadeva Gosvāmī continue describing the path of liberation, which he had explained in the beginning of <span class="Italic">Śrīmad-Bhāgavatam.</span> The word <span class="Italic">asaṁsṛti</span> is very important in this connection. <span class="Italic">Saṁsṛti</span> refers to continuing on the path of birth and death. <span class="Italic">Asaṁsṛti,</span> on the contrary, refers to <span class="Italic">nivṛtti-mārga,</span> or the path of liberation, by which one’s birth and death cease and one gradually progresses to Brahmaloka, unless one is a pure devotee who does not care about going to the higher planetary systems, in which case one immediately returns home, back to Godhead, by executing devotional service (<span class="Italic">tyaktvā dehaṁ punar janma naiti [Bg. </span>4.9]). Parīkṣit Mahārāja, therefore, was very eager to hear from Śukadeva Gosvāmī about the path of liberation for the conditioned soul.
+          </p>
+          <p>
+            According to the opinion of the <span class="Italic">ācāryas,</span> the word <span class="Italic">krama-yogopalabdhena</span> indicates that by first performing <span class="Italic">karma-yoga</span> and then <span class="Italic">jñāna-yoga</span> and finally coming to the platform of <span class="Italic">bhakti-yoga,</span> one can be liberated. <span class="Italic">Bhakti-yoga,</span> however, is so powerful that it does not depend on <span class="Italic">karma-yoga</span> or <span class="Italic">jñāna-yoga.</span> <span class="Italic">Bhakti-yoga</span> itself is so powerful that even an impious man with no assets in <span class="Italic">karma-yoga</span> or an illiterate with no assets in <span class="Italic">jñāna-yoga</span> can undoubtedly be elevated to the spiritual world if he simply adheres to <span class="Italic">bhakti-yoga.</span> <span class="Italic">Mām evaiṣyasy asaṁśayaḥ.</span> Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (8.7) that by the process of <span class="Italic">bhakti-yoga</span> one undoubtedly goes back to Godhead, back home to the spiritual world. <span class="Italic">Yogīs,</span> however, instead of going directly to the spiritual world, sometimes want to see other planetary systems, and therefore they ascend to the planetary system where Lord Brahmā lives, as indicated here by the word <span class="Italic">brahmaṇā.</span> At the time of dissolution, Lord Brahmā, along with all the inhabitants of Brahmaloka, goes directly to the spiritual world. This is confirmed in the <span class="Italic">Vedas</span> as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahmaṇā saha te sarve<br>samprāpte pratisañcare<br>parasyānte kṛtātmānaḥ<br>praviśanti paraṁ padam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Because of their exalted position, those who are on Brahmaloka at the time of dissolution go directly back home, back to Godhead, along with Lord Brahmā.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">378</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great sage Śukadeva Gosvāmī, unless the living entity is freed from the infection of the material modes of nature, he receives different types of bodies in which to enjoy or suffer, and according to the body, he is understood to have various inclinations. By following these inclinations he traverses the path called pravṛtti-mārga, by which one may be elevated to the heavenly planets, as you have already described [in the Third Canto].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            As Lord Kṛṣṇa explains in <span class="Ref_Italic">Bhagavad-gītā</span> (9.25):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yānti deva-vratā devān<br>pitṝn yānti pitṛ-vratāḥ<br>bhūtāni yānti bhūtejyā<br>yānti mad-yājino ’pi mām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who worship the demigods will take birth among the demigods; those who worship ghosts and spirits will take birth among such beings; those who worship ancestors go to the ancestors; and those who worship Me will live with Me.” Because of the influence of the various modes of nature, the living entities have various tendencies or propensities, and therefore they are qualified to achieve various destinations. As long as one is materially attached, he wants to be elevated to the heavenly planets because of his attraction to the material world. The Supreme Personality of Godhead declares, however, “Those who worship Me come to Me.” If one has no information about the Supreme Lord and His abode, one tries to be elevated only to a higher material position, but when one concludes that in this material world there is nothing but repeated birth and death, he tries to return home, back to Godhead. If one attains that destination, he need never return to this material world (<span class="Italic">yad gatvā na nivartante tad dhāma paramaṁ mama [Bg. 15.6]</span>). As Śrī Caitanya Mahāprabhu says in <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 19.151):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahmāṇḍa bhramite kona bhāgyavān jīva<br>guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “According to their <span class="Italic">karma,</span> all living entities are wandering throughout the entire universe. Some of them are being elevated to the upper planetary systems, and some are going down into the lower planetary systems. Out of many millions of wandering living entities, one who is very fortunate gets an opportunity to associate with a bona fide spiritual master by the grace of Kṛṣṇa. By the mercy of both Kṛṣṇa and the spiritual master, such a person receives the seed of the creeper of devotional service.” All living entities are rotating throughout the universe, going sometimes up to the higher planetary systems and sometimes down to the lower planets. This is the material disease, which is known as <span class="Italic">pravṛtti-mārga.</span> When one becomes intelligent he takes to <span class="Italic">nivṛtti-mārga,</span> the path of liberation, and thus instead of rotating within this material world, he returns home, back to Godhead. This is necessary.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            You have also described [at the end of the Fifth Canto] the varieties of hellish life that result from impious activities, and you have described [in the Fourth Canto] the first manvantara, which was presided over by Svāyambhuva Manu, the son of Lord Brahmā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4–5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">293</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear lord, you have described the dynasties and characteristics of King Priyavrata and King Uttānapāda. The Supreme Personality of Godhead created this material world with various universes, planetary systems, planets and stars, with varied lands, seas, oceans, mountains, rivers, gardens and trees, all with different characteristics. These are divided among this planet earth, the luminaries in the sky and the lower planetary systems. You have very clearly described these planets and the living entities who live on them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Here the words <span class="Italic">yathedam asṛjad vibhuḥ</span> clearly indicate that the Supreme, the great, almighty Personality of Godhead, created this entire material world with its different varieties of planets, stars and so forth. Atheists try to conceal the hand of God, which is present in every creation, but they cannot explain how all these creations could come into existence without a competent intelligence and almighty power behind them. Simply to imagine or speculate is a waste of time. In <span class="Ref_Italic">Bhagavad-gītā</span> (10.8), the Lord says, <span class="Italic">ahaṁ sarvasya prabhavo:</span> “I am the origin of everything.” <span class="Italic">Mattaḥ sarvaṁ pravartate:</span> “whatever exists in the creation emanates from Me.” <span class="Italic">Iti matvā bhajante māṁ budhā bhāva-samanvitāḥ:</span> “When one fully understands that I create everything by My omnipotence, one becomes firmly situated in devotional service and fully surrenders at My lotus feet.” Unfortunately, the unintelligent cannot immediately understand Kṛṣṇa’s supremacy. Nonetheless, if they associate with devotees and read authorized books, they may gradually come to the proper understanding, although this may take many, many births. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bahūnāṁ janmanām ante<br>jñānavān māṁ prapadyate<br>vāsudevaḥ sarvam iti<br>sa mahātmā sudurlabhaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “After many births and deaths, he who is actually in knowledge surrenders unto Me, knowing Me to be the cause of all causes and all that is. Such a great soul is very rare.” Vāsudeva, Kṛṣṇa, is the creator of everything, and His energy is displayed in various ways. As explained in <span class="Ref_Italic">Bhagavad-gītā</span> (7.4–5), a combination of the material energy (<span class="Italic">bhūmir āpo ’nalo vāyuḥ</span>) and the spiritual energy, the living entity, exists in every creation. Therefore the same principle, the combination of the supreme spirit and the material elements, is the cause of the cosmic manifestation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">300</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O greatly fortunate and opulent Śukadeva Gosvāmī, now kindly tell me how human beings may be saved from having to enter hellish conditions in which they suffer terrible pains.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            In the Twenty-sixth Chapter of the Fifth Canto, Śukadeva Gosvāmī has explained that people who commit sinful acts are forced to enter hellish planets and suffer. Now Mahārāja Parīkṣit, being a devotee, is concerned with how this can be stopped. A Vaiṣṇava is <span class="Italic">para-duḥkha-duḥkhī;</span> in other words, he has no personal troubles, but he is very unhappy to see others in trouble. Prahlāda Mahārāja said, “My Lord, I have no personal problems, for I have learned how to glorify Your transcendental qualities and thus enter a trance of ecstasy. I do have a problem, however, for I am simply thinking of these rascals and fools who are busy with <span class="Italic">māyā-sukha,</span> temporary happiness, without knowledge of devotional service unto You.” This is the problem faced by a Vaiṣṇava. Because a Vaiṣṇava fully takes shelter of the Supreme Personality of Godhead, he personally has no problems, but because he is compassionate toward the fallen, conditioned souls, he is always thinking of plans to save them from their hellish life in this body and the next. Parīkṣit Mahārāja, therefore, anxiously wanted to know from Śukadeva Gosvāmī how humanity can be saved from gliding down to hell. Śukadeva Gosvāmī had already explained how people enter hellish life, and he could also explain how they could be saved from it. Intelligent men must take advantage of these instructions. Unfortunately, however, the entire world is lacking Kṛṣṇa consciousness, and therefore people are suffering from the grossest ignorance and do not even believe in a life after this one. To convince them of their next life is very difficult because they have become almost mad in their pursuit of material enjoyment. Nevertheless, our duty, the duty of all sane men, is to save them. Mahārāja Parīkṣit is the representative of one who can save them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">241</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī replied: My dear King, if before one’s next death whatever impious acts one has performed in this life with his mind, words and body are not counteracted through proper atonement according to the description of the Manu-saṁhitā and other dharma-śāstras, one will certainly enter the hellish planets after death and undergo terrible suffering, as I have previously described to you.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura mentions that although Mahārāja Parīkṣit was a pure devotee, Śukadeva Gosvāmī did not immediately speak to him about the strength of devotional service. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (14.26):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māṁ ca yo ’vyabhicāreṇa<br>bhakti-yogena sevate<br>sa guṇān samatītyaitān<br>brahma-bhūyāya kalpate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Devotional service is so strong that if one fully surrenders to Kṛṣṇa and takes fully to His devotional service, the reactions of his sinful life immediately stop.
+          </p>
+          <p>
+            Elsewhere in the <span class="Ref_Italic">Gītā</span> (18.66), Lord Kṛṣṇa urges that one give up all other duties and surrender to Him, and He promises, <span class="Italic">ahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi:</span> “I shall free you from all sinful reactions and give you liberation.” Therefore in response to the inquiries of Parīkṣit Mahārāja, Śukadeva Gosvāmī, his <span class="Italic">guru,</span> could have immediately explained the principle of <span class="Italic">bhakti,</span> but to test Parīkṣit Mahārāja’s intelligence, he first prescribed atonement according to <span class="Italic">karma-kāṇḍa,</span> the path of fruitive activities. For <span class="Italic">karma-kāṇḍa</span> there are eighty authorized scriptures, such as <span class="Italic">Manu-saṁhitā,</span> which are known as <span class="Italic">dharma-śāstras.</span> In these scriptures one is advised to counteract his sinful acts by performing other types of fruitive action. This was the path first recommended by Śukadeva Gosvāmī to Mahārāja Parīkṣit, and actually it is a fact that one who does not take to devotional service must follow the decision of these scriptures by performing pious acts to counteract his impious acts. This is known as atonement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">212</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, before one’s next death comes, as long as one’s body is strong enough, one should quickly adopt the process of atonement according to śāstra; otherwise one’s time will be lost, and the reactions of his sins will increase. As an expert physician diagnoses and treats a disease according to its gravity, one should undergo atonement according to the severity of one’s sins.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The <span class="Italic">dharma-śāstras</span> like the <span class="Italic">Manu-saṁhitā</span> prescribe that a man who has committed murder should be hanged and his own life sacrificed in atonement. Previously this system was followed all over the world, but since people are becoming atheists, they are stopping capital punishment. This is not wise. Herein it is said that a physician who knows how to diagnose a disease prescribes medicine accordingly. If the disease is very serious, the medicine must be strong. The weight of a murderer’s sin is very great, and therefore according to <span class="Italic">Manu-saṁhitā</span> a murderer must be killed. By killing a murderer the government shows mercy to him because if a murderer is not killed in this life, he will be killed and forced to suffer many times in future lives. Since people do not know about the next life and the intricate workings of nature, they manufacture their own laws, but they should properly consult the established injunctions of the <span class="Italic">śāstras</span> and act accordingly. In India even today the Hindu community often takes advice from expert scholars regarding how to counteract sinful activities. In Christianity also there is a process of confession and atonement. Therefore atonement is required, and atonement must be undergone according to the gravity of one’s sinful acts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">184</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Parīkṣit said: One may know that sinful activity is injurious for him because he actually sees that a criminal is punished by the government and rebuked by people in general and because he hears from scriptures and learned scholars that one is thrown into hellish conditions in the next life for committing sinful acts. Nevertheless, in spite of such knowledge, one is forced to commit sins again and again, even after performing acts of atonement. Therefore, what is the value of such atonement?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            In some religious sects a sinful man goes to a priest to confess his sinful acts and pay a fine, but then he again commits the same sins and returns to confess them again. This is the practice of a professional sinner. Parīkṣit Mahārāja’s observations indicate that even five thousand years ago it was the practice of criminals to atone for their crimes but then commit the same crimes again, as if forced to do so. Therefore, owing to his practical experience, Parīkṣit Mahārāja saw that the process of repeatedly sinning and atoning is pointless. Regardless of how many times he is punished, one who is attached to sense enjoyment will commit sinful acts again and again until he is trained to refrain from enjoying his senses. The word <span class="Italic">vivaśa</span> is used herein, indicating that even one who does not want to commit sinful acts will be forced to do so by habit. Parīkṣit Mahārāja therefore considered the process of atonement to have little value for saving one from sinful acts. In the following verse he further explains his rejection of this process.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">76</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes one who is very alert so as not to commit sinful acts is victimized by sinful life again. I therefore consider this process of repeated sinning and atoning to be useless. It is like the bathing of an elephant, for an elephant cleanses itself by taking a full bath, but then throws dust over its head and body as soon as it returns to the land.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            When Parīkṣit Mahārāja inquired how a human being could free himself from sinful activities so as not to be forced to go to hellish planetary systems after death, Śukadeva Gosvāmī answered that the process of counteracting sinful life is atonement. In this way Śukadeva Gosvāmī tested the intelligence of Mahārāja Parīkṣit, who passed the examination by refusing to accept this process as genuine. Now Parīkṣit Mahārāja is expecting another answer from his spiritual master, Śukadeva Gosvāmī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">268</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī, the son of Vedavyāsa, answered: My dear King, since acts meant to neutralize impious actions are also fruitive, they will not release one from the tendency to act fruitively. Persons who subject themselves to the rules and regulations of atonement are not at all intelligent. Indeed, they are in the mode of darkness. Unless one is freed from the mode of ignorance, trying to counteract one action through another is useless because this will not uproot one’s desires. Thus even though one may superficially seem pious, he will undoubtedly be prone to act impiously. Therefore real atonement is enlightenment in perfect knowledge, Vedānta, by which one understands the Supreme Absolute Truth.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The <span class="Italic">guru,</span> Śukadeva Gosvāmī, has examined Parīkṣit Mahārāja, and it appears that the King has passed one phase of the examination by rejecting the process of atonement because it involves fruitive activities. Now Śukadeva Gosvāmī is suggesting the platform of speculative knowledge. Progressing from <span class="Italic">karma-kāṇḍa</span> to <span class="Italic">jñāna-kāṇḍa,</span> he is proposing, <span class="Italic">prāyaścittaṁ vimarśanam:</span> “Real atonement is full knowledge.” <span class="Italic">Vimarśana</span> refers to the cultivation of speculative knowledge. In <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">karmīs,</span> who are lacking in knowledge, are compared to asses. Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na māṁ duṣkṛtino mūḍhāḥ<br>prapadyante narādhamāḥ<br>māyayāpahṛta-jñānā<br>āsuraṁ bhāvam āśritāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those miscreants who are grossly foolish, lowest among mankind, whose knowledge is stolen by illusion, and who partake of the atheistic nature of demons, do not surrender unto Me.” Thus <span class="Italic">karmīs</span> who engage in sinful acts and who do not know the true objective of life are called <span class="Italic">mūḍhas,</span> asses. <span class="Italic">Vimarśana,</span> however, is also explained in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), where Kṛṣṇa says, <span class="Italic">vedaiś ca sarvair aham eva vedyaḥ:</span> the purpose of Vedic study is to understand the Supreme Personality of Godhead. If one studies Vedānta but merely advances somewhat in speculative knowledge and does not understand the Supreme Lord, one remains the same <span class="Italic">mūḍha.</span> As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19), one attains real knowledge when he understands Kṛṣṇa and surrenders unto Him (<span class="Italic">bahūnāṁ janmanām ante jñānavān māṁ prapadyate</span>). To become learned and free from material contamination, therefore, one should try to understand Kṛṣṇa, for thus one is immediately liberated from all pious and impious activities and their reactions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">204</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, if a diseased person eats the pure, uncontaminated food prescribed by a physician, he is gradually cured, and the infection of disease can no longer touch him. Similarly, if one follows the regulative principles of knowledge, he gradually progresses toward liberation from material contamination.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            One is gradually purified if one cultivates knowledge, even through mental speculation, and strictly follows the regulative principles enjoined in the <span class="Italic">śāstras</span> and explained in the next verse. Therefore the platform of <span class="Italic">jñāna,</span> speculative knowledge, is better than the platform of <span class="Italic">karma,</span> fruitive action. There is every chance of falling from the platform of <span class="Italic">karma</span> to hellish conditions, but on the platform of <span class="Italic">jñāna</span> one is saved from hellish life, although one is still not completely free from infection. The difficulty is that on the platform of <span class="Italic">jñāna</span> one thinks that he has been liberated and has become Nārāyaṇa, or Bhagavān. This is another phase of ignorance.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ye ’nye ’ravindākṣa vimukta-māninas<br>tvayy asta-bhāvād aviśuddha-buddhayaḥ<br>āruhya kṛcchreṇa paraṁ padaṁ tataḥ<br>patanty adho ’nādṛta-yuṣmad-aṅghrayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 10.2.32)
+          </p>
+          <p>
+            Because of ignorance, one speculatively thinks himself liberated from material contamination although actually he is not. Therefore even if one rises to <span class="Italic">brahma jñāna,</span> understanding of Brahman, one nevertheless falls down because of not taking shelter of the lotus feet of Kṛṣṇa. Nonetheless, <span class="Italic">jñānīs</span> at least know what is sinful and what is pious, and they very cautiously act according to the injunctions of the <span class="Italic">śāstras.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13–14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">511</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            To concentrate the mind, one must observe a life of celibacy and not fall down. One must undergo the austerity of voluntarily giving up sense enjoyment. One must then control the mind and senses, give charity, be truthful, clean and nonviolent, follow the regulative principles and regularly chant the holy name of the Lord. Thus a sober and faithful person who knows the religious principles is temporarily purified of all sins performed with his body, words and mind. These sins are like the dried leaves of creepers beneath a bamboo tree, which may be burned by fire although their roots remain to grow again at the first opportunity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            <span class="Italic">Tapaḥ</span> is explained in the <span class="Italic">smṛti-śāstra</span> as follows: <span class="Italic">manasaś cendriyāṇāṁ ca aikāgryaṁ paramaṁ tapaḥ.</span> “Complete control of the mind and senses and their complete concentration on one kind of activity is called <span class="Italic">tapaḥ.</span>” Our Kṛṣṇa consciousness movement is teaching people how to concentrate the mind on devotional service. This is first-class <span class="Italic">tapaḥ.</span> <span class="Italic">Brahmacarya,</span> the life of celibacy, has eight aspects: one should not think of women, speak about sex life, dally with women, look lustfully at women, talk intimately with women or decide to engage in sexual intercourse, nor should one endeavor for sex life or engage in sex life. One should not even think of women or look at them, to say nothing of talking with them. This is called first-class <span class="Italic">brahmacarya.</span> If a <span class="Italic">brahmacārī</span> or <span class="Italic">sannyāsī</span> talks with a woman in a secluded place, naturally there will be a possibility of sex life without anyone’s knowledge. Therefore a complete <span class="Italic">brahmacārī</span> practices just the opposite. If one is a perfect <span class="Italic">brahmacārī,</span> he can very easily control the mind and senses, give charity, speak truthfully and so forth. To begin, however, one must control the tongue and the process of eating.
+          </p>
+          <p>
+            In the <span class="Italic">bhakti-mārga,</span> the path of devotional service, one must strictly follow the regulative principles by first controlling the tongue (<span class="Italic">sevonmukhe hi jihvādau svayam eva sphuraty adaḥ</span>). The tongue (<span class="Italic">jihvā</span>) can be controlled if one chants the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> does not speak of any subjects other than those concerning Kṛṣṇa and does not taste anything not offered to Kṛṣṇa. If one can control the tongue in this way, <span class="Italic">brahmacarya</span> and other purifying processes will automatically follow. It will be explained in the next verse that the path of devotional service is completely perfect and is therefore superior to the path of fruitive activities and the path of knowledge. Quoting from the <span class="Italic">Vedas,</span> Śrīla Vīrarāghava Ācārya explains that austerity involves observing fasts as fully as possible (<span class="Italic">tapasānāśakena</span>). Śrīla Rūpa Gosvāmī has also advised that <span class="Italic">atyāhāra,</span> too much eating, is an impediment to advancement in spiritual life. Also, in <span class="Ref_Italic">Bhagavad-gītā</span> (6.17) Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yuktāhāra-vihārasya<br>yukta-ceṣṭasya karmasu<br>yukta-svapnāvabodhasya<br>yogo bhavati duḥkha-hā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “He who is temperate in his habits of eating, sleeping, working and recreation can mitigate all material pains by practicing the <span class="Italic">yoga</span> system.”
+          </p>
+          <p>
+            In text 14 the word <span class="Italic">dhīrāḥ,</span> meaning “those who are undisturbed under all circumstances,” is very significant. Kṛṣṇa tells Arjuna in <span class="Ref_Italic">Bhagavad-gītā</span> (2.14):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mātrā-sparśās tu kaunteya<br>śītoṣṇa-sukha-duḥkha-dāḥ<br>āgamāpāyino ’nityās<br>tāṁs titikṣasva bhārata</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Kuntī, the nonpermanent appearance of happiness and distress, and their disappearance in due course, are like the appearance and disappearance of winter and summer seasons. They arise from sense perception, O scion of Bharata, and one must learn to tolerate them without being disturbed.” In material life there are many disturbances (<span class="Italic">adhyātmika, adhidaivika</span> and <span class="Italic">adhibhautika</span>). One who has learned to tolerate these disturbances under all circumstances is called <span class="Italic">dhīra.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1305</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Only a rare person who has adopted complete, unalloyed devotional service to Kṛṣṇa can uproot the weeds of sinful actions with no possibility that they will revive. He can do this simply by discharging devotional service, just as the sun can immediately dissipate fog by its rays.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            In the previous verse Śukadeva Gosvāmī gave the example that the dried leaves of creepers beneath a bamboo tree may be completely burnt to ashes by a fire, although the creepers may sprout again because the root is still in the ground. Similarly, because the root of sinful desire is not destroyed in the heart of a person who is cultivating knowledge but who has no taste for devotional service, there is a possibility that his sinful desires will reappear. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.14.4):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śreyaḥ-sṛtiṁ bhaktim udasya te vibho<br>kliśyanti ye kevala-bodha-labdhaye</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Speculators who undergo great labor to gain a meticulous understanding of the material world by distinguishing between sinful and pious activities, but who are not situated in devotional service, are prone to material activities. They may fall down and become implicated in fruitive activities. If one becomes attached to devotional service, however, his desires for material enjoyment are automatically vanquished without separate endeavor. <span class="Italic">Bhaktiḥ pareśānubhavo viraktir anyatra ca: [SB </span>11.2.42] if one is advanced in Kṛṣṇa consciousness, material activities, both sinful and pious, automatically become distasteful to him. That is the test of Kṛṣṇa consciousness. Both pious and impious activities are actually due to ignorance because a living entity, as an eternal servant of Kṛṣṇa, has no need to act for his personal sense gratification. Therefore as soon as one is reclaimed to the platform of devotional service, he relinquishes his attachment for pious and impious activities and is interested only in what will satisfy Kṛṣṇa. This process of <span class="Italic">bhakti,</span> devotional service to Kṛṣṇa (<span class="Italic">vāsudeva-parāyaṇa</span>), relieves one from the reactions of all activities.
+          </p>
+          <p>
+            Since Mahārāja Parīkṣit was a great devotee. the answers of his <span class="Italic">guru,</span> Śukadeva Gosvāmī, concerning <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa</span> could not satisfy him. Therefore Śukadeva Gosvāmī, knowing very well the heart of his disciple, explained the transcendental bliss of devotional service. The word <span class="Italic">kecit,</span> which is used in this verse, means. “a few people but not all.” Not everyone can become Kṛṣṇa conscious. As Kṛṣṇa explains in <span class="Ref_Italic">Bhagavad-gītā</span> (7.3):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">manuṣyāṇāṁ sahasreṣu<br>kaścid yatati siddhaye<br>yatatām api siddhānāṁ<br>kaścin māṁ vetti tattvataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Out of many thousands among men, one may endeavor for perfection, and of those who have achieved perfection, hardly one knows Me in truth.” Practically no one understands Kṛṣṇa as He is, for Kṛṣṇa cannot be understood through pious activities or attainment of the most elevated speculative knowledge. Actually the highest knowledge consists of understanding Kṛṣṇa. Unintelligent men who do not understand Kṛṣṇa are grossly puffed up, thinking that they are liberated or have themselves become Kṛṣṇa or Nārāyaṇa. This is ignorance.
+          </p>
+          <p>
+            To indicate the purity of <span class="Italic">bhakti,</span> devotional service, Śrīla Rūpa Gosvāmī says in <span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> (1.1.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā<br> [Madhya 19.167]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.” Śrīla Rūpa Gosvāmī further explains that <span class="Italic">bhakti</span> is <span class="Italic">kleśaghnī śubhadā,</span> which means if one takes to devotional service, all kinds of unnecessary labor and material distress cease entirely and one achieves all good fortune. <span class="Italic">Bhakti</span> is so powerful that it is also said to be <span class="Italic">mokṣa-laghutākṛt;</span> in other words, it minimizes the importance of liberation.
+          </p>
+          <p>
+            Nondevotees must undergo material hardships because they are prone to commit sinful fruitive activities. The desire to commit sinful actions continues in their hearts due to ignorance. These sinful actions are divided into three categories—<span class="Italic">pātaka, mahā-pātaka</span> and <span class="Italic">atipātaka</span>—and also into two divisions; <span class="Italic">prārabdha</span> and <span class="Italic">aprārabdha.</span> <span class="Italic">Prārabdha</span> refers to sinful reactions from which one is suffering at the present, and <span class="Italic">aprārabdha</span> refers to sources of potential suffering. When the seeds (<span class="Italic">bīja</span>) of sinful reactions have not yet fructified, the reactions are called <span class="Italic">aprārabdha.</span> These seeds of sinful action are unseen, but they are unlimited, and no one can trace when they were first planted. Because of <span class="Italic">prārabdha,</span> sinful reactions that have already fructified, one is seen to have taken birth in a low family or to be suffering from other miseries.
+          </p>
+          <p>
+            When one takes to devotional service, however, all phases of sinful life, including <span class="Italic">prārabdha, aprārabdha</span> and <span class="Italic">bīja,</span> are vanquished. In <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.14.19) Lord Kṛṣṇa tells Uddhava:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yathāgniḥ susamṛddhārciḥ<br>karoty edhāṁsi bhasmasāt<br>tathā mad-viṣayā bhaktir<br>uddhavaināṁsi kṛtsnaśaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “My dear Uddhava, devotional service in relationship with Me is like a blazing fire that can burn to ashes all the fuel of sinful activities supplied to it.” How devotional service vanquishes the reactions of sinful life is explained in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (3.33.6) in a verse spoken during Lord Kapiladeva’s instructions to His mother, Devahūti. Devahūti said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yan-nāmadheya-śravaṇānukīrtanād<br>yat-prahvaṇād yat-smaraṇād api kvacit<br>śvādo ’pi sadyaḥ savanāya kalpate<br>kutaḥ punas te bhagavan nu darśanāt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “My dear Lord, if even a person born in a family of dog-eaters hears and repeats the chanting of Your glories, offers respects to You and remembers You, he is immediately greater than a <span class="Italic">brāhmaṇa</span> and is therefore eligible to perform sacrifices. Therefore, what is to be said of one who has seen You directly?”
+          </p>
+          <p>
+            In the <span class="Italic">Padma Purāṇa</span> there is a statement that persons whose hearts are always attached to the devotional service of Lord Viṣṇu are immediately released from all the reactions of sinful life. These reactions generally exist in four phases. Some of them are ready to produce results immediately, some are in the form of seeds, some are unmanifested, and some are current. All such reactions are immediately nullified by devotional service. When devotional service is present in one’s heart, desires to perform sinful activities have no place there. Sinful life is due to ignorance, which means forgetfulness of one’s constitutional position as an eternal servant of God, but when one is fully Kṛṣṇa conscious he realizes that he is God’s eternal servant.
+          </p>
+          <p>
+            In this regard, Śrīla Jīva Gosvāmī comments that <span class="Italic">bhakti</span> may be divided into two divisions: (1) <span class="Italic">santatā,</span> devotional service that continues incessantly with faith and love, and (2) <span class="Italic">kādācitkī,</span> devotional service that does not continue incessantly but is sometimes awakened. Incessantly flowing devotional service (<span class="Italic">santatā</span>) may also be divided into two categories: (1) service performed with slight attachment and (2) spontaneous devotional service. Intermittent devotional service (<span class="Italic">kādācitkī</span>) may be divided into three categories: (1) <span class="Italic">rāgābhāsamayī,</span> devotional service in which one is almost attached, (2) <span class="Italic">rāgābhāsa-śūnya-svarūpa-bhūtā,</span> devotional service in which there is no spontaneous love but one likes the constitutional position of serving, and (3) <span class="Italic">ābhāsa-rūpā,</span> a slight glimpse of devotional service. As for atonement, if one has caught even a slight glimpse of devotional service, all needs to undergo <span class="Italic">prāyaścitta,</span> atonement, are superseded. Therefore atonement is certainly unnecessary when one has achieved spontaneous love and, above that, attachment with love, which are signs of increasing advancement in <span class="Italic">kādācitkī.</span> Even in the stage of <span class="Italic">ābhāsa-rūpā bhakti,</span> all the reactions of sinful life are uprooted and vanquished. Śrīla Jīva Gosvāmī expresses the opinion that the word <span class="Italic">kārtsnyena</span> means that even if one has a desire to commit sinful actions, the roots of that desire are vanquished merely by <span class="Italic">ābhāsa-rūpā bhakti.</span> The example of <span class="Italic">bhāskara,</span> the sun, is most appropriate. The <span class="Italic">ābhāsa</span> feature of <span class="Italic">bhakti</span> is compared to twilight, and the accumulation of one’s sinful activities is compared to fog. Since fog does not spread throughout the sky, the sun need do no more than merely manifest its first rays, and the fog immediately disappears. Similarly, if one has even a slight relationship with devotional service, all the fog of his sinful life is immediately vanquished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">484</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, if a sinful person engages in the service of a bona fide devotee of the Lord and thus learns how to dedicate his life unto the lotus feet of Kṛṣṇa, he can be completely purified. One cannot be purified merely by undergoing austerity, penance, brahmacarya and the other methods of atonement I have previously described.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            <span class="Italic">Tat-puruṣa</span> refers to a preacher of Kṛṣṇa consciousness, such as the spiritual master. Śrīla Narottama dāsa Ṭhākura has said, <span class="Italic">chāḍiyā vaiṣṇava-sevā nistāra pāyeche kebā:</span> “Without serving a bona fide spiritual master, an ideal Vaiṣṇava, who can be delivered from the clutches of <span class="Italic">māyā</span>?” This idea is also expressed in many other places. <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.2) says, <span class="Italic">mahat-sevāṁ dvāram āhur vimukteḥ:</span> if one desires liberation from the clutches of <span class="Italic">māyā,</span> one must associate with a pure devotee <span class="Italic">mahātmā.</span> A <span class="Italic">mahātmā</span> is one who engages twenty-four hours daily in the loving service of the Lord. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.13):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mahātmānas tu māṁ pārtha<br>daivīṁ prakṛtim āśritāḥ<br>bhajanty ananya-manaso<br>jñātvā bhūtādim avyayam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Pṛthā, those who are not deluded, the great souls, are under the protection of the divine nature. They are fully engaged in devotional service because they know Me as the Supreme Personality of Godhead, original and inexhaustible.” Thus the symptom of a <span class="Italic">mahātmā</span> is that he has no engagement other than service to Kṛṣṇa. One must render service to a Vaiṣṇava in order to get freed from sinful reactions, revive one’s original Kṛṣṇa consciousness and be trained in how to love Kṛṣṇa. This is the result of <span class="Italic">mahātma-sevā.</span> Of course, if one engages in the service of a pure devotee, the reactions of one’s sinful life are vanquished automatically. Devotional service is necessary not to drive away an insignificant stock of sins, but to awaken our dormant love for Kṛṣṇa. As fog is vanquished at the first glimpse of sunlight, one’s sinful reactions are automatically vanquished as soon as one begins serving a pure devotee; no separate endeavor is required.
+          </p>
+          <p>
+            The word <span class="Italic">kṛṣṇa-rpita-prāṇaḥ</span> refers to a devotee who dedicates his life to serving Kṛṣṇa, not to being saved from the path to hellish life. A devotee is <span class="Italic">nārāyaṇa-parāyaṇa,</span> or <span class="Italic">vāsudeva-parāyaṇa,</span> which means that the path of Vāsudeva, or the devotional path, is his life and soul. <span class="Italic">Nārāyaṇa-parāḥ sarve na kutaścana bibhyati</span> (<span class="Ref_Italic">Bhāg.</span> 6.17.28): such a devotee is not afraid of going anywhere. There is a path toward liberation in the higher planetary systems and a path toward the hellish planets, but a <span class="Italic">nārāyaṇa-para</span> devotee is unafraid wherever he is sent; he simply wants to remember Kṛṣṇa, wherever he may be. Such a devotee is unconcerned with hell and heaven; he is simply attached to rendering service to Kṛṣṇa. When a devotee is put into hellish conditions, he accepts them as Kṛṣṇa’s mercy: <span class="Italic">tat te ’nukampāṁ susamīkṣamāṇaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 10.14.8). He does not protest, “Oh, I am such a great devotee of Kṛṣṇa. Why have I been put into this misery?” Instead he thinks, “This is Kṛṣṇa’s mercy.” Such an attitude is possible for a devotee who engages in the service of Kṛṣṇa’s representative. This is the secret of success.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">320</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The path followed by pure devotees, who are well behaved and fully endowed with the best qualifications, is certainly the most auspicious path in this material world. It is free from fear, and it is authorized by the śāstras.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            One should not think that the person who takes to <span class="Italic">bhakti</span> is one who cannot perform the ritualistic ceremonies recommended in the <span class="Italic">karma-kāṇḍa</span> section of the <span class="Italic">Vedas</span> or is not sufficiently educated to speculate on spiritual subjects. Māyāvādīs generally allege that the <span class="Italic">bhakti</span> path is for women and illiterates. This is a groundless accusation. The <span class="Italic">bhakti</span> path is followed by the most learned scholars, such as the Gosvāmīs, Lord Caitanya Mahāprabhu and Rāmānujācārya. These are the actual followers of the <span class="Italic">bhakti</span> path. Regardless of whether or not one is educated or aristocratic, one must follow in their footsteps. <span class="Italic">Mahājano yena gataḥ sa panthāḥ:</span> one must follow the path of the <span class="Italic">mahājanas.</span> The <span class="Italic">mahājanas</span> are those who have taken to the path of devotional service (<span class="Italic">suśīlāḥ sādhavo yatra nārāyaṇa-parāyaṇāḥ</span>), for these great personalities are the perfect persons. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.18.12):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasyāsti bhaktir bhagavaty akiñcanā<br>sarvair guṇais tatra samāsate surāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who has unflinching devotion to the Personality of Godhead has all the good qualities of the demigods.” The less intelligent, however, misunderstand the <span class="Italic">bhakti</span> path and therefore allege that it is for one who cannot execute ritualistic ceremonies or speculate. As confirmed here by the word <span class="Italic">sadhrīcīnaḥ, bhakti</span> is the path that is appropriate, not the paths of <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa.</span> Māyāvādīs may be <span class="Italic">suśīlāḥ sādhavaḥ</span> (well-behaved saintly persons), but there is nevertheless some doubt about whether they are actually making progress, for they have not accepted the path of <span class="Italic">bhakti.</span> On the other hand, those who follow the path of the <span class="Italic">ācāryas</span> are <span class="Italic">suśīlāḥ</span> and <span class="Italic">sādhavaḥ,</span> but furthermore their path is <span class="Italic">akuto-bhaya,</span> which means free from fear. One should fearlessly follow the twelve <span class="Italic">mahājanas</span> and their line of disciplic succession and thus be liberated from the clutches of <span class="Italic">māyā.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">164</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, as a pot containing liquor cannot be purified even if washed in the waters of many rivers, nondevotees cannot be purified by processes of atonement even if they perform them very well.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            To take advantage of the methods of atonement, one must be at least somewhat devoted; otherwise there is no chance of one’s being purified. It is clear from this verse that even those who take advantage of <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa,</span> but are not at least slightly devoted cannot be purified simply by following these other paths. The word <span class="Italic">prāyaścittāni</span> is plural in number to indicate both <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa.</span> Narottama dāsa Ṭhākura therefore says, <span class="Italic">karma-kāṇḍa, jñāna-kāṇḍa, kevala viṣera bhāṇḍa.</span> Thus Narottama dāsa Ṭhākura compares the paths of <span class="Italic">karma-kāṇḍa</span> and <span class="Italic">jñāna-kāṇḍa</span> to pots of poison. Liquor and poison are in the same category. According to this verse from <span class="Italic">Śrīmad-Bhāgavatam,</span> a person who has heard a good deal about the path of devotional service, but who is not attached to it, who is not Kṛṣṇa conscious, is like a pot of liquor. Such a person cannot be purified without at least a slight touch of devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">704</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although not having fully realized Kṛṣṇa, persons who have even once surrendered completely unto His lotus feet and who have become attracted to His name, form, qualities and pastimes are completely freed of all sinful reactions, for they have thus accepted the true method of atonement. Even in dreams, such surrendered souls do not see Yamarāja or his order carriers, who are equipped with ropes to bind the sinful.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.66):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-dharmān parityajya<br>mām ekaṁ śaraṇaṁ vraja<br>ahaṁ tvāṁ sarva-pāpebhyo<br>mokṣayiṣyāmi mā śucaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction. Do not fear.” This same principle is described here (<span class="Italic">sakṛn manaḥ kṛṣṇa-padāravindayoḥ</span>). If by studying <span class="Italic">Bhagavad-gītā</span> one decides to surrender to Kṛṣṇa, he is immediately freed from all sinful reactions. It is also significant that Śukadeva Gosvāmī, having several times repeated the words <span class="Italic">vāsudeva-parāyaṇa</span> and <span class="Italic">nārāyaṇa-parāyaṇa,</span> finally says <span class="Italic">kṛṣṇa-padāravindayoḥ.</span> Thus he indicates that Kṛṣṇa is the origin of both Nārāyaṇa and Vāsudeva. Even though Nārāyaṇa and Vāsudeva are not different from Kṛṣṇa, simply by surrendering to Kṛṣṇa one fully surrenders to all His expansions, such as Nārāyaṇa, Vāsudeva and Govinda. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.7), <span class="Italic">mattaḥ parataraṁ nānyat:</span> “There is no truth superior to Me.” There are many names and forms of the Supreme Personality of Godhead, but Kṛṣṇa is the supreme form (<span class="Italic">kṛṣṇas tu bhagavān svayam</span>). Therefore Kṛṣṇa recommends to neophyte devotees that one should surrender unto Him only (<span class="Italic">mām ekam</span>). Because neophyte devotees cannot understand what the forms of Nārāyaṇa, Vāsudeva and Govinda are, Kṛṣṇa directly says, <span class="Italic">mām ekam.</span> Herein, this is also supported by the word <span class="Italic">kṛṣṇa-padāravindayoḥ.</span> Nārāyaṇa does not speak personally, but Kṛṣṇa, or Vāsudeva, does, as in <span class="Italic">Bhagavad-gītā</span> for example. Therefore, to follow the direction of <span class="Italic">Bhagavad-gītā</span> means to surrender unto Kṛṣṇa, and to surrender in this way is the highest perfection of <span class="Italic">bhakti-yoga.</span>
+          </p>
+          <p>
+            Parīkṣit Mahārāja had inquired from Śukadeva Gosvāmī how one can be saved from falling into the various conditions of hellish life. In this verse Śukadeva Gosvāmī answers that a soul who has surrendered to Kṛṣṇa certainly cannot go to <span class="Italic">naraka,</span> hellish existence. To say nothing of going there, even in his dreams he does not see Yamarāja or his order carriers, who are able to take one there. In other words, if one wants to save himself from falling into <span class="Italic">naraka,</span> hellish life, he should fully surrender to Kṛṣṇa. The word <span class="Italic">sakṛt</span> is significant because it indicates that if one sincerely surrenders to Kṛṣṇa once, he is saved even if by chance he falls down by committing sinful activities. Therefore Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.30):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">api cet su-durācāro<br>bhajate mām ananya-bhāk<br>sādhur eva sa mantavyaḥ<br>samyag vyavasito hi saḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Even if one commits the most abominable actions, if he is engaged in devotional service he is to be considered saintly because he is properly situated.” If one never for a moment forgets Kṛṣṇa, he is safe even if by chance he falls down by committing sinful acts.
+          </p>
+          <p>
+            In the Second Chapter of <span class="Ref_Italic">Bhagavad-gītā</span> (2.40) the Lord also says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nehābhikrama-nāśo ’sti<br>pratyavāyo na vidyate<br>svalpam apy asya dharmasya<br>trāyate mahato bhayāt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this endeavor there is no loss or diminution, and a little advancement on this path can protect one from the most dangerous type of fear.”
+          </p>
+          <p>
+            Elsewhere in the <span class="Ref_Italic">Gītā</span> (6.40) the Lord says, <span class="Italic">na hi kalyāṇa-kṛt kaścid durgatiṁ tāta gacchati:</span> “one who performs auspicious activity is never overcome by evil.” The highest <span class="Italic">kalyāṇa</span> (auspicious) activity is to surrender to Kṛṣṇa. That is the only path by which to save oneself from falling down into hellish life. Śrīla Prabodhānanda Sarasvatī has confirmed this as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kaivalyaṁ narakāyate tri-daśa-pūr ākāśa-puṣpāyate<br>durdāntendriya-kāla-sarpa-paṭalī protkhāta-daṁṣṭrāyate<br>viśvaṁ pūrṇa-sukhāyate vidhi-mahendrādiś ca kīṭāyate<br>yat-kāruṇya-kaṭākṣa-vaibhavavatāṁ taṁ gauram eva stumaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The sinful actions of one who has surrendered unto Kṛṣṇa are compared to a snake with its poison fangs removed (<span class="Italic">protkhāta-daṁṣṭrāyate</span>). Such a snake is no longer to be feared. Of course, one should not commit sinful activities on the strength of having surrendered to Kṛṣṇa. However, even if one who has surrendered to Kṛṣṇa happens to do something sinful because of his former habits, such sinful actions no longer have a destructive effect. Therefore one should adhere to the lotus feet of Kṛṣṇa very tightly and serve Him under the direction of the spiritual master. Thus in all conditions one will be <span class="Italic">akuto-bhaya,</span> free from fear.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">241</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this regard, learned scholars and saintly persons describe a very old historical incident involving a discussion between the order carriers of Lord Viṣṇu and those of Yamarāja. Please hear of this from me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            The <span class="Italic">Purāṇas,</span> or old histories, are sometimes neglected by unintelligent men who consider their descriptions mythological. Actually, the descriptions of <span class="Italic">the Purāṇas,</span> or the old histories of the universe, are factual, although not chronological. The <span class="Italic">purāṇas</span> record the chief incidents that have occurred over many millions of years, not only on this planet but also on other planets within the universe. Therefore all learned and realized Vedic scholars speak with references to the incidents in the <span class="Italic">Purāṇas.</span> Śrīla Rūpa Gosvāmī accepts the <span class="Italic">Purāṇas</span> to be as important as the <span class="Italic">Vedas</span> themselves. Therefore in <span class="Italic">Bhakti-rasāmṛta-sindhu</span> he quotes the following verse from the <span class="Italic">Brahma-yāmala:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śruti-smṛti-purāṇādi-<br>pañcarātra-vidhiṁ vinā<br>aikāntikī harer bhaktir<br>utpātāyaiva kalpate<br> [BRS <popup><div class="Verse"><0.125>śruti-smṛti-purāṇādi-<br>pañcarātra-vidhiṁ vinā<br>aikāntikī harer bhaktir<br>utpātāyaiva kalpate</0.125></div></popup>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Devotional service of the Lord that ignores the authorized Vedic literatures like the <span class="Italic">Upaniṣads, Purāṇas</span> and <span class="Italic">Nārada-pañcarātra</span> is simply an unnecessary disturbance in society.”  <span class="Italic">Bhakti-rasāmṛta-sindhu 1.2.101</span><lt>1.2.101]</lt>
+          </p>
+          <p>
+            “Devotional service of the Lord that ignores the authorized Vedic literatures like the <span class="Italic">Upaniṣads, purāṇas</span> and <span class="Italic">Nārada-pañcarātra</span> is simply an unnecessary disturbance in society.” A devotee of Kṛṣṇa must refer not only to the <span class="Italic">Vedas,</span> but also to the <span class="Italic">purāṇas.</span> One should not foolishly consider the <span class="Italic">Purāṇas</span> mythological. If they were mythological, Śukadeva Gosvāmī would not have taken the trouble to recite the old historical incidents concerning the life of Ajāmila. Now the history begins as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">377</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the city known as Kānyakubja there was a brāhmaṇa named Ajāmila who married a prostitute maidservant and lost all his brahminical qualities because of the association of that low-class woman.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            The fault of illicit connection with women is that it makes one lose all brahminical qualities. In India there is still a class of servants, called <span class="Italic">śūdras,</span> whose maidservant wives are called <span class="Italic">śūdrāṇīs.</span> Sometimes people who are very lusty establish relationships with such maidservants and sweeping women, since in the higher statuses of society they cannot indulge in the habit of woman hunting, which is strictly prohibited by social convention. Ajāmila, a qualified <span class="Italic">brāhmaṇa</span> youth, lost all his brahminical qualities because of his association with a prostitute, but he was ultimately saved because he had begun the process of <span class="Italic">bhakti-yoga.</span> Therefore in the previous verse, Śukadeva Gosvāmī spoke of the person who has only once surrendered himself at the lotus feet of the Lord (<span class="Italic">manaḥ kṛṣṇa-padāravindayoḥ</span>) or has just begun the <span class="Italic">bhakti-yoga</span> process. <span class="Italic">Bhakti-yoga</span> begins with <span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ [SB </span>7.5.23]<span class="Italic">,</span> hearing and chanting of Lord Viṣṇu’s names, as in the <span class="Italic">mahā-mantra</span>—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare. Chanting is the beginning of <span class="Italic">bhakti-yoga.</span> Therefore Śrī Caitanya Mahāprabhu declares:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of quarrel and hypocrisy the only means of deliverance is chanting the holy name of the Lord. There is no other way. There is no other way. There is no other way.” The process of chanting the holy name of the Lord is always superbly effective, but it is especially effective in this age of Kali. Its practical effectiveness will now be explained by Śukadeva Gosvāmī through the history of Ajāmila, who was freed from the hands of the Yamadūtas simply because of chanting the holy name of Nārāyaṇa. Parīkṣit Mahārāja’s original question was how to be freed from falling down into hell or into the hands of the Yamadūtas. In reply, Śukadeva Gosvāmī is citing this old historical example to convince Parīkṣit Mahārāja of the potency of <span class="Italic">bhakti-yoga,</span> which begins simply with the chanting of the Lord’s name. All the great authorities of <span class="Italic">bhakti-yoga</span> recommend the devotional process beginning with the chanting of the holy name of Kṛṣṇa (<span class="Italic">tan-nāma-grahaṇādibhiḥ</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">148</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This fallen brāhmaṇa, Ajāmila, gave trouble to others by arresting them, by cheating them in gambling or by directly plundering them. This was the way he earned his livelihood and maintained his wife and children.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            This verse indicates how degraded one becomes simply by indulging in illicit sex with a prostitute. Illicit sex is not possible with a chaste or aristocratic woman, but only with unchaste <span class="Italic">śūdras.</span> The more society allows prostitution and illicit sex, the more impetus it gives to cheaters, thieves, plunderers, drunkards and gamblers. Therefore we first advise all the disciples in our Kṛṣṇa consciousness movement to avoid illicit sex, which is the beginning of all abominable life and which is followed by meat-eating, gambling and intoxication, one after another. Of course, restraint is very difficult, but it is quite possible if one fully surrenders to Kṛṣṇa, since all these abominable habits gradually become distasteful for a Kṛṣṇa conscious person. If illicit sex is allowed to increase in a society, however, the entire society will be condemned, for it will be full of rogues, thieves, cheaters and so forth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, while he thus spent his time in abominable, sinful activities to maintain his family of many sons, eighty-eight years of his life passed by.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">115</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            That old man Ajāmila had ten sons, of whom the youngest was a baby named Nārāyaṇa. Since Nārāyaṇa was the youngest of all the sons, he was naturally very dear to both his father and his mother.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            The word <span class="Italic">pravayasaḥ</span> indicates Ajāmila’s sinfulness because although he was eighty-eight years old, he had a very young child. According to Vedic culture, one should leave home as soon as he has reached fifty years of age; one should not live at home and go on producing children. Sex life is allowed for twenty-five years, between the ages of twenty-five and forty-five or, at the most, fifty. After that one should give up the habit of sex life and leave home as a <span class="Italic">vānaprastha</span> and then properly take <span class="Italic">sannyāsa.</span> Ajāmila, however, because of his association with a prostitute, lost all brahminical culture and became most sinful, even in his so-called household life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">169</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of the child’s broken language and awkward movements, old Ajāmila was very much attached to him. He always took care of the child and enjoyed the child’s activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Here it is clearly mentioned that the child Nārāyaṇa was so young that he could not even speak or walk properly. Since the old man was very attached to the child, he enjoyed the child’s activities, and because the child’s name was Nārāyaṇa, the old man always chanted the holy name of Nārāyaṇa. Although he was referring to the small child and not to the original Nārāyaṇa, the name of Nārāyaṇa is so powerful that even by chanting his son’s name he was becoming purified (<span class="Italic">harer nāma harer nāma harer nāmaiva kevalam</span> [Adi 17.21]). Śrīla Rūpa Gosvāmī has therefore declared that if one’s mind is somehow or other attracted by the holy name of Kṛṣṇa (<span class="Italic">tasmāt kenāpy upāyena manaḥ kṛṣṇe niveśayet</span>), one is on the path of liberation. It is customary in Hindu society for parents to give their children names like Kṛṣṇadāsa, Govinda dāsa, Nārāyaṇa dāsa and Vṛndāvana dāsa. Thus they chant the names Kṛṣṇa, Govinda, Nārāyaṇa and Vṛndāvana and get the chance to be purified.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">86</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Ajāmila chewed food and ate it, he called the child to chew and eat, and when he drank he called the child to drink also. Always engaged in taking care of the child and calling his name, Nārāyaṇa, Ajāmila could not understand that his own time was now exhausted and that death was upon him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            The Supreme Personality of Godhead is kind to the conditioned soul. Although this man completely forgot Nārāyaṇa, he was calling his child, saying, “Nārāyaṇa, please come eat this food. Nārāyaṇa, please come drink this milk.” Somehow or other, therefore, he was attached to the name Nārāyaṇa. This is called <span class="Italic">ajñāta-sukṛti.</span> Although calling for his son, he was unknowingly chanting the name of Nārāyaṇa, and the holy name of the Supreme Personality of Godhead is so transcendentally powerful that his chanting was being counted and recorded.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">346</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the time of death arrived for the foolish Ajāmila, he began thinking exclusively of his son Nārāyaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            In the Second Canto of the <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.1.6) Śukadeva Gosvāmī says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">etāvān sāṅkhya-yogābhyāṁ<br>svadharma-pariniṣṭhayā<br>janma-lābhaḥ paraḥ puṁsām<br>ante nārāyaṇa-smṛtiḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The highest perfection of human life, achieved either by complete knowledge of matter and spirit, by acquirement of mystic powers, or by perfect discharge of one’s occupational duty, is to remember the Personality of Godhead at the end of life.” Somehow or other, Ajāmila consciously or unconsciously chanted the name of Nārāyaṇa at the time of death (<span class="Italic">ante nārāyaṇa-smṛtiḥ</span>), and therefore he became all-perfect simply by concentrating his mind on the name of Nārāyaṇa.
+          </p>
+          <p>
+            It may also be concluded that Ajāmila, who was the son of a <span class="Italic">brāhmaṇa,</span> was accustomed to worshiping Nārāyaṇa in his youth because in every <span class="Italic">brāhmaṇa’s</span> house there is worship of the <span class="Italic">nārāyaṇa-śilā.</span> This system is still present in India; in a rigid <span class="Italic">brāhmaṇa’s</span> house, there is <span class="Italic">nārāyaṇa-sevā,</span> worship of Nārāyaṇa. Therefore, although the contaminated Ajāmila was calling for his son, by concentrating his mind on the holy name of Nārāyaṇa he remembered the Nārāyaṇa he had very faithfully worshiped in his youth.
+          </p>
+          <p>
+            <1>In this regard Śrīla Śrīdhara Svāmī expressed his verdict as follows: <span class="Italic">etac ca tad-upalālanādi-śrī-nārāyaṇa-namoccāraṇa-māhātmyena tad-bhaktir evābhūd iti siddhāntopayogitvenāpi draṣṭavyam.</span> “According to the <span class="Italic">bhakti-siddhānta,</span> it is to be analyzed that because Ajāmila constantly chanted his son’s name, Nārāyaṇa, he was elevated to the platform of <span class="Italic">bhakti,</span> although he did not know it.” Similarly, Śrīla Vīrarāghava Ācārya gives this opinion: <span class="Italic">evaṁ vartamānaḥ sa dvijaḥ mṛtyu-kāle upasthite satyajño nārāyaṇākhye putra eva matiṁ cakāra matim āsaktām akarod ity arthaḥ.</span> “Although at the time of death he was chanting the name of his son, he nevertheless concentrated his mind upon the holy name of Nārāyaṇa.” Śrīla Vijayadhvaja Tīrtha gives a similar opinion:</1>
+          </p>
+          <p>
+            <blockquote><div style=" text-align : center">
+            <div class="Prose-Verse-in-purp"><0><dc>mṛtyu-kāle deha-viyoga-lakṣaṇa-kāle mṛtyoḥ sarva-doṣa-pāpa-harasya harer anugrahāt kāle datta-jñāna-lakṣaṇe upasthite hṛdi prakāśite tanaye pūrṇa-jñāne bāle pañca-varṣa-kalpe prādeśa-mātre nārāyaṇāhvaye mūrti-viśeṣe matiṁ smaraṇa-samarthaṁ cittaṁ cakāra bhaktyāsmarad ity arthaḥ.<fc><bc></bc></fc></dc></0></div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Directly or indirectly, Ajāmila factually remembered Nārāyaṇa at the time of death (<span class="Italic">ante nārāyaṇa-smṛtiḥ</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28–29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ajāmila then saw three awkward persons with deformed bodily features, fierce, twisted faces, and hair standing erect on their bodies. With ropes in their hands, they had come to take him away to the abode of Yamarāja. When he saw them he was extremely bewildered, and because of attachment to his child, who was playing a short distance away, Ajāmila began to call him loudly by his name. Thus with tears in his eyes he somehow or other chanted the holy name of Nārāyaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            A person who performs sinful activities performs them with his body, mind and words. Therefore three order carriers from Yamarāja came to take Ajāmila to Yamarāja’s abode. Fortunately, even though he was referring to his son, Ajāmila chanted the four syllables of the <span class="Italic">hari-nāma</span> Nārāyaṇa, and therefore the order carriers of Nārāyaṇa, the Viṣṇudūtas, also immediately arrived there. Because Ajāmila was extremely afraid of the ropes of Yamarāja, he chanted the Lord’s name with tearful eyes. Actually, however, he never meant to chant the holy name of Nārāyaṇa; he meant to call his son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">193</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, the order carriers of Viṣṇu, the Viṣṇudūtas, immediately arrived when they heard the holy name of their master from the mouth of the dying Ajāmila, who had certainly chanted without offense because he had chanted in complete anxiety.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura remarks, <span class="Italic">hari-kīrtanaṁ niśamyāpatan, katham-bhūtasya bhartur nāma bruvataḥ:</span> the order carriers of Lord Viṣṇu came because Ajāmila had chanted the holy name of Nārāyaṇa. They did not consider why he was chanting. While chanting the name of Nārāyaṇa, Ajāmila was actually thinking of his son, but simply because they heard Ajāmila chanting the Lord’s name, the order carriers of Lord Viṣṇu, the Viṣṇudūtas, immediately came for Ajāmila’s protection. <span class="Italic">Hari-kīrtana</span> is actually meant to glorify the holy name, form, pastimes and qualities of the Lord. Ajāmila, however, did not glorify the form, qualities or paraphernalia of the Lord; he simply chanted the holy name. Nevertheless, that chanting was sufficient to cleanse him of all sinful activities. As soon as the Viṣṇudūtas heard their master’s name being chanted, they immediately came. In this regard Śrīla Vijayadhvaja Tīrtha remarks: <span class="Italic">anena putra-sneham antareṇa prācīnādṛṣṭa-balād udbhūtayā bhaktyā bhagavan-nāma-saṅkīrtanaṁ kṛtam iti jñāyate.</span> “Ajāmila chanted the name of Nārāyaṇa because of his excessive attachment to his son. Nevertheless, because of his past good fortune in having rendered devotional service to Nārāyaṇa, he apparently chanted the holy name in full devotional service and without offenses.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">480</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The order carriers of Yamarāja were snatching the soul from the core of the heart of Ajāmila, the husband of the prostitute, but with resounding voices the messengers of Lord Viṣṇu, the Viṣṇudūtas, forbade them to do so.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            A Vaiṣṇava, one who has surrendered to the lotus feet of Lord Viṣṇu, is always protected by Lord Viṣṇu’s order carriers. Because Ajāmila had chanted the holy name of Nārāyaṇa, the Viṣṇudūtas not only immediately arrived on the spot but also at once ordered the Yamadūtas not to touch him. By speaking with resounding voices, the Viṣṇudūtas threatened to punish the Yamadūtas if they continued trying to snatch Ajāmila’s soul from his heart. The order carriers of Yamarāja have jurisdiction over all sinful living entities, but the messengers of Lord Viṣṇu, the Viṣṇudūtas, are capable of punishing anyone, including Yamarāja, if he wrongs a Vaiṣṇava.
+          </p>
+          <p>
+            Materialistic scientists do not know where to find the soul within the body with their material instruments, but this verse clearly explains that the soul is within the core of the heart (<span class="Italic">hṛdaya</span>); it is from the heart that the Yamadūtas were extracting the soul of Ajāmila. Similarly, we learn that the Supersoul, Lord Viṣṇu, is also situated within the heart (<span class="Italic">īśvaraḥ sarva-bhūtānāṁ hṛd-deśe ’rjuna tiṣṭhati [Bg. 18.61]</span>). In the <span class="Italic">Upaniṣads</span> it is said that the Supersoul and the individual soul are living in the same tree of the body as two friendly birds. The Supersoul is said to be friendly because the Supreme Personality of Godhead is so kind to the original soul that when the original soul transmigrates from one body to another, the Lord goes with him. Furthermore, according to the desire and <span class="Italic">karma</span> of the individual soul, the Lord, through the agency of <span class="Italic">māyā,</span> creates another body for him.
+          </p>
+          <p>
+            The heart of the body is a mechanical arrangement. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.61):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ sarva-bhūtānāṁ<br>hṛd-deśe ’rjuna tiṣṭhati<br>bhrāmayan sarva-bhūtāni<br>yantrārūḍhāni māyayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Lord is situated in everyone’s heart, O Arjuna, and is directing the wanderings of all living entities, who are seated as on a machine, made of the material energy.” <span class="Italic">Yantra</span> means a machine, such as an automobile. The driver of the machine of the body is the individual soul, who is also its director or proprietor, but the supreme proprietor is the Supreme Personality of Godhead. One’s body is created through the agency of <span class="Italic">māyā</span> (<span class="Italic">karmaṇā daiva-netreṇa</span>), and according to one’s activities in this life, another vehicle is created, again under the supervision of <span class="Italic">daivī māyā</span> (<span class="Italic">daivī hy eṣā guṇa-mayī mama māyā duratyayā</span>). At the appropriate time, one’s next body is immediately chosen, and both the individual soul and the Supersoul transfer to that particular bodily machine. This is the process of transmigration. During transmigration from one body to the next, the soul is taken away by the order carriers of Yamarāja and put into a particular type of hellish life (<span class="Italic">naraka</span>) in order to become accustomed to the condition in which he will live in his next body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">56</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the order carriers of Yamarāja, the son of the sun-god, were thus forbidden, they replied: Who are you, sirs, that have the audacity to challenge the jurisdiction of Yamarāja?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            According to the sinful activities of Ajāmila, he was within the jurisdiction of Yamarāja, the supreme judge appointed to consider the sins of the living entities. When forbidden to touch Ajāmila, the order carriers of Yamarāja were surprised because they had never been hindered in the execution of their duty by anyone within the three worlds.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">278</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Dear sirs, whose servants are you, where have you come from, and why are you forbidding us to touch the body of Ajāmila? Are you demigods from the heavenly planets, are you sub-demigods, or are you the best of devotees?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            The most significant word used in this verse is <span class="Italic">siddha-sattamāḥ,</span> which means “the best of the perfect.” In <span class="Ref_Italic">Bhagavad-gītā</span> (7.3) it is said, <span class="Italic">manuṣyāṇāṁ sahasreṣu kaścid yatati siddhaye:</span> out of millions of persons, one may try to become <span class="Italic">siddha,</span> perfect—or, in other words, self-realized. A self-realized person knows that he is not the body but a spiritual soul (<span class="Italic">). At the present moment practically everyone is unaware of this fact, but one who understands this has attained perfection and is therefore called <span class="Italic">siddha.</span> When one understands that the soul is part and parcel of the supreme soul and one thus engages in the devotional service of the supreme soul, one becomes <span class="Italic">siddha-sat-tama.</span> One is then eligible to live in the Vaikuṇṭha planets or Kṛṣṇaloka. The word <span class="Italic">siddha-sattama,</span> therefore, refers to a liberated, pure devotee.</span>
+          </p>
+          <p>
+            Since the Yamadūtas are servants of Yamarāja, who is also one of the <span class="Italic">siddha-sattamas,</span> they knew that a <span class="Italic">siddha-sattama</span> is above the demigods and sub-demigods and, indeed, above all the living entities within this material world. The Yamadūtas therefore inquired why the Viṣṇudūtas were present where a sinful man was going to die.
+          </p>
+          <p>
+            It should also be noted that Ajāmila was not yet dead, for the Yamadūtas were trying to snatch the soul from his heart. They could not take the soul, however, and therefore Ajāmila was not yet dead. This will be revealed in later verses. Ajāmila was simply in an unconscious state when the argument was in progress between the Yamadūtas and the Viṣṇudūtas. The conclusion of the argument was to be a decision regarding who would claim the soul of Ajāmila.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34–36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">295</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The order carriers of Yamarāja said: Your eyes are just like the petals of lotus flowers. Dressed in yellow silken garments, decorated with garlands of lotuses, and wearing very attractive helmets on your heads and earrings on your ears, you all appear fresh and youthful. Your four long arms are decorated with bows and quivers of arrows and with swords, clubs, conchshells, discs and lotus flowers. Your effulgence has dissipated the darkness of this place with extraordinary illumination. Now, sirs, why are you obstructing us?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            Before even being introduced to a foreigner, one becomes acquainted with him through his dress, bodily features and behavior and can thus understand his position. Therefore when the Yamadūtas saw the Viṣṇudūtas for the first time, they were surprised. They said, “By your bodily features you appear to be very exalted gentlemen, and you have such celestial power that you have dissipated the darkness of this material world with your own effulgences. Why then should you endeavor to stop us from executing our duty?” It will be explained that the Yamadūtas, the order carriers of Yamarāja, mistakenly considered Ajāmila sinful. They did not know that although he was sinful throughout his entire life, he was purified by constantly chanting the holy name of Nārāyaṇa. In other words, unless one is a Vaiṣṇava, one cannot understand the activities of a Vaiṣṇava.
+          </p>
+          <p>
+            The dress and bodily features of the residents of Vaikuṇṭhaloka are properly described in these verses. The residents of Vaikuṇṭha, who are decorated with garlands and yellow silken garments, have four arms holding various weapons. Thus they conspicuously resemble Lord Viṣṇu. They have the same bodily features as Nārāyaṇa because they have attained the liberation of <span class="Italic">sārūpya,</span> but they nevertheless act as servants. All the residents of Vaikuṇṭhaloka know perfectly well that their master is Nārāyaṇa, or Kṛṣṇa, and that they are all His servants. They are all self-realized souls who are <span class="Italic">nitya-mukta,</span> everlastingly liberated. Although they could conceivably declare themselves Nārāyaṇa or Viṣṇu, they never do so; they always remain Kṛṣṇa conscious and serve the Lord faithfully. Such is the atmosphere of Vaikuṇṭhaloka. Similarly, one who learns the faithful service of Lord Kṛṣṇa through the Kṛṣṇa consciousness movement will always remain in Vaikuṇṭhaloka and have nothing to do with the material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">81</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: Being thus addressed by the messengers of Yamarāja, the servants of Vāsudeva smiled and spoke the following words in voices as deep as the sound of rumbling clouds.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            The Yamadūtas were surprised to see that the Viṣṇudūtas, although polite, were hindering the rule of Yamarāja. Similarly, the Viṣṇudūtas were also surprised that the Yamadūtas, although claiming to be servants of Yamarāja, the supreme judge of religious principles, were unaware of the principles of religious action. Thus the Viṣṇudūtas smiled, thinking, “What is this nonsense they are speaking? If they are actually servants of Yamarāja they should know that Ajāmila is not a suitable candidate for them to carry off.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">297</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The blessed messengers of Lord Viṣṇu, the Viṣṇudūtas, said: If you are actually servants of Yamarāja, you must explain to us the meaning of religious principles and the symptoms of irreligion.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            This inquiry by the Viṣṇudūtas to the Yamadūtas is most important. A servant must know the instructions of his master. The servants of Yamarāja claimed to be carrying out his orders, and therefore the Viṣṇudūtas very intelligently asked them to explain the symptoms of religious and irreligious principles. A Vaiṣṇava knows these principles perfectly well because he is well acquainted with the instructions of the Supreme Personality of Godhead. The Supreme Lord says, <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> [Bg. 18.66] “Give up all other varieties of religion and just surrender unto Me.” Therefore surrender unto the Supreme Personality of Godhead is the actual principle of religion. Those who have surrendered to the principles of material nature instead of to Kṛṣṇa are all impious, regardless of their material position. Unaware of the principles of religion, they do not surrender to Kṛṣṇa, and therefore they are considered sinful rascals, the lowest of men, and fools bereft of all knowledge. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na māṁ duṣkṛtino mūḍhāḥ<br>prapadyante narādhamāḥ<br>māyayāpahṛta-jñānā<br>āsuraṁ bhāvam āśritāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those miscreants who are grossly foolish, lowest among mankind, whose knowledge is stolen by illusion, and who partake of the atheistic nature of demons, do not surrender unto Me.” One who has not surrendered to Kṛṣṇa does not know the true principle of religion; otherwise he would have surrendered.
+          </p>
+          <p>
+            The question posed by the Viṣṇudūtas was very suitable. One who represents someone else must fully know that person’s mission. The devotees in the Kṛṣṇa consciousness movement must therefore be fully aware of the mission of Kṛṣṇa and Lord Caitanya; otherwise they will be considered foolish. All devotees, especially preachers, must know the philosophy of Kṛṣṇa consciousness so as not to be embarrassed and insulted when they preach.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">175</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            What is the process of punishing others? Who are the actual candidates for punishment? Are all karmīs engaged in fruitive activities punishable, or only some of them?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            One who has the power to punish others should not punish everyone. There are innumerable living entities, the majority of whom are in the spiritual world and are <span class="Italic">nitya-mukta,</span> everlastingly liberated. There is no question of judging these liberated living beings. Only a small fraction of the living entities, perhaps one fourth, are in the material world. And the major portion of the living entities in the material world—8,000,000 of the 8,400,000 forms of life—are lower than human beings. They are not punishable, for under the laws of material nature they are automatically evolving. Human beings, who are advanced in consciousness, are responsible, but not all of them are punishable. Those engaged in advanced pious activities are beyond punishment. Only those who engage in sinful activities are punishable. Therefore the Viṣṇudūtas particularly inquired about who is punishable and why Yamarāja has been designated to discriminate between who is punishable and who is not. How is one to be judged? What is the basic principle of authority? These are the questions raised by the Viṣṇudūtas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">537</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Yamadūtas replied: That which is prescribed in the Vedas constitutes dharma, the religious principles, and the opposite of that is irreligion. The Vedas are directly the Supreme Personality of Godhead, Nārāyaṇa, and are self-born. This we have heard from Yamarāja.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            The servants of Yamarāja replied quite properly. They did not manufacture principles of religion or irreligion. Instead, they explained what they had heard from the authority Yamarāja. <span class="Italic">Mahājano yena gataḥ sa panthāḥ:</span> one should follow the <span class="Italic">mahājana,</span> the authorized person. Yamarāja is one of twelve authorities. Therefore the servants of Yamarāja, the Yamadūtas, replied with perfect clarity when they said <span class="Italic">śuśruma</span> (“we have heard”). The members of modern civilization manufacture defective religious principles through speculative concoction. This is not <span class="Italic">dharma.</span> They do not know what is <span class="Italic">dharma</span> and what is <span class="Italic">adharma.</span> Therefore, as stated in the beginning of <span class="Italic">Śrīmad-Bhāgavatam, dharmaḥ projjhita-kaitavo ’tra: [SB </span>1.1.2] <span class="Italic">dharma</span> not supported by the <span class="Italic">Vedas</span> is rejected from <span class="Italic">śrīmad-bhāgavata-dharma.</span> <span class="Italic">Bhāgavata-dharma</span> comprises only that which is given by the Supreme Personality of Godhead. <span class="Italic">Bhāgavata-dharma</span> is <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> [Bg. 18.66] one must accept the authority of the Supreme Personality of Godhead and surrender to Him and whatever He says. That is <span class="Italic">dharma.</span> Arjuna, for example, thinking that violence was <span class="Italic">adharma,</span> was declining to fight, but Kṛṣṇa urged him to fight. Arjuna abided by the orders of Kṛṣṇa, and therefore he is actually a <span class="Italic">dharmī</span> because the order of Kṛṣṇa is <span class="Italic">dharma.</span> Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">vedaiś ca sarvair aham eva vedyaḥ:</span> “The real purpose of <span class="Italic">veda,</span> knowledge, is to know Me.” One who knows Kṛṣṇa perfectly is liberated. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.” One who understands Kṛṣṇa and abides by His order is a candidate for returning home, back to Godhead. It may be concluded that <span class="Italic">dharma,</span> religion, refers to that which is ordered in the <span class="Italic">Vedas,</span> and <span class="Italic">adharma,</span> irreligion, refers to that which is not supported in the <span class="Italic">Vedas.</span>
+          </p>
+          <p>
+            Dharma is not actually manufactured by Nārāyaṇa. As stated in the <span class="Italic">Vedas, asya mahato bhūtasya niśvasitam etad yad ṛg-vedaḥ iti:</span> the injunctions of <span class="Italic">dharma</span> emanate from the breathing of Nārāyaṇa, the supreme living entity. Nārāyaṇa exists eternally and breathes eternally, and therefore <span class="Italic">dharma,</span> the injunctions of Nārāyaṇa, also exist eternally. Śrīla Madhvācārya, the original <span class="Italic">ācārya</span> for those who belong to the Mādhva-Gauḍīya-sampradāya, says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vedānāṁ prathamo vaktā<br>harir eva yato vibhuḥ<br>ato viṣṇv-ātmakā vedā<br>ity āhur veda-vādinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The transcendental words of the <span class="Italic">Vedas</span> emanated from the mouth of the Supreme Personality of Godhead. Therefore the Vedic principles should be understood to be Vaiṣṇava principles because Viṣṇu is the origin of the <span class="Italic">Vedas.</span> The <span class="Italic">Vedas</span> contain nothing besides the instructions of Viṣṇu, and one who follows the Vedic principles is a Vaiṣṇava. The Vaiṣṇava is not a member of a manufactured community of this material world. A Vaiṣṇava is a real knower of the <span class="Italic">Vedas,</span> as confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">vedaiś ca sarvair aham eva vedyaḥ [Bg. </span>15.15]).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">259</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The supreme cause of all causes, Nārāyaṇa, is situated in His own abode in the spiritual world, but nevertheless He controls the entire cosmic manifestation according to the three modes of material nature—sattva-guṇa, rajo-guṇa and tamo-guṇa. In this way all living entities are awarded different qualities, different names [such as brāhmaṇa, kṣatriya and vaiśya], different duties according to the varṇāśrama institution, and different forms. Thus Nārāyaṇa is the cause of the entire cosmic manifestation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            The <span class="Italic">Vedas</span> inform us:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na tasya kāryaṁ karaṇaṁ ca vidyate<br>na tat-samaś cābhyadhikaś ca dṛśyate<br>parāsya śaktir vividhaiva śrūyate<br>svābhāvikī jñāna-bala-kriyā ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.8)
+          </p>
+          <p>
+            Nārāyaṇa, the Supreme Personality of Godhead, is almighty, omnipotent. He has multifarious energies, and therefore He is able to remain in His own abode and without endeavor supervise and manipulate the entire cosmic manifestation through the interaction of the three modes of material nature—<span class="Italic">sattva-guṇa, rajo-guṇa</span> and <span class="Italic">tamo-guṇa.</span> These interactions create different forms, bodies, activities and changes, which all occur perfectly. Because the Lord is perfect, everything works as if He were directly supervising and taking part in it. Atheistic men, however, being covered by the three modes of material nature, cannot see Nārāyaṇa to be the supreme cause behind all activities. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.13):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tribhir guṇamayair bhāvair<br>ebhiḥ sarvam idaṁ jagat<br>mohitaṁ nābhijānāti<br>mām ebhyaḥ param avyayam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Deluded by the three modes, the whole world does not know Me, who am above the modes and inexhaustible.” Because unintelligent agnostics are <span class="Italic">mohita,</span> illusioned by the three modes of material nature, they cannot understand that Nārāyaṇa, Kṛṣṇa, is the supreme cause of all activities. As stated in <span class="Italic">Brahma-saṁhitā (5.1):</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ paramaḥ kṛṣṇaḥ<br>sac-cid-ānanda-vigrahaḥ<br>anādir ādir govindaḥ<br>sarva-kāraṇa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Kṛṣṇa, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body. He is the origin of all. He has no other origin, for He is the prime cause of all causes.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">222</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The sun, fire, sky, air, demigods, moon, evening, day, night, directions, water, land and Supersoul Himself all witness the activities of the living entity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            The members of some religious sects, especially Christians, do not believe in the reactions of <span class="Italic">karma.</span> We once had a discussion with a learned Christian professor who argued that although people are generally punished after the witnesses of their misdeeds are examined, where are the witnesses responsible for one’s suffering the reactions of past <span class="Italic">karma</span>? To such a person the answer by the Yamadūtas is given here. A conditioned soul thinks that he is working stealthily and that no one can see his sinful activities, but we can understand from the <span class="Italic">śāstras</span> that there are many witnesses, including the sun, fire, sky, air, moon, demigods, evening, day, night, directions, water, land and the Supersoul Himself, who sits with the individual soul within his heart. Where is the dearth of witnesses? The witnesses and the Supreme Lord both exist, and therefore so many living entities are elevated to higher planetary systems or degraded to lower planetary systems, including the hellish planets. There are no discrepancies, for everything is arranged perfectly by the management of the Supreme God (<span class="Italic">svābhāvikī jñāna-bala-kriyā ca</span>). The witnesses mentioned in this verse are also mentioned in other Vedic literatures:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">āditya-candrāv anilo ’nalaś ca<br>dyaur bhūmir āpo hṛdayaṁ yamaś ca<br>ahaś ca rātriś ca ubhe ca sandhye<br>dharmo ’pi jānāti narasya vṛttam</div>
+            </div>
+            </blockquote>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The candidates for punishment are those who are confirmed by these many witnesses to have deviated from their prescribed regulative duties. Everyone engaged in fruitive activities is suitable to be subjected to punishment according to his sinful acts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_44_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">48</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O inhabitants of Vaikuṇṭha, you are sinless, but those within this material world are all karmīs, whether acting piously or impiously. Both kinds of action are possible for them because they are contaminated by the three modes of nature and must act accordingly. One who has accepted a material body cannot be inactive, and sinful action is inevitable for one acting under the modes of material nature. Therefore all the living entities within this material world are punishable.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_44_purport">
+          <p>
+            The difference between human beings and nonhuman beings is that a human is supposed to act according to the direction of the <span class="Italic">Vedas.</span> Unfortunately, men manufacture their own ways of acting, without reference to the <span class="Italic">Vedas.</span> Therefore all of them commit sinful actions and are punishable.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_45_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">70</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In proportion to the extent of one’s religious or irreligious actions in this life, one must enjoy or suffer the corresponding reactions of his karma in the next.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_45_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (14.18):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ūrdhvaṁ gacchanti sattva-sthā<br>madhye tiṣṭhanti rājasāḥ<br>jaghanya-guṇa-vṛtti-sthā<br>adho gacchanti tāmasāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Those who act in the mode of goodness are promoted to higher planetary systems to become demigods, those who act in an ordinary way and do not commit excessively sinful acts remain within this middle planetary system, and those who perform abominable sinful actions must go down to hellish life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_46_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">214</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the demigods, we can see three different varieties of life, which are due to the contamination of the three modes of nature. The living entities are thus known as peaceful, restless and foolish; as happy, unhappy or in-between; or as religious, irreligious and semireligious. We can deduce that in the next life these three kinds of material nature will similarly act.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_46_purport">
+          <p>
+            The actions and reactions of the three modes of material nature are visible in this life. For example, some people are very happy, some are very distressed, and some are in mixed happiness and distress. This is the result of past association with the modes of material nature—goodness, passion and ignorance. Since these varieties are visible in this life, we may assume that the living entities, according to their association with the different modes of material nature, will be happy, distressed or between the two in their next lives also. Therefore the best policy is to disassociate oneself from the three modes of material nature and be always transcendental to their contamination. This is possible only when one fully engages in the devotional service of the Lord. As Kṛṣṇa confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (14.26):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māṁ ca yo ’vyabhicāreṇa<br>bhakti-yogena sevate<br>sa guṇān samatītyaitān<br>brahma-bhūyāya kalpate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who engages in full devotional service, who does not fall down under any circumstance, at once transcends the modes of material nature and thus comes to the spiritual platform.” Unless one is fully absorbed in the service of the Lord, one is subject to the contamination of the three modes of material nature and must therefore suffer from distress or mixed happiness and distress.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_47_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just as springtime in the present indicates the nature of springtimes in the past and future, so this life of happiness, distress or a mixture of both gives evidence concerning the religious and irreligious activities of one’s past and future lives.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_47_purport">
+          <p>
+            Our past and future are not very difficult to understand, for time is under the contamination of the three modes of material nature. As soon as spring arrives, the usual exhibition of various types of fruits and flowers automatically becomes manifest, and therefore we may conclude that spring in the past was adorned with similar fruits and flowers and will be so adorned in the future also. Our repetition of birth and death is taking place within time, and according to the influence of the modes of nature, we are receiving various types of bodies and being subjected to various conditions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="48">
+        <div class="verse_controls">
+          <button class="verse_num btn">[48.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_48_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">94</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The omnipotent Yamarāja is as good as Lord Brahmā, for while situated in his own abode or in everyone’s heart like the Paramātmā, he mentally observes the past activities of a living entity and thus understands how the living entity will act in future lives.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_48_purport">
+          <p>
+            One should not consider Yamarāja an ordinary living being. He is as good as Lord Brahmā. He has the complete cooperation of the Supreme Lord, who is situated in everyone’s heart, and therefore, by the grace of the Supersoul, he can see the past, present and future of a living being from within. The word <span class="Italic">anumīmāṁsate</span> means that he can decide in consultation with the Supersoul. <span class="Italic">Anu</span> means “following.” The actual decisions concerning the next lives of the living entities are made by the Supersoul, and they are carried out by Yamarāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="49">
+        <div class="verse_controls">
+          <button class="verse_num btn">[49.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_49_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1017</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As a sleeping person acts according to the body manifested in his dreams and accepts it to be himself, so one identifies with his present body, which he acquired because of his past religious or irreligious actions, and is unable to know his past or future lives.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_49_purport">
+          <p>
+            A man engages in sinful activities because he does not know what he did in his past life to get his present materially conditioned body, which is subjected to the threefold miseries. As stated by Ṛṣabhadeva in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (5.5.4), <span class="Italic">nūnaṁ pramattaḥ kurute vikarma:</span> a human being who is mad after sense gratification does not hesitate to act sinfully. <span class="Italic">Yad indriya-prītaya āpṛṇoti:</span> he performs sinful actions simply for sense gratification. <span class="Italic">Na sādhu manye:</span> this is not good. <span class="Italic">Yata ātmano ’yam asann api kleśada āsa dehaḥ:</span> because of such sinful actions, one receives another body in which to suffer as he is suffering in his present body because of his past sinful activities.
+          </p>
+          <p>
+            It should be understood that a person who does not have Vedic knowledge always acts in ignorance of what he has done in the past, what he is doing at the present and how he will suffer in the future. He is completely in darkness. Therefore the Vedic injunction is, <span class="Italic">tamasi mā:</span> “Don’t remain in darkness.” <span class="Italic">Jyotir gama:</span> “Try to go to the light.” The light or illumination is Vedic knowledge, which one can understand when he is elevated to the mode of goodness or when he transcends the mode of goodness by engaging in devotional service to the spiritual master and the Supreme Lord. This is described in the <span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> (6.23):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ<br> [<span class="Ref_Italic">ŚU</span> <popup><div class="Verse-in-purp"><0.125>yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ</0.125></div></popup>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Unto those great souls who have implicit faith in both the Lord and the spiritual master, all the imports of Vedic knowledge are automatically revealed.” (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.23)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ śrī-kṛṣṇa-nāmādi<br>na bhaved grāhyam indriyaiḥ<br>sevonmukhe hi jihvādau<br>svayam eva sphuraty adaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “No one can understand Kṛṣṇa as He is by the blunt material senses. But He reveals Himself to the devotees, being pleased with them for their transcendental loving service unto Him.” (<span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.2.234)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhaktyā mām abhijānāti<br>yāvān yaś cāsmi tattvataḥ<br>tato māṁ tattvato jñātvā<br>viśate tad-anantaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One can understand the Supreme Personality as He is only by devotional service. And when one is in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God.” (Bg. 18.55)
+          </p>
+          <p>
+            These are Vedic instructions. One must have full faith in the words of the spiritual master and similar faith in the Supreme Personality of Godhead. Then the real knowledge of <span class="Italic">ātmā</span> and Paramātmā and the distinction between matter and spirit will be automatically revealed. This <span class="Italic">ātma-tattva,</span> or spiritual knowledge, will be revealed within the core of a devotee’s heart because of his having taken shelter of the lotus feet of a <span class="Italic">mahājana</span> such as Prahlāda Mahārāja.<lt>6.23]</lt>
+          </p>
+          <p>
+            “Unto those great souls who have implicit faith in both the Lord and the spiritual master, all the imports of Vedic knowledge are automatically revealed.” The <span class="Italic">Vedas</span> enjoin, <span class="Italic">tad-vijñānārthaṁ sa gurum evābhigacchet: </span><span class="Ref_Italic">[MU</span> <popup><div class="Verse">tad-vijñānārthaṁ sa gurum evābhigacchet<br>samit-pāṇiḥ śrotriyaṁ brahma-niṣṭham</div></popup>
+          </p>
+          <p>
+            “To understand these things properly, one must humbly approach, with firewood in hand, a spiritual master who is learned in the <i>Vedas</i> and firmly devoted to the Absolute Truth.” <br><span class="Ref_Italic">[Muṇḍaka Upaniṣad</span> 1.2.12]
+          </p>
+          <p>
+            <lt>1.2.12] one must approach a spiritual master who has full knowledge of the <span class="Italic">Vedas</span> and be faithfully directed by him in order to become a devotee of the Lord. Then the knowledge of the <span class="Italic">Vedas</span> will be revealed. When the Vedic knowledge is revealed, one need no longer remain in the darkness of material nature.</lt>
+          </p>
+          <p>
+            According to his association with the material modes of nature—goodness, passion and ignorance—a living entity gets a particular type of body. The example of one who associates with the mode of goodness is a qualified <span class="Italic">brāhmaṇa.</span> Such a <span class="Italic">brāhmaṇa</span> knows past, present and future because he consults the Vedic literature and sees through the eyes of <span class="Italic">śāstra</span> (<span class="Italic">śāstra-cakṣuḥ</span>). He can understand what his past life was, why be is in the present body, and how he can obtain liberation from the clutches of <span class="Italic">māyā</span> and not accept another material body. This is all possible when one is situated in the mode of goodness. Generally, however, the living entities are engrossed in the modes of passion and ignorance.
+          </p>
+          <p>
+            In any case, one receives an inferior or superior body at the discretion of the Supreme Personality of Godhead, Paramātmā. As stated in the previous verse:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">manasaiva pure devaḥ<br>pūrva-rūpaṁ vipaśyati<br>anumīmāṁsate ’pūrvaṁ<br>manasā bhagavān ajaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Everything depends on <span class="Italic">bhagavān,</span> or <span class="Italic">ajaḥ,</span> the unborn. Why doesn’t one please Bhagavān to receive a better body? The answer is <span class="Italic">ajñas tamasā:</span> because of gross ignorance. One who is in complete darkness cannot know what his past life was or what his next life will be; he is simply interested in his present body. Even though he has a human body, a person in the mode of ignorance and interested only in his present body is like an animal, for an animal, being covered by ignorance, thinks that the ultimate goal of life and happiness is to eat as much as possible. A human being must be educated to understand his past life and how he can endeavor for a better life in the future. There is even a book, called <span class="Italic">Bhṛgu-saṁhitā,</span> which reveals information about one’s past, present and future lives according to astrological calculations. Somehow or other one must be enlightened about his past, present and future. One who is interested only in his present body and who tries to enjoy his senses to the fullest extent is understood to be engrossed in the mode of ignorance. His future is very, very dark. Indeed, the future is always dark for one who is grossly covered by ignorance. Especially in this age, human society is covered by the mode of ignorance, and therefore everyone thinks his present body to be everything, without consideration of the past or future.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="50">
+        <div class="verse_controls">
+          <button class="verse_num btn">[50.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_50_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">476</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Above the five senses of perception, the five working senses and the five objects of the senses is the mind, which is the sixteenth element. Above the mind is the seventeenth element, the soul, the living being himself, who, in cooperation with the other sixteen, enjoys the material world alone. The living being enjoys three kinds of situations, namely happy, distressful and mixed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_50_purport">
+          <p>
+            Everyone engages in work with his hands, legs and other senses just to achieve a certain goal according to his concocted ideas. One tries to enjoy the five sense objects, namely form, sound, taste, aroma and touch, not knowing the actual goal of life, which is to satisfy the Supreme Lord. Because of disobeying the Supreme Lord, one is put into material conditions, and he then tries to improve his situation in a concocted way, not desiring to follow the instructions of the Supreme Personality of Godhead. Nevertheless, the Supreme Lord is so kind that He comes Himself to instruct the bewildered living entity how to act obediently and then gradually return home, back to Godhead, where he can attain an eternal, peaceful life of bliss and knowledge. The living entity has a body, which is a very complicated combination of the material elements, and with this body he struggles alone, as indicated in this verse by the words <span class="Italic">ekas tu.</span> For example, if one is struggling in the ocean, he must swim through it alone. Although many other men and aquatics are swimming in the ocean, he must take care of himself because no one else will help him. Therefore this verse indicates that the seventeenth item, the soul, must work alone. Although he tries to create society, friendship and love, no one will be able to help him but Kṛṣṇa, the Supreme Lord. Therefore his only concern should be how to satisfy Kṛṣṇa. That is also what Kṛṣṇa wants (<span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]). People bewildered by material conditions try to be united, but although they strive for unity among men and nations, all their attempts are futile. Everyone must struggle alone for existence with the many elements of nature. Therefore one’s only hope, as Kṛṣṇa advises, is to surrender to Him, for He can help one become free from the ocean of nescience. Śrī Caitanya Mahāprabhu therefore prayed:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ayi nanda-tanuja kiṅkaraṁ<br>patitaṁ māṁ viṣame bhavāmbudhau<br>kṛpayā tava pāda-paṅkaja-<br>sthita-dhūlī-sadṛśaṁ vicintaya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O Kṛṣṇa, beloved son of Nanda Mahārāja, I am Your eternal servant, but somehow or other I have fallen into this ocean of nescience, and although I am struggling very hard, there is no way I can save myself. If You kindly pick me up and fix me as one of the particles of dust at Your lotus feet, that will save me.”
+          </p>
+          <p>
+            In a similar way, Bhaktivinoda Ṭhākura sang:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">anādi karama-phale,     paḍi’ bhavārṇava-jale,<br>taribāre nā dekhi upāya</div></blockquote>
+          </p>
+          <p>
+            “My dear Lord, I cannot remember when I somehow or other fell into this ocean of nescience, and now I can find no way to rescue myself.” We should remember that everyone is responsible for his own life. If an individual becomes a pure devotee of Kṛṣṇa, he is then delivered from the ocean of nescience.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="51">
+        <div class="verse_controls">
+          <button class="verse_num btn">[51.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_51_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">106</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The subtle body is endowed with sixteen parts—the five knowledge-acquiring senses, the five working senses, the five objects of sense gratification, and the mind. This subtle body is an effect of the three modes of material nature. It is composed of insurmountably strong desires, and therefore it causes the living entity to transmigrate from one body to another in human life, animal life and life as a demigod. When the living entity gets the body of a demigod, he is certainly very jubilant, when he gets a human body he is always in lamentation, and when he gets the body of an animal, he is always afraid. In all conditions, however, he is actually miserable. His miserable condition is called saṁsṛti, or transmigration in material life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_51_purport">
+          <p>
+            The sum and substance of material conditional life is explained in this verse. The living entity, the seventeenth element, is struggling alone, life after life. This struggle is called <span class="Italic">saṁsṛti,</span> or material conditional life. In <span class="Italic">Bhagavad-gītā</span> it is said that the force of material nature is insurmountably strong (<span class="Italic">daivī hy eṣā guṇa-mayī mama māyā duratyayā</span>). Material nature harasses the living entity in different bodies, but if the living entity surrenders to the Supreme Personality of Godhead, he becomes free from this entanglement, as confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mām eva ye prapadyante māyām etāṁ taranti te [Bg. </span>7.14]). Thus his life becomes successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="52">
+        <div class="verse_controls">
+          <button class="verse_num btn">[52.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_52_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">46</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The foolish embodied living entity, inept at controlling his senses and mind, is forced to act according to the influence of the modes of material nature, against his desires. He is like a silkworm that uses its own saliva to create a cocoon and then becomes trapped in it, with no possibility of getting out. The living entity traps himself in a network of his own fruitive activities and then can find no way to release himself. Thus he is always bewildered, and repeatedly he dies.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_52_purport">
+          <p>
+            As already explained, the influence of the modes of nature is very strong. The living entity entangled in different types of fruitive activity is like a silkworm trapped in a cocoon. Getting free is very difficult unless he is helped by the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="53">
+        <div class="verse_controls">
+          <button class="verse_num btn">[53.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_53_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">326</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Not a single living entity can remain unengaged even for a moment. One must act by his natural tendency according to the three modes of material nature because this natural tendency forcibly makes him work in a particular way.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_53_purport">
+          <p>
+            The <span class="Italic">svābhāvika,</span> or one’s natural tendency, is the most important factor in action. One’s natural tendency is to serve because a living entity is an eternal servant of God. The living entity wants to serve, but because of his forgetfulness of his relationship with the Supreme Lord, he serves under the modes of material nature and manufactures various modes of service, such as socialism, humanitarianism and altruism. However, one should be enlightened in the tenets of <span class="Italic">Bhagavad-gītā</span> and accept the instruction of the Supreme Personality of Godhead that one give up all natural tendencies for material service under different names and take to the service of the Lord. One’s original natural tendency is to act in Kṛṣṇa consciousness because one’s real nature is spiritual. The duty of a human being is to understand that since he is essentially spirit, he must abide by the spiritual tendency and not be carried away by material tendencies. Śrīla Bhaktivinoda Ṭhākura has therefore sung:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">(miche) māyāra vaśe,     yāccha bhese’,<br>khāccha hābuḍubu, bhāi</div></blockquote>
+          </p>
+          <p>
+            “My dear brothers, you are being carried away by the waves of material energy and are suffering in many miserable conditions. Sometimes you are drowning in the waves of material nature, and sometimes you are tossed like a swimmer struggling in the ocean.” As confirmed by Bhaktivinoda Ṭhākura, this tendency to be battered by the waves of <span class="Italic">māyā</span> can be changed to one’s original, natural tendency, which is spiritual, when the living entity comes to understand that he is eternally <span class="Italic">kṛṣṇa-dāsa,</span> a servant of God, Kṛṣṇa.
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">(jīva) kṛṣṇa-dāsa,     ei viśvāsa,<br>karle ta’ āra duḥkha nāi</div></blockquote>
+          </p>
+          <p>
+            If instead of serving <span class="Italic">māyā</span> under different names, one turns his service attitude toward the Supreme Lord, he is then safe, and there is no more difficulty. If one returns to his original, natural tendency in the human form of life by understanding the perfect knowledge given by Kṛṣṇa Himself in the Vedic literature, one’s life is successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="54">
+        <div class="verse_controls">
+          <button class="verse_num btn">[54.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_54_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">322</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The fruitive activities a living being performs, whether pious or impious, are the unseen cause for the fulfillment of his desires. This unseen cause is the root for the living entity’s different bodies. Because of his intense desire, the living entity takes birth in a particular family and receives a body which is either like that of his mother or like that of his father. The gross and subtle bodies are created according to his desire.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_54_purport">
+          <p>
+            The gross body is a product of the subtle body. As stated in <span class="Italic">Bhagavad-gītā</span> (8.6):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaṁ yaṁ vāpi smaran bhāvaṁ<br>tyajaty ante kalevaram<br>taṁ tam evaiti kaunteya<br>sadā tad-bhāva-bhāvitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whatever state of being one remembers when he quits his body, that state he will attain without fail.” The atmosphere of the subtle body at the time of death is created by the activities of the gross body. Thus the gross body acts during one’s lifetime, and the subtle body acts at the time of death. The subtle body, which is called <span class="Italic">liṅga,</span> the body of desire, is the background for the development of a particular type of gross body, which is either like that of one’s mother or like that of one’s father. According to the <span class="Italic">Ṛg Veda,</span> if at the time of sex the secretions of the mother are more profuse than those of the father, the child will receive a female body, and if the secretions of the father are more profuse than those of the mother, the child will receive a male body. These are the subtle laws of nature, which act according to the desire of the living entity. If a human being is taught to change his subtle body by developing a consciousness of Kṛṣṇa, at the time of death the subtle body will create a gross body in which he will be a devotee of Kṛṣṇa, or if he is still more perfect, he will not take another material body but will immediately get a spiritual body and thus return home, back to Godhead. This is the process of the transmigration of the soul. Therefore instead of trying to unite human society through pacts for sense gratification that can never be achieved, it is clearly desirable to teach people how to become Kṛṣṇa conscious and return home, back to Godhead. This is true now and, indeed, at any time.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="55">
+        <div class="verse_controls">
+          <button class="verse_num btn">[55.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_55_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">249</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since the living entity is associated with material nature, he is in an awkward position, but if in the human form of life he is taught how to associate with the Supreme Personality of Godhead or His devotee, this position can be overcome.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_55_purport">
+          <p>
+            The word <span class="Italic">prakṛti</span> means material nature, and <span class="Italic">puruṣa</span> may also refer to the Supreme Personality of Godhead. If one wants to continue his association with <span class="Italic">prakṛti,</span> the female energy of Kṛṣṇa, and be separated from Kṛṣṇa by the illusion that he is able to enjoy <span class="Italic">prakṛti,</span> he must continue in his conditional life. If he changes his consciousness, however, and associates with the supreme, original person (<span class="Italic">puruṣaṁ śāśvatam</span>), or with His associates, he can get out of the entanglement of material nature. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9), <span class="Italic">janma karma ca me divyam evaṁ yo vetti tattvataḥ:</span> one must simply understand the Supreme Person, Kṛṣṇa, in terms of His form, name, activities and pastimes. This will keep one always in the association of Kṛṣṇa. <span class="Italic">Tyaktvā dehaṁ punar janma naiti mām eti so’rjuna: [Bg. </span>4.9] thus after giving up his gross material body, one accepts not another gross body but a spiritual body in which to return home, back to Godhead. Thus one ends the tribulation caused by his association with the material energy. In summary, the living entity is an eternal servant of God, but he comes to the material world and is bound by material conditions because of his desire to lord it over matter. Liberation means giving up this false consciousness and reviving one’s original service to the Lord. This return to one’s original life is called <span class="Italic">mukti,</span> as confirmed in <span class="Italic">Śrīmad-Bhāgavatam</span> (<span class="Italic">muktir hitvānyathā rūpaṁ svarūpeṇa vyavasthitiḥ</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="56">
+        <div class="verse_controls">
+          <button class="verse_num btn">[56–57.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_56_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">171</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the beginning this brāhmaṇa named Ajāmila studied all the Vedic literatures. He was a reservoir of good character, good conduct and good qualities. Firmly established in executing all the Vedic injunctions, he was very mild and gentle, and he kept his mind and senses under control. Furthermore, he was always truthful, he knew how to chant the Vedic mantras, and he was also very pure. Ajāmila was very respectful to his spiritual master, the fire-god, guests, and the elderly members of his household. Indeed, he was free from false prestige. He was upright, benevolent to all living entities, and well behaved. He would never speak nonsense or envy anyone.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_56_purport">
+          <p>
+            The order carriers of Yamarāja, the Yamadūtas, are explaining the factual position of piety and impiety and how a living entity is entangled in this material world. Describing the history of Ajāmila’s life, the Yamadūtas relate that in the beginning he was a learned scholar of the Vedic literature. He was well behaved, neat and clean, and very kind to everyone. In fact, he had all good qualities. In other words, he was like a perfect <span class="Italic">brāhmaṇa.</span> A <span class="Italic">brāhmaṇa</span> is expected to be perfectly pious, to follow all the regulative principles and to have all good qualities. The symptoms of piety are explained in these verses. Śrīla Vīrarāghava Ācārya comments that <span class="Italic">dhṛta-vrata</span> means <span class="Italic">dhṛtaṁ vrataṁ strī-saṅga-rāhityātmaka-brahmacarya-rūpam.</span> In other words, Ajāmila followed the rules and regulations of celibacy as a perfect <span class="Italic">brahmacārī</span> and was very softhearted, truthful, clean and pure. How he fell down in spite of all these qualities and thus came to be threatened with punishment by Yamarāja will be described in the following verses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="58">
+        <div class="verse_controls">
+          <button class="verse_num btn">[58–60.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_58_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">264</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Once this brāhmaṇa Ajāmila, following the order of his father, went to the forest to collect fruit, flowers and two kinds of grass, called samit and kuśa. On the way home, he came upon a śūdra, a very lusty, fourth-class man, who was shamelessly embracing and kissing a prostitute. The śūdra was smiling, singing and enjoying as if this were proper behavior. Both the śūdra and the prostitute were drunk. The prostitute’s eyes were rolling in intoxication, and her dress had become loose. Such was the condition in which Ajāmila saw them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_58_purport">
+          <p>
+            While traveling along the public way, Ajāmila came upon a fourth-class man and a prostitute, who are vividly described here. Drunkenness was sometimes manifest even in bygone ages, although not very frequently. In this age of Kali, however, such sin is to be seen everywhere, for people all over the world have become shameless. Long ago, when he saw the scene of the drunken <span class="Italic">śūdra</span> and the prostitute, Ajāmila, who was a perfect <span class="Italic">brahmacārī,</span> was affected. Nowadays such sin is visible in so many places, and we must consider the position of a <span class="Italic">brahmacārī</span> student who sees such behavior. For such a <span class="Italic">brahmacārī</span> to remain steady is very difficult unless he is extremely strong in following the regulative principles. Nevertheless, if one takes to Kṛṣṇa consciousness very seriously, he can withstand the provocation created by sin. In our Kṛṣṇa consciousness movement we prohibit illicit sex, intoxication, meat-eating and gambling. In Kali-yuga, a drunk, half-naked woman embracing a drunk man is a very common sight, especially in the Western countries, and restraining oneself after seeing such things is very difficult. Nevertheless, if by the grace of Kṛṣṇa one adheres to the regulative principles and chants the Hare Kṛṣṇa <span class="Italic">mantra,</span> Kṛṣṇa will certainly protect him. Indeed, Kṛṣṇa says that His devotee is never vanquished (<span class="Italic">kaunteya pratijānīhi na me bhaktaḥ praṇaśyati</span>). Therefore all the disciples practicing Kṛṣṇa consciousness should obediently follow the regulative principles and remain fixed in chanting the holy name of the Lord. Then there need be no fear. Otherwise one’s position is very dangerous, especially in this Kali-yuga.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="61">
+        <div class="verse_controls">
+          <button class="verse_num btn">[61.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_61_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">37</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The śūdra, his arm decorated with turmeric powder, was embracing the prostitute. When Ajāmila saw her, the dormant lusty desires in his heart awakened, and in illusion he fell under their control.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_61_purport">
+          <p>
+            It is said that if one’s body is smeared with turmeric, it attracts the lusty desires of the opposite sex. The word <span class="Italic">kāma-liptena</span> indicates that the <span class="Italic">śūdra</span> was decorated with turmeric smeared on his body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="62">
+        <div class="verse_controls">
+          <button class="verse_num btn">[62.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_62_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">89</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As far as possible he patiently tried to remember the instructions of the śāstras not even to see a woman. With the help of this knowledge and his intellect, he tried to control his lusty desires, but because of the force of Cupid within his heart, he failed to control his mind.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_62_purport">
+          <p>
+            Unless one is very strong in knowledge, patience and proper bodily, mental and intellectual behavior, controlling one’s lusty desires is extremely difficult. Thus after seeing a man embracing a young woman and practically doing everything required for sex life, even a fully qualified <span class="Italic">brāhmaṇa,</span> as described above, could not control his lusty desires and restrain himself from pursuing them. Because of the force of materialistic life, to maintain self-control is extremely difficult unless one is specifically under the protection of the Supreme Personality of Godhead through devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="63">
+        <div class="verse_controls">
+          <button class="verse_num btn">[63.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_63_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">223</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the same way that the sun and moon are eclipsed by a low planet, the brāhmaṇa lost all his good sense. Taking advantage of this situation, he always thought of the prostitute, and within a short time he took her as a servant in his house and abandoned all the regulative principles of a brāhmaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_63_purport">
+          <p>
+            By speaking this verse, Śukadeva Gosvāmī wants to impress upon the mind of the reader that Ajāmila’s exalted position as a <span class="Italic">brāhmaṇa</span> was vanquished by his association with the prostitute, so much so that he forgot all his brahminical activities. Nevertheless, at the end of his life, by chanting the four syllables of the name Nārāyaṇa, he was saved from the gravest danger of falling down. <span class="Italic">Svalpam apy asya dharmasya trāyate mahato bhayāt:</span> even a little devotional service can save one from the greatest danger. Devotional service, which begins with chanting of the holy name of the Lord, is so powerful that even if one falls down from the exalted position of a <span class="Italic">brāhmaṇa</span> through sexual indulgence, he can be saved from all calamities if he somehow or other chants the holy name of the Lord. This is the extraordinary power of the Lord’s holy name. Therefore in <span class="Italic">Bhagavad-gītā</span> it is advised that one not forget the chanting of the holy name even for a moment (<span class="Italic">satataṁ kīrtayanto māṁ yatantaś ca dṛḍha-vratāḥ [Bg. </span>9.14]). There are so many dangers in this material world that one may fall down from an exalted position at any time. Yet if one keeps himself always pure and steady by chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> he will be safe without a doubt.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="64">
+        <div class="verse_controls">
+          <button class="verse_num btn">[64.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_64_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">120</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus Ajāmila began spending whatever money he had inherited from his father to satisfy the prostitute with various material presentations so that she would remain pleased with him. He gave up all his brahminical activities to satisfy the prostitute.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_64_purport">
+          <p>
+            There are many instances throughout the world in which even a purified person, being attracted by a prostitute, spends all the money he has inherited. Prostitute hunting is so abominable that the desire for sex with a prostitute can ruin one’s character, destroy one’s exalted position and plunder all one’s money. Therefore illicit sex is strictly prohibited. One should be satisfied with his married wife, for even a slight deviation will create havoc. A Kṛṣṇa conscious <span class="Italic">gṛhastha</span> should always remember this. He should always be satisfied with one wife and be peaceful simply by chanting the Hare Kṛṣṇa <span class="Italic">mantra.</span> Otherwise at any moment he may fall down from his good position, as exemplified in the case of Ajāmila.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="65">
+        <div class="verse_controls">
+          <button class="verse_num btn">[65.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_65_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">69</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because his intelligence was pierced by the lustful glance of the prostitute, the victimized brāhmaṇa Ajāmila engaged in sinful acts in her association. He even gave up the company of his very beautiful young wife, who came from a very respectable brāhmaṇa family.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_65_purport">
+          <p>
+            Customarily everyone is eligible to inherit his father’s property, and Ajāmila also inherited the money of his father. But what did he do with the money? Instead of engaging the money in the service of Kṛṣṇa, he engaged it in the service of a prostitute. Therefore he was condemned and was punishable by Yamarāja. How did this happen? He was victimized by the dangerous lustful glance of a prostitute.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="66">
+        <div class="verse_controls">
+          <button class="verse_num btn">[66.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although born of a brāhmaṇa family, this rascal, bereft of intelligence because of the prostitute’s association, earned money somehow or other, regardless of whether properly or improperly, and used it to maintain the prostitute’s sons and daughters.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="67">
+        <div class="verse_controls">
+          <button class="verse_num btn">[67.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_67_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">29</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This brāhmaṇa irresponsibly spent his long lifetime transgressing all the rules and regulations of the holy scripture, living extravagantly and eating food prepared by a prostitute. Therefore he is full of sins. He is unclean and is addicted to forbidden activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_67_purport">
+          <p>
+            Food prepared by an unclean, sinful man or woman, especially a prostitute, is extremely infectious. Ajāmila ate such food, and therefore he was subject to be punished by Yamarāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="68">
+        <div class="verse_controls">
+          <button class="verse_num btn">[68.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This man Ajāmila did not undergo atonement. Therefore because of his sinful life, we must take him into the presence of Yamarāja for punishment. There, according to the extent of his sinful acts, he will be punished and thus purified.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/1[Next][Last Page]">https://prabhupadabooks.com/sb/6/1[Next][Last Page]</a><!-- span.text_source_copied_date
+        | on 2023-07-04 16:50:37 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.26: A Description of the Hellish Planets     Next: SB 6.2: Ajamila Delivered by the Visnudutas</div>
+      </p>
+    </div>
+  </body>
+</html>

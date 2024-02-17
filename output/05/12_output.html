@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.12, Conversation Between Mahārāja Rahūgaṇa and Jaḍa Bharata</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twelve:<br>Conversation Between Mahārāja Rahūgaṇa and Jaḍa Bharata
+      </h1>
+      <div class="summary">
+        <div class="Normal-Level">Because Mahārāja Rahūgaṇa was still doubtful about his enlightenment, he asked the <span class="Italic">brāhmaṇa</span> Jaḍa Bharata to repeat his instructions and clarify ideas he could not understand. In this chapter, Mahārāja Rahūgaṇa offers his respectful obeisances to Jaḍa Bharata, who was concealing his real position. The King could understand by his speech how exalted and advanced he was in spiritual knowledge. He very much regretted his offense against him. Mahārāja Rahūgaṇa was bitten by the serpent of ignorance, but was cured by the nectarean words of Jaḍa Bharata. Later, because he was doubtful about the subjects discussed, he made further inquiries, one question after another. First he wanted to be released from the offense he had committed at the lotus feet of Jaḍa Bharata.</div><div class="Normal-Level"><tb>Mahārāja Rahūgaṇa was somewhat unhappy at not being able to grasp Jaḍa Bharata’s instructions, which were full of meaning that could not be understood by a materialistic person. Therefore Jaḍa Bharata repeated his instructions more clearly. He said that on the surface of the globe all living entities, moving and unmoving, were but transformations of the earth in different ways. The King was very proud of his king’s body, but that body was simply another transformation of the earth. Out of his false prestige, the King was misbehaving toward the palanquin carrier. as a master toward a servant, and he was actually very unkind to other living entities. Consequently King Rahūgaṇa was unfit to give protection to the citizens, and because he was ignorant, he was unfit to be counted among advanced philosophers. Everything in the material world is but a transformation of the earth, although things have different names according to their transformations. Actually the varieties are one and the same, and ultimately all these varieties are vanquished into atoms. Nothing is permanent in this material world. The variety of things and their distinctions are simply mental concoctions. The Absolute Truth is beyond illusion and is manifest in three features—impersonal Brahman, localized Paramātmā and the Supreme Personality of Godhead. Ultimate realization of the Absolute Truth is the Supreme Personality of Godhead, called Vāsudeva by His devotees. Unless one is blessed with the dust from the feet of a pure devotee on his head, one cannot possibly become a devotee of the Supreme Personality of Godhead.</tb></div><div class="Normal-Level"><tb>Jaḍa Bharata also told about his own previous birth and informed the King that by the grace of the Lord he still remembered all the incidents of his past life. Due to the activities of his past life, Jaḍa Bharata was being very cautious and was therefore assuming the characteristics of a deaf and dumb man to avoid mingling with the material world. Association with the material modes of nature is very powerful. The bad association of materialistic men can be avoided only in the association of devotees. In the association of devotees, one is given an opportunity to render devotional service in nine different ways—<span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam arcanaṁ vandanaṁ dāsyaṁ sakhyam ātma-nivedanam [SB </span>7.5.23]<span class="Italic">.</span> In this way, in the association of devotees, one can pass over material association, cross over the ocean of nescience and return home, back to Godhead.</tb></div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">69</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Rahūgaṇa said: O most exalted personality, you are not different from the Supreme Personality of Godhead. By the influence of your true self, all kinds of contradiction in the śāstras have been removed. In the dress of a friend of a brāhmaṇa, you are hiding your transcendental blissful position. I offer my respectful obeisances unto you.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            From the <span class="Italic">Brahma-saṁhitā</span> we understand the Supreme Personality of Godhead is the cause of all causes (<span class="Italic">sarva-kāraṇa-kāraṇam</span> <span class="Italic">[Bs. </span>5.1]). Ṛṣabhadeva was the direct incarnation of the Supreme Personality of Godhead, the cause of all causes. His son, Bharata Mahārāja, who was now acting as the <span class="Italic">brāhmaṇa</span> Jaḍa Bharata, had received his body from the cause of all causes. Therefore he is addressed as <span class="Italic">kāraṇa-vigrahāya.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">114</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the brāhmaṇas, my body is filled with dirty things, and my vision has been bitten by the serpent of pride. Due to my material conceptions, I am diseased. Your nectarean instructions are the proper medicine for one suffering from such a fever, and they are cooling waters for one scorched by the heat.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The conditioned soul has a body full of dirty things—bones, blood, urine, stool and so forth. Nonetheless, the most intelligent men in this material world think they are these combinations of blood, bone, urine and stool. If this is so, why can’t other intelligent men be made with these ingredients, which are so readily available? The entire world is going on under the bodily conception and creating a hellish condition unfit for any gentleman’s living. The instructions given to King Rahūgaṇa by Jaḍa Bharata are very valuable. They are like the medicine that can save one from a snakebite. The Vedic instructions are like nectar and cool water for one suffering from scorching heat.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">162</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Whatever doubts I have about a particular subject matter I shall ask you about later. For the time being, these mysterious yoga instructions you have given me for self-realization appear very difficult to understand. Please repeat them in a simple way so that I can understand them. My mind is very inquisitive, and I want to understand this clearly.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The Vedic literature instructs: <span class="Italic">tasmād guruṁ prapadyeta jijñāsuḥ śreya uttamam [SB </span>11.3.21]<span class="Italic">.</span> An intelligent man must be very inquisitive to know the transcendental science deeply. Therefore one must approach a <span class="Italic">guru,</span> a spiritual master. Although Jaḍa Bharata explained everything to Mahārāja Rahūgaṇa, it appears that his intelligence was not perfect enough to understand clearly. He therefore requested a further explanation. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (4.34): <span class="Italic">tad viddhi praṇipātena paripraśnena sevayā.</span> The student must approach a spiritual master and surrender unto him fully (<span class="Italic">praṇipātena</span>). He must also question him in order to understand his instructions (<span class="Italic">paripraśnena</span>). One should not only surrender to the spiritual master but also render loving service unto him (<span class="Italic">sevayā</span>) so that the spiritual master will be pleased with the student and explain the transcendental subject matter more clearly. A challenging spirit before the spiritual master should be avoided if one is at all interested in learning the Vedic instructions in depth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">73</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O master of yogic power, you said that fatigue resulting from moving the body here and there is appreciated by direct perception, but actually there is no fatigue. It simply exists as a matter of formality. By such inquiries and answers, no one can come to the conclusion of the Absolute Truth. Because of your presentation of this statement, my mind is a little disturbed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Formal inquiries and answers about the bodily conception do not constitute knowledge of the Absolute Truth. Knowledge of the Absolute Truth is quite different from the formal understanding of bodily pains and pleasures. In <span class="Italic">Bhagavad-gītā</span> Lord Kṛṣṇa informs Arjuna that the pains and pleasures experienced in relation to the body are temporary; they come and go. One should not be disturbed by them but should tolerate them and continue with spiritual realization.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5–6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">338</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The self-realized brāhmaṇa Jaḍa Bharata said: Among the various material combinations and permutations, there are various forms and earthly transformations. For some reason, these move on the surface of the earth and are called palanquin carriers. Those material transformations which do not move are gross material objects like stones. In any case, the material body is made of earth and stone in the form of feet, ankles, calves, knees, thighs, torso, throat and head. Upon the shoulders is the wooden palanquin, and within the palanquin is the so-called King of Sauvīra. The body of the King is simply another transformation of earth, but within that body Your Lordship is situated and falsely thinking that you are the King of the state of Sauvīra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            After analyzing the material bodies of the palanquin carrier and the palanquin passenger, Jaḍa Bharata concludes that the real living force is the living entity. The living entity is the offshoot or offspring of Lord Viṣṇu; therefore within this material world, among moving and nonmoving things, the real principle is Lord Viṣṇu. Due to His presence, everything is working, and there are actions and reactions. One who understands Lord Viṣṇu as the original cause of everything is to be understood to be perfectly situated in knowledge. Although he was falsely proud of being a king, King Rahūgaṇa was not really situated in knowledge. Therefore he was rebuking the palanquin carriers, including the self-realized <span class="Italic">brāhmaṇa,</span> Jaḍa Bharata. This is the first accusation Jaḍa Bharata made against the King, who was daring to talk to a learned <span class="Italic">brāhmaṇa</span> from the flimsy ground of ignorance, identifying everything with matter. King Rahūgaṇa argued that the living entity is within the body and that when the body is fatigued the living entity within must therefore be suffering. It is clearly explained in the following verses that the living entity does not suffer due to the body’s fatigue. Śrīla Viśvanātha Cakravartī gives an example of a child heavily decorated with ornaments; although the child’s body is very delicate, he does not feel fatigue, nor do the parents think that his ornaments should be taken away. The living entity has nothing to do with bodily pains and pleasures. These are simply mental concoctions. An intelligent man will find the original cause of everything. Material combinations and permutations may be a matter of fact in worldly dealings, but actually the living force, the soul, has nothing to do with them. Those who are materially upset take care of the body and manufacture <span class="Italic">daridra-nārāyaṇa</span> (poor Nārāyaṇa). However, it is not a fact that the soul or Supersoul becomes poor simply because the body is poor. These are the statements of ignorant people. The soul and Supersoul are always apart from bodily pleasure and pain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">547</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It is a fact, however, that these innocent people carrying your palanquin without payment are certainly suffering due to this injustice. Their condition is very lamentable because you have forcibly engaged them in carrying your palanquin. This proves that you are cruel and unkind, yet due to false prestige you were thinking that you were protecting the citizens. This is ludicrous. You were such a fool that you could not have been adored as a great man in an assembly of persons advanced in knowledge.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            King Rahūgaṇa was proud of being king, and he felt he had the right to control the citizens as he liked, but actually he was engaging men in carrying his palanquin without payment, and therefore he was causing them trouble without reason. Nonetheless, the King was thinking that he was the protector of the citizens. Actually the king should be the representative of the Supreme Personality of Godhead. For this reason he is called <span class="Italic">nara-devatā,</span> the Lord among human beings. However, when a king thinks that because he is the head of the state, he can utilize the citizens for his sense gratification, he is in error. Such an attitude is not appreciated by learned scholars. According to the Vedic principles, the king should be advised by learned sages, <span class="Italic">brāhmaṇas</span> and scholars, who advise him according to the injunctions given in the <span class="Italic">dharma-śāstra.</span> The duty of the king is to follow these instructions. Learned circles do not appreciate the king’s utilizing public endeavor for his own benefit. His duty is to give protection to the citizens instead. The king should not become such a rogue that he exploits the citizens for his own benefit.
+          </p>
+          <p>
+            It is stated in <span class="Italic">Śrīmad-Bhāgavatam</span> that in Kali-yuga the heads of government will be plunderers and thieves. These thieves and plunderers take the money and property of the public by force or connivance. Therefore it is said in <span class="Italic">Śrīmad-Bhāgavatam, rājanyair nirghṛṇair dasyu-dharmabhiḥ.</span> As Kali-yuga advances, we can see that these characteristics are already visible. We can certainly imagine how deteriorated human civilization will be by the end of Kali-yuga. Indeed, there will no longer be a sane man capable of understanding God and our relationship with Him. In other words, human beings will be just like animals. At that time, in order to reform human society, Lord Kṛṣṇa will come in the form of the Kalki <span class="Italic">avatāra.</span> His business will be to kill all the atheists because ultimately the real protector is Viṣṇu, or Kṛṣṇa.
+          </p>
+          <p>
+            The Lord incarnates and sets things in order when things are mismanaged by so-called kings and heads of government. As Kṛṣṇa says in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">yadā yadā hi dharmasya glānir bhavati bhārata [Bg. </span>4.7]<span class="Italic">.</span> Of course this takes many years, but the principle is there. When the king or governmental head does not follow the proper principles, nature deals out the punishments in the forms of war, famine and so forth. Therefore if the governmental head is not aware of life’s goal, he should not take charge of ruling the people. Actually the supreme proprietor of everything is Lord Viṣṇu. He is the maintainer of everyone. The king, the father, and the guardian are simply representatives of Lord Viṣṇu, empowered by Him to look after the management and maintain things. It is therefore the duty of the head of the state to maintain the general populace in such a way that people will ultimately know the goal of life. <span class="Italic">Na te viduḥ svārtha-gatiṁ hi viṣṇum [SB </span>7.5.31]<span class="Italic">.</span> Unfortunately the foolish governmental head and the general populace do not know that the ultimate goal of life is to understand and approach Lord Viṣṇu. Without this knowledge, everyone is in ignorance, and all society is crowded with cheaters and cheated.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">579</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All of us on the surface of the globe are living entities in different forms. Some of us are moving and some not moving. All of us come into existence, remain for some time and are annihilated when the body is again mingled with the earth. We are all simply different transformations of the earth. Different bodies and capacities are simply transformations of the earth that exist in name only, for everything grows out of the earth and when everything is annihilated it again mingles with the earth. In other words, we are but dust, and we shall but be dust. Everyone can consider this point.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            In the <span class="Italic">Brahma-sūtra</span> it is said: <span class="Ref_Italic">tad-ananyatvam ārabhambhaṇa-śabdādibhyaḥ</span> (2.1.14). This cosmic manifestation is a mixture of matter and spirit, but the cause is the Supreme Brahman, the Supreme Personality of Godhead. Therefore in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.5.20) it is said: <span class="Italic">idaṁ hi viśvaṁ bhagavān ivetaraḥ.</span> The entire cosmic manifestation is but a transformation of the energy of the Supreme Personality of Godhead, but because of illusion, no one can appreciate that God is nondifferent from the material world. Actually He is not different, but this material world is simply a transformation of His different energies; <span class="Italic">parāsya śaktir vividhaiva śrūyate.</span> There are also other versions of this in the <span class="Italic">Vedas:</span> <span class="Italic">sarvaṁ khalv idaṁ brahma.</span> Matter and spirit are all nondifferent from the Supreme Brahman, Bhagavān. Lord Śrī Kṛṣṇa confirms this statement in the <span class="Ref_Italic">Bhagavad-gītā</span> (7.4): <span class="Italic">me bhinnā prakṛtir aṣṭadhā.</span> The material energy is Kṛṣṇa’s energy, but it is separated from Him. The spiritual energy is also His energy, but it is not separated from Him. When the material energy is engaged in the service of the Supreme Spirit, so-called material energy is also transformed into spiritual energy, just as an iron rod becomes fire when placed in contact with fire. When we can understand by an analytical study that the Supreme Personality of Godhead is the cause of all causes, our knowledge is perfect. Simply understanding the transformations of different energies is partial knowledge. We must come to the ultimate cause. <span class="Italic">Na te viduḥ svārtha gatiṁ hi viṣṇum [SB </span>7.5.31]<span class="Italic">.</span> The knowledge of those who are not interested in knowing the original cause of all emanations is never perfect knowledge. There is nothing in the phenomenal world that is not produced by the supreme energy of the Supreme Personality of Godhead. Aromas from the earth are different scents manufactured and used for different purposes, but the original cause is the earth, nothing else. A waterpot made of earth can be used to carry water for some time, but ultimately the pot is nothing but earth. Therefore there is no difference between the pot and its original ingredient, earth. It is simply a different transformation of the energy. Originally the cause or primary ingredient is the Supreme Personality of Godhead, and the varieties are only by-products. In the <span class="Italic">Chāndogya Upaniṣad</span> it is stated: <span class="Italic">yathā saumy ekena mṛt-piṇḍena sarvaṁ mṛnmayaṁ vijñātaṁ syād vācārambhaṇaṁ vikāro nāmadheyaṁ mṛttikety eva satyam.</span> If one studies the earth, he naturally understands the by-products of the earth. The <span class="Italic">Vedas</span> therefore enjoin, <span class="Italic">yasmin vijñāte sarvam evaṁ vijñātaṁ bhavati:</span> if one simply understands the original cause, Kṛṣṇa, the cause of all causes, then naturally everything else is understood, although it may be presented in different varieties. By understanding the original cause of different varieties, one can understand everything. If we understand Kṛṣṇa, the original cause of everything, we do not need to separately study the subsidiary varieties. Therefore from the very beginning it is said: <span class="Italic">satyaṁ paraṁ dhīmahi.</span> One has to concentrate one’s understanding on the Supreme Truth, Kṛṣṇa or Vāsudeva. The word Vāsudeva indicates the Supreme Personality of Godhead, who is the cause of all causes. <span class="Italic">Mat-sthāni sarva-bhūtāni na cāhaṁ teṣv avasthitaḥ.</span> This is a summary of phenomenal and noumenal philosophy. The phenomenal world depends on the noumenal existence; similarly, everything exists by virtue of the potency of the Supreme Lord, although due to our ignorance the Supreme Lord is not perceived in everything.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">174</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One may say that varieties arise from the planet earth itself. However, although the universe may temporarily appear to be the truth, it ultimately has no real existence. The earth was originally created by a combination of atomic particles, but these particles are impermanent. Actually the atom is not the cause of the universe, although some philosophers think so. It is not a fact that the varieties found in this material world simply result from atomic juxtaposition or combination.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Those who follow the atomic theory think that the protons and electrons of atoms combine in such a way as to bring all material existence into being. However, the scientists fail to discover the cause of atomic existence itself. Under these circumstances, we cannot accept that the atom is the cause of the universe. Such theories are advanced by unintelligent people. According to real intelligence, the real cause of the cosmic manifestation is the Supreme Lord. <span class="Italic">Janmādy asya yataḥ: [SB 1.1.1]</span> He is the original cause of all creation. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (10.8): <span class="Italic">ahaṁ sarvasya prabhavo mattaḥ sarvaṁ pravartate.</span> Kṛṣṇa is the original cause. <span class="Italic">Sarva-kāraṇa-kāraṇam:</span> <span class="Italic">[Bs. </span>5.1] He is the cause of all causes. Kṛṣṇa is the cause of atoms, the material energy.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhūmir āpo ’nalo vāyuḥ<br>khaṁ mano buddhir eva ca<br>ahaṅkāra itīyaṁ me<br>bhinnā prakṛtir aṣṭadhā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (Bg. 7.4)
+          </p>
+          <p>
+            The ultimate cause is the Supreme Personality of Godhead, and only those in ignorance try to find out other causes by posing different theories.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">451</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since this universe has no real ultimate existence, the things within it—shortness, differences, grossness, skinniness, smallness, bigness, result, cause, living symptoms, and materials—are all imagined. They are all pots made of the same substance, earth, but they are named differently. The differences are characterized by the substance, nature, predisposition, time and activity. You should know that all these are simply mechanical manifestations created by material nature.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            The temporary manifestations and varieties within this material world are simply creations of material nature under various circumstances: <span class="Italic">prakṛteḥ kriyamāṇa-ni guṇaiḥ karmāṇi sarvaśaḥ.</span> The actions and reactions carried out by the material nature are sometimes accepted as our scientific inventions; therefore we want to take credit for them and defy the existence of God. This is described in <span class="Ref_Italic">Bhagavad-gītā</span> (3.27), <span class="Italic">ahaṅkāra-vimūḍhātmā kartāham iti manyate:</span> due to being covered by the illusory external energy, the living entity tries to take credit for the differentiated creations within the material world. Actually all these are being created automatically by the material force set in motion by the energy of the Supreme Personality of Godhead. Therefore the ultimate cause is the Supreme Person. As stated in <span class="Italic">Brahma-saṁhitā:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ paramaḥ kṛṣṇaḥ<br>sac-cid-ānanda-vigrahaḥ<br>anādir ādir govindaḥ<br>sarva-kāraṇa-kāraṇam<br><span class="Italic">[Bs. </span>5.1]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            He is the cause of all causes, the ultimate cause. In this regard Śrīla Madhvācārya says: <span class="Italic">evaṁ sarvaṁ tathā prakṛtvayai kalpitaṁ viṣṇor anyat.</span> <span class="Italic">evaṁ prakṛtyādhāraḥ svayam ananyādhāro viṣṇur eva ataḥ sarva-śabdāś ca tasminn eva.</span> Actually the original cause is Lord Viṣṇu, but out of ignorance people think that matter is the cause of everything.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">rājā goptāśrayo bhūmiḥ<br>śaraṇaṁ ceti laukikaḥ<br>vyavahāro na tat satyaṁ<br>tayor brahmāśrayo vibhuḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Things are contemplated on the ephemeral or external platform, but actually this is not the truth. The actual protector and shelter of everyone is Brahman, the Supreme, not the king.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">goptrī ca tasya prakṛtis<br>tasyā viṣṇuḥ svayaṁ prabhuḥ<br>tava goptrī tu pṛthivī<br>na tvaṁ goptā kṣiteḥ smṛtaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ sarvāśrayaiś caiva<br>goptā ca harir īśvaraḥ<br>sarva-śabdābhidheyaś ca<br>śabda-vṛtter hi kāraṇam<br>sarvāntaraḥ sarva-bahir<br>eka eva janārdanaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The actual protectress is the material nature, but Viṣṇu is her Lord. He is the Lord of everything. Lord Janārdana is the director both externally and internally. He is the cause of the function of words and what is expressed in all sound.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śirasodhāratā yadvad<br>grīvāyās tadvad eva tu<br>āśrayatvaṁ ca goptṛtvam<br>anyeṣām upacārataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Lord Viṣṇu is the resting place of the entire creation: <span class="Italic">brahmaṇo hi pratiṣṭhāham</span> (Bg. 14.27). On Brahman, everything is resting. All the universes are resting on the <span class="Italic">brahmajyoti,</span> and all the planets are resting on the universal atmosphere. In each and every planet there are oceans, hills, states and kingdoms, and each planet is giving shelter to so many living entities. They are all standing on the earth of feet and legs, torso and shoulders, but actually everything is resting ultimately on the potencies of the Supreme Personality of Godhead. Therefore He is known ultimately as <span class="Italic">sarva-kāraṇa-kāraṇam</span> <span class="Italic">[Bs. </span>5.1]<span class="Italic">,</span> the cause of all causes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">413</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            What, then, is the ultimate truth? The answer is that nondual knowledge is the ultimate truth. It is devoid of the contamination of material qualities. It gives us liberation. It is the one without a second, all-pervading and beyond imagination. The first realization of that knowledge is Brahman. Then Paramātmā, the Supersoul, is realized by the yogīs who try to see Him without grievance. This is the second stage of realization. Finally, full realization of the same supreme knowledge is realized in the Supreme Person. All learned scholars describe the Supreme Person as Vāsudeva, the cause of Brahman, Paramātmā and others.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            In <span class="Italic">Caitanya-caritāmṛta</span> it is said: <span class="Italic">yad advaitaṁ brahmopaniṣadi tad apy asya tanu-bhā.</span> The impersonal Brahman effulgence of the Absolute Truth consists of the bodily rays of the Supreme Personality of Godhead. <span class="Italic">Ya ātmāntaryāmī puruṣa iti so ’syāṁśa-vibhavaḥ.</span> What is known as <span class="Italic">ātmā</span> and <span class="Italic">antaryāmī,</span> the Supersoul, is but an expansion of the Supreme Personality of Godhead. <span class="Italic">Sad-aiśvaryaiḥ pūrṇo ya iha bhagavān sa svayam ayam [</span>Cc. <span class="Ref_Italic">Ādi</span> 1.3]<span class="Italic">.</span> What is described as the Supreme Personality of Godhead, complete with all six opulences, is Vāsudeva, and Śrī Caitanya Mahāprabhu is nondifferent from Him. Great learned scholars and philosophers accept this after many, many births. <span class="Italic">Vāsudevaḥ sarvam iti sa mahātmā sudurlabhaḥ</span> (Bg. 7.19). The wise man can understand that ultimately Vāsudeva, Kṛṣṇa, is the cause of Brahman, and Paramātmā, the Supersoul. Thus Vāsudeva is <span class="Italic">sarva-kāraṇa-kāraṇam</span> <span class="Italic">[Bs. </span>5.1]<span class="Italic">,</span> the cause of all causes. This is confirmed in <span class="Italic">Śrīmad-Bhāgavatam.</span> The real <span class="Italic">tattva,</span> Absolute Truth, is Bhagavān, but due to incomplete realization of the Absolute Truth, people sometimes describe the same Viṣṇu as impersonal Brahman or localized Paramātmā.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vadanti tat tattva-vidas<br>tattvaṁ yaj jñānam advayam<br>brahmeti paramātmeti<br>bhagavān iti śabdyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 1.2.11)
+          </p>
+          <p>
+            From the very beginning, <span class="Italic">Śrīmad-Bhāgavatam</span> says, <span class="Italic">satyaṁ paraṁ dhīmahi:</span> we meditate on the supreme truth. The supreme truth is explained here as <span class="Italic">jñānaṁ viśuddhaṁ satyam.</span> The Absolute Truth is devoid of material contamination and is transcendental to the material qualities. It gives all spiritual success and liberation from this material world. That Supreme Absolute Truth is Kṛṣṇa, Vāsudeva. There is no difference between Kṛṣṇa’s inner self and outward body. Kṛṣṇa is <span class="Italic">pūrṇa,</span> the complete whole. There is no distinction between His body and soul as there is between ours. Sometimes so-called scholars, not knowing the constitutional position of Kṛṣṇa, mislead people by saying that the Kṛṣṇa within is different from the Kṛṣṇa without. When Kṛṣṇa says, <span class="Italic">man-manā bhava mad-bhakto mad-yājī māṁ namaskuru,</span> so-called scholars advise the reader that it is not the person Kṛṣṇa to whom we must surrender but the Kṛṣṇa within. So-called scholars, Māyāvādīs, cannot understand Kṛṣṇa with their poor fund of knowledge. One should therefore approach an authorized person to understand Kṛṣṇa. The spiritual master has actually seen Kṛṣṇa; therefore he can explain Him properly.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tad viddhi praṇipātena<br>paripraśnena sevayā<br>upadekṣyanti te jñānaṁ<br>jñāninas tattva-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (Bg. 4.34)
+          </p>
+          <p>
+            Without approaching an authorized person, one cannot understand Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">134</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Rahūgaṇa, unless one has the opportunity to smear his entire body with the dust of the lotus feet of great devotees, one cannot realize the Absolute Truth. One cannot realize the Absolute Truth simply by observing celibacy [brahmacarya], strictly following the rules and regulations of householder life, leaving home as a vānaprastha, accepting sannyāsa, or undergoing severe penances in winter by keeping oneself submerged in water or surrounding oneself in summer by fire and the scorching heat of the sun. There are many other processes to understand the Absolute Truth, but the Absolute Truth is only revealed to one who has attained the mercy of a great devotee.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Actual knowledge of transcendental bliss can be bestowed upon anyone by a pure devotee. <span class="Italic">Vedeṣu durlabham adurlabham ātma-bhaktau [Bs. </span>5.33]<span class="Italic">.</span> One cannot attain the perfection of spiritual life simply by following the directions of the <span class="Italic">Vedas.</span> One has to approach a pure devotee: <span class="Italic">anyābhilāṣitā-śūnyaṁ jñāna-karmādy-anāvṛtam</span> [Madhya 19.167]<span class="Italic">.</span> By the grace of such a devotee, one can understand the Absolute Truth, Kṛṣṇa, and one’s relationship with Him. A materialistic person sometimes thinks that simply by executing pious activities and remaining at home one can understand the Absolute Truth. That is denied in this verse. Nor can one understand the Absolute Truth simply by observing the rules and regulations of <span class="Italic">brahmacarya</span> (celibacy). One only has to serve the pure devotee. That will help one understand the Absolute Truth without fail.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">161</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Who are the pure devotees mentioned here? In an assembly of pure devotees, there is no question of discussing material subjects like politics and sociology. In an assembly of pure devotees, there is discussion only of the qualities, forms and pastimes of the Supreme Personality of Godhead. He is praised and worshiped with full attention. In the association of pure devotees, by constantly hearing such topics respectfully, even a person who wants to merge into the existence of the Absolute Truth abandons this idea and gradually becomes attached to the service of Vāsudeva.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The symptoms of pure devotees are described in this verse. The pure devotee is never interested in material topics. Śrī Caitanya Mahāprabhu has strictly prohibited His devotees to talk about worldly matters. <span class="Italic">Grāmya-vārtā nā kahibe:</span> one should not indulge in talking unnecessarily about news of the material world. One should not waste time in this way. This is a very important feature in the life of a devotee. A devotee has no other ambition than to serve Kṛṣṇa, the Supreme Personality of Godhead. This Kṛṣṇa consciousness movement was started to engage people twenty-four hours daily in the service of the Lord and in His glorification. The students in this institution engage in the cultivation of Kṛṣṇa consciousness from five in the morning to ten at night. They actually have no opportunity to waste their time unnecessarily by discussing politics, sociology and current events. These will go their own way. A devotee is concerned only with serving Kṛṣṇa positively and seriously.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">144</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In a previous birth I was known as Mahārāja Bharata. I attained perfection by becoming completely detached from material activities through direct experience, and through indirect experience I received understanding from the Vedas. I was fully engaged in the service of the Lord, but due to my misfortune, I became very affectionate to a small deer, so much so that I neglected my spiritual duties. Due to my deep affection for the deer, in my next life I had to accept the body of a deer.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The incident herein described is very significant. In a previous verse it is stated, <span class="Italic">vinā mahat-pāda-rajo-’bhiṣekam:</span> one cannot attain perfection without smearing the dust from the lotus feet of an exalted devotee on his head. If one always follows the orders of the spiritual master, there is no question of falling down. As soon as a foolish disciple tries to overtake his spiritual master and becomes ambitious to occupy his post, he immediately falls down. <span class="Italic">Yasya prasādād bhagavat-prasādo yasyāprasādān na gatiḥ kuto ’pi .</span> If the spiritual master is considered an ordinary man, the disciple surely loses his chance to advance further. Despite a very rigid life in devotional service, Bharata Mahārāja did not consult a spiritual master when he became overly attached to a deer. Consequently he became strongly attached to the deer, and, forgetting his spiritual routine, he fell down.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">156</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear heroic King, due to my past sincere service to the Lord, I could remember everything of my past life even while in the body of a deer. Because I am aware of the falldown in my past life, I always keep myself separate from the association of ordinary men. Being afraid of their bad, materialistic association, I wander alone unnoticed by others.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> it is said: <span class="Italic">svalpam apy asya dharmasya</span> (Bg. 2.40). It is certainly a great fall to go from human life to animal life, but in the case of Bharata Mahārāja or any devotee, devotional service to the Lord never goes in vain. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (8.6): <span class="Italic">yaṁ yaṁ vāpi smaran bhāvaṁ tyajaty ante kalevaram.</span> At the time of death, by nature’s law the mind is absorbed in a certain type of thinking. This may lead one to animal life, yet for a devotee there is no loss. Even though Bharata Mahārāja received the body of a deer, he didn’t forget his position. Consequently, in the body of a deer he was very careful to remember the cause of his downfall. As a result, he was given a chance to be born in a family of very pure <span class="Italic">brāhmaṇas.</span> Thus his service to the Lord never went in vain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Simply by associating with exalted devotees, anyone can attain perfection of knowledge and with the sword of knowledge can cut to pieces the illusory associations within this material world. Through the association of devotees, one can engage in the service of the Lord by hearing and chanting [śravaṇaṁ kīrtanam]. Thus one can revive his dormant Kṛṣṇa consciousness and, sticking to the cultivation of Kṛṣṇa consciousness, return home, back to Godhead, even in this life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            To become liberated from material bondage, one must give up the association of worldly people and accept the association of devotees, positive and negative processes are mentioned in this regard. Through the association of devotees, one develops Kṛṣṇa consciousness, which is dormant within. This Kṛṣṇa consciousness movement is giving this chance to everyone. We are giving shelter to everyone who is serious about progressing in Kṛṣṇa consciousness. We arrange for their lodging and board so that they can peacefully cultivate Kṛṣṇa consciousness and return home, back to Godhead, even in this life.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Twelfth Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled, “The Conversation Between Mahārāja Rahūgaṇa and Jaḍa Bharata.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/12">https://prabhupadabooks.com/sb/5/12</a><!-- span.text_source_copied_date
+        | on 2023-02-05 15:49:17 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.11: Jada Bharata Instructs King Rahugana     Next: SB 5.13: Further Talks Between King Rahugana and Jada Bharata</div>
+      </p>
+    </div>
+  </body>
+</html>

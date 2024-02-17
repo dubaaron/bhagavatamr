@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.23, The Śiśumāra Planetary Systems</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twenty-three:<br>The Śiśumāra Planetary Systems
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <div class="Normal-Level">This chapter describes how all the planetary systems take shelter of the polestar, Dhruvaloka. It also describes the totality of these planetary systems to be Śiśumāra, another expansion of the external body of the Supreme Personality of Godhead. Dhruvaloka, the abode of Lord Viṣṇu within this universe, is situated 1,300,000 <span class="Italic">yojanas</span> from the seven stars. In the planetary system of Dhruvaloka are the planets of the fire-god, Indra, Prajāpati, Kaśyapa and Dharma, all of whom are very respectful to the great devotee Dhruva, who lives on the polestar. Like bulls yoked to a central pivot, all the planetary systems revolve around Dhruvaloka, impelled by eternal time. Those who worship the <span class="Italic">virāṭ-puruṣa,</span> the universal form of the Lord, conceive of this entire rotating system of planets as an animal known as <span class="Italic">śiśumāra.</span> This imaginary <span class="Italic">śiśumāra</span> is another form of the Lord. The head of the <span class="Italic">śiśumāra</span> form is downward, and its body appears like that of a coiled snake. On the end of its tail is Dhruvaloka, on the body of the tail are Prajāpati, Agni, Indra and Dharma, and on the root of the tail are Dhātā and Vidhātā. On its waist are the seven great sages. The entire body of the <span class="Italic">śiśumāra</span> faces toward its right and appears like a coil of stars. On the right side of this coil are the fourteen prominent stars from Abhijit to Punarvasu, and on the left side are the fourteen prominent stars from Puṣyā to Uttarāṣāḍhā. The stars known as Punarvasu and Puṣyā are on the right and left hips of the <span class="Italic">śiśumāra,</span> and the stars known as Ārdrā and Aśleṣā are on the right and left feet of the <span class="Italic">śiśumāra.</span> Other stars are also fixed on different sides of the Śiśumāra planetary system according to the calculations of Vedic astronomers. To concentrate their minds, <span class="Italic">yogīs</span> worship the Śiśumāra planetary system, which is technically known as the <span class="Italic">kuṇḍalini-cakra.</span>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, 1,300,000 yojanas [10,400,000 miles] above the planets of the seven sages is the place that learned scholars describe as the abode of Lord Viṣṇu. There the son of Mahārāja Uttānapāda, the great devotee Mahārāja Dhruva, still resides as the life source of all the living entities who live until the end of the creation. Agni, Indra, Prajāpati, Kaśyapa and Dharma all assemble there to offer him honor and respectful obeisances. They circumambulate him with their right sides toward him. I have already described the glorious activities of Mahārāja Dhruva [in the Fourth Canto of Śrīmad-Bhāgavatam].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">130</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Established by the supreme will of the Supreme Personality of Godhead, the polestar, which is the planet of Mahārāja Dhruva, constantly shines as the central pivot for all the stars and planets. The unsleeping, invisible, most powerful time factor causes these luminaries to revolve around the polestar without cessation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            It is distinctly stated herein that all the luminaries, the planets and stars, revolve by the influence of the supreme time factor. The time factor is another feature of the Supreme Personality of Godhead. Everyone is under the influence of the time factor, but the Supreme Personality of Godhead is so kind and loves His devotee Mahārāja Dhruva so much that He has placed all the luminaries under the control of Dhruva’s planet and has arranged for the time factor to work under him or with his cooperation. Everything is actually done according to the will and direction of the Supreme Personality of Godhead, but to make His devotee Dhruva the most important individual within the universe, the Lord has placed the activities of the time factor under his control.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1358</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When bulls are yoked together and tied to a central post to thresh rice, they tread around that pivot without deviating from their proper positions—one bull being closest to the post, another in the middle, and a third on the outside. Similarly, all the planets and all the hundreds and thousands of stars revolve around the polestar, the planet of Mahārāja Dhruva, in their respective orbits, some higher and some lower. Fastened by the Supreme Personality of Godhead to the machine of material nature according to the results of their fruitive acts, they are driven around the polestar by the wind and will continue to be so until the end of creation. These planets float in the air within the vast sky, just as clouds with hundreds of tons of water float in the air or as the great śyena eagles, due to the results of past activities, fly high in the sky and have no chance of falling to the ground.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            According to the description of this verse, the hundreds and thousands of stars and the great planets such as the sun, the moon, Venus, Mercury, Mars and Jupiter are not clustered together because of the law of gravity or any similar idea of the modern scientists. These planets and stars are all servants of the Supreme Personality of Godhead, Govinda or Kṛṣṇa, and according to His order they sit in their chariots and travel in their respective orbits. The orbits in which they move are compared to machines given by material nature to the operating deities of the stars and planets, who carry out the orders of the Supreme Personality of Godhead by revolving around Dhruvaloka, which is occupied by the great devotee Mahārāja Dhruva. This is confirmed in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.52) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yac-cakṣur eṣa savitā sakala-grahāṇāṁ<br>rājā samasta-sura-mūrtir aśeṣa-tejāḥ<br>yasyājñayā bhramati sambhṛta-kāla-cakro<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship Govinda, the primeval Lord, the Supreme Personality of Godhead, under whose control even the sun, which is considered to be the eye of the Lord, rotates within the fixed orbit of eternal time. The sun is the king of all planetary systems and has unlimited potency in heat and light.” This verse from <span class="Italic">Brahma-saṁhitā</span> confirms that even the largest and most powerful planet, the sun, rotates within a fixed orbit, or <span class="Italic">kāla-cakra,</span> in obedience to the order of the Supreme Personality of Godhead. This has nothing to do with gravity or any other imaginary laws created by the material scientists.
+          </p>
+          <p>
+            Material scientists want to avoid the ruling government of the Supreme Personality of Godhead, and therefore they imagine different conditions under which they suppose the planets move. The only condition, however, is the order of the Supreme Personality of Godhead. All the various predominating deities of the planets are persons, and the Supreme Personality of Godhead is also a person. The Supreme Personality orders the subordinate persons, the demigods of various names, to carry out His supreme will. This fact is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10), wherein Kṛṣṇa says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sa-carācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.”
+          </p>
+          <p>
+            The orbits of the planets resemble the bodies in which all living entities are seated because they are both machines controlled by the Supreme Personality of Godhead. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.61):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ sarva-bhūtānāṁ<br>hṛd-deśe ’rjuna tiṣṭhati<br>bhrāmayan sarva-bhūtāni<br>yantrārūḍhāni māyayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Lord is situated in everyone’s heart, O Arjuna, and is directing the wanderings of all living entities, who are seated as on a machine, made of the material energy.” The machine given by material nature—whether the machine of the body or the machine of the orbit, or <span class="Italic">kāla-cakra</span>—works according to the orders given by the Supreme Personality of Godhead. The Supreme Personality of Godhead and material nature work together to maintain this great universe, and not only this universe but also the millions of other universes beyond this one.
+          </p>
+          <p>
+            The question of how the planets and stars are floating is also answered in this verse. It is not because of the laws of gravity. Rather, the planets and stars are enabled to float by manipulations of the air. It is due to such manipulations that big, heavy clouds float and big eagles fly in the sky. Modern airplanes like the 747 jet aircraft work in a similar way: by controlling the air, they float high in the sky, resisting the tendency to fall to earth. Such adjustments of the air are all made possible by the cooperation of the principles of <span class="Italic">puruṣa</span> (male) and <span class="Italic">prakṛti</span> (female). By the cooperation of material nature, which is considered to be <span class="Italic">prakṛti,</span> and the Supreme Personality of Godhead, who is considered the <span class="Italic">puruṣa,</span> all the affairs of the universe are going on nicely in their proper order. <span class="Italic">prakṛti,</span> material nature, is also described in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.44) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sṛṣṭi-sthiti-pralaya-sādhana-śaktir ekā<br>chāyeva yasya bhuvanāni bibharti durgā<br>icchānurūpam api yasya ca ceṣṭate sā<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The external potency, <span class="Italic">māyā,</span> who is of the nature of the shadow of the <span class="Italic">cit</span> [spiritual] potency, is worshiped by all people as Durgā, the creating, preserving and destroying agency of this mundane world. I adore the primeval Lord Govinda, in accordance with whose will Durgā conducts herself.” Material nature, the external energy of the Supreme Lord, is also known as Durgā, or the female energy that protects the great fort of this universe. The word Durgā also means fort. This universe is just like a great fort in which all the conditioned souls are kept, and they cannot leave it unless they are liberated by the mercy of the Supreme Personality of Godhead. The Lord Himself declares in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.” Thus simply by Kṛṣṇa consciousness, by the mercy of the Supreme Personality of Godhead, one can be liberated, or, in other words, one can be released from the great fort of this universe and go outside it to the spiritual world.
+          </p>
+          <p>
+            It is also significant that the predominating deities of even the greatest planets have been offered their exalted posts because of the very valuable pious activities they performed in previous births. This is indicated herein by the words <span class="Italic">karma-nirmita-gatayaḥ.</span> For example, as we have previously discussed, the moon is called <span class="Italic">jīva,</span> which means that he is a living entity like us, but because of his pious activities he has been appointed to his post as the moon-god. Similarly, all the demigods are living entities who have been appointed to their various posts as the masters of the moon, the earth, Venus and so on because of their great service and pious acts. Only the predominating deity of the sun, Sūrya Nārāyaṇa, is an incarnation of the Supreme Personality of Godhead. Mahārāja Dhruva, the predominating deity of Dhruvaloka, is also a living entity. Thus there are two kinds of entities—the supreme entity, the Supreme Personality of Godhead, and the ordinary living entity, the <span class="Italic">jīva</span> (<span class="Italic">nityo nityānāṁ cetanaś cetanānām</span>). All the demigods are engaged in the service of the Lord, and only by such an arrangement are the affairs of the universe going on.
+          </p>
+          <p>
+            Regarding the great eagles mentioned in this verse, it is understood that there are eagles so big that they can prey on big elephants. They fly so high that they can travel from one planet to another. They start flying in one planet and land in another, and while in flight they lay eggs that hatch into other birds while falling through the air. In Sanskrit such eagles are called <span class="Italic">śyena.</span> Under the present circumstances, of course, we cannot see such huge birds, but at least we know of eagles that can capture monkeys and then throw them down to kill and eat them. Similarly, it is understood that there are gigantic birds that can carry off elephants, kill them and eat them.
+          </p>
+          <p>
+            The two examples of the eagle and the cloud are sufficient to prove that flying and floating can be made possible through adjustments of the air. The planets, in a similar way, are floating because material nature adjusts the air according to the orders of the Supreme Lord. It could be said that these adjustments constitute the law of gravity, but in any case, one must accept that these laws are made by the Supreme Personality of Godhead. The so-called scientists have no control over them. The scientists can falsely, improperly declare that there is no God, but this is not a fact.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">64</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This great machine, consisting of the stars and planets, resembles the form of a śiśumāra [dolphin] in the water. It is sometimes considered an incarnation of Kṛṣṇa, Vāsudeva. Great yogīs meditate upon Vāsudeva in this form because it is actually visible.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Transcendentalists such as <span class="Italic">yogīs</span> whose minds cannot accommodate the form of the Lord prefer to visualize something very great, such as the <span class="Italic">virāṭ-puruṣa.</span> Therefore some <span class="Italic">yogīs</span> contemplate this imaginary <span class="Italic">śiśumāra</span> to be swimming in the sky the way a dolphin swims in water. They meditate upon it as the <span class="Italic">virāṭ-rūpa,</span> the gigantic form of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This form of the śiśumāra has its head downward and its body coiled. On the end of its tail is the planet of Dhruva, on the body of its tail are the planets of the demigods Prajāpati, Agni, Indra and Dharma, and at the base of its tail are the planets of the demigods Dhātā and Vidhātā. Where the hips might be on the śiśumāra are the seven saintly sages like Vasiṣṭha and Aṅgirā. The coiled body of the Śiśumāra-cakra turns toward its right side, on which the fourteen constellations from Abhijit to Punarvasu are located. On its left side are the fourteen stars from Puṣyā to Uttarāṣāḍhā. Thus its body is balanced because its sides are occupied by an equal number of stars. On the back of the śiśumāra is the group of stars known as Ajavīthī, and on its abdomen is the Ganges that flows in the sky [the Milky Way].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the right and left sides of where the loins might be on the Śiśumāra-cakra are the stars named Punarvasu and Puṣyā. Ārdrā and Aśleṣā are on its right and left feet, Abhijit and Uttarāṣāḍhā are on its right and left nostrils, Śravaṇā and Pūrvāṣāḍhā are at its right and left eyes, and Dhaniṣṭhā and Mūlā are on its right and left ears. The eight stars from Maghā to Anurādhā, which mark the southern course, are on the ribs of the left of its body, and the eight stars from Mṛgaśīrṣā to Pūrvabhādra, which mark the northern course, are on the ribs on the right side. Śatabhiṣā and Jyeṣṭhā are on the right and left shoulders.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the upper chin of the śiśumāra is Agasti; on its lower chin, Yamarāja; on its mouth, Mars; on its genitals, Saturn; on the back of its neck, Jupiter; on its chest, the sun; and within the core of its heart, Nārāyaṇa. Within its mind is the moon; on its navel, Venus; and on its breasts, the Aśvinī-kumāras. Within its life air, which is known as prāṇāpāna, is Mercury, on its neck is Rāhu, all over its body are comets, and in its pores are the numerous stars.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, the body of the śiśumāra, as thus described, should be considered the external form of Lord Viṣṇu, the Supreme Personality of Godhead. Morning, noon and evening, one should silently observe the form of the Lord as the Śiśumāra-cakra and worship Him with this mantra: “O Lord who has assumed the form of time! O resting place of all the planets moving in different orbits! O master of all demigods, O Supreme Person, I offer my respectful obeisances unto You and meditate upon You.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">214</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The body of the Supreme Lord, Viṣṇu, which forms the Śiśumāra-cakra, is the resting place of all the demigods and all the stars and planets. One who chants this mantra to worship that Supreme Person three times a day—morning, noon and evening—will surely be freed from all sinful reactions. If one simply offers his obeisances to this form or remembers this form three times a day, all his recent sinful activities will be destroyed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Summarizing the entire description of the planetary systems of the universe, Śrīla Viśvanātha Cakravartī Ṭhākura says that one who is able to meditate upon this arrangement as the <span class="Italic">virāṭ-rūpa,</span> or <span class="Italic">viśva-rūpa,</span> the external body of the Supreme Personality of Godhead, and worship Him three times a day by meditation will always be free from all sinful reactions. Viśvanātha Cakravartī Ṭhākura estimates that Dhruvaloka, the polestar, is 3,800,000 <span class="Italic">yojanas</span> above the sun. Above Dhruvaloka by 10,000,000 <span class="Italic">yojanas</span> is Maharloka, above Maharloka by 20,000,000 <span class="Italic">yojanas</span> is Janaloka, above Janaloka by 80,000,000 <span class="Italic">yojanas</span> is Tapoloka, and above Tapoloka by 120,000,000 <span class="Italic">yojanas</span> is Satyaloka. Thus the distance from the sun to Satyaloka is 233,800,000 <span class="Italic">yojanas,</span> or 1,870,400,000 miles. The Vaikuṇṭha planets begin 26,200,000 <span class="Italic">yojanas</span> (209,600,000 miles) above Satyaloka. Thus the <span class="Italic">Viṣṇu Purāṇa</span> describes that the covering of the universe is 260,000,000 <span class="Italic">yojanas</span> (2,080,000,000 miles) away from the sun. The distance from the sun to the earth is lower planetary systems called Atala, Vitala, Sutala, Talātala, Mahātala, Rasātala and Pātāla. Below these lower planets by 30,000 <span class="Italic">yojanas,</span> Śeṣa Nāga is lying on the Garbhodaka Ocean. That ocean is 249,800,000 <span class="Italic">yojanas</span> deep. Thus the total diameter of the universe is approximately 500,000,000 <span class="Italic">yojanas,</span> or 4,000,000,000 miles.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports to the Fifth Canto, Twenty-third Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Śiśumāra planetary System.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/23">https://prabhupadabooks.com/sb/5/23</a><!-- span.text_source_copied_date
+        | on 2023-06-04 16:19:59 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.22: The Orbits of the Planets     Next: SB 5.24: The Subterranean Heavenly Planets</div>
+      </p>
+    </div>
+  </body>
+</html>

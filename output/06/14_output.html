@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.14, King Citraketu’s Lamentation</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Fourteen:<br>King Citraketu’s Lamentation
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">In this Fourteenth Chapter, Parīkṣit Mahārāja asks his spiritual master, Śukadeva Gosvāmī, how such a demon as Vṛtrāsura could become an exalted devotee. In this connection the previous life of Vṛtrāsura is discussed. This involves the story of Citraketu and how he was victimized by lamentation because of the death of his son.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Among many millions of living entities, the number of human beings is extremely small, and among human beings who are actually religious, only some are eager to be liberated from material existence. Among many thousands of people who desire relief from material existence, one is freed from the association of unwanted persons or is relieved of material contamination. And among many millions of such liberated persons, one may become a devotee of Lord Nārāyaṇa. Therefore such devotees are extremely rare. Since <span class="Italic">bhakti,</span> devotional service, is not ordinary, Parīkṣit Mahārāja was astonished that an <span class="Italic">asura</span> could rise to the exalted position of a devotee. Being doubtful, Parīkṣit Mahārāja inquired from Śukadeva Gosvāmī, who then described Vṛtrāsura with reference to his previous birth as Citraketu, the King of Śūrasena.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Citraketu, who had no sons, got an opportunity to meet the great sage Aṅgirā. When Aṅgirā inquired from the King about his welfare, the King expressed his moroseness, and therefore by the grace of the great sage, the King’s first wife, Kṛtadyuti, gave birth to a son, who was the cause of both happiness and lamentation. Upon the birth of this son, the King and all the residents of the palace were very happy. The co-wives of Kṛtadyuti, however, were envious, and later they administered poison to the child. Citraketu was overwhelmed by shock at his son’s death. Then Nārada Muni and Aṅgirā went to see him.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">119</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit inquired from Śukadeva Gosvāmī: O learned brāhmaṇa, demons are generally sinful, being obsessed with the modes of passion and ignorance. How, then, could Vṛtrāsura have attained such exalted love for the Supreme Personality of Godhead, Nārāyaṇa?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            In this material world, everyone is obsessed with the modes of passion and ignorance. However, unless one conquers these modes and comes to the platform of goodness, there is no chance of one’s becoming a pure devotee. This is confirmed by Lord Kṛṣṇa Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (7.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yeṣāṁ tv anta-gataṁ pāpaṁ<br>janānāṁ puṇya-karmaṇām<br>te dvandva-moha-nirmuktā<br>bhajante māṁ dṛḍha-vratāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Persons who have acted piously in previous lives and in this life, whose sinful actions are completely eradicated and who are freed from the duality of delusion, engage themselves in My service with determination.” Since Vṛtrāsura was among the demons, Mahārāja Parīkṣit wondered how it was possible for him to have become such an exalted devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Demigods situated in the mode of goodness and great saints cleansed of the dirt of material enjoyment hardly ever render pure devotional service at the lotus feet of Mukunda. [Therefore how could Vṛtrāsura have become such a great devotee?]
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this material world there are as many living entities as atoms. Among these living entities, a very few are human beings, and among them, few are interested in following religious principles.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">130</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the brāhmaṇas, Śukadeva Gosvāmī, out of many persons who follow religious principles, only a few desire liberation from the material world. Among many thousands who desire liberation, one may actually achieve liberation, giving up material attachment to society, friendship, love, country, home, wife and children. And among many thousands of such liberated persons, one who can understand the true meaning of liberation is very rare.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            There are four classes of men, namely <span class="Italic">karmīs, jñānīs, yogīs</span> and <span class="Italic">bhaktas.</span> This statement pertains especially to <span class="Italic">karmīs</span> and <span class="Italic">jñānīs.</span> A <span class="Italic">karmī</span> tries to he happy within this material world by changing from one body to another. His objective is bodily comfort, either in this planet or in another. When such a person becomes a <span class="Italic">jñānī,</span> however, be aspires for liberation from material bondage. Among many such persons who aspire for liberation, one may actually be liberated during his life. Such a person gives up his attachment for society, friendship, love, country, family, wife and children. Among many such persons, who are in the <span class="Italic">vānaprastha</span> stage, one may understand the value of becoming a <span class="Italic">sannyāsī,</span> completely accepting the renounced order of life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1008</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great sage, among many millions who are liberated and perfect in knowledge of liberation, one may be a devotee of Lord Nārāyaṇa, or Kṛṣṇa. Such devotees, who are fully peaceful, are extremely rare.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura gives the following purport to this verse. Simply desiring <span class="Italic">mukti,</span> or liberation, is insufficient; one must become factually liberated. When one understands the futility of the materialistic way of life, one becomes advanced in knowledge, and therefore he situates himself in the <span class="Italic">vānaprastha</span> order, unattached to family, wife and children. One should then further progress to the platform of <span class="Italic">sannyāsa,</span> the actual renounced order, never to fall again and be afflicted by materialistic life. Even though one desires to be liberated, this does not mean he is liberated. Only rarely is someone liberated. Indeed, although many men take <span class="Italic">sannyāsa</span> to become liberated, because of their imperfections they again become attached to women, material activities, social welfare work and so on.
+          </p>
+          <p>
+            <span class="Italic">Jñānīs, yogīs</span> and <span class="Italic">karmīs</span> devoid of devotional service are called offenders. Śrī Caitanya Mahāprabhu says, <span class="Italic">māyāvādī kṛṣṇe aparādhī:</span> one who thinks that everything is <span class="Italic">māyā</span> instead of thinking that everything is Kṛṣṇa is called an <span class="Italic">aparādhī,</span> or offender. Although the Māyāvādīs, impersonalists, are offenders at the lotus feet of Kṛṣṇa, they may nonetheless be counted among the <span class="Italic">siddhas,</span> those who have realized the self. They may be considered nearer to spiritual perfection because at least they have realized what spiritual life is. If such a person becomes <span class="Italic">nārāyaṇa-parāyaṇa,</span> a devotee of Lord Nārāyaṇa, he is better than a <span class="Italic">jīvan-mukta,</span> one who is liberated or perfect. This requires higher intelligence.
+          </p>
+          <p>
+            There are two kinds of <span class="Italic">jñānīs.</span> One is inclined to devotional service and the other to impersonal realization. Impersonalists generally undergo great endeavor for no tangible benefit, and therefore it is said that they are husking paddy that has no grain (<span class="Italic">sthūla-tuṣāvaghātinaḥ</span>). The other class of <span class="Italic">jñānīs,</span> whose <span class="Italic">jñāna</span> is mixed with <span class="Italic">bhakti,</span> are also of two kinds—those who are devoted to the so-called false form of the Supreme Personality of Godhead and those who understand the Supreme Personality of Godhead as <span class="Italic">sac-cid-ānanda-vigraha</span><i> <span class="Italic"></span></i>[Bs. 5.1]<span class="Italic">,</span> the actual spiritual form. The Māyāvādī devotees worship Nārāyaṇa or Viṣṇu with the idea that Viṣṇu has accepted a form of <span class="Italic">māyā</span> and that the ultimate truth is actually impersonal. The pure devotee, however, never thinks that Viṣṇu has accepted a body of <span class="Italic">māyā;</span> instead, he knows perfectly well that the original Absolute Truth is the Supreme Person. Such a devotee is actually situated in knowledge. He never merges in the Brahman effulgence. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.2.32):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ye ’nye ’ravindākṣa vimukta-māninas<br>tvayy asta-bhāvād aviśuddha-buddhayaḥ<br>āruhya kṛcchreṇa paraṁ padaṁ tataḥ<br>patanty adho ’nādṛta-yuṣmad-aṅghrayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O Lord, the intelligence of those who think themselves liberated but who have no devotion is impure. Even though they rise to the highest point of liberation by dint of severe penances and austerities, they are sure to fall down again into material existence, for they do not take shelter at Your lotus feet.” Evidence of this same point is also given in <span class="Ref_Italic">Bhagavad-gītā</span> (9.11), wherein the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">avajānanti māṁ mūḍhā<br>mānuṣīṁ tanum āśritam<br>paraṁ bhāvam ajānanto<br>mama bhūta-maheśvaram<br><span class="Italic"> [Bg. </span>9.11]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Fools deride Me when I descend in the human form. They do not know My transcendental nature and My supreme dominion over all that be.” When rascals (<span class="Italic">mūḍhas</span>) see that Kṛṣṇa acts exactly like a human being, they deride the transcendental form of the Lord because they do not know the <span class="Italic">paraṁ bhāvam,</span> His transcendental form and activities. Such persons are further described in <span class="Ref_Italic">Bhagavad-gītā</span> (9.12) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">moghāśā mogha-karmāṇo<br>mogha-jñānā vicetasaḥ<br>rākṣasīm āsurīṁ caiva<br>prakṛtiṁ mohinīṁ śritāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who are thus bewildered are attracted by demoniac and atheistic views. In that deluded condition, their hopes for liberation, their fruitive activities and their culture of knowledge are all defeated.” Such persons do not know that Kṛṣṇa’s body is not material. There is no distinction between Kṛṣṇa’s body and His soul, but because less intelligent men see Kṛṣṇa as a human being, they deride Him. They cannot imagine how a person like Kṛṣṇa could be the origin of everything (<span class="Italic">govindam ādi-puruṣaṁ tam ahaṁ bhajāmi **</span>). Such persons are described as <span class="Italic">moghāśāḥ,</span> baffled in their hopes. Whatever they desire for the future will be baffled. Even if they apparently engage in devotional service, they are described as <span class="Italic">moghāśāḥ</span> because they ultimately desire to merge into the Brahman effulgence.
+          </p>
+          <p>
+            Those who aspire to be elevated to the heavenly planets by devotional service will also be frustrated, because this is not the result of devotional service. However, they are also given a chance to engage in devotional service and be purified. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.17):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śṛṇvatāṁ sva-kathāḥ kṛṣṇaḥ<br>puṇya-śravaṇa-kīrtanaḥ<br>hṛdy antaḥ-stho hy abhadrāṇi<br>vidhunoti suhṛt satām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Śrī Kṛṣṇa, the Personality of Godhead, who is the Paramātmā [Supersoul] in everyone’s heart and the benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee who relishes His messages, which are in themselves virtuous when properly heard and chanted.”
+          </p>
+          <p>
+            Unless the dirt within the core of one’s heart is cleansed away, one cannot become a pure devotee. Therefore the word <span class="Italic">sudurlabhaḥ</span> (“very rarely found”) is used in this verse. Not only among hundreds and thousands, but among millions of perfectly liberated souls, a pure devotee is hardly ever found. Therefore the words <span class="Italic">koṭiṣv api</span> are used herein. Śrīla Madhvācārya gives the following quotations from the <span class="Italic">Tantra Bhāgavata:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nava-koṭyas tu devānām<br>ṛṣayaḥ sapta-koṭayaḥ<br>nārāyaṇāyanāḥ sarve<br>ye kecit tat-parāyaṇāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “There are ninety million demigods and seventy million sages, who are all called <span class="Italic">nārāyaṇāyana,</span> devotees of Lord Nārāyaṇa. Among them, only a few are called <span class="Italic">nārāyaṇa-parāyaṇa.</span>”
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nārāyaṇāyanā devā<br>ṛṣy-ādyās tat-parāyaṇāḥ<br>brahmādyāḥ kecanaiva syuḥ<br>siddho yogya-sukhaṁ labhan</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The difference between the <span class="Italic">siddhas</span> and <span class="Italic">nārāyaṇa-parāyaṇas</span> is that direct devotees are called <span class="Italic">nārāyaṇa-parāyaṇas</span> whereas those who perform various types of mystic <span class="Italic">yoga</span> are called <span class="Italic">siddhas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">54</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vṛtrāsura was situated in the blazing fire of battle and was an infamous, sinful demon, always engaged in giving troubles and anxieties to others. How could such a demon become so greatly Kṛṣṇa conscious?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            It has been described that a <span class="Italic">nārāyaṇa-parāyaṇa,</span> a pure devotee, is rarely found even among millions and millions of persons. Therefore Parīkṣit Mahārāja was surprised that Vṛtrāsura, whose purpose was to give trouble and anxiety to others, was one of these devotees, even on a battlefield. What was the reason for Vṛtrāsura’s advancement?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear lord, Śukadeva Gosvāmī, although Vṛtrāsura was a sinful demon, he showed the prowess of a most exalted kṣatriya and satisfied Lord Indra in battle. How could such a demon be a great devotee of Lord Kṛṣṇa? These contradictions have caused me great doubt, and they have made me eager to hear of this from you.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Sūta Gosvāmī said: After hearing Mahārāja Parīkṣit’s very intelligent question, Śukadeva Gosvāmī, the most powerful sage, began answering his disciple with great affection.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: O King, I shall speak to you the same history I have heard from the mouths of Vyāsadeva, Nārada and Devala. Please listen with attention.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">348</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, in the province of Śūrasena there was a king named Citraketu, who ruled the entire earth. During his reign, the earth produced all the necessities for life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Here the most significant statement is that the earth completely produced all the necessities of life during the time of King Citraketu. As stated in the <span class="Italic">Īśopaniṣad</span> (<span class="Ref_Italic">Mantra</span> 1):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśāvāsyam idaṁ sarvaṁ<br>yat kiñca jagatyāṁ jagat<br>tena tyaktena bhuñjīthā<br>mā gṛdhaḥ kasya svid dhanam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Everything animate or inanimate that is within the universe is controlled and owned by the Lord. One should therefore accept only those things necessary for himself, which are set aside as his quota, and one should not accept other things, knowing well to whom they belong.” Kṛṣṇa, the supreme controller, has created the material world, which is completely perfect and free from scarcity. The Lord supplies the necessities of all living entities. These necessities come from the earth, and thus the earth is the source of supply. When there is a good ruler, that source produces the necessities of life abundantly. However, when there is not such a good ruler, there will be scarcity. This is the significance of the word <span class="Italic">kāmadhuk.</span> Elsewhere in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.10.4) it is said, <span class="Italic">kāmaṁ vavarṣa parjanyaḥ sarva-kāma-dughā mahī:</span> “During the reign of Mahārāja Yudhiṣṭhira, the clouds showered all the water that people needed, and the earth produced all the necessities of men in profusion.” We have experience that in some seasons the rains produce abundance and in other seasons there is scarcity. We have no control over the earth’s productiveness, for it is naturally under the full control of the Supreme Personality of Godhead. By His order, the Lord can make the earth produce sufficiently or insufficiently. If a pious king rules the earth according to the śāstric injunctions, there will naturally be regular rainfall and sufficient produce to provide for all men. There will be no question of exploitation, for everyone will have enough. Black-marketeering and other corrupt dealings will then automatically stop. Simply ruling the land cannot solve man’s problems unless the leader has spiritual capabilities. He must be like Mahārāja Yudhiṣṭhira, Parīkṣit Mahārāja or Rāmacandra. Then all the inhabitants of the land will be extremely happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This Citraketu had ten million wives, but although he was capable of producing children, he did not receive a child from any of them. By chance, all the wives were barren.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">155</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Citraketu, the husband of these millions of wives, was endowed with a beautiful form, magnanimity and youth. He was born in a high family, he had a complete education, and he was wealthy and opulent. Nevertheless, in spite of being endowed with all these assets, he was full of anxiety because he did not have a son.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            It appears that the King first married one wife, but she could not bear a child. Then he married a second, a third, a fourth and so on, but none of the wives could bear children. In spite of the material assets of <span class="Italic">janmaiśvarya-śruta-śrī</span>—birth in an aristocratic family with full opulence, wealth, education and beauty—he was very much aggrieved because in spite of having so many wives, he had no son. Certainly his grief was natural. <span class="Italic">Gṛhastha</span> life does not mean having a wife and no children. Cāṇakya Paṇḍita says, <span class="Italic">putra-hīnaṁ gṛhaṁ śūnyam:</span> if a family man has no son, his home is no better than a desert. The King was certainly most unhappy that he could not get a son, and this is why he had married so many times. <span class="Italic">Kṣatriyas</span> especially are allowed to marry more than one wife, and this King did so. Nonetheless, he had no issue.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            His queens all had beautiful faces and attractive eyes, yet neither his opulences, his hundreds and thousands of queens, nor the lands of which he was the supreme proprietor were sources of happiness for him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Once upon a time, when the powerful sage named Aṅgirā was traveling all over the universe without engagement, by his sweet will he came to the palace of King Citraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Citraketu immediately stood up from his throne and offered him worship. He offered drinking water and eatables and in this way performed his duty as a host to a great guest. When the ṛṣi was seated very comfortably, the King, restraining his mind and senses, sat on the ground at the side of the ṛṣi’s feet.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, when Citraketu, bent low in humility, was seated at the lotus feet of the great sage, the sage congratulated him for his humility and hospitality. The sage addressed him in the following words.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">206</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great sage Aṅgirā said: My dear King, I hope that your body and mind and your royal associates and paraphernalia are well. When the seven properties of material nature [the total material energy, the ego and the five objects of sense gratification] are in proper order, the living entity within the material elements is happy. Without these seven elements one cannot exist. Similarly, a king is always protected by seven elements—his instructor (svāmī or guru), his ministers, his kingdom, his fort, his treasury, his royal order and his friends.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            As it is quoted by Śrīdhara Svāmī in his <span class="Italic">Bhāgavatam</span> commentary:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">svāmy-amātyau janapadā<br>durga-draviṇa-sañcayāḥ<br>daṇḍo mitraṁ ca tasyaitāḥ<br>sapta-prakṛtayo matāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A king is not alone. He first has his spiritual master, the supreme guide. Then come his ministers, his kingdom, his fortifications, his treasury, his system of law and order, and his friends or allies. If these seven are properly maintained, the king is happy. Similarly, as explained in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">dehino ’smin yathā dehe [Bg. </span>2.13<span class="Italic">]</span>), the living entity, the soul, is within the material covering of the <span class="Italic">mahat-tattva,</span> ego and <span class="Italic">pañca-tanmātrā,</span> the five objects of sense gratification. When these seven are in proper order, the living entity is in a mood of pleasure. Generally when the associates of the king are quiet and obedient, the king can be happy. Therefore the great sage Aṅgirā Ṛṣi inquired about the King’s personal health and the good fortune of his seven associates. When we inquire from a friend whether everything is well, we are concerned not only with his personal self but also with his family, his source of income, and his assistants or servants. All of them must be well, and then a person can be happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">49</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, O lord of humanity, when a king directly depends upon his associates and follows their instructions, he is happy. Similarly, when his associates offer their gifts and activities to the king and follow his orders, they are also happy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            The actual happiness of a king and his dependents is described in this verse. A king should not simply give orders to his dependents because he is supreme; sometimes he must follow their instructions. Similarly, the dependents should depend on the king. This mutual dependence will make everyone happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">18</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, are your wives, citizens, secretaries and servants and the merchants who sell spices and oil under your control? Are you also in full control of ministers, the inhabitants of your palace, your provincial governors, your sons and your other dependents?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            The master or king and his subordinates should be interdependent. Through cooperation, both of them can be happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">18</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If the king’s mind is fully controlled, all his family members and governmental officers are subordinate to him. His provincial governors present taxes on time, without resistance, and what to speak of lesser servants?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            Aṅgirā Ṛṣi asked the King whether his mind was also under control. This is most essential for happiness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Citraketu, I can observe that your mind is not pleased. You seem not to have achieved your desired goal. Is this because of you yourself, or has it been caused by others? Your pale face reflects your deep anxiety.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">42</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: O King Parīkṣit, although the great sage Aṅgirā knew everything, he inquired from the King in this way. Thus King Citraketu, desiring a son, bent low in great humility and spoke to the great sage as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Since the face is the index to the mind, a saintly person can study the condition of one’s mind by seeing his face. When Aṅgirā Ṛṣi remarked about the King’s discolored face, King Citraketu explained the cause of his anxiety as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Citraketu said: O great lord Aṅgirā, because of austerity, knowledge and transcendental samādhi, you are freed from all the reactions of sinful life. Therefore, as a perfect yogī, you can understand everything external and internal regarding embodied, conditioned souls like us.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great soul, you are aware of everything, yet you are asking me why I am full of anxiety. Therefore, in response to your order, let me disclose the cause.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As a person aggrieved by hunger and thirst is not pleased by the external gratification of flower garlands or sandalwood pulp, I am not pleased with my empire, opulence or possessions, which are desirable even for great demigods, because I have no son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">83</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, O great sage, please save me and my forefathers, who are descending to the darkness of hell because I have no progeny. Kindly do something so that I may have a son to deliver us from hellish conditions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            According to Vedic civilization, one gets married simply to have a son, who is needed to offer oblations to his forefathers. King Citraketu responsibly desired to beget a child so that he and his forefathers might be delivered from the darkest regions. He was concerned with how to get <span class="Italic">piṇḍa,</span> oblations, in the next life, not only for himself but also for his forefathers. Therefore he requested Aṅgirā Ṛṣi to favor him by doing something that could help him get a son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In response to the request of Mahārāja Citraketu, Aṅgirā Ṛṣi, who was born of Lord Brahmā’s mind, was very merciful toward him. Because the sage was a greatly powerful personality, he performed a sacrifice by offering oblations of sweetrice to Tvaṣṭā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Parīkṣit Mahārāja, best of the Bhāratas, the remnants of the food offered in the yajña were given by the great sage Aṅgirā to the first and most perfect among Citraketu’s millions of queens, whose name was Kṛtadyuti.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">235</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, the great sage told the King, “O great King, now you will have a son who will be the cause of both jubilation and lamentation.” The sage then left, without waiting for Citraketu’s response.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            The word <span class="Italic">harṣa</span> means “jubilation,” and <span class="Italic">śoka</span> means “lamentation.” The King was overwhelmed with joy when he understood that he would have a son. Because of his great jubilation, he could not actually understand the statement of the sage Aṅgirā. He accepted it to mean that there would certainly be jubilation because of the birth of his future son, but that he would be the King’s only son and, being very proud of his great wealth and empire, would not be very obedient to his father. Thus the King was satisfied, thinking, “Let there be a son. It does not matter if he is not very obedient.” In Bengal there is a proverb that instead of having no maternal uncle, it is better to have a maternal uncle who is blind. The King accepted this philosophy, thinking that a disobedient son would be better than no son at all. The great sage Cāṇakya Paṇḍita says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ko ’rthaḥ putreṇa jātena<br>yo na vidvān na dhārmikaḥ<br>kāṇena cakṣuṣā kiṁ vā<br>cakṣuḥ pīḍaiva kevalam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “What is the use of a son who is neither a learned scholar nor a devotee? Such a son is like a blind, diseased eye, which always causes suffering.” Nevertheless, the material world is so polluted that one wants to have a son even though he is useless. This attitude was represented in the history of King Citraketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As Kṛttikādevī, after receiving the semen of Lord Śiva from Agni, conceived a child named Skanda [Kārttikeya], Kṛtadyuti, having received semen from Citraketu, became pregnant after eating remnants of food from the yajña performed by Aṅgirā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After receiving semen from Mahārāja Citraketu, the King of Śūrasena, Queen Kṛtadyuti gradually developed in her pregnancy, O King Parīkṣit, just as the moon develops during the bright fortnight.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, in due course of time, a son was born to the King. Hearing news of this, all the inhabitants of the state of Śūrasena were extremely pleased.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Citraketu was especially pleased. After purifying himself by bathing and by decorating himself with ornaments, he engaged learned brāhmaṇas in offering benedictions to the child and performing the birth ceremony.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Unto the brāhmaṇas who took part in the ritualistic ceremony the King gave charity of gold, silver, garments, ornaments, villages, horses and elephants, as well as sixty crores of cows [six hundred million cows].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As a cloud indiscriminately pours water on the earth, the beneficent King Citraketu, to increase the reputation, opulence and longevity of his son, distributed like rainfall all desirable things to everyone.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When a poor man gets some money after great difficulty, his affection for the money increases daily. Similarly, when King Citraketu, after great difficulty, received a son, his affection for the son increased day after day.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mother’s attraction and attention to the son, like that of the child’s father, excessively increased. The other wives, seeing Kṛtadyuti’s son, were very much agitated, as if by high fevers, with a desire to have sons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As King Citraketu fostered his son very carefully, his affection for Queen Kṛtadyuti increased, but gradually he lost affection for the other wives, who had no sons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The other queens were extremely unhappy due to their being sonless. Because of the King’s negligence toward them, they condemned themselves in envy and lamented.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">93</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A wife who has no sons is neglected at home by her husband and dishonored by her co-wives exactly like a maidservant. Certainly such a woman is condemned in every respect because of her sinful life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            As stated by Cāṇakya Paṇḍita:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mātā yasya gṛhe nāsti<br>bhāryā cāpriya-vādinī<br>araṇyaṁ tena gantavyaṁ<br>yathāraṇyaṁ tathā gṛham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “A person who has no mother at home and whose wife does not speak sweetly should go to the forest. For such a person, living at home and living in the forest are equal.” Similarly, for a woman who has no son, who is not cared for by her husband and whose co-wives neglect her, treating her like a maidservant, to go to the forest is better than to remain at home.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Even maidservants who are constantly engaged in rendering service to the husband are honored by the husband, and thus they have nothing for which to lament. Our position, however, is that we are maidservants of the maidservant. Therefore we are most unfortunate.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: Being neglected by their husband and seeing Kṛtadyuti’s opulence in possessing a son, Kṛtadyuti’s co-wives always burned in envy, which became extremely strong.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As their envy increased, they lost their intelligence. Being extremely hardhearted and unable to tolerate the King’s neglect, they finally administered poison to the son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Unaware of the poison administered by her co-wives, Queen Kṛtadyuti walked within the house, thinking that her son was sleeping deeply. She did not understand that he was dead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thinking that her child had been sleeping for a long time, Queen Kṛtadyuti, who was certainly very intelligent, ordered the nurse, “My dear friend, please bring my son here.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the maidservant approached the child, who was lying down, she saw that his eyes were turned upward. There were no signs of life, all his senses having stopped, and she could understand that the child was dead. Seeing this, she immediately cried, “Now I am doomed,” and fell to the ground.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In great agitation, the maidservant struck her breast with both hands and cried loudly in regretful words. Hearing her loud voice, the Queen immediately came, and when she approached her son, she saw that he was suddenly dead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="48">
+        <div class="verse_controls">
+          <button class="verse_num btn">[48.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In great lamentation, her hair and dress in disarray, the Queen fell to the ground unconscious.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="49">
+        <div class="verse_controls">
+          <button class="verse_num btn">[49.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, hearing the loud crying, all the inhabitants of the palace came, both men and women. Being equally aggrieved, they also began to cry. The queens who had administered the poison also cried pretentiously, knowing full well their offense.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="50">
+        <div class="verse_controls">
+          <button class="verse_num btn">[50–51.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When King Citraketu heard of his son’s death from unknown causes, he became almost blind. Because of his great affection for his son, his lamentation grew like a blazing fire, and as he went to see the dead child, he kept slipping and falling on the ground. Surrounded by his ministers and other officers and the learned brāhmaṇas present, the King approached and fell unconscious at the child’s feet, his hair and dress scattered. When the King, breathing heavily, regained consciousness, his eyes were tearful, and he could not speak.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="52">
+        <div class="verse_controls">
+          <button class="verse_num btn">[52.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the Queen saw her husband, King Citraketu, merged in great lamentation and saw the dead child, who was the only son in the family, she lamented in various ways. This increased the pain in the cores of the hearts of all the inhabitants of the palace, the ministers and all the brāhmaṇas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="53">
+        <div class="verse_controls">
+          <button class="verse_num btn">[53.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The garland of flowers decorating the Queen’s head fell, and her hair scattered. Falling tears melted the collyrium on her eyes and moistened her breasts, which were covered with kuṅkuma powder. As she lamented the loss of her son, her loud crying resembled the sweet sound of a kurarī bird.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="54">
+        <div class="verse_controls">
+          <button class="verse_num btn">[54.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_54_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Alas, O Providence, O Creator, You are certainly inexperienced in creation, for during the lifetime of a father You have caused the death of his son, thus acting in opposition to Your creative laws. If You are determined to contradict these laws, You are certainly the enemy of living entities and are never merciful.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_54_purport">
+          <p>
+            This is the way a conditioned soul condemns the supreme creator when he meets reverses. Sometimes he accuses the Supreme Personality of Godhead of being crooked because some people are happy and some are not. Here the Queen blames supreme providence for her son’s death. Following the creative laws, a father should die first and then his son. If the creative laws are changed according to the whims of providence, then providence certainly should not be considered merciful, but must be considered inimical to the created being. Actually it is not the creator, but the conditioned soul who is inexperienced. He does not know how the subtle laws of fruitive activity work, and without knowledge of these laws of nature, he ignorantly criticizes the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="55">
+        <div class="verse_controls">
+          <button class="verse_num btn">[55.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_55_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">157</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My Lord, You may say that there is no law that a father must die in the lifetime of his son and that a son must be born in the lifetime of his father, since everyone lives and dies according to his own fruitive activity. However, if fruitive activity is so strong that birth and death depend upon it, there is no need of a controller, or God. Again, if You say that a controller is needed because the material energy does not have the power to act, one may answer that if the bonds of affection You have created are disturbed by fruitive action, no one will raise children with affection; instead, everyone will cruelly neglect his children. Since You have cut the bonds of affection that compel a parent to raise his child, You appear inexperienced and unintelligent.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_55_purport">
+          <p>
+            As stated in the <span class="Italic">Brahma-saṁhitā, karmāṇi nirdahati kintu ca bhakti-bhājām: [Bs. </span>5.54] one who has taken to Kṛṣṇa consciousness, devotional service, is not affected by the results of <span class="Italic">karma.</span> In this verse, <span class="Italic">karma</span> has been stressed on the basis of <span class="Italic">karma-mīmāṁsā</span> philosophy, which says that one must act according to his <span class="Italic">karma</span> and that a supreme controller must give the results of <span class="Italic">karma.</span> The subtle laws of <span class="Italic">karma,</span> which are controlled by the Supreme, cannot be understood by ordinary conditioned souls. Therefore Kṛṣṇa says that one who can understand Him and how He is acting, controlling everything by subtle laws, immediately becomes freed by His grace. That is the statement of <span class="Italic">Brahma-saṁhitā</span> (<span class="Italic">karmāṇi nirdahati kintu ca bhakti-bhājām [Bs. </span>5.54]). One should take to devotional service without reservations and surrender everything to the supreme will of the Lord. That will make one happy in this life and the next.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="56">
+        <div class="verse_controls">
+          <button class="verse_num btn">[56.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_56_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">89</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear son, I am helpless and very much aggrieved. You should not give up my company. Just look at your lamenting father. We are helpless because without a son we shall have to suffer the distress of going to the darkest hellish regions. You are the only hope by which we can get out of these dark regions. Therefore I request you not to go any further with the merciless Yama.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_56_purport">
+          <p>
+            According to the Vedic injunctions, one must accept a wife just to beget a son who can deliver one from the clutches of Yamarāja. Unless one has a son to offer oblations to the <span class="Italic">pitās,</span> or forefathers, one must suffer in Yamarāja’s kingdom. King Citraketu was very much aggrieved. thinking that because his son was going away with Yamarāja he himself would again suffer. The subtle laws exist for the <span class="Italic">karmīs;</span> if one becomes a devotee, he has no more obligations to the laws of <span class="Italic">karma.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="57">
+        <div class="verse_controls">
+          <button class="verse_num btn">[57.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear son, you have slept a long time. Now please get up. Your playmates are calling you to play. Since you must be very hungry, please get up and suck my breast and dissipate our lamentation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="58">
+        <div class="verse_controls">
+          <button class="verse_num btn">[58.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear son, I am certainly most unfortunate, for I can no longer see your mild smiling. You have closed your eyes forever. I therefore conclude that you have been taken from this planet to another, from which you will not return. My dear son, I can no longer hear your pleasing voice.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="59">
+        <div class="verse_controls">
+          <button class="verse_num btn">[59.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: Accompanied by his wife, who was thus lamenting for her dead son, King Citraketu began crying loudly with an open mouth, being greatly aggrieved.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="60">
+        <div class="verse_controls">
+          <button class="verse_num btn">[60.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As the King and Queen lamented, all their male and female followers joined them in crying. Because of the sudden accident, all the citizens of the kingdom were almost unconscious.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="61">
+        <div class="verse_controls">
+          <button class="verse_num btn">[61.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the great sage Aṅgirā understood that the King was almost dead in an ocean of lamentation, he went there with Nārada Ṛṣi.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Fourteenth Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “King Citraketu’s Lamentation.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/14">https://prabhupadabooks.com/sb/6/14</a><!-- span.text_source_copied_date
+        | on 2023-12-17 19:48:07 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.13: King Indra Afflicted by Sinful Reaction     Next: SB 6.15: The Saints Narada and Angira Instruct King Citraketu</div>
+      </p>
+    </div>
+  </body>
+</html>

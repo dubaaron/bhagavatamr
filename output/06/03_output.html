@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 6.3, Yamarāja Instructs His Messengers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 6:<br>
+        “Prescribed Duties for Mankind”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Three:<br>Yamarāja Instructs His Messengers
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          As related in this chapter, the Yamadūtas approached Yamarāja, who very exhaustively explained <span class="Italic">bhāgavata-dharma,</span> the religious principle of devotional service. Yamarāja thus satisfied the Yamadūtas, who had been very disappointed. Yamarāja said, “Although Ajāmila was calling for his son, he chanted the holy name of the Lord, Nārāyaṇa, and simply by a glimpse of the chanting of the holy name, he immediately achieved the association of Lord Viṣṇu’s order carriers, who saved him from your attempt to arrest him. This is quite all right. It is a fact that even a chronically sinful person who chants the holy name of the Lord, although not completely without offenses, does not take another material birth.”
+        </p>
+        <p>
+          By chanting the holy name of the Lord, Ajāmila had met four order carriers of Lord Viṣṇu. They were very beautiful and had quickly come to rescue him. Yamarāja now described them. “The Viṣṇudūtas are all pure devotees of the Lord, the Supreme Person in regard to the creation, maintenance and annihilation of this cosmic manifestation. Neither King Indra, Varuṇa, Śiva, Brahmā, the seven <span class="Italic">ṛṣis</span> nor I myself can understand the transcendental activities of the Supreme Lord, who is self-sufficient and beyond the reach of the material senses. With material senses, no one can attain enlightenment about Him. The Lord, the master of the illusory energy, possesses transcendental qualities for the good fortune of everyone, and His devotees are also qualified in that way. The devotees, concerned only with rescuing the fallen souls from this material world, apparently take birth in different places in the material world just to save the conditioned souls. If one is somewhat interested in spiritual life, the devotees of the Lord protect him in many ways.”
+        </p>
+        <p>
+          Yamarāja continued, “The essence of <span class="Italic">sanātana-dharma,</span> or eternal religion, is extremely confidential. No one but the Lord Himself can deliver that confidential religious system to human society. It is by the mercy of the Lord that the transcendental system of religion can be understood by His pure devotees, and specifically by the twelve <span class="Italic">mahājanas</span>—Lord Brahmā, Nārada Muni, Lord Śiva, the Kumāras, Kapila, Manu, Prahlāda, Janaka, Bhīṣma, Bali, Śukadeva Gosvāmī and me. Other learned scholars, headed by Jaimini, are almost always covered by the illusory energy, and therefore they are more or less attracted by the flowery language of the three <span class="Italic">Vedas,</span> namely <span class="Italic">Ṛg, Yajur</span> and <span class="Italic">Sāma,</span> which are called <span class="Italic">trayī.</span> Instead of becoming pure devotees, people captivated by the flowery words of these three <span class="Italic">Vedas</span> are interested in the Vedic ritualistic ceremonies. They cannot understand the glories of chanting the holy name of the Lord. Intelligent persons, however, take to the devotional service of the Lord. When they chant the holy name of the Lord without offenses, they are no longer subject to my rulings. If by chance they commit some sinful act, they are protected by the holy name of the Lord because that is where their interest lies. The four weapons of the Lord, especially the club and the Sudarśana <span class="Italic">cakra,</span> always protect the devotees. One who chants, hears or remembers the holy name of the Lord without duplicity, or who prays or offers obeisances to the Lord, becomes perfect, whereas even a learned person may be called to hell if he is bereft of devotional service.”
+        </p>
+        <p>
+          After Yamarāja thus described the glories of the Lord and His devotees, Śukadeva Gosvāmī further explained the potency of chanting the holy name and the futility of performing Vedic ritualistic ceremonies and pious activities for atonement.
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">31</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit said: O my lord, O Śukadeva Gosvāmī, Yamarāja is the controller of all living entities in terms of their religious and irreligious activities, but his order had been foiled. When his servants, the Yamadūtas, informed him of their defeat by the Viṣṇudūtas, who had stopped them from arresting Ajāmila, what did he reply?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says that although the statements of the Yamadūtas were fully upheld by Vedic principles, the statements of the Viṣṇudūtas were triumphant. This was confirmed by Yamarāja himself.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great sage, never before has it been heard anywhere that an order from Yamarāja has been baffled. Therefore I think that people will have doubts about this that no one but you can eradicate. Since that is my firm conviction, kindly explain the reasons for these events.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī replied: My dear King, when the order carriers of Yamarāja were baffled and defeated by the order carriers of Viṣṇu, they approached their master, the controller of Saṁyamanī-purī and master of sinful persons, to tell him of this incident.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">86</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Yamadūtas said: Our dear lord, how many controllers or rulers are there in this material world? How many causes are responsible for manifesting the various results of activities performed under the three modes of material nature [sattva-guṇa, rajo-guṇa and tamo-guṇa]?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says that the Yamadūtas, the order carriers of Yamarāja, were so disappointed that they asked their master, almost in great anger, whether there were many masters other than him. Furthermore, because the Yamadūtas had been defeated and their master could not protect them, they were inclined to say that there was no need to serve such a master. If a servant cannot carry out the orders of his master without being defeated, what is the use of serving such a powerless master?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">236</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If in this universe there are many rulers and justices who disagree about punishment and reward, their contradictory actions will neutralize each other, and no one will be punished or rewarded. Otherwise, if their contradictory acts fail to neutralize each other, everyone will have to be both punished and rewarded.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Because the Yamadūtas had been unsuccessful in carrying out the order of Yamarāja, they doubted whether Yamarāja actually had the power to punish the sinful. Although they had gone to arrest Ajāmila, following Yamarāja’s order, they found themselves unsuccessful because of the order of some higher authority. Therefore they were unsure of whether there were many authorities or only one. If there were many authorities who gave different judgments, which could be contradictory, a person might be wrongly punished or wrongly rewarded, or he might be neither punished nor rewarded. According to our experience in the material world, a person punished in one court may appeal to another. Thus the same man may be either punished or rewarded according to different judgments. However, in the law of nature or the court of the Supreme Personality of Godhead there cannot be such contradictory judgments. The judges and their judgments must be perfect and free from contradictions. Actually the position of Yamarāja was very awkward in the case of Ajāmila because the Yamadūtas were right in attempting to arrest Ajāmila, but the Viṣṇudūtas had baffled them. Although Yamarāja, under these circumstances, was accused by both the Viṣṇudūtas and the Yamadūtas, he is perfect in administering justice because he is empowered by the Supreme Personality of Godhead. Therefore he will explain what his real position is and how everyone is controlled by the supreme controller, the Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">89</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Yamadūtas continued: Since there are many different karmīs, or workers, there may be different judges or rulers to give them justice, but just as one central emperor controls different departmental rulers, there must be one supreme controller to guide all the judges.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            In governmental management there may be departmental officials to give justice to different persons, but the law must be one, and that central law must control everyone. The Yamadūtas could not imagine that two judges would give two different verdicts in the same case, and therefore they wanted to know who the central judge is. The Yamadūtas were certain that Ajāmila was a most sinful man, but although Yamarāja wanted to punish him, the Viṣṇudūtas excused him. This was a puzzling situation that the Yamadūtas wanted Yamarāja to clarify.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The supreme judge must be one, not many. It was our understanding that you are that supreme judge and that you have jurisdiction even over the demigods. Our impression was that you are the master of all living entities, the supreme authority who discriminates between the pious and impious activities of all human beings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">46</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            But now we see that the punishment ordained under your authority is no longer effective, since your order has been transgressed by four wonderful and perfect persons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The Yamadūtas had been under the impression that Yamarāja was the only person in charge of administering justice. They were fully confident that no one could counteract his judgments, but now, to their surprise, his order had been violated by the four wonderful persons from Siddhaloka.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">29</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            We were bringing the most sinful Ajāmila toward the hellish planets, following your order, when those beautiful persons from Siddhaloka forcibly cut the knots of the ropes with which we were arresting him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura remarks that the Yamadūtas wanted to bring the Viṣṇudūtas before Yamarāja. If Yamarāja could then have punished the Viṣṇudūtas, the Yamadūtas would have been satisfied.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">52</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As soon as the sinful Ajāmila uttered the name Nārāyaṇa, these four beautiful men immediately arrived and reassured him, saying, “Do not fear. Do not fear.” We wish to know about them from Your Lordship. If you think we are able to understand them, kindly describe who they are.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            The order carriers of Yamarāja, being very much aggrieved because of their defeat by the four Viṣṇudūtas, wanted to bring them before Yamarāja and, if possible, punish them. Otherwise they desired to commit suicide. Before pursuing either course, however, they wanted to know about the Viṣṇudūtas from Yamarāja, who is also omniscient.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">71</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Thus having been questioned, Lord Yamarāja, the supreme controller of the living entities, was very pleased with his order carriers because of hearing from them the holy name of Nārāyaṇa. He remembered the lotus feet of the Lord and began to reply.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Śrīla Yamarāja, the supreme controller of the living entities in terms of their pious and impious activities, was very pleased with his servants because they had chanted the holy name of Nārāyaṇa in his dominion. Yamarāja has to deal with men who are all sinful and who can hardly understand Nārāyaṇa. Consequently when his order carriers uttered the name of Nārāyaṇa, he was extremely pleased, for he also is a Vaiṣṇava.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">281</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Yamarāja said: My dear servants, you have accepted me as the Supreme, but factually I am not. Above me, and above all the other demigods, including Indra and Candra, is the one supreme master and controller. The partial manifestations of His personality are Brahmā, Viṣṇu and Śiva, who are in charge of the creation, maintenance and annihilation of this universe. He is like the two threads that form the length and breadth of a woven cloth. The entire world is controlled by Him just as a bull is controlled by a rope in its nose.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The order carriers of Yamarāja suspected that there was a ruler even above Yamarāja. To eradicate their doubts, Yamarāja immediately replied, “Yes, there is one supreme controller above everything.” Yamarāja is in charge of some of the moving living entities, namely the human beings, but the animals, who also move, are not under his control. Only human beings have consciousness of right and wrong, and among them only those who perform sinful activities come under the control of Yamarāja. Therefore although Yamarāja is a controller, he is only a departmental controller of a few living entities. There are other demigods who control many other departments, but above them all is one supreme controller, Kṛṣṇa. <span class="Italic">Īśvaraḥ paramaḥ kṛṣṇaḥ sac-cid-ānanda-vigrahaḥ [Bs. </span>5.1]<span class="Italic">:</span> the supreme controller is Kṛṣṇa. Others, who control their own departments in the affairs of the universe, are insignificant in comparison to Kṛṣṇa, the supreme controller. Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.7), <span class="Italic">mattaḥ parataraṁ nānyat kiñcid asti dhanañjaya:</span> “My dear Dhanañjaya [Arjuna], no one is superior to Me.” Therefore Yamarāja immediately cleared away the doubts of his assistants, the Yamadūtas, by confirming that there is a supreme controller above all others.
+          </p>
+          <p>
+            Śrīla Madhvācārya explains that the words <span class="Italic">otaṁ protam</span> refer to the cause of all causes. The Supreme Lord is both vertical and horizontal to the cosmic manifestation. This is confirmed by the following verse from the <span class="Italic">Skanda Purāṇa:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yathā kanthā-paṭāḥ sūtra<br>otāḥ protāś ca sa sthitāḥ<br>evaṁ viṣṇāv idaṁ viśvam<br>otaṁ protaṁ ca saṁsthitam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Like the two threads, horizontal and vertical, of which a quilt is manufactured, Lord Viṣṇu is situated as the vertical and horizontal cause of the cosmic manifestation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">486</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just as the driver of a bullock cart ties ropes through the nostrils of his bulls to control them, the Supreme Personality of Godhead binds all men through the ropes of His words in the Vedas, which set forth the names and activities of the distinct orders of human society [brāhmaṇa, kṣatriya, vaiśya and śūdra]. In fear, the members of these orders all worship the Supreme Lord by offering Him presentations according to their respective activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            In this material world, everyone is conditioned, regardless of who he is. One may be a human being, a demigod or an animal, tree or plant, but everything is controlled by the laws of nature, and behind this natural control is the Supreme Personality of Godhead. This is confirmed by <span class="Ref_Italic">Bhagavad-gītā</span> (9.10), wherein Kṛṣṇa says, <span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sa-carācaram:</span> “The material nature is working under My direction and producing all moving and nonmoving beings.” Thus Kṛṣṇa is behind the natural machine, which works under His control.
+          </p>
+          <p>
+            Apart from other living entities, the living being in the human form of body is systematically controlled by the Vedic injunctions in terms of the divisions of <span class="Italic">varṇa</span> and <span class="Italic">āśrama.</span> A human being is expected to follow the rules and regulations of <span class="Italic">varṇa</span> and <span class="Italic">āśrama;</span> otherwise he cannot escape punishment by Yamarāja. The point is that every human being is expected to elevate himself to the position of a <span class="Italic">brāhmaṇa,</span> the most intelligent man, and then one must transcend that position to become a Vaiṣṇava. This is the perfection of life. The <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span> can elevate themselves by worshiping the Lord according to their activities (<span class="Italic">sve sve karmaṇy abhirataḥ saṁsiddhiṁ labhate naraḥ</span>). The divisions of <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> are necessary to insure the proper execution of duties and peaceful existence for everyone, but everyone is directed to worship the Supreme Lord, who is all-pervading (<span class="Italic">yena sarvam idaṁ tatam</span>). The Supreme Lord exists vertically and horizontally (<span class="Italic">otaṁ protam</span>), and therefore if one follows the Vedic injunctions by worshiping the Supreme Lord according to one’s ability, his life will be perfect. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.13):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ pumbhir dvija-śreṣṭhā<br>varṇāśrama-vibhāgaśaḥ<br>svanuṣṭhitasya dharmasya<br>saṁsiddhir hari-toṣaṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O best among the twice-born, it is therefore concluded that the highest perfection one can achieve, by discharging his prescribed duties <span class="Italic">[dharma]</span> according to caste divisions and orders of life, is to please the Lord Hari.” The <span class="Italic">varṇāśrama</span> institution offers the perfect process for making one eligible to return home, back to Godhead, because the aim of every <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> is to please the Supreme Lord. One can please the Lord under the direction of a bona fide spiritual master. and if one does so his life is perfect. The Supreme Lord is worshipable. and everyone worships Him directly or indirectly. Those who worship Him directly get the results of liberation quickly, whereas the liberation of those who serve Him indirectly is delayed.
+          </p>
+          <p>
+            The words <span class="Italic">nāmabhir vāci</span> are very important. In the <span class="Italic">varṇāśrama</span> institution, there are different names—<span class="Italic">brāhmaṇa, kṣatriya, vaiśya, śūdra, brahmacārī, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsī.</span> The <span class="Italic">vāk,</span> or Vedic injunctions, give directions for all these divisions. Everyone is expected to offer obeisances to the Supreme Lord and perform duties as indicated in the <span class="Italic">Vedas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14–15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">252</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I, Yamarāja; Indra, the King of heaven; Nirṛti; Varuṇa; Candra, the moon-god; Agni; Lord Śiva; Pavana; Lord Brahmā; Sūrya, the sun-god; Viśvāsu; the eight Vasus; the Sādhyas; the Maruts; the Rudras; the Siddhas; and Marīci and the other great ṛṣis engaged in maintaining the departmental affairs of the universe, as well as the best of the demigods headed by Bṛhaspati, and the great sages headed by Bhṛgu are all certainly freed from the influence of the two base material modes of nature, namely passion and ignorance. Nevertheless, although we are in the mode of goodness, we cannot understand the activities of the Supreme Personality of Godhead. What, then, is to be said of others, who, under illusion, merely speculate to know God?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The men and other living entities within this cosmic manifestation are controlled by the three modes of nature. For the living entities controlled by the base qualities of nature, passion and ignorance, there is no possibility of understanding God. Even those in the mode of goodness, like the many demigods and great <span class="Italic">ṛṣis</span> described in these verses, cannot understand the activities of the Supreme Personality of Godhead. As stated in <span class="Italic">Bhagavad-gītā,</span> one who is situated in the devotional service of the Lord is transcendental to all the material qualities. Therefore the Lord personally says that no one can understand Him but the <span class="Italic">bhaktas,</span> who are transcendental to all material qualities (<span class="Italic">bhaktyā mām abhijānāti [Bg. </span>18.55]). As stated by Bhīṣmadeva to Mahārāja Yudhiṣṭhira in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.9.16):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na hy asya karhicid rājan<br>pumān veda vidhitsitam<br>yad-vijijñāsayā yuktā<br>muhyanti kavayo ’pi hi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O King, no one can know the plan of the Lord [Śrī Kṛṣṇa]. Even though great philosophers inquire exhaustively, they are bewildered.” No one, therefore, can understand God by speculative knowledge. Indeed, by speculation one will be bewildered (<span class="Italic">muhyanti</span>). This is also confirmed by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (7.3):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">manuṣyāṇāṁ sahasreṣu<br>kaścid yatati siddhaye<br>yatatām api siddhānāṁ<br>kaścin māṁ vetti tattvataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Among many thousands of men, one may endeavor for perfection, and even among the <span class="Italic">siddhas,</span> those who have already become perfect, only one who adopts the process of <span class="Italic">bhakti,</span> devotional service, can understand Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">210</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As the different limbs of the body cannot see the eyes, the living entities cannot see the Supreme Lord, who is situated as the Supersoul in everyone’s heart. Not by the senses, by the mind, by the life air, by thoughts within the heart, or by the vibration of words can the living entities ascertain the real situation of the Supreme Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Although the different parts of the body do not have the power to see the eyes, the eyes direct the movements of the body’s different parts. The legs move forward because the eyes see what is in front of them, and the hand touches because the eyes see touchable entities. Similarly, every living being acts according to the direction of the Supersoul, who is situated within the heart. As the Lord Himself confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> “I am sitting in everyone’s heart and giving directions for remembrance, knowledge and forgetfulness.” Elsewhere in <span class="Italic">Bhagavad-gītā</span> it is stated, <span class="Italic">īśvaraḥ sarva-bhūtānāṁ hṛd-deśe ’rjuna tiṣṭhati: [Bg. 18.61]</span> “The Supreme Lord, as the Supersoul, is situated within the heart.” The living entity cannot do anything without the sanction of the Supersoul. The Supersoul is acting at every moment, but the living entity cannot understand the form and activities of the Supersoul by manipulating his senses. The example of the eyes and the bodily limbs is very appropriate. If the limbs could see, they could walk forward without the help of the eyes, but that is impossible. Although one cannot see the Supersoul in one’s heart through sensual activities, His direction is necessary.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">106</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is self-sufficient and fully independent. He is the master of everyone and everything, including the illusory energy. He has His form, qualities and features; and similarly His order carriers, the Vaiṣṇavas, who are very beautiful, possess bodily features, transcendental qualities and a transcendental nature almost like His. They always wander within this world with full independence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            Yamarāja was describing the Supreme Personality of Godhead, the supreme controller, but the order carriers of Yamarāja were very eager to know about the Viṣṇudūtas, who had defeated them in their encounter with Ajāmila. Yamarāja therefore stated that the Viṣṇudūtas resemble the Supreme Personality of Godhead in their bodily features, transcendental qualities and nature. In other words, the Viṣṇudūtas, or Vaiṣṇavas, are almost as qualified as the Supreme Lord. Yamarāja informed the Yamadūtas that the Viṣṇudūtas are no less powerful than Lord Viṣṇu. Since Viṣṇu is above Yamarāja, the Viṣṇudūtas are above the Yamadūtas. Persons protected by the Viṣṇudūtas, therefore, cannot be touched by the Yamadūtas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">224</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The order carriers of Lord Viṣṇu, who are worshiped even by the demigods, possess wonderful bodily features exactly like those of Viṣṇu and are very rarely seen. The Viṣṇudūtas protect the devotees of the Lord from the hands of enemies, from envious persons and even from my jurisdiction, as well as from natural disturbances.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            Yamarāja has specifically described the qualities of the Viṣṇudūtas to convince his own servants not to be envious of them. Yamarāja warned the Yamadūtas that the Viṣṇudūtas are worshiped with respectful obeisances by the demigods and are always very alert to protect the devotees of the Lord from the hands of enemies, from natural disturbances and from all dangerous conditions in this material world. Sometimes the members of the Kṛṣṇa Consciousness Society are afraid of the impending danger of world war and ask what would happen to them if a war should occur. In all kinds of danger, they should be confident of their protection by the Viṣṇudūtas or the Supreme Personality of Godhead, as confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">kaunteya pratijānīhi na me bhaktaḥ praṇaśyati</span>). Material danger is not meant for devotees. This is also confirmed in <span class="Italic">Śrīmad-Bhāgavatam.</span> <span class="Italic">Padaṁ padaṁ yad vipadāṁ na teṣām:</span> in this material world there are dangers at every step, but they are not meant for devotees who have fully surrendered unto the lotus feet of the Lord. The pure devotees of Lord Viṣṇu may rest assured of the Lord’s protection, and as long as they are in this material world they should fully engage in devotional service by preaching the cult of Śrī Caitanya Mahāprabhu and Lord Kṛṣṇa, namely the Hare Kṛṣṇa movement of Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">326</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Real religious principles are enacted by the Supreme Personality of Godhead. Although fully situated in the mode of goodness, even the great ṛṣis who occupy the topmost planets cannot ascertain the real religious principles, nor can the demigods or the leaders of Siddhaloka, to say nothing of the asuras, ordinary human beings, Vidyādharas and Cāraṇas.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            When challenged by the Viṣṇudūtas to describe the principles of religion, the Yamadūtas said, <span class="Italic">veda-praṇihito dharmaḥ:</span> the religious principles are the principles enacted in the Vedic literature. They did not know, however, that the Vedic literature contains ritualistic ceremonies that are not transcendental, but are meant to keep peace and order among materialistic persons in the material world. Real religious principles are <span class="Italic">nistraiguṇya,</span> above the three modes of material nature, or transcendental. The Yamadūtas did not know these transcendental religious principles, and therefore when prevented from arresting Ajāmila they were surprised. Materialistic persons who attach all their faith to the Vedic rituals are described in <span class="Ref_Italic">Bhagavad-gītā</span> (2.42), wherein Kṛṣṇa says, <span class="Italic">veda-vāda-ratāḥ pārtha nānyad astīti vādinaḥ:</span> the supposed followers of the <span class="Italic">Vedas</span> say that there is nothing beyond the Vedic ceremonies. Indeed, there is a group of men in India who are very fond of the Vedic rituals, not understanding the meaning of these rituals, which are intended to elevate one gradually to the transcendental platform of knowing Kṛṣṇa (<span class="Italic">vedaiś ca sarvair aham eva vedyaḥ [Bg. </span>15.15]). Those who do not know this principle but who simply attach their faith to the Vedic rituals are called <span class="Italic">veda-vāda-ratāḥ.</span>
+          </p>
+          <p>
+            Herein it is stated that the real religious principle is that which is given by the Supreme Personality of Godhead. That principle is stated in <span class="Italic">Bhagavad-gītā.</span> <span class="Italic">Sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> [Bg. 18.66] one should give up all other duties and surrender unto the lotus feet of Kṛṣṇa. That is the real religious principle everyone should follow. Even though one follows Vedic scriptures, one may not know this transcendental principle, for it is not known to everyone. To say nothing of human beings, even the demigods in the upper planetary systems are unaware of it. This transcendental religious principle must be understood from the Supreme Personality of Godhead directly or from His special representative, as stated in the next verses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20–21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">294</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā, Bhagavān Nārada, Lord Śiva, the four Kumāras, Lord Kapila [the son of Devahūti], Svāyambhuva Manu, Prahlāda Mahārāja, Janaka Mahārāja, Grandfather Bhīṣma, Bali Mahārāja, Śukadeva Gosvāmī and I myself know the real religious principle. My dear servants, this transcendental religious principle, which is known as bhāgavata-dharma, or surrender unto the Supreme Lord and love for Him, is uncontaminated by the material modes of nature. It is very confidential and difficult for ordinary human beings to understand, but if by chance one fortunately understands it, he is immediately liberated, and thus he returns home, back to Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> Lord Kṛṣṇa refers to <span class="Italic">bhāgavata-dharma</span> as the most confidential religious principle (<span class="Italic">sarva-guhyatamam, guhyād guhyataram</span>). Kṛṣṇa says to Arjuna, “Because you are My very dear friend, I am explaining to you the most confidential religion.” <span class="Italic">Sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja:</span> [Bg. 18.66] “Give up all other duties and surrender unto Me.” One may ask, “If this principle is very rarely understood, what is the use of it?” In answer, Yamarāja states herein that this religious principle is understandable if one follows the <span class="Italic">paramparā</span> system of Lord Brahmā, Lord Śiva, the four Kumāras and the other standard authorities. There are four lines of disciplic succession: one from Lord Brahmā, one from Lord Śiva, one from Lakṣmī, the goddess of fortune, and one from the Kumāras. The disciplic succession from Lord Brahmā is called the Brahma-sampradāya, the succession from Lord Śiva (Śambhu) is called the Rudra-sampradāya, the one from the goddess of fortune, Lakṣmījī, is called the Śrī-sampradāya, and the one from the Kumāras is called the Kumāra-sampradāya. One must take shelter of one of these four <span class="Italic">sampradāyas</span> in order to understand the most confidential religious system. In the <span class="Italic">Padma Purāṇa</span> it is said, <span class="Italic">sampradāya-vihīnā ye mantrās te niṣphalā matāḥ:</span> if one does not follow the four recognized disciplic successions, his <span class="Italic">mantra</span> or initiation is useless. In the present day there are many <span class="Italic">apasampradāyas,</span> or <span class="Italic">sampradāyas</span> which are not bona fide, which have no link to authorities like Lord Brahmā, Lord Śiva, the Kumāras or Lakṣmī. People are misguided by such <span class="Italic">sampradāyas.</span> The <span class="Italic">śāstras</span> say that being initiated in such a <span class="Italic">sampradāya</span> is a useless waste of time, for it will never enable one to understand the real religious principles.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">340</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Devotional service, beginning with the chanting of the holy name of the Lord, is the ultimate religious principle for the living entity in human society.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            As stated in the previous verse, <span class="Italic">dharmaṁ bhāgavatam,</span> real religious principles, are <span class="Italic">bhāgavata-dharma,</span> the principles described in <span class="Italic">Śrīmad-Bhāgavatam</span> itself or in <span class="Italic">Bhagavad-gītā,</span> the preliminary study of the <span class="Italic">Bhāgavatam.</span> What are these principles? The <span class="Italic">Bhāgavatam</span> says, <span class="Italic">dharmaḥ projjhita-kaitavo ’tra: [SB </span>1.1.2] in <span class="Italic">Śrīmad-Bhāgavatam</span> there are no cheating religious systems. Everything in the <span class="Italic">Bhāgavatam</span> is directly connected with the Supreme Personality of Godhead. The <span class="Italic">Bhāgavatam</span> further says, <span class="Italic">sa vai puṁsāṁ paro dharmo yato bhaktir adhokṣaje: [SB </span>1.2.6] the supreme religion is that which teaches its followers how to love the Supreme Personality of Godhead, who is beyond the reach of experimental knowledge. Such a religious system begins with <span class="Italic">tan-nāma-grahaṇa,</span> chanting of the holy name of the Lord (<span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam [SB </span>7.5.23]). After chanting the holy name of the Lord and dancing in ecstasy, one gradually sees the form of the Lord, the pastimes of the Lord and the transcendental qualities of the Lord. This way one fully understands the situation of the Personality of Godhead. One can come to this understanding of the Lord, how He descends into the material world, how He takes His births and what activities He performs, but one can know this only by executing devotional service. As stated in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">bhaktyā mām abhijānāti: [Bg. </span>18.55] simply by devotional service one can understand everything about the Supreme Lord. If one fortunately understands the Supreme Lord in this way, the result is <span class="Italic">tyaktvā dehaṁ punar janma naiti: [Bg. </span>4.9] after giving up his material body, he no longer has to take birth in this material world. Instead, he returns home, back to Godhead. That is the ultimate perfection. Therefore Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (8.15):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mām upetya punar janma<br>duḥkhālayam aśāśvatam<br>nāpnuvanti mahātmānaḥ<br>saṁsiddhiṁ paramāṁ gatāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “After attaining Me, the great souls, who are <span class="Italic">yogīs</span> in devotion, never return to this temporary world, which is full of miseries, because they have attained the highest perfection.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">115</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear servants, who are as good as my sons, just see how glorious is the chanting of the holy name of the Lord. The greatly sinful Ajāmila chanted only to call his son, not knowing that he was chanting the Lord’s holy name. Nevertheless, by chanting the holy name of the Lord, he remembered Nārāyaṇa, and thus he was immediately saved from the ropes of death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            There is no need to conduct research into the significance of the chanting of the Hare Kṛṣṇa <span class="Italic">mantra.</span> The history of Ajāmila is sufficient proof of the power of the Lord’s holy name and the exalted position of a person who chants the holy name incessantly. Therefore Śrī Caitanya Mahāprabhu advised:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            In this age of Kali, no one can perform all the ritualistic ceremonies for becoming liberated; that is extremely difficult. Therefore all the <span class="Italic">śāstras</span> and all the <span class="Italic">ācāryas</span> have recommended that in this age one chant the holy name.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">894</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore it should be understood that one is easily relieved from all sinful reactions by chanting the holy name of the Lord and chanting of His qualities and activities. This is the only process recommended for relief from sinful reactions. Even if one chants the holy name of the Lord with improper pronunciation, he will achieve relief from material bondage if he chants without offenses. Ajāmila, for example, was extremely sinful, but while dying he merely chanted the holy name, and although calling his son, he achieved complete liberation because he remembered the name of Nārāyaṇa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            In the assembly of Raghunātha dāsa Gosvāmī’s father, Haridāsa Ṭhākura confirmed that simply by chanting the holy name of the Lord one is liberated, even if he does not chant completely inoffensively. <span class="Italic">Smārta-brāhmaṇas</span> and Māyāvādīs do not believe that one can achieve liberation in this way, but the truth of Haridāsa Ṭhākura’s statement is supported by many quotations from <span class="Italic">Śrīmad-Bhāgavatam.</span>
+          </p>
+          <p>
+            In his commentary on this verse, for example, Śrīdhara Svāmī gives the following quotation:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sāyaṁ prātar gṛṇan bhaktyā<br>duḥkha-grāmād vimucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “If one always chants the holy name of the Lord with great devotion in the evening and in the morning, one can become free from all material miseries.” Another quotation confirms that one can achieve liberation if one hears the holy name of the Lord constantly, every day with great respect (<span class="Italic">anudinam idam ādareṇa śṛṇvan</span>). Another quotation says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śravaṇaṁ kīrtanaṁ dhyānaṁ<br>harer adbhuta-karmaṇaḥ<br>janma-karma-guṇānāṁ ca<br>tad-arthe ’khila-ceṣṭitam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should always chant and hear about the extraordinarily wonderful activities of the Lord, one should meditate upon these activities, and one should endeavor to please the Lord.” (<span class="Ref_Italic">Bhāg.</span> 11.3.27)
+          </p>
+          <p>
+            Śrīdhara Svāmī also quotes from the <span class="Italic">Purāṇas, pāpa-kṣayaś ca bhavati smaratāṁ tam ahar-niśam:</span> “One can become free from all sinful reactions simply by remembering the lotus feet of the Lord day and night [<span class="Italic">ahar-niśam</span>].” Furthermore, he quotes from <span class="Ref_Italic">Bhāgavatam</span> (6.3.31):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tasmāt saṅkīrtanaṁ viṣṇor<br>jagan-maṅgalam aṁhasām<br>mahatām api kauravya<br>viddhy aikāntika-niṣkṛtam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            All these quotations prove that one who constantly engages in chanting and hearing of the holy activities, name, fame and form of the Lord is liberated. As stated wonderfully in this verse, <span class="Italic">etāvatālam agha-nirharaṇāya puṁsām:</span> simply by uttering the name of the Lord, one is freed from all sinful reactions.
+          </p>
+          <p>
+            The word <span class="Italic">alam,</span> which is used in this verse, indicates that simply uttering the holy name of the Lord is sufficient. This word is used with different imports. As stated in the <span class="Italic">Amara-kośa,</span> the most authorized dictionary in the Sanskrit language, <span class="Italic">alaṁ bhūṣaṇa-paryāpti-śakti-vāraṇa-vācakam:</span> the word <span class="Italic">alam</span> is used to mean “ornament,” “sufficiency,” “power” and “restraint.” Here the word <span class="Italic">alam</span> is used to indicate that there is no need of any other process, for the chanting of the holy name of the Lord is sufficient. Even if one chants imperfectly, one becomes free from all sinful reactions by chanting.
+          </p>
+          <p>
+            This power of chanting the holy name was proved by the liberation of Ajāmila. When Ajāmila chanted the holy name of Nārāyaṇa, he did not precisely remember the Supreme Lord; instead, he remembered his own son. At the time of death, Ajāmila certainly was not very clean; indeed, he was famous as a great sinner. Furthermore, one’s physiological condition is completely disturbed at the time of death, and in such an awkward condition it would certainly have been very difficult for Ajāmila to have chanted clearly. Nevertheless, Ajāmila achieved liberation simply by chanting the holy name of the Lord. Therefore, what is to be said of those who are not sinful like Ajāmila? It is to be concluded that with a strong vow one should chant the holy name of the Lord—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare—for thus one will certainly be delivered from the clutches of <span class="Italic">māyā</span> by the grace of Kṛṣṇa.
+          </p>
+          <p>
+            The chanting of the Hare Kṛṣṇa <span class="Italic">mantra</span> is recommended even for persons who commit offenses, because if they continue chanting they will gradually chant offenselessly. By chanting the Hare Kṛṣṇa <span class="Italic">mantra</span> without offenses, one increases his love for Kṛṣṇa. As stated by Śrī Caitanya Mahāprabhu, <span class="Italic">premā pum-artho mahān:</span> one’s main concern should be to increase one’s attachment to the Supreme Personality of Godhead and to increase one’s love for Him.
+          </p>
+          <p>
+            In this regard Śrīla Viśvanātha Cakravartī Ṭhākura quotes the following verse from <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.19.24):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">evaṁ dharmair manuṣyāṇām<br>uddhavātmani vedinām<br>mayi sañjāyate bhaktiḥ<br>ko ’nyo ’rtho ’syāvaśiṣyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “My dear Uddhava, the supreme religious system for human society is that by which one can awaken his dormant love for Me.” Commenting on this verse, Śrīla Viśvanātha Cakravartī Ṭhākura describes the word <span class="Italic">bhakti</span> by saying <span class="Italic">premaivoktaḥ.</span> <span class="Italic">Kaḥ anyaḥ arthaḥ asya:</span> in the presence of <span class="Italic">bhakti,</span> what is the necessity of liberation?
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura also quotes this verse from the <span class="Italic">Padma Purāṇa:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāmāparādha-yuktānāṁ<br>nāmāny eva haranty agham<br>aviśrānti-prayuktāni<br>tāny evārtha-karāṇi ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Even if in the beginning one chants the Hare Kṛṣṇa <span class="Italic">mantra</span> with offenses, one will become free from such offenses by chanting again and again. <span class="Italic">Pāpa-kṣayaś ca bhavati smaratāṁ tam ahar-niśam:</span> one becomes free from all sinful reactions if one chants day and night, following the recommendation of Śrī Caitanya Mahāprabhu. It was Śrī Caitanya Mahāprabhu who quoted the following verse:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of quarrel and hypocrisy the only means of deliverance is chanting the holy name of the Lord. There is no other way. There is no other way. There is no other way.” If the members of the Kṛṣṇa consciousness movement strictly follow this recommendation of Śrī Caitanya Mahāprabhu, their position will always be secure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">435</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because they are bewildered by the illusory energy of the Supreme Personality of Godhead, Yājñavalkya and Jaimini and other compilers of the religious scriptures cannot know the secret, confidential religious system of the twelve mahājanas. They cannot understand the transcendental value of performing devotional service or chanting the Hare Kṛṣṇa mantra. Because their minds are attracted to the ritualistic ceremonies mentioned in the Vedas—especially the Yajur Veda, Sāma Veda and Ṛg Veda—their intelligence has become dull. Thus they are busy collecting the ingredients for ritualistic ceremonies that yield only temporary benefits, such as elevation to Svargaloka for material happiness. They are not attracted to the saṅkīrtana movement; instead, they are interested in dharma, artha, kāma and mokṣa.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Since one may easily achieve the highest success by chanting the holy name of the Lord, one may ask why there are so many Vedic ritualistic ceremonies and why people are attracted to them. This verse answers that question. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15), <span class="Italic">vedaiś ca sarvair aham eva vedyaḥ:</span> the real purpose of studying the <span class="Italic">Vedas</span> is to approach the lotus feet of Lord Kṛṣṇa. Unfortunately, unintelligent people bewildered by the grandeur of Vedic <span class="Italic">yajñas</span> want to see gorgeous sacrifices performed. They want Vedic <span class="Italic">mantras</span> chanted and huge amounts of money spent for such ceremonies. Sometimes we have to observe the Vedic ritualistic ceremonies to please such unintelligent men. Recently, when we established a large Kṛṣṇa-Balarāma temple in Vṛndāvana, we were obliged to have Vedic ceremonies enacted by <span class="Italic">brāhmaṇas</span> because the inhabitants of Vṛndāvana, especially the <span class="Italic">smārta-brāhmaṇas,</span> would not accept Europeans and Americans as bona fide <span class="Italic">brāhmaṇas.</span> Thus we had to engage <span class="Italic">brāhmaṇas</span> to perform costly <span class="Italic">yajñas.</span> In spite of these <span class="Italic">yajñas,</span> the members of our Society performed <span class="Italic">saṅkīrtana</span> loudly with <span class="Italic">mṛdaṅgas,</span> and I considered the <span class="Italic">saṅkīrtana</span> more important than the Vedic ritualistic ceremonies. Both the ceremonies and the <span class="Italic">saṅkīrtana</span> were going on simultaneously. The ceremonies were meant for persons interested in Vedic rituals for elevation to heavenly planets (<span class="Italic">jaḍī-kṛta-matir madhu-puṣpitāyām</span>), whereas the <span class="Italic">saṅkīrtana</span> was meant for pure devotees interested in pleasing the Supreme Personality of Godhead. We would simply have performed <span class="Italic">saṅkīrtana,</span> but then the inhabitants of Vṛndāvana would not have taken the installation ceremony seriously. As explained here, the Vedic performances are meant for those whose intelligence has been dulled by the flowery language of the <span class="Italic">Vedas,</span> which describe fruitive activities intended to elevate one to the higher planets.
+          </p>
+          <p>
+            Especially in this age of Kali, <span class="Italic">saṅkīrtana</span> alone is sufficient. If the members of our temples in the different parts of the world simply continue <span class="Italic">saṅkīrtana</span> before the Deity, especially before Śrī Caitanya Mahāprabhu, they will remain perfect. There is no need of any other performances. Nevertheless, to keep oneself clean in habits and mind, Deity worship and other regulative principles are required. Śrīla Jīva Gosvāmī says that although <span class="Italic">saṅkīrtana</span> is sufficient for the perfection of life, the <span class="Italic">arcanā,</span> or worship of the Deity in the temple, must continue in order that the devotees may stay clean and pure. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura therefore recommended that one follow both processes simultaneously. We strictly follow his principle of performing Deity worship and <span class="Italic">saṅkīrtana</span> along parallel lines. This we should continue.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">264</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Considering all these points, therefore, intelligent men decide to solve all problems by adopting the devotional service of chanting the holy name of the Lord, who is situated in everyone’s heart and who is a mine of all auspicious qualities. Such persons are not within my jurisdiction for punishment. Generally they never commit sinful activities, but even if by mistake or because of bewilderment or illusion they sometimes commit sinful acts, they are protected from sinful reactions because they always chant the Hare Kṛṣṇa mantra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            In this regard Śrīla Viśvanātha Cakravartī Ṭhākura quotes the following verse from the prayers of Lord Brahmā (<span class="Ref_Italic">Bhāg.</span> 10.14.29):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">athāpi te deva padāmbuja-dvaya-<br>prasāda-leśānugṛhīta eva hi<br>jānāti tattvaṁ bhagavan-mahimno<br>na cānya eko ’pi ciraṁ vicinvan</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The purport is that even though one is a very learned scholar of the Vedic <span class="Italic">śāstras,</span> he may be completely unaware of the existence of the Supreme Personality of Godhead and His name, fame, qualities and so forth, whereas one who is not a great scholar can understand the position of the Supreme Personality of Godhead if he somehow or other becomes a pure devotee of the Lord by engaging in devotional service. Therefore this verse spoken by Yamarāja says, <span class="Italic">evaṁ vimṛśya sudhiyo bhagavati:</span> those who engage in the loving service of the Lord become <span class="Italic">sudhiyaḥ,</span> intelligent, but this is not so of a Vedic scholar who does not understand Kṛṣṇa’s name, fame and qualities. A pure devotee is one whose intelligence is clear; he is truly thoughtful because he engages in the service of the Lord—not as a matter of show, but with love, with his mind, words and body. Nondevotees may make a show of religion, but it is not very effective because although they ostentatiously attend a temple or church, they are thinking of something else. Such persons are neglecting their religious duty and are punishable by Yamarāja. But a devotee who commits sinful acts, which he may do unwillingly or accidentally because of his former habits, is excused. That is the value of the <span class="Italic">saṅkīrtana</span> movement.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">157</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear servants, please do not approach such devotees, for they have fully surrendered to the lotus feet of the Supreme Personality of Godhead. They are equal to everyone, and their narrations are sung by the demigods and the inhabitants of Siddhaloka. Please do not even go near them. They are always protected by the club of the Supreme Personality of Godhead, and therefore Lord Brahmā and I and even the time factor are not competent to chastise them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            In effect, Yamarāja warned his servants, “My dear servants, despite what you may have done previously to disturb the devotees, henceforward you should stop. The actions of devotees who have surrendered unto the lotus feet of the Lord and who constantly chant the holy name of the Lord are praised by the demigods and the residents of Siddhaloka. Those devotees are so respectable and exalted that Lord Viṣṇu personally protects them with the club in His hand. Therefore, regardless of what you have done this time, henceforward you should not approach such devotees; otherwise you will be killed by the club of Lord Viṣṇu. This is my warning. Lord Viṣṇu has a club and <span class="Italic">cakra</span> to punish nondevotees. Do not risk punishment by attempting to disturb the devotees. Not to speak of you, if even Lord Brahmā or I were to punish them, Lord Viṣṇu would punish us. Therefore do not disturb the devotees any further.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">283</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Paramahaṁsas are exalted persons who have no taste for material enjoyment and who drink the honey of the Lord’s lotus feet. My dear servants, bring to me for punishment only persons who are averse to the taste of that honey, who do not associate with paramahaṁsas and who are attached to family life and worldly enjoyment, which form the path to hell.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            After warning the Yamadūtas not to approach the devotees, Yamarāja now indicates who is to be brought before him. He specifically advises the Yamadūtas to bring him the materialistic persons who are attached to household life merely for sex. As stated in <span class="Italic">Śrīmad-Bhāgavatam, yan maithunādi-gṛhamedhi-sukhaṁ hi tuccham: [SB </span>7.9.45] people are attached to household life for sex only. They are always harassed in many ways by their material engagements, and their only happiness is that after working very hard all day, at night they sleep and indulge in sex. <span class="Italic">Nidrayā hriyate naktaṁ vyavāyena ca vā vayaḥ: [SB </span>2.1.3] at night, materialistic householders sleep or indulge in sex life. <span class="Italic">Divā cārthehayā rajan kuṭumba-bharaṇena vā:</span> during the day they are busy trying to find out where money is, and if they get money they spend it to maintain their families. Yamarāja specifically advises his servants to bring these persons to him for punishment and not to bring the devotees, who always lick the honey at the lotus feet of the Lord, who are equal to everyone, and who try to preach Kṛṣṇa consciousness because of sympathy for all living entities. Devotees are not liable to punishment by Yamarāja, but persons who have no information of Kṛṣṇa consciousness cannot be protected by their material life of so-called family enjoyment. <span class="Italic">Śrīmad-Bhāgavatam</span> says (2.1.4):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">dehāpatya-kalatrādiṣv<br>ātma-sainyeṣv asatsv api<br>teṣāṁ pramatto nidhanaṁ<br>paśyann api na paśyati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Such persons complacently believe that their nations, communities or families can protect them, unaware that all such fallible soldiers will be destroyed in due course of time. In conclusion, one should try to associate with persons who engage in devotional service twenty-four hours a day.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">223</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear servants, please bring to me only those sinful persons who do not use their tongues to chant the holy name and qualities of Kṛṣṇa, whose hearts do not remember the lotus feet of Kṛṣṇa even once, and whose heads do not bow down even once before Lord Kṛṣṇa. Send me those who do not perform their duties toward Viṣṇu, which are the only duties in human life. Please bring me all such fools and rascals.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            The word <span class="Italic">viṣṇu-kṛtyān</span> is very important in this verse because the purpose of human life is to please Lord Viṣṇu. <span class="Italic">Varṇāśrama-dharma</span> is also meant for that purpose. As stated in the <span class="Ref_Italic">Viṣṇu Purāṇa</span> (3.8.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varṇāśramācāravatā<br>puruṣeṇa paraḥ pumān<br>viṣṇur ārādhyate panthā<br>nānyat tat-toṣa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Human society is meant to follow strictly the <span class="Italic">varṇāśrama-dharma,</span> which divides society into four social divisions (<span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span>) and four spiritual divisions (<span class="Italic">brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa</span>). <span class="Italic">Varṇāśrama-dharma</span> easily brings one nearer to Lord Viṣṇu, who is the only true objective in human society. <span class="Italic">Na te viduḥ svārtha-gatiṁ hi viṣṇum: [SB </span>7.5.31] unfortunately, however, people do not know that their self-interest is to return home, back to Godhead, or to approach Lord Viṣṇu. <span class="Italic">Durāśayā ye bahir-artha-māninaḥ:</span> instead, they are simply bewildered. Every human being is expected to perform duties meant for approaching Lord Viṣṇu. Therefore Yamarāja advises the Yamadūtas to bring him those persons who have forgotten their duties toward Viṣṇu (<span class="Italic">akṛta-viṣṇu-kṛtyān</span>). One who does not chant the holy name of Viṣṇu (Kṛṣṇa), who does not bow down to the Deity of Viṣṇu, and who does not remember the lotus feet of Viṣṇu is punishable by Yamarāja. In summary, all <span class="Italic">avaiṣṇavas,</span> persons unconcerned with Lord Viṣṇu, are punishable by Yamarāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">96</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [Then Yamarāja, considering himself and his servants to be offenders, spoke as follows, begging pardon from the Lord.] O my Lord, my servants have surely committed a great offense by arresting a Vaiṣṇava such as Ajāmila. O Nārāyaṇa, O supreme and oldest person, please forgive us. Because of our ignorance, we failed to recognize Ajāmila as a servant of Your Lordship, and thus we have certainly committed a great offense. Therefore with folded hands we beg Your pardon. My Lord, since You are supremely merciful and are always full of good qualities, please pardon us. We offer our respectful obeisances unto You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            Lord Yamarāja took upon himself the responsibility for the offense committed by his servants. If the servant of an establishment makes a mistake, the establishment takes responsibility for it. Although Yamarāja is above offenses, his servants, practically with his permission, went to arrest Ajāmila, which was a great offense. The <span class="Italic">nyāya-śāstra</span> confirms, <span class="Italic">bhṛtyāparādhe svāmino daṇḍaḥ:</span> if a servant makes a mistake, the master is punishable because he is responsible for the offense. Taking this seriously, Yamarāja, along with his servants, prayed with folded hands to be excused by the Supreme Personality of Godhead, Nārāyaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">114</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, the chanting of the holy name of the Lord is able to uproot even the reactions of the greatest sins. Therefore the chanting of the saṅkīrtana movement is the most auspicious activity in the entire universe. Please try to understand this so that others will take it seriously.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            We should note that although Ajāmila chanted the name of Nārāyaṇa imperfectly, he was delivered from all sinful reactions. The chanting of the holy name is so auspicious that it can free everyone from the reactions of sinful activities. One should not conclude that one may continue to sin with the intention of chanting Hare Kṛṣṇa to neutralize the reactions. Rather, one should be very careful to be free from all sins and never think of counteracting sinful activities by chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> for this is another offense. If by chance a devotee accidentally performs some sinful activity, the Lord will excuse him, but one should not intentionally perform sinful acts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">206</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who constantly hears and chants the holy name of the Lord and hears and chants about His activities can very easily attain the platform of pure devotional service, which can cleanse the dirt from one’s heart. One cannot achieve such purification merely by observing vows and performing Vedic ritualistic ceremonies.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            One may very easily practice chanting and hearing the holy name of the Lord and thus become ecstatic in spiritual life. <span class="Italic">Padma Purāṇa</span> states:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāmāparādha-yuktānāṁ<br>nāmāny eva haranty agham<br>aviśrānti-prayuktāni<br>tāny evārtha-karāṇi ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Even if one chants the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> offensively, one can avoid offenses by continuously chanting without deviation. One who becomes accustomed to this practice will always remain in a pure transcendental position, untouchable by sinful reactions. Śukadeva Gosvāmī especially requested King Parīkṣit to note this fact very carefully. There is no profit, however, in executing the Vedic ritualistic ceremonies. By performing such activities one may go to the higher planetary systems, but as stated in <span class="Ref_Italic">Bhagavad-gītā</span> (9.21), <span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti:</span> when the period of one’s enjoyment in the heavenly planets is terminated because of the limited extent of the results of one’s pious activities, one must return to earth. Thus there is no use in endeavoring to travel up and down in the universe. It is better to chant the holy name of the Lord so that one may become fully purified and eligible to return home, back to Godhead. That is the aim of life, and that is the perfection of life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">132</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Devotees who always lick the honey from the lotus feet of Lord Kṛṣṇa do not care at all for material activities, which are performed under the three modes of material nature and which bring only misery. Indeed, devotees never give up the lotus feet of Kṛṣṇa to return to material activities. Others, however, who are addicted to Vedic rituals because they have neglected the service of the Lord’s lotus feet and are enchanted by lusty desires, sometimes perform acts of atonement. Nevertheless, being incompletely purified, they return to sinful activities again and again.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            A devotee’s duty is to chant the Hare Kṛṣṇa <span class="Italic">mantra.</span> One may sometimes chant with offenses and sometimes without offenses, but if one seriously adopts this process, he will achieve perfection, which cannot be achieved through Vedic ritualistic ceremonies of atonement. Persons who are attached to the Vedic ritualistic ceremonies, but do not believe in devotional service, who advise atonement, but do not appreciate the chanting of the Lord’s holy name, fail to achieve the highest perfection. Devotees, therefore, being completely detached from material enjoyment, never give up Kṛṣṇa consciousness for Vedic ritualistic ceremonies. Those who are attached to Vedic ritualistic ceremonies because of lusty desires are subjected to the tribulations of material existence again and again. Mahārāja Parīkṣit has compared their activities to <span class="Italic">kuñjara-śauca,</span> the bathing of an elephant.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">21</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After hearing from the mouth of their master about the extraordinary glories of the Lord and His name, fame and attributes, the Yamadūtas were struck with wonder. Since then, as soon as they see a devotee, they fear him and dare not look at him again.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            Since this incident, the Yamadūtas have given up the dangerous behavior of approaching devotees. For the Yamadūtas, a devotee is dangerous.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the great sage Agastya, the son of Kumbha, was residing in the Malaya Hills and worshiping the Supreme Personality of Godhead, I approached him, and he explained to me this confidential history.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em><span class="Italic">Thus end the Bhaktivedanta purports of the Sixth Canto, Third Chapter, of the</span> Śrīmad-Bhāgavatam, <span class="Italic">entitled “Yamarāja Instructs His Messengers.”</span></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/6/3">https://prabhupadabooks.com/sb/6/3</a><!-- span.text_source_copied_date
+        | on 2023-07-09 15:21:26 -0600 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 6.2: Ajamila Delivered by the Visnudutas     Next: SB 6.4: The Hamsa-guhya Prayers</div>
+      </p>
+    </div>
+  </body>
+</html>

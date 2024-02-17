@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 5.16, A Description of Jambūdvīpa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 5:<br>
+        “The Creative Impetus”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Sixteen:<br>A Description of Jambūdvīpa
+      </h1>
+      <div class="summary">
+        <div class="Normal-Level">While describing the character of Mahārāja Priyavrata and his descendants, Śukadeva Gosvāmī also described Meru Mountain and the planetary system known as Bhū-maṇḍala. Bhū-maṇḍala is like a lotus flower, and its seven islands are compared to the whorl of the lotus. The place known as Jambūdvīpa is in the middle of that whorl. In Jambūdvīpa there is a mountain known as Sumeru, which is made of solid gold. The height of this mountain is 84,000 <span class="Italic">yojanas,</span> of which 16,000 <span class="Italic">yojanas</span> are below the earth. Its width is estimated to be 32,000 <span class="Italic">yojanas</span> at its summit and 16,000 <span class="Italic">yojanas</span> at its foot. (One <span class="Italic">yojana</span> equals approximately eight miles.) This king of mountains, Sumeru, is the support of the planet earth.</div><div class="Normal-Level"><tb>On the southern side of the land known as Ilāvṛta-varṣa are the mountains known as Himavān, Hemakūṭa and Niṣadha, and on the northern side are the mountains Nīla, Śveta and Śṛṅga. Similarly, on the eastern and western side there are Mālyavān and Gandhamādana, two large mountains. Surrounding Sumeru Mountain are four mountains known as Mandara, Merumandara, Supārśva and Kumuda, each 10,000 <span class="Italic">yojanas</span> long and 10,000 <span class="Italic">yojanas</span> high. On these four mountains there are trees a banyan tree. There are also lakes full of milk, honey, sugarcane juice and pure water. These lakes can fulfill all desires. There are also gardens named Nandana, Citraratha, Vaibhrājaka and Sarvatobhadra. On the side of Supārśva Mountain is a <span class="Italic">kadamba</span> tree with streams of honey flowing from its hollows, and on Kumuda Mountain there is a banyan tree named Śatavalśa, from whose roots flow rivers containing milk, yogurt and many other desirable things. Surrounding Sumeru Mountain like filaments of the whorl of a lotus are twenty mountain ranges such as Kuraṅga, Kurara, Kusumbha, Vaikaṅka and Trikūṭa. To the east of Sumeru are the mountains Jaṭhara and Devakūṭa, to the west are Pavana and Pāriyātra, to the south are Kailāsa and Karavīra, and to the north are Triśṛṅga and Makara. These eight mountains are about 18,000 <span class="Italic">yojanas</span> long, 2,000 <span class="Italic">yojanas</span> wide and 2,000 <span class="Italic">yojanas</span> high. On the summit of Mount Sumeru is Brahmapurī, the residence of Lord Brahmā. Each of its four sides is 10,000 <span class="Italic">yojanas</span> long. Surrounding Brahmapurī are the cities of King Indra and seven other demigods. These cities are one fourth the size of Brahmapurī.</tb></div>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">203</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit said to Śukadeva Gosvāmī: O brāhmaṇa, you have already informed me that the radius of Bhū-maṇḍala extends as far as the sun spreads its light and heat and as far as the moon and all the stars can be seen.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            In this verse it is stated that the planetary system known as Bhū-maṇḍala extends to the limits of the sunshine. According to modern science, the sunshine reaches earth from a distance of 93,000,000 miles. If we calculate according to this modern information, 93,000,000 miles can be considered the radius of Bhū-maṇḍala. In the Gāyatrī <span class="Italic">mantra,</span> we chant <span class="Italic">oṁ bhūr bhuvaḥ svaḥ.</span> The word <span class="Italic">bhūr</span> refers to Bhū-maṇḍala. <span class="Italic">Tat savitur vareṇyam:</span> the sunshine spreads throughout Bhū-maṇḍala. Therefore the sun is worshipable. The stars, which are known as <span class="Italic">nakṣatra,</span> are not different suns, as modern astronomers suppose. From <span class="Ref_Italic">Bhagavad-gītā</span> (10.21) we understand that the stars are similar to the moon (<span class="Italic">nakṣatrāṇām ahaṁ śaśī</span>). Like the moon, the stars reflect the sunshine. Apart from our modern distinguished estimations of where the planetary systems are located, we can understand that the sky and its various planets were studied long, long before <span class="Italic">Śrīmad-Bhāgavatam</span> was compiled. Śukadeva Gosvāmī explained the location of the planets, and this indicates that the information was known long, long before Śukadeva Gosvāmī related it to Mahārāja Parīkṣit. The location of the various planetary systems was not unknown to the sages who flourished in the Vedic age.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, the rolling wheels of Mahārāja Priyavrata’s chariot created seven ditches, in which the seven oceans came into existence. Because of these seven oceans, Bhū-maṇḍala is divided into seven islands. You have given a very general description of their measurement, names and characteristics. Now I wish to know of them in detail. Kindly fulfill my desire.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">392</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the mind is fixed upon the Supreme Personality of Godhead in His external feature made of the material modes of nature—the gross universal form—it is brought to the platform of pure goodness. In that transcendental position, one can understand the Supreme Personality of Godhead, Vāsudeva, who in His subtler form is self-effulgent and beyond the modes of nature. O my lord, please describe vividly how that form, which covers the entire universe, is perceived.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Mahārāja Parīkṣit had already been advised by his spiritual master, Śukadeva Gosvāmī, to think of the universal form of the Lord, and therefore, following the advice of his spiritual master, he continuously thought of that form. The universal form is certainly material, but because everything is an expansion of the energy of the Supreme Personality of Godhead, ultimately nothing is material. Therefore Parīkṣit Mahārāja’s mind was saturated with spiritual consciousness. Śrīla Rūpa Gosvāmī has stated:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prāpañcikatayā buddhyā<br>hari-sambandhi-vastunaḥ<br>mumukṣubhiḥ parityāgo<br>vairāgyaṁ phalgu kathyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Everything, even that which is material, is connected with the Supreme Personality of Godhead. Therefore everything should be engaged in the service of the Lord. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura translates this verse as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">hari-sevāya yāhā haya anukūla<br>viṣaya baliyā tāhāra tyāge haya bhula</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should not give up anything connected with the Supreme Personality of Godhead, thinking it material or enjoyable for the material senses.” Even the senses, when purified, are spiritual. When Mahārāja Parīkṣit was thinking of the universal form of the Lord, his mind was certainly situated on the transcendental platform. Therefore although he might not have had any reason to be concerned with detailed information of the universe, he was thinking of it in relationship with the Supreme Lord, and therefore such geographical knowledge was not material but transcendental. Elsewhere in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.5.20) Nārada Muni has said, <span class="Italic">idaṁ hi viśvaṁ bhagavān ivetaraḥ:</span> the entire universe is also the Supreme Personality of Godhead, although it appears different from Him. Therefore although Parīkṣit Mahārāja had no need for geographical knowledge of this universe, that knowledge was also spiritual and transcendental because he was thinking of the entire universe as an expansion of the energy of the Lord.
+          </p>
+          <p>
+            In our preaching work also, we deal with so much property and money and so many books bought and sold, but because these dealings all pertain to the Kṛṣṇa consciousness movement, they should never be considered material. That one is absorbed in thoughts of such management does not mean that he is outside of Kṛṣṇa consciousness. If one rigidly observes the regulative principle of chanting sixteen rounds of the <span class="Italic">mahā-mantra</span> every day, his dealings with the material world for the sake of spreading the Kṛṣṇa consciousness movement are not different from the spiritual cultivation of Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">296</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great ṛṣi Śukadeva Gosvāmī said: My dear King, there is no limit to the expansion of the Supreme Personality of Godhead’s material energy. This material world is a transformation of the material qualities [sattva-guṇa, rajo-guṇa and tamo-guṇa], yet no one could possibly explain it perfectly, even in a lifetime as long as that of Brahmā No one in the material world is perfect, and an imperfect person could not describe this material universe accurately, even after continued speculation. O King, I shall nevertheless try to explain to you the principal regions, such as Bhū-goloka [Bhūloka], with their names, forms, measurements and various symptoms.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            The material world is only one fourth of the Supreme Personality of Godhead’s creation, but it is unlimited and impossible for anyone to know or describe, even with the qualification of a life as long as that of Brahmā, who lives for millions and millions of years. Modern scientists and astronomers try to explain the cosmic situation and the vastness of space, and some of them believe that all the glittering stars are different suns. From <span class="Italic">Bhagavad-gītā,</span> however, we understand that all these stars (<span class="Italic">nakṣatras</span>) are like the moon, in that they reflect the sunshine. They are not independent luminaries. Bhūloka is explained to be that portion of outer space through which the heat and light of the sun extend. Therefore it is natural to conclude that this universe extends in space as far as we can see and encompasses the glittering stars. Śrīla Śukadeva Gosvāmī admitted that to give full details of this expansive material universe would be impossible, but nevertheless he wanted to give the King as much knowledge as he had received through the <span class="Italic">paramparā</span> system. We should conclude that if one cannot comprehend the material expansions of the Supreme Personality of Godhead, one certainly cannot estimate the expansiveness of the spiritual world. The <span class="Ref_Italic">Brahma-saṁhitā</span> (5.33) confirms this:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">advaitam acyutam anādim ananta-rūpam<br>ādyaṁ purāṇa-puruṣaṁ nava-yauvanaṁ ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The limits of the expansions of Govinda, the Supreme Personality of Godhead, cannot be estimated by anyone, even a person as perfect as Brahmā, not to speak of tiny scientists whose senses and instruments are all imperfect and who cannot give us information of even this one universe. We should therefore be satisfied with the information obtainable from Vedic sources as spoken by authorities like Śukadeva Gosvāmī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The planetary system known as Bhū-maṇḍala resembles a lotus flower, and its seven islands resemble the whorl of that flower. The length and breadth of the island known as Jambūdvīpa, which is situated in the middle of the whorl, are one million yojanas [eight million miles]. Jambūdvīpa is round like the leaf of a lotus flower.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">71</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In Jambūdvīpa there are nine divisions of land, each with a length of 9,000 yojanas [72,000 miles]. There are eight mountains that mark the boundaries of these divisions and separate them nicely.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura gives the following quotation from the <span class="Italic">Vāyu Purāṇa,</span> wherein the locations of the various mountains, beginning with the Himalayas, are described.
+          </p>
+          <p>
+            <blockquote><div class="Prose-Verse-in-purp">dhanurvat saṁsthite jñeye dve varṣe dakṣiṇottare; dīrghāṇi tatra catvāri caturasram ilāvṛtam iti dakṣiṇottare bhāratottara-kuru-varṣe catvāri kiṁpuruṣa-harivarṣa-ramyaka-hiraṇmayāni varṣāṇi nīla-niṣadhayos tiraścinībhūya samudra-praviṣṭayoḥ saṁlagnatvam aṅgīkṛtya bhadrāśva-ketumālayor api dhanur-ākṛtitvam; atas tayor dairghyata eva madhye saṅkucitatvena nava-sahasrāyāmatvam; ilāvṛtasya tu meroḥ sakāśāt catur-dikṣu nava-sahasrāyama-tvaṁ saṁbhavet vastutas tv ilāvṛta-bhadrāśva-ketumālānāṁ catus-triṁśat-sahasrāyāmatvaṁ jñeyam.</div></blockquote>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Amidst these divisions, or varṣas, is the varṣa named Ilāvṛta, which is situated in the middle of the whorl of the lotus. Within Ilāvṛta-varṣa is Sumeru Mountain, which is made of gold. Sumeru Mountain is like the pericarp of the lotuslike Bhū-maṇḍala planetary system. The mountain’s height is the same as the width of Jambūdvīpa—or, in other words, 100,000 yojanas [800,000 miles]. Of that, 16,000 yojanas [128,000 miles] are within the earth, and therefore the mountain’s height above the earth is 84,000 yojanas [672,000 miles]. The mountain’s width is 32,000 yojanas [256,000 miles] at its summit and 16,000 yojanas at its base.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">88</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Just north of Ilāvṛta-varṣa—and going further northward, one after another—are three mountains named Nīla, Śveta and Śṛṅgavān. These mark the borders of the three varṣas named Ramyaka, Hiraṇmaya and Kuru and separate them from one another. The width of these mountains is 2,000 yojanas [16,000 miles]. Lengthwise, they extend east and west to the beaches of the ocean of salt water. Going from south to north, the length of each mountain is one tenth that of the previous mountain, but the height of them all is the same.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            In this regard, Madhvācārya quotes the following verses from the <span class="Italic">Brahmāṇḍa Purāṇa:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yathā bhāgavate tūktaṁ<br>bhauvanaṁ kośa-lakṣaṇam<br>tasyāvirodhato yojyam<br>anya-granthāntare sthitam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">maṇḍode puraṇaṁ caiva<br>vyatyāsaṁ kṣīra-sāgare<br>rāhu-soma-ravīṇāṁ ca<br>maṇḍalād dvi-guṇoktitām<br>vinaiva sarvam unneyaṁ<br>yojanābhedato ’tra tu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            It appears from these verses that aside from the sun and moon, there is an invisible planet called Rāhu. The movements of Rāhu cause both solar and lunar eclipses. We suggest that the modern expeditions attempting to reach the moon are mistakenly going to Rāhu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Similarly, south of Ilāvṛta-varṣa and extending from east to west are three great mountains named (from north to south) Niṣadha, Hemakūṭa and Himālaya. Each of them is 10,000 yojanas [80,000 miles] high. They mark the boundaries of the three varṣas named Hari-varṣa, Kimpuruṣa-varṣa and Bhārata-varṣa [India].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">202</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the same way, west and east of Ilāvṛta-varṣa are two great mountains named Mālyavān and Gandhamādana respectively. These two mountains, which are 2,000 yojanas [16,000 miles] high, extend as far as Nīla Mountain in the north and Niṣadha in the south. They indicate the borders of Ilāvṛta-varṣa and also the varṣas known as Ketumāla and Bhadrāśva.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            There are so many mountains, even on this planet earth. We do not think that the measurements of all of them have actually been calculated. While passing over the mountainous region from Mexico to Caracas, we actually saw so many mountains that we doubt whether their height, length and breadth have been properly measured. Therefore, as indicated in <span class="Italic">Śrīmad-Bhāgavatam</span> by Śukadeva Gosvāmī, we should not try to comprehend the greater mountainous areas of the universe merely by our calculations. Śukadeva Gosvāmī has already stated that such calculations would be very difficult even if one had a duration of life like that of Brahmā. We should simply be satisfied with the statements of authorities like Śukadeva Gosvāmī and appreciate how the entire cosmic manifestation has been made possible by the external energy of the Supreme Personality of Godhead. The measurements given herein, such as 10,000 <span class="Italic">yojanas</span> or 100,000 <span class="Italic">yojanas,</span> should be considered correct because they have been given by Śukadeva Gosvāmī. Our experimental knowledge can neither verify nor disprove the statements of <span class="Italic">Śrīmad-Bhāgavatam.</span> We should simply hear these statements from the authorities. If we can appreciate the extensive energy of the Supreme Personality of Godhead, that will benefit us.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the four sides of the great mountain known as Sumeru are four mountains—Mandara, Merumandara, Supārśva and Kumuda—which are like its belts. The length and height of these mountains are calculated to be 10,000 yojanas [80,000 miles].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Standing like flagstaffs on the summits of these four mountains are a mango tree, a rose apple tree, a kadamba tree and a banyan tree. Those trees are calculated to have a width of 100 yojanas [800 miles] and a height of 1,100 yojanas [8,800 miles]. Their branches also spread to a radius of 1,100 yojanas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13–14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Parīkṣit, best of the Bharata dynasty, between these four mountains are four huge lakes. The water of the first tastes just like milk; the water of the second, like honey; and that of the third, like sugarcane juice. The fourth lake is filled with pure water. The celestial beings such as the Siddhas, Cāraṇas and Gandharvas, who are also known as demigods, enjoy the facilities of those four lakes. Consequently they have the natural perfections of mystic yoga, such as the power to become smaller than the smallest or greater than the greatest. There are also four celestial gardens named Nandana, Caitraratha, Vaibhrājaka and Sarvatobhadra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The best of the demigods, along with their wives, who are like ornaments of heavenly beauty, meet together and enjoy within those gardens, while their glories are sung by lesser demigods known as Gandharvas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">30</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the lower slopes of Mandara Mountain is a mango tree named Devacūta. It is 1,100 yojanas high. Mangoes as big as mountain peaks and as sweet as nectar fall from the top of this tree for the enjoyment of the denizens of heaven.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            In the <span class="Italic">Vāyu Purāṇa</span> there is also a reference to this tree by great learned sages:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">aratnīnāṁ śatāny aṣṭāv<br>eka-ṣaṣṭy-adhikāni ca<br>phala-pramāṇam ākhyātam<br>ṛṣibhis tattva-darśibhiḥ</div>
+            </div>
+            </blockquote>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When all those solid fruits fall from such a height, they break, and the sweet, fragrant juice within them flows out and becomes increasingly more fragrant as it mixes with other scents. That juice cascades from the mountain in waterfalls and becomes a river called Aruṇodā, which flows pleasantly through the eastern side of Ilāvṛta.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The pious wives of the Yakṣas act as personal maidservants to assist Bhavānī, the wife of Lord Śiva. Because they drink the water of the River Aruṇodā, their bodies become fragrant, and as the air carries away that fragrance, it perfumes the entire atmosphere for eighty miles around.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">60</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Similarly, the fruits of the jambū tree, which are full of pulp and have very small seeds, fall from a great height and break to pieces. Those fruits are the size of elephants, and the juice gliding from them becomes a river named Jambū-nadī. This river falls a distance of 10,000 yojanas, from the summit of Merumandara to the southern side of Ilāvṛta, and floods the entire land of Ilāvṛta with juice.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            We can only imagine how much juice there might be in a fruit that is the size of an elephant but has a very tiny seed. Naturally the juice from the broken <span class="Italic">jambū</span> fruits forms waterfalls and floods the entire land of Ilāvṛta. That juice produces an immense quantity of gold, as will be explained in the next verses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20–21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">572</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mud on both banks of the River Jambū-nadī, being moistened by the flowing juice and then dried by the air and the sunshine, produces huge quantities of gold called Jāmbū-nada. The denizens of heaven use this gold for various kinds of ornaments. Therefore all the inhabitants of the heavenly planets and their youthful wives are fully decorated with golden helmets, bangles and belts, and thus they enjoy life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            By the arrangement of the Supreme Personality of Godhead, the rivers on some planets produce gold on their banks. The poor inhabitants of this earth, because of their incomplete knowledge, are captivated by a so-called <span class="Italic">bhagavān</span> who can produce a small quantity of gold. However, it is understood that in a higher planetary system in this material world, the mud on the banks of the Jambū-nadī mixes with <span class="Italic">jambū</span> juice, reacts with the sunshine in the air, and automatically produces huge quantities of gold. Thus the men and women are decorated there by various golden ornaments, and they look very nice. Unfortunately, on earth there is such a scarcity of gold that the governments of the world try to keep it in reserve and issue paper currency. Because that currency is not backed up by gold, the paper they distribute as money is worthless, but nevertheless the people on earth are very proud of material advancement. In modern times, girls and ladies have ornaments made of plastic instead of gold, and plastic utensils are used instead of golden ones, yet people are very proud of their material wealth. Therefore the people of this age are described as <span class="Italic">mandāḥ sumanda-matayo manda-bhāgyā hy upadrutāḥ</span> (<span class="Ref_Italic">Bhāg.</span> 1.1.10). In other words, they are extremely bad and slow to understand the opulence of the Supreme Personality of Godhead. They have been described as <span class="Italic">sumanda-matayaḥ</span> because their conceptions are so crippled that they accept a bluffer who produces a little gold to be God. Because they have no gold in their possession, they are actually poverty-stricken, and therefore they are considered unfortunate.
+          </p>
+          <p>
+            Sometimes these unfortunate people want to be promoted to the heavenly planets to achieve fortunate positions, as described in this verse, but pure devotees of the Lord are not at all interested in such opulence. Indeed, devotees sometimes compare the color of gold to that of bright golden stool. Śrī Caitanya Mahāprabhu has instructed devotees not to be allured by golden ornaments and beautifully decorated women. <span class="Italic">Na dhanaṁ na janaṁ na sundarīm:</span> a devotee should not be allured by gold. beautiful women or the prestige of having many followers. Śrī Caitanya Mahāprabhu, therefore, confidentially prayed, <span class="Italic">mama janmani janmanīśvare bhavatād bhaktir ahaitukī tvayi:</span> “My Lord, please bless Me with Your devotional service. I do not want anything else.” A devotee may pray to be delivered from this material world. That is his only aspiration.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ayi nanda-tanuja kiṅkaraṁ<br>patitaṁ māṁ viṣame bhavāmbudhau<br>kṛpayā tava pāda-paṅkaja-<br>sthita-dhūlī-sadṛśaṁ vicintaya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The humble devotee simply prays to the Lord, “Kindly pick me up from the material world, which is full of varieties of material opulence, and keep me under the shelter of Your lotus feet.”
+          </p>
+          <p>
+            Śrīla Narottama dāsa Ṭhākura prays:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">hā hā prabhu nanda-suta,     vṛṣabhānu-sutā-yuta,<br>karuṇā karaha ei-bāra<br>narottama-dāsa kaya,     nā ṭheliha rāṅgā-pāya,<br>tomā vine ke āche āmāra</div></blockquote>
+          </p>
+          <p>
+            “O my Lord, O son of Nanda Mahārāja, now You are standing before me with Your consort, the daughter of Vṛṣabhānu, Śrīmatī Rādhārāṇī. Kindly accept me as the dust of Your lotus feet. please do not kick me away, for I have no other shelter.”
+          </p>
+          <p>
+            Similarly, Prabodhānanda Sarasvatī indicates that the position of the demigods, who are decorated with golden helmets and other ornaments, is no better than a phantasmagoria (<span class="Italic">tri-daśa-pūr ākāśa-puṣpāyate</span>). A devotee is never allured by such opulences. He simply aspires to become the dust of the lotus feet of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">42</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the side of Supārśva Mountain stands a big tree called Mahākadamba, which is very celebrated. From the hollows of this tree flow five rivers of honey, each about five vyāmas wide. This flowing honey falls incessantly from the top of Supārśva Mountain and flows all around Ilāvṛta-varṣa, beginning from the western side. Thus the whole land is saturated with the pleasing fragrance.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The distance between one hand and another when one spreads both his arms is called a <span class="Italic">vyāma.</span> This comes to about eight feet. Thus each of the rivers was about forty feet wide, making a total of about two hundred feet.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The air carrying the scent from the mouths of those who drink that honey perfumes the land for a hundred yojanas around.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">182</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Similarly, on Kumuda Mountain there is a great banyan tree, which is called Śatavalśa because it has a hundred main branches. From those branches come many roots, from which many rivers are flowing. These rivers flow down from the top of the mountain to the northern side of Ilāvṛta-varṣa for the benefit of those who live there. Because of these flowing rivers, all the people have ample supplies of milk, yogurt, honey, clarified butter [ghee], molasses, food grains, clothes, bedding, sitting places and ornaments. All the objects they desire are sufficiently supplied for their prosperity, and therefore they are very happy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            The prosperity of humanity does not depend on a demoniac civilization that has no culture and no knowledge but has only gigantic skyscrapers and huge automobiles always rushing down the highways. The products of nature are sufficient. When there is a profuse supply of milk, yogurt, honey, food grains, ghee, molasses, <span class="Italic">dhotis, saris,</span> bedding, sitting places and ornaments, the residents are actually opulent. When a profuse supply of water from the river inundates the land, all these things can be produced, and there will not be scarcity. This all depends, however, on the performance of sacrifice as described in the Vedic literature.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">annād bhavanti bhūtāni<br>parjanyād anna-sambhavaḥ<br>yajñād bhavati parjanyo<br>yajñaḥ karma-samudbhavaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “All living bodies subsist on food grains, which are produced from rains. Rains are produced by performance of <span class="Italic">yajña</span> [sacrifice], and <span class="Italic">yajña</span> is born of prescribed duties.” These are the prescriptions given in <span class="Ref_Italic">Bhagavad-gītā</span> (3.14). If people follow these principles in full Kṛṣṇa consciousness, human society will be prosperous, and they will be happy both in this life and in the next.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">219</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The residents of the material world who enjoy the products of these flowing rivers have no wrinkles on their bodies and no grey hair. They never feel fatigue, and perspiration does not give their bodies a bad odor. They are not afflicted by old age, disease or untimely death, they do not suffer from chilly cold or scorching heat, nor do their bodies lose their luster. They all live very happily, without anxieties, until death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            This verse hints at the perfection of human society even within this material world. The miserable conditions of this material world can be corrected by a sufficient supply of milk, yogurt, honey, ghee, molasses, food grains, ornaments, bedding, sitting places and so on. This is human civilization. Ample food grains can be produced through agricultural enterprises, and profuse supplies of milk, yogurt and ghee can be arranged through cow protection. Abundant honey can be obtained if the forests are protected. Unfortunately, in modern civilization, men are busy killing the cows that are the source of yogurt, milk and ghee, they are cutting down all the trees that supply honey, and they are opening factories to manufacture nuts, bolts, automobiles and wine instead of engaging in agriculture. How can the people be happy? They must suffer from all the misery of materialism. Their bodies become wrinkled and gradually deteriorate until they become almost like dwarves, and a bad odor emanates from their bodies because of unclean perspiration resulting from eating all kinds of nasty things. This is not human civilization. If people actually want happiness in this life and want to prepare for the best in the next life, they must adopt a Vedic civilization. In a Vedic civilization, there is a full supply of all the necessities mentioned above.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are other mountains beautifully arranged around the foot of Mount Meru like the filaments around the whorl of a lotus flower. Their names are Kuraṅga, Kurara, Kusumbha, Vaikaṅka, Trikūṭa, Śiśira, Pataṅga, Rucaka, Niṣadha, Sinīvāsa, Kapila, Śaṅkha, Vaidūrya, Jārudhi, Haṁsa, Ṛṣabha, Nāga, Kālañjara and Nārada.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On the eastern side of Sumeru Mountain are two mountains named Jaṭhara and Devakūṭa, which extend to the north and south for 18,000 yojanas [144,000 miles]. Similarly, on the western side of Sumeru are two mountains named Pavana and Pāriyātra, which also extend north and south for the same distance. On the southern side of Sumeru are two mountains named Kailāsa and Karavīra, which extend east and west for 18,000 yojanas, and on the northern side of Sumeru, extending for the same distance east and west, are two mountains named Triśṛṅga and Makara. The width and height of all these mountains is 2,000 yojanas [16,000 miles]. Sumeru, a mountain of solid gold shining as brilliantly as fire, is surrounded by these eight mountains.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the middle of the summit of Meru is the township of Lord Brahmā. Each of its four sides is calculated to extend for ten million yojanas [eighty million miles]. It is made entirely of gold, and therefore learned scholars and sages call it Śātakaumbhī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">94</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Surrounding Brahmapurī in all directions are the residences of the eight principal governors of the planetary systems, beginning with King Indra. These abodes are similar to Brahmapurī but are one fourth the size.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura confirms that the townships of Lord Brahmā and the eight subordinate governors of the planetary systems, beginning with Indra, are mentioned in other <span class="Italic">Purāṇas.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">merau nava-pūrāṇi syur<br>manovaty amarāvatī<br>tejovatī saṁyamanī<br>tathā kṛṣṇāṅganā parā<br>śraddhāvatī gandhavatī<br>tathā cānyā mahodayā<br>yaśovatī ca brahmendra<br>bahyādīnāṁ yathā-kramam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Brahmā’s township is known as Manovatī, and those of his assistants such as Indra and Agni are known as Amarāvatī, Tejovatī, Saṁyamanī, Kṛṣṇāṅganā, Śraddhāvatī, Gandhavatī, Mahodayā and Yaśovatī. Brahmapurī is situated in the middle, and the other eight <span class="Italic">purīs</span> surround it in all directions.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Fifth Canto, Sixteenth Chapter of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled, “A Description of Jambūdvīpa.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/5/16">https://prabhupadabooks.com/sb/5/16</a><!-- span.text_source_copied_date
+        | on 2023-02-19 16:14:22 -0700 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 5.15: The Glories of the Descendants of King Priyavrata     Next: SB 5.17: The Descent of the River Ganges</div>
+      </p>
+    </div>
+  </body>
+</html>
