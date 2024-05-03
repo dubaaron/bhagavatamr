@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 7.4, Hiraṇyakaśipu Terrorizes the Universe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 7:<br>
+        “The Science of God”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Four:<br>Hiraṇyakaśipu Terrorizes the Universe
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter fully describes how Hiraṇyakaśipu obtained power from Lord Brahmā and misused it by harassing all the living entities within this universe.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">By severe austerities, Hiraṇyakaśipu satisfied Lord Brahmā and obtained the benedictions he desired. After he received these benedictions, his body, which had been almost entirely consumed, was revived with full beauty and a luster like gold. Nonetheless, he continued to be envious of Lord Viṣṇu, unable to forget Lord Viṣṇu’s having killed his brother. Hiraṇyakaśipu conquered everyone in the ten directions and the three worlds and brought all living entities, both demigods and <span class="Italic">asuras,</span> under his control. Becoming the master of all places, including the residence of Indra, whom he had driven out, he began enjoying life in great luxury and thus became mad. All the demigods but Lord Viṣṇu, Lord Brahmā and Lord Śiva came under his control and began serving him, but despite all his material power he was dissatisfied because he was always puffed up, proud of transgressing the Vedic regulations. All the <span class="Italic">brāhmaṇas</span> were dissatisfied with him, and they cursed him with determination. Eventually, all the living entities within the universe, represented by the demigods and sages, prayed to the Supreme Lord for relief from Hiraṇyakaśipu’s rule.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Lord Viṣṇu informed the demigods that they and the other living entities would be saved from the fearful conditions created by Hiraṇyakaśipu. Since Hiraṇyakaśipu was the oppressor of all the demigods, the followers of the <span class="Italic">Vedas,</span> the cows, the <span class="Italic">brāhmaṇas</span> and the religious, saintly persons, and since he was envious of the Supreme Lord, he would naturally be killed very soon. Hiraṇyakaśipu’s last exploit would be to torment his own son Prahlāda, who was a <span class="Italic">mahā-bhāgavata,</span> an exalted Vaiṣṇava. Then his life would end. When the demigods were thus reassured by the Supreme Personality of Godhead, everyone was satisfied, knowing that the miseries inflicted upon them by Hiraṇyakaśipu would come to an end.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Finally, Nārada Muni describes the characteristics of Prahlāda Mahārāja, the son of Hiraṇyakaśipu, and describes how his father envied his own qualified son. In this way the chapter ends.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada Muni continued: Lord Brahmā was very much satisfied by Hiraṇyakaśipu’s austerities, which were difficult to perform. Therefore, when solicited for benedictions, he indeed granted them, although they were rarely to be achieved.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">102</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā said: O Hiraṇyakaśipu, these benedictions for which you have asked are difficult to obtain for most men. Nonetheless, O my son, I shall grant you them although they are generally not available.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            Material benedictions are not always exactly worthy of being called benedictions. If one possesses more and more, a benediction itself may become a curse, for just as achieving material opulence in this material world requires great strength and endeavor, maintaining it also requires great endeavor. Lord Brahmā informed Hiraṇyakaśipu that although he was ready to offer him whatever he had asked, the result of the benedictions would be very difficult for Hiraṇyakaśipu to maintain. Nonetheless, since Brahmā had promised, he wanted to grant all the benedictions asked. The word <span class="Italic">durlabhān</span> indicates that one should not take benedictions one cannot enjoy peacefully.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then Lord Brahmā, who awards infallible benedictions, departed, being worshiped by the best of the demons, Hiraṇyakaśipu, and being praised by great sages and saintly persons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">26</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demon Hiraṇyakaśipu, having thus been blessed by Lord Brahmā and having acquired a lustrous golden body, continued to remember the death of his brother and therefore be envious of Lord Viṣṇu.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            A demoniac person, in spite of acquiring all the opulences possible to obtain in this universe, continues to be envious of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5–7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">146</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Hiraṇyakaśipu became the conqueror of the entire universe. Indeed, that great demon conquered all the planets in the three worlds—upper, middle and lower—including the planets of the human beings, the Gandharvas, the Garuḍas, the great serpents, the Siddhas, Cāraṇas and Vidyādharas, the great saints, Yamarāja, the Manus, the Yakṣas, the Rākṣasas, the Piśācas and their masters, and the masters of the ghosts and Bhūtas. He defeated the rulers of all the other planets where there are living entities and brought them under his control. Conquering the abodes of all, he seized their power and influence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            The word <span class="Italic">garuḍa</span> in this verse indicates that there are planets of great birds like Garuḍa. Similarly, the word <span class="Italic">uraga</span> indicates that there are planets of enormous serpents. Such a description of the various planets of the universe may challenge modern scientists who think that all planets but this earth are vacant. These scientists claim to have launched excursions to the moon, where they have found no living entities but only big craters full of dust and stone, although in fact the moon is so brilliant that it acts like the sun in illuminating the entire universe. Of course, it is not possible to convince modern scientists of the Vedic information about the universe. Nonetheless, we are not very much impressed by the words of scientists who say that all other planets are vacant and that only the earth is full of living entities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">178</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Hiraṇyakaśipu, who possessed all opulence, began residing in heaven, with its famous Nandana garden, which is enjoyed by the demigods. In fact, he resided in the most opulent palace of Indra, the King of heaven. The palace had been directly constructed by the demigod architect Viśvakarmā and was as beautifully made as if the goddess of fortune of the entire universe resided there.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            From this description it appears that all the heavenly planets of the upper planetary system are thousands upon thousands of times more opulent than the lower planetary system in which we live. Viśvakarmā, the famous heavenly architect, is known as the constructor of many wonderful buildings in the upper planets, where there are not only beautiful buildings, but also many opulent gardens and parks, which are described as <span class="Italic">nandana-devodyāna,</span> gardens quite fit to be enjoyed by the demigods. This description of the upper planetary system and its opulences is to be understood from authoritative scriptures like the Vedic literatures. Telescopes and the other imperfect instruments of scientists are inadequate for evaluating the upper planetary system. Although such instruments are needed because the vision of the so-called scientists is imperfect, the instruments themselves are also imperfect. Therefore the upper planets cannot be appraised by imperfect men using imperfect man-made instruments. Direct information received from the Vedic literature, however, is perfect, We therefore cannot accept the statement that there are no opulent residences on planets other than this earth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9–12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">168</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The steps of King Indra’s residence were made of coral, the floor was bedecked with invaluable emeralds, the walls were of crystal, and the columns of vaidūrya stone. The wonderful canopies were beautifully decorated, the seats were bedecked with rubies, and the silk bedding, as white as foam, was decorated with pearls. The ladies of the palace, who were blessed with beautiful teeth and the most wonderfully beautiful faces, walked here and there in the palace, their ankle bells tinkling melodiously, and saw their own beautiful reflections in the gems. The demigods, however, being very much oppressed, had to bow down and offer obeisances at the feet of Hiraṇyakaśipu, who chastised the demigods very severely and for no reason. Thus Hiraṇyakaśipu lived in the palace and severely ruled everyone.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Hiraṇyakaśipu was so powerful in the heavenly planets that all the demigods except Lord Brahmā, Lord Śiva and Lord Viṣṇu were forced to engage in his service. Indeed, they were afraid of being severely punished if they disobeyed him. Śrīla Viśvanātha Cakravartī has compared Hiraṇyakaśipu to Mahārāja Vena, who was also atheistic and scornful of the ritualistic ceremonies mentioned in the <span class="Italic">Vedas.</span> Yet Mahārāja Vena was afraid of some of the great sages such as Bhṛgu, whereas Hiraṇyakaśipu ruled in such a way that everyone feared him but Lord Viṣṇu, Lord Brahmā and Lord Śiva. Hiraṇyakaśipu was so alert against being burnt to ashes by the anger of great sages like Bhṛgu that by dint of austerity he surpassed their power and placed even them under his subordination. It appears that even in the higher planetary systems, to which people are promoted by pious activities, disturbances are created by <span class="Italic">asuras</span> like Hiraṇyakaśipu. No one in the three worlds can live in peace and prosperity without disturbance.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my dear King, Hiraṇyakaśipu was always drunk on strong-smelling wines and liquors, and therefore his coppery eyes were always rolling. Nonetheless, because he had powerfully executed great austerities in mystic yoga, although he was abominable, all but the three principal demigods—Lord Brahmā, Lord Śiva and Lord Viṣṇu—personally worshiped him to please him by bringing him various presentations with their own hands.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            In the <span class="Italic">Skanda Purāṇa</span> there is this description: <span class="Italic">upāyanaṁ daduḥ sarve vinā devān hiraṇyakaḥ.</span> Hiraṇyakaśipu was so powerful that everyone but the three principal demigods—namely Lord Brahmā, Lord Śiva and Lord Viṣṇu—engaged in his service. Madhvācārya says, <span class="Italic">ādityā vasavo rudrās tri-vidhā hi surā yataḥ.</span> There are three kinds of demigods—the Ādityas, the Vasus and the Rudras—beneath whom are the other demigods, like the Maruts and Sādhyas (<span class="Italic">marutaś caiva viśve ca sādhyāś caiva ca tad-gatāḥ</span>). Therefore all the demigods are called <span class="Italic">tri-piṣṭapa,</span> and the same word <span class="Italic">tri</span> applies to Lord Brahmā, Lord Śiva and Lord Viṣṇu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">53</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Yudhiṣṭhira, descendant of Pāṇḍu, by dint of his personal power, Hiraṇyakaśipu, being situated on the throne of King Indra, controlled the inhabitants of all the other planets. The two Gandharvas Viśvāvasu and Tumburu, I myself and the Vidyādharas, Apsarās and sages all offered prayers to him again and again just to glorify him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The <span class="Italic">asuras</span> sometimes become so powerful that they can engage even Nārada Muni and similar devotees in their service. This does not mean that Nārada was subordinate to Hiraṇyakaśipu. Sometimes, however, it so happens in this material world that great personalities, even great devotees, can also be controlled by the <span class="Italic">asuras.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being worshiped by sacrifices offered with great gifts by those who strictly followed the principles of varṇa and āśrama, Hiraṇyakaśipu, instead of offering shares of the oblations to the demigods, accepted them himself.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As if in fear of Hiraṇyakaśipu, the planet earth, which consists of seven islands, delivered food grains without being plowed. Thus it resembled cows like the surabhi of the spiritual world or the kāma-dughā of heaven. The earth yielded sufficient food grains, the cows supplied abundant milk, and outer space was beautifully decorated with wonderful phenomena.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">177</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By the flowing of their waves, the various oceans of the universe, along with their tributaries, the rivers, which are compared to their wives, supplied various kinds of gems and jewels for Hiraṇyakaśipu’s use. These oceans were the oceans of salt water, sugarcane juice, wine, clarified butter, milk, yogurt, and sweet water.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            The water of the seas and oceans of this planet, of which we have experience, are salty, but other planets within the universe contain oceans of sugarcane juice, liquor, ghee, milk and sweet water. The rivers are figuratively described as wives of the oceans and seas because they glide down to the oceans and seas as tributaries, like the wives attached to their husbands. Modern scientists attempt excursions to other planets, but they have no information of how many different types of oceans and seas there are within the universe. According to their experience, the moon is full of dust, but this does not explain how it gives us soothing rays from a distance of millions of miles. As far as we are concerned, we follow the authority of Vyāsadeva and Śukadeva Gosvāmī, who have described the universal situation according to the Vedic literature. These authorities differ from modern scientists who conclude from their imperfect sensual experience that only this planet is inhabited by living beings whereas the other planets are all vacant or full of dust.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">102</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The valleys between the mountains became fields of pleasure for Hiraṇyakaśipu, by whose influence all the trees and plants produced fruits and flowers profusely in all seasons. The qualities of pouring water, drying and burning, which are all qualities of the three departmental heads of the universe—namely Indra, Vāyu and Agni—were all directed by Hiraṇyakaśipu alone, without assistance from the demigods.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            It is said in the beginning of <span class="Italic">Śrīmad-Bhāgavatam, tejo-vāri-mṛdāṁ yathā vinimayaḥ:</span> this material world is conducted by fire, water and earth, which combine and take shape. Here it is mentioned that the three modes of nature (<span class="Italic">pṛthag guṇān</span>) act under the direction of different demigods. For example, King Indra is in charge of pouring water, the demigod Vāyu controls the air and dries up the water, whereas the demigod controlling fire burns everything. Hiraṇyakaśipu, however, by dint of his austere performance of mystic <span class="Italic">yoga,</span> became so powerful that he alone took charge of everything, without assistance from the demigods.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">115</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In spite of achieving the power to control in all directions and in spite of enjoying all types of dear sense gratification as much as possible, Hiraṇyakaśipu was dissatisfied because instead of controlling his senses he remained their servant.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            This is an example of asuric life. Atheists can advance materially and create an extremely comfortable situation for the senses, but because they are controlled by the senses, they cannot be satisfied. This is the effect of modern civilization. Materialists are very much advanced in enjoying money and women, yet dissatisfaction prevails within human society because human society cannot be happy and peaceful without Kṛṣṇa consciousness. As far as material sense gratification is concerned, materialists may go on increasing their enjoyment as far as they can imagine, but because people in such a material condition are servants of their senses, they cannot be satisfied. Hiraṇyakaśipu was a vivid example of this dissatisfied state of humanity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">213</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Hiraṇyakaśipu thus passed a long time being very much proud of his opulences and transgressing the laws and regulations mentioned in the authoritative śāstras. He was therefore subjected to a curse by the four Kumāras, who were great brāhmaṇas.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            There have been many instances in which demons, after achieving material opulences, have become extremely proud, so much so that they have transgressed the laws and regulations given in the authoritative <span class="Italic">śāstras.</span> Hiraṇyakaśipu acted in this way. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (16.23):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yaḥ śāstra-vidhim utsṛjya<br>vartate kāma-kārataḥ<br>na sa siddhim avāpnoti<br>na sukhaṁ na parāṁ gatim</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “He who discards scriptural injunctions and acts according to his own whims attains neither perfection, nor happiness, nor the supreme destination.” The word <span class="Italic">śāstra</span> refers to that which controls our activities. We cannot violate or transgress the laws and regulative principles mentioned in the <span class="Italic">śāstras.</span> <span class="Italic">Bhagavad-gītā</span> repeatedly confirms this.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tasmāc chāstraṁ pramāṇaṁ te<br>kāryākārya-vyavasthitau<br>jñātvā śāstra-vidhānoktaṁ<br>karma kartum ihārhasi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One should understand what is duty and what is not duty by the regulations of the scriptures. Knowing such rules and regulations, one should act so that he may gradually be elevated.” (Bg. 16.24) One should act according to the direction of the <span class="Italic">śāstra,</span> but the material energy is so powerful that as soon as one becomes materially opulent, he begins to transgress the śāstric laws. As soon as one transgresses the laws of <span class="Italic">śāstra,</span> he immediately enters upon the path of destruction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">216</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Everyone, including the rulers of the various planets, was extremely distressed because of the severe punishment inflicted upon them by Hiraṇyakaśipu. Fearful and disturbed, unable to find any other shelter, they at last surrendered to the Supreme Personality of Godhead, Viṣṇu.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Lord Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (5.29):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhoktāraṁ yajña-tapasāṁ<br>sarva-loka-maheśvaram<br>suhṛdaṁ sarva-bhūtānāṁ<br>jñātvā māṁ śāntim ṛcchati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The sages, knowing Me as the ultimate purpose of all sacrifices and austerities, the Supreme Lord of all planets and demigods and the benefactor and well-wisher of all living entities, attain peace from the pangs of material miseries.” The Supreme Personality of Godhead, Kṛṣṇa, is actually the best friend of everyone. In a condition of distress or misery, one wants to seek shelter of a well-wishing friend. The well-wishing friend of the perfect order is Lord Śrī Kṛṣṇa. Therefore all the inhabitants of the various planets, being unable to find any other shelter, were obliged to seek shelter at the lotus feet of the supreme friend. If from the very beginning we seek shelter of the supreme friend, there will be no cause of danger. It is said that if a dog is swimming in the water and one wants to cross the ocean by catching hold of the dog’s tail, certainly he is foolish. Similarly, if in distress one seeks shelter of a demigod, he is foolish, for his efforts will be fruitless. In all circumstances, one should seek shelter of the Supreme Personality of Godhead. Then there will be no danger under any circumstances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22–23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">151</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            “Let us offer our respectful obeisances unto that direction where the Supreme Personality of Godhead is situated, where those purified souls in the renounced order of life, the great saintly persons, go, and from which, having gone, they never return.” Without sleep, fully controlling their minds, and living on only their breath, the predominating deities of the various planets began worshiping Hṛṣīkeśa with this meditation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            The two words <span class="Italic">tasyai kāṣṭhāyai</span> are very significant. Everywhere, in every direction, in every heart and in every atom, the Supreme Personality of Godhead is situated in His features as Brahman and Paramātmā. Then what is the purpose of saying <span class="Italic">tasyai kāṣṭhāyai</span>—“in that direction where Hari is situated?” During Hiraṇyakaśipu’s time, his influence was everywhere, but he could not force his influence into the places where the Supreme Personality of Godhead had His pastimes. For example, on this earth there are such places as Vṛndāvana and Ayodhyā, which are called <span class="Italic">dhāmas.</span> In the <span class="Italic">dhāma,</span> there is no influence from Kali-yuga or any demon. If one takes shelter of such a <span class="Italic">dhāma,</span> worship of the Lord becomes very easy, and resultant spiritual advancement quickly takes place. In fact, in India one may still go to Vṛndāvana and similar places to achieve the results of spiritual activities quickly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then there appeared before them a transcendental sound vibration, emanating from a personality not visible to material eyes. The voice was as grave as the sound of a cloud, and it was very encouraging, driving away all fear.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25–26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">269</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The voice of the Lord vibrated as follows: O best of learned persons, do not fear! I wish all good fortune to you. Become My devotees by hearing and chanting about Me and offering Me prayers, for these are certainly meant to award benedictions to all living entities. I know all about the activities of Hiraṇyakaśipu and shall surely stop them very soon. Please wait patiently until that time.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Sometimes people are very much eager to see God. In considering the word <span class="Italic">mad-darśanam,</span> “seeing Me,” which is mentioned in this verse, one should note that in <span class="Italic">Bhagavad-gītā</span> the Lord says, <span class="Italic">bhaktyā mām abhijānāti [Bg. </span>18.55]<span class="Italic">.</span> In other words, the ability to understand the Supreme Personality of Godhead or to see Him or talk with Him depends on one’s advancement in devotional service, which is called <span class="Italic">bhakti.</span> In <span class="Italic">bhakti</span> there are nine different activities: <span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam/ arcanaṁ vandanaṁ dāsyaṁ sakhyam ātma-nivedanam [SB </span>7.5.23]<span class="Italic">.</span> Because all these devotional activities are absolute, there is no fundamental difference between worshiping the Deity in the temple, seeing Him and chanting His glories. Indeed, all of these are ways of seeing Him, for everything done in devotional service is a means of direct contact with the Lord. The vibration of the Lord’s voice appeared in the presence of all the devotees, and although the person vibrating the sound was unseen to them, they were meeting or seeing the Lord because they were offering prayers and because the vibration of the Lord was present. Contrary to the laws of the material world, there is no difference between seeing the Lord, offering prayers and hearing the transcendental vibration. Pure devotees, therefore, are fully satisfied by glorifying the Lord. Such glorification is called <span class="Italic">kīrtana.</span> Performing <span class="Italic">kīrtana</span> and hearing the vibration of the sound Hare Kṛṣṇa is actually seeing the Supreme Personality of Godhead directly. One must realize this position, and then one will be able to understand the absolute nature of the Lord’s activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When one is envious of the demigods, who represent the Supreme Personality of Godhead, of the Vedas, which give all knowledge, of the cows, brāhmaṇas, Vaiṣṇavas and religious principles, and ultimately of Me, the Supreme Personality of Godhead, he and his civilization will be vanquished without delay.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">296</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Hiraṇyakaśipu teases the great devotee Prahlāda, his own son, who is peaceful and sober and who has no enemy, I shall kill Hiraṇyakaśipu immediately, despite the benedictions of Brahmā.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            Of all sinful activities, an offense to a pure devotee, or Vaiṣṇava, is the most severe. An offense at the lotus feet of a Vaiṣṇava is so disastrous that Śrī Caitanya Mahāprabhu has compared it to a mad elephant that enters a garden and causes great havoc by uprooting many plants and trees. If one is an offender at the lotus feet of a <span class="Italic">brāhmaṇa</span> or Vaiṣṇava, his offenses uproot all his auspicious activities. One should therefore very carefully guard against committing <span class="Italic">vaiṣṇava-aparādha,</span> or offenses at the lotus feet of a Vaiṣṇava. Here the Lord clearly says that although Hiraṇyakaśipu had received benedictions from Lord Brahmā, these benedictions would be null and void as soon as he committed an offense at the lotus feet of Prahlāda Mahārāja, his own son. A Vaiṣṇava like Prahlāda Mahārāja is described herein as <span class="Italic">nirvaira,</span> having no enemies. Elsewhere in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (3.25.21) it is said, <span class="Italic">ajāta-śatravaḥ śāntāḥ sādhavaḥ sādhu-bhūṣaṇāḥ:</span> a devotee has no enemies, he is peaceful, he abides by the scriptures, and all his characteristics are sublime. A devotee does not create enmity with anyone, but if someone becomes his enemy, that person will be vanquished by the Supreme Personality of Godhead, despite whatever benedictions he may have received from other sources. Hiraṇyakaśipu was certainly enjoying the fruitful results of his austerities, but here the Lord says that as soon as he committed an offense at the lotus feet of Prahlāda Mahārāja he would be ruined. One’s longevity, opulence, beauty, education and whatever else one may possess as a result of pious activities cannot protect one if one commits an offense at the lotus feet of a Vaiṣṇava. Despite whatever one possesses, if one offends the lotus feet of a Vaiṣṇava he will be vanquished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">166</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The great saint Nārada Muni continued: When the Supreme Personality of Godhead, the spiritual master of everyone, thus reassured all the demigods living in the heavenly planets, they offered their respectful obeisances unto Him and returned, confident that the demon Hiraṇyakaśipu was now practically dead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            The less intelligent men who are always busy worshiping the demigods should note that when the demigods are harassed by the demons, they approach the Supreme Personality of Godhead for relief. Since the demigods resort to the Supreme Personality of Godhead, why should the worshipers of the demigods not approach the Supreme Lord for whatever benefits they desire? <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.3.10) says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">akāmaḥ sarva-kāmo vā<br>mokṣa-kāma udāra-dhīḥ<br>tīvreṇa bhakti-yogena<br>yajeta puruṣaṁ param</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whether one desires everything or nothing, or whether he desires to merge into the existence of the Lord, he is intelligent only if he worships Lord Kṛṣṇa, the Supreme Personality of Godhead, by rendering transcendental loving service.” Whether one is a <span class="Italic">karmī, jñānī</span> or <span class="Italic">yogī,</span> if one wants a particular benediction fulfilled, even if it be material, one should approach the Supreme Lord and pray to Him, for then it will be fulfilled. There is no need to approach any demigod separately for the fulfillment of any desire.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Hiraṇyakaśipu had four wonderful, well-qualified sons, of whom the one named Prahlāda was the best. Indeed, Prahlāda was a reservoir of all transcendental qualities because he was an unalloyed devotee of the Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasyāsti bhaktir bhagavaty akiñcanā<br>sarvair guṇais tatra samāsate surāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In one who has unflinching devotional faith in Kṛṣṇa, all the good qualities of Kṛṣṇa and the demigods are consistently manifest.” (<span class="Ref_Italic">Bhāg.</span> 5.18.12) Prahlāda Mahārāja is praised herein for having all good qualities because of worshiping the Supreme Personality of Godhead. Therefore, a pure devotee, who has no motives, has all good qualities, material and spiritual. If one is spiritually advanced, being a staunch, liberal devotee of the Lord, all good qualities are manifest in his body. On the other hand, <span class="Italic">harāv abhaktasya kuto mahad-guṇāḥ:</span> if one is not a devotee, even if he has some materially good qualities, they have no value. That is the verdict of the <span class="Italic">Vedas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31–32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">331</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            [The qualities of Mahārāja Prahlāda, the son of Hiraṇyakaśipu, are described herewith.] He was completely cultured as a qualified brāhmaṇa, having very good character and being determined to understand the Absolute Truth. He had full control of his senses and mind. Like the Supersoul, he was kind to every living entity and was the best friend of everyone. To respectable persons he acted exactly like a menial servant, to the poor he was like a father, to his equals he was attached like a sympathetic brother, and he considered his teachers, spiritual masters and older Godbrothers to be as good as the Supreme Personality of Godhead. He was completely free from unnatural pride that might have arisen from his good education, riches, beauty, aristocracy and so on.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            These are some of the qualifications of a Vaiṣṇava. A Vaiṣṇava is automatically a <span class="Italic">brāhmaṇa</span> because a Vaiṣṇava has all the good qualities of a <span class="Italic">brāhmaṇa.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śamo damas tapaḥ śaucaṁ<br>kṣāntir ārjavam eva ca<br>jñānaṁ vijñānam āstikyaṁ<br>brahma-karma svabhāva-jam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Peacefulness, self-control, austerity, purity, tolerance, honesty, wisdom, knowledge, and religiousness—these are the qualities by which the <span class="Italic">brāhmaṇas</span> work.” (Bg. 18.42) These qualities are manifest in the body of a Vaiṣṇava. Therefore a perfect Vaiṣṇava is also a perfect <span class="Italic">brāhmaṇa,</span> as indicated here by the words <span class="Italic">brahmaṇyaḥ śīla-sampannaḥ.</span> A Vaiṣṇava is always determined to understand the Absolute Truth, and to understand the Absolute Truth one needs to have full control over his senses and mind. Prahlāda Mahārāja possessed all these qualities. A Vaiṣṇava is always a well-wisher to everyone. The six Gosvāmīs, for example, are described in this way: <span class="Italic">dhīrādhīra jana-priyau.</span> They were popular with both the gentle and the ruffians. A Vaiṣṇava must be equal to everyone, regardless of one’s position. <span class="Italic">Ātmavat:</span> a Vaiṣṇava should be like Paramātmā. <span class="Italic">Īśvaraḥ sama-bhūtānāṁ hṛd-deśe ’rjuna tiṣṭhati.</span> Paramātmā does not hate anyone; indeed, He is in the heart of a <span class="Italic">brāhmaṇa,</span> but he is also even in the heart of a pig. As the moon never refuses to distribute its pleasing rays even to the home of a <span class="Italic">caṇḍāla,</span> a Vaiṣṇava never refuses to act for everyone’s welfare. Therefore a Vaiṣṇava is always obedient to the spiritual master (<span class="Italic">ārya</span>). The word <span class="Italic">ārya</span> refers to one who is advanced in knowledge. One who is deficient in knowledge cannot be called <span class="Italic">ārya.</span> At the present, however, the word <span class="Italic">ārya</span> is used to refer to those who are godless. This is the unfortunate situation of Kali-yuga.
+          </p>
+          <p>
+            The word <span class="Italic">guru</span> refers to the spiritual master who initiates his disciple into advancement in the science of Kṛṣṇa, or Kṛṣṇa consciousness, as stated by Śrīla Viśvanātha Cakravartī Ṭhākura (<span class="Italic">śrī-bhagavan-mantropadeśake gurāv ity arthaḥ</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">72</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although Prahlāda Mahārāja was born in a family of asuras, he himself was not an asura but a great devotee of Lord Viṣṇu. Unlike the other asuras, he was never envious of Vaiṣṇavas. He was not agitated when put into danger, and he was neither directly nor indirectly interested in the fruitive activities described in the Vedas. Indeed, he considered everything material to be useless, and therefore he was completely devoid of material desires. He always controlled his senses and life air, and being of steady intelligence and determination, he subdued all lusty desires.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            From this verse we discover that a man is not qualified or disqualified simply by birth. Prahlāda Mahārāja was an <span class="Italic">asura</span> by birth, yet he possessed all the qualities of a perfect <span class="Italic">brāhmaṇa</span> (<span class="Italic">brahmaṇyaḥ śīla-sampannaḥ</span>). Anyone can become a fully qualified <span class="Italic">brāhmaṇa</span> under the direction of a spiritual master. Prahlāda Mahārāja provided a vivid example of how to think of the spiritual master and accept his directions calmly.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">108</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, Prahlāda Mahārāja’s good qualities are still glorified by learned saints and Vaiṣṇavas. As all good qualities are always found existing in the Supreme Personality of Godhead, they also exist forever in His devotee Prahlāda Mahārāja.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            From authoritative scripture it is learned that Prahlāda Mahārāja still lives in Vaikuṇṭhaloka as well as within this material world on the planet Sutala. This transcendental quality of existing simultaneously in different places is another qualification of the Supreme Personality of Godhead. <span class="Italic">Goloka eva nivasaty akhilātma-bhūtaḥ: [Bs. </span>5.37] the Lord appears in the core of everyone’s heart, yet He exists on His own planet, Goloka Vṛndāvana. A devotee acquires qualities almost the same as those of the Lord because of unalloyed devotional service. Ordinary living beings cannot be so qualified, but a devotee can be qualified like the Supreme Personality of Godhead, not in full but partially.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In any assembly where there are discourses about saints and devotees, O King Yudhiṣṭhira, even the enemies of the demons, namely the demigods, what to speak of you, would cite Prahlāda Mahārāja as an example of a great devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">176</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Who could list the innumerable transcendental qualities of Prahlāda Mahārāja? He had unflinching faith in Vāsudeva, Lord Kṛṣṇa [the son of Vasudeva], and unalloyed devotion to Him. His attachment to Lord Kṛṣṇa was natural because of his previous devotional service. Although his good qualities cannot be enumerated, they prove that he was a great soul [mahātmā].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            In his prayers to the ten incarnations, Jayadeva Gosvāmī says, <span class="Italic">keśava dhṛta-narahari-rūpa jaya jagad-īśa hare.</span> Prahlāda Mahārāja was a devotee of Lord Nṛsiṁha, who is Keśava, Kṛṣṇa Himself. Therefore when this verse says <span class="Italic">vāsudeve bhagavati,</span> one should understand that Prahlāda Mahārāja’s attachment for Nṛsiṁhadeva was attachment for Kṛṣṇa, Vāsudeva, the son of Vasudeva. Prahlāda Mahārāja, therefore, is described as a great <span class="Italic">mahātmā.</span> As the Lord Himself confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (7.19):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bahūnāṁ janmanām ante<br>jñānavān māṁ prapadyate<br>vāsudevaḥ sarvam iti<br>sa mahātmā sudurlabhaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “After many births and deaths, he who is actually in knowledge surrenders unto Me, knowing Me to be the cause of all causes and all that is. Such a great soul is very rare.” A great devotee of Kṛṣṇa, the son of Vasudeva, is a great soul very rarely to be found. Prahlāda Mahārāja’s attachment for Kṛṣṇa will be explained in the next verse. <span class="Italic">Kṛṣṇa-graha-gṛhītātmā.</span> Prahlāda Mahārāja’s heart was always filled with thoughts of Kṛṣṇa. Therefore Prahlāda Mahārāja is the ideal devotee in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">412</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From the very beginning of his childhood, Prahlāda Mahārāja was uninterested in childish playthings. Indeed, he gave them up altogether and remained silent and dull, being fully absorbed in Kṛṣṇa consciousness. Since his mind was always affected by Kṛṣṇa consciousness, he could not understand how the world goes on being fully absorbed in the activities of sense gratification.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            Prahlāda Mahārāja is the vivid example of a great person fully absorbed in Kṛṣṇa consciousness. In <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Madhya</span> 8.274) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sthāvara-jaṅgama dekhe, nā dekhe tāra mūrti<br>sarvatra haya nija iṣṭa-deva-sphūrti</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            A fully Kṛṣṇa conscious person, although situated in this material world, does not see anything but Kṛṣṇa, anywhere and everywhere. This is the sign of a <span class="Italic">mahā-bhāgavata.</span> The <span class="Italic">mahā-bhāgavata</span> sees Kṛṣṇa everywhere because of his attitude of pure love for Kṛṣṇa. As confirmed in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.38):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">premāñjana-cchurita-bhakti-vilocanena<br>santaḥ sadaiva hṛdayeṣu vilokayanti<br>yaṁ śyāmasundaram acintya-guṇa-svarūpaṁ<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I worship the primeval Lord, Govinda, who is always seen by the devotee whose eyes are anointed with the pulp of love. He is seen in His eternal form of Śyāmasundara, situated within the heart of the devotee.” An exalted devotee, or <span class="Italic">mahātmā,</span> who is rarely to be seen, remains fully conscious of Kṛṣṇa and constantly sees the Lord within the core of his heart. It is sometimes said that when one is influenced by evil stars like Saturn, Rāhu or Ketu, he cannot make advancement in any prospective activity. In just the opposite way, Prahlāda Mahārāja was influenced by Kṛṣṇa, the supreme planet, and thus he could not think of the material world and live without Kṛṣṇa consciousness. That is the sign of a <span class="Italic">mahā-bhāgavata.</span> Even if one is an enemy of Kṛṣṇa, a <span class="Italic">mahā-bhāgavata</span> sees him to be also engaged in Kṛṣṇa’s service. Another crude example is that everything appears yellow to the jaundiced eye. Similarly, to a <span class="Italic">mahā-bhāgavata,</span> everyone but himself appears to be engaged in Kṛṣṇa’s service.
+          </p>
+          <p>
+            Prahlāda Mahārāja is the approved <span class="Italic">mahā-bhāgavata,</span> the supreme devotee. In the previous verse it was stated that he had natural attachment (<span class="Italic">naisargikī ratiḥ</span>). The symptoms of such natural attachment for Kṛṣṇa are described in this verse. Although Prahlāda Mahārāja was only a boy, he had no interest in playing. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.2.42), <span class="Italic">viraktir anyatra ca:</span> the symptom of perfect Kṛṣṇa consciousness is that one loses interest in all material activities. For a small boy to give up playing is impossible, but Prahlāda Mahārāja, being situated in first-class devotional service, was always absorbed in a trance of Kṛṣṇa consciousness. Just as a materialistic person is always absorbed in thoughts of material gain, a <span class="Italic">mahā-bhāgavata</span> like Prahlāda Mahārāja is always absorbed in thoughts of Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">105</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Prahlāda Mahārāja was always absorbed in thought of Kṛṣṇa. Thus, being always embraced by the Lord, he did not know how his bodily necessities, such as sitting, walking, eating, lying down, drinking and talking, were being automatically performed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            A small child, while being cared for by his mother, does not know how the needs of the body for eating, sleeping, lying down, passing water and evacuating are being fulfilled. He is simply satisfied to be on the lap of his mother. Similarly, Prahlāda Mahārāja was exactly like a small child, being cared for by Govinda. The necessary activities of his body were performed without his knowledge. As a father and mother care for their child, Govinda cared for Prahlāda Mahārāja, who remained always absorbed in thoughts of Govinda. This is Kṛṣṇa consciousness. Prahlāda Mahārāja is the vivid example of perfection in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">177</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of advancement in Kṛṣṇa consciousness, he sometimes cried, sometimes laughed, sometimes expressed jubilation and sometimes sang loudly.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            This verse further clarifies the comparison of a devotee to a child. If a mother leaves her small child in his bed or cradle and goes away to attend to some family duties, the child immediately understands that his mother has gone away, and therefore he cries. But as soon as the mother returns and cares for the child, the child laughs and becomes jubilant. Similarly, Prahlāda Mahārāja, being always absorbed in thoughts of Kṛṣṇa, sometimes felt separation, thinking, “Where is Kṛṣṇa?” This is explained by Śrī Caitanya Mahāprabhu. <span class="Italic">Śūnyāyitaṁ jagat sarvaṁ govinda-viraheṇa me.</span> When an exalted devotee feels that Kṛṣṇa is invisible, having gone away, he cries in separation, and sometimes, when he sees that Kṛṣṇa has returned to care for him, he laughs, just as a child sometimes laughs upon understanding that his mother is taking care of him. These symptoms are called <span class="Italic">bhāva.</span> In <span class="Italic">The Nectar of Devotion,</span> various <span class="Italic">bhāvas,</span> ecstatic conditions of a devotee, are fully described. These <span class="Italic">bhāvas</span> are visible in the activities of a perfect devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">271</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes, upon seeing the Supreme Personality of Godhead, Prahlāda Mahārāja would loudly call in full anxiety. He sometimes lost his shyness in jubilation and began dancing in ecstasy, and sometimes, being fully absorbed in thoughts of Kṛṣṇa, he felt oneness and imitated the pastimes of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            Prahlāda Mahārāja sometimes felt that the Lord was far away from him and therefore called Him loudly. When he saw that the Lord was before him, he was fully jubilant. Sometimes, thinking himself one with the Supreme, he imitated the Lord’s pastimes, and in separation from the Lord he would sometimes show symptoms of madness. These feelings of a devotee would not be appreciated by impersonalists. One must go further and further into spiritual understanding. The first realization is impersonal Brahman, but one must go still further to realize Paramātmā and eventually the Supreme Personality of Godhead, who is worshiped by the transcendental feelings of a devotee in a relationship of <span class="Italic">śānta, dāsya, sakhya, vātsalya</span> or <span class="Italic">mādhurya.</span> Here the feelings of Prahlāda Mahārāja were in the mellow of <span class="Italic">vātsalya,</span> filial love and affection. As a child cries when left by his mother, when Prahlāda Mahārāja felt that the Lord was away from him he began to cry (<span class="Italic">nadati</span>). Again, a devotee like Prahlāda sometimes sees that the Lord is coming from a long distance to pacify him, like a mother responding to a child, saying, “My dear child, do not cry. I am coming.” Then the devotee, without being ashamed due to his surroundings and circumstances, begins to dance, thinking, “Here is my Lord! My Lord is coming!” Thus the devotee, in full ecstasy, sometimes imitates the pastimes of the Lord, just as the cowherd boys used to imitate the behavior of the jungle animals. However, he does not actually become the Lord. Prahlāda Mahārāja achieved the spiritual ecstasies described herein by his advancement in spiritual understanding.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">76</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sometimes, feeling the touch of the Lord’s lotus hands, he became spiritually jubilant and remained silent, his hairs standing on end and tears gliding down from his half-closed eyes because of his love for the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            When a devotee feels separation from the Lord, he becomes eager to see where the Lord is, and sometimes when he feels pangs of separation, tears flow incessantly from his half-closed eyes. As stated by Śrī Caitanya Mahāprabhu in His <span class="Italic">Śikṣāṣṭaka, yugāyitaṁ nimeṣeṇa cakṣuṣā prāvṛṣāyitam.</span> The words <span class="Italic">cakṣuṣā prāvṛṣāyitam</span> refer to tears falling incessantly from the devotee’s eyes. These symptoms, which appear in pure devotional ecstasy, were visible in the body of Prahlāda Mahārāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">121</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of his association with perfect, unalloyed devotees who had nothing to do with anything material, Prahlāda Mahārāja constantly engaged in the service of the Lord’s lotus feet. By seeing his bodily features when he was in perfect ecstasy, persons very poor in spiritual understanding became purified. In other words, Prahlāda Mahārāja bestowed upon them transcendental bliss.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            Apparently Prahlāda Mahārāja was placed in circumstances in which he was always tortured by his father. In such material conditions, one cannot have an undisturbed mind, but since <span class="Italic">bhakti</span> is unconditional (<span class="Italic">ahaituky apratihatā</span>), Prahlāda Mahārāja was never disturbed by the chastisements of Hiraṇyakaśipu. On the contrary, the bodily symptoms of his ecstatic love for the Supreme Personality of Godhead turned the minds of his friends, who had also been born in atheistic families. Instead of being disturbed by the torments of his father, Prahlāda influenced these friends and cleansed their minds. A devotee is never contaminated by material conditions, but persons subjected to material conditions can become spiritually advanced and blissful upon seeing the behavior of a pure devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_43_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">64</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Yudhiṣṭhira, the demon Hiraṇyakaśipu tormented this exalted, fortunate devotee, although Prahlāda was his own son.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_43_purport">
+          <p>
+            When a demon like Hiraṇyakaśipu, despite his elevated position due to severe austerities, begins to tease a devotee, he begins falling down, and the results of his austerities dwindle. One who oppresses a pure devotee loses all the results of his austerities, penances and pious activities. Since Hiraṇyakaśipu was now inclined to chastise his most exalted devotee son, Prahlāda Mahārāja, his opulences began dwindling.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_44_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">160</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Yudhiṣṭhira said: O best of the saints among the demigods, O best of spiritual leaders, how did Hiraṇyakaśipu give so much trouble to Prahlāda Mahārāja, the pure and exalted saint, although Prahlāda was his own son? I wish to know about this subject from you.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_44_purport">
+          <p>
+            To know about the Supreme Personality of Godhead and the characteristics of His pure devotee, one must inquire from authorities like Devarṣi Nārada. One cannot inquire about transcendental subject matters from a layman. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (3.25.25), <span class="Italic">satāṁ prasaṅgān mama vīrya-saṁvido bhavanti hṛt-karṇa-rasāyanāḥ kathāḥ:</span> only by association with devotees can one authoritatively understand the position of the Lord and His devotees. A devotee like Nārada Muni is addressed as <span class="Italic">suvrata.</span> <span class="Italic">Su</span> means “good,” and <span class="Italic">vrata</span> means “vow.” Thus the word <span class="Italic">suvrata</span> refers to a person who has nothing to do with the material world, which is always bad. One cannot understand anything spiritual from a materialistic scholar puffed up with academic knowledge. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (18.55), <span class="Italic">bhaktyā mām abhijānāti:</span> one must try to understand Kṛṣṇa by devotional service and from a devotee. Therefore Yudhiṣṭhira Mahārāja was quite right in wanting to learn further about Prahlāda Mahārāja from Śrī Nārada Muni.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A father and mother are always affectionate to their children. When the children are disobedient the parents chastise them, not due to enmity but only for the child’s instruction and welfare. How did Hiraṇyakaśipu, the father of Prahlāda Mahārāja, chastise such a noble son? This is what I am eager to know.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_46_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">29</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Yudhiṣṭhira further inquired: How was it possible for a father to be so violent toward an exalted son who was obedient, well-behaved and respectful to his father? O brāhmaṇa, O master, I have never heard of such a contradiction as an affectionate father’s punishing his noble son with the intention of killing him. Kindly dissipate our doubts in this regard.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_46_purport">
+          <p>
+            In the history of human society, an affectionate father is rarely found to chastise a noble and devoted son. Therefore Mahārāja Yudhiṣṭhira wanted Nārada Muni to dissipate his doubt.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Seventh Canto, Fourth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled, “Hiraṇyakaśipu Terrorizes the Universe.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/7/4">https://prabhupadabooks.com/sb/7/4</a><!-- span.text_source_copied_date
+        | on 2024-04-07 21:46:02 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 7.3: Hiranyakasipu's Plan to Become Immortal     Next: SB 7.5: Prahlada Maharaja, the Saintly Son of Hiranyakasipu</div>
+      </p>
+    </div>
+  </body>
+</html>
