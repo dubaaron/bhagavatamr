@@ -68,50 +68,47 @@ class Bhāgavatamr
     # require 'rubygems'
     require 'mechanize'
 
-
-
     @@agent = Mechanize.new
 
     self.turn_off_links
 
+    chapter_str = chapter
+    chapter_str = "#{chapter}-1" if book == 'cc'
 
-    chapter_url = URI("https://prabhupadabooks.com/#{book}/#{canto}/#{chapter}?d=1")
+    chapter_url = URI("https://prabhupadabooks.com/#{book}/#{canto}/#{chapter_str}?d=1")
 
     puts "Fetching #{BOOKS[book]} Canto #{canto}, Chapter #{chapter}, from #{chapter_url}"
 
-    # chapter_raw_html = Net::HTTP.get(chapter_url)
-    page = @@agent.get(chapter_url)
-
-    # require 'pry'; binding.pry
-    puts '', page.body[1..1008].light_blue, '...', ''
-
-    require 'fileutils'
-    FileUtils.mkdir_p OUTPUTDIR
+    all_html = get_all_pages(chapter_url)
 
     output_file_name = self.get_rawhtml_filepath(book, canto, chapter)
-    binding.pry
     puts "Saving to '#{output_file_name}' ..."
-    File.write(output_file_name, page.body)
+    require 'fileutils'
+    FileUtils.mkdir_p(File.dirname(output_file_name))
+    File.write(output_file_name, all_html)
     puts 'Done. Haribol!'.yellow.on_blue.bold, ''
 
   end
 
 
   def self.get_rawhtml_filepath book, canto, chapter
-    self.get_output_path book, canto, chapter, 'raw.html'
+    self.get_output_path(book:, canto:, chapter:, name: 'raw.html')
   end
 
 
-  def self.get_output_path book = 'sb', canto = 1, chapter = 1, name = 'raw.html'
+  def self.get_output_path(book: 'sb', canto: 1, chapter: 1, name: 'raw.html')
     # make sure canto and chapter values are padded with zeroes for good filenames
     # CC, etc, have 'adi', etc for "Canto" value
-    canto = "%02d" % [canto] if canto.is_a? Integer
-    chapter = "%02d" % [chapter]
-
+    # binding.pry
+    canto = "%02d" % [canto] if self.looks_like_integer?(canto)
+    chapter = "%02d" % [chapter] if self.looks_like_integer?(chapter)
 
     "#{OUTPUTDIR}/#{book}/#{canto}/#{chapter}_#{name}"
   end
 
+  def self.looks_like_integer?(str)
+    str.match?(/^-?\d+$/)
+  end
 
   def self.turn_off_links
     url_to_switch_links_off = URI('https://prabhupadabooks.com/php/data_ajax.php?action=changeSetting&encoding=unicode&dictionaryLinks=no&booksv=yes&bookss=yes&bookst=yes&booksp=yes')
@@ -123,6 +120,21 @@ class Bhāgavatamr
     puts page.body.light_blue, ''
   end
 
+
+  def self.get_all_pages(chapter_url, page = 1)
+    # chapter_raw_html = Net::HTTP.get(chapter_url)
+    page = @@agent.get(chapter_url)
+
+    require 'nokogiri'
+    # noko = Nokogiri::HTML File.open raw_file
+    # todi: look for links to next page
+    noko = Nokogiri::HTML(page.body)
+
+    # binding.pry
+
+    puts '', page.body[1..1008].light_blue, '...', ''
+    page.body
+  end
 
   def self.fix_broken_ñ str
     # unfortunately, prabhupadabooks.com appears to be littered with ï¿½ where it should be ñ
@@ -136,14 +148,14 @@ class Bhāgavatamr
   end
 
 
-  def self.process book = 'sb', canto = 1, chapt_num = 1
+  def self.process(book = 'sb', canto = 1, chapt_num = 1)
     raw_file = self.get_rawhtml_filepath book, canto, chapt_num
     puts "Processing HTML from #{raw_file} ...", ''
 
-    binding.pry
+    # binding.pry
     puts "Cleaning stuff up ..."
-    fixed_html = self.fix_broken_ñ File.open(raw_file).read
-    File.write(self.get_output_path(book, canto, chapt_num, 'cleaned.html'), fixed_html)
+    fixed_html = self.fix_broken_ñ(File.open(raw_file).read)
+    File.write(self.get_output_path(book:, canto:, chapter: chapt_num, name: 'cleaned.html'), fixed_html)
 
     chapter = Chapter.new(canto, chapt_num)
     chapter.date_text_copied_from_source = File.mtime raw_file
@@ -207,6 +219,7 @@ class Bhāgavatamr
         this_verse.sanskrit_roman_lines << el.content
 
       when 'Synonyms'
+        binding.pry if this_verse.nil?
         this_verse.synonyms_html = el.children.to_html
 
       when 'Translation'
@@ -277,13 +290,13 @@ class Bhāgavatamr
     end
 
     # put final verse onto the stack
-    binding.pry
+    # binding.pry
     chapter.add_verse this_verse
 
     puts '', 'Unhandled bits:'.red, unhandled_bits, ''
 
 
-    output_path = self.get_output_path canto, chapt_num, 'plain.txt'
+    output_path = self.get_output_path(book:, canto:, chapter: chapt_num, name: 'plain.txt')
     File.write output_path, output
     puts "Wrote plaintext to #{output_path}"
 
@@ -298,7 +311,8 @@ class Bhāgavatamr
     # Indent html for pretty debugging
     Slim::Engine.set_options pretty: true
 
-    output_file = self.get_output_path(chapter.canto, chapter.number, 'output.html')
+    # binding.pry
+    output_file = self.get_output_path(canto: chapter.canto, chapter: chapter.number, name: 'output.html')
     File.write output_file, Tilt.new('templates/chapter.slim').render(chapter)
     puts "Wrote output to #{output_file}"
   end
@@ -358,7 +372,7 @@ class Chapter
   end
 
   def add_verse verse
-    @verses[verse.num_start] = verse
+    @verses[verse.num_start] = verse unless verse.nil?
   end
 
 end
