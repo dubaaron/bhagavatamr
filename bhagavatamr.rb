@@ -75,7 +75,7 @@ class Bhāgavatamr
     chapter_str = chapter
     chapter_str = "#{chapter}-1" if book == 'cc'
 
-    chapter_url = URI("https://prabhupadabooks.com/#{book}/#{canto}/#{chapter_str}?d=1")
+    chapter_url = "https://prabhupadabooks.com/#{book}/#{canto}/#{chapter_str}?d=1"
 
     puts "Fetching #{BOOKS[book]} Canto #{canto}, Chapter #{chapter}, from #{chapter_url}"
 
@@ -123,12 +123,25 @@ class Bhāgavatamr
 
   def self.get_all_pages(chapter_url, page = 1)
     # chapter_raw_html = Net::HTTP.get(chapter_url)
+
+
+    # for some reason some chapters have weird URLs; this is a list of those
+    special_chapter_urls = {
+      'https://prabhupadabooks.com/sb/7/10?d=1' => 'https://prabhupadabooks.com/sb/7/10-1?d=1'
+    }
+
+    if special_chapter_urls[chapter_url.to_s]
+      chapter_url = special_chapter_urls[chapter_url]
+    end
+
+    # do I need to pass the url to `URI(url)`?  maybe not.
     page = @@agent.get(chapter_url)
 
-    require 'nokogiri'
+
+    # require 'nokogiri'
     # noko = Nokogiri::HTML File.open raw_file
     # todi: look for links to next page
-    noko = Nokogiri::HTML(page.body)
+    # noko = Nokogiri::HTML(page.body)
 
     # binding.pry
 
