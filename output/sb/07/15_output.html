@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 7.15, Instructions for Civilized Human Beings</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 7:<br>
+        “The Science of God”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Fifteen:<br>Instructions for Civilized Human Beings
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">The summary of the Fifteenth Chapter is as follows. In the previous chapter, Śrī Nārada Muni proved the importance of the <span class="Italic">brāhmaṇa</span> in society. Now, in this chapter, he will show the differences between different grades of <span class="Italic">brāhmaṇas.</span> Among the <span class="Italic">brāhmaṇas,</span> some are householders and are mostly attached to fruitive activities or the betterment of social conditions. Above them, however, are <span class="Italic">brāhmaṇas</span> who are very much attracted by austerities and penances and who retire from family life. They are known as <span class="Italic">vānaprasthas.</span> Other <span class="Italic">brāhmaṇas</span> are very much interested in studying the <span class="Italic">Vedas</span> and explaining the purport of the <span class="Italic">Vedas</span> to others. Such <span class="Italic">brāhmaṇas</span> are called <span class="Italic">brahmacārīs.</span> And still other <span class="Italic">brāhmaṇas</span> are interested in different types of <span class="Italic">yoga,</span> especially <span class="Italic">bhakti-yoga</span> and <span class="Italic">jñāna-yoga.</span> Such <span class="Italic">brāhmaṇas</span> are mostly <span class="Italic">sannyāsīs,</span> members of the renounced order of life.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">As far as householders are concerned, they engage in different types of scriptural activities, especially in offering oblations to their forefathers and giving as charity to other <span class="Italic">brāhmaṇas</span> the paraphernalia engaged in such sacrifices. Generally the charity is given to <span class="Italic">sannyāsīs, brāhmaṇas</span> in the renounced order of life. If such a <span class="Italic">sannyāsī</span> is not available, the charity is given to <span class="Italic">brāhmaṇa</span> householders engaged in fruitive activities.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">One should not make very elaborate arrangements to perform the <span class="Italic">śrāddha</span> ceremony of offering oblations to one’s forefathers. The best process for the <span class="Italic">śrāddha</span> ceremony is to distribute <span class="Italic">bhāgavata-prasāda</span> (remnants of food that has first been offered to Kṛṣṇa) to all of one’s forefathers and relatives. This makes a first-class <span class="Italic">śrāddha</span> ceremony. In the <span class="Italic">śrāddha</span> ceremony there is no need to offer meat or eat meat. Unnecessary killing of animals must be avoided. Those who are in the lower grades of society prefer to perform sacrifices by killing animals, but one who is advanced in knowledge must avoid such unnecessary violence.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">
+          <span class="Italic">Brāhmaṇas</span> should execute their regulative duties in worshiping Lord Viṣṇu. Those who are advanced in knowledge of religious principles must avoid five kinds of irreligion, known as <span class="Italic">vidharma, para-dharma, dharmābhāsa, upadharma</span> and <span class="Italic">chala-dharma.</span> One must act according to the religious principles that suit his constitutional position; it is not that everyone must adhere to the same type of religion. A general principle is that a poor man should not unnecessarily endeavor for economic development. One who refrains from such endeavors but who engages in devotional service is most auspicious.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">One who is not satisfied with the mind must fall to degradation. One must conquer lusty desires, anger, greed, fear, lamentation, illusion, fright, unnecessary talks on material subjects, violence, the four miseries of material existence, and the three material qualities. That is the objective of human life. One who has no faith in the spiritual master, who is identical with Śrī Kṛṣṇa, cannot get any benefit from reading <span class="Italic">śāstra.</span> One should never consider the spiritual master an ordinary human being, even though the members of the spiritual master’s family may think of him as such. Meditation and other processes of austerity are useful only if they help in advancement toward Kṛṣṇa consciousness; otherwise, they are simply a waste of time and labor. For those who are not devotees, such meditation and austerity cause falldown.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Every householder should be very careful because even though a householder may try to conquer the senses, he becomes a victim to the association of relatives and falls down. Thus a <span class="Italic">gṛhastha</span> must become a <span class="Italic">vānaprastha</span> or <span class="Italic">sannyāsī,</span> live in a secluded place, and be satisfied with food gotten by begging from door to door. He must chant the <span class="Italic">oṁkāra mantra</span> or Hare Kṛṣṇa <span class="Italic">mantra,</span> and in this way he will perceive transcendental bliss within himself. After taking <span class="Italic">sannyāsa,</span> however, if one returns to <span class="Italic">gṛhastha</span> life, he is called a <span class="Italic">vāntāśī,</span> which means “one who eats his own vomit.” Such a person is shameless. A householder should not give up the ritualistic ceremonies, and a <span class="Italic">sannyāsī</span> should not live in society. If a <span class="Italic">sannyāsī</span> is agitated by the senses, he is a cheater influenced by the modes of passion and ignorance. When one assumes a role in goodness by starting philanthropic and altruistic activities, such activities become impediments on the path of devotional service.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The best process for advancing in devotional service is to abide by the orders of the spiritual master, for only by his direction can one conquer the senses. Unless one is completely Kṛṣṇa conscious, there is a chance of falling down. Of course, in performing ritualistic ceremonies and other fruitive activities there are also many dangers at every moment. Fruitive activities have been divided into twelve portions. Because of performing fruitive activities, which are called the path of <span class="Italic">dharma,</span> one has to accept the cycle of birth and death, but when one takes the path of <span class="Italic">mokṣa,</span> or liberation, which is described in <span class="Italic">Bhagavad-gītā</span> as <span class="Italic">arcanā-mārga,</span> one can get relief from the cycle of birth and death. The <span class="Italic">Vedas</span> describe these two paths as <span class="Italic">pitṛ-yāna</span> and <span class="Italic">deva-yāna.</span> Those who follow the paths of <span class="Italic">pitṛ-yāna</span> and <span class="Italic">deva-yāna</span> are never bewildered, even while in the material body. A monistic philosopher who gradually develops control of the senses understands that the objective of all the different <span class="Italic">āśramas,</span> the statuses of life, is salvation. One must live and act according to <span class="Italic">śāstras.</span>
+          </div>
+        </p>
+        <p>
+          <div class="Normal-Level">If one who is performing the Vedic ritualistic ceremonies becomes a devotee, even if he is a <span class="Italic">gṛhastha,</span> he can receive the causeless mercy of Kṛṣṇa. The objective of a devotee is to return home, back to Godhead. Such a devotee, even though not performing ritualistic ceremonies, advances in spiritual consciousness by the supreme will of the Personality of Godhead. One may actually become successful in spiritual consciousness by the mercy of devotees, or one may fall from spiritual consciousness by being disrespectful to devotees. In this regard, Nārada Muni narrated the history of how he had fallen from the Gandharva kingdom, how he was born in a <span class="Italic">śūdra</span> family, and how by serving exalted <span class="Italic">brāhmaṇas</span> he became the son of Lord Brahmā and was reinstated in his transcendental position. After narrating all these stories, Nārada Muni praised the mercy received from the Lord by the Pāṇḍavas. Mahārāja Yudhiṣṭhira, after hearing from Nārada, became ecstatic in love of Kṛṣṇa, and then Nārada Muni left that place and returned to his own place. Thus Śukadeva Gosvāmī, having described various descendants of the daughters of Dakṣa, ends the Seventh Canto of <span class="Italic">Śrīmad-Bhāgavatam.</span>
+          </div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Nārada Muni continued: My dear King, some brāhmaṇas are very much attached to fruitive activities, some are attached to austerities and penances, and still others study the Vedic literature, whereas some, although very few, cultivate knowledge and practice different yogas, especially bhakti-yoga.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">563</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A person desiring liberation for his forefathers or himself should give charity to a brāhmaṇa who adheres to impersonal monism [jñāna-niṣṭhā]. In the absence of such an advanced brāhmaṇa, charity may be given to a brāhmaṇa addicted to fruitive activities [karma-kāṇḍa].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            “<b>One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.</b>” <span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.1.11<lt>1.1.11]<span class="Italic">.</span> In pure devotional service there is not even a pinch of <span class="Italic">jñāna</span> or <span class="Italic">karma.</span> Consequently, when Vaiṣṇavas distribute charity, they do not need to find a <span class="Italic">brāhmaṇa</span> performing the activities of <span class="Italic">jñāna-kāṇḍa</span> or <span class="Italic">karma-kāṇḍa.</span> The best example in this regard is provided by Advaita Gosvāmī, who, after performing the <span class="Italic">śrāddha</span> ceremony for his father, offered charity to Haridāsa Ṭhākura, although it was known to everyone that Haridāsa Ṭhākura was born in a Mohammedan family, not a <span class="Italic">brāhmaṇa</span> family, and was not interested in the activities of <span class="Italic">jñāna-kāṇḍa</span> or <span class="Italic">karma-kāṇḍa.</span></lt>
+          </p>
+          <p>
+            Charity, therefore, should be given to the first-class transcendentalist, the devotee, because the <span class="Italic">śāstras</span> recommend:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">muktānām api siddhānāṁ<br>nārāyaṇa-parāyaṇaḥ<br>sudurlabhaḥ praśāntātmā<br>koṭiṣv api mahā-mune</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O great sage, among many millions who are liberated and perfect in knowledge of liberation, one may be a devotee of Lord Nārāyaṇa, or Kṛṣṇa. Such devotees, who are fully peaceful, are extremely rare.” (<span class="Ref_Italic">Bhāg.</span> 6.14.5) A Vaiṣṇava is in a higher position than a <span class="Italic">jñānī,</span> and therefore Advaita Ācārya selected Haridāsa Ṭhākura to be the person to accept His charity. The Supreme Lord also says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">na me ’bhaktaś catur-vedī<br>mad-bhaktaḥ śva-pacaḥ priyaḥ<br>tasmai deyaṁ tato grāhyaṁ<br>sa ca pūjyo yathā hy aham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Even though a person is a very learned scholar of the Sanskrit Vedic literatures, he is not accepted as My devotee unless he is pure in devotional service. However, even though a person is born in a family of dog-eaters, he is very dear to Me if he is a pure devotee who has no motive to enjoy fruitive activity or mental speculation. Indeed, all respect should be given to him, and whatever he offers should be accepted. Such devotees are as worshipable as I am.” (<span class="Ref_Italic">Hari-bhakti-vilāsa</span> 10.127) Therefore, even if not born in a <span class="Italic">brāhmaṇa</span> family, a devotee, because of his devotion to the Lord, is above all kinds of <span class="Italic">brāhmaṇas,</span> whether they be <span class="Italic">karma-kāṇḍīs</span> or <span class="Italic">jñāna-kāṇḍīs.</span>
+          </p>
+          <p>
+            In this regard, it may be mentioned that <span class="Italic">brāhmaṇas</span> in Vṛndāvana who are <span class="Italic">karma-kāṇḍīs</span> and <span class="Italic">jñāna-kāṇḍīs</span> sometimes decline to accept invitations to our temple because our temple is known as the <span class="Italic">aṅgarejī</span> temple, or “Anglican temple.” But in accordance with the evidence given in the <span class="Italic">śāstra</span> and the example set by Advaita Ācārya, we give <span class="Italic">prasāda</span> to devotees regardless of whether they come from India, Europe or America. It is the conclusion of the <span class="Italic">śāstra</span> that instead of feeding many <span class="Italic">jñāna-kāṇḍī</span> or <span class="Italic">karma-kāṇḍī brāhmaṇas,</span> it is better to feed a pure Vaiṣṇava, regardless of where he comes from. This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (9.30):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">api cet su-durācāro<br>bhajate mām ananya-bhāk<br>sādhur eva sa mantavyaḥ<br>samyag vyavasito hi saḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Even if one commits the most abominable actions, if he is engaged in devotional service he is to be considered saintly because he is properly situated.” Thus it doesn’t matter whether a devotee comes from a <span class="Italic">brāhmaṇa</span> family or non-<span class="Italic">brāhmaṇa</span> family; if he is fully devoted to Kṛṣṇa, he is a <span class="Italic">sādhu.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">136</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            During the period for offering oblations to the demigods, one should invite only two brāhmaṇas, and while offering oblations to the forefathers, one may invite three brāhmaṇas. Or, in either case, only one brāhmaṇa will suffice. Even though one is very opulent, he should not endeavor to invite more brāhmaṇas or make various expensive arrangements on those occasions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            As we have already mentioned, Śrīla Advaita Ācārya, during the generally observed ceremony to offer oblations to the forefathers, invited only Haridāsa Ṭhākura. Thus He followed this principle: <span class="Italic">na me’bhaktaś catur-vedī mad-bhaktaḥ śva-pacaḥ priyaḥ.</span> The Lord says, “It is not necessary that one become very expert in Vedic knowledge before he can become My <span class="Italic">bhakta,</span> or devotee. Even if one is born in a family of dog-eaters, he can become My devotee and be very dear to Me, in spite of having taken birth in such a family. Therefore, offerings should be given to My devotee, and whatever My devotee has offered Me should be accepted.” Following this principle, one should invite a first-class <span class="Italic">brāhmaṇa</span> or Vaiṣṇava—a realized soul—and feed him while observing the <span class="Italic">śrāddha</span> ceremony to offer oblations to one’s forefathers.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">70</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If one arranges to feed many brāhmaṇas or relatives during the śrāddha ceremony, there will be discrepancies in the time, place, respectability and ingredients, the person to be worshiped, and the method of offering worship.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Nārada Muni has prohibited unnecessarily gorgeous arrangements to feed relatives or <span class="Italic">brāhmaṇas</span> during the <span class="Italic">śrāddha</span> ceremony. Those who are materially opulent spend lavishly during this ceremony. Indians spend especially lavishly on three occasions—at the birth of a child, at marriage and while observing the <span class="Italic">śrāddha</span> ceremony—but the <span class="Italic">śāstras</span> prohibit the excessive expenditures involved in inviting many <span class="Italic">brāhmaṇas</span> and relatives, especially during the <span class="Italic">śrāddha</span> ceremony.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When one gets the opportunity of a suitable auspicious time and place, one should, with love, offer food prepared with ghee to the Deity of the Supreme Personality of Godhead and then offer the prasāda to a suitable person—a Vaiṣṇava or brāhmaṇa. This will be the cause of everlasting prosperity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">164</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One should offer prasāda to the demigods, the saintly persons, one’s forefathers, the people in general, one’s family members, one’s relatives and one’s friends, seeing them all as devotees of the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            As mentioned above, it is recommended that everyone distribute <span class="Italic">prasāda,</span> considering every living being a part and parcel of the Supreme Lord. Even in feeding the poor, one should distribute <span class="Italic">prasāda.</span> In Kali-yuga there is a scarcity of food almost every year, and thus philanthropists spend lavishly to feed the poor. For this they invent the term <span class="Italic">daridra-nārāyaṇa-sevā.</span> This is prohibited. One should distribute sumptuous <span class="Italic">prasāda,</span> considering everyone a part of the Supreme Lord, but one should not juggle words to make a poor man Nārāyaṇa. Everyone is related to the Supreme Lord, but one should not mistakenly think that because one is related to the Supreme Personality of Godhead, he has become the Supreme Personality of Godhead, Nārāyaṇa. Such a Māyāvāda philosophy is extremely dangerous, especially for a devotee. Śrī Caitanya Mahāprabhu has therefore strictly forbidden us to associate with Māyāvādī philosophers. <span class="Italic">Māyāvādi-bhāṣya śunile haya sarva-nāśa:</span> if one associates with the Māyāvāda philosophy, his devotional life is doomed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A person fully aware of religious principles should never offer anything like meat, eggs or fish in the śrāddha ceremony, and even if one is a kṣatriya, he himself should not eat such things. When suitable food prepared with ghee is offered to saintly persons, the function is pleasing to the forefathers and the Supreme Lord, who are never pleased when animals are killed in the name of sacrifice.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Persons who want to advance in superior religion are advised to give up all envy of other living entities, whether in relationship to the body, words or mind. There is no religion superior to this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">92</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of an awakening of spiritual knowledge, those who are intelligent in regard to sacrifice, who are actually aware of religious principles and who are free from material desires, control the self in the fire of spiritual knowledge, or knowledge of the Absolute Truth. They may give up the process of ritualistic ceremonies.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            People are generally very much interested in <span class="Italic">karma-kāṇḍa</span> ritualistic ceremonies for elevation to the higher planetary systems, but when one awakens his spiritual knowledge, he becomes uninterested in such elevation and engages himself fully in <span class="Italic">jñāna-yajña</span> to find the objective of life. The objective of life is to stop completely the miseries of birth and death and to return home, back to Godhead. When one cultivates knowledge for this purpose, he is considered to be on a higher platform than one who is engaged in <span class="Italic">karma-yajña,</span> or fruitive activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">131</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon seeing the person engaged in performing the sacrifice, animals meant to be sacrificed are extremely afraid, thinking, “This merciless performer of sacrifices, being ignorant of the purpose of sacrifice and being most satisfied by killing others, will surely kill us.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Animal sacrifice in the name of religion is current practically all over the world in every established religion. It is said that Lord Jesus Christ, when twelve years old, was shocked to see the Jews sacrificing birds and animals in the synagogues and that he therefore rejected the Jewish system of religion and started the religious system of Christianity, adhering to the Old Testament commandment “Thou shalt not kill.” At the present day, however, not only are animals killed in the name of sacrifice, but the killing of animals has increased enormously because of the increasing number of slaughterhouses. Slaughtering animals, either for religion or for food, is most abominable and is condemned herein. Unless one is merciless, one cannot sacrifice animals, either in the name of religion or for food.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">197</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, day by day, one who is actually aware of religious principles and is not heinously envious of poor animals should happily perform daily sacrifices and those for certain occasions with whatever food is available easily by the grace of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The word <span class="Italic">dharmavit,</span> meaning “one who knows the actual purpose of religion,” is very significant. As explained in <span class="Ref_Italic">Bhagavad-gītā</span> (18.66), <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]<span class="Italic">:</span> becoming Kṛṣṇa conscious is the topmost stage in understanding of religious principles. One who reaches this stage performs the <span class="Italic">arcanā</span> process in devotional service. Anyone, whether a <span class="Italic">gṛhastha</span> or a <span class="Italic">sannyāsī,</span> can keep small Deities of the Lord suitably packed or, if possible, installed, and thus worship the Deities of Rādhā-Kṛṣṇa, Sītā-Rāma, Lakṣmī-Nārāyaṇa, Lord Jagannātha or Śrī Caitanya Mahāprabhu by offering food prepared in ghee and then offering the sanctified <span class="Italic">prasāda</span> to the forefathers, demigods and other living entities as a matter of routine daily work. All the centers of our Kṛṣṇa consciousness movement have Deity worship programs very nicely going on in which food is offered to the Deity and distributed to the first-class <span class="Italic">brāhmaṇas</span> and Vaiṣṇavas and even to the people in general. This performance of sacrifice brings complete satisfaction. The members of the Kṛṣṇa consciousness movement engage daily in such transcendental activities. Thus in our Kṛṣṇa consciousness movement there is no question at all of killing animals.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">105</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There are five branches of irreligion, appropriately known as irreligion [vidharma], religious principles for which one is unfit [para-dharma], pretentious religion [ābhāsa], analogical religion [upadharma] and cheating religion [chala-dharma]. One who is aware of real religious life must abandon these five as irreligious.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Any religious principles opposed to the principle of surrendering to the lotus feet of the Supreme Personality of Godhead, Kṛṣṇa, are to be considered religious principles of irregularity or cheating, and one who is actually interested in religion must give them up. One should simply follow the instructions of Kṛṣṇa and surrender unto Him. To do this, of course, one needs very good intelligence, which may be awakened after many, many births through good association with devotees and the practice of Kṛṣṇa consciousness. Everything but the principle of religion recommended by Kṛṣṇa—<span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]—should be given up as irreligion.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">260</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Religious principles that obstruct one from following his own religion are called vidharma. Religious principles introduced by others are called para-dharma. A new type of religion created by one who is falsely proud and who opposes the principles of the Vedas is called upadharma. And interpretation by one’s jugglery of words is called chala-dharma.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            To create a new type of <span class="Italic">dharma</span> has become fashionable in this age. So-called <span class="Italic">svāmīs</span> and <span class="Italic">yogīs</span> support that one may follow any type of religious system, according to one’s own choice, because all systems are ultimately the same. In <span class="Italic">Śrīmad-Bhāgavatam,</span> however, such fashionable ideas are called <span class="Italic">vidharma</span> because they go against one’s own religious system. The real religious system is described by the Supreme Personality of Godhead: <span class="Italic">sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja</span> [Bg. 18.66]<span class="Italic">.</span> The real religious system is that of surrender to the lotus feet of the Lord. In the Sixth Canto of <span class="Italic">Śrīmad-Bhāgavatam,</span> in connection with Ajāmila’s deliverance, Yamarāja says, <span class="Italic">dharmaṁ tu sākṣād bhagavat-praṇītam: [SB </span>6.3.19] real religion is that which is given by the Supreme Personality of Godhead, just as real law is that which is given by the government. No one can manufacture actual law at home, nor can one manufacture actual religion. Elsewhere it is said, <span class="Italic">sa vai puṁsāṁ paro dharmo yato bhaktir adhokṣaje: [SB </span>1.2.6] the real religious system is that which leads one to become a devotee of the Supreme Lord. Therefore, anything opposed to this religious system of progressive Kṛṣṇa consciousness is called <span class="Italic">vidharma, para-dharma, upadharma</span> or <span class="Italic">chala-dharma.</span> Misinterpretation of <span class="Italic">Bhagavad-gītā</span> is <span class="Italic">chala-dharma.</span> When Kṛṣṇa directly says something and some rascal interprets it to mean something different, this is <span class="Italic">chala-dharma</span>—a religious system of cheating—or <span class="Italic">śabda-bhit,</span> a jugglery of words. One should be extremely careful to avoid these various types of cheating systems of religion.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">288</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A pretentious religious system manufactured by one who willfully neglects the prescribed duties of his order of life is called ābhāsa [a dim reflection or false similarity]. But if one performs the prescribed duties for his particular āśrama or varṇa, why are they not sufficient to mitigate all material distresses?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            It is indicated here that everyone should strictly follow the principles of <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> as given in the <span class="Italic">śāstra.</span> In the <span class="Ref_Italic">Viṣṇu Purāṇa</span> (3.8.9) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varṇāśramācāravatā<br>puruṣeṇa paraḥ pumān<br>viṣṇur ārādhyate panthā<br>nānyat tat-toṣa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One should focus upon the destination for progress, which is to become Kṛṣṇa conscious. This is the aim and end of all <span class="Italic">varṇas</span> and <span class="Italic">āśramas.</span> However, if Viṣṇu is not worshiped, the followers of the <span class="Italic">varṇāśrama</span> institution manufacture some concocted God. Thus it has now become fashionable for any rascal or fool to be elected God, and there are many missionaries who have concocted their own gods, giving up their relationship with the real God. In <span class="Italic">Bhagavad-gītā</span> it is clearly said that one who worships the demigods has lost his intelligence. Nonetheless we find that even an illiterate person who has lost all intelligence is elected God, and although he has a temple, it has meat-eating <span class="Italic">sannyāsīs,</span> and many polluted activities go on there. This type of religious system, which misguides its poor followers, is strictly forbidden. Such pretentious religions should be stopped altogether.
+          </p>
+          <p>
+            The original system is that a <span class="Italic">brāhmaṇa</span> should actually become a <span class="Italic">brāhmaṇa;</span> he should not only take birth in a <span class="Italic">brāhmaṇa</span> family, but must also be qualified. Also, even if one is not born in a <span class="Italic">brāhmaṇa</span> family but has brahminical qualifications, he must be considered a <span class="Italic">brāhmaṇa.</span> By strictly following this system, one can be happy without extra endeavor. <span class="Italic">Sva-bhāva-vihito dharmaḥ kasya neṣṭaḥ praśāntaye.</span> The real aim of life is to mitigate distress, and one can do this very easily by following the principles of <span class="Italic">śāstra.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">224</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Even if a man is poor, he should not endeavor to improve his economic condition just to maintain his body and soul together or to become a famous religionist. Just as a great python, although lying in one place, not endeavoring for its livelihood, gets the food it needs to maintain body and soul, one who is desireless also obtains his livelihood without endeavor.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Human life is simply meant for developing Kṛṣṇa consciousness. One need not even try to earn a livelihood to maintain body and soul together. This is illustrated here by the example of the great python, which lies in one place, never going here and there to earn a livelihood to maintain itself, and yet is maintained by the grace of the Lord. As advised by Nārada Muni (<span class="Ref_Italic">Bhāg.</span> 1.5.18), <span class="Italic">tasyaiva hetoḥ prayateta kovidaḥ:</span> one should simply endeavor to increase his Kṛṣṇa consciousness. One should not desire to do anything else, even to earn his livelihood. There are many, many examples of this attitude. Mādhavendra Purī, for instance, would never go to anyone to ask for food. Śukadeva Gosvāmī has also said, <span class="Italic">kasmād bhajanti kavayo dhana-durmadāndhān.</span> Why should one approach a person who is blind with wealth? Rather, one should depend on Kṛṣṇa, and He will give everything. All the members of our Kṛṣṇa consciousness movement, whether they be <span class="Italic">gṛhasthas</span> or <span class="Italic">sannyāsīs,</span> should try to spread the Kṛṣṇa consciousness movement with determination, and Kṛṣṇa will supply all necessities. The process of <span class="Italic">ājagara-vṛtti,</span> the means of livelihood of a python, is very much appreciated in this regard. Even though one may be very poor, he should simply try to advance in Kṛṣṇa consciousness and not endeavor to earn his livelihood.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who is content and satisfied and who links his activities with the Supreme Personality of Godhead residing in everyone’s heart enjoys transcendental happiness without endeavoring for his livelihood. Where is such happiness for a materialistic man who is impelled by lust and greed and who therefore wanders in all directions with a desire to accumulate wealth?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            For a person who has suitable shoes on his feet, there is no danger even when he walks on pebbles and thorns. For him, everything is auspicious. Similarly, for one who is always self-satisfied there is no distress; indeed, he feels happiness everywhere.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">133</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, a self-satisfied person can be happy even with only drinking water. However, one who is driven by the senses, especially by the tongue and genitals, must accept the position of a household dog to satisfy his senses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            According to the <span class="Italic">śāstras,</span> a <span class="Italic">brāhmaṇa,</span> or a cultured person in Kṛṣṇa consciousness, will not enter anyone’s service to maintain body and soul together, and especially not for satisfaction of the senses. A true <span class="Italic">brāhmaṇa</span> is always satisfied. Even if he has nothing to eat, he can drink a little water and be satisfied. This is only a matter of practice. Unfortunately, however, no one is educated in how to be satisfied in self-realization. As explained above, a devotee is always satisfied because he feels the presence of the Supersoul within his heart and thinks of Him twenty-four hours a day. That is real satisfaction. A devotee is never driven by the dictations of the tongue and genitals, and thus he is never victimized by the laws of material nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of greed for the sake of the senses, the spiritual strength, education, austerity and reputation of a devotee or brāhmaṇa who is not self-satisfied dwindle, and his knowledge gradually vanishes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">109</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The strong bodily desires and needs of a person disturbed by hunger and thirst are certainly satisfied when he eats. Similarly, if one becomes very angry, that anger is satisfied by chastisement and its reaction. But as for greed, even if a greedy person has conquered all the directions of the world or has enjoyed everything in the world, still he will not be satisfied.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (3.37) it is stated that lust, anger and greed are the causes of the conditioned soul’s bondage in this material world. <span class="Italic">Kāma eṣa krodha eṣa rajo-guṇa-samudbhavaḥ.</span> When strong lusty desires for sense gratification are unfulfilled, one becomes angry. This anger can be satisfied when one chastises his enemy, but when there is an increase in <span class="Italic">lobha,</span> or greed, which is the greatest enemy caused by <span class="Italic">rajo-guṇa,</span> the mode of passion, how can one advance in Kṛṣṇa consciousness?
+          </p>
+          <p>
+            If one is very greedy to enhance his Kṛṣṇa consciousness, this is a great boon. <span class="Italic">Tatra laulyam ekalaṁ mūlam.</span> This is the best path available.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">222</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Yudhiṣṭhira, many persons with varied experience, many legal advisers, many learned scholars and many persons eligible to become presidents of learned assemblies fall down into hellish life because of not being satisfied with their positions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            For spiritual advancement, one should be materially satisfied, for if one is not materially satisfied, his greed for material development will result in the frustration of his spiritual advancement. There are two things that nullify all good qualities. One is poverty. <span class="Italic">Daridra-doṣo guṇa-rāśi-nāśī.</span> If one is poverty-stricken, all his good qualities become null and void. Similarly, if one becomes too greedy, his good qualifications are lost. Therefore the adjustment is that one should not be poverty-stricken, but one must try to be fully satisfied with the bare necessities of life and not be greedy. For a devotee to be satisfied with the bare necessities is therefore the best advice for spiritual advancement. Learned authorities in devotional life consequently advise that one not endeavor to increase the number of temples and <span class="Italic">maṭhas.</span> Such activities can be undertaken only by devotees experienced in propagating the Kṛṣṇa consciousness movement. All the <span class="Italic">ācāryas</span> in South India, especially Śrī Rāmānujācārya, constructed many big temples, and in North India all the Gosvāmīs of Vṛndāvana constructed large temples. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura also constructed large centers, known as Gauḍīya Maṭhas. Therefore temple construction is not bad, provided proper care is taken for the propagation of Kṛṣṇa consciousness. Even if such endeavors are considered greedy, the greed is to satisfy Kṛṣṇa, and therefore these are spiritual activities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">184</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By making plans with determination, one should give up lusty desires for sense gratification. Similarly, by giving up envy one should conquer anger, by discussing the disadvantages of accumulating wealth one should give up greed, and by discussing the truth one should give up fear.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura has suggested how one can conquer lusty desires for sense gratification. One cannot give up thinking of women, for thinking in this way is natural; even while walking on the street, one will see so many women. However, if one is determined not to live with a woman, even while seeing a woman he will not become lusty. If one is determined not to have sex, he can automatically conquer lusty desires. The example given in this regard is that even if one is hungry, if on a particular day he is determined to observe fasting, he can naturally conquer the disturbances of hunger and thirst. If one is determined not to be envious of anyone, he can naturally conquer anger. Similarly, one can give up the desire to accumulate wealth simply by considering how difficult it is to protect the money in one’s possession. If one keeps a large amount of cash with him, he is always anxious about keeping it properly. Thus if one discusses the disadvantages of accumulating wealth, he can naturally give up business without difficulty.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">112</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By discussing spiritual knowledge one can conquer lamentation and illusion, by serving a great devotee one can become prideless, by keeping silent one can avoid obstacles on the path of mystic yoga, and simply by stopping sense gratification one can conquer envy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            If one’s son has died, one may certainly be affected by lamentation and illusion and cry for the dead son, but one may overcome lamentation and illusion by considering the verses of <span class="Italic">Bhagavad-gītā.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">jātasya hi dhruvo mṛtyur<br>dhruvaṁ janma mṛtasya ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            As the soul transmigrates, one who has taken birth must give up the present body, and then he must certainly accept another body. This should be no cause for lamentation. Therefore Lord Kṛṣṇa says, <span class="Italic">dhīras tatra na muhyati:</span> one who is <span class="Italic">dhīra,</span> or sober, who is learned in philosophy and established in knowledge, cannot be unhappy over the transmigration of the soul.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">140</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By good behavior and freedom from envy one should counteract sufferings due to other living entities, by meditation in trance one should counteract sufferings due to providence, and by practicing haṭha-yoga, prāṇāyāma and so forth one should counteract sufferings due to the body and mind. Similarly, by developing the mode of goodness, especially in regard to eating, one should conquer sleep.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            By practice, one should avoid eating in such a way that other living entities will be disturbed and suffer. Since I suffer when pinched or killed by others, I should not attempt to pinch or kill any other living entity. People do not know that because of killing innocent animals they themselves will have to suffer severe reactions from material nature. Any country where people indulge in unnecessary killing of animals will have to suffer from wars and pestilence imposed by material nature. Comparing one’s own suffering to the suffering of others, therefore, one should be kind to all living entities. One cannot avoid the sufferings inflicted by providence, and therefore when suffering comes one should fully absorb oneself in chanting the Hare Kṛṣṇa <span class="Italic">mantra.</span> One can avoid sufferings from the body and mind by practicing mystic <span class="Italic">haṭha-yoga.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">177</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One must conquer the modes of passion and ignorance by developing the mode of goodness, and then one must become detached from the mode of goodness by promoting oneself to the platform of śuddha-sattva. All this can be automatically done if one engages in the service of the spiritual master with faith and devotion. In this way one can conquer the influence of the modes of nature.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            Just by treating the root cause of an ailment, one can conquer all bodily pains and sufferings. Similarly, if one is devoted and faithful to the spiritual master, he can conquer the influence of <span class="Italic">sattva-guṇa, rajo-guṇa</span> and <span class="Italic">tamo-guṇa</span> very easily. <span class="Italic">Yogīs</span> and <span class="Italic">jñānīs</span> practice in many ways to conquer the senses, but the <span class="Italic">bhakta</span> immediately attains the mercy of the Supreme Personality of Godhead through the mercy of the spiritual master. <span class="Italic">Yasya prasādād bhagavat-prasādo **.</span> If the spiritual master is favorably inclined, one naturally receives the mercy of the Supreme Lord, and by the mercy of the Supreme Lord one immediately becomes transcendental, conquering all the influences of <span class="Italic">sattva-guṇa, rajo-guṇa</span> and <span class="Italic">tamo-guṇa</span> within this material world. This is confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">sa guṇān samatītyaitān brahma-bhūyāya kalpate [Bg. </span>14.26]). If one is a pure devotee acting under the directions of the <span class="Italic">guru,</span> one easily gets the mercy of the Supreme Lord and thus becomes immediately situated on the transcendental platform. This is explained in the next verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">230</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The spiritual master should be considered to be directly the Supreme Lord because he gives transcendental knowledge for enlightenment. Consequently, for one who maintains the material conception that the spiritual master is an ordinary human being, everything is frustrated. His enlightenment and his Vedic studies and knowledge are like the bathing of an elephant.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            It is recommended that one honor the spiritual master as being on an equal status with the Supreme Personality of Godhead. <span class="Italic">Sākṣād dharitvena samasta-śāstraiḥ.</span> This is enjoined in every scripture. <span class="Italic">Ācāryaṁ māṁ vijānīyāt.</span> One should consider the <span class="Italic">ācārya</span> to be as good as the Supreme Personality of Godhead. In spite of all these instructions, if one considers the spiritual master an ordinary human being, one is doomed. His study of the <span class="Italic">Vedas</span> and his austerities and penances for enlightenment are all useless, like the bathing of an elephant. An elephant bathes in a lake quite thoroughly, but as soon as it comes on the shore it takes some dust from the ground and strews it over its body. Thus there is no meaning to the elephant’s bath. One may argue by saying that since the spiritual master’s relatives and the men of his neighborhood consider him an ordinary human being, what is the fault on the part of the disciple who considers the spiritual master an ordinary human being? This will be answered in the next verse, but the injunction is that the spiritual master should never be considered an ordinary man. One should strictly adhere to the instructions of the spiritual master, for if he is pleased, certainly the Supreme Personality of Godhead is pleased. <span class="Italic">Yasya prasādād bhagavat-prasādo yasyāprasādān na gatiḥ kuto ’pi .</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">284</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, Lord Kṛṣṇa, is the master of all other living entities and of the material nature. His lotus feet are sought and worshiped by great saintly persons like Vyāsa. Nonetheless, there are fools who consider Lord Kṛṣṇa an ordinary human being.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            The example of Lord Kṛṣṇa’s being the Supreme Personality of Godhead is appropriate in regard to understanding the spiritual master. The spiritual master is called <span class="Italic">sevaka-bhagavān,</span> the servitor Personality of Godhead, and Kṛṣṇa is called <span class="Italic">sevya-bhagavān,</span> the Supreme Personality of Godhead who is to be worshiped. The spiritual master is the worshiper God, whereas the Supreme Personality of Godhead, Kṛṣṇa, is the worshipable God. This is the difference between the spiritual master and the Supreme Personality of Godhead.
+          </p>
+          <p>
+            Another point: <span class="Italic">Bhagavad-gītā,</span> which constitutes the instructions of the Supreme Personality of Godhead, is presented by the spiritual master as it is, without deviation. Therefore the Absolute Truth is present in the spiritual master. As clearly stated in Text 26, <span class="Italic">jñāna-dīpa-prade.</span> The Supreme Personality of Godhead gives real knowledge to the entire world, and the spiritual master, as the representative of the Supreme Godhead, carries the message throughout the world. Therefore, on the absolute platform, there is no difference between the spiritual master and the Supreme Personality of Godhead. If someone considers the Supreme Personality—Kṛṣṇa or Lord Rāmacandra—to be an ordinary human being, this does not mean that the Lord becomes an ordinary human being. Similarly, if the family members of the spiritual master, who is the bona fide representative of the Supreme Personality of Godhead, consider the spiritual master an ordinary human being, this does not mean that he becomes an ordinary human being. The spiritual master is as good as the Supreme Personality of Godhead, and therefore one who is very serious about spiritual advancement must regard the spiritual master in this way. Even a slight deviation from this understanding can create disaster in the disciple’s Vedic studies and austerities.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">506</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Ritualistic ceremonies, regulative principles, austerities and the practice of yoga are all meant to control the senses and mind, but even after one is able to control the senses and mind, if he does not come to the point of meditation upon the Supreme Lord, all such activities are simply labor in frustration.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            One may argue that one may achieve the ultimate goal of life—realization of the Supersoul—by practicing the <span class="Italic">yoga</span> system and ritualistic performances according to the Vedic principles, even without staunch devotion to the spiritual master. The actual fact, however, is that by practicing <span class="Italic">yoga</span> one must come to the platform of meditating upon the Supreme Personality of Godhead. As stated in the scriptures, <span class="Italic">dhyānāvasthita-tad-gatena manasā paśyanti yaṁ yoginaḥ: [SB </span>12.13.1] a person in meditation achieves the perfection of <span class="Italic">yoga</span> practice when he can see the Supreme Personality of Godhead. By various practices, one may come to the point of controlling the senses, but simply controlling the senses does not bring one to a substantial conclusion. However, by staunch faith in the spiritual master and the Supreme Personality of Godhead, one not only controls the senses but also realizes the Supreme Lord.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ<br> [<span class="Ref_Italic">ŚU</span> <popup><div class="Verse-in-purp"><0.125>yasya deve parā bhaktir<br>yathā deve tathā gurau<br>tasyaite kathitā hy arthāḥ<br>prakāśante mahātmanaḥ</0.125></div></popup>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Unto those great souls who have implicit faith in both the Lord and the spiritual master, all the imports of Vedic knowledge are automatically revealed.” (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.23)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ śrī-kṛṣṇa-nāmādi<br>na bhaved grāhyam indriyaiḥ<br>sevonmukhe hi jihvādau<br>svayam eva sphuraty adaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “No one can understand Kṛṣṇa as He is by the blunt material senses. But He reveals Himself to the devotees, being pleased with them for their transcendental loving service unto Him.” (<span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.2.234)
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhaktyā mām abhijānāti<br>yāvān yaś cāsmi tattvataḥ<br>tato māṁ tattvato jñātvā<br>viśate tad-anantaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One can understand the Supreme Personality as He is only by devotional service. And when one is in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God.” (Bg. 18.55)
+          </p>
+          <p>
+            These are Vedic instructions. One must have full faith in the words of the spiritual master and similar faith in the Supreme Personality of Godhead. Then the real knowledge of <span class="Italic">ātmā</span> and Paramātmā and the distinction between matter and spirit will be automatically revealed. This <span class="Italic">ātma-tattva,</span> or spiritual knowledge, will be revealed within the core of a devotee’s heart because of his having taken shelter of the lotus feet of a <span class="Italic">mahājana</span> such as Prahlāda Mahārāja.<lt>6.23]</lt>
+          </p>
+          <p>
+            “Only unto those great souls who have implicit faith in both the Lord and the spiritual master are all the imports of the Vedic knowledge automatically revealed.” (<span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> 6.23) It is further stated, <span class="Italic">tuṣyeyaṁ sarva-bhūtātmā guru-śuśrūṣayā</span> and <span class="Italic">taranty añjo bhavārṇavam.</span> Simply by rendering service to the spiritual master, one crosses the ocean of nescience and returns home, back to Godhead. Thus he gradually sees the Supreme Lord face to face and enjoys life in association with the Lord. The ultimate goal of <span class="Italic">yoga</span> is to come in contact with the Supreme Personality of Godhead. Unless this point is achieved, one’s so-called <span class="Italic">yoga</span> practice is simply labor without any benefit.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">251</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As professional activities or business profits cannot help one in spiritual advancement but are a source of material entanglement, the Vedic ritualistic ceremonies cannot help anyone who is not a devotee of the Supreme Personality of Godhead.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            If one becomes very rich through his professional activities, through trade or through agriculture, this does not mean that he is spiritually advanced. To be spiritually advanced is different from being materially rich. Although the purpose of life is to become spiritually rich, unfortunate men, misguided as they are, are always engaged in trying to become materially rich. Such material engagements, however, do not help one in the actual fulfillment of the human mission. On the contrary, material engagements lead one to be attracted to many unnecessary necessities, which are accompanied by the risk that one may be born in a degraded condition. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (14.18):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ūrdhvaṁ gacchanti sattva-sthā<br>madhye tiṣṭhanti rājasāḥ<br>jaghanya-guṇa-vṛtti-sthā<br>adho gacchanti tāmasāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those situated in the mode of goodness gradually go upward to the higher planets; those in the mode of passion live on the earthly planets; and those in the mode of ignorance go down to the hellish worlds.” Especially in this Kali-yuga, material advancement means degradation and attraction to many unwanted necessities that create a low mentality. Therefore, <span class="Italic">jaghanya-guṇa-vṛtti-sthā:</span> since people are contaminated by the lower qualities, they will lead their next lives either as animals or in other degraded forms of life. Making a show of religion without Kṛṣṇa consciousness may make one popular in the estimation of unintelligent men, but factually such a materialistic display of spiritual advancement does not help one at all; it will not prevent one from missing the goal of life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">127</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who desires to conquer the mind must leave the company of his family and live in a solitary place, free from contaminated association. To maintain the body and soul together, he should beg as much as he needs for the bare necessities of life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            This is the process for conquering the agitation of the mind. One is recommended to take leave of his family and live alone, maintaining body and soul together by begging alms and eating only as much as needed to keep himself alive. Without such a process, one cannot conquer lusty desires. <span class="Italic">Sannyāsa</span> means accepting a life of begging, which makes one automatically very humble and meek and free from lusty desires. In this regard, the following verse appears in the <span class="Italic">Smṛti</span> literature:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">dvandvāhatasya gārhasthyaṁ<br>dhyāna-bhaṅgādi-kāraṇam<br>lakṣayitvā gṛhī spaṣṭaṁ<br>sannyased avicārayan</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            In this world of duality, family life is the cause that spoils one’s spiritual life or meditation. Specifically understanding this fact, one should accept the order of <span class="Italic">sannyāsa</span> without hesitation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">433</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, in a sacred and holy place of pilgrimage one should select a place in which to perform yoga. The place must be level and not too high or low. There one should sit very comfortably, being steady and equipoised, keeping his body straight, and thus begin chanting the Vedic praṇava.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Generally the chanting of <span class="Italic">oṁ</span> is recommended because in the beginning one cannot understand the Personality of Godhead. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vadanti tat tattva-vidas<br>tattvaṁ yaj jñānam advayam<br>brahmeti paramātmeti<br>bhagavān iti śabdyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Learned transcendentalists who know the Absolute Truth call this nondual substance Brahman, Paramātmā or Bhagavān.” Unless one is fully convinced of the Supreme Personality of Godhead, one has the tendency to become an impersonalist <span class="Italic">yogī</span> searching for the Supreme Lord within the core of his heart (<span class="Italic">dhyānāvasthita-tad-gatena manasā paśyanti yaṁ yoginaḥ [SB </span>12.13.1]). Here the chanting of <span class="Italic">oṁkāra</span> is recommended because in the beginning of transcendental realization, instead of chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> one may chant <span class="Italic">oṁkāra</span> (<span class="Italic">praṇava</span>). There is no difference between the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> and <span class="Italic">oṁkāra</span> because both of them are sound representations of the Supreme Personality of Godhead. <span class="Italic">praṇavaḥ sarva-vedeṣu.</span> In all Vedic literatures, the sound vibration <span class="Italic">oṁkāra</span> is the beginning. <span class="Italic">Oṁ namo bhagavate vāsudevāya.</span> The difference between chanting <span class="Italic">oṁkāra</span> and chanting the Hare Kṛṣṇa <span class="Italic">mantra</span> is that the Hare Kṛṣṇa <span class="Italic">mantra</span> may be chanted without consideration of the place or the sitting arrangements recommended in <span class="Ref_Italic">Bhagavad-gītā</span> (6.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">śucau deśe pratiṣṭhāpya<br>sthiram āsanam ātmanaḥ<br>nāty-ucchritaṁ nātinīcaṁ<br>cailājina-kuśottaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “To practice <span class="Italic">yoga,</span> one should go to a secluded place and should lay <span class="Italic">kuśa</span> grass on the ground and then cover it with a deerskin and a soft cloth. The seat should neither be too high nor too low and should be situated in a sacred place.” The Hare Kṛṣṇa <span class="Italic">mantra</span> may be chanted by anyone, without consideration of the place or how one sits. Śrī Caitanya Mahāprabhu has openly declared, <span class="Italic">niyamitaḥ smaraṇe na kālaḥ.</span> In chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> there are no particular injunctions regarding one’s sitting place. The injunction <span class="Italic">niyamitaḥ smaraṇe na kālaḥ</span> includes <span class="Italic">deśa, kāla</span> and <span class="Italic">pātra</span>—place, time and the individual. Therefore anyone may chant the Hare Kṛṣṇa <span class="Italic">mantra,</span> without consideration of the time and place. Especially in this age, Kali-yuga, it is very difficult to find a suitable place according to the recommendations of <span class="Italic">Bhagavad-gītā.</span> The Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> however, may be chanted at any place and any time, and this will bring results very quickly. Yet even while chanting the Hare Kṛṣṇa <span class="Italic">mantra</span> one may observe regulative principles. Thus while sitting and chanting one may keep his body straight, and this will help one in the chanting process; otherwise one may feel sleepy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32–33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">231</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While continuously staring at the tip of the nose, a learned yogī practices the breathing exercises through the technical means known as pūraka, kumbhaka and recaka—controlling inhalation and exhalation and then stopping them both. In this way the yogī restricts his mind from material attachments and gives up all mental desires. As soon as the mind, being defeated by lusty desires, drifts toward feelings of sense gratification, the yogī should immediately bring it back and arrest it within the core of his heart.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            The practice of <span class="Italic">yoga</span> is concisely explained herein. When this practice of <span class="Italic">yoga</span> is perfect, one sees the Supersoul, the Paramātmā feature of the Supreme Personality of Godhead, within the core of one’s heart. However, in <span class="Ref_Italic">Bhagavad-gītā</span> (6.47) the Supreme Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yoginām api sarveṣām<br>mad-gatenāntarātmanā<br>śraddhāvān bhajate yo māṁ<br>sa me yuktatamo mataḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Of all <span class="Italic">yogīs,</span> he who always abides in Me with great faith, worshiping Me in transcendental loving service, is most intimately united with Me in <span class="Italic">yoga</span> and is the highest of all.” A devotee can immediately become a perfect <span class="Italic">yogī</span> because he practices keeping Kṛṣṇa constantly within the core of his heart. This is another way to practice <span class="Italic">yoga</span> easily. The Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">man-manā bhava mad-bhakto<br>mad-yājī māṁ namaskuru</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Always think of Me and become My devotee. Worship Me and offer your homage unto Me.” (Bg. 18.65) If one practices devotional service by always keeping Kṛṣṇa within the core of his heart (<span class="Italic">man-manāḥ</span>), he immediately becomes a first-class <span class="Italic">yogī.</span> Furthermore, keeping Kṛṣṇa within the mind is not a difficult task for the devotee. For an ordinary man in the bodily concept of life, the practice of <span class="Italic">yoga</span> may be helpful, but one who immediately takes to devotional service can immediately become a perfect <span class="Italic">yogī</span> without difficulty.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">188</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the yogi regularly practices in this way, in a short time his heart becomes fixed and free from disturbance, like a fire without flames or smoke.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            <span class="Italic">Nirvāṇa</span> means the cessation of all material desires. Sometimes desirelessness is understood to imply an end to the workings of the mind, but this is not possible. The living entity has senses, and if the senses stopped working, the living entity would no longer be a living entity; he would be exactly like stone or wood. This is not possible. Because he is living, he is <span class="Italic">nitya</span> and <span class="Italic">cetana</span>—eternally sentient. For those who are not very advanced, the practice of <span class="Italic">yoga</span> is recommended in order to stop the mind from being agitated by material desires, but if one fixes his mind on the lotus feet of Kṛṣṇa, his mind naturally becomes peaceful very soon. This peace is described in <span class="Ref_Italic">Bhagavad-gītā</span> (5.29):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhoktāraṁ yajña-tapasāṁ<br>sarva-loka-maheśvaram<br>suhṛdaṁ sarva-bhūtānāṁ<br>jñātvā māṁ śāntim ṛcchati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            If one can understand Kṛṣṇa as the supreme enjoyer, the supreme proprietor of everything, and the supreme friend of everyone, one is established in peace and is free from material agitation. However, for one who cannot understand the Supreme Personality of Godhead, the practice of <span class="Italic">yoga</span> is recommended.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">149</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When one’s consciousness is uncontaminated by material lusty desires, it becomes calm and peaceful in all activities, for one is situated in eternal blissful life. Once situated on that platform, one does not return to materialistic activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            <span class="Italic">Brahma-sukha-spṛṣṭam</span> is also described in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments nor desires to have anything; he is equally disposed toward every living entity. In this situation, he begins transcendental activities, or devotional service to the Lord.” Generally, once elevated to the transcendental platform of <span class="Italic">brahma-sukha,</span> transcendental bliss, one never comes down. But if one does not engage in devotional service, there is a chance of his returning to the material platform. <span class="Italic">Āruhya kṛcchreṇa paraṁ padaṁ tataḥ patanty adho ’nādṛta-yuṣmad-aṅghrayaḥ: [SB </span>10.2.32] one may rise to the platform of <span class="Italic">brahma-sukha,</span> transcendental bliss, but even from that platform one may fall down to the material platform if he does not engage himself in devotional service.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_36_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">212</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            One who accepts the sannyāsa order gives up the three principles of materialistic activities in which one indulges in the field of household life—namely religion, economic development and sense gratification. One who first accepts sannyāsa but then returns to such materialistic activities is to be called a vāntāśī, or one who eats his own vomit. He is indeed a shameless person.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_36_purport">
+          <p>
+            Materialistic activities are regulated by the institution of <span class="Italic">varṇāśrama-dharma.</span> Without <span class="Italic">varṇāśrama-dharma,</span> materialistic activities constitute animal life. Yet even in human life, while observing the principles of <span class="Italic">varṇa</span> and <span class="Italic">āśrama—brāhmaṇa, kṣatriya, vaiśya, śūdra, brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa</span>—one must ultimately accept <span class="Italic">sannyāsa,</span> the renounced order, for only by the renounced order can one be situated in <span class="Italic">brahma-sukha,</span> or transcendental bliss. In <span class="Italic">brahma-sukha</span> one is no longer attracted by lusty desires. Indeed, when one is no longer disturbed, especially by lusty desires for sexual indulgence, he is fit to become a <span class="Italic">sannyāsī.</span> Otherwise, one should not accept the <span class="Italic">sannyāsa</span> order. If one accepts <span class="Italic">sannyāsa</span> at an immature stage, there is every possibility of his being attracted by women and lusty desires and thus again becoming a so-called <span class="Italic">gṛhastha</span> or a victim of women. Such a person is most shameless, and he is called <span class="Italic">vāntāśī,</span> or one who eats that which he has already vomited. He certainly leads a condemned life. In our Kṛṣṇa consciousness movement it is advised, therefore, that the <span class="Italic">sannyāsīs</span> and <span class="Italic">brahmacārīs</span> keep strictly aloof from the association of women so that there will be no chance of their falling down again as victims of lusty desires.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_37_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">368</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sannyāsīs who first consider that the body is subject to death, when it will be transformed into stool, worms or ashes, but who again give importance to the body and glorify it as the self, are to be considered the greatest rascals.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_37_purport">
+          <p>
+            A <span class="Italic">sannyāsī</span> is one who has clearly understood, through advancement in knowledge, that Brahman—he, the person himself—is the soul, not the body. One who has this understanding may take <span class="Italic">sannyāsa,</span> for he is situated in the <span class="Italic">“ahaṁ brahmāsmi</span>” position. <span class="Italic">Brahma-bhūtaḥ prasannātmā na śocati na kāṅkṣati [Bg. </span>18.54]<span class="Italic">.</span> Such a person, who no longer laments or hankers to maintain his body and who can accept all living entities as spirit souls, can then enter the devotional service of the Lord. If one does not enter the devotional service of the Lord but artificially considers himself Brahman or Nārāyaṇa, not perfectly understanding that the soul and body are different, one certainly falls down (<span class="Italic">patanty adhaḥ</span>). Such a person again gives importance to the body. There are many <span class="Italic">sannyāsīs</span> in India who stress the importance of the body. Some of them give special importance to the body of the poor man, accepting him as <span class="Italic">daridra-nārāyaṇa,</span> as if Nārāyaṇa had a material body. Many other <span class="Italic">sannyāsīs</span> stress the importance of the social position of the body as a <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> or <span class="Italic">śūdra.</span> Such <span class="Italic">sannyāsīs</span> are considered the greatest rascals (<span class="Italic">asattamāḥ</span>). They are shameless because they have not yet understood the difference between the body and the soul and instead have accepted the body of a <span class="Italic">brāhmaṇa</span> to be a <span class="Italic">brāhmaṇa.</span> Brahmanism (<span class="Italic">brāhmaṇya</span>) consists of the knowledge of Brahman. But actually the body of a <span class="Italic">brāhmaṇa</span> is not Brahman. Similarly, the body is neither rich nor poor. If the body of a poor man were <span class="Italic">daridra-nārāyaṇa,</span> this would mean that the body of a rich man, on the contrary, must be <span class="Italic">dhanī-nārāyaṇa.</span> Therefore <span class="Italic">sannyāsīs</span> who do not know the meaning of Nārāyaṇa, those who regard the body as Brahman or as Nārāyaṇa, are described here as <span class="Italic">asattamāḥ,</span> the most abominable rascals. Following the bodily concept of life, such <span class="Italic">sannyāsīs</span> make various programs to serve the body. They conduct farcical missions consisting of so-called religious activities meant to mislead all of human society. These <span class="Italic">sannyāsīs</span> have been described herein as <span class="Italic">apatrapaḥ</span> and <span class="Italic">asattamāḥ</span>—shameless and fallen from spiritual life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38–39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">161</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            It is abominable for a person living in the gṛhastha-āśrama to give up the regulative principles, for a brahmacārī not to follow the brahmacārī vows while living under the care of the guru, for a vānaprastha to live in the village and engage in so-called social activities, or for a sannyāsī to be addicted to sense gratification. One who acts in this way is to be considered the lowest renegade. Such a pretender is bewildered by the external energy of the Supreme Personality of Godhead, and one should either reject him from any position, or taking compassion upon him, teach him, if possible, to resume his original position.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            We have repeatedly stressed that human culture does not begin unless one takes to the principles of <span class="Italic">varṇāśrama-dharma.</span> Although <span class="Italic">gṛhastha</span> life is a concession for the enjoyment of sex, one cannot enjoy sex without following the rules and regulations of householder life. Furthermore, as already instructed, a <span class="Italic">brahmacārī</span> must live under the care of the <span class="Italic">guru:</span> <span class="Italic">brahmacārī guru-kule vasan dānto guror hitam [SB </span>7.12.1]<span class="Italic">.</span> If a <span class="Italic">brahmacārī</span> does not live under the care of the <span class="Italic">guru,</span> if a <span class="Italic">vānaprastha</span> engages in ordinary activities, or if a <span class="Italic">sannyāsī</span> is greedy and eats meat, eggs and all kinds of nonsense for the satisfaction of his tongue, he is a cheater and should immediately be rejected as unimportant. Such persons should be shown compassion, and if one has sufficient strength one should teach them to stop them from following the wrong path in life. Otherwise one should reject them and pay them no attention.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">199</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The human form of body is meant for understanding the self and the Supreme Self, the Supreme Personality of Godhead, both of whom are transcendentally situated. If both of them can be understood when one is purified by advanced knowledge, for what reason and for whom does a foolish, greedy person maintain the body for sense gratification?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            Of course, everyone in this material world is interested in maintaining the body for sense gratification, but by cultivating knowledge one should gradually understand that the body is not the self. Both the soul and the Supersoul are transcendental to the material world. This is to be understood in the human form of life, especially when one takes <span class="Italic">sannyāsa.</span> A <span class="Italic">sannyāsī,</span> one who has understood the self, should be engaged in elevating the self and associating with the Superself. Our Kṛṣṇa consciousness movement is meant for elevating the living being for promotion back home, back to Godhead. Seeking such elevation is one’s duty in the human form of life. Unless one performs this duty, why should one maintain the body? Especially if a <span class="Italic">sannyāsī</span> not only maintains the body by ordinary means but does everything to maintain the body, including even eating meat and other abominable things, he must be a <span class="Italic">lampaṭaḥ,</span> a greedy person simply engaged in sense gratification. A <span class="Italic">sannyāsī</span> must specifically remove himself from the urges of the tongue, belly and genitals, which disturb one as long as one is not fully aware that the body is separate from the soul.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_41_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">708</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Transcendentalists who are advanced in knowledge compare the body, which is made by the order of the Supreme Personality of Godhead, to a chariot. The senses are like the horses; the mind, the master of the senses, is like the reins; the objects of the senses are the destinations; intelligence is the chariot driver; and consciousness, which spreads throughout the body, is the cause of bondage in this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_41_purport">
+          <p>
+            For a bewildered person in the materialistic way of life, the body, the mind and the senses, which are engaged in sense gratification, are the cause of bondage to repeated birth, death, old age and disease. But for one who is advanced in spiritual knowledge, the same body, senses and mind are the cause of liberation. This is confirmed in the <span class="Ref_Italic">Kaṭha Upaniṣad</span> (1.3.3–4,9) as follows:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ātmānaṁ rathinaṁ viddhi<br>śarīraṁ ratham eva ca<br>buddhiṁ tu sārathiṁ viddhi<br>manaḥ pragraham eva ca</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">indriyāṇi hayān āhur<br>viṣayāṁs teṣu gocarān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">so ’dhvanaḥ pāram āpnoti<br>tad viṣṇoḥ paramaṁ padam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The soul is the occupant of the chariot of the body, of which the driver is the intelligence. The mind is the determination to reach the destination, the senses are the horses, and the sense objects are also included in that activity. Thus one can reach the destination, Viṣṇu, who is <span class="Italic">paramaṁ padam,</span> the supreme goal of life. In conditioned life the consciousness in the body is the cause of bondage, but the same consciousness, when transformed into Kṛṣṇa consciousness, becomes the cause for one’s returning home, back to Godhead.
+          </p>
+          <p>
+            The human body, therefore, may be used in two ways—for going to the darkest regions of ignorance or for going forward, back home, back to Godhead. To go back to Godhead, the path is <span class="Italic">mahat-sevā,</span> to accept the self-realized spiritual master. <span class="Italic">Mahat-sevāṁ dvāram āhur vimukteḥ [SB </span>5.5.2]<span class="Italic">.</span> For liberation, one should accept the direction of authorized devotees who can actually endow one with perfect knowledge. On the other hand, <span class="Italic">tamo-dvāraṁ yoṣitāṁ saṅgi-saṅgam:</span> if one wants to go to the darkest regions of material existence, one may continue to associate with persons who are attached to women (<span class="Italic">yoṣitāṁ saṅgi-saṅgam</span>). The word <span class="Italic">yoṣit</span> means “woman.” Persons who are too materialistic are attached to women.
+          </p>
+          <p>
+            It is said, therefore, <span class="Italic">ātmānaṁ rathinaṁ viddhi śarīraṁ ratham eva ca.</span> The body is just like a chariot or car in which one may go anywhere. One may drive well, or else one may drive whimsically, in which case it is quite possible that he may have an accident and fall into a ditch. In other words, if one takes directions from the experienced spiritual master one can go back home, back to Godhead; otherwise, one may return to the cycle of birth and death. Therefore Kṛṣṇa personally advises:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">aśraddadhānāḥ puruṣā<br>dharmasyāsya parantapa<br>aprāpya māṁ nivartante<br>mṛtyu-saṁsāra-vartmani</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who are not faithful on the path of devotional service cannot attain Me, O conqueror of foes, but return to birth and death in this material world.” (Bg. 9.3) The Supreme Personality of Godhead, Kṛṣṇa, personally gives instructions on how one can return home, back to Godhead, but if one does not care to listen to His instructions, the result will be that one will never go back to Godhead, but will continue life in this miserable condition of repeated birth and death in material existence (<span class="Italic">mṛtyu-saṁsāra-vartmani</span>).
+          </p>
+          <p>
+            The advice of experienced transcendentalists, therefore, is that the body be fully engaged for achieving the ultimate goal of life (<span class="Italic">svārtha-gatim</span>). The real interest or goal of life is to return home, back to Godhead. To enable one to fulfill this purpose, there are so many Vedic literatures, including <span class="Italic">Vedānta-sūtra,</span> the <span class="Italic">Upaniṣads, Bhagavad-gītā, Mahābhārata</span> and the <span class="Italic">Rāmāyaṇa.</span> One should take lessons from these Vedic literatures and learn how to practice <span class="Italic">nivṛtti-mārga.</span> Then one’s life will be perfect. The body is important as long as it has consciousness. Without consciousness, the body is merely a lump of matter. Therefore, to return home, back to Godhead, one must change his consciousness from material consciousness to Kṛṣṇa consciousness. One’s consciousness is the cause of material bondage, but if this consciousness is purified by <span class="Italic">bhakti-yoga,</span> one can then understand the falsity of his <span class="Italic">upādhi,</span> his designations as Indian, American, Hindu, Muslim, Christian and so on. <span class="Italic">Sarvopādhi-vinirmuktaṁ tat-paratvena nirmalam</span> [Cc. Madhya 19.170]<span class="Italic">.</span> One must forget these designations and use this consciousness only for the service of Kṛṣṇa. Therefore if one takes advantage of the Kṛṣṇa consciousness movement, his life is certainly successful.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">413</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ten kinds of air acting within the body are compared to the spokes of the chariot’s wheels, and the top and bottom of the wheel itself are called religion and irreligion. The living entity in the bodily concept of life is the owner of the chariot. The Vedic mantra praṇava is the bow, the pure living entity himself is the arrow, and the target is the Supreme Being.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            Ten kinds of life air always flow within the material body. They are called <span class="Italic">prāṇa, apāna, samāna, vyāna, udāna, nāga, kūrma, kṛkala, devadatta</span> and <span class="Italic">dhanañjaya.</span> They are compared here to the spokes of the chariot’s wheels. The life air is the energy for all of a living being’s activities, which are sometimes religious and sometimes irreligious. Thus religion and irreligion are said to be the upper and lower portions of the chariot’s wheels. When the living entity decides to go back home, back to Godhead, his target is Lord Viṣṇu, the Supreme Personality of Godhead. In the conditioned state of life, one does not understand that the goal of life is the Supreme Lord. <span class="Italic">Na te viduḥ svārtha-gatiṁ hi viṣṇuṁ durāśayā ye bahir-artha-māninaḥ [SB </span>7.5.31]<span class="Italic">.</span> The living entity tries to be happy within this material world, not understanding the target of his life. When he is purified, however, he gives up his bodily conception of life and his false identity as belonging to a certain community, a certain nation, a certain society, a certain family and so on (<span class="Italic">sarvopādhi-vinirmuktaṁ tat-paratvena nirmalam</span> [Cc. Madhya 19.170]). Then he takes the arrow of his purified life, and with the help of the bow—the transcendental chanting of <span class="Italic">praṇava,</span> or the Hare Kṛṣṇa <span class="Italic">mantra</span>—he throws himself toward the Supreme Personality of Godhead.
+          </p>
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura has commented that because the words “bow” and “arrow” are used in this verse, one might argue that the Supreme Personality of Godhead and the living entity have become enemies. However, although the Supreme Personality of Godhead may become the so-called enemy of the living being, this is His chivalrous pleasure. For example, the Lord fought with Bhīṣma, and when Bhīṣma pierced the Lord’s body on the Battlefield of Kurukṣetra, this was a kind of humor or relationship, of which there are twelve. When the conditioned soul tries to reach the Lord by hurling an arrow at Him, the Lord takes pleasure, and the living entity gains the profit of going back home, back to Godhead. Another example given in this regard is that Arjuna, as a result of piercing the <span class="Italic">ādhāra-mīna,</span> or the fish within the <span class="Italic">cakra,</span> achieved the valuable gain of Draupadī. Similarly, if with the arrow of chanting the holy name of the Lord one pierces Lord Viṣṇu’s lotus feet, by dint of performing this heroic activity of devotional service one receives the benefit of returning home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="43">
+        <div class="verse_controls">
+          <button class="verse_num btn">[43–44.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_43_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">407</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the conditioned stage, one’s conceptions of life are sometimes polluted by passion and ignorance, which are exhibited by attachment, hostility, greed, lamentation, illusion, fear, madness, false prestige, insults, fault-finding, deception, envy, intolerance, passion, bewilderment, hunger and sleep. All of these are enemies. Sometimes one’s conceptions are also polluted by goodness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_43_purport">
+          <p>
+            The actual aim of life is to go back home, back to Godhead, but there are many hindrances created by the three modes of material nature—sometimes by a combination of <span class="Italic">rajo-guṇa</span> and <span class="Italic">tamo-guṇa,</span> the modes of passion and ignorance, and sometimes by the mode of goodness. In the material world, even if one is a philanthropist, a nationalist and a good man according to materialistic estimations, these conceptions of life form a hindrance to spiritual advancement. How much more of a hindrance, then, are hostility, greed, illusion, lamentation and too much attachment to material enjoyment? To progress toward the target of Viṣṇu, which is our real self-interest, one must become very powerful in conquering these various hindrances or enemies. In other words, one should not be attached to being a good man or a bad man in this material world.
+          </p>
+          <p>
+            In this material world, so-called goodness and badness are the same because they consist of the three modes of material nature. One must transcend this material nature. Even the Vedic ritualistic ceremonies consist of the three modes of material nature. Therefore Kṛṣṇa advised Arjuna:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">traiguṇya-viṣayā vedā<br>nistraiguṇyo bhavārjuna<br>nirdvandvo nitya-sattva-stho<br>niryoga-kṣema ātmavān</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The <span class="Italic">Vedas</span> mainly deal with the subject of the three modes of material nature. Rise above these modes, O Arjuna. Be transcendental to all of them. Be free from all dualities and from all anxieties for gain and safety, and be established in the self.” (Bg. 2.45) Elsewhere in <span class="Italic">Bhagavad-gītā</span> the Lord says, <span class="Italic">ūrdhvaṁ gacchanti sattva-sthāḥ:</span> if one becomes a very good person—in other words, if one is in the mode of goodness—he may be elevated to the higher planetary systems. Similarly, if one is infected by <span class="Italic">rajo-guṇa</span> and <span class="Italic">tamo-guṇa,</span> he may remain in this world or go down to the animal kingdom. But all of these situations are hindrances on the path of spiritual salvation. Śrī Caitanya Mahāprabhu therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahmāṇḍa bhramite kona bhāgyavān jīva<br>guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            If one is fortunate enough to transcend all this so-called goodness and badness and come to the platform of devotional service by the mercy of Kṛṣṇa and the <span class="Italic">guru,</span> his life becomes successful. In this regard, one must be very bold so that he can conquer these enemies of Kṛṣṇa consciousness. Not caring for the good and bad of this material world, one must boldly propagate Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_45_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1114</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As long as one has to accept a material body, with its different parts and paraphernalia, which are not fully under one’s control, one must have the lotus feet of his superiors, namely his spiritual master and the spiritual master’s predecessors. By their mercy, one can sharpen the sword of knowledge, and with the power of the Supreme Personality of Godhead’s mercy one must then conquer the enemies mentioned above. In this way, the devotee should be able to merge into his own transcendental bliss, and then he may give up his body and resume his spiritual identity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_45_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (4.9) the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.” This is the highest perfection of life, and the human body is meant for this purpose. It is said in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (11.20.17):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nṛ-deham ādyaṁ sulabhaṁ sudurlabhaṁ<br>plavaṁ sukalpaṁ guru-karṇadhāram<br>mayānukūlena nabhasvateritaṁ<br>pumān bhavābdhiṁ na taret sa ātma-hā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            This human form of body is a most valuable boat, and the spiritual master is the captain, <span class="Italic">guru-karṇadhāram,</span> to guide the boat in plying across the ocean of nescience. The instruction of Kṛṣṇa is a favorable breeze. One must use all these facilities to cross over the ocean of nescience. Since the spiritual master is the captain, one must serve the spiritual master very sincerely so that by his mercy one will be able to get the mercy of the Supreme Lord.
+          </p>
+          <p>
+            A significant word here is <span class="Italic">acyuta-balaḥ.</span> The spiritual master is certainly very merciful to his disciples, and consequently by satisfying him a devotee gets strength from the Supreme Personality of Godhead. Śrī Caitanya Mahāprabhu therefore says, <span class="Italic">guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja:</span> one must first please the spiritual master, and then one automatically pleases Kṛṣṇa and gets the strength with which to cross the ocean of nescience. If one seriously desires to return home, back to Godhead, one must therefore become strong enough by pleasing the spiritual master, for thus one gets the weapon with which to conquer the enemy, and one also gets the grace of Kṛṣṇa. Simply getting the weapon of <span class="Italic">jñāna</span> is insufficient. One must sharpen the weapon by serving the spiritual master and adhering to his instructions. Then the candidate will get the mercy of the Supreme Personality of Godhead. In general warfare one must take help from his chariot and horses in order to conquer his enemy, and after conquering his enemies he may give up the chariot and its paraphernalia. Similarly, as long as one has a human body, one should fully use it to obtain the highest perfection of life, namely going back home, back to Godhead.
+          </p>
+          <p>
+            The perfection of knowledge is certainly to become transcendentally situated (<span class="Italic">brahma-bhūta</span>). As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (18.54):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">brahma-bhūtaḥ prasannātmā<br>na śocati na kāṅkṣati<br>samaḥ sarveṣu bhūteṣu<br>mad-bhaktiṁ labhate parām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He never laments nor desires to have anything; he is equally disposed toward all living entities. In that state he attains pure devotional service.” Simply by cultivating knowledge as the impersonalists do, one cannot get out of the clutches of <span class="Italic">māyā.</span> One must attain the platform of <span class="Italic">bhakti.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhaktyā mām abhijānāti<br>yāvān yaś cāsmi tattvataḥ<br>tato māṁ tattvato jñātvā<br>viśate tad-anantaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One can understand the Supreme Personality as He is only by devotional service. And when one is in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God.” (Bg. 18.55) Unless one has attained the stage of devotional service and the mercy of the spiritual master and Kṛṣṇa, there is a possibility that one may fall down and again accept a material body. Therefore Kṛṣṇa stresses in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.”
+          </p>
+          <p>
+            The word <span class="Italic">tattvataḥ,</span> meaning “in reality,” is very important. <span class="Italic">Tato māṁ tattvato jñātvā.</span> Unless one understands Kṛṣṇa in truth by the mercy of the spiritual master, one is not free to give up his material body. As it is said, <span class="Italic">āruhya kṛcchreṇa paraṁ padaṁ tataḥ patanty adho ’nādṛta-yuṣmad-aṅghrayaḥ: [SB </span>10.2.32] if one neglects to serve the lotus feet of Kṛṣṇa, one cannot become free from the material clutches simply by knowledge. Even if one attains the stage of <span class="Italic">brahma-padam,</span> merging in Brahman, without <span class="Italic">bhakti</span> he is prone to fall down. One must be very careful in regard to the danger of falling down again into material bondage. The only insurance is to come to the stage of <span class="Italic">bhakti,</span> from which one is sure not to fall. Then one is free from the activities of the material world. In summary, as stated by Śrī Caitanya Mahāprabhu, one must get in touch with a bona fide spiritual master coming in the <span class="Italic">paramparā</span> of Kṛṣṇa consciousness, for by his mercy and instructions one is able to get strength from Kṛṣṇa. Thus one engages in devotional service and attains the ultimate goal of life, the lotus feet of Viṣṇu.
+          </p>
+          <p>
+            Significant in this verse are the words <span class="Italic">jñānāsim acyuta-balaḥ.</span> <span class="Italic">Jñānāsim,</span> the sword of knowledge, is given by Kṛṣṇa, and when one serves the <span class="Italic">guru</span> and Kṛṣṇa in order to hold the sword of Kṛṣṇa’s instructions, Balarāma gives one strength. Balarāma is Nityānanda. <span class="Italic">Vrajendra-nandana yei, śacī-suta haila sei, balarāma ha-ila nitāi.</span> This <span class="Italic">bala</span>—Balarāma—comes with Śrī Caitanya Mahāprabhu, and both of Them are so merciful that in this age of Kali one may very easily take shelter of Their lotus feet. They come especially to deliver the fallen souls of this age. <span class="Italic">pāpī tāpī yata chila, hari-nāme uddhārila.</span> Their weapon is <span class="Italic">saṅkīrtana, hari-nāma.</span> Thus one should accept the sword of knowledge from Kṛṣṇa and be strong with the mercy of Balarāma. We are therefore worshiping Kṛṣṇa-Balarāma in Vṛndāvana. In the <span class="Ref_Italic">Muṇḍaka Upaniṣad</span> (3.2.4) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nāyam ātmā bala-hīnena labhyo<br>na ca pramādāt tapaso vāpy aliṅgāt<br>etair upāyair yatate yas tu vidvāṁs<br>tasyaiṣa ātmā viśate brahma-dhāma</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One cannot attain the goal of life without the mercy of Balarāma. Śrī Narottama dāsa Ṭhākura therefore says, <span class="Italic">nitāiyera karuṇā habe, vraje rādhā-kṛṣṇa pābe:</span> when one receives the mercy of Balarāma, Nityānanda, one can attain the lotus feet of Rādhā and Kṛṣṇa very easily.
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">se sambandha nāhi yāra,     bṛthā janma gela tāra,<br>vidyā-kule hi karibe tāra</div></blockquote>
+          </p>
+          <p>
+            If one has no connection with Nitāi, Balarāma, then even though one is a very learned scholar or <span class="Italic">jñānī</span> or has taken birth in a very respectable family, these assets will not help him. We must therefore conquer the enemies of Kṛṣṇa consciousness with the strength received from Balarāma.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="46">
+        <div class="verse_controls">
+          <button class="verse_num btn">[46.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_46_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">186</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Otherwise, if one does not take shelter of Acyuta and Baladeva, then the senses, acting as the horses, and the intelligence, acting as the driver, both being prone to material contamination, inattentively bring the body, which acts as the chariot, to the path of sense gratification. When one is thus attracted again by the rogues of viṣaya—eating, sleeping and mating—the horses and chariot driver are thrown into the blinding dark well of material existence, and one is again put into a dangerous and extremely fearful situation of repeated birth and death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_46_purport">
+          <p>
+            Without the protection of Gaura-Nitāi—Kṛṣṇa and Balarāma—one cannot get out of the dark well of ignorance in material existence. This is indicated here by the word <span class="Italic">nocet,</span> which means that one will always remain in the dark well of material existence. The living entity must get strength from Nitāi-Gaura, or Kṛṣṇa-Balarāma. Without the mercy of Nitāi-Gaura, there is no way to come out of this dark well of ignorance. As stated in the <span class="Italic">Caitanya-caritāmṛta</span> (<span class="Ref_Italic">Ādi</span> 1.2):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vande śrī-kṛṣṇa-caitanya-<br>nityānandau sahoditau<br>gauḍodaye puṣpavantau<br>citrau śandau tamo-nudau</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I offer my respectful obeisances unto Śrī Kṛṣṇa Caitanya and Lord Nityānanda, who are like the sun and moon. They have arisen simultaneously on the horizon of Gauḍa to dissipate the darkness of ignorance and thus wonderfully bestow benediction upon all.” This material world is a dark well of ignorance. The fallen soul in this dark well must take shelter of the lotus feet of Gaura-Nitāi, for thus he can easily emerge from material existence. Without Their strength, simply attempting to get out of the clutches of matter by speculative knowledge will be insufficient.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_47_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">295</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            According to the Vedas, there are two kinds of activities—pravṛtti and nivṛtti. Pravṛtti activities involve raising oneself from a lower to a higher condition of materialistic life, whereas nivṛtti means the cessation of material desire. Through pravṛtti activities one suffers from material entanglement, but by nivṛtti activities one is purified and becomes fit to enjoy eternal, blissful life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_47_purport">
+          <p>
+            As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (16.7), <span class="Italic">pravṛttiṁ ca nivṛttiṁ ca janā na vidur āsurāḥ:</span> the <span class="Italic">asuras,</span> nondevotees, cannot distinguish between <span class="Italic">pravṛtti</span> and <span class="Italic">nivṛtti.</span> Whatever they like they do. Such persons think themselves independent of the strong material nature, and therefore they are irresponsible and do not care to act piously. Indeed, they do not distinguish between pious and impious activity. <span class="Italic">Bhakti,</span> of course, does not depend on pious or impious activity. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.2.6):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sa vai puṁsām paro dharmo<br>yato bhaktir adhokṣaje<br>ahaituky apratihatā<br>yayātmā suprasīdati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The supreme occupation [<span class="Italic">dharma</span>] for all humanity is that by which men can attain to loving devotional service unto the transcendent Lord. Such devotional service must be unmotivated and uninterrupted in order to completely satisfy the self.” Nonetheless, those who act piously have a better chance to become devotees. As Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.16), <span class="Italic">catur-vidhā bhajante māṁ janāḥ sukṛtino ’rjuna:</span> “O Arjuna, four kinds of pious men render devotional service unto Me.” One who takes to devotional service, even with some material motive, is considered pious, and because he has come to Kṛṣṇa, he will gradually come to the stage of <span class="Italic">bhakti.</span> Then, like Dhruva Mahārāja, he will refuse to accept any material benediction from the Lord (<span class="Italic">svāmin kṛtārtho ’smi varaṁ na yāce</span>). Therefore, even if one is materially inclined, one may take to the shelter of the lotus feet of Kṛṣṇa and Balarāma, or Gaura and Nitāi, so that he will very soon be purified of all material desires (<span class="Italic">kṣipraṁ bhavati dharmātmā śaśvac chāntiṁ nigacchati</span>). As soon as one is freed from inclinations toward pious and impious activities, he becomes a perfect candidate for returning home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="48">
+        <div class="verse_controls">
+          <button class="verse_num btn">[48–49.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ritualistic ceremonies and sacrifices known as agni-hotra–yajña, darśa-yajña, pūrṇamāsa-yajña, cāturmāsya-yajña, paśu-yajña and soma-yajña are all symptomized by the killing of animals and the burning of many valuables, especially food grains, all for the fulfillment of material desires and the creation of anxiety. Performing such sacrifices, worshiping Vaiśvadeva, and performing the ceremony of Baliharaṇa, which all supposedly constitute the goal of life, as well as constructing temples for demigods, building resting houses and gardens, digging wells for the distribution of water, establishing booths for the distribution of food, and performing activities for public welfare—these are all symptomized by attachment to material desires.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="50">
+        <div class="verse_controls">
+          <button class="verse_num btn">[50–51.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_50_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">410</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Yudhiṣṭhira, when oblations of ghee and food grains like barley and sesame are offered in sacrifice, they turn into celestial smoke, which carries one to successively higher planetary systems like the kingdoms of Dhumā, Rātri, Kṛṣṇapakṣa, Dakṣiṇam and ultimately the moon. Then, however, the performers of sacrifice descend again to earth to become herbs, creepers, vegetables and food grains. These are eaten by different living entities and turned to semen, which is injected into female bodies. Thus one takes birth again and again.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_50_purport">
+          <p>
+            This is explained in <span class="Ref_Italic">Bhagavad-gītā</span> (9.21):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">te taṁ bhuktvā svarga-lokaṁ viśālaṁ<br>kṣīṇe puṇye martya-lokaṁ viśanti<br>evaṁ trayī-dharmam anuprapannā<br>gatāgataṁ kāma-kāmā labhante</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “When those who follow the <span class="Italic">pravṛtti-mārga</span> have enjoyed heavenly sense pleasure, they return to this mortal planet again. Thus, through the Vedic principles, they achieve only flickering happiness.” Following the <span class="Italic">pravṛtti-mārga,</span> the living entity who desires to be promoted to the higher planetary systems performs sacrifices regularly, and how he goes up and comes down again is described here in <span class="Italic">Śrīmad-Bhāgavatam,</span> as well as in <span class="Italic">Bhagavad-gītā.</span> It is also said, <span class="Italic">traiguṇya-viṣayā vedāḥ:</span> “The <span class="Italic">Vedas</span> deal mainly with the three modes of material nature.” The <span class="Italic">Vedas,</span> especially three <span class="Italic">Vedas,</span> namely <span class="Italic">Sāma, Yajur</span> and <span class="Italic">Ṛk,</span> vividly describe this process of ascending to the higher planets and returning. But Kṛṣṇa advises Arjuna, <span class="Italic">traiguṇya-viṣayā vedā nistraiguṇyo bhavārjuna:</span> one has to transcend these three modes of material nature, and then one will be released from the cycle of birth and death. Otherwise, although one may be promoted to a higher planetary system such as Candraloka, one must again come down (<span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti [Bg. </span>9.21]). After one’s enjoyment due to pious activities is finished, one must return to this planet in rainfall and first take birth as a plant or creeper, which is eaten by various animals, including human beings, and turned to semen. This semen is injected into the female body, and thus the living entity takes birth. Those who return to earth in this way take birth especially in higher families like those of <span class="Italic">brāhmaṇas.</span>
+          </p>
+          <p>
+            It may be remarked in this connection that even the modern so-called scientists who are going to the moon are not able to stay there, but are returning to their laboratories. Therefore, whether one goes to the moon by modern mechanical arrangements or by performing pious activities, one must return to earth. That is clearly stated in this verse and explained in <span class="Italic">Bhagavad-gītā.</span> Even if one goes to the higher planetary systems (<span class="Italic">yānti deva-vratā devān [Bg. 9.25]</span>), one’s place there is not secure; one must return to <span class="Italic">martya-loka.</span> <span class="Italic">Ābrahma-bhuvanāl lokāḥ punar āvartino ’rjuna: [Bg. </span>8.16] aside from the moon, even if one goes to Brahmaloka, one must return. <span class="Italic">Yaṁ prāpya na nivartante tad dhāma paramaṁ mama:</span> but if one goes back home, back to Godhead, he need not return to this material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="52">
+        <div class="verse_controls">
+          <button class="verse_num btn">[52.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_52_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">289</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A twice-born brāhmaṇa [dvija] gains his life by the grace of his parents through the process of purification known as garbhādhāna. There are also other processes of purification, until the end of life, when the funeral ceremony [antyeṣṭi-kriyā] is performed. Thus in due course a qualified brāhmaṇa becomes uninterested in materialistic activities and sacrifices, but he offers the sensual sacrifices, in full knowledge, into the working senses, which are illuminated by the fire of knowledge.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_52_purport">
+          <p>
+            Those interested in materialistic activities remain in the cycle of birth and death. <span class="Italic">Pravṛtti-mārga,</span> or the inclination to stay in the material world to enjoy varieties of sense gratification, has been explained in the previous verse. Now, in this verse, it is explained that one who has perfect brahminical knowledge rejects the process of elevation to higher planets and accepts <span class="Italic">nivṛtti-mārga;</span> in other words, he prepares himself to go back home, back to Godhead. Those who are not <span class="Italic">brāhmaṇas</span> but atheists do not know what is <span class="Italic">pravṛtti-mārga</span> or <span class="Italic">nivṛtti-mārga;</span> they simply want to obtain pleasure at any cost. Our Kṛṣṇa consciousness movement is therefore training devotees to give up the <span class="Italic">pravṛtti-mārga</span> and accept the <span class="Italic">nivṛtti-mārga</span> in order to return home, back to Godhead. This is a little difficult to understand, but it is very easy if one takes to Kṛṣṇa consciousness seriously and tries to understand Kṛṣṇa. A Kṛṣṇa conscious person can understand that performing <span class="Italic">yajña</span> according to the <span class="Italic">karma-kāṇḍa</span> system is a useless waste of time and that merely giving up the <span class="Italic">karma-kāṇḍa</span> and accepting the process of speculation is also unfruitful. Therefore Narottama dāsa Ṭhākura has sung in his <span class="Italic">prema-bhakti-candrikā:</span>
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">karma-kāṇḍa, jñāna-kāṇḍa,     kevala viṣera bhāṇḍa<br>’amṛta’ baliyā yebā khāya<br>nānā yoni sadā phire,     kadarya bhakṣaṇa kare,<br>tāra janma adhaḥ-pāte yāya</div></blockquote>
+          </p>
+          <p>
+            A life of <span class="Italic">karma-kāṇḍa</span> or <span class="Italic">jñāna-kāṇḍa</span> is like a poison pot, and one who takes to such a life is doomed. In the <span class="Italic">karma-kāṇḍa</span> system, one is destined to accept birth and death again and again. Similarly, with <span class="Italic">jñāna-kāṇḍa</span> one falls down again to this material world. Only worship of the Supreme Person offers one the safety of going back home, back to Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="53">
+        <div class="verse_controls">
+          <button class="verse_num btn">[53.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_53_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">250</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mind is always agitated by waves of acceptance and rejection. Therefore all the activities of the senses should be offered into the mind, which should be offered into one’s words. Then one’s words should be offered into the aggregate of all alphabets, which should be offered into the concise form oṁkāra. Oṁkāra should be offered into the point bindu, bindu into the vibration of sound, and that vibration into the life air. Then the living entity, who is all that remains, should be placed in Brahman, the Supreme. This is the process of sacrifice.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_53_purport">
+          <p>
+            The mind is always agitated by acceptance and rejection, which are compared to mental waves that are constantly tossing. The living entity is floating in the waves of material existence because of his forgetfulness. Śrīla Bhaktivinoda Ṭhākura has therefore sung in his <span class="Italic">Gītāvalī:</span> <span class="Italic">miche māyāra vaśe, yāccha bhese’, khāccha hābuḍubu, bhāi.</span> “My dear mind, under the influence of <span class="Italic">māyā</span> you are being carried away by the waves of rejection and acceptance. Simply take shelter of Kṛṣṇa.” <span class="Italic">Jīva kṛṣṇa-dāsa, ei viśvāsa, karle ta’ āra duḥkha nāi:</span> if we simply regard the lotus feet of Kṛṣṇa as our ultimate shelter, we shall be saved from all these waves of <span class="Italic">māyā,</span> which are variously exhibited as mental and sensual activities and the agitation of rejection and acceptance. Kṛṣṇa instructs in <span class="Ref_Italic">Bhagavad-gītā</span> (18.66):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">sarva-dharmān parityajya<br>mām ekaṁ śaraṇaṁ vraja<br>ahaṁ tvāṁ sarva-pāpebhyo<br>mokṣayiṣyāmi mā śucaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction. Do not fear.” Therefore if we simply place ourselves at the lotus feet of Kṛṣṇa by taking to Kṛṣṇa consciousness and keeping always in touch with Him by chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> we need not take much trouble in arranging to return to the spiritual world. By the mercy of Śrī Caitanya Mahāprabhu, this is very easy.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="54">
+        <div class="verse_controls">
+          <button class="verse_num btn">[54.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            On his path of ascent, the progressive living entity enters the different worlds of fire, the sun, the day, the end of the day, the bright fortnight, the full moon, and the passing of the sun in the north, along with their presiding demigods. When he enters Brahmaloka, he enjoys life for many millions of years, and finally his material designation comes to an end. He then comes to a subtle designation, from which he attains the causal designation, witnessing all previous states. Upon the annihilation of this causal state, he attains his pure state, in which he identifies with the Supersoul. In this way the living entity becomes transcendental.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="55">
+        <div class="verse_controls">
+          <button class="verse_num btn">[55.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This gradual process of elevation for self-realization is meant for those who are truly aware of the Absolute Truth. After repeated birth on this path, which is known as deva-yāna, one attains these consecutive stages. One who is completely free from all material desires, being situated in the self, need not traverse the path of repeated birth and death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="56">
+        <div class="verse_controls">
+          <button class="verse_num btn">[56.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_56_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">120</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Even though situated in a material body, one who is fully aware of the paths known as pitṛ-yāna and deva-yāna, and who thus opens his eyes in terms of Vedic knowledge, is never bewildered in this material world.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_56_purport">
+          <p>
+            <span class="Italic">Ācāryavān puruṣo veda:</span> one who is guided by the bona fide spiritual master knows everything as stated in the <span class="Italic">Vedas,</span> which set forth the standard of infallible knowledge. As recommended in <span class="Italic">Bhagavad-gītā,</span> <span class="Italic">ācāryopāsanam:</span> one must approach the <span class="Italic">ācārya</span> for real knowledge. <span class="Italic">Tad-vijñānārthaṁ sa gurum evābhigacchet: </span><span class="Ref_Italic">[MU</span> <popup><div class="Verse">tad-vijñānārthaṁ sa gurum evābhigacchet<br>samit-pāṇiḥ śrotriyaṁ brahma-niṣṭham</div></popup>
+          </p>
+          <p>
+            “To understand these things properly, one must humbly approach, with firewood in hand, a spiritual master who is learned in the <i>Vedas</i> and firmly devoted to the Absolute Truth.” <br><span class="Ref_Italic">[Muṇḍaka Upaniṣad</span> 1.2.12]
+          </p>
+          <p>
+            <lt>1.2.12] one must approach the <span class="Italic">ācārya,</span> for then one will receive perfect knowledge. When guided by the spiritual master, one attains the ultimate goal of life.</lt>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="57">
+        <div class="verse_controls">
+          <button class="verse_num btn">[57.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_57_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">147</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            He who exists internally and externally, at the beginning and end of everything and of all living beings, as that which is enjoyable and as the enjoyer of everything, superior and inferior, is the Supreme Truth. He always exists as knowledge and the object of knowledge, as expression and the object of understanding, as darkness and as light. Thus He, the Supreme Lord, is everything.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_57_purport">
+          <p>
+            Here the Vedic aphorism <span class="Italic">sarvaṁ khalv idaṁ brahma</span> is explained. It is also explained in the <span class="Italic">catuḥ-ślokī Bhāgavatam.</span> <span class="Italic">Aham evāsam evāgre.</span> The Supreme Lord existed in the beginning, He exists after the creation and maintains everything, and after destruction everything merges in Him, as stated in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">prakṛtiṁ yānti māmikām</span>). Thus the Supreme Lord is actually everything. In the conditioned state, we are bewildered in our understanding, but in the perfect stage of liberation we can understand that Kṛṣṇa is the cause of everything.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ paramaḥ kṛṣṇaḥ<br>sac-cid-ānanda-vigrahaḥ<br>anādir ādir govindaḥ<br>sarva-kāraṇa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Kṛṣṇa, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body. He is the origin of all. He has no other origin, for He is the prime cause of all causes.” (<span class="Ref_Italic">Brahma-saṁhitā</span> 5.1) This is the perfection of knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="58">
+        <div class="verse_controls">
+          <button class="verse_num btn">[58.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_58_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">582</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although one may consider the reflection of the sun from a mirror to be false, it has its factual existence. Accordingly, to prove by speculative knowledge that there is no reality would be extremely difficult.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_58_purport">
+          <p>
+            The impersonalists try to prove that the varieties in the vision of the empiric philosopher are false. The impersonalist philosophy, <span class="Italic">vivarta-vāda,</span> generally cites the acceptance of a rope to be a snake as an example of this fact. According to this example, the varieties within our vision are false, just as a rope seen to be a snake is false. The Vaiṣṇavas say, however, that although the idea that the rope is a snake is false, the snake is not false; one has experience of a snake in reality, and therefore he knows that although the representation of the rope as a snake is false or illusory, there is a snake in reality. Similarly, this world, which is full of varieties, is not false; it is a reflection of the reality in the Vaikuṇṭha world, the spiritual world.
+          </p>
+          <p>
+            The reflection of the sun from a mirror is nothing but light within darkness. Thus although it is not exactly sunlight, without the sunlight the reflection would be impossible. Similarly, the varieties of this world would be impossible unless there were a real prototype in the spiritual world. The Māyāvādī philosopher cannot understand this, but a real philosopher must be convinced that light is not possible at all without a background of sunlight. Thus the jugglery of words used by the Māyāvādī philosopher to prove that this material world is false may amaze inexperienced children, but a man with full knowledge knows perfectly well that there cannot be any existence without Kṛṣṇa. Therefore a Vaiṣṇava insists on the platform of somehow or other accepting Kṛṣṇa (<span class="Italic">tasmāt kenāpy upāyena manaḥ kṛṣṇe niveśayet</span>).
+          </p>
+          <p>
+            When we raise our unmixed faith to the lotus feet of Kṛṣṇa, everything is revealed. Kṛṣṇa also says in <span class="Ref_Italic">Bhagavad-gītā</span> (7.1):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayy āsakta-manāḥ pārtha<br>yogaṁ yuñjan mad-āśrayaḥ<br>asaṁśayaṁ samagraṁ māṁ<br>yathā jñāsyasi tac chṛṇu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Now hear, O son of Pṛthā [Arjuna], how by practicing <span class="Italic">yoga</span> in full consciousness of Me, with mind attached to Me, you can know Me in full, free from doubt.” Simply by raising one’s staunch faith in Kṛṣṇa and His instructions, one can understand reality without a doubt (<span class="Italic">asaṁśayaṁ samagraṁ mām</span>). One can understand how Kṛṣṇa’s material and spiritual energies are working and how He is present everywhere although everything is not Him. This philosophy of <span class="Italic">acintya-bhedābheda,</span> inconceivable oneness and difference, is the perfect philosophy enunciated by the Vaiṣṇavas. Everything is an emanation from Kṛṣṇa, but it is not that everything must therefore be worshiped. Speculative knowledge cannot give us reality as it is, but will continue to be nefariously imperfect. So-called scientists try to prove that there is no God and that everything is happening because of the laws of nature, but this is imperfect knowledge because nothing can work unless directed by the Supreme Personality of Godhead. This is explained in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10) by the Lord Himself:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sacarācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature is working under My direction, O son of Kuntī, and it is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.” In this regard, Śrīla Madhvācārya gives this note: <span class="Italic">durghaṭatvād arthatvena parameśvareṇaiva kalpitam.</span> The background of everything is the Supreme Personality of Godhead, Vāsudeva. <span class="Italic">Vāsudevaḥ sarvam iti sa mahātmā sudurlabhaḥ [Bg. </span>7.19]<span class="Italic">.</span> This can be understood by a <span class="Italic">mahātmā</span> who is perfect in knowledge. Such a <span class="Italic">mahātmā</span> is rarely seen.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="59">
+        <div class="verse_controls">
+          <button class="verse_num btn">[59.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_59_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">344</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this world there are five elements—namely earth, water, fire, air and ether—but the body is not a reflection of them, nor a combination or transformation of them. Because the body and its ingredients are neither distinct nor amalgamated, all such theories are insubstantial.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_59_purport">
+          <p>
+            A forest is certainly a transformation of the earth, but one tree does not depend on another tree; if one is cut down, this does not mean that the others are cut down. Therefore, the forest is neither a combination nor a transformation of the trees. The best explanation is given by Kṛṣṇa Himself:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayā tatam idaṁ sarvaṁ<br>jagad avyakta-mūrtinā<br>mat-sthāni sarva-bhūtāni<br>na cāhaṁ teṣv avasthitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “By Me, in My unmanifested form, this entire universe is pervaded. All beings are in Me, but I am not in them.” (Bg. 9.4) Everything is an expansion of Kṛṣṇa’s energy. As it is said, <span class="Italic">parāsya śaktir vividhaiva śrūyate:</span> the Lord has multi-energies, which are expressed in different ways. The energies are existing, and the Supreme Personality of Godhead also exists simultaneously; because everything is His energy, He is simultaneously one with everything and different from everything. Thus our speculative theories that <span class="Italic">ātmā,</span> the living force, is a combination of matter, that matter is a transformation of the soul, or that the body is part of the soul are all insubstantial.
+          </p>
+          <p>
+            Since all the Lord’s energies are simultaneously existing, one must understand the Supreme Personality of Godhead. But although He is everything, He is not present in everything. The Lord must be worshiped in His original form as Kṛṣṇa. He can also present Himself in any one of His various expanded energies. When we worship the Deity of the Lord in the temple, the Deity appears to be stone or wood. Now, because the Supreme Lord does not have a material body, He is not stone or wood, yet stone and wood are not different from Him. Thus by worshiping stone or wood we get no result, but when the stone and wood are represented in the Lord’s original form, by worshiping the Deity we get the desired result. This is supported by Śrī Caitanya Mahāprabhu’s philosophy, <span class="Italic">acintya-bhedābheda,</span> which explains how the Lord can present Himself everywhere and anywhere in a form of His energy to accept service from the devotee.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="60">
+        <div class="verse_controls">
+          <button class="verse_num btn">[60.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because the body is formed of the five elements, it cannot exist without the subtle sense objects. Therefore, since the body is false, the sense objects are also naturally false or temporary.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="61">
+        <div class="verse_controls">
+          <button class="verse_num btn">[61.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_61_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">331</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When a substance and its parts are separated, the acceptance of similarity between one and the other is called illusion. While dreaming, one creates a separation between the existences called wakefulness and sleep. It is in such a state of mind that the regulative principles of the scriptures, consisting of injunctions and prohibitions, are recommended.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_61_purport">
+          <p>
+            In material existence there are many regulative principles and formalities. If material existence is temporary or false, this does not mean that the spiritual world, although similar, is also false. That one’s material body is false or temporary does not mean that the body of the Supreme Lord is also false or temporary. The spiritual world is real, and the material world is similar to it. For example, in the desert we sometimes find a mirage, but although the water in a mirage is false, this does not mean that there is no water in reality; water exists, but not in the desert. Similarly, nothing real is in this material world, but reality is in the spiritual world. The Lord’s form and His abode—Goloka Vṛndāvana in the Vaikuṇṭha planets—are eternal realities.
+          </p>
+          <p>
+            From <span class="Italic">Bhagavad-gītā</span> we understand that there is another <span class="Italic">prakṛti,</span> or nature, which is real. This is explained by the Lord Himself in the Eighth Chapter of <span class="Ref_Italic">Bhagavad-gītā</span> (8.19–21):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhūta-grāmaḥ sa evāyaṁ<br>bhūtvā bhūtvā pralīyate<br>rātry-āgame ’vaśaḥ pārtha<br>prabhavaty ahar-āgame</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">paras tasmāt tu bhāvo ’nyo<br>’vyakto ’vyaktāt sanātanaḥ<br>yaḥ sa sarveṣu bhūteṣu<br>naśyatsu na vinaśyati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">avyakto ’kṣara ity uktas<br>tam āhuḥ paramāṁ gatim<br>yaṁ prāpya na nivartante<br>tad dhāma paramaṁ mama</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Again and again the day of Brahmā comes, and all living beings are active; and again the night falls, O Pārtha, and they are helplessly dissolved. Yet there is another nature, which is eternal and is transcendental to this manifested and unmanifested matter. It is supreme and is never annihilated. When all in this world is annihilated, that part remains as it is. That supreme abode is called unmanifested and infallible, and it is the supreme destination. When one goes there, he never comes back. That is My supreme abode.” The material world is a reflection of the spiritual world. The material world is temporary or false, but the spiritual world is an eternal reality.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="62">
+        <div class="verse_controls">
+          <button class="verse_num btn">[62.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_62_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">48</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After considering the oneness of existence, activity and paraphernalia and after realizing the self to be different from all actions and reactions, the mental speculator [muni], according to his own realization, gives up the three states of wakefulness, dreaming and sleep.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_62_purport">
+          <p>
+            The three words <span class="Italic">bhāvādvaita, kriyādvaita</span> and <span class="Italic">dravyādvaita</span> are explained in the following verses. However, one has to give up all the nonduality of philosophical life in the material world and come to the actual life of reality in the spiritual world in order to attain perfection.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="63">
+        <div class="verse_controls">
+          <button class="verse_num btn">[63.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When one understands that result and cause are one and that duality is ultimately unreal, like the idea that the threads of a cloth are different from the cloth itself, one reaches the conception of oneness called bhāvādvaita.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="64">
+        <div class="verse_controls">
+          <button class="verse_num btn">[64.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_64_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">151</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Yudhiṣṭhira [Pārtha], when all the activities one performs with his mind, words and body are dedicated directly to the service of the Supreme Personality of Godhead, one reaches oneness of activities, called kriyādvaita.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_64_purport">
+          <p>
+            The Kṛṣṇa consciousness movement is teaching people how to come to the stage of dedicating everything to the service of the Supreme Personality of Godhead. Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.27):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yat karoṣi yad aśnāsi<br>yaj juhoṣi dadāsi yat<br>yat tapasyasi kaunteya<br>tat kuruṣva mad-arpaṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Kuntī, all that you do, all that you eat, all that you offer and give away, as well as all austerities that you may perform, should be done as an offering unto Me.” If whatever we do, whatever we eat, whatever we think and whatever we plan is for the advancement of the Kṛṣṇa consciousness movement, this is oneness. There is no difference between chanting for Kṛṣṇa consciousness and working for Kṛṣṇa consciousness. On the transcendental platform, they are one. But we must be guided by the spiritual master about this oneness; we should not manufacture our own oneness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="65">
+        <div class="verse_controls">
+          <button class="verse_num btn">[65.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_65_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">182</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the ultimate goal and interest of one’s self, one’s wife, one’s children, one’s relatives and all other embodied living beings is one, this is called dravyādvaita, or oneness of interest.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_65_purport">
+          <p>
+            The actual interest of all living entities—indeed, the goal of life—is to return home, back to Godhead. This is the interest of one’s own self, one’s wife, one’s children, one’s disciples and one’s friends, relatives, countrymen and all humanity. The Kṛṣṇa consciousness movement can give directions for management by which everyone can partake in Kṛṣṇa conscious activities and reach the ultimate goal, which is known as <span class="Italic">svārtha-gatim.</span> This objective of everyone’s interest is Viṣṇu, but because people do not know this (<span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇum [SB </span>7.5.31]), they are making various plans by which to fulfill so many concocted interests in life. The Kṛṣṇa consciousness movement is trying to bring everyone to the highest interest. The process may be differently named, but if the aim is one, people should follow it to achieve the ultimate goal in life. Unfortunately, people are thinking of different interests, and blind leaders are misleading them. Everyone is trying to reach the goal of complete happiness materially; because people do not know what complete happiness is, they are materially diverted toward different interests.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="66">
+        <div class="verse_controls">
+          <button class="verse_num btn">[66.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_66_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In normal conditions, in the absence of danger, O King Yudhiṣṭhira, a man should perform his prescribed activities according to his status of life with the things, endeavors, process and living place that are not forbidden for him, and not by any other means.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_66_purport">
+          <p>
+            This instruction is given for men in all statuses of life. Generally society is divided into <span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas, śūdras, brahmacārīs, vānaprasthas, sannyāsīs</span> and <span class="Italic">gṛhasthas.</span> Everyone must act according to his position and try to please the Supreme Personality of Godhead, for that will make one’s life successful. This was instructed in Naimiṣāraṇya:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ pumbhir dvija-śreṣṭhā<br>varṇāśrama-vibhāgaśaḥ<br>svanuṣṭhitasya dharmasya<br>saṁsiddhir hari-toṣaṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O best among the twice-born, it is therefore concluded that the highest perfection one can achieve, by discharging his prescribed duties [<span class="Italic">dharma</span>] according to caste divisions and order of life, is to please the Lord Hari.” (<span class="Ref_Italic">Bhāg.</span> 1.2.13) Everyone should act according to his occupational duties just to please the Supreme Personality of Godhead. Then everyone will be happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="67">
+        <div class="verse_controls">
+          <button class="verse_num btn">[67.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_67_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">183</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, one should perform his occupational duties according to these instructions, as well as other instructions given in the Vedic literature, just to remain a devotee of Lord Kṛṣṇa. Thus, even while at home, one will be able to reach the destination.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_67_purport">
+          <p>
+            The ultimate goal of life is Viṣṇu, Kṛṣṇa. Therefore, either by Vedic regulative principles or by materialistic activities, if one tries to reach the destination of Kṛṣṇa, that is the perfection of life. Kṛṣṇa should be the target; everyone should try to reach Kṛṣṇa, from any position of life.
+          </p>
+          <p>
+            Kṛṣṇa accepts service from anyone. The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.32):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">māṁ hi pārtha vyapāśritya<br>ye ’pi syuḥ pāpa-yonayaḥ<br>striyo vaiśyās tathā śūdrās<br>te ’pi yānti parāṁ gatim</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O son of Pṛthā, those who take shelter in Me, though they be of lower birth—women, <span class="Italic">vaiśyas</span> [merchants], as well as <span class="Italic">śūdras</span> [workers]—can approach the supreme destination.” It does not matter what one’s position is; if one aims at reaching Kṛṣṇa by performing his occupational duty under the direction of the spiritual master, his life is successful. It is not that only <span class="Italic">sannyāsīs, vānaprasthas</span> and <span class="Italic">brahmacārīs</span> can reach Kṛṣṇa. A <span class="Italic">gṛhastha,</span> a householder, can also reach Kṛṣṇa, provided he becomes a pure devotee without material desires. An example of this is cited in the next verse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="68">
+        <div class="verse_controls">
+          <button class="verse_num btn">[68.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            
+          </p>
+        </div>
+      </div>
+      <p>
+        <em></em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/7/15[Next][Last Page]">https://prabhupadabooks.com/sb/7/15[Next][Last Page]</a><!-- span.text_source_copied_date
+        | on 2024-07-28 20:23:14 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 7.14: Ideal Family Life     Next: SB 8.1: The Manus, Administrators of the Universe</div>
+      </p>
+    </div>
+  </body>
+</html>
