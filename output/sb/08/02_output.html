@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.2, The Elephant Gajendra’s Crisis</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Two:<br>The Elephant Gajendra’s Crisis
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">The Second, Third and Fourth Chapters of this canto describe how the Lord, during the reign of the fourth Manu, gave protection to the king of the elephants. As described in this Second Chapter, when the King of the elephants, along with his female elephants, was enjoying in the water, a crocodile suddenly attacked him, and the elephant surrendered to the lotus feet of the Personality of Godhead for protection.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">In the midst of the ocean of milk, there is a very high and beautiful mountain that has an altitude of ten thousand <span class="Italic">yojanas,</span> or eighty thousand miles. This mountain is known as Trikūṭa. In a valley of Trikūṭa there is a nice garden named Ṛtumat, which was constructed by Varuṇa, and in that area there is a very nice lake. Once the chief of the elephants, along with female elephants, went to enjoy bathing in that lake, and they disturbed the inhabitants of the water. Because of this, the chief crocodile in that water, who was very powerful, immediately attacked the elephant’s leg. Thus there ensued a great fight between the elephant and the crocodile. This fight continued for one thousand years. Neither the elephant nor the crocodile died, but since they were in the water, the elephant gradually became weak whereas the power of the crocodile increased more and more. Thus the crocodile became more and more encouraged. Then the elephant, being helpless and seeing that there was no other way for his protection, sought shelter at the lotus feet of the Supreme Personality of Godhead.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: My dear King, there is a very large mountain called Trikūṭa. It is ten thousand yojanas [eighty thousand miles] high. Being surrounded by the ocean of milk, it is very beautifully situated.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2–3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The length and breadth of the mountain are of the same measurement [eighty thousand miles]. Its three principal peaks, which are made of iron, silver and gold, beautify all directions and the sky. The mountain also has other peaks, which are full of jewels and minerals and are decorated with nice trees, creepers and shrubs. The sounds of the waterfalls on the mountain create a pleasing vibration. In this way the mountain stands, increasing the beauty of all directions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">116</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The ground at the foot of the mountain is always washed by waves of milk that produce emeralds all around in the eight directions [north, south, east, west and the directions midway between them].
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            From <span class="Italic">Śrīmad-Bhāgavatam</span> we understand that there are various oceans. Somewhere there is an ocean filled with milk, somewhere an ocean of liquor, an ocean of ghee, an ocean of oil, and an ocean of sweet water. Thus there are different varieties of oceans within this universe. The modern scientists, who have only limited experience, cannot defy these statements; they cannot give us full information about any planet, even the planet on which we live. From this verse, however, we can understand that if the valleys of some mountains are washed with milk, this produces emeralds. No one has the ability to imitate the activities of material nature as conducted by the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">40</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The inhabitants of the higher planets—the Siddhas, Cāraṇas, Gandharvas, Vidyādharas, serpents, Kinnaras and Apsarās—go to that mountain to sport. Thus all the caves of the mountain are full of these denizens of the heavenly planets.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            As ordinary men may play in the salty ocean, the inhabitants of the higher planetary systems go to the ocean of milk. They float in the ocean of milk and also enjoy various sports within the caves of Trikūṭa Mountain.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">249</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of the resounding vibrations of the denizens of heaven singing in the caves, the lions there, being very proud of their strength, roar with unbearable envy, thinking that another lion is roaring in that way.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            In the higher planetary systems, there are not only different types of human beings, but also animals like lions and elephants. There are trees, and the land is made of emeralds. Such is the creation of the Supreme Personality of Godhead. Śrīla Bhaktivinoda Ṭhākura has sung in this regard, <span class="Italic">keśava! tuyā jagata vicitra:</span> “My Lord Keśava, Your creation is colorful and full of varieties.” Geologists, botanists and other so-called scientists speculate about other planetary systems, but being unable to estimate the varieties on other planets, they falsely imagine that all planets but this one are vacant, uninhabited, and full of dust. Although they cannot even estimate the varieties existing throughout the universe, they are very proud of their knowledge, and they are accepted as learned by persons of a similar caliber. As described in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.3.19), <span class="Italic">śva-vid-varāhoṣṭra-kharaiḥ saṁstutaḥ puruṣaḥ paśuḥ:</span> materialistic leaders are praised by dogs, hogs, camels and asses, and they themselves are also big animals. One should not be satisfied with the knowledge imparted by a big animal. Rather, one must take knowledge from a perfect person like Śukadeva Gosvāmī. <span class="Italic">Mahājano yena gataḥ sa panthāḥ:</span> our duty is to follow the instructions of the <span class="Italic">mahājanas.</span> There are twelve <span class="Italic">mahājanas,</span> and Śukadeva Gosvāmī is one of them.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">svayambhūr nāradaḥ śambhuḥ<br>kumāraḥ kapilo manuḥ<br>prahlādo janako bhīṣmo<br>balir vaiyāsakir vayam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 6.3.20)
+          </p>
+          <p>
+            Vaiyāsaki is Śukadeva Gosvāmī. Whatever he says we consider to be factual. That is perfect knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The valleys beneath Trikūṭa Mountain are beautifully decorated by many varieties of jungle animals, and in the trees, which are maintained in gardens by the demigods, varieties of birds chirp with sweet voices.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Trikūṭa Mountain has many lakes and rivers, with beaches covered by small gems resembling grains of sand. The water is as clear as crystal, and when the demigod damsels bathe in it, their bodies lend fragrance to the water and the breeze, thus enriching the atmosphere.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Even in the material world, there are many grades of living entities. The human beings on earth generally cover themselves with external fragrances to stop their bad bodily odors, but here we find that because of the bodily fragrance of the demigod damsels, the rivers, the lakes, the breeze and the entire atmosphere of Trikūṭa Mountain also become fragrant. Since the bodies of the damsels in the upper planetary systems are so beautiful, we can just imagine how beautifully formed are the bodies of the Vaikuṇṭha damsels or the damsels in Vṛndāvana, the <span class="Italic">gopīs.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9–13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In a valley of Trikūṭa Mountain there was a garden called Ṛtumat. This garden belonged to the great devotee Varuṇa and was a sporting place for the damsels of the demigods. Flowers and fruits grew there in all seasons. Among them were mandāras, pārijātas, pāṭalas, aśokas, campakas, cūtas, piyālas, panasas, mangoes, āmrātakas, kramukas, coconut trees, date trees and pomegranates. There were madhukas, palm trees, tamālas, asanas, arjunas, ariṣṭas, uḍumbaras, plakṣas, banyan trees, kiṁśukas and sandalwood trees. There were also picumardas, kovidāras, saralas, sura-dārus, grapes, sugarcane, bananas, jambu, badarīs, akṣas, abhayas and āmalakīs.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14–19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">137</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In that garden there was a very large lake filled with shining golden lotus flowers and the flowers known as kumuda, kahlāra, utpala and śatapatra, which added excellent beauty to the mountain. There were also bilva, kapittha, jambīra and bhallātaka trees. Intoxicated bumblebees drank honey and hummed with the chirping of the birds, whose songs were very melodious. The lake was crowded with swans, kāraṇḍavas, cakrāvakas, cranes, and flocks of water chickens, dātyūhas, koyaṣṭis and other murmuring birds. Because of the agitating movements of the fish and tortoises, the water was decorated with pollen that had fallen from the lotus flowers. The lake was surrounded by kadamba flowers, vetasa flowers, nalas, nīpas, vañjulakas, kundas, kurubakas, aśokas, śirīṣas, kūṭajas, iṅgudas, kubjakas, svarṇa-yūthīs, nāgas, punnāgas, jātīs, mallikās, śatapatras, jālakās and mādhavī-latās. The banks were also abundantly adorned with varieties of trees that yielded flowers and fruits in all seasons. Thus the entire mountain stood gloriously decorated.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            Judging from the exhaustive description of the lakes and rivers on Trikūṭa Mountain, on earth there is no comparison to their super-excellence. On other planets, however, there are many such wonders. For instance, we understand that there are two million different types of trees, and not all of them are exhibited on earth. <span class="Italic">Śrīmad-Bhāgavatam</span> presents the total knowledge of the affairs of the universe. It not only describes this universe, but also takes into account the spiritual world beyond the universe. No one can challenge the <span class="Italic">Śrīmad-Bhāgavatam’s</span> descriptions of the material and spiritual worlds. The attempts to go from the earth to the moon have failed, but the people of earth can understand what exists on other planets. There is no need of imagination; one may take actual knowledge from <span class="Italic">Śrīmad-Bhāgavatam</span> and be satisfied.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The leader of the elephants who lived in the forest of the mountain Trikūṭa once wandered toward the lake with his female elephants. He broke many plants, creepers, thickets and trees, not caring for their piercing thorns.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Simply by catching scent of that elephant, all the other elephants, the tigers and the other ferocious animals, such as lions, rhinoceroses, great serpents and black and white sarabhas, fled in fear. The camarī deer also fled.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">25</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By the mercy of this elephant, animals like the foxes, wolves, buffalos, bears, boars, gopucchas, porcupines, monkeys, rabbits, the other deer and many other small animals loitered elsewhere in the forest. They were not afraid of him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            All the animals were practically controlled by this elephant, yet although they could move without fear, because of respect they did not stand before him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23–24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Surrounded by the herd’s other elephants, including females, and followed by the young ones, Gajapati, the leader of the elephants, made Trikūṭa Mountain tremble all around because of the weight of his body. He was perspiring, liquor dripped from his mouth, and his vision was overwhelmed by intoxication. He was being served by bumblebees who drank honey, and from a distance he could smell the dust of the lotus flowers, which was carried from the lake by the breeze. Thus surrounded by his associates, who were afflicted by thirst, he soon arrived at the bank of the lake.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The King of the elephants entered the lake, bathed thoroughly and was relieved of his fatigue. Then, with the aid of his trunk, he drank the cold, clear, nectarean water, which was mixed with the dust of lotus flowers and water lilies, until he was fully satisfied.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Like a human being who lacks spiritual knowledge and is too attached to the members of his family, the elephant, being illusioned by the external energy of Kṛṣṇa, had his wives and children bathe and drink the water. Indeed, he raised water from the lake with his trunk and sprayed it over them. He did not mind the hard labor involved in this endeavor.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By the arrangement of providence, O King, a strong crocodile was angry at the elephant and attacked the elephant’s leg in the water. The elephant was certainly strong, and he tried his best to get free from this danger sent by providence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, seeing Gajendra in that grave condition, his wives felt very, very sorry and began to cry. The other elephants wanted to help Gajendra, but because of the crocodile’s great strength, they could not rescue him by grasping him from behind.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, the elephant and the crocodile fought in this way, pulling one another in and out of the water, for one thousand years. Upon seeing the fight, the demigods were very surprised.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_30_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">540</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, because of being pulled into the water and fighting for many long years, the elephant became diminished in his mental, physical and sensual strength. The crocodile, on the contrary, being an animal of the water, increased in enthusiasm, physical strength and sensual power.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_30_purport">
+          <p>
+            In the fighting between the elephant and the crocodile, the difference was that although the elephant was extremely powerful, he was in a foreign place, in the water. During one thousand years of fighting, he could not get any food, and under the circumstances his bodily strength diminished, and because his bodily strength diminished, his mind also became weak and his senses less powerful. The crocodile, however, being an animal of the water, had no difficulties. He was getting food and was therefore getting mental strength and sensual encouragement. Thus while the elephant became reduced in strength, the crocodile became more and more powerful. Now, from this we may take the lesson that in our fight with <span class="Italic">māyā</span> we should not be in a position in which our strength, enthusiasm and senses will be unable to fight vigorously. Our Kṛṣṇa consciousness movement has actually declared war against the illusory energy, in which all the living entities are rotting in a false understanding of civilization. The soldiers in this Kṛṣṇa consciousness movement must always possess physical strength, enthusiasm and sensual power. To keep themselves fit, they must therefore place themselves in a normal condition of life. What constitutes a normal condition will not be the same for everyone, and therefore there are divisions of <span class="Italic">varṇāśrama—brāhmaṇa, kṣatriya, vaiśya, śūdra, brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa.</span> Especially in this age, Kali-yuga, it is advised that no one take <span class="Italic">sannyāsa.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">aśvamedhaṁ gavālambhaṁ<br>sannyāsaṁ pala-paitṛkam<br>devareṇa sutotpattiṁ<br>kalau pañca vivarjayet<br> [Cc. <span class="Ref_Italic">Ādi</span> 17.164]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Italic">Brahma-vaivarta Purāṇa</span>)
+          </p>
+          <p>
+            From this we can understand that in this age the <span class="Italic">sannyāsa-āśrama</span> is forbidden because people are not strong. Śrī Caitanya Mahāprabhu showed us an example in taking <span class="Italic">sannyāsa</span> at the age of twenty-four years, but even Sārvabhauma Bhaṭṭācārya advised Śrī Caitanya Mahāprabhu to be extremely careful because He had taken <span class="Italic">sannyāsa</span> at an early age. For preaching we give young boys <span class="Italic">sannyāsa,</span> but actually it is being experienced that they are not fit for <span class="Italic">sannyāsa.</span> There is no harm, however, if one thinks that he is unfit for <span class="Italic">sannyāsa;</span> if he is very much agitated sexually, he should go to the <span class="Italic">āśrama</span> where sex is allowed, namely the <span class="Italic">gṛhastha-āśrama.</span> That one has been found to be very weak in one place does not mean that he should stop fighting the crocodile of <span class="Italic">māyā.</span> One should take shelter of the lotus feet of Kṛṣṇa, as we shall see Gajendra do, and at the same time one can be a <span class="Italic">gṛhastha</span> if he is satisfied with sexual indulgence. There is no need to give up the fight. Śrī Caitanya Mahāprabhu therefore recommended, <span class="Italic">sthāne sthitāḥ śruti-gatāṁ tanu-vān-manobhiḥ.</span> One may stay in whichever <span class="Italic">āśrama</span> is suitable for him; it is not essential that one take <span class="Italic">sannyāsa.</span> If one is sexually agitated, he can enter the <span class="Italic">gṛhastha-āśrama.</span> But one must continue fighting. For one who is not in a transcendental position, to take <span class="Italic">sannyāsa</span> artificially is not a very great credit. If <span class="Italic">sannyāsa</span> is not suitable, one may enter the <span class="Italic">gṛhastha-āśrama</span> and fight <span class="Italic">māyā</span> with great strength. But one should not give up the fighting and go away.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">187</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the King of the elephants saw that he was under the clutches of the crocodile by the will of providence and, being embodied and circumstantially helpless, could not save himself from danger, he was extremely afraid of being killed. He consequently thought for a long time and finally reached the following decision.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            Everyone in the material world is engaged in a struggle for existence. Everyone tries to save himself from danger, but when one is unable to save himself, if he is pious, he then takes shelter of the lotus feet of the Supreme Personality of Godhead. This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (7.16):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">catur-vidhā bhajante māṁ<br>janāḥ sukṛtino ’rjuna<br>ārto jijñāsur arthārthī<br>jñānī ca bharatarṣabha</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Four kinds of pious men—namely, one who is in danger, one who is in need of money, one who is searching for knowledge and one who is inquisitive—begin to take shelter of the Supreme Personality of Godhead in order to be saved or to advance. The King of the elephants, in his condition of danger, decided to seek shelter of the lotus feet of the Lord. After considerable thought, he intelligently arrived at this correct decision. Such a decision is not reached by a sinful man. Therefore in <span class="Italic">Bhagavad-gītā</span> it is said that those who are pious (<span class="Italic">sukṛtī</span>) can decide that in a dangerous or awkward condition one should seek shelter of the lotus feet of Kṛṣṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">346</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The other elephants, who are my friends and relatives, could not rescue me from this danger. What then to speak of my wives? They cannot do anything. It is by the will of providence that I have been attacked by this crocodile, and therefore I shall seek shelter of the Supreme Personality of Godhead, who is always the shelter of everyone, even of great personalities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            This material world is described as <span class="Italic">padaṁ padaṁ yad vipadām,</span> which means that at every step there is danger. A fool wrongly thinks that he is happy in this material world, but in fact he is not, for one who thinks that way is only illusioned. At every step, at every moment, there is danger. In modern civilization one thinks that if he has a nice home and a nice car his life is perfect. In the Western countries, especially in America, it is very nice to possess a good car, but as soon as one is on the road, there is danger because at any moment an accident may take place and one will be killed. The record actually shows that so many people die in such accidents. Therefore if we actually think that this material world is a very happy place, this is our ignorance. Real knowledge is that this material world is full of danger. We may struggle for existence as far as our intelligence allows and may try to take care of ourselves, but unless the Supreme Personality of Godhead, Kṛṣṇa, ultimately saves us from danger, our attempts will be useless. Therefore Prahlāda Mahārāja says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bālasya neha śaraṇaṁ pitarau nṛsiṁha<br>nārtasya cāgadam udanvati majjato nauḥ<br>taptasya tat-pratividhir ya ihāñjaseṣṭas<br>tāvad vibho tanu-bhṛtāṁ tvad-upekṣitānām</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 7.9.19)
+          </p>
+          <p>
+            We may invent so many ways to be happy or to counteract the dangers of this material world, but unless our attempts are sanctioned by the Supreme Personality of Godhead, they will never make us happy. Those who try to be happy without taking shelter of the Supreme Personality of Godhead are <span class="Italic">mūḍhas,</span> rascals. <span class="Italic">Na māṁ duṣkṛtino mūḍhāḥ prapadyante narādhamāḥ [Bg. </span>7.15]<span class="Italic">.</span> Those who are the lowest of men refuse to take to Kṛṣṇa consciousness because they think that they will be able to protect themselves without Kṛṣṇa’s care. This is their mistake. The decision of the King of the elephants, Gajendra, was correct. In such a dangerous position, he sought shelter of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">530</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is certainly not known to everyone, but He is very powerful and influential. Therefore, although the serpent of eternal time, which is fearful in force, endlessly chases everyone, ready to swallow him, if one who fears this serpent seeks shelter of the Lord, the Lord gives him protection, for even death runs away in fear of the Lord. I therefore surrender unto Him, the great and powerful supreme authority who is the actual shelter of everyone.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            One who is intelligent understands that there is a great and supreme authority above everything. That great authority appears in different incarnations to save the innocent from disturbances. As confirmed in <span class="Italic">Bhagavad-gītā, paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām: [Bg. </span>4.8] the Lord appears in His various incarnations for two purposes—to annihilate the <span class="Italic">duṣkṛtī,</span> the sinful, and to protect His devotees. The King of the elephants decided to surrender unto Him. This is intelligent. One must know that great Supreme Personality of Godhead and surrender unto Him. The Lord comes personally to instruct us how to be happy, and only fools and rascals do not see by intelligence this supreme authority, the Supreme Person. In the <span class="Italic">śruti-mantra</span> it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">bhīṣāsmād vātaḥ pavate<br>bhīṣodeti sūryaḥ<br>bhīṣāsmād agniś candraś ca<br>mṛtyur dhāvati pañcamaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Taittirīya Upaniṣad</span> 2.8)
+          </p>
+          <p>
+            It is out of fear of the Supreme Personality of Godhead that the wind is blowing, that the sun is distributing heat and light, and that death is chasing everyone. Thus there is a supreme controller, as confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10): <span class="Italic">mayādhyakṣeṇa prakṛtiḥ sūyate sacarācaram.</span> This material manifestation is working so well because of the supreme controller. Any intelligent person, therefore, can understand that there is a supreme controller. Furthermore, the supreme controller Himself appears as Lord Kṛṣṇa, as Lord Caitanya Mahāprabhu and as Lord Rāmacandra to give us instructions and to show us by example how to surrender unto the Supreme Personality of Godhead. Yet those who are <span class="Italic">duṣkṛtī,</span> the lowest of men, do not surrender (<span class="Italic">na māṁ duṣkṛtino mūḍhāḥ prapadyante narādhamāḥ [Bg. </span>7.15]).
+          </p>
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> the Lord clearly says, <span class="Italic">mṛtyuḥ sarva-haraś cāham:</span> “I am all-devouring death.” Thus <span class="Italic">mṛtyu,</span> or death, is the representative who takes everything away from the living entity who has accepted a material body. No one can say, “I do not fear death.” This is a false proposition. Everyone fears death. However, one who seeks shelter of the Supreme Personality of Godhead can be saved from death. One may argue, “Does the devotee not die?” The answer is that a devotee certainly must give up his body, for the body is material. The difference is, however, that for one who surrenders to Kṛṣṇa fully and who is protected by Kṛṣṇa, the present body is his last; he will not again receive a material body to be subjected to death. This is assured in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9). <span class="Italic">Tyaktvā dehaṁ punar janma naiti mām eti so’rjuna:</span> a devotee, after giving up his body, does not accept a material body, but returns home, back to Godhead. We are always in danger because at any moment death can take place. It is not that only Gajendra, the King of the elephants, was afraid of death. Everyone should fear death because everyone is caught by the crocodile of eternal time and may die at any moment. The best course, therefore, is to seek shelter of Kṛṣṇa, the Supreme Personality of Godhead, and be saved from the struggle for existence in this material world, in which one repeatedly takes birth and dies. To reach this understanding is the ultimate goal of life.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Eighth Canto, Second Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Elephant Gajendra’s Crisis.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/2">https://prabhupadabooks.com/sb/8/2</a><!-- span.text_source_copied_date
+        | on 2024-09-29 21:26:54 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.1: The Manus, Administrators of the Universe     Next: SB 8.3: Gajendra's Prayers of Surrender</div>
+      </p>
+    </div>
+  </body>
+</html>

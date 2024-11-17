@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.4, Gajendra Returns to the Spiritual World</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+
+        current_verse_highlighted = false;
+
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+
+        })
+
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+
+      });
+
+
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+
+
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+
+      }
+
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem;
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color:
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level {
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Four:<br>Gajendra Returns to the Spiritual World
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This Fourth Chapter describes the previous birth of Gajendra and the crocodile. It tells how the crocodile became a Gandharva and how Gajendra became an associate of the Supreme Personality of Godhead.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">There was a king on the Gandharva planet whose name was Hūhū. Once this King Hūhū was enjoying with women in the water, and while enjoying he pulled the leg of Devala Ṛṣi, who was also taking a bath in the water. Upon this, the sage became very angry and immediately cursed him to become a crocodile. King Hūhū was very sorry when cursed in that way, and he begged pardon from the sage, who in compassion gave him the benediction that he would be freed when Gajendra was delivered by the Personality of Godhead. Thus the crocodile was delivered when killed by Nārāyaṇa.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">When Gajendra, by the mercy of the Lord, became one of the Lord’s associates in Vaikuṇṭha, he got four hands. This achievement is called <span class="Italic">sārūpya-mukti,</span> or the liberation of receiving a spiritual body exactly like that of Nārāyaṇa. Gajendra, in his previous birth, had been a great devotee of Lord Viṣṇu. His name was Indradyumna, and he was the King of the Tāmila country. Following the Vedic principles, this King retired from family life and constructed a small cottage in the Malayācala Hills, where he always worshiped the Supreme Personality of Godhead in silence. Agastya Ṛṣi, along with many disciples, once approached King Indradyumna’s <span class="Italic">āśrama,</span> but because the King was meditating on the Supreme Personality of Godhead, he could not receive Agastya Ṛṣi properly. Thus the <span class="Italic">ṛṣi</span> became very angry and cursed the King to become a dull elephant. In accordance with this curse, the King was born as an elephant, and he forgot all about his previous activities in devotional service. Nonetheless, in his birth as an elephant, when he was dangerously attacked by the crocodile, he remembered his past life in devotional service and remembered a prayer he had learned in that life. Because of this prayer, he again received the mercy of the Lord. Thus he was immediately delivered, and he became one of the Lord’s four-handed associates.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Śukadeva Gosvāmī ends this chapter by describing the good fortune of the elephant. Śukadeva Gosvāmī says that by hearing the narration of Gajendra’s deliverance, one can also get the opportunity to be delivered. Śukadeva Gosvāmī vividly describes this, and thus the chapter ends.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">111</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: When the Lord delivered Gajendra, King of the elephants, all the demigods, sages and Gandharvas, headed by Brahmā and Śiva, praised this activity of the Supreme Personality of Godhead and showered flowers upon both the Lord and Gajendra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            It is evident from this chapter that great sages like Devala Ṛṣi, Nārada Muni and Agastya Muni will sometimes curse someone. The curse of such a personality, however, is in fact a benediction. Both the crocodile, who had been a Gandharva in his previous life, and Gajendra, who had been a king named Indradyumna, were cursed, but both of them benefited. Indradyumna, in his birth as an elephant, attained salvation and became a personal associate of the Lord in Vaikuṇṭha, and the crocodile regained his status as a Gandharva. We find evidence in many places that the curse of a great saint or devotee is not a curse but a benediction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There was a beating of kettledrums in the heavenly planets, the inhabitants of Gandharvaloka began to dance and sing, while great sages and the inhabitants of Cāraṇaloka and Siddhaloka offered prayers to the Supreme Personality of Godhead, Puruṣottama.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3–4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">144</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The best of the Gandharvas, King Hūhū, having been cursed by Devala Muni, had become a crocodile. Now, having been delivered by the Supreme Personality of Godhead, he assumed a very beautiful form as a Gandharva. Understanding by whose mercy this had happened, he immediately offered his respectful obeisances with his head and began chanting prayers just suitable for the transcendental Lord, the supreme eternal, who is worshiped by the choicest verses.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The story of how the Gandharva had become a crocodile will be described later. The curse by which the Gandharva took this position was actually a blessing, not a curse. One should not be displeased when a saintly person curses someone, for his curse, indirectly, is a blessing. The Gandharva had the mentality of an inhabitant of the celestial planetary system, and for him to become an associate of the Supreme Lord would have taken millions of long years. However, because he was cursed by Devala Ṛṣi, he became a crocodile and in only one life was fortunate enough to see the Supreme Personality of Godhead face to face and be promoted to the spiritual world to become one of the Lord’s associates. Similarly, Gajendra was also delivered by the Supreme Personality of Godhead when he was freed from the curse of Agastya Muni.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Having been favored by the causeless mercy of the Supreme Personality of Godhead and having regained his original form, King Hūhū circumambulated the Lord and offered his obeisances. Then, in the presence of all the demigods, headed by Brahmā, he returned to Gandharvaloka. He had been freed of all sinful reactions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">67</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because Gajendra, King of the elephants, had been touched directly by the hands of the Supreme Personality of Godhead, he was immediately freed of all material ignorance and bondage. Thus he received the salvation of sārūpya-mukti, in which he achieved the same bodily features as the Lord, being dressed in yellow garments and possessing four hands.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            If one is favored by the Supreme Personality of Godhead by having his gross body touched by the Lord, his body turns into a spiritual body, and he can go back home, back to Godhead. Gajendra assumed a spiritual body when his body was touched by the Lord. Similarly, Dhruva Mahārāja assumed his spiritual body in this way. <span class="Italic">Arcanā-paddhati,</span> daily worship of the Deity, provides an opportunity to touch the body of the Supreme Personality of Godhead, and thus it enables one to be fortunate enough to get a spiritual body and go back to Godhead. Not only by touching the body of the Supreme Lord, but simply by hearing about His pastimes, chanting His glories, touching His feet and offering worship—in other words, by serving the Lord somehow or other—one is purified of material contamination. This is the result of touching the Supreme Lord. One who is a pure devotee (<span class="Italic">anyābhilāṣitā-śūnyam</span>
+ [<span class="Ref_Italic">Bhakti-rasāmṛta-sindhu </span><popup><div class="Verse">anyābhilāṣitā-śūnyaṁ<br>jñāna-karmādy-anāvṛtam<br>ānukūlyena kṛṣṇānu-<br>śīlanaṁ bhaktir uttamā</div></popup>
+          </p>
+          <p>
+            “<b>One should render transcendental loving service to the Supreme Lord Kṛṣṇa favorably and without desire for material profit or gain through fruitive activities or philosophical speculation. That is called pure devotional service.</b>” <span class="Ref_Italic">Bhakti-rasāmṛta-sindhu</span> 1.1.11<lt>1.1.11]), who acts according to the <span class="Italic">śāstra</span> and the words of the Supreme Personality of Godhead, certainly becomes purified. Like Gajendra, he assumes a spiritual body and returns home, back to Godhead.</lt>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This Gajendra had formerly been a Vaiṣṇava and the king of the country known as Pāṇḍya, which is in the province of Draviḍa [South India]. In his previous life, he was known as Indradyumna Mahārāja.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Indradyumna Mahārāja retired from family life and went to the Malaya Hills, where he had a small cottage for his āśrama. He wore matted locks on his head and always engaged in austerities. Once, while observing a vow of silence, he was fully engaged in the worship of the Lord and absorbed in the ecstasy of love of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While Indradyumna Mahārāja was engaged in ecstatic meditation, worshiping the Supreme Personality of Godhead, the great sage Agastya Muni arrived there, surrounded by his disciples. When the Muni saw that Mahārāja Indradyumna, who was sitting in a secluded place, remained silent and did not follow the etiquette of offering him a reception, he was very angry.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">164</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Agastya Muni then spoke this curse against the King: This King Indradyumna is not at all gentle. Being low and uneducated, he has insulted a brāhmaṇa. May he therefore enter the region of darkness and receive the dull, dumb body of an elephant.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            An elephant is very strong, it has a very big body, and it can work very hard and eat a large quantity of food, but its intelligence is not at all commensurate with its size and strength. Thus in spite of so much bodily strength, the elephant works as a menial servant for a human being. Agastya Muni thought it wise to curse the King to become an elephant because the powerful King did not receive Agastya Muni as one is obliged to receive a <span class="Italic">brāhmaṇa.</span> Yet although Agastya Muni cursed Mahārāja Indradyumna to become an elephant, the curse was indirectly a benediction, for by undergoing one life as an elephant, Indradyumna Mahārāja ended the reactions for all the sins of his previous life. Immediately after the expiry of the elephant’s life, he was promoted to Vaikuṇṭhaloka to become a personal associate of the Supreme Personality of Godhead, Nārāyaṇa, in a body exactly like that of the Lord. This is called <span class="Italic">sārūpya-mukti.</span>
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11–12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">245</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: My dear King, after Agastya Muni had thus cursed King Indradyumna, the Muni left that place along with his disciples. Since the King was a devotee, he accepted Agastya Muni’s curse as welcome because it was the desire of the Supreme Personality of Godhead. Therefore, although in his next life he got the body of an elephant, because of devotional service he remembered how to worship and offer prayers to the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            This is the unique position of a devotee of the Supreme Personality of Godhead. Although the King was cursed, he welcomed the curse because a devotee is always aware that nothing can happen without the desire of the Supreme Lord. Although the King was not at fault, Agastya Muni cursed him, and when this happened the King considered it to be due to his past misdeeds. <span class="Italic">Tat te ’nukampāṁ susamīkṣamāṇaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 10.14.8). This is a practical example of how a devotee thinks. He regards any reverses in life as blessings of the Supreme Personality of Godhead. Therefore, instead of being agitated by such reverses, he continues his activities of devotional service, and Kṛṣṇa takes care of him and enables him to be promoted to the spiritual world, back to Godhead. If a devotee has to suffer the reactions of his past misdeeds, the Supreme Lord arranges for him to be given only a token of these reactions, and very soon he is freed from all the reactions of material contamination. One should therefore adhere to devotional service, and the Lord Himself will very soon see to one’s promotion to the spiritual world. A devotee should not be disturbed by unfortunate circumstances, but must continue his regular program, depending on the Lord for everything. The word <span class="Italic">upadhārayan,</span> “considering,” is very significant in this verse. This word indicates that a devotee knows what is what; he understands what is happening in material, conditional life.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">514</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon delivering the King of the elephants from the clutches of the crocodile, and from material existence, which resembles a crocodile, the Lord awarded him the status of sārūpya-mukti. In the presence of the Gandharvas, the Siddhas and the other demigods, who were praising the Lord for His wonderful transcendental activities, the Lord, sitting on the back of His carrier, Garuḍa, returned to His all-wonderful abode and took Gajendra with Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            In this verse the word <span class="Italic">vimokṣya</span> is significant. For a devotee, <span class="Italic">mokṣa</span> or <span class="Italic">mukti</span>—salvation—means getting the position of the Lord’s associate. The impersonalists are satisfied to get the liberation of merging in the Brahman effulgence, but for a devotee, <span class="Italic">mukti</span> (liberation) means not to merge in the effulgence of the Lord, but to be directly promoted to the Vaikuṇṭha planets and to become an associate of the Lord. In this regard, there is a relevant verse in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (10.14.8):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tat te ’nukampāṁ susamīkṣamāṇo<br>bhuñjāna evātma-kṛtaṁ vipākam<br>hṛd-vāg-vapurbhir vidadhan namas te<br>jīveta yo mukti-pade sa dāya-bhāk</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who seeks Your compassion and thus tolerates all kinds of adverse conditions due to the <span class="Italic">karma</span> of his past deeds, who engages always in Your devotional service with his mind, words and body, and who always offers obeisances unto You, is certainly a bona fide candidate for liberation.” A devotee who tolerates everything in this material world and patiently executes his devotional service can become <span class="Italic">mukti-pade sa dāya-bhāk,</span> a bona fide candidate for liberation. The word <span class="Italic">dāya-bhāk</span> refers to a hereditary right to the Lord’s mercy. A devotee must simply engage in devotional service, not caring about material situations. Then he automatically becomes a rightful candidate for promotion to Vaikuṇṭhaloka. The devotee who renders unalloyed service to the Lord gets the right to be promoted to Vaikuṇṭhaloka, just as a son inherits the property of his father.
+          </p>
+          <p>
+            When a devotee gets liberation, he becomes free from material contamination and engages as a servant of the Lord. This is explained in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (2.10.6): <span class="Italic">muktir hitvānyathā rūpaṁ svarūpena vyavasthitiḥ.</span> The word <span class="Italic">svarūpa</span> refers to <span class="Italic">sārūpya-mukti</span>—going back home, back to Godhead, and remaining the Lord’s eternal associate, having regained a spiritual body exactly resembling that of the Lord, with four hands, holding the <span class="Italic">śaṅkha, cakra, gadā</span> and <span class="Italic">padma.</span> The difference between the <span class="Italic">mukti</span> of the impersonalist and that of the devotee is that the devotee is immediately appointed an eternal servant of the Lord, whereas the impersonalist, although merging in the effulgence of the <span class="Italic">brahmajyoti,</span> is still insecure and therefore generally falls again to this material world. <span class="Italic">Āruhya kṛcchreṇa paraṁ padaṁ tataḥ patanty adho ’nādṛta-yuṣmad-aṅghrayaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 10.2.32). Although the impersonalist rises to the Brahman effulgence and enters into that effulgence, he has no engagement in the service of the Lord, and therefore he is again attracted to materialistic philanthropic activities. Thus he comes down to open hospitals and educational institutions, feed poor men and perform similar materialistic activities, which the impersonalist thinks are more precious than serving the Supreme Personality of Godhead. <span class="Italic">Anādṛta-yuṣmad-aṅghrayaḥ.</span> The impersonalists do not think that the service of the Lord is more valuable than serving the poor man or starting a school or hospital. Although they say <span class="Italic">brahma satyaṁ jagan mithyā</span>—“Brahman is real, and the material world is false”—they are nonetheless very eager to serve the false material world and neglect the service of the lotus feet of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King Parīkṣit, I have now described the wonderful power of Kṛṣṇa, as displayed when the Lord delivered the King of the elephants. O best of the Kuru dynasty, those who hear this narration become fit to be promoted to the higher planetary systems. Simply because of hearing this narration, they gain a reputation as devotees, they are unaffected by the contamination of Kali-yuga, and they never see bad dreams.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">296</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, after getting up from bed in the morning, those who desire their own welfare—especially the brāhmaṇas, kṣatriyas, vaiśyas and in particular the brāhmaṇa Vaiṣṇavas—should chant this narration as it is, without deviation, to counteract the troubles of bad dreams.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Every verse in the Vedic literature, especially in the <span class="Italic">Śrīmad-Bhāgavatam</span> and <span class="Italic">Bhagavad-gītā,</span> is a Vedic <span class="Italic">mantra.</span> Here the words <span class="Italic">yathānukīrtayanti</span> are used to recommend that this literature be presented as it is. Unscrupulous persons, however, deviate from the actual narration and interpret the text in their own way with grammatical jugglery. Such deviations are to be avoided. This is a Vedic injunction supported by Śukadeva Gosvāmī, one of the <span class="Italic">mahājanas,</span> or authorities. He says, <span class="Italic">yathānukīrtayanti:</span> one should recite the <span class="Italic">mantra</span> as it is, without deviation, for then one will be eligible to rise to the platform of all good fortune. Śukadeva Gosvāmī especially recommends that those who are <span class="Italic">brāhmaṇas</span> (<span class="Italic">śucayaḥ</span>) recite all these <span class="Italic">mantras</span> after rising from bed in the morning.
+          </p>
+          <p>
+            Because of sinful activities, at night we have bad dreams, which are very troublesome. Indeed, Mahārāja Yudhiṣṭhira was obliged to see hell because of a slight deviation from devotional service to the Lord. Therefore, <span class="Italic">duḥsvapna</span>—bad dreams—occur because of sinful activities. A devotee sometimes accepts a sinful person as his disciple, and to counteract the sinful reactions he accepts from the disciple, he has to see a bad dream. Nonetheless, the spiritual master is so kind that in spite of having bad dreams due to the sinful disciple, he accepts this troublesome business for the deliverance of the victims of Kali-yuga. After initiation, therefore, a disciple should be extremely careful not to commit again any sinful act that might cause difficulties for himself and the spiritual master. Before the Deity, before the fire, before the spiritual master and before the Vaiṣṇavas, the honest disciple promises to refrain from all sinful activity. Therefore he must not again commit sinful acts and thus create a troublesome situation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the Kuru dynasty, the Supreme Personality of Godhead, the Supersoul of everyone, being thus pleased, addressed Gajendra in the presence of everyone there. He spoke the following blessings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17–24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead said: Freed from all sinful reactions are those who rise from bed at the end of night, early in the morning, and fully concentrate their minds with great attention upon My form; your form; this lake; this mountain; the caves; the gardens; the cane plants; the bamboo plants; the celestial trees; the residential quarters of Me, Lord Brahmā and Lord Śiva; the three peaks of Trikūṭa Mountain, made of gold, silver and iron; My very pleasing abode [the ocean of milk]; the white island, Śvetadvīpa, which is always brilliant with spiritual rays; My mark of Śrīvatsa; the Kaustubha gem; My Vaijayantī garland; My club, Kaumodakī; My Sudarśana disc and Pāñcajanya conchshell; My bearer, Garuḍa, the king of the birds; My bed, Śeṣa Nāga; My expansion of energy the goddess of fortune; Lord Brahmā; Nārada Muni; Lord Śiva; Prahlāda; My incarnations like Matsya, Kūrma and Varāha; My unlimited all-auspicious activities, which yield piety to he who hears them; the sun; the moon; fire; the mantra oṁkāra; the Absolute Truth; the total material energy; the cows and brāhmaṇas; devotional service; the wives of Soma and Kaśyapa, who are all daughters of King Dakṣa; the Rivers Ganges, Sarasvatī, Nandā and Yamunā [Kālindī]; the elephant Airāvata; Dhruva Mahārāja; the seven ṛṣis; and the pious human beings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear devotee, unto those who rise from bed at the end of night and offer Me the prayers offered by you, I give an eternal residence in the spiritual world at the end of their lives.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: After giving this instruction, the Lord, who is known as Hṛṣīkeśa, bugled with His Pāñcajanya conchshell, in this way pleasing all the demigods, headed by Lord Brahmā. Then He mounted the back of His carrier, Garuḍa.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Eighth Canto, Fourth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “Gajendra Returns to the Spiritual World.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/4">https://prabhupadabooks.com/sb/8/4</a><!-- span.text_source_copied_date
+        | on 2024-09-29 21:27:07 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.3: Gajendra's Prayers of Surrender     Next: SB 8.5: The Demigods Appeal to the Lord for Protection</div>
+      </p>
+    </div>
+  </body>
+</html>

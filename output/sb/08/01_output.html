@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.1, The Manus, Administrators of the Universe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter One:<br>The Manus, Administrators of the Universe
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">First of all, let me offer my humble, respectful obeisances unto the lotus feet of my spiritual master, His Divine Grace Śrī Śrīmad Bhaktisiddhānta Sarasvatī Gosvāmī Prabhupāda. Sometime in the year 1935 when His Divine Grace was staying at Rādhā-kuṇḍa, I went to see him from Bombay. At that time, he gave me many important instructions in regard to constructing temples and publishing books. He personally told me that publishing books is more important than constructing temples. Of course, those same instructions remained within my mind for many years. In 1944 I began publishing my <span class="Italic">Back to Godhead,</span> and when I retired from family life in 1958 I began publishing <span class="Italic">Śrīmad-Bhāgavatam</span> in Delhi. When three parts of <span class="Italic">Śrīmad-Bhāgavatam</span> had been published in India, I then started for the United States of America on the thirteenth of August, 1965.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">I am continuously trying to publish books, as suggested by my spiritual master. Now, in this year, 1976, I have completed the Seventh Canto of <span class="Italic">Śrīmad-Bhāgavatam,</span> and a summary of the Tenth Canto has already been published as <span class="Italic">Kṛṣṇa, the Supreme Personality of Godhead.</span> Still, the Eighth Canto, Ninth Canto, Tenth Canto, Eleventh Canto and Twelfth Canto are yet to be published. On this occasion, therefore, I am praying to my spiritual master to give me strength to finish this work. I am neither a great scholar nor a great devotee; I am simply a humble servant of my spiritual master, and to the best of my ability I am trying to please him by publishing these books, with the cooperation of my disciples in America. Fortunately, scholars all over the world are appreciating these publications. Let us cooperatively publish more and more volumes of <span class="Italic">Śrīmad-Bhāgavatam</span> just to please His Divine Grace Bhaktisiddhānta Sarasvatī Ṭhākura.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">This First Chapter of the Eighth Canto may be summarized as a description of four Manus, namely Svāyambhuva, Svārociṣa, Uttama and Tāmasa. After hearing descriptions of the dynasty of Svāyambhuva Manu until the end of the Seventh Canto, Mahārāja Parīkṣit desired to know about other Manus. He desired to understand how the Supreme Personality of Godhead descends—not only in the past but at the present and in the future—and how He acts in various pastimes as Manu. Since Parīkṣit Mahārāja was eager to know all this, Śukadeva Gosvāmī gradually described all the Manus, beginning with the six Manus who had appeared in the past.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The first Manu was Svāyambhuva Manu. His two daughters, namely Ākūti and Devahūti, gave birth to two sons, named Yajña and Kapila respectively. Because Śukadeva Gosvāmī had already described the activities of Kapila in the Third Canto, he now described the activities of Yajña. The original Manu, along with his wife, Śatarūpā, went into the forest to practice austerities on the bank of the River Sunandā. They practiced austerities for a hundred years, and then Manu, in a trance, formed prayers to the Supreme Personality of Godhead. Rākṣasas and <span class="Italic">asuras</span> then attempted to devour him, but Yajña, accompanied by his sons the Yāmas and the demigods, killed them. Then Yajña personally took the post of Indra, the King of the heavenly planets.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The second Manu, whose name was Svārociṣa, was the son of Agni, and His sons were headed by Dyumat, Suṣeṇa and Rociṣmat. In the age of this Manu, Rocana became Indra, the ruler of the heavenly planets, and there were many demigods, headed by Tuṣita. There were also many saintly persons, such as Ūrja and Stambha. Among them was Vedaśirā, whose wife, Tuṣitā, gave birth to Vibhu. Vibhu instructed eighty-eight thousand <span class="Italic">dṛḍha-vratas,</span> or saintly persons, on self-control and austerity.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Uttama, the son of Priyavrata, was the third Manu. Among his sons were Pavana, Sṛñjaya and Yajñahotra. During the reign of this Manu, the sons of Vasiṣṭha, headed by Pramada, became the seven saintly persons. The Satyas, Devaśrutas and Bhadras became the demigods, and Satyajit became Indra. From the womb of Sunṛtā, the wife of Dharma, the Lord appeared as Satyasena, and He killed all the Yakṣas and Rākṣasas who were fighting with Satyajit.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Tāmasa, the brother of the third Manu, was the fourth Manu, and he had ten sons, including Pṛthu, Khyāti, Nara and Ketu. During his reign, the Satyakas, Haris, Vīras and others were demigods, the seven great saints were headed by Jyotirdhāma, and Triśikha became Indra. Harimedhā begot a son named Hari in the womb of his wife Hariṇī. This Hari, an incarnation of God, saved the devotee Gajendra. This incident is described as <span class="Italic">gajendra-mokṣaṇa.</span> At the end of this chapter, Parīkṣit Mahārāja particularly asks about this incident.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit said: O my lord, my spiritual master, now I have fully heard from Your Grace about the dynasty of Svāyambhuva Manu. But there are also other Manus, and I want to hear about their dynasties. Kindly describe them to us.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">206</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O learned brāhmaṇa, Śukadeva Gosvāmī, the great learned persons who are completely intelligent describe the activities and appearance of the Supreme Personality of Godhead during the various manvantaras. We are very eager to hear about these narrations. Kindly describe them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            The Supreme Personality of Godhead has different varieties of incarnations, including the <span class="Italic">guṇa-avatāras, manvantara-avatāras, līlā-avatāras</span> and <span class="Italic">yuga-avatāras,</span> all of which are described in the <span class="Italic">śāstras.</span> Without reference to the <span class="Italic">śāstras</span> there can be no question of accepting anyone as an incarnation of the Supreme Personality of Godhead. Therefore, as especially mentioned here, <span class="Italic">gṛṇanti kavayaḥ:</span> the descriptions of various incarnations are accepted by great learned scholars with perfect intelligence. At the present time, especially in India, so many rascals are claiming to be incarnations, and people are being misled. Therefore, the identity of an incarnation should be confirmed by the descriptions of the <span class="Italic">śāstras</span> and by wonderful activities. As described in this verse by the word <span class="Italic">mahīyasaḥ,</span> the activities of an incarnation are not ordinary magic or jugglery, but are wonderful activities. Thus any incarnation of the Supreme Personality of Godhead must be supported by the statements of the <span class="Italic">śāstra</span> and must actually perform wonderful activities. Parīkṣit Mahārāja was eager to hear about the Manus of different ages. There are fourteen Manus during a day of Brahmā, and the age of each Manu lasts for seventy-one <span class="Italic">yugas.</span> Thus there are thousands of Manus during the life of Brahmā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">146</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O learned brāhmaṇa, kindly describe to us whatever activities the Supreme Personality of Godhead, who created this cosmic manifestation, has performed in the past manvantaras, is performing at present, and will perform in the future manvantaras.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā</span> the Supreme Personality of Godhead said that both He and the other living entities present on the battlefield had existed in the past, they existed at present, and they would continue to exist in the future. Past, present and future always exist, both for the Supreme Personality of Godhead and for ordinary living entities. <span class="Italic">Nityo nityānāṁ cetanaś cetanānām.</span> Both the Lord and the living entities are eternal and sentient, but the difference is that the Lord is unlimited whereas the living entities are limited. The Supreme Personality of Godhead is the creator of everything, and although the living entities are not created but exist with the Lord eternally, their bodies are created, whereas the Supreme Lord’s body is never created. There is no difference between the Supreme Lord and His body, but the conditioned soul, although eternal, is different from his body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: In the present kalpa there have already been six Manus. I have described to you Svāyambhuva Manu and the appearance of many demigods. In this kalpa of Brahmā, Svāyambhuva is the first Manu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_5_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">22</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Svāyambhuva Manu had two daughters, named Ākūti and Devahūti. From their wombs, the Supreme Personality of Godhead appeared as two sons named Yajñamūrti and Kapila respectively. These sons were entrusted with preaching about religion and knowledge.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_5_purport">
+          <p>
+            Devahūti’s son was known as Kapila, and Ākūti’s son was known as Yajñamūrti. Both of Them taught about religion and philosophical knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the Kurus, I have already described [in the Third Canto] the activities of Kapila, the son of Devahūti. Now I shall describe the activities of Yajñapati, the son of Ākūti.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">209</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Svāyambhuva Manu, the husband of Śatarūpā, was by nature not at all attached to enjoyment of the senses. Thus he gave up his kingdom of sense enjoyment and entered the forest with his wife to practice austerities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (4.2), <span class="Italic">evaṁ paramparā-prāptam imaṁ rājarṣayo viduḥ:</span> “The supreme science was thus received through the chain of disciplic succession, and the saintly kings understood it in that way.” All the Manus were perfect kings. They were <span class="Italic">rājarṣis.</span> In other words, although they held posts as kings of the world, they were as good as great saints. Svāyambhuva Manu, for example, was the emperor of the world, yet he had no desire for sense gratification. This is the meaning of monarchy. The king of the country or the emperor of the empire must be so trained that by nature he renounces sense gratification. It is not that because one becomes king he should unnecessarily spend money for sense gratification. As soon as kings became degraded, spending money for sense gratification, they were lost. Similarly, at the present moment, monarchy having been lost, the people have created democracy, which is also failing. Now, by the laws of nature, the time is coming when dictatorship will put the citizens into more and more difficulty. If the king or dictator individually, or the members of the government collectively, cannot maintain the state or kingdom according to the rules of <span class="Italic">Manu-saṁhitā,</span> certainly their government will not endure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">24</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O scion of Bharata, after Svāyambhuva Manu had thus entered the forest with his wife, he stood on one leg on the bank of the River Sunandā, and in this way, with only one leg touching the earth, he performed great austerities for one hundred years. While performing these austerities, he spoke as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura comments that the word <span class="Italic">anvāha</span> means that he chanted or murmured to himself, not that he lectured to anyone.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">186</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Manu said: The supreme living being has created this material world of animation; it is not that He was created by this material world. When everything is silent, the Supreme Being stays awake as a witness. The living entity does not know Him, but He knows everything.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Here is a distinction between the Supreme Personality of Godhead and the living entities. <span class="Italic">Nityo nityānāṁ cetanaś cetanānām.</span> According to the Vedic version, the Lord is the supreme eternal, the supreme living being. The difference between the Supreme Being and the ordinary living being is that when this material world is annihilated, all the living entities remain silent in oblivion, in a dreaming or unconscious condition, whereas the Supreme Being stays awake as the witness of everything. This material world is created, it stays for some time, and then it is annihilated. Throughout these changes, however, the Supreme Being remains awake. In the material condition of all living entities, there are three stages of dreaming. When the material world is awake and put in working order, this is a kind of dream, a waking dream. When the living entities go to sleep, they dream again. And when unconscious at the time of annihilation, when this material world is unmanifested, they enter another stage of dreaming. At any stage in the material world, therefore, they are all dreaming. In the spiritual world, however, everything is awake.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">1225</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Within this universe, the Supreme Personality of Godhead in His Supersoul feature is present everywhere, wherever there are animate or inanimate beings. Therefore, one should accept only that which is allotted to him; one should not desire to infringe upon the property of others.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            Having described the situation of the Supreme Personality of Godhead as transcendental, Svāyambhuva Manu, for the instruction of the sons and grandsons in his dynasty, is now describing all the property of the universe as belonging to the Supreme Personality of Godhead. Manu’s instructions are not only for his own sons and grandsons, but for all of human society. The word “man”—or, in Sanskrit, <span class="Italic">manuṣya</span>—has been derived from the name Manu, for all the members of human society are descendants of the original Manu. Manu is also mentioned in <span class="Ref_Italic">Bhagavad-gītā</span> (4.1), where the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">imaṁ vivasvate yogaṁ<br>proktavān aham avyayam<br>vivasvān manave prāha<br>manur ikṣvākave ’bravīt</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I instructed this imperishable science of <span class="Italic">yoga</span> to the sun-god, Vivasvān, and Vivasvān instructed it to Manu, the father of mankind, and Manu in turn instructed it to Ikṣvāku.” Svāyambhuva Manu and Vaivasvata Manu have similar duties. Vaivasvata Manu was born of the sun-god, Vivasvān, and his son was Ikṣvāku, the King of the earth. Since Manu is understood to be the original father of humanity, human society should follow his instructions.
+          </p>
+          <p>
+            Svāyambhuva Manu instructs that whatever exists, not only in the spiritual world but even within this material world, is the property of the Supreme Personality of Godhead, who is present everywhere as the Superconsciousness. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (13.3), <span class="Italic">kṣetra jñam.</span> <span class="Italic">cāpi māṁ viddhi sarva-kṣetreṣu bhārata:</span> in every field—in other words, in every body—the Supreme Lord is existing as the Supersoul. The individual soul is given a body in which to live and act according to the instructions of the Supreme Person, and therefore the Supreme Person also exists within every body. We should not think that we are independent; rather, we should understand that we are allotted a certain portion of the total property of the Supreme Personality of Godhead.
+          </p>
+          <p>
+            This understanding will lead to perfect communism. Communists think in terms of their own nations, but the spiritual communism instructed here is not only nationwide but universal. Nothing belongs to any nation or any individual person; everything belongs to the Supreme Personality of Godhead. That is the meaning of this verse. <span class="Italic">Ātmāvāsyam idaṁ viśvam:</span> whatever exists within this universe is the property of the Supreme Personality of Godhead. The modern communistic theory, and also the idea of the United Nations, can be reformed—indeed, rectified—by the understanding that everything belongs to the Supreme Personality of Godhead. The Lord is not a creation of our intelligence; rather, He has created us. <span class="Italic">Ātmāvāsyam idaṁ viśvam.</span> <span class="Italic">Īśāvāsyam idaṁ sarvam.</span> This universal communism can solve all the problems of the world.
+          </p>
+          <p>
+            One should learn from the Vedic literature that one’s body is also not the property of the individual soul, but is given to the individual soul according to his <span class="Italic">karma.</span> <span class="Italic">Karmaṇā daiva-netreṇa jantur dehopapattaye [SB </span>3.31.1]<span class="Italic">.</span> The 8,400,000 different bodily forms are machines given to the individual soul. This is confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (18.61):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ sarva-bhūtānāṁ<br>hṛd-deśe ’rjuna tiṣṭhati<br>bhrāmayan sarva-bhūtāni<br>yantrārūḍhāni māyayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Lord is situated in everyone’s heart, O Arjuna, and is directing the wanderings of all living entities, who are seated as on a machine, made of the material energy.” The Lord, as the Supersoul, sits in everyone’s heart and observes the various desires of the individual soul. The Lord is so merciful that He gives the living entity the opportunity to enjoy varieties of desires in suitable bodies, which are nothing but machines (<span class="Italic">yantrārūḍhāni māyayā</span>). These machines are manufactured by the material ingredients of the external energy, and thus the living entity enjoys or suffers according to his desires. This opportunity is given by the Supersoul.
+          </p>
+          <p>
+            Everything belongs to the Supreme, and therefore one should not usurp another’s property. We have a tendency to manufacture many things. Especially nowadays, we are building skyscrapers and developing other material facilities. We should know, however, that the ingredients of the skyscrapers and machines cannot be manufactured by anyone but the Supreme Personality of Godhead. The whole world is nothing but a combination of the five material elements (<span class="Italic">tejo-vāri-mṛdāṁ yathā vinimayaḥ</span>). A skyscraper is a transformation of earth, water and fire. Earth and water are combined and burnt into bricks by fire, and a skyscraper is essentially a tall construction of bricks. Although the bricks may be manufactured by man, the ingredients of the bricks are not. Of course, man, as a manufacturer, may accept a salary from the Supreme Personality of Godhead. That is stated here: <span class="Italic">tena tyaktena bhuñjīthāḥ.</span> One may construct a big skyscraper, but neither the constructor, the merchant nor the worker can claim proprietorship. Proprietorship belongs to the person who has spent for the building. The Supreme Personality of Godhead has manufactured water, earth, air, fire and the sky, and one can use these and take a salary (<span class="Italic">tena tyaktena bhuñjīthāḥ</span>). However, one cannot claim proprietorship. This is perfect communism. Our tendency to construct great buildings should be used only for constructing large and valuable temples in which to install the Deity of the Supreme Personality of Godhead. Then our desire for construction will be fulfilled.
+          </p>
+          <p>
+            Since all property belongs to the Supreme Personality of Godhead, everything should be offered to the Lord, and we should take only <span class="Italic">prasāda</span> (<span class="Italic">tena tyaktena bhuñjīthāḥ</span>). We should not fight among ourselves to take more than we need. As Nārada said to Mahārāja Yudhiṣṭhira:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yāvad bhriyeta jaṭharaṁ<br>tāvat svatvaṁ hi dehinām<br>adhikaṁ yo ’bhimanyeta<br>sa steno daṇḍam arhati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One may claim proprietorship to as much wealth as required to maintain body and soul together, but one who desires proprietorship over more than that must be considered a thief, and he deserves to be punished by the laws of nature.” (<span class="Ref_Italic">Bhāg.</span> 7.14.8) Of course, we need to be maintained in eating, sleeping, mating and defending (<span class="Italic">āhāra-nidra-bhaya-maithuna</span>), but since the Supreme Lord, the Personality of Godhead, has provided these necessities of life for the birds and bees, why not for mankind? There is no need for economic development; everything is provided. Therefore one should understand that everything belongs to Kṛṣṇa, and with this idea, one may take <span class="Italic">prasāda.</span> However, if one interferes with the allotments of others, he is a thief. We should not accept more than what we actually need. Therefore, if by chance we get an abundance of money, we should always consider that it belongs to the Supreme Personality of Godhead. In Kṛṣṇa consciousness we are getting sufficient money, but we should never think that the money belongs to us; it belongs to the Supreme Personality of Godhead and should be equally distributed to the workers, the devotees. No devotee should claim that any money or property belongs to him. If one thinks that any portion of property of this huge universe belongs to anyone, he is to be considered a thief and is punishable by the laws of nature. <span class="Italic">Daivī hy eṣā guṇa-mayī mama māyā duratyayā:</span> no one can surpass the vigilance of material nature or hide his intentions from material nature. If human society unlawfully claims that the property of the universe, either partially or wholly, belongs to mankind, all of human society will be cursed as a society of thieves and will be punished by the laws of nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">786</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although the Supreme Personality of Godhead constantly watches the activities of the world, no one sees Him. However, one should not think that because no one sees Him, He does not see, for His power to see is never diminished. Therefore, everyone should worship the Supersoul, who always stays with the individual soul as a friend.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            Offering prayers to Kṛṣṇa, Śrīmatī Kuntīdevī, the mother of the Pāṇḍavas, said, <span class="Italic">alakṣyaṁ sarva-bhūtānām antar bahir avasthitam:</span> “Kṛṣṇa, You reside both inside and outside of everything, yet the unintelligent conditioned souls cannot see You.” In <span class="Italic">Bhagavad-gītā</span> it is said that one can see the Supreme Personality of Godhead through <span class="Italic">jñāna-cakṣuṣaḥ,</span> eyes of knowledge. He who opens these eyes of knowledge is called a spiritual master. Thus we offer our prayers to the spiritual master with the following <span class="Italic">śloka:</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">om ajñāna-timirāndhasya<br>jñānāñjana-śalākayā<br>cakṣur unmīlitaṁ yena<br>tasmai śrī-gurave namaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “I offer my respectful obeisances unto my spiritual master, who with the torchlight of knowledge has opened my eyes, which were blinded by the darkness of ignorance.” (<span class="Italic">Gautamīya Tantra</span>) The <span class="Italic">guru’s</span> task is to open the disciple’s eyes of knowledge. When the disciple is awakened from ignorance to knowledge, he can see the Supreme Personality of Godhead everywhere because the Lord actually is everywhere. <span class="Italic">Aṇḍāntara-stha-paramāṇu-cayāntara-stham.</span> The Lord resides within this universe, He resides within the hearts of all living entities, and He resides even within the atom. Because we lack perfect knowledge, we cannot see God, but a little deliberation can help us to see God everywhere. This requires training. With a little deliberation, even the most degraded person can perceive the presence of God. If we take into account whose property is the vast ocean, whose property is the vast land, how the sky exists, how the numberless millions of stars and planets are set in the sky, who has made this universe and whose property it is, we should certainly come to the conclusion that there is a proprietor of everything. When we claim proprietorship over a certain piece of land, whether individually or for our families or nations, we should also consider how we became the proprietors. The land was there before our birth, before we came to the land. How did it become our property? Such deliberation will help us understand that there is a supreme proprietor of everything—the Supreme Personality of Godhead.
+          </p>
+          <p>
+            The Supreme Godhead is always awake. In the conditioned stage we forget things because we change our bodies, but because the Supreme Personality of Godhead does not change His body, He remembers past, present and future. Kṛṣṇa says in <span class="Ref_Italic">Bhagavad-gītā</span> (4.1), <span class="Italic">imaṁ vivasvate yogaṁ proktavān aham avyayam:</span> “I spoke this science of God—<span class="Italic">Bhagavad-gītā</span>—to the sun-god at least forty million years ago.” When Arjuna inquired from Kṛṣṇa how He could remember incidents that had taken place so long ago, the Lord answered that Arjuna was also present at that time. Because Arjuna is Kṛṣṇa’s friend, wherever Kṛṣṇa goes, Arjuna goes. But the difference is that Kṛṣṇa remembers everything, whereas the living entity like Arjuna, being a minute particle of the Supreme Lord, forgets. Therefore it is said, the Lord’s vigilance is never diminished. This is also confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (15.15). <span class="Italic">Sarvasya cāhaṁ hṛdi sanniviṣṭo mattaḥ smṛtir jñānam apohanaṁ ca:</span> the Supreme Personality of Godhead in His Paramātmā feature is always present within the hearts of all living entities, and from Him come memory, knowledge and forgetfulness. This is also indicated in this verse by the word <span class="Italic">suparṇam,</span> which means “friend.” In the <span class="Ref_Italic">Śvetāśvatara Upaniṣad</span> (4.6) it is therefore said, <span class="Italic">dvā suparṇa-sayujā sakhāyā samānaṁ vṛkṣaṁ pariṣasvajāte:</span> two birds are sitting on the same tree as friends. One bird is eating the fruit of the tree, and the other is simply observing. This observing bird is always present as a friend to the eating bird and giving him remembrance of things he wanted to do. Thus if we take into account the Supreme Personality of Godhead in our daily affairs, we can see Him or at least perceive His presence everywhere.
+          </p>
+          <p>
+            The words <span class="Italic">cakṣur yasya na riṣyati</span> mean that although we cannot see Him, this does not mean that He cannot see us. Nor does He die when the cosmic manifestation is annihilated. The example is given in this connection that the sunshine is present when the sun is present, but when the sun is not present, or when we cannot see the sun, this does not mean that the sun is lost. The sun is there, but we cannot see it. Similarly, although we cannot see the Supreme Personality of Godhead in our present darkness, our lack of knowledge, He is always present, seeing our activities. As the Paramātmā, He is the witness and adviser (<span class="Italic">upadraṣṭā</span> and <span class="Italic">anumantā</span>). Therefore, by following the instructions of the spiritual master and studying authorized literatures, one can understand that God is present before us, seeing everything, although we have no eyes with which to see Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">185</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead has no beginning, no end and no middle. Nor does He belong to a particular person or nation. He has no inside or outside. The dualities found within this material world, such as beginning and end, mine and theirs, are all absent from the personality of the Supreme Lord. The universe, which emanates from Him, is another feature of the Lord. Therefore the Supreme Lord is the ultimate truth, and He is complete in greatness.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The Supreme Personality of Godhead, Kṛṣṇa, is described in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.1):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">īśvaraḥ paramaḥ kṛṣṇaḥ<br>sac-cid-ānanda-vigrahaḥ<br>anādir ādir govindaḥ<br>sarva-kāraṇa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Kṛṣṇa, known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body. He is the origin of all. He has no other origin, for He is the prime cause of all causes.” For the Lord’s existence there is no cause, for He is the cause of everything. He is in everything (<span class="Italic">mayā tatam idaṁ sarvam</span>), He is expanded in everything, but He is not everything. He is <span class="Italic">acintya-bhedābheda,</span> simultaneously one and different. That is explained in this verse. In the material condition we have a conception of beginning, end and middle, but for the Supreme Personality of Godhead there are no such things. The universal cosmic manifestation is also the <span class="Italic">virāṭ-rūpa</span> that was shown to Arjuna in <span class="Italic">Bhagavad-gītā.</span> Therefore, since the Lord is present everywhere and all the time, He is the Absolute Truth and the greatest. He is complete in greatness. God is great, and how He is great is explained here.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">372</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The entire cosmic manifestation is the body of the Supreme Personality of Godhead, the Absolute Truth, who has millions of names and unlimited potencies. He is self-effulgent, unborn and changeless. He is the beginning of everything, but He has no beginning. Because He has created this cosmic manifestation by His external energy, the universe appears to be created, maintained and annihilated by Him. Nonetheless, He remains inactive in His spiritual energy and is untouched by the activities of the material energy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Śrī Caitanya Mahāprabhu says in His <span class="Italic">Śikṣāṣṭaka, nāmnām akāri bahudhā nija-sarva-śaktiḥ:</span> the Supreme Personality of Godhead has many names, which are all nondifferent from the Supreme Person. This is spiritual existence. By chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> consisting of names of the Supreme Lord, we find that the name has all the potencies of the person. The Lord’s activities are many, and according to His activities He has many names. He appeared as the son of mother Yaśodā, and also as the son of mother Devakī, and therefore He is named Devakī-nandana and Yaśodā-nandana. <span class="Italic">Parāsya śaktir vividhaiva śrūyate:</span> the Lord has a multitude of energies, and therefore He acts in multifarious ways. Yet He has a particular name. The <span class="Italic">śāstras</span> recommend which names we should chant, such as Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare. It is not that we have to search for some name or manufacture one. Rather, we must follow the saintly persons and the <span class="Italic">śāstras</span> in chanting His holy name.
+          </p>
+          <p>
+            Although the material and spiritual energies both belong to the Lord, He is impossible to understand as long as we are in the material energy. And when we come to the spiritual energy, He is very easy to know. As stated in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.7.23): <span class="Italic">māyāṁ vyudasya cic-chaktyā kaivalye sthita ātmani.</span> Although the external energy belongs to the Lord, when one is in the external energy (<span class="Italic">mama māyā duratyayā</span>) He is very difficult to understand. However, when one comes to the spiritual energy, one can understand Him. Therefore in <span class="Ref_Italic">Bhagavad-gītā</span> (18.55) it is said, <span class="Italic">bhaktyā mām abhijānāti yāvān yaś cāsmi tattvataḥ:</span> one who wants to understand the Supreme Personality of Godhead in reality must take to the platform of <span class="Italic">bhakti,</span> or Kṛṣṇa consciousness. This <span class="Italic">bhakti</span> consists of various activities (<span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam/ arcanaṁ vandanaṁ dāsyaṁ sakhyam ātma-nivedanam [SB </span>7.5.23]), and to understand the Lord one must take to this path of devotional service. Even though the people of the world have forgotten God and may say that God is dead, this is not a fact. One can understand God when one takes to the Kṛṣṇa consciousness movement, and thus one can be happy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">653</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Therefore, to enable people to reach the stage of activities that are not tinged by fruitive results, great saints first engage people in fruitive activities, for unless one begins by performing activities as recommended in the śāstras, one cannot reach the stage of liberation, or activities that produce no reactions.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (3.9) Lord Kṛṣṇa advises, <span class="Italic">yajñārthāt karmaṇo ’nyatra loko ’yaṁ karma-bandhanaḥ:</span> “Work done as a sacrifice for Viṣṇu has to be performed, otherwise work binds one to this material world.” Generally, everyone is attracted to hard labor for becoming happy in this material world, but although various activities are going on all over the world simply for the sake of happiness, unfortunately only problems are being created from such fruitive activities. Therefore it is advised that active persons engage in activities of Kṛṣṇa consciousness, which are called <span class="Italic">yajña,</span> because then they will gradually come to the platform of devotional service. <span class="Italic">Yajña</span> means Lord Viṣṇu, the <span class="Italic">yajña-puruṣa,</span> the enjoyer of all sacrifices (<span class="Italic">bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram [Bg. </span>5.29]). The Supreme Personality of Godhead is actually the enjoyer, and therefore if we begin our activities for His satisfaction, we will gradually lose our taste for material activities.
+          </p>
+          <p>
+            Sūta Gosvāmī declared to the great assembly of sages at Naimiṣāraṇya:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ataḥ pumbhir dvija-śreṣṭhā<br>varṇāśrama-vibhāgaśaḥ<br>svanuṣṭhitasya dharmasya<br>saṁsiddhir hari-toṣaṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “O best among the twice-born, it is concluded that the highest perfection one can achieve, by discharging his prescribed duties [<span class="Italic">dharma</span>] according to caste divisions and order of life, is to please the Lord Hari.” (<span class="Ref_Italic">Bhāg.</span> 1.2.13) According to Vedic principles, everyone must act according to his classification as <span class="Italic">brāhmaṇa, kṣatriya, vaiśya, śūdra, brahmacārī, gṛhastha, vānaprastha</span> or <span class="Italic">sannyāsī.</span> Everyone should progress toward perfection by acting in such a way that Kṛṣṇa will be pleased (<span class="Italic">saṁsiddhir hari-toṣaṇam [SB 1.2.13]</span>). One cannot please Kṛṣṇa by sitting idly; one must act according to the directions of the spiritual master for the sake of pleasing the Supreme Personality of Godhead, and then one will gradually come to the stage of pure devotional service. As confirmed in <span class="Ref_Italic">Śrīmad-Bhāgavatam</span> (1.5.12):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">naiṣkarmyam apy acyuta-bhāva-varjitaṁ<br>na śobhate jñānam alaṁ nirañjanam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Knowledge of self-realization, even though freed from all material affinity, does not look well if devoid of a conception of the infallible [God].” <span class="Italic">Jñānīs</span> recommend that one adopt <span class="Italic">naiṣkarmya</span> by not doing anything but simply meditating and thinking of Brahman, but this is impossible unless one realizes Parabrahman, Kṛṣṇa. If there is no Kṛṣṇa consciousness, any kind of activity, be it philanthropic, political or social, simply causes <span class="Italic">karma-bandhana,</span> bondage to material work.
+          </p>
+          <p>
+            As long as one is entangled in <span class="Italic">karma-bandhana,</span> one must accept different types of bodies that spoil the human form of facility. Therefore, in <span class="Ref_Italic">Bhagavad-gītā</span> (6.3) <span class="Italic">karma-yoga</span> is recommended:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ārurukṣor muner yogaṁ<br>karma kāraṇam ucyate<br>yogārūḍhasya tasyaiva<br>śamaḥ kāraṇam ucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “For one who is a neophyte in the <span class="Italic">yoga</span> system, work is said to be the means; and for one who has already attained to <span class="Italic">yoga,</span> cessation of all material activities is said to be the means.” Nonetheless:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">karmendriyāṇi saṁyamya<br>ya āste manasā smaran<br>indriyārthān vimūḍhātmā<br>mithyācāraḥ sa ucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who restrains the senses and organs of action, but whose mind dwells on sense objects, certainly deludes himself and is called a pretender.” (Bg. 3.6) One should act for Kṛṣṇa very seriously in order to become fully Kṛṣṇa conscious and should not sit down to imitate such great personalities as Haridāsa Ṭhākura. Śrīla Bhaktisiddhānta Sarasvatī Ṭhākura condemned such imitation. Me said:
+          </p>
+          <p>
+            <blockquote><div class="Centered-Verse-in-purp">duṣṭa mana! tumi kisera vaiṣṇava?<br>pratiṣṭhāra tare, nirjanera ghare,<br>tava hari-nāma kevala kaitava</div></blockquote>
+          </p>
+          <p>
+            “My dear mind, what kind of devotee are you? Simply for cheap adoration, you sit in a solitary place and pretend to chant the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> but this is all cheating.” Recently at Māyāpur an African devotee wanted to imitate Haridāsa Ṭhākura, but after fifteen days he became restless and went away. Do not suddenly try to imitate Haridāsa Ṭhākura. Engage yourself in Kṛṣṇa conscious activities, and gradually you will come to the stage of liberation (<span class="Italic">muktir hitvānyathā rūpaṁ svarūpeṇa vyavasthitiḥ</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">401</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is full in opulence by His own gain, yet He acts as the creator, maintainer and annihilator of this material world. In spite of acting in that way, He is never entangled. Hence devotees who follow in His footsteps are also never entangled.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (3.9), <span class="Italic">yajñārthāt karmaṇo ’nyatra loko ’yaṁ karma-bandhanaḥ:</span> “work done as a sacrifice for Viṣṇu has to be performed, otherwise work binds one to this material world.” If we do not act in Kṛṣṇa consciousness we shall be entangled, like silkworms in cocoons. The Supreme Personality of Godhead, Kṛṣṇa, appears in order to teach us how to work so that we will not be entangled in this material world. Our real problem is that we are entangled in materialistic activities, and because we are conditioned, our struggle continues through punishment in material existence in one body after another in different forms of life. As the Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (15.7):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mamaivāṁśo jīva-loke<br>jīva-bhūtaḥ sanātanaḥ<br>manaḥ ṣaṣṭhānīndriyāṇi<br>prakṛti-sthāni karṣati</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The living entities in this conditioned world are My eternal, fragmental parts. Due to conditioned life, they are struggling very hard with the six senses, which include the mind.” The living entities are actually minute forms who are part and parcel of the Supreme Lord. The Supreme Lord is full in everything, and the small particles of the Lord are also originally qualified like Him, but because of their minute existence, they are infected by material attraction and thus entangled. We must therefore follow the instructions of the Supreme Personality of Godhead, and then, like Kṛṣṇa, who is never entangled by His material activities of creation, maintenance and annihilation, we will have nothing for which to lament (<span class="Italic">nāvasīdanti ye ’nu tam</span>). Kṛṣṇa personally gives instructions in <span class="Italic">Bhagavad-gītā,</span> and anyone who follows these instructions is liberated.
+          </p>
+          <p>
+            Following Kṛṣṇa’s instructions is possible when one is a devotee, for Kṛṣṇa instructs that one should become a devotee. <span class="Italic">Man-manā bhava mad-bhakto mad-yājī māṁ namaskuru:</span> “Always think of Me and become My devotee. Worship Me and offer your homage unto Me.” (Bg. 18.65) Always thinking of Kṛṣṇa means chanting the Hare Kṛṣṇa <span class="Italic">mantra,</span> but unless one is an initiated devotee he cannot do this. As soon as one becomes a devotee, he engages in Deity worship (<span class="Italic">mad-yājī</span>). A devotee’s business is to offer obeisances to the Lord and the spiritual master constantly. This principle is the recognized way to come to the platform of <span class="Italic">bhakti.</span> As soon as one comes to this platform, he gradually understands the Supreme Personality of Godhead, and simply by understanding Kṛṣṇa one is liberated from material bondage.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">593</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, Kṛṣṇa, works just like an ordinary human being, yet He does not desire to enjoy the fruits of work. He is full in knowledge, free from material desires and diversions, and completely independent. As the supreme teacher of human society, He teaches His own way of activities, and thus He inaugurates the real path of religion. I request everyone to follow Him.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            This is the sum and substance of our Kṛṣṇa consciousness movement. We are simply requesting human society to follow in the footsteps of the teacher of <span class="Italic">Bhagavad-gītā.</span> Follow the instructions of <span class="Italic">Bhagavad-gītā As It Is,</span> and your life will be successful. That is the summary of the Kṛṣṇa consciousness movement. The organizer of the Kṛṣṇa consciousness movement is teaching everyone how to follow Lord Rāmacandra, how to follow Lord Kṛṣṇa, and how to follow Śrī Caitanya Mahāprabhu. In this material world, we need a leader for a monarchy or good government. Lord Śrī Rāmacandra, by His practical example, showed how to live for the benefit of all human society. He fought with demons like Rāvaṇa, He carried out the orders of His father, and He remained the faithful husband of mother Sītā. Thus there is no comparison to Lord Rāmacandra’s acting as an ideal king. Indeed, people still hanker for <span class="Italic">rāma-rājya,</span> a government conducted like that of Lord Rāmacandra. Similarly, although Lord Kṛṣṇa is the Supreme Personality of Godhead, He taught His disciple and devotee Arjuna how to lead a life ending in going back home, back to Godhead (<span class="Italic">tyaktvā dehaṁ punar janma naiti mām eti so ’rjuna [Bg. </span>4.9]). All teachings—political, economic, social, religious, cultural and philosophical—are to be found in <span class="Italic">Bhagavad-gītā.</span> One only has to follow them strictly. The Supreme Personality of Godhead also comes as Lord Caitanya just to play the part of a pure devotee. Thus the Lord teaches us in different ways just to make our lives successful, and Svāyambhuva Manu requests us to follow Him.
+          </p>
+          <p>
+            Svāyambhuva Manu is the leader of mankind, and he has given a book called <span class="Italic">Manu-saṁhitā</span> to guide human society. Herein he directs us to follow the Supreme Personality of Godhead in His different incarnations. These incarnations are described in Vedic literature, and Jayadeva Gosvāmī has described ten important incarnations in summary (<span class="Italic">keśava dhṛta-mīna-śarīra jaya jagad-īśa hare, keśava dhṛta-nara-hari-rūpa jaya jagad-īśa hare, keśava dhṛta-buddha-śarīra jaya jagad-īśa hare,</span> etc.). Svāyambhuva Manu instructs us to follow the instructions of God’s incarnations, especially Kṛṣṇa’s instructions of <span class="Italic">Bhagavad-gītā As It Is.</span>
+          </p>
+          <p>
+            Appreciating <span class="Italic">bhakti-mārga</span> as instructed by Śrī Caitanya Mahāprabhu, Sārvabhauma Bhaṭṭācārya thus depicted the activities of Śrī Caitanya Mahāprabhu:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vairāgya-vidyā-nija-bhakti-yoga-<br>śikṣārtham ekaḥ puruṣaḥ purāṇaḥ<br>śrī-kṛṣṇa-caitanya-śarīra-dhārī<br>kṛpāmbudhir yas tam ahaṁ prapadye<br> [Cc. Madya 6.254]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Let me take shelter of the Supreme Personality of Godhead, Śrī Kṛṣṇa, who has descended in the form of Lord Caitanya Mahāprabhu to teach us real knowledge, His devotional service, and detachment from whatever does not foster Kṛṣṇa consciousness. He has descended because He is an ocean of transcendental mercy. Let me surrender unto His lotus feet.” (<span class="Ref_Italic">Caitanya-candrodaya-nāṭaka</span> 6.74) In this age of Kali, people cannot follow the instructions of the Supreme Personality of Godhead, and therefore the Lord Himself takes the part of Śrī Kṛṣṇa Caitanya to teach personally how to become Kṛṣṇa conscious. He asks everyone to follow Him and to become a <span class="Italic">guru</span> to deliver the fallen souls of Kali-yuga.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yāre dekha, tāre kaha ‘kṛṣṇa’-upadeśa<br>āmāra ājñāya guru hañā tāra’ ei deśa</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Instruct everyone to follow the orders of Lord Śrī Kṛṣṇa as they are given in <span class="Italic">Bhagavad-gītā</span> and <span class="Italic">Śrīmad-Bhāgavatam.</span> In this way become a spiritual master and try to liberate everyone in this land.” (Cc. <span class="Ref_Italic">Madhya</span> 7.128) The coherent purpose of Lord Rāmacandra, Lord Kṛṣṇa and Lord Caitanya Mahāprabhu is to teach human society how to be happy by following the instructions of the Supreme Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: Svāyambhuva Manu was thus in a trance, chanting the mantras of Vedic instruction known as the Upaniṣads. Upon seeing him, the Rākṣasas and asuras, being very hungry, wanted to devour him. Therefore they ran after him with great speed.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">46</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Lord, Viṣṇu, who sits in everyone’s heart, appearing as Yajñapati, observed that the Rākṣasas and demons were going to devour Svāyambhuva Manu. Thus the Lord, accompanied by His sons named the Yāmas and by all the other demigods, killed the demons and Rākṣasas. He then took the post of Indra and began to rule the heavenly kingdom.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            The various names of the demigods—Lord Brahmā, Lord Śiva, Lord Indra and so on—are not personal names; they are names of different posts. In this regard, we understand that Lord Viṣṇu sometimes becomes Brahmā or Indra when there is no suitable person to occupy these posts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">121</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The son of Agni named Svārociṣa became the second Manu. His several sons were headed by Dyumat, Suṣeṇa and Rociṣmat.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">manvantaraṁ manur devā<br>manu-putrāḥ sureśvaraḥ<br>ṛṣayo ’ṁśāvatāraś ca<br>hareḥ ṣaḍ vidham ucyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            There are many incarnations of the Supreme Personality of Godhead. Manu, the <span class="Italic">manu-putrāḥ</span> (the sons of Manu), the king of the heavenly planets, and the seven great sages are all partial incarnations of the Supreme Lord. Manu himself, his sons Priyavrata and Uttānapāda, the demigods created by Dakṣa, and the <span class="Italic">ṛṣis</span> like Marīci were all partial incarnations of the Lord during the reign of Svāyambhuva Manu. During that time, the incarnation of the Lord as Yajña took charge of ruling the heavenly planets. The next Manu was Svārociṣa. The Manus and the sages and demigods are further described in the following eleven verses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            During the reign of Svārociṣa, the post of Indra was assumed by Rocana, the son of Yajña. Tuṣita and others became the principal demigods, and Ūrja, Stambha and others became the seven saints. All of them were faithful devotees of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vedaśirā was a very celebrated ṛṣi. From the womb of his wife, whose name was Tuṣitā, came the avatāra named Vibhu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Vibhu remained a brahmacāri and never married throughout his life. From him, eighty-eight thousand other saintly persons took lessons on self-control, austerity and similar behavior.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, the third Manu, Uttama, was the son of King Priyavrata. Among the sons of this Manu were Pavana, Sṛñjaya and Yajñahotra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            During the reign of the third Manu, Pramada and other sons of Vasiṣṭha became the seven sages. The Satyas, Vedaśrutas and Bhadras became demigods, and Satyajit was selected to be Indra, the King of heaven.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In this manvantara, the Supreme Personality of Godhead appeared from the womb of Sūnṛtā, who was the wife of Dharma, the demigod in charge of religion. The Lord was celebrated as Satyasena, and He appeared with other demigods, known as the Satyavratas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Satyasena, along with His friend Satyajit, who was the King of heaven, Indra, killed all the untruthful, impious and misbehaved Yakṣas, Rākṣasas and ghostly living entities, who gave pains to other living beings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The brother of the third Manu, Uttama, was celebrated by the name Tāmasa, and he became the fourth Manu. Tāmasa had ten sons, headed by Pṛthu, Khyāti, Nara and Ketu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            During the reign of Tāmasa Manu, among the demigods were the Satyakas, Haris and Vīras. The heavenly King, Indra, was Triśikha. The sages in saptarṣi-dhāma were headed by Jyotirdhāma.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">113</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, in the Tāmasa manvantara the sons of Vidhṛti, who were known as the Vaidhṛtis, also became demigods. Since in course of time the Vedic authority was lost, these demigods, by their own powers, protected the Vedic authority.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            In the Tāmasa <span class="Italic">manvantara</span> there were two kinds of demigods, and one of them was known as the Vaidhṛtis. The duty of the demigods is to protect the authority of the <span class="Italic">Vedas.</span> The word <span class="Italic">devatā</span> refers to one who carries the authority of the <span class="Italic">Vedas,</span> whereas Rākṣasas are those who defy the Vedic authority. If the authority of the <span class="Italic">Vedas</span> is lost, the entire universe becomes chaotic. Therefore, it is the duty of the demigods, as well as kings and aides of governments, to give full protection to the Vedic authority; otherwise human society will be in a chaotic condition in which there cannot be peace or prosperity.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Also in this manvantara, the Supreme Lord, Viṣṇu, took birth from the womb of Hariṇī, the wife of Harimedhā, and He was known as Hari. Hari saved His devotee Gajendra, the King of the elephants, from the mouth of a crocodile.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit said: My lord, Bādarāyaṇi, we wish to hear from you in detail how the King of the elephants, when attacked by a crocodile, was delivered by Hari.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">100</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Any literature or narration in which the Supreme Personality of Godhead, Uttamaśloka, is described and glorified is certainly great, pure, glorious, auspicious and all good.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            The Kṛṣṇa consciousness movement is spreading all over the world simply by describing Kṛṣṇa. We have published many books, including <span class="Italic">Śrī Caitanya-caritāmṛta</span> in seventeen volumes, four hundred pages each, as well as <span class="Italic">Bhagavad-gītā</span> and <span class="Italic">The Nectar of Devotion.</span> We are also publishing <span class="Italic">Śrīmad-Bhāgavatam</span> in sixty volumes. Wherever a speaker holds discourses from these books and an audience hears him, this will create a good and auspicious situation. Therefore the preaching of Kṛṣṇa consciousness must be done very carefully by the members of the Kṛṣṇa consciousness movement, especially the <span class="Italic">sannyāsīs.</span> This will create an auspicious atmosphere.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Sūta Gosvāmī said: O brāhmaṇas, when Parīkṣit Mahārāja, who was awaiting impending death, thus requested Śukadeva Gosvāmī to speak, Śukadeva Gosvāmī, encouraged by the King’s words, offered respect to the King and spoke with great pleasure in the assembly of sages, who desired to hear him.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Eighth Canto, First Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Manus, Administrators of the Universe.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/1">https://prabhupadabooks.com/sb/8/1</a><!-- span.text_source_copied_date
+        | on 2024-09-29 21:26:43 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 7.15: Instructions for Civilized Human Beings     Next: SB 8.2: The Elephant Gajendra's Crisis</div>
+      </p>
+    </div>
+  </body>
+</html>
