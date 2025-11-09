@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 9.1, King Sudyumna Becomes a Woman</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 9:<br>
+        “Liberation”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter One:<br>King Sudyumna Becomes a Woman
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter describes how Sudyumna became a woman and how the dynasty of Vaivasvata Manu was amalgamated with the Soma-vaṁśa, the dynasty coming from the moon.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">By the desire of Mahārāja Parīkṣit, Śukadeva Gosvāmī told about the dynasty of Vaivasvata Manu, who was formerly King Satyavrata, the ruler of Draviḍa. While describing this dynasty, he also described how the Supreme Personality of Godhead, while lying down in the waters of devastation, gave birth to Lord Brahmā from a lotus generated from His navel. From the mind of Lord Brahmā, Marīci was generated, and his son was Kaśyapa. From Kaśyapa, through Aditi, Vivasvān was generated, and from Vivasvān came Śrāddhadeva Manu, who was born from the womb of Saṁjñā. Śrāddhadeva’s wife, Śraddhā, gave birth to ten sons, such as Ikṣvāku and Nṛga.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Śrāddhadeva, or Vaivasvata Manu, the father of Mahārāja Ikṣvāku, was sonless before Ikṣvāku’s birth, but by the grace of the great sage Vasiṣṭha he performed a <span class="Italic">yajña</span> to satisfy Mitra and Varuṇa. Then, although Vaivasvata Manu wanted a son, by the desire of his wife he got a daughter named Ilā. Manu, however, was not satisfied with the daughter. Consequently, for Manu’s satisfaction, the great sage Vasiṣṭha prayed for Ilā to be transformed into a boy, and his prayer was fulfilled by the Supreme Personality of Godhead. Thus Ilā became a beautiful young man named Sudyumna.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Once upon a time, Sudyumna went on tour with his ministers. At the foot of the mountain Sumeru there is a forest named Sukumāra, and as soon as they entered that forest, they were all transformed into women. When Mahārāja Parīkṣit inquired from Śukadeva Gosvāmī about the reason for this transformation, Śukadeva Gosvāmī described how Sudyumna, being transformed into a woman, accepted Budha, the son of the moon, as her husband and had a son named Purūravā. By the grace of Lord Śiva, Sudyumna received the benediction that he would live one month as a woman and one month as a man. Thus he regained his kingdom and had three sons, named Utkala, Gaya and Vimala, who were all very religious. Thereafter, he entrusted his kingdom to Purūravā and took the order of <span class="Italic">vānaprastha</span> life.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            King Parīkṣit said: My lord, Śukadeva Gosvāmī, you have elaborately described all the periods of the various Manus and, within those periods, the wonderful activities of the Supreme Personality of Godhead, who has unlimited potency. I am fortunate to have heard all of this from you.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2–3.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Satyavrata, the saintly king of Draviḍadeśa who received spiritual knowledge at the end of the last millennium by the grace of the Supreme, later became Vaivasvata Manu, the son of Vivasvān, in the next manvantara [period of Manu]. I have received this knowledge from you. I also understand that such kings as Ikṣvāku were his sons, as you have already explained.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O greatly fortunate Śukadeva Gosvāmī, O great brāhmaṇa, kindly describe to us separately the dynasties and characteristics of all those kings, for we are always eager to hear such topics from you.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Kindly tell us about the abilities of all the celebrated kings born in the dynasty of Vaivasvata Manu, including those who have already passed, those who may appear in the future, and those who exist at present.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sūta Gosvāmī said: When Śukadeva Gosvāmī, the greatest knower of religious principles, was thus requested by Mahārāja Parīkṣit in the assembly of all the scholars learned in Vedic knowledge, he then proceeded to speak.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: O King, subduer of your enemies, now hear from me in great detail about the dynasty of Manu. I shall explain as much as possible, although one could not say everything about it, even in hundreds of years.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">48</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The transcendental Supreme Person, the Supersoul of all living entities, who are in different statuses of life, high and low, existed at the end of the millennium, when neither this manifested cosmos nor anything else but Him existed.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Taking the proper position from which to describe the dynasty of Manu, Śukadeva Gosvāmī begins by saying that when the entire world is inundated, only the Supreme Personality of Godhead exists, and nothing else. Śukadeva Gosvāmī will now describe how the Lord creates other things, one after another.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, from the navel of the Supreme Personality of Godhead was generated a golden lotus, on which the four-faced Lord Brahmā took his birth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            From the mind of Lord Brahmā, Marīci took birth, and from the semen of Marīci, Kaśyapa appeared from the womb of the daughter of Dakṣa Mahārāja. From Kaśyapa, by the womb of Aditi, Vivasvān took birth.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11–12.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, best of the Bhārata dynasty, from Vivasvān, by the womb of Saṁjñā, Śrāddhadeva Manu was born. Śrāddhadeva Manu, having conquered his senses, begot ten sons in the womb of his wife, Śraddhā. The names of these sons were Ikṣvāku, Nṛga, Śaryāti, Diṣṭa, Dhṛṣṭa, Karūṣaka, Nariṣyanta, Pṛṣadhra, Nabhaga and Kavi.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Manu at first had no sons. Therefore, in order to get a son for him, the great saint Vasiṣṭha, who was very powerful in spiritual knowledge, performed a sacrifice to satisfy the demigods Mitra and Varuṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            During that sacrifice, Śraddhā, Manu’s wife, who was observing the vow of subsisting only by drinking milk, approached the priest offering the sacrifice, offered obeisances to him and begged for a daughter.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Told by the chief priest “Now offer oblations,” the person in charge of oblations took clarified butter to offer. He then remembered the request of Manu’s wife and performed the sacrifice while chanting the word “vaṣaṭ.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">59</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Manu had begun that sacrifice for the sake of getting a son, but because the priest was diverted by the request of Manu’s wife, a daughter named Ilā was born. Upon seeing the daughter, Manu was not very satisfied. Thus he spoke to his guru, Vasiṣṭha, as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Because Manu had no issue, he was pleased at the birth of the child, even though a daughter, and gave her the name Ilā. Later, however, he was not very satisfied to see the daughter instead of a son. Because he had no issue, he was certainly very glad at the birth of Ilā, but his pleasure was temporary.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_17_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">443</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My lord, all of you are expert in chanting the Vedic mantras. How then has the result been opposite to the one desired? This is a matter for lamentation. There should not have been such a reversal of the results of the Vedic mantras.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_17_purport">
+          <p>
+            In this age, the performance of <span class="Italic">yajña</span> has been forbidden because no one can properly chant the Vedic <span class="Italic">mantras.</span> If Vedic <span class="Italic">mantras</span> are chanted properly, the desire for which a sacrifice is performed must be successful. Therefore the Hare Kṛṣṇa chant is called the <span class="Italic">mahā-mantra,</span> the great, exalted <span class="Italic">mantra</span> above all other Vedic <span class="Italic">mantras,</span> because simply chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> brings so many beneficial effects. As explained by Śrī Caitanya Mahāprabhu (<span class="Ref_Italic">Śikṣāṣṭaka</span> 1):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ceto-darpaṇa-mārjanaṁ bhava-mahā-dāvāgni-nirvāpaṇaṁ<br>śreyaḥ-kairava-candrikā-vitaraṇaṁ vidyā-vadhū-jīvanam<br>ānandāmbudhi-vardhanaṁ prati-padaṁ pūrṇāmṛtāsvādanaṁ<br>sarvātma-snapanaṁ paraṁ vijayate śrī-kṛṣṇa-saṅkīrtanam<br><span class="Italic"> [Cc. Antya 20.12]</span>
+            </div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Glory to the Śrī Kṛṣṇa <span class="Italic">saṅkīrtana,</span> which cleanses the heart of all the dust accumulated for years and extinguishes the fire of conditional life, of repeated birth and death. This <span class="Italic">saṅkīrtana</span> movement is the prime benediction for humanity at large because it spreads the rays of the benediction moon. It is the life of all transcendental knowledge. It increases the ocean of transcendental bliss, and it enables us to fully taste the nectar for which we are always anxious.”
+          </p>
+          <p>
+            Therefore, the best performance of <span class="Italic">yajña</span> given to us is the <span class="Italic">saṅkīrtana-yajña.</span> <span class="Italic">Yajñaiḥ saṅkīrtana-prāyair yajanti hi sumedhasaḥ</span> (<span class="Ref_Italic">Bhāg.</span> 11.5.32). Those who are intelligent take advantage of the greatest <span class="Italic">yajña</span> in this age by chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> in congregation. When the Hare Kṛṣṇa <span class="Italic">mantra</span> is chanted by many men together, the chanting is called <span class="Italic">saṅkīrtana,</span> and as a result of such a <span class="Italic">yajña</span> there will be clouds in the sky (<span class="Italic">yajñād bhavati parjanyaḥ [Bg. </span>3.14]). In these days of drought, people can gain relief from scarcity of rain and food by the simple method of the Hare Kṛṣṇa <span class="Italic">yajña.</span> Indeed, this can relieve all of human society. At present there are droughts throughout Europe and America, and people are suffering, but if people take this Kṛṣṇa consciousness movement seriously, if they stop their sinful activities and chant the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> all their problems will be solved without difficulty. In other processes of <span class="Italic">yajña</span> there are difficulties because there are no learned scholars who can chant the <span class="Italic">mantras</span> perfectly well, nor is it possible to secure the ingredients to perform the <span class="Italic">yajña.</span> Because human society is poverty-stricken and men are devoid of Vedic knowledge and the power to chant the Vedic <span class="Italic">mantras,</span> the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> is the only shelter. people should be intelligent enough to chant it. <span class="Italic">Yajñaiḥ saṅkīrtana-prāyair yajanti hi sumedhasaḥ</span> [SB 11.5.32]<span class="Italic">.</span> Those whose brains are dull cannot understand this chanting, nor can they take to it.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">60</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            You are all self-controlled, well balanced in mind, and aware of the Absolute Truth. And because of austerities and penances you are completely cleansed of all material contamination. Your words, like those of the demigods, are never baffled. Then how is it possible that your determination has failed?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            We have learned from many Vedic literatures that a benediction or curse given by the demigods never proves false. By performing austerities and penances, by controlling the senses and mind, and by achieving full knowledge of the Absolute Truth, one is fully cleansed of material contamination. Then one’s words and blessings, like those of the demigods, are never a failure.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The most powerful great-grandfather Vasiṣṭha, after hearing these words of Manu, understood the discrepancy on the part of the priest. Thus he spoke as follows to the son of the sun-god.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            This discrepancy in the objective is due to your priest’s deviation from the original purpose. However, by my own prowess I shall give you a good son.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: O King Parīkṣit, after the most famous and powerful Vasiṣṭha made this decision, he offered prayers to the Supreme Person, Viṣṇu, to transform Ilā into a male.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, the supreme controller, being pleased with Vasiṣṭha, gave him the benediction he desired. Thus Ilā was transformed into a very fine male named Sudyumna.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23–24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, that hero Sudyumna, accompanied by a few ministers and associates and riding on a horse brought from Sindhupradeśa, once went into the forest to hunt. He wore armor and was decorated with bows and arrows, and he was very beautiful. While following the animals and killing them, he reached the northern part of the forest.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There in the north, at the bottom of Mount Meru, is a forest known as Sukumāra where Lord Śiva always enjoys with Umā. Sudyumna entered that forest.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, as soon as Sudyumna, who was expert in subduing enemies, entered the forest, he saw himself transformed into a female and his horse transformed into a mare.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When his followers also saw their identities transformed and their sex reversed, they were all very morose and just looked at one another.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Parīkṣit said: O most powerful brāhmaṇa, why was this place so empowered, and who made it so powerful? Kindly answer this question, for I am very eager to hear about this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī answered: Great saintly persons who strictly observed the spiritual rules and regulations and whose own effulgence dissipated all the darkness of all directions once came to see Lord Śiva in that forest.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When the goddess Ambikā saw the great saintly persons, she was very much ashamed because at that time she was naked. She immediately got up from the lap of her husband and tried to cover her breast.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Seeing Lord Śiva and Pārvatī engaged in sexual affairs, all the great saintly persons immediately desisted from going further and departed for the āśrama of Nara-Nārāyaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereupon, just to please his wife, Lord Śiva said, “Any male entering this place shall immediately become a female!”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_33_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">203</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Since that time, no male had entered that forest. But now King Sudyumna, having been transformed into a female, began to walk with his associates from one forest to another.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_33_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (2.22) it is said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">vāsāṁsi jīrṇāni yathā vihāya<br>navāni gṛhṇāti naro ’parāṇi<br>tathā sarīrāṇi vihāya jīrṇāny<br>anyāni saṁyāti navāni dehī</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “As a person puts on new garments, giving up old ones, the soul accepts new material bodies, giving up the old and useless ones.”
+          </p>
+          <p>
+            The body is just like a dress, and here this is proved. Sudyumna and his associates were all male, which means that their souls were covered by male dress, but now they became female, which means that their dress was changed. The soul, however, remains the same. It is said that by modern medical treatment a male can be transformed into a female, and a female into a male. The body, however, has no connection with the soul. The body can be changed, either in this life or the next. Therefore, one who has knowledge of the soul and how the soul transmigrates from one body to another does not pay attention to the body, which is nothing but a covering dress. <span class="Italic">Paṇḍitāḥ sama-darśinaḥ [Bg. </span>5.18]<span class="Italic">.</span> Such a person sees the soul, which is part and parcel of the Supreme Lord. Therefore he is a <span class="Italic">sama-darśi,</span> a learned person.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Sudyumna had been transformed into the best of beautiful women who excite sexual desire and was surrounded by other women. Upon seeing this beautiful woman loitering near his āśrama, Budha, the son of the moon, immediately desired to enjoy her.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The beautiful woman also desired to accept Budha, the son of the king of the moon, as her husband. Thus Budha begot in her womb a son named Purūravā.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I heard from reliable sources that King Sudyumna, the son of Manu, having thus achieved femininity, remembered his familial spiritual master, Vasiṣṭha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon seeing Sudyumna’s deplorable condition, Vasiṣṭha was very much aggrieved. Desiring for Sudyumna to regain his maleness, Vasiṣṭha again began to worship Lord Śaṅkara [Śiva].
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38–39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">136</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, Lord Śiva was pleased with Vasiṣṭha. Therefore, to satisfy him and to keep his own word to Pārvatī, Lord Śiva said to that saintly person, “Your disciple Sudyumna may remain a male for one month and a female for the next. In this way he may rule the world as he likes.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            The word <span class="Italic">gotrajaḥ</span> is significant in this connection. <span class="Italic">Brāhmaṇas</span> generally act as spiritual masters of two dynasties. One is their disciplic succession, and the other is the dynasty born of their semen. Both descendants belong to the same <span class="Italic">gotra,</span> or dynasty. In the Vedic system we sometimes find that both <span class="Italic">brāhmaṇas</span> and <span class="Italic">kṣatriyas</span> and even <span class="Italic">vaiśyas</span> come in the disciplic succession of the same <span class="Italic">ṛṣis.</span> Because the <span class="Italic">gotra</span> and dynasty are one, there is no difference between the disciples and the family born of the semen. The same system still prevails in Indian society, especially in regard to marriage, for which the <span class="Italic">gotra</span> is calculated. Here the word <span class="Italic">gotrajaḥ</span> refers to those born in the same dynasty, whether they be disciples or members of the family.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="40">
+        <div class="verse_controls">
+          <button class="verse_num btn">[40.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_40_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">29</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thus being favored by the spiritual master, according to the words of Lord Śiva, Sudyumna regained his desired maleness every alternate month and in this way ruled the kingdom, although the citizens were not satisfied with this.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_40_purport">
+          <p>
+            The citizens could understand that the king was transformed into a female every alternate month and therefore could not discharge his royal duty. Consequently they were not very satisfied.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, Sudyumna had three very pious sons, named Utkala, Gaya and Vimala, who became the kings of the Dakṣiṇā-patha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_42_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">55</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, when the time was ripe, when Sudyumna, the king of the world, was sufficiently old, he delivered the entire kingdom to his son Purūravā and entered the forest.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_42_purport">
+          <p>
+            According to the Vedic system, one within the institution of <span class="Italic">varṇa</span> and <span class="Italic">āśrama</span> must leave his family life after he reaches fifty years of age (<span class="Italic">pañcāśad ūrdhvaṁ vanaṁ vrajet</span>). Thus Sudyumna followed the prescribed regulations of <span class="Italic">varṇāśrama</span> by leaving the kingdom and going to the forest to complete his spiritual life.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Ninth Canto, First Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “King Sudyumna Becomes a Woman.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/9/1">https://prabhupadabooks.com/sb/9/1</a><!-- span.text_source_copied_date
+        | on 2025-06-01 21:35:59 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.24: Matsya, the Lord's Fish Incarnation     Next: SB 9.2: The Dynasties of the Sons of Manu</div>
+      </p>
+    </div>
+  </body>
+</html>

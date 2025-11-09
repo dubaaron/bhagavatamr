@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.20, Bali Mahārāja Surrenders the Universe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Twenty:<br>Bali Mahārāja Surrenders the Universe
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">The summary of this Twentieth Chapter is as follows. Despite his knowledge that Lord Vāmanadeva was cheating him, Bali Mahārāja gave everything to the Lord in charity, and thus the Lord extended His body and assumed a gigantic form as Lord Viṣṇu.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">After hearing the instructive advice of Śukrācārya, Bali Mahārāja became contemplative. Because it is the duty of a householder to maintain the principles of religion, economic development and sense gratification, Bali Mahārāja thought it improper to withdraw his promise to the <span class="Italic">brahmacārī.</span> To lie or fail to honor a promise given to a <span class="Italic">brahmacārī</span> is never proper, for lying is the most sinful activity. Everyone should be afraid of the sinful reactions to lying, for mother earth cannot even bear the weight of a sinful liar. The spreading of a kingdom or empire is temporary; if there is no benefit for the general public, such expansion has no value. Previously, all the great kings and emperors expanded their kingdoms with a regard for the welfare of the people in general. Indeed, while engaged in such activities for the benefit of the general public, eminent men sometimes even sacrificed their lives. It is said that one who is glorious in his activities is always living and never dies. Therefore, fame should be the aim of life, and even if one becomes poverty-stricken for the sake of a good reputation, that is not a loss. Bali Mahārāja thought that even if this <span class="Italic">brahmacārī,</span> Vāmanadeva, were Lord Viṣṇu, if the Lord accepted his charity and then again arrested him, Bali Mahārāja would not envy Him. Considering all these points, Bali Mahārāja finally gave in charity everything he possessed.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Lord Vāmanadeva then immediately extended Himself into a universal body. By the mercy of Lord Vāmanadeva, Bali Mahārāja could see that the Lord is all-pervading and that everything rests in His body. Bali Mahārāja could see Lord Vāmanadeva as the supreme Viṣṇu, wearing a helmet, yellow garments, the mark of Śrīvatsa, the Kaustubha jewel, a flower garland, and ornaments decorating His entire body. The Lord gradually covered the entire surface of the world, and by extending His body He covered the entire sky. With His hands He covered all directions, and with His second footstep He covered the entire upper planetary system. Therefore there was no vacant place where He could take His third footstep.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_1_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">458</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: O King Parīkṣit, when Bali Mahārāja was thus advised by his spiritual master, Śukrācārya, his family priest, he remained silent for some time, and then, after full deliberation, he replied to his spiritual master as follows.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_1_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura remarks that Bali Mahārāja remained silent at a critical point. How could he disobey the instruction of Śukrācārya, his spiritual master? It is the duty of such a sober personality as Bali Mahārāja to abide by the orders of his spiritual master immediately, as his spiritual master had advised. But Bali Mahārāja also considered that Śukrācārya was no longer to be accepted as a spiritual master, for he had deviated from the duty of a spiritual master. According to <span class="Italic">śāstra,</span> the duty of the <span class="Italic">guru</span> is to take the disciple back home, back to Godhead. If he is unable to do so and instead hinders the disciple in going back to Godhead, he should not be a <span class="Italic">guru.</span> <span class="Italic">Gurur na sa syāt</span> (<span class="Ref_Italic">Bhāg.</span> 5.5.18). One should not become a <span class="Italic">guru</span> if he cannot enable his disciple to advance in Kṛṣṇa consciousness. The goal of life is to become a devotee of Lord Kṛṣṇa so that one may be freed from the bondage of material existence (<span class="Italic">tyaktvā dehaṁ punar janma naiti mam eti so ’rjuna [Bg. </span>4.9]). The spiritual master helps the disciple attain this stage by developing Kṛṣṇa consciousness. Now Śukrācārya has advised Bali Mahārāja to deny the promise to Vāmanadeva. Under the circumstances, therefore, Bali Mahārāja thought that there would be no fault if he disobeyed the order of his spiritual master. He deliberated on this point—should he refuse to accept the advise of his spiritual master, or should he independently do everything to please the Supreme Personality of Godhead? He took some time. Therefore it is said, <span class="Italic">tūṣṇīṁ bhūtvā kṣaṇaṁ rajann uvācāvahito gurum.</span> After deliberating on this point, he decided that Lord Viṣṇu should be pleased in all circumstances, even at the risk of ignoring the guru’s advice to the contrary.
+          </p>
+          <p>
+            Anyone who is supposed to be a <span class="Italic">guru</span> but who goes against the principle of <span class="Italic">viṣṇu-bhakti</span> cannot be accepted as <span class="Italic">guru.</span> If one has falsely accepted such a <span class="Italic">guru,</span> one should reject him. Such a <span class="Italic">guru</span> is described as follows (<span class="Ref_Italic">Mahābhārata, Udyoga</span> 179.25):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">guror apy avaliptasya<br>kāryākāryam ajānataḥ<br>utpatha-pratipannasya<br>parityāgo vidhīyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Śrīla Jīva Gosvāmī has advised that such a useless <span class="Italic">guru,</span> a family priest acting as <span class="Italic">guru,</span> should be given up, and that the proper, bona-fide <span class="Italic">guru</span> should be accepted.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ṣaṭ-karma-nipuṇo vipro<br>mantra-tantra-viśāradaḥ<br>avaiṣṇavo gurur na syād<br>vaiṣṇavaḥ śvapaco guruḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “A scholarly <span class="Italic">brāhmaṇa</span> expert in all subjects of Vedic knowledge is unfit to become a spiritual master without being a Vaiṣṇava, but if a person born in a family of a lower caste is a Vaiṣṇava, he can become a spiritual master.” (<span class="Italic">Padma Purāṇa</span>)
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">240</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bali Mahārāja said: As you have already stated, the principle of religion that does not hinder one’s economic development, sense gratification, fame and means of livelihood is the real occupational duty of the householder. I also think that this religious principle is correct.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            Bali Mahārāja’s grave answer to Śukrācārya is meaningful. Śukrācārya stressed that one’s material means of livelihood and one’s material reputation, sense gratification and economic development must continue properly. To see to this is the first duty of a man who is a householder, especially one who is interested in material affairs. If a religious principle does not affect one’s material condition, it is to be accepted. At the present time, in this age of Kali, this idea is extremely prominent. No one is prepared to accept any religious principle if it hampers material prosperity. Śukrācārya, being a person of this material world, did not know the principles of a devotee. A devotee is determined to serve the Supreme Personality of Godhead to His full satisfaction. Anything that hampers such determination should certainly be rejected. This is the principle of <span class="Italic">bhakti.</span> <span class="Italic">Ānukūlyasya saṅkalpaḥ prātikūlyasya varjanam</span> (Cc. <span class="Ref_Italic">Madhya</span> 22.100). To perform devotional service, one must accept only that which is favorable and reject that which is unfavorable. Bali Mahārāja had the opportunity to contribute everything he possessed to the lotus feet of Lord Vāmanadeva, but Śukrācārya was putting forward a material argument to hamper this process of devotional service. Under the circumstances, Bali Mahārāja decided that such hindrances should certainly be avoided. In other words, he decided immediately to reject the advice of Śukrācārya and go on with his duty. Thus he gave all his possessions to Lord Vāmanadeva.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">361</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I am the grandson of Mahārāja Prahlāda. How can I withdraw my promise because of greed for money when I have already said that I shall give this land? How can I behave like an ordinary cheater, especially toward a brāhmaṇa?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Bali Mahārāja had already been blessed by his grandfather Prahlāda Mahārāja. Therefore, he was a pure devotee, although born in a family of demons. There are two kinds of highly elevated devotees, called <span class="Italic">sādhana-siddha</span> and <span class="Italic">kṛpā-siddha.</span> <span class="Italic">Sādhana-siddha</span> refers to one who has become a devotee by regular execution of the regulative principles mentioned in the <span class="Italic">śāstras,</span> as ordered and directed by the spiritual master. If one regularly executes such devotional service, he will certainly attain perfection in due course of time. But there are other devotees, who may not have undergone all the required details of devotional service but who, by the special mercy of <span class="Italic">guru</span> and Kṛṣṇa—the spiritual master and the Supreme Personality of Godhead—have immediately attained the perfection of pure devotional service. Examples of such devotees are the <span class="Italic">yajña-patnīs,</span> Mahārāja Bali and Śukadeva Gosvāmī. The <span class="Italic">yajña-patnīs</span> were the wives of ordinary <span class="Italic">brāhmaṇas</span> engaged in fruitive activities. Although the <span class="Italic">brāhmaṇas</span> were very learned and advanced in Vedic knowledge, they could not achieve the mercy of Kṛṣṇa-Balarāma, whereas their wives achieved complete perfection in devotional service, despite their being women. Similarly, Vairocani, Bali Mahārāja, received the mercy of Prahlāda Mahārāja, and by Prahlāda Mahārāja’s mercy he also received the mercy of Lord Viṣṇu, who appeared before him as a <span class="Italic">brahmacārī</span> beggar. Thus Bali Mahārāja became a <span class="Italic">kṛpā-siddha</span> because of the special mercy of both <span class="Italic">guru</span> and Kṛṣṇa. Caitanya Mahāprabhu confirms this favor: <span class="Italic">guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja</span> (Cc. <span class="Ref_Italic">Madhya</span> 19.151). Bali Mahārāja, by the grace of Prahlāda Mahārāja, got the seed of devotional service, and when that seed developed, he achieved the ultimate fruit of that service, namely love of Godhead (<span class="Italic">premā pum-artho mahān</span>), immediately upon the appearance of Lord Vāmanadeva. Bali Mahārāja regularly maintained devotion for the Lord, and because he was purified, the Lord appeared before him. Because of unalloyed love for the Lord, he then immediately decided, “I shall give this little dwarf <span class="Italic">brāhmaṇa</span> whatever He asks from me.” This is a sign of love. Thus Bali Mahārāja is understood to be one who received the highest perfection of devotional service by special mercy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">101</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            There is nothing more sinful than untruthfulness. Because of this, mother earth once said, “I can bear any heavy thing except a person who is a liar.”
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            On the surface of the earth there are many great mountains and oceans that are very heavy, and mother earth has no difficulty carrying them. But she feels very much overburdened when she carries even one person who is a liar. It is said that in Kali-yuga lying is a common affair: <span class="Italic">māyaiva vyāvahārike</span> (<span class="Ref_Italic">Bhāg.</span> 12.2.3). Even in the most common dealings, people are accustomed to speaking so many lies. No one is free from the sinful reactions of speaking lies. Under the circumstances, one can just imagine how this has overburdened the earth, and indeed the entire universe.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I do not fear hell, poverty, an ocean of distress, falldown from my position or even death itself as much as I fear cheating a brāhmaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">65</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My lord, you can also see that all the material opulences of this world are certainly separated from their possessor at death. Therefore, if the brāhmaṇa Vāmanadeva is not satisfied by whatever gifts one has given, why not please Him with the riches one is destined to lose at death?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            The word <span class="Italic">vipra</span> means <span class="Italic">brāhmaṇa,</span> and at the same time “confidential.” Bali Mahārāja had confidentially decided to give the gift to Lord Vāmanadeva without discussion, but because such a decision would hurt the hearts of the <span class="Italic">asuras</span> and his spiritual master, Śukrācārya, he spoke equivocally. Bali Mahārāja, as a pure devotee, had already decided to give all the land to Lord Viṣṇu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_7_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">235</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Dadhīci, Śibi and many other great personalities were willing to sacrifice even their lives for the benefit of the people in general. This is the evidence of history. So why not give up this insignificant land? What is the serious consideration against it?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_7_purport">
+          <p>
+            Bali Mahārāja was prepared to give everything to Lord Viṣṇu, and Śukrācārya, being a professional priest, might have been anxiously waiting, doubting whether there had been any such instance in history in which one had given everything in charity. Bali Mahārāja, however, cited the tangible examples of Mahārāja Śibi and Mahārāja Dadhīci, who had given up their lives for the benefit of the general public. Certainly one has attachment for everything material, especially one’s land, but land and other possessions are forcibly taken away at the time of death, as stated in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mṛtyuḥ sarva-haraś cāham</span>). The Lord personally appeared to Bali Mahārāja to take away everything he had, and thus he was so fortunate that he could see the Lord face to face. Nondevotees, however, cannot see the Lord face to face; to such persons the Lord appears as death and takes away all their possessions by force. Under the circumstances, why should we not part with our possessions and deliver them to Lord Viṣṇu for His satisfaction? Śrī Cāṇakya Paṇḍita says in this regard, <span class="Italic">san-nimitte varaṁ tyāgo vināśe niyate sati</span> (<span class="Ref_Italic">Cāṇakya-śloka</span> 36). Since our money and possessions do not last but will somehow or other be taken away, as long as they are in our possession it is better to use them for charity to a noble cause. Therefore Bali Mahārāja defied the order of his so-called spiritual master.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the brāhmaṇas, certainly the great demoniac kings who were never reluctant to fight enjoyed this world, but in due course of time everything they had was taken away, except their reputation, by which they continue to exist. In other words, one should try to achieve a good reputation instead of anything else.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            In this regard, Cāṇakya Paṇḍita (<span class="Ref_Italic">Cāṇakya-śloka</span> 34) also says, <span class="Italic">āyuṣaḥ kṣaṇa eko ’pi na labhya svarṇa-koṭibhiḥ.</span> The duration of one’s life is extremely short, but if in that short lifetime one can do something that enhances his good reputation, that may continue to exist for many millions of years. Bali Mahārāja therefore decided not to follow his spiritual master’s instruction that he deny his promise to Vāmanadeva; instead, he decided to give the land according to the promise and be everlastingly celebrated as one of the twelve <span class="Italic">mahājanas</span> (<span class="Italic">balir vaiyāsakir vayam</span>).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">192</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of the brāhmaṇas, many men have laid down their lives on the battlefield, being unafraid of fighting, but rarely has one gotten the chance to give his accumulated wealth faithfully to a saintly person who creates holy places.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Many <span class="Italic">kṣatriyas</span> have laid down their lives on the battlefield for their nations, but hardly a person can be found who has given up all his property and his accumulated wealth in charity to a person worthy of the gift. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (17.20):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">dātavyam iti yad dānaṁ<br>dīyate ’nupakāriṇe<br>deśe kāle ca pātre ca<br>tad dānaṁ sāttvikaṁ smṛtam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “That gift which is given out of duty, at the proper time and place, to a worthy person, and without expectation of return is considered to be charity in the mode of goodness.” Thus charity given in the proper place is called <span class="Italic">sāttvika.</span> And above this charity in goodness is transcendental charity, in which everything is sacrificed for the sake of the Supreme Personality of Godhead. Vāmanadeva, the Supreme Personality of Godhead, had come to Bali Mahārāja for alms. How could one get such an opportunity to give charity? Therefore, Bali Mahārāja decided without hesitation to give the Lord whatever He wanted. One may get various opportunities to lay down his life on the battlefield, but such an opportunity as this is hardly ever obtained.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_10_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">98</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            By giving charity, a benevolent and merciful person undoubtedly becomes even more auspicious, especially when he gives charity to a person like your good self. Under the circumstances, I must give this little brahmacārī whatever charity He wants from me.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_10_purport">
+          <p>
+            If one accepts a poverty-stricken position because of losing money in business, gambling, prostitution or intoxication, no one will praise him, but if one becomes poverty-stricken by giving all of his possessions in charity, he becomes adored all over the world. Aside from this, if a benevolent and merciful person exhibits his pride in becoming poverty-stricken by giving his possessions in charity for good causes, his poverty is a welcome and auspicious sign of a great personality. Bali Mahārāja decided that even though he would become poverty-stricken by giving everything to Vāmanadeva, this is what he would prefer.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">250</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O great sage, great saintly persons like you, being completely aware of the Vedic principles for performing ritualistic ceremonies and yajñas, worship Lord Viṣṇu in all circumstances. Therefore, whether that same Lord Viṣṇu has come here to give me all benedictions or to punish me as an enemy, I must carry out His order and give Him the requested tract of land without hesitation.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            As stated by Lord Śiva:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ārādhanānāṁ sarveṣāṁ<br>viṣṇor ārādhanaṁ param<br>tasmāt parataraṁ devi<br>tadīyānāṁ samarcanam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Italic">Padma Purāṇa</span>)
+          </p>
+          <p>
+            Although in the <span class="Italic">Vedas</span> there are recommendations for worshiping many demigods, Lord Viṣṇu is the Supreme Person, and worship of Viṣṇu is the ultimate goal of life. The Vedic principles of the <span class="Italic">varṇāśrama</span> institution are meant to organize society to prepare everyone to worship Lord Viṣṇu.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">varṇāśramācāravatā<br>puruṣeṇa paraḥ pumān<br>viṣṇur ārādhyate panthā<br>nānyat tat-toṣa-kāraṇam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The Supreme Personality of Godhead, Lord Viṣṇu, is worshiped by the proper execution of prescribed duties in the system of <span class="Italic">varṇa</span> and <span class="Italic">āśrama.</span> There is no other way to satisfy the Supreme Personality of Godhead.” (<span class="Ref_Italic">Viṣṇu Purāṇa</span> 3.8.9) One must ultimately worship Lord Viṣṇu, and for that purpose the <span class="Italic">varṇāśrama</span> system organizes society into <span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas, śūdras, brahmacārīs, gṛhasthas, vānaprasthas</span> and <span class="Italic">sannyāsīs.</span> Bali Mahārāja, having been perfectly educated in devotional service by his grandfather Prahlāda Mahārāja, knew how things are to be done. He was never to be misguided by anyone, even by a person who happened to be his so-called spiritual master. This is the sign of full surrender. Bhaktivinoda Ṭhākura said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mārabi rākhabi——yo icchā tohārā<br>nitya-dāsa-prati tuyā adhikārā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            When one surrenders to Lord Viṣṇu, one must be prepared to abide by His orders in all circumstances, whether He kills one or gives one protection. Lord Viṣṇu must be worshiped in all circumstances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">59</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although He is Viṣṇu Himself, out of fear He has covered Himself in the form of a brāhmaṇa to come to me begging. Under the circumstances, because He has assumed the form of a brāhmaṇa, even if He irreligiously arrests me or even kills me, I shall not retaliate, although He is my enemy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            If Lord Viṣṇu as He is had come to Bali Mahārāja and asked him to do something, Bali Mahārāja certainly would not have refused His request. But to enjoy a little humor between Himself and His devotee, the Lord covered Himself as a <span class="Italic">brāhmaṇa-brahmacārī</span> and thus came to Bali Mahārāja to beg for only three feet of land.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">72</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            If this brāhmaṇa really is Lord Viṣṇu, who is worshiped by Vedic hymns, He would never give up His widespread reputation; either He would lie down having been killed by me, or He would kill me in a fight.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            Bali Mahārāja’s statement that Viṣṇu would lie down having been killed is not the direct meaning, for Viṣṇu cannot be killed by anyone. Lord Viṣṇu can kill everyone, but He cannot be killed. Thus the real meaning of the words “lie down” is that Lord Viṣṇu would reside within the core of Bali Mahārāja’s heart. Lord Viṣṇu is defeated by a devotee through devotional service; otherwise, no one can defeat Lord Viṣṇu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">248</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: Thereafter, the spiritual master, Śukrācārya, being inspired by the Supreme Lord, cursed his exalted disciple Bali Mahārāja, who was so magnanimous and fixed in truthfulness that instead of respecting his spiritual master’s instructions, he wanted to disobey his order.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The difference between the behavior of Bali Mahārāja and that of his spiritual master, Śukrācārya, was that Bali Mahārāja had already developed love of Godhead, whereas Śukrācārya, being merely a priest of routine rituals, had not. Thus Śukrācārya was never inspired by the Supreme Personality of Godhead to develop in devotional service. As stated by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (10.10):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">teṣāṁ satata-yuktānāṁ<br>bhajatāṁ prīti-pūrvakam<br>dadāmi buddhi-yogaṁ taṁ<br>yena mām upayānti te</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “To those who are constantly devoted and worship Me with love, I give the understanding by which they can come to Me.”
+          </p>
+          <p>
+            Devotees who actually engage in devotional service with faith and love are inspired by the Supreme Personality of Godhead. Vaiṣṇavas are never concerned with ritualistic <span class="Italic">smārta-brāhmaṇas.</span> Śrīla Sanātana Gosvāmī has therefore compiled <span class="Italic">Hari-bhakti-vilāsa</span> to guide the Vaiṣṇavas, who never follow the <span class="Italic">smārta-viddhi.</span> Although the Supreme Lord is situated in the core of everyone’s heart, unless one is a Vaiṣṇava, unless one is engaged in devotional service, one does not get sound advice by which to return home, back to Godhead. Such instructions are meant only for devotees. Therefore in this verse the word <span class="Italic">daiva-prahitaḥ,</span> “being inspired by the Supreme Lord,” is important. Śukrācārya should have encouraged Bali Mahārāja to give everything to Lord Viṣṇu. This would have been a sign of love for the Supreme Lord. But he did not do so. On the contrary, he wanted to punish his devoted disciple by cursing him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">153</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although you have no knowledge, you have become a so-called learned person, and therefore you dare be so impudent as to disobey my order. Because of disobeying me, you shall very soon be bereft of all your opulence.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura says that Bali Mahārāja was not <span class="Italic">paṇḍita-mānī,</span> or one who falsely assumes himself learned; rather, he was <span class="Italic">paṇḍita-mānya-jñaḥ,</span> one who is so learned that all other learned persons worship him. Aid because he was so learned, he could disobey the order of his so-called spiritual master. He had no fear of any condition of material existence. Anyone cared for by Lord Viṣṇu does not need to care about anyone else. Thus Bali Mahārāja could never be bereft of all opulences. The opulences offered by the Supreme Personality of Godhead are not to be compared to the opulences obtained by <span class="Italic">karma-kāṇḍa.</span> In other words, if a devotee becomes very opulent, it is to be understood that his opulence is a gift of the Supreme Personality of Godhead. Such opulence will never be vanquished, whereas the opulence achieved by one’s fruitive activity may be vanquished at any moment.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: Even after being cursed in this way by his own spiritual master, Bali Mahārāja, being a great personality, never deviated from his determination. Therefore, according to custom, he first offered water to Vāmanadeva and then offered Him the gift of land he had promised.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bali Mahārāja’s wife, known as Vindhyāvali, who was decorated with a necklace of pearls, immediately came and had a large golden waterpot brought there, full of water with which to worship the Lord by washing His feet.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bali Mahārāja, the worshiper of Lord Vāmanadeva, jubilantly washed the Lord’s lotus feet and then took the water on his head, for that water delivers the entire universe.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">102</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            At that time, the residents of the higher planetary system, namely the demigods, the Gandharvas, the Vidyādharas, the Siddhas and the Cāraṇas, all being very pleased by Bali Mahārāja’s simple, nonduplicitous act, praised his qualities and showered upon him millions of flowers.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            <span class="Italic">Ārjavam</span>—simplicity or freedom from duplicity—is a qualification of a <span class="Italic">brāhmaṇa</span> and a Vaiṣṇava. A Vaiṣṇava automatically acquires all the qualities of a <span class="Italic">brāhmaṇa.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasyāsti bhaktir bhagavaty akiñcanā<br>sarvair guṇais tatra samāsate surāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            (<span class="Ref_Italic">Bhāg.</span> 5.18.12)
+          </p>
+          <p>
+            A Vaiṣṇava should possess the brahminical qualities such as <span class="Italic">satya, śama, dama, titikṣā</span> and <span class="Italic">ārjava.</span> There cannot be any duplicity in the character of a Vaiṣṇava. When Bali Mahārāja acted with unflinching faith and devotion unto the lotus feet of Lord Viṣṇu, this was very much appreciated by all the residents of the higher planetary system.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Gandharvas, the Kimpuruṣas and the Kinnaras sounded thousands and thousands of kettledrums and trumpets again and again, and they sang in great jubilation, declaring, “How exalted a person is Bali Mahārāja, and what a difficult task he has performed! Even though he knew that Lord Viṣṇu was on the side of his enemies, he nonetheless gave the Lord the entire three worlds in charity.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">245</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The unlimited Supreme Personality of Godhead, who had assumed the form of Vāmana, then began increasing in size, acting in terms of the material energy, until everything in the universe was within His body, including the earth, the planetary systems, the sky, the directions, the various holes in the universe, the seas, the oceans, the birds, beasts, human beings, the demigods and the great saintly persons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Bali Mahārāja wanted to give charity to Vāmanadeva, but the Lord expanded His body in such a way that He showed Bali Mahārāja that everything in the universe is already in His body. Actually, no one can give anything to the Supreme Personality of Godhead, for He is full in everything. Sometimes we see a devotee offering Ganges water to the Ganges. After taking his bath in the Ganges, a devotee takes a palmful of water and offers it back to the Ganges. Actually, when one takes a palmful of water from the Ganges, the Ganges does not lose anything, and similarly if a devotee offers a palmful of water to the Ganges, the Ganges does not increase in any way. But by such an offering, the devotee becomes celebrated as a devotee of mother Ganges. Similarly, when we offer anything with devotion and faith, what we offer does not belong to us, nor does it enrich the opulence of the Supreme Personality of Godhead. But if one offers whatever he has in his possession, he becomes a recognized devotee. In this regard, the example is given that when one’s face is decorated with a garland and sandalwood pulp, the reflection of one’s face in a mirror automatically becomes beautiful. The original source of everything is the Supreme Personality of Godhead, who is our original source also. Therefore when the Supreme Personality of Godhead is decorated, the devotees and all living entities are decorated automatically.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">183</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bali Mahārāja, along with all the priests, ācāryas and members of the assembly, observed the Supreme Personality of Godhead’s universal body, which was full of six opulences. That body contained everything within the universe, including all the gross material elements, the senses, the sense objects, the mind, intelligence and false ego, the various kinds of living entities, and the actions and reactions of the three modes of material nature.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            In <span class="Italic">Bhagavad-gītā,</span> the Supreme Personality of Godhead says, <span class="Italic">ahaṁ sarvasya prabhavo mattaḥ sarvaṁ pravartate: [Bg. </span>10.8] Kṛṣṇa is the origin of everything. <span class="Italic">Vāsudevaḥ sarvam iti: [Bg. </span>7.19] Kṛṣṇa is everything. <span class="Italic">Mat-sthāni sarva-bhūtāni na cāhaṁ teṣv avasthitaḥ:</span> everything rests in the body of the Lord, yet the Lord is not everywhere. Māyāvādī philosophers think that since the Supreme Personality of Godhead, the Absolute Truth, has become everything, He has no separate existence. Their philosophy is called <span class="Italic">advaita-vāda.</span> Actually, however, their philosophy is not correct. Here, Bali Mahārāja was the seer of the Personality of Godhead’s universal body, and that body was that which was seen. Thus there is <span class="Italic">dvaita-vāda;</span> there are always two entities—the seer and the seen. The seer is a part of the whole, but he is not equal to the whole. The part of the whole, the seer, is also one with the whole, but since he is but a part, he cannot be the complete whole at any time. This <span class="Italic">acintya-bhedābheda</span>—simultaneous oneness and difference—is the perfect philosophy propounded by Lord Śrī Caitanya Mahāprabhu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">95</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, Bali Mahārāja, who was occupying the seat of King Indra, could see the lower planetary systems, such as Rasātala, on the soles of the feet of the Lord’s universal form. He saw on the Lord’s feet the surface of the globe, on the surface of His calves all the mountains, on His knees the various birds, and on His thighs the varieties of air.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            The universal situation is described herein in regard to the complete constitution of the Lord’s gigantic universal form. The study of this universal form begins from the sole. Above the soles are the feet, above the feet are the calves, above the calves are the knees, and above the knees are the thighs. Thus the parts of the universal body, one after another, are described herein. The knees are the place of birds, and above that are varieties of air. The birds can fly over the mountains, and above the birds are varieties of air.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Bali Mahārāja saw beneath the garments of the Lord, who acts wonderfully, the evening twilight. In the Lord’s private parts he saw the Prajāpatis, and in the round portion of the waist he saw himself with his confidential associates. In the Lord’s navel he saw the sky, on the Lord’s waist he saw the seven oceans, and on the Lord’s bosom he saw all the clusters of stars.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25–29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear King, on the heart of Lord Murāri he saw religion; on the chest, both pleasing words and truthfulness; in the mind, the moon; on the bosom, the goddess of fortune, with a lotus flower in her hand; on the neck, all the Vedas and all sound vibrations; on the arms, all the demigods, headed by King Indra; in both ears, all the directions; on the head, the upper planetary systems; on the hair, the clouds; in the nostrils, the wind; on the eyes, the sun; and in the mouth, fire. From His words came all the Vedic mantras, on His tongue was the demigod of water, Varuṇadeva, on His eyebrows were the regulative principles, and on His eyelids were day and night. [When His eyes were open it was daytime, and when they were closed it was night.] On His forehead was anger, and on His lips was greed. O King, in His touch were lusty desires, in His semen were all the waters, on His back was irreligion, and in His wonderful activities or steps was the fire of sacrifice. On His shadow was death, in His smile was the illusory energy, and on the hairs of His body were all the drugs and herbs. In His veins were all the rivers, on His nails were all the stones, in His intelligence were Lord Brahmā, the demigods and the great saintly persons, and throughout His entire body and senses were all living entities, moving and stationary. Bali Mahārāja thus saw everything in the gigantic body of the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, when all the demons, the followers of Mahārāja Bali, saw the universal form of the Supreme Personality of Godhead, who held everything within His body, when they saw in the Lord’s hand His disc, known as the Sudarśana cakra, which generates intolerable heat, and when they heard the tumultuous sound of His bow, all of these caused lamentation within their hearts.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Lord’s conchshell, named Pāñcajanya, which made sounds like that of a cloud; the very forceful club named Kaumodakī; the sword named Vidyādhara, with a shield decorated with hundreds of moonlike spots; and also Akṣayasāyaka, the best of quivers—all of these appeared together to offer prayers to the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32–33.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">79</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            These associates, headed by Sunanda and other chief associates and accompanied by all the predominating deities of the various planets, offered prayers to the Lord, who wore a brilliant helmet, bracelets, and glittering earrings that resembled fish. On the Lord’s bosom were the lock of hair called Śrīvatsa and the transcendental jewel named Kaustubha. He wore a yellow garment, covered by a belt, and He was decorated by a flower garland, surrounded by bees. Manifesting Himself in this way, O King, the Supreme Personality of Godhead, whose activities are wonderful, covered the entire surface of the earth with one footstep, the sky with His body, and all directions with His arms.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            One might argue, “Since Bali Mahārāja promised Vāmanadeva only the land occupied by His steps, why did Lord Vāmanadeva occupy the sky also?” In this regard, Śrīla Jīva Gosvāmī says that the steps include everything, downward and upward. When one stands up, he certainly occupies certain parts of the sky and certain portions of the earth below his feet. Thus there was nothing uncommon for the Supreme Personality of Godhead when He occupied the entire sky with His body.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_34_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">134</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As the Lord took His second step, He covered the heavenly planets. And not even a spot remained for the third step, for the Lord’s foot extended higher and higher, beyond Maharloka, Janaloka, Tapoloka and even Satyaloka.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_34_purport">
+          <p>
+            When the Lord’s footstep exceeded the height of all the <span class="Italic">lokas,</span> including Maharloka, Janaloka, Tapoloka and Satyaloka, His nails certainly pierced the covering of the universe. The universe is covered by the five material elements (<span class="Italic">bhūmir āpo ’nalo vāyuḥ kham</span>). As stated in the <span class="Italic">śāstra,</span> these elements are in layers, each ten times thicker than the previous one. Nonetheless, the nails of the Lord pierced through all these layers and made a hole penetrating into the spiritual world. From this hole, the water of the Ganges infiltrated into this material world, and therefore it is said, <span class="Italic">pada-nakha-nīra janita jana-pāvana</span> (<span class="Ref_Italic">Daśāvatāra-stotra</span> 5). Because the Lord kicked a hole in the covering of the universe, the water of the Ganges came into this material world to deliver all the fallen souls.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Eighth Canto, Twentieth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “Bali Mahārāja Surrenders the Universe.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/20">https://prabhupadabooks.com/sb/8/20</a><!-- span.text_source_copied_date
+        | on 2025-01-19 19:00:45 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.19: Lord Vamanadeva Begs Charity from Bali Maharaja     Next: SB 8.21: Bali Maharaja Arrested by the Lord</div>
+      </p>
+    </div>
+  </body>
+</html>

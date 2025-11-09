@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.9, The Lord Incarnates as Mohinī-Mūrti</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Nine:<br>The Lord Incarnates as Mohinī-Mūrti
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter describes how the demons, being enchanted by the beauty of the Mohinī form, agreed to hand over the container of nectar to Mohinīdevī, who tactfully delivered it to the demigods.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">When the demons got possession of the container of nectar, an extraordinarily beautiful young woman appeared before them. All the demons became captivated by the young woman’s beauty and became attached to Her. Now, because the demons were fighting among themselves to possess the nectar, they selected this beautiful woman as a mediator to settle their quarrel. Taking advantage of their weakness in this regard, Mohinī, the incarnation of the Supreme Personality of Godhead, got the demons to promise that whatever decision She might give, they would not refuse to accept it. When the demons made this promise, the beautiful woman, Mohinī-mūrti, had the demigods and demons sit in different lines so that She could distribute the nectar. She knew that the demons were quite unfit to drink the nectar. Therefore, by cheating them She distributed all the nectar to the demigods. When the demons saw this cheating of Mohinī-mūrti, they remained silent. But one demon, named Rāhu, dressed himself like a demigod and sat down in the line of the demigods. He sat beside the sun and the moon. When the Supreme Personality of Godhead understood how Rāhu was cheating, He immediately cut off the demon’s head. Rāhu, however, had already tasted the nectar, and therefore although his head was severed, he remained alive. After the demigods finished drinking the nectar, the Supreme Personality of Godhead assumed His own form. Śukadeva Gosvāmī ends this chapter by describing how powerful is the chanting of the holy names, pastimes and paraphernalia of the Supreme Personality of Godhead.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: Thereafter, the demons became inimical toward one another. Throwing and snatching the container of nectar, they gave up their friendly relationship. Meanwhile, they saw a very beautiful young woman coming forward toward them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon seeing the beautiful woman, the demons said, “Alas, how wonderful is Her beauty, how wonderful the luster of Her body, and how wonderful the beauty of Her youthful age!” Speaking in this way, they quickly approached Her, full of lusty desires to enjoy Her, and began to inquire from Her in many ways.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">90</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O wonderfully beautiful girl, You have such nice eyes, resembling the petals of a lotus flower. Who are You? Where do You come from? What is Your purpose in coming here, and to whom do You belong? O You whose thighs are extraordinarily beautiful, our minds are becoming agitated simply because of seeing You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            The demons inquired from the wonderfully beautiful girl, “To whom do You belong?” A woman is supposed to belong to her father before her marriage, to her husband after her marriage, and to her grown sons in her old age. In regard to this inquiry, Śrīla Viśvanātha Cakravartī Ṭhākura says that the question “To whom do You belong?” means “Whose daughter are You?” Since the demons could understand that the beautiful girl was still unmarried, every one of them desired to marry Her. Thus they inquired, “Whose daughter are You?”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_4_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">125</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            What to speak of human beings, even the demigods, demons, Siddhas, Gandharvas, Cāraṇas and the various directors of the universe, the Prajāpatis, have never touched You before. It is not that we are unable to understand Your identity.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_4_purport">
+          <p>
+            Even the <span class="Italic">asuras</span> observed the etiquette that no one should address a married woman with lust. The great analyst Cāṇakya Paṇḍita says, <span class="Italic">mātṛvat para-dāreṣu:</span> one should consider another’s wife to be one’s mother. The <span class="Italic">asuras,</span> the demons, took it for granted that the beautiful young woman, Mohinī-mūrti, who had arrived before them, was certainly not married. Therefore they assumed that no one in the world, including the demigods, the Gandharvas, the Cāraṇas and the Siddhas, had ever touched Her. The demons knew that the young girl was unmarried, and therefore they dared to address Her. They supposed that the young girl, Mohinī-mūrti, had come there to find a husband among all those present (the Daityas, the demigods, the Gandharvas and so on).
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O beautiful girl with beautiful eyebrows, certainly Providence, by His causeless mercy, has sent You to please the senses and minds of all of us. Is this not a fact?
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_6_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">27</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            We are now all engaged in enmity among ourselves because of this one subject matter—the container of nectar. Although we have been born in the same family, we are becoming increasingly inimical. O thin-waisted woman, who are so beautiful in Your prestigious position, we therefore request You to favor us by settling our dispute.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_6_purport">
+          <p>
+            The demons understood that the beautiful woman had attracted the attention of them all. Therefore they unanimously requested Her to become the arbiter to settle their dispute.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="7">
+        <div class="verse_controls">
+          <button class="verse_num btn">[7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            All of us, both demons and demigods, have been born of the same father, Kaśyapa, and thus we are related as brothers. But now we are exhibiting our personal prowess in dissension. Therefore we request You to settle our dispute and divide the nectar equally among us.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Having thus been requested by the demons, the Supreme Personality of Godhead, who had assumed the form of a beautiful woman, began to smile. Looking at them with attractive feminine gestures, She spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">217</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, in the form of Mohinī, told the demons: O sons of Kaśyapa Muni, I am only a prostitute. How is it that you have so much faith in Me? A learned person never puts his faith in a woman.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            Cāṇakya Paṇḍita, the great politician and moral instructor, said, <span class="Italic">viśvāso naiva kartavyaḥ strīṣu rāja-kuleṣu ca:</span> “Never put your faith in a woman or a politician.” Thus the Supreme Personality of Godhead, who was pretending to be a woman, warned the demons against putting so much faith in Her, for She had appeared as an attractive woman ultimately to cheat them. Indirectly disclosing the purpose for which She had appeared before them, She said to the sons of Kaśyapa, “How is this? You were all born of a great <span class="Italic">ṛṣi,</span> yet you are putting your faith in a woman who is loitering here and there like a prostitute, unprotected by father or husband. Women in general should not be trusted, and what to speak of a woman loitering like a prostitute?” The word <span class="Italic">kāminī</span> is significant in this connection. Women, especially beautiful young women, invoke the dormant lusty desires of a man. Therefore, according to <span class="Italic">Manu-saṁhitā,</span> every woman should be protected, either by her husband, by her father or by her grown sons. Without such protection, a woman will be exploited. Indeed, women like to be exploited by men. As soon as a woman is exploited by a man, she becomes a common prostitute. This is explained by Mohinī-mūrti, the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O demons, as monkeys, jackals and dogs are unsteady in their sexual relationships and want newer and newer friends every day, women who live independently seek new friends daily. Friendship with such a woman is never permanent. This is the opinion of learned scholars.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">158</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī continued: After the demons heard the words of Mohinī-mūrti, who had spoken as if jokingly, they were all very confident. They laughed with gravity, and ultimately they delivered the container of nectar into Her hands.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The Personality of Godhead in His form of Mohinī was certainly not joking but talking seriously, with gravity. The demons, however, being captivated by Mohinī-mūrti’s bodily features, took Her words as a joke and confidently delivered the container of nectar into Her hands. Thus Mohinī-mūrti resembles Lord Buddha, who appeared <span class="Italic">sammohāya sura-dviṣām [SB 1.3.24]</span>—to cheat the <span class="Italic">asuras.</span> The word <span class="Italic">sura-dviṣām</span> refers to those who are envious of the demigods or devotees. Sometimes an incarnation of the Supreme Personality of Godhead cheats the atheists. Thus we see here that although Mohinī-mūrti was speaking factually to the <span class="Italic">asuras,</span> the <span class="Italic">asuras</span> took Her words to be facetious. Indeed, they were so confident of Mohinī-mūrti’s honesty that they immediately delivered the container of nectar into Her hands, as if they would allow Her to do with the nectar whatever She liked, whether She distributed it, threw it away or drank it Herself without giving it to them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">46</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, the Supreme Personality of Godhead, having taken possession of the container of nectar, smiled slightly and spoke in attractive words. She said: My dear demons, if you accept whatever I may do, whether honest or dishonest, then I can take responsibility for dividing the nectar among you.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            The Supreme Personality of Godhead cannot abide by anyone’s dictation. Whatever He does is absolute. The demons, of course, were deluded by the illusory potency of the Supreme Personality of Godhead, and thus Mohinī-mūrti got them to promise that whatever She would do they would accept.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The chiefs of the demons were not very expert in deciding things. Upon hearing the sweet words of Mohinī-mūrti, they immediately assented. “Yes,” they answered. “What You have said is all right.” Thus the demons agreed to accept Her decision.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14–15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">76</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods and demons then observed a fast. After bathing, they offered clarified butter and oblations into the fire and gave charity to the cows and to the brāhmaṇas and members of the other orders of society, namely the kṣatriyas, vaiśyas and śūdras, who were all rewarded as they deserved. Thereafter, the demigods and demons performed ritualistic ceremonies under the directions of the brāhmaṇas. Then they dressed themselves with new garments according to their own choice, decorated their bodies with ornaments, and sat facing east on seats made of kuśa grass.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The <span class="Italic">Vedas</span> enjoin that for every ritualistic ceremony one must first become clean by bathing either in the water of the Ganges or Yamunā or in the sea. Then one may perform the ritualistic ceremony and offer clarified butter into the fire. In this verse the words <span class="Italic">paridhāya āhatāni</span> are especially significant. A <span class="Italic">sannyāsī</span> or a person about to perform a ritualistic ceremony should not dress himself in clothing sewn with a needle.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16–17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, as the demigods and demons sat facing east in an arena fully decorated with flower garlands and lamps and fragrant with the smoke of incense, that woman, dressed in a most beautiful sari, Her ankle bells tinkling, entered the arena, walking very slowly because of Her big, low hips. Her eyes were restless due to youthful pride, Her breasts were like water jugs, Her thighs resembled the trunks of elephants, and She carried a waterpot in Her hand.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_18_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">97</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Her attractive nose and cheeks and Her ears, adorned with golden earrings, made Her face very beautiful. As She moved, Her sari’s border on Her breasts moved slightly aside. When the demigods and demons saw these beautiful features of Mohinī-mūrti, who was glancing at them and slightly smiling, they were all completely enchanted.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_18_purport">
+          <p>
+            Śrīla Viśvanātha Cakravartī Ṭhākura remarks here that Mohinī-mūrti is the Supreme Personality of Godhead in a feminine form and that the goddess of fortune is Her associate. This form assumed by the Personality of Godhead challenged the goddess of fortune. The goddess of fortune is beautiful, but if the Lord accepts the form of a woman, He surpasses the goddess of fortune in beauty. It is not that the goddess of fortune, being female, is the most beautiful. The Lord is so beautiful that He can excel any beautiful goddess of fortune by assuming a female form.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">77</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Demons are by nature crooked like snakes. Therefore, to distribute a share of the nectar to them was not at all feasible, since this would be as dangerous as supplying milk to a snake. Considering this, the Supreme Personality of Godhead, who never falls down, did not deliver a share of nectar to the demons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            It is said, <span class="Italic">sarpaḥ krūraḥ khalaḥ krūraḥ sarpāt krūrataraḥ khalaḥ:</span> “The snake is very crooked and envious, and so also is a person like a demon.” <span class="Italic">Mantrauṣadhi-vaśaḥ sarpaḥ khalaḥ kena nivāryate:</span> “One can bring a snake under control with <span class="Italic">mantras,</span> herbs and drugs, but an envious and crooked person cannot be brought under control by any means.” Considering this logic, the Supreme Personality of Godhead thought it unwise to distribute nectar to the demons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead as Mohinī-mūrti, the master of the universe, arranged separate lines of sitting places and seated the demigods and demons according to their positions.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_21_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">109</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Taking the container of nectar in Her hands, She first approached the demons, satisfied them with sweet words and thus cheated them of their share of the nectar. Then She administered the nectar to the demigods, who were sitting at a distant place, to make them free from invalidity, old age and death.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_21_purport">
+          <p>
+            Mohinī-mūrti, the Personality of Godhead, gave the demigods seats at a distance. Then She approached the demons and spoke with them very graciously, so that they thought themselves very fortunate to talk with Her. Since Mohinī-mūrti had seated the demigods at a distant place, the demons thought that the demigods would get only a little of the nectar and that Mohinī-mūrti was so pleased with the demons that She would give the demons all the nectar. The words <span class="Italic">vañcayann upasañcaraiḥ</span> indicate that the Lord’s whole policy was to cheat the demons simply by speaking sweet words. The Lord’s intention was to distribute the nectar only to the demigods.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, since the demons had promised to accept whatever the woman did, whether just or unjust, now, to keep this promise, to show their equilibrium and to save themselves from fighting with a woman, they remained silent.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">88</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demons had developed affection for Mohinī-mūrti and a kind of faith in Her, and they were afraid of disturbing their relationship. Therefore they showed respect and honor to Her words and did not say anything that might disturb their friendship with Her.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            The demons were so captivated by the tricks and friendly words of Mohinī-mūrti that although the demigods were served first, the demons were pacified merely by sweet words. The Lord said to the demons, “The demigods are very miserly and are excessively anxious to take the nectar first. So let them have it first. Since you are not like them you can wait a little longer. You are all heroes and are so pleased with Me. It is better for you to wait until after the demigods drink.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_24_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">128</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Rāhu, the demon who causes eclipses of the sun and moon, covered himself with the dress of a demigod and thus entered the assembly of the demigods and drank nectar without being detected by anyone, even by the Supreme Personality of Godhead. The moon and the sun, however, because of permanent animosity toward Rāhu, understood the situation. Thus Rāhu was detected.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_24_purport">
+          <p>
+            The Supreme Personality of Godhead, Mohinī-mūrti, was able to bewilder all the demons, but Rāhu was so clever that he was not bewildered. Rāhu could understand that Mohinī-mūrti was cheating the demons, and therefore he changed his dress, disguised himself as a demigod, and sat down in the assembly of the demigods. Here one may ask why the Supreme Personality of Godhead could not detect Rāhu. The reason is that the Lord wanted to show the effects of drinking nectar. This will be revealed in the following verses. The moon and sun, however, were always alert in regard to Rāhu. Thus when Rāhu entered the assembly of the demigods, the moon and sun immediately detected him, and then the Supreme Personality of Godhead also became aware of him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">65</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead, Hari, using His disc, which was sharp like a razor, at once cut off Rāhu’s head. When Rāhu’s head was severed from his body, the body, being untouched by the nectar, could not survive.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            When the Personality of Godhead, Mohinī-mūrti, severed Rāhu’s head from his body, the head remained alive although the body died. Rāhu had been drinking nectar through his mouth, and before the nectar entered his body, his head was cut off. Thus Rāhu’s head remained alive whereas the body died. This wonderful act performed by the Lord was meant to show that nectar is miraculous ambrosia.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">48</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Rāhu’s head, however, having been touched by the nectar, became immortal. Thus Lord Brahmā accepted Rāhu’s head as one of the planets. Since Rāhu is an eternal enemy of the moon and the sun, he always tries to attack them on the nights of the full moon and the dark moon.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            Since Rāhu had become immortal, Lord Brahmā accepted him as one of the <span class="Italic">grahas,</span> or planets, like the moon and the sun. Rāhu, however, being an eternal enemy of the moon and sun, attacks them periodically during the nights of the full moon and the dark moon.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead is the best friend and well-wisher of the three worlds. Thus when the demigods had almost finished drinking the nectar, the Lord, in the presence of all the demons, disclosed His original form.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">482</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The place, the time, the cause, the purpose, the activity and the ambition were all the same for both the demigods and the demons, but the demigods achieved one result and the demons another. Because the demigods are always under the shelter of the dust of the Lord’s lotus feet, they could very easily drink the nectar and get its result. The demons, however, not having sought shelter at the lotus feet of the Lord, were unable to achieve the result they desired.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (4.11) it is said, <span class="Italic">ye yathā māṁ prapadyante tāṁs tathaiva bhajāmy aham:</span> the Supreme Personality of Godhead is the supreme judge who rewards or punishes different persons according to their surrender unto His lotus feet. Therefore it can actually be seen that although <span class="Italic">karmīs</span> and <span class="Italic">bhaktas</span> may work in the same place, at the same time, with the same energy and with the same ambition, they achieve different results. The <span class="Italic">karmīs</span> transmigrate through different bodies in the cycle of birth and death, sometimes going upward and sometimes downward, thus suffering the results of their actions in the <span class="Italic">karma-cakra,</span> the cycle of birth and death. The devotees, however, because of fully surrendering at the lotus feet of the Lord, are never baffled in their attempts. Although externally they work almost like the <span class="Italic">karmīs,</span> the devotees go back home, back to Godhead, and achieve success in every effort. The demons or atheists have faith in their own endeavors, but although they work very hard day and night, they cannot get any more than their destiny. The devotees, however, can surpass the reactions of <span class="Italic">karma</span> and achieve wonderful results, even without effort. It is also said, <span class="Italic">phalena paricīyate:</span> one’s success or defeat in any activity is understood by its result. There are many <span class="Italic">karmīs</span> in the dress of devotees, but the Supreme Personality of Godhead can detect their purpose. The <span class="Italic">karmīs</span> want to use the property of the Lord for their selfish sense gratification, but a devotee endeavors to use the Lord’s property for God’s service. Therefore a devotee is always distinct from the <span class="Italic">karmīs,</span> although the <span class="Italic">karmīs</span> may dress like devotees. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (3.9), <span class="Italic">yajñārthāt karmaṇo ’nyatra loko ’yaṁ karma-bandhanaḥ.</span> One who works for Lord Viṣṇu is free from this material world, and after giving up his body he goes back home, back to Godhead. A <span class="Italic">karmī,</span> however, although externally working like a devotee, is entangled in his nondevotional activity, and thus he suffers the tribulations of material existence. Thus from the results achieved by the <span class="Italic">karmīs</span> and devotees, one can understand the presence of the Supreme Personality of Godhead, who acts differently for the <span class="Italic">karmīs</span> and <span class="Italic">jñānīs</span> than for the devotees. The author of <span class="Italic">Śrī Caitanya-caritāmṛta</span> therefore says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kṛṣṇa-bhakta——niṣkāma, ataeva ‘śānta’<br>bhukti-mukti-siddhi-kāmī——sakali ‘aśānta’</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The <span class="Italic">karmīs</span> who desire sense gratification, the <span class="Italic">jñānīs</span> who aspire for the liberation of merging into the existence of the Supreme, and the <span class="Italic">yogīs</span> who seek material success in mystic power are all restless, and ultimately they are baffled. But the devotee, who does not expect any personal benefit and whose only ambition is to spread the glories of the Supreme Personality of Godhead, is blessed with all the auspicious results of <span class="Italic">bhakti-yoga,</span> without hard labor.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">343</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In human society there are various activities performed for the protection of one’s wealth and life by one’s words, one’s mind and one’s actions, but they are all performed for one’s personal or extended sense gratification with reference to the body. All these activities are baffled because of being separate from devotional service. But when the same activities are performed for the satisfaction of the Lord, the beneficial results are distributed to everyone, just as water poured on the root of a tree is distributed throughout the entire tree.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            This is the distinction between materialistic activities and activities performed in Kṛṣṇa consciousness. The entire world is active, and this includes the <span class="Italic">karmīs,</span> the <span class="Italic">jñānīs,</span> the <span class="Italic">yogīs</span> and the <span class="Italic">bhaktas.</span> However, all activities except those of the <span class="Italic">bhaktas,</span> the devotees, end in bafflement and a waste of time and energy. <span class="Italic">Moghāśā mogha-karmāṇo mogha jñānā vicetasaḥ: [Bg. </span>9.12] if one is not a devotee, his hopes, his activities and his knowledge are all baffled. A nondevotee works for his personal sense gratification or for the sense gratification of his family, society, community or nation, but because all such activities are separate from the Supreme Personality of Godhead, they are considered <span class="Italic">asat.</span> The word <span class="Italic">asat</span> means bad or temporary, and <span class="Italic">sat</span> means permanent and good. Activities performed for the satisfaction of Kṛṣṇa are permanent and good, but <span class="Italic">asat</span> activity, although sometimes celebrated as philanthropy, altruism, nationalism, this “ism” or that “ism,” will never produce any permanent result and is therefore all bad. Even a little work done in Kṛṣṇa consciousness is a permanent asset and is all-good because it is done for Kṛṣṇa, the all-good Supreme Personality of Godhead, who is everyone’s friend (<span class="Italic">suhṛdaṁ sarva-bhūtānām</span>). The Supreme Personality of Godhead is the only enjoyer and proprietor of everything (<span class="Italic">bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram [Bg. </span>5.29]). Therefore any activity performed for the Supreme Lord is permanent. As a result of such activities, the performer is immediately recognized. <span class="Italic">Na ca tasmān manuṣyeṣu kaścin me priya-kṛttamaḥ [Bg. </span>18.69]<span class="Italic">.</span> Such a devotee, because of full knowledge of the Supreme Personality of Godhead, is immediately transcendental, although he may superficially appear to be engaged in materialistic activities. The only distinction between materialistic activity and spiritual activity is that material activity is performed only to satisfy one’s own senses whereas spiritual activity is meant to satisfy the transcendental senses of the Supreme Personality of Godhead. By spiritual activity everyone factually benefits, whereas by materialistic activity no one benefits and instead one becomes entangled in the laws of <span class="Italic">karma.</span>
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus ends the Bhaktivedanta purports of the Eighth Canto, Ninth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Lord Incarnates as Mohinī-mūrti.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/9">https://prabhupadabooks.com/sb/8/9</a><!-- span.text_source_copied_date
+        | on 2025-01-12 21:32:55 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.8: The Churning of the Milk Ocean     Next: SB 8.10: The Battle Between the Demigods and the Demons</div>
+      </p>
+    </div>
+  </body>
+</html>

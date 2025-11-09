@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 9.10, The Pastimes of the Supreme Lord, Rāmacandra</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 9:<br>
+        “Liberation”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Ten:<br>The Pastimes of the Supreme Lord, Rāmacandra
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This Tenth Chapter describes how Lord Rāmacandra appeared in the dynasty of Mahārāja Khaṭvāṅga. It also describes the Lord’s activities, telling how He killed Rāvaṇa and returned to Ayodhyā, the capital of His kingdom.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">The son of Mahārāja Khaṭvāṅga was Dīrghabāhu, and his son was Raghu. The son of Raghu was Aja, the son of Aja was Daśaratha, and the son of Daśaratha was Lord Rāmacandra, the Supreme Personality of Godhead. When the Lord descended into this world in His full quadruple expansion—as Lord Rāmacandra, Lakṣmaṇa, Bharata and Śatrughna—great sages like Vālmīki who were actually in knowledge of the Absolute Truth described His transcendental pastimes. Śrīla Śukadeva Gosvāmī describes these pastimes in brief.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Lord Rāmacandra went with Viśvāmitra and killed Rākṣasas like Mārīca. After breaking the stout and strong bow known as Haradhanu, the Lord married mother Sītā and cut down the prestige of Paraśurāma. To obey the order of His father, He entered the forest, accompanied by Lakṣmaṇa and Sītā. There He cut off the nose of Śūrpaṇakhā and killed the associates of Rāvaṇa, headed by Khara and Dūṣaṇa. Rāvaṇa’s kidnapping of Sītādevī was the beginning of this demon’s misfortune. When Mārīca assumed the form of a golden deer, Lord Rāmacandra went to bring the deer to please Sītādevī, but in the meantime Rāvaṇa took advantage of the Lord’s absence to kidnap her. When Sītādevī was kidnapped, Lord Rāmacandra, accompanied by Lakṣmaṇa, searched for her throughout the forest. In the course of this search, They met Jaṭāyu. Then the Lord killed the demon Kabandha and the commander Vāli and established a friendly relationship with Sugrīva. After organizing the military strength of the monkeys and going with them to the shore of the sea, the Lord awaited the arrival of Samudra, the ocean personified, but when Samudra did not come, the Lord, the master of Samudra, became angry. Then Samudra came to the Lord with great haste and surrendered to Him, wanting to help Him in every way. The Lord then attempted to bridge the ocean, and, with the help of advice from Vibhīṣaṇa, He attacked Rāvaṇa’s capital, Laṅkā. Previously, Hanumān, the eternal servant of the Lord, had set fire to Laṅkā, and now, with the help of Lakṣmaṇa, the forces of Lord Rāmacandra killed all the Rākṣasa soldiers. Then Lord Rāmacandra personally killed Rāvaṇa. Mandodarī and other wives lamented for Rāvaṇa, and in accordance with Lord Rāmacandra’s order, Vibhīṣaṇa performed the funeral ceremonies for all the dead in the family. Lord Rāmacandra then gave Vibhīṣaṇa the right to rule Laṅkā and also granted him a long duration of life. The Lord delivered Sītādevī from the Aśoka forest and carried her in a flower airplane to His capital Ayodhyā, where He was received by His brother Bharata. When Lord Rāmacandra entered Ayodhyā, Bharata brought His wooden shoes, Vibhīṣaṇa and Sugrīva held a whisk and fan, Hanumān carried an umbrella, Śatrughna carried the Lord’s bow and two quivers, and Sītādevī carried a waterpot containing water from holy places. Aṅgada carried a sword, and Jāmbavān (Ṛkṣarāja) carried a shield. After Lord Rāmacandra, accompanied by Lord Lakṣmaṇa and mother Sītādevī, met all His relatives, the great sage Vasiṣṭha enthroned Him as King. The chapter ends with a short description of Lord Rāmacandra’s rule in Ayodhyā.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: The son of Mahārāja Khaṭvāṅga was Dīrghabāhu, and his son was the celebrated Mahārāja Raghu. From Mahārāja Raghu came Aja, and from Aja was born the great personality Mahārāja Daśaratha.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_2_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">130</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being prayed for by the demigods, the Supreme Personality of Godhead, the Absolute Truth Himself, directly appeared with His expansion and expansions of the expansion. Their holy names were Rāma, Lakṣmaṇa, Bharata and Śatrughna. These celebrated incarnations thus appeared in four forms as the sons of Mahārāja Daśaratha.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_2_purport">
+          <p>
+            Lord Rāmacandra and His brothers, Lakṣmaṇa, Bharata and Śatrughna, are all <span class="Italic">viṣṇu-tattva,</span> not <span class="Italic">jīva-tattva.</span> The Supreme Personality of Godhead expands into many, many forms. <span class="Italic">Advaitam acyutam anādim ananta-rūpam [Bs </span>5.33]<span class="Italic">.</span> Although they are one and the same, <span class="Italic">viṣṇu-tattva</span> has many forms and incarnations. As confirmed in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.39), <span class="Italic">rāmādi-mūrtiṣu kalā-niyamena tiṣṭhan.</span> The Lord is situated in many forms, such as Rāma, Lakṣmaṇa, Bharata and Śatrughna, and these forms may exist in any part of His creation. All these forms exist permanently, eternally, as individual Personalities of Godhead, and they resemble many candles, all equally powerful. Lord Rāmacandra, Lakṣmaṇa, Bharata and Śatrughna, who, being <span class="Italic">viṣṇu-tattva,</span> are all equally powerful, became the sons of Mahārāja Daśaratha in response to prayers by the demigods.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_3_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">303</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, the transcendental activities of Lord Rāmacandra have been described by great saintly persons who have seen the truth. Because you have heard again and again about Lord Rāmacandra, the husband of mother Sītā, I shall describe these activities only in brief. Please listen.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_3_purport">
+          <p>
+            Modern Rākṣasas, posing as educationally advanced merely because they have doctorates, have tried to prove that Lord Rāmacandra is not the Supreme Personality of Godhead but an ordinary person. But those who are learned and spiritually advanced will never accept such notions; they will accept the descriptions of Lord Rāmacandra and His activities only as presented by <span class="Italic">tattva-darśīs,</span> those who know the Absolute Truth. In <span class="Ref_Italic">Bhagavad-gītā</span> (4.34) the Supreme Personality of Godhead advises:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tad viddhi praṇipātena<br>paripraśnena sevayā<br>upadekṣyanti te jñānaṁ<br>jñāninas tattva-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service unto him. The self-realized soul can impart knowledge unto you because he has seen the truth.” Unless one is <span class="Italic">tattva-darśī,</span> in complete knowledge of the Absolute Truth, one cannot describe the activities of the Personality of Godhead. Therefore although there are many so-called <span class="Italic">Rāmāyaṇas,</span> or histories of Lord Rāmacandra’s activities, some of them are not actually authoritative. Sometimes Lord Rāmacandra’s activities are described in terms of one’s own imaginations, speculations or material sentiments. But the characteristics of Lord Rāmacandra should not be handled as something imaginary. While describing the history of Lord Rāmacandra, Śukadeva Gosvāmī told Mahārāja Parīkṣit, “You have already heard about the activities of Lord Rāmacandra.” Apparently, therefore, five thousand years ago there were many <span class="Italic">Rāmāyaṇas,</span> or histories of Lord Rāmacandra’s activities, and there are many still. But we must select only those books written by <span class="Italic">tattva-darśīs</span> (<span class="Italic">jñāninas tattva-darśinaḥ</span>), not the books of so-called scholars who claim knowledge only on the basis of a doctorate. This is a warning by Śukadeva Gosvāmī. <span class="Italic">Ṛṣibhis tattva-darśibhiḥ.</span> Although the <span class="Italic">Rāmāyaṇa</span> composed by Vālmīki is a huge literature, the same activities are summarized here by Śukadeva Gosvāmī in a few verses.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="4">
+        <div class="verse_controls">
+          <button class="verse_num btn">[4.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            To keep the promise of His father intact, Lord Rāmacandra immediately gave up the position of king and, accompanied by His wife, mother Sītā, wandered from one forest to another on His lotus feet, which were so delicate that they were unable to bear even the touch of Sītā’s palms. The Lord was also accompanied by Hanumān [or by another monkey, Sugrīva], king of the monkeys, and by His own younger brother Lord Lakṣmaṇa, both of whom gave Him relief from the fatigue of wandering in the forest. Having cut off the nose and ears of Śūrpaṇakhā, thus disfiguring her, the Lord was separated from mother Sītā. He therefore became angry, moving His eyebrows and thus frightening the ocean, who then allowed the Lord to construct a bridge to cross the ocean. Subsequently, the Lord entered the kingdom of Rāvaṇa to kill him, like a fire devouring a forest. May that Supreme Lord, Rāmacandra, give us all protection.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="5">
+        <div class="verse_controls">
+          <button class="verse_num btn">[5.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            In the arena of the sacrifice performed by Viśvāmitra, Lord Rāmacandra, the King of Ayodhyā, killed many demons, Rākṣasas and uncivilized men who wandered at night in the mode of darkness. May Lord Rāmacandra, who killed these demons in the presence of Lakṣmaṇa, be kind enough to give us protection.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="6">
+        <div class="verse_controls">
+          <button class="verse_num btn">[6–7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, the pastimes of Lord Rāmacandra were wonderful, like those of a baby elephant. In the assembly where mother Sītā was to choose her husband, in the midst of the heroes of this world, He broke the bow belonging to Lord Śiva. This bow was so heavy that it was carried by three hundred men, but Lord Rāmacandra bent and strung it and broke it in the middle, just as a baby elephant breaks a stick of sugarcane. Thus the Lord achieved the hand of mother Sītā, who was equally as endowed with transcendental qualities of form, beauty, behavior, age and nature. Indeed, she was the goddess of fortune who constantly rests on the chest of the Lord. While returning from Sītā’s home after gaining her at the assembly of competitors, Lord Rāmacandra met Paraśurāma. Although Paraśurāma was very proud, having rid the earth of the royal order twenty-one times, he was defeated by the Lord, who appeared to be a kṣatriya of the royal order.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">113</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Carrying out the order of His father, who was bound by a promise to his wife, Lord Rāmacandra left behind His kingdom, opulence, friends, well-wishers, residence and everything else, just as a liberated soul gives up his life, and went to the forest with Sītā.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            Mahārāja Daśaratha had three wives. One of them, Kaikeyī, served him very pleasingly, and he therefore wanted to give her a benediction. Kaikeyī, however, said that she would ask for the benediction when it was necessary. At the time of the coronation of Prince Rāmacandra, Kaikeyī requested her husband to enthrone her son Bharata and send Rāmacandra to the forest. Mahārāja Daśaratha, being bound by his promise, ordered Rāmacandra to go to the forest, according to the dictation of his beloved. And the Lord, as an obedient son, accepted the order immediately. He left everything without hesitation, just as a liberated soul or great <span class="Italic">yogī</span> gives up his life without material attraction.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            While wandering in the forest, where He accepted a life of hardship, carrying His invincible bow and arrows in His hand, Lord Rāmacandra deformed Rāvaṇa’s sister, who was polluted with lusty desires, by cutting off her nose and ears. He also killed her fourteen thousand Rākṣasa friends, headed by Khara, Triśira and Dūṣaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, when Rāvaṇa, who had ten heads on his shoulders, heard about the beautiful and attractive features of Sītā, his mind was agitated by lusty desires, and he went to kidnap her. To distract Lord Rāmacandra from His āśrama, Rāvaṇa sent Mārīca in the form of a golden deer, and when Lord Rāmacandra saw that wonderful deer, He left His residence and followed it and finally killed it with a sharp arrow, just as Lord Śiva killed Dakṣa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">690</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Rāmacandra entered the forest and Lakṣmaṇa was also absent, the worst of the Rākṣasas, Rāvaṇa, kidnapped Sītādevī, the daughter of the King of Videha, just as a tiger seizes unprotected sheep when the shepherd is absent. Then Lord Rāmacandra wandered in the forest with His brother Lakṣmaṇa as if very much distressed due to separation from His wife. Thus He showed by His personal example the condition of a person attached to women.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            In this verse the words <span class="Italic">strī-saṅgināṁ gatim iti</span> indicate that the condition of a person attached to women was shown by the Lord Himself. According to moral instructions, <span class="Italic">gṛhe nārīṁ vivarjayet:</span> when one goes on a tour, one should not bring his wife. Formerly men used to travel without conveyances, but still, as far as possible, when one leaves home one should not take his wife with him, especially if one is in such a condition as Lord Rāmacandra when banished by the order of His father. Whether in the forest or at home, if one is attached to women this attachment is always troublesome, as shown by the Supreme Personality of Godhead by His personal example.
+          </p>
+          <p>
+            Of course, this is the material side of <span class="Italic">strī-saṅgī,</span> but the situation of Lord Rāmacandra is spiritual, for He does not belong to the material world. <span class="Italic">Nārāyaṇaḥ paro ’vyaktāt:</span> Nārāyaṇa is beyond the material creation. Because He is the creator of the material world, He is not subject to the conditions of the material world. The separation of Lord Rāmacandra from Sītā is spiritually understood as <span class="Italic">vipralambha,</span> which is an activity of the <span class="Italic">hlādinī</span> potency of the Supreme Personality of Godhead belonging to the <span class="Italic">śṛṅgāra-rasa,</span> the mellow of conjugal love in the spiritual world. In the spiritual world the Supreme Personality of Godhead has all the dealings of love, displaying the symptoms called <span class="Italic">sāttvika, sañcārī, vilāpa, mūrcchā</span> and <span class="Italic">unmāda.</span> Thus when Lord Rāmacandra was separated from Sītā, all these spiritual symptoms were manifested. The Lord is neither impersonal nor impotent. Rather, He is <span class="Italic">sac-cid-ānanda-vigraha</span><i> <span class="Italic"></span></i>[Bs. 5.1]<span class="Italic">,</span> the eternal form of knowledge and bliss. Thus He has all the symptoms of spiritual bliss. Feeling separation from one’s beloved is also an item of spiritual bliss. As explained by Śrīla Svarūpa Dāmodara Gosvāmī, <span class="Italic">rādhā-kṛṣṇa-praṇaya-vikṛtir hlādinī-śaktiḥ:</span> the dealings of love between Rādhā and Kṛṣṇa are displayed as the pleasure potency of the Lord. The Lord is the original source of all pleasure, the reservoir of all pleasure. Lord Rāmacandra, therefore, manifested the truth both spiritually and materially. Materially those who are attached to women suffer, but spiritually when there are feelings of separation between the Lord and His pleasure potency the spiritual bliss of the Lord increases. This is further explained in <span class="Ref_Italic">Bhagavad-gītā</span> (9.11):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">avajānanti māṁ mūḍhā<br>mānuṣīṁ tanum āśritam<br>paraṁ bhāvam ajānanto<br>mama bhūta-maheśvaram</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            One who does not know the spiritual potency of the Supreme Personality of Godhead thinks of the Lord as an ordinary human being. But the Lord’s mind, intelligence and senses can never be affected by material conditions. This fact is further explained in the <span class="Italic">Skanda Purāṇa,</span> as quoted by Madhvācārya:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nitya-pūrṇa-sukha-jñāna-<br>svarūpo ’sau yato vibhuḥ<br>ato ’sya rāma ity ākhyā<br>tasya duḥkhaṁ kuto ’ṇv api</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tathāpi loka-śikṣārtham<br>aduḥkho duḥkha-vartivat<br>antarhitāṁ loka-dṛṣṭyā<br>sītām āsīt smarann iva</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">jñāpanārthaṁ punar nitya-<br>sambandhaḥ svātmanaḥ śriyāḥ<br>ayodhyāyā vinirgacchan<br>sarva-lokasya ceśvaraḥ<br>pratyakṣaṁ tu śriyā sārdhaṁ<br>jagāmānādir avyayaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">nakṣatra-māsa-gaṇitaṁ<br>trayodaśa-sahasrakam<br>brahmaloka-samaṁ cakre<br>samastaṁ kṣiti-maṇḍalam</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">rāmo rāmo rāma iti<br>sarveṣām abhavat tadā<br>sarvoramamayo loko<br>yadā rāmas tv apālayat</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            It was actually impossible for Rāvaṇa to take away Sītā. The form of Sītā taken by Rāvaṇa was an illusory representation of mother Sītā—<span class="Italic">maya-sītā.</span> When Sītā was tested in the fire, this <span class="Italic">māyā-sītā</span> was burnt, and the real Sītā came out of the fire.
+          </p>
+          <p>
+            A further understanding to be derived from this example is that a woman, however powerful she may be in the material world, must be given protection, for as soon as she is unprotected she will be exploited by Rākṣasas like Rāvaṇa. Here the words <span class="Italic">vaideha-rāja-duhitari</span> indicate that before mother Sītā was married to Lord Rāmacandra she was protected by her father, Vaideha-rāja. And when she was married she was protected by her husband. Therefore the conclusion is that a woman should always be protected. According to the Vedic rule, there is no scope for a woman’s being independent (<span class="Italic">asamakṣam</span>), for a woman cannot protect herself independently.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">77</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra, whose lotus feet are worshiped by Lord Brahmā and Lord Śiva, had assumed the form of a human being. Thus He performed the funeral ceremony of Jaṭāyu, who was killed by Rāvaṇa. The Lord then killed the demon named Kabandha, and after making friends with the monkey chiefs, killing Vāli and arranging for the deliverance of mother Sītā, He went to the beach of the ocean.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            When Rāvaṇa kidnapped Sītā, he was obstructed on the way by Jaṭāyu, a large bird. But the powerful Rāvaṇa defeated Jaṭāyu in the fight and cut his wing. When Rāmacandra was searching for Sītā, He found Jaṭāyu almost dead and was informed that Sītā has been carried off by Rāvaṇa. When Jaṭāyu died, Lord Rāmacandra did the duty of a son by performing the funeral ceremony, and then He made friends with the monkeys to deliver Sītādevī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After reaching the beach, Lord Rāmacandra fasted for three days, awaiting the arrival of the ocean personified. When the ocean did not come, the Lord exhibited His pastimes of anger, and simply by His glancing over the ocean, all the living entities within it, including the crocodiles and sharks, were agitated by fear. Then the personified ocean fearfully approached Lord Rāmacandra, taking all paraphernalia to worship Him. Falling at the Lord’s lotus feet, the personified ocean spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">141</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O all-pervading Supreme Person, we are dull-minded and did not understand who You are, but now we understand that You are the Supreme Person, the master of the entire universe, the unchanging and original Personality of Godhead. The demigods are infatuated with the mode of goodness, the Prajāpatis with the mode of passion, and the lord of ghosts with the mode of ignorance, but You are the master of all these qualities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            The word <span class="Italic">jaḍa-dhiyaḥ</span> refers to intelligence like that of an animal. A person with such intelligence cannot understand the Supreme Personality of Godhead. Without being beaten, an animal cannot understand the purpose of a man. Similarly, those who are dull-minded cannot understand the Supreme Personality of Godhead, but when punished severely by the modes of material nature, they begin to understand Him. A Hindi poet has said:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">duḥkha se saba hari bhaje<br>sukha se bhaje koī<br>sukha se agar hari bhaje<br>duḥkha kāthāṅ se haya</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            When one is distressed he goes to the church or temple to worship the Lord, but when opulent he forgets the Lord. Therefore, punishment by the Lord through material nature is necessary in human society, for without it men forget the supremacy of the Lord due to their dull, blunt intelligence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">390</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My Lord, You may use my water as You like. Indeed, You may cross it and go to the abode of Rāvaṇa, who is the great source of disturbance and crying for the three worlds. He is the son of Viśravā, but is condemned like urine. Please go kill him and thus regain Your wife, Sītādevī. O great hero, although my water presents no impediment to Your going to Laṅkā, please construct a bridge over it to spread Your transcendental fame. Upon seeing this wonderfully uncommon deed of Your Lordship, all the great heroes and kings in the future will glorify You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            It is said that a son and urine emanate from the same source—the genitals. When a son is a devotee or a great learned person, the seminal discharge for begetting a son is successful, but if the son is unqualified and brings no glory to his family, he is no better than urine. Here Rāvaṇa is compared to urine because he was a cause of disturbances to the three worlds. Thus the ocean personified wanted him killed by Lord Rāmacandra.
+          </p>
+          <p>
+            One feature of the Supreme Personality of Godhead Lord Rāmacandra is omnipotence. The Lord can act without regard to material impediments or inconveniences, but to prove that He is the Supreme Personality of Godhead and was not merely advertised as Godhead or elected by popular vote, He constructed a wonderful bridge over the ocean. Nowadays it has become fashionable to create some artificial God who performs no uncommon activities; a little magic will bewilder a foolish person into selecting an artificial God because he does not understand how powerful God is. Lord Rāmacandra, however, constructed a bridge over the water with stone by making the stone float. This is proof of God’s uncommonly wonderful power. Why should someone be accepted as God without displaying extraordinary potency by doing something never to be done by any common man? We accept Lord Rāmacandra as the Supreme Personality of Godhead because He constructed this bridge, and we accept Lord Kṛṣṇa as the Supreme Personality of Godhead because He lifted Govardhana Hill when He was only seven years old. We should not accept any rascal as God or an incarnation of God, for God displays special features in His various activities. Therefore, the Lord Himself says in <span class="Ref_Italic">Bhagavad-gītā</span> (4.9):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">janma karma ca me divyam<br>evaṁ yo vetti tattvataḥ<br>tyaktvā dehaṁ punar janma<br>naiti mām eti so ’rjuna</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who knows the transcendental nature of My appearance and activities does not, upon leaving the body, take his birth again in this material world, but attains My eternal abode, O Arjuna.” The activities of the Lord are not common; they are all transcendentally wonderful and not able to be performed by any other living being. The symptoms of the Lord’s activities are all mentioned in the <span class="Italic">śāstras,</span> and after one understands them one can accept the Lord as He is.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_16_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">211</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī said: After constructing a bridge over the ocean by throwing into the water the peaks of mountains whose trees and other vegetation had been shaken by the hands of great monkeys, Lord Rāmacandra went to Laṅkā to release Sītādevī from the clutches of Rāvaṇa. With the direction and help of Vibhīṣaṇa, Rāvaṇa’s brother, the Lord, along with the monkey soldiers, headed by Sugrīva, Nīla and Hanumān, entered Rāvaṇa’s kingdom, Laṅkā, which had previously been burnt by Hanumān.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_16_purport">
+          <p>
+            Great mountain peaks covered with trees and plants were thrown into the sea by the monkey soldiers and began to float by the supreme will of the Lord. By the supreme will of the Lord, many great planets float weightlessly in space like swabs of cotton. If this is possible, why should great mountain peaks not be able to float on water? This is the omnipotence of the Supreme Personality of Godhead. He can do anything and everything He likes, because He is not under the control of the material nature; indeed, material nature is controlled by Him. <span class="Italic">Mayādhyakṣeṇa prakṛtiḥ sūyate sacarācaram: [Bg. 9.10]</span> only under His direction does <span class="Italic">prakṛti,</span> or material nature, work. Similar information is given in the <span class="Ref_Italic">Brahma-saṁhitā</span> (5.52):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yasyājñayā bhramati sambhṛta-kāla-cakro<br>govindam ādi-puruṣaṁ tam ahaṁ bhajāmi</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            Describing how material nature works, the <span class="Italic">Brahma-saṁhitā</span> says that the sun moves as desired by the Supreme Personality of Godhead. Consequently, for Lord Rāmacandra to construct a bridge over the Indian Ocean with the help of monkey soldiers who threw great mountain peaks into the water is not at all wonderful; it is wonderful only in the sense that it has kept the name and fame of Lord Rāmacandra eternally celebrated.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After entering Laṅkā, the monkey soldiers, led by chiefs like Sugrīva, Nīla and Hanumān, occupied all the sporting houses, granaries, treasuries, palace doorways, city gates, assembly houses, palace frontages and even the resting houses of the pigeons. When the city’s crossroads, platforms, flags and golden waterpots on its domes were all destroyed, the entire city of Laṅkā appeared like a river disturbed by a herd of elephants.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Rāvaṇa, the master of the Rākṣasas, saw the disturbances created by the monkey soldiers, he called for Nikumbha, Kumbha, Dhūmrākṣa, Durmukha, Surāntaka, Narāntaka and other Rākṣasas and also his son Indrajit. Thereafter he called for Prahasta, Atikāya, Vikampana and finally Kumbhakarṇa. Then he induced all his followers to fight against the enemies.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra, surrounded by Lakṣmaṇa and monkey soldiers like Sugrīva, Hanumān, Gandhamāda, Nīla, Aṅgada, Jāmbavān and Panasa, attacked the soldiers of the Rākṣasas, who were fully equipped with various invincible weapons like swords, lances, bows, prāsas, ṛṣṭis, śakti arrows, khaḍgas and tomaras.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">195</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Aṅgada and the other commanders of the soldiers of Rāmacandra faced the elephants, infantry, horses and chariots of the enemy and hurled against them big trees, mountain peaks, clubs and arrows. Thus the soldiers of Lord Rāmacandra killed Rāvaṇa’s soldiers, who had lost all good fortune because Rāvaṇa had been condemned by the anger of mother Sītā.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            The soldiers Lord Rāmacandra recruited in the jungle were all monkeys and did not have proper equipment with which to fight the soldiers of Rāvaṇa, for Rāvaṇa’s soldiers were equipped with weapons of modern warfare whereas the monkeys could only throw stones, mountain peaks and trees. It was only Lord Rāmacandra and Lakṣmaṇa who shot some arrows. But because the soldiers of Rāvaṇa were condemned by the curse of mother Sītā, the monkeys were able to kill them simply by throwing stones and trees. There are two kinds of strength—<span class="Italic">daiva</span> and <span class="Italic">puruṣākāra.</span> <span class="Italic">Daiva</span> refers to the strength achieved from the Transcendence, and <span class="Italic">puruṣākāra</span> refers to the strength organized by one’s own intelligence and power. Transcendental power is always superior to the power of the materialist. Depending on the mercy of the Supreme Lord, one must fight one’s enemies even though one may not be equipped with modern weapons. Therefore Kṛṣṇa instructed Arjuna, <span class="Italic">mām anusmara yudhya ca: [</span>Bg. 8.7<span class="Italic">]</span> “Think of Me and fight.” We should fight our enemy to the best of our ability, but for victory we must depend on the mercy of the Supreme Personality of Godhead.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, when Rāvaṇa, the king of the Rākṣasas, observed that his soldiers had been lost, he was extremely angry. Thus he mounted his airplane, which was decorated with flowers, and proceeded toward Lord Rāmacandra, who sat on the effulgent chariot brought by Mātali, the chariot driver of Indra. Then Rāvaṇa struck Lord Rāmacandra with sharp arrows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">183</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra said to Rāvaṇa: You are the most abominable of the man-eaters. Indeed, you are like their stool. You resemble a dog, for as a dog steals eatables from the kitchen in the absence of the householder, in My absence you kidnapped My wife, Sītādevī. Therefore as Yamarāja punishes sinful men, I shall also punish you. You are most abominable, sinful and shameless. Today, therefore, I, whose attempt never fails, shall punish you.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            <span class="Italic">Na ca daivāt paraṁ balam:</span> no one can surpass the strength of the Transcendence. Rāvaṇa was so sinful and shameless that he did not know what the result would be of kidnapping mother Sītā, the pleasure potency of Rāmacandra. This is the disqualification of the Rākṣasas. <span class="Italic">Asatyam apratiṣṭhaṁ te jagad āhur anīśvaram [Bg. 16.8].</span> The Rākṣasas are unaware that the Supreme Lord is the ruler of the creation. They think that everything has come about by chance or accident and that there is no ruler, king or controller. Therefore the Rākṣasas act independently, as they like, going even so far as to kidnap the goddess of fortune. This policy of Rāvaṇa’s is extremely dangerous for the materialist; indeed, it brings ruin to the materialistic civilization. Nonetheless, because atheists are Rākṣasas, they dare to do things that are most abominable, and thus they are punished without fail. Religion consists of the orders of the Supreme Lord, and one who carries out these orders is religious. One who fails to carry out the Lord’s orders is irreligious, and he is to be punished.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="23">
+        <div class="verse_controls">
+          <button class="verse_num btn">[23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_23_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">343</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After thus rebuking Rāvaṇa, Lord Rāmacandra fixed an arrow to His bow, aimed at Rāvaṇa, and released the arrow, which pierced Rāvaṇa’s heart like a thunderbolt. Upon seeing this, Rāvaṇa’s followers raised a tumultuous sound, crying, “Alas! Alas! What has happened? What has happened?” as Rāvaṇa, vomiting blood from his ten mouths, fell from his airplane, just as a pious man falls to earth from the heavenly planets when the results of his pious activities are exhausted.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_23_purport">
+          <p>
+            In <span class="Ref_Italic">Bhagavad-gītā</span> (9.21) it is said, <span class="Italic">kṣīṇe puṇye martya-lokaṁ viśanti:</span> “When the results of their pious activities are exhausted, those who have enjoyed in the heavenly planets fall again to earth.” The fruitive activities of this material world are such that whether one acts piously or impiously one must remain within the material world according to different conditions, for neither pious nor impious actions can relieve one from <span class="Italic">māyā’s</span> clutches of repeated birth and death. Somehow or other, Rāvaṇa was raised to an exalted position as the king of a great kingdom with all material opulences, but because of his sinful act of kidnapping mother Sītā, all the results of his pious activities were destroyed. If one offends an exalted personality, especially the Supreme Personality of Godhead, one certainly becomes most abominable; bereft of the results of pious activities, one must fall down like Rāvaṇa and other demons. It is therefore advised that one transcend both pious and impious activities and remain in the pure state of freedom from all designations (<span class="Italic">sarvopādhi-vinirmuktaṁ tat-paratvena nirmalam</span> [Cc. Madhya 19.170]). When one is fixed in devotional service, he is above the material platform. On the material platform there are higher and lower positions, but when one is above the material platform he is always fixed in a spiritual position (<span class="Italic">sa guṇān samatītyaitān brahma-bhūyāya kalpate [Bg. </span>14.26]). Rāvaṇa or those like him may be very powerful and opulent in this material world, but theirs is not a secure position, because, after all, they are bound by the results of their <span class="Italic">karma</span> (<span class="Italic">karmaṇā daiva-netreṇa</span>). We should not forget that we are completely dependent on the laws of nature.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">prakṛteḥ kriyamāṇāni<br>guṇaiḥ karmāṇi sarvaśaḥ<br>ahaṅkāra-vimūḍhātmā<br>kartāham iti manyate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself the doer of activities that are in actuality carried out by nature.” (Bg. 3.27) One should not be proud of one’s exalted position and act like Rāvaṇa, thinking oneself independent of material nature’s laws.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, all the women whose husbands had fallen in the battle, headed by Mandodarī, the wife of Rāvaṇa, came out of Laṅkā. Continuously crying, they approached the dead bodies of Rāvaṇa and the other Rākṣasas.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Striking their breasts in affliction because their husbands had been killed by the arrows of Lakṣmaṇa, the women embraced their respective husbands and cried piteously in voices appealing to everyone.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_26_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">50</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O my lord, O master! You epitomized trouble for others, and therefore you were called Rāvaṇa. But now that you have been defeated, we also are defeated, for without you the state of Laṅkā has been conquered by the enemy. To whom will it go for shelter?
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_26_purport">
+          <p>
+            Rāvaṇa’s wife Mandodarī and the other wives knew very well how cruel a person Rāvaṇa was. The very word “Rāvaṇa” means “one who causes crying for others.” Rāvaṇa continuously caused trouble for others, but when his sinful activities culminated in giving trouble to Sītādevī, he was killed by Lord Rāmacandra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_27_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">230</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O greatly fortunate one, you came under the influence of lusty desires, and therefore you could not understand the influence of mother Sītā. Now, because of her curse, you have been reduced to this state, having been killed by Lord Rāmacandra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_27_purport">
+          <p>
+            Not only was mother Sītā powerful, but any woman who follows in the footsteps of mother Sītā can also become similarly powerful. There are many instances of this in the history of Vedic literature. Whenever we find a description of ideal chaste women, mother Sītā is among them. Mandodarī, the wife of Rāvaṇa, was also very chaste. Similarly, Draupadī was one of five exalted chaste women. As a man must follow great personalities like Brahmā and Nārada, a woman must follow the path of such ideal women as Sītā, Mandodarī and Draupadī. By staying chaste and faithful to her husband, a woman enriches herself with supernatural power. It is a moral principle that one should not be influenced by lusty desires for another’s wife. <span class="Italic">Mātṛvat para-dāreṣu:</span> an intelligent person must look upon another’s wife as being like his mother. This is a moral injunction from <span class="Ref_Italic">Cāṇakya-śloka</span> (10).
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mātṛvat para-dāreṣu<br>para-dravyeṣu loṣṭravat<br>ātmavat sarva-bhūteṣu<br>yaḥ paśyati sa paṇḍitaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “One who considers another’s wife as his mother, another’s possessions as a lump of dirt and treats all other living beings as he would himself, is considered to be learned.” Thus Rāvaṇa was condemned not only by Lord Rāmacandra but even by his own wife, Mandodarī. Because she was a chaste woman, she knew the power of another chaste woman, especially such a wife as mother Sītādevī.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">175</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O pleasure of the Rākṣasa dynasty, because of you the state of Laṅkā and also we ourselves now have no protector. By your deeds you have made your body fit to be eaten by vultures and your soul fit to go to hell.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            One who follows the path of Rāvaṇa is condemned in two ways: his body is fit to be eaten by dogs and vultures, and the soul goes to hell. As stated by the Lord Himself in <span class="Ref_Italic">Bhagavad-gītā</span> (16.19):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tān ahaṁ dviṣataḥ krūrān<br>saṁsāreṣu narādhamān<br>kṣipāmy ajasram aśubhān<br>āsurīṣv eva yoniṣu</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean of material existence, into various demoniac species of life.” Thus the destination of godless atheists such as Rāvaṇa, Hiraṇyakaśipu, Kaṁsa and Dantavakra is a hellish condition of life. Mandodarī, the wife of Rāvaṇa, could understand all this because she was a chaste woman. Although lamenting for the death of her husband, she knew what would happen to his body and soul, for although one cannot see directly with one’s material eyes, one can see with eyes of knowledge (<span class="Italic">paśyanti jñāna-cakṣuṣaḥ</span>). In Vedic history there are many instances of how one becomes godless and is condemned by the laws of nature.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_29_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">97</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: Vibhīṣaṇa, the pious brother of Rāvaṇa and devotee of Lord Rāmacandra, received approval from Lord Rāmacandra, the King of Kosala. Then he performed the prescribed funeral ceremonies for his family members to save them from the path to hell.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_29_purport">
+          <p>
+            After giving up the body, one is transferred to another body, but sometimes, if one is too sinful, he is checked from transmigrating to another body, and thus he becomes a ghost. To save a diseased person from ghostly life, the funeral ceremony, or <span class="Italic">śrāddha</span> ceremony, as prescribed in authorized <span class="Italic">śāstra,</span> must be performed. Rāvaṇa was killed by Lord Rāmacandra and was destined for hellish life, but by Lord Rāmacandra’s advice, Vibhīṣaṇa, Rāvaṇa’s brother, performed all the duties prescribed in relation to the dead. Thus Lord Rāmacandra was kind to Rāvaṇa even after Rāvaṇa’s death.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, Lord Rāmacandra found Sītādevī sitting in a small cottage beneath the tree named Siṁśapā in a forest of Aśoka trees. She was lean and thin, being aggrieved because of separation from Him.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Seeing His wife in that condition, Lord Rāmacandra was very compassionate. When Rāmacandra came before her, she was exceedingly happy to see her beloved, and her lotuslike mouth showed her joy.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After giving Vibhīṣaṇa the power to rule the Rākṣasa population of Laṅkā for the duration of one kalpa, Lord Rāmacandra, the Supreme Personality of Godhead [Bhagavān], placed Sītādevī on an airplane decorated with flowers and then got on the plane Himself. The period for His living in the forest having ended, the Lord returned to Ayodhyā, accompanied by Hanumān, Sugrīva and His brother Lakṣmaṇa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Lord Rāmacandra returned to His capital, Ayodhyā, He was greeted on the road by the princely order, who showered His body with beautiful, fragrant flowers, while great personalities like Lord Brahmā and other demigods glorified the activities of the Lord in great jubilation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon reaching Ayodhyā, Lord Rāmacandra heard that in His absence His brother Bharata was eating barley cooked in the urine of a cow, covering His body with the bark of trees, wearing matted locks of hair, and lying on a mattress of kuśa. The most merciful Lord very much lamented this.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35–38.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Lord Bharata understood that Lord Rāmacandra was returning to the capital, Ayodhyā, He immediately took upon His own head Lord Rāmacandra’s wooden shoes and came out from His camp at Nandigrāma. Lord Bharata was accompanied by ministers, priests and other respectable citizens, by professional musicians vibrating pleasing musical sounds, and by learned brāhmaṇas loudly chanting Vedic hymns. Following in the procession were chariots drawn by beautiful horses with harnesses of golden rope. These chariots were decorated by flags with golden embroidery and by other flags of various sizes and patterns. There were soldiers bedecked with golden armor, servants bearing betel nut, and many well-known and beautiful prostitutes. Many servants followed on foot, bearing an umbrella, whisks, different grades of precious jewels, and other paraphernalia befitting a royal reception. Accompanied in this way, Lord Bharata, His heart softened in ecstasy and His eyes full of tears, approached Lord Rāmacandra and fell at His lotus feet with great ecstatic love.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39–40.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After offering the wooden shoes before Lord Rāmacandra, Lord Bharata stood with folded hands, His eyes full of tears, and Lord Rāmacandra bathed Bharata with tears while embracing Him with both arms for a long time. Accompanied by mother Sītā and Lakṣmaṇa, Lord Rāmacandra then offered His respectful obeisances unto the learned brāhmaṇas and the elderly persons in the family, and all the citizens of Ayodhyā offered their respectful obeisances unto the Lord.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="41">
+        <div class="verse_controls">
+          <button class="verse_num btn">[41.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The citizens of Ayodhyā, upon seeing their King return after a long absence, offered Him flower garlands, waved their upper cloths, and danced in great jubilation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="42">
+        <div class="verse_controls">
+          <button class="verse_num btn">[42–43.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King, Lord Bharata carried Lord Rāmacandra’s wooden shoes, Sugrīva and Vibhīṣaṇa carried a whisk and an excellent fan, Hanumān carried a white umbrella, Śatrughna carried a bow and two quivers, and Sītādevī carried a waterpot filled with water from holy places. Aṅgada carried a sword, and Jāmbavān, King of the Ṛkṣas, carried a golden shield.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="44">
+        <div class="verse_controls">
+          <button class="verse_num btn">[44.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O King Parīkṣit, as the Lord sat on His airplane of flowers, with women offering Him prayers and reciters chanting about His characteristics, He appeared like the moon with the stars and planets.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="45">
+        <div class="verse_controls">
+          <button class="verse_num btn">[45–46.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, having been welcomed by His brother Bharata, Lord Rāmacandra entered the city of Ayodhyā in the midst of a festival. When He entered the palace, He offered obeisances to all the mothers, including Kaikeyī and the other wives of Mahārāja Daśaratha, and especially His own mother, Kauśalyā. He also offered obeisances to the spiritual preceptors, such as Vasiṣṭha. Friends of His own age and younger friends worshiped Him, and He returned their respectful obeisances, as did Lakṣmaṇa and mother Sītā. In this way they all entered the palace.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="47">
+        <div class="verse_controls">
+          <button class="verse_num btn">[47.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Upon seeing their sons, the mothers of Rāma, Lakṣmaṇa, Bharata and Śatrughna immediately arose, like unconscious bodies returning to consciousness. The mothers placed their sons on their laps and bathed Them with tears, thus relieving themselves of the grief of long separation.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="48">
+        <div class="verse_controls">
+          <button class="verse_num btn">[48.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The family priest or spiritual master, Vasiṣṭha, had Lord Rāmacandra cleanly shaved, freeing Him from His matted locks of hair. Then, with the cooperation of the elderly members of the family, he performed the bathing ceremony [abhiṣeka] for Lord Rāmacandra with the water of the four seas and with other substances, just as it was performed for King Indra.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="49">
+        <div class="verse_controls">
+          <button class="verse_num btn">[49.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra, fully bathed and His head clean-shaven, dressed Himself very nicely and was decorated with a garland and ornaments. Thus He shone brightly, surrounded by His brothers and wife, who were similarly dressed and ornamented.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="50">
+        <div class="verse_controls">
+          <button class="verse_num btn">[50.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_50_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">572</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Being pleased by the full surrender and submission of Lord Bharata, Lord Rāmacandra then accepted the throne of the state. He cared for the citizens exactly like a father, and the citizens, being fully engaged in their occupational duties of varṇa and āśrama, accepted Him as their father.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_50_purport">
+          <p>
+            People are very fond of the pattern of Rāma-rājya, and even today politicians sometimes form a party called Rāma-rājya, but unfortunately they have no obedience to Lord Rāma. It is sometimes said that people want the kingdom of God without God. Such an aspiration, however, is never to be fulfilled. Good government can exist when the relationship between the citizens and the government is like that exemplified by Lord Rāmacandra and His citizens. Lord Rāmacandra ruled His kingdom exactly as a father takes care of his children, and the citizens, being obliged to the good government of Lord Rāmacandra, accepted the Lord as their father. Thus the relationship between the citizens and the government should be exactly like that between father and son. When the sons in a family are well trained, they are obedient to the father and mother, and when the father is well qualified, he takes good care of the children. As indicated here by the words <span class="Italic">sva-dharma-niratā varṇāśrama-guṇān-vitāḥ,</span> the people were good citizens because they accepted the institution of <span class="Italic">varṇa</span> and <span class="Italic">āśrama,</span> which arranges society in the <span class="Italic">varṇa</span> divisions of <span class="Italic">brāhmaṇa, kṣatriya, vaiśya</span> and <span class="Italic">śūdra</span> and the <span class="Italic">āśrama</span> divisions of <span class="Italic">brahmacarya, gṛhastha, vānaprastha</span> and <span class="Italic">sannyāsa.</span> This is actual human civilization. People must be trained according to the different <span class="Italic">varṇāśrama</span> occupational duties. As confirmed in <span class="Ref_Italic">Bhagavad-gītā</span> (4.13), <span class="Italic">cātur-varṇyaṁ mayā sṛṣṭaṁ guṇa-karma-vibhāgaśaḥ:</span> the four <span class="Italic">varṇas</span> must be established according to varying qualities and work. The first principle for good government is that it must institute this <span class="Italic">varṇāśrama</span> system. The purpose of <span class="Italic">varṇāśrama</span> is to enable people to become God conscious. <span class="Italic">Varṇāśramācāravatā puruṣeṇa paraḥ pumān viṣṇur ārādhyate.</span> The entire <span class="Italic">varṇāśrama</span> scheme is intended to enable people to become Vaiṣṇavas. <span class="Italic">Viṣṇur asya devatā.</span> When people worship Lord Viṣṇu as the Supreme Lord, they become Vaiṣṇavas. Thus people should be trained to become Vaiṣṇavas through the system of <span class="Italic">varṇa</span> and <span class="Italic">āśrama,</span> as they were during the reign of Lord Rāmacandra, when everyone was fully trained to follow the <span class="Italic">varṇāśrama</span> principles.
+          </p>
+          <p>
+            Simply enforcing laws and ordinances cannot make the citizens obedient and lawful. That is impossible. Throughout the entire world there are so many states, legislative assemblies and parliaments, but still the citizens are rogues and thieves. Good citizenship, therefore, cannot be enforced; the citizens must be trained. As there are schools and colleges to train students to become chemical engineers, lawyers or specialists in many other departments of knowledge, there must be schools and colleges to train students to become <span class="Italic">brāhmaṇas, kṣatriyas, vaiśyas, śūdras, brahmacārīs, gṛhasthas, vānaprasthas</span> and <span class="Italic">sannyāsīs.</span> This will provide the preliminary condition for good citizenship (<span class="Italic">varṇāśrama-guṇān-vitāḥ</span>). Generally speaking, if the king or president is a <span class="Italic">rājarṣi,</span> the relationship between the citizens and the chief executive will be clear, and there will be no possibility of disruption in the state, because the number of thieves and rogues will decrease. In Kali-yuga, however, because the <span class="Italic">varṇāśrama</span> system is neglected, people are generally thieves and rogues. In the system of democracy, such thieves and rogues naturally collect money from other thieves and rogues, and thus there is chaos in every government, and no one is happy. But here the example of good government is to be found in the reign of Lord Rāmacandra. If people follow this example, there will be good government all over the world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="51">
+        <div class="verse_controls">
+          <button class="verse_num btn">[51.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_51_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">244</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra became King during Tretā-yuga, but because of His good government, the age was like Satya-yuga. Everyone was religious and completely happy.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_51_purport">
+          <p>
+            Among the four <span class="Italic">yugas</span>—Satya, Tretā, Dvāpara and Kali—the Kali-yuga is the worst, but if the process of <span class="Italic">varṇāśrama-dharma</span> is introduced, even in this age of Kali, the situation of Satya-yuga can be invoked. The Hare Kṛṣṇa movement, or Kṛṣṇa consciousness movement, is meant for this purpose.
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">kaler doṣa-nidhe rājann<br>asti hy eko mahān guṇaḥ<br>kīrtanād eva kṛṣṇasya<br>mukta-saṅgaḥ paraṁ vrajet</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “My dear King, although Kali-yuga is full of faults, there is still one good quality about this age: simply by chanting the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> one can become free from material bondage and be promoted to the transcendental kingdom.” (<span class="Ref_Italic">Bhāg.</span> 12.3.51) If people take to this <span class="Italic">saṅkīrtana</span> movement of chanting Hare Kṛṣṇa, Hare Rāma, they will certainly be freed from the contamination of Kali-yuga, and the people of this age will be happy, as people were in Satya-yuga, the golden age. Anyone, anywhere, can easily take to this Hare Kṛṣṇa movement; one need only chant the Hare Kṛṣṇa <span class="Italic">mahā-mantra,</span> observe the rules and regulations, and stay free from the contamination of sinful life. Even if one is sinful and cannot give up sinful life immediately, if he chants the Hare Kṛṣṇa <span class="Italic">mahā-mantra</span> with devotion and faith he will certainly be freed from all sinful activities, and his life will be successful. Paraṁ <span class="Italic">vijayate śrī-kṛṣṇa-saṅkīrtanam.</span> This is the blessing of Lord Rāmacandra, who has appeared in this age of Kali as Lord Gaurasundara.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="52">
+        <div class="verse_controls">
+          <button class="verse_num btn">[52.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Parīkṣit, best of the Bharata dynasty, during the reign of Lord Rāmacandra the forests, the rivers, the hills and mountains, the states, the seven islands and the seven seas were all favorable in supplying the necessities of life for all living beings.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="53">
+        <div class="verse_controls">
+          <button class="verse_num btn">[53.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_53_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">96</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            When Lord Rāmacandra, the Supreme Personality of Godhead, was the King of this world, all bodily and mental suffering, disease, old age, bereavement, lamentation, distress, fear and fatigue were completely absent. There was even no death for those who did not want it.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_53_purport">
+          <p>
+            All these facilities existed because of Lord Rāmacandra’s presence as the King of the entire world. A similar situation could be introduced immediately, even in this age called Kali, the worst of all ages. It is said, <span class="Italic">kali-kāle nāma-rūpe kṛṣṇa-avatāra:</span> Kṛṣṇa descends in this Kali-yuga in the form of His holy name—Hare Kṛṣṇa, Hare Rāma. If we chant offenselessly, Rāma and Kṛṣṇa are still present in this age. The kingdom of Rāma was immensely popular and beneficial, and the spreading of this Hare Kṛṣṇa movement can immediately introduce a similar situation, even in this Kali-yuga.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="54">
+        <div class="verse_controls">
+          <button class="verse_num btn">[54.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_54_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">196</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Rāmacandra took a vow to accept only one wife and have no connection with any other women. He was a saintly king, and everything in His character was good, untinged by qualities like anger. He taught good behavior for everyone, especially for householders, in terms of varṇāśrama-dharma. Thus He taught the general public by His personal activities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_54_purport">
+          <p>
+            <span class="Italic">Eka-patnī-vrata,</span> accepting only one wife, was the glorious example set by Lord Rāmacandra. One should not accept more than one wife. In those days, of course, people did marry more than one wife. Even Lord Rāmacandra’s father accepted more wives than one. But Lord Rāmacandra, as an ideal king, accepted only one wife, mother Sītā. When mother Sītā was kidnapped by Rāvaṇa and the Rākṣasas, Lord Rāmacandra, as the Supreme Personality of Godhead, could have married hundreds and thousands of Sītās, but to teach us how faithful He was to His wife, He fought with Rāvaṇa and finally killed him. The Lord punished Rāvaṇa and rescued His wife to instruct men to have only one wife. Lord Rāmacandra accepted only one wife and manifested sublime character, thus setting an example for householders. A householder should live according to the ideal of Lord Rāmacandra, who showed how to be a perfect person. Being a householder or living with a wife and children is never condemned, provided one lives according to the regulative principles of <span class="Italic">varṇāśrama-dharma.</span> Those who live in accordance with these principles, whether as householders, <span class="Italic">brahmacārīs</span> or <span class="Italic">vānaprasthas,</span> are all equally important.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="55">
+        <div class="verse_controls">
+          <button class="verse_num btn">[55.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_55_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">80</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mother Sītā was very submissive, faithful, shy and chaste, always understanding the attitude of her husband. Thus by her character and her love and service she completely attracted the mind of the Lord.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_55_purport">
+          <p>
+            As Lord Rāmacandra is the ideal husband (<span class="Italic">eka-patnī-vrata</span>), mother Sītā is the ideal wife. Such a combination makes family life very happy. <span class="Italic">Yad yad ācarati śreṣṭhas tat tad evetaro janaḥ:</span> whatever example a great man sets, common people follow. If the kings, the leaders, and the <span class="Italic">brāhmaṇas,</span> the teachers, would set forth the examples we receive from Vedic literature, the entire world would be heaven; indeed, there would no longer be hellish conditions within this material world.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Ninth Canto, Tenth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Pastimes of the Supreme Lord, Rāmacandra.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/9/10">https://prabhupadabooks.com/sb/9/10</a><!-- span.text_source_copied_date
+        | on 2025-11-02 21:49:19 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 9.9: The Dynasty of Amsuman     Next: SB 9.11: Lord Ramacandra Rules the World</div>
+      </p>
+    </div>
+  </body>
+</html>

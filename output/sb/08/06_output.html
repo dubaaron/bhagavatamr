@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ŚB 8.6, The Demigods and Demons Declare a Truce</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://stackedit.io/style.css" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
+    <script crossorigin="anonymous" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        },
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+      
+        current_verse_highlighted = false;
+      
+        $('.verse_num').click(function() {
+          console.log('haribol!')
+          current_verse_highlighted = $(this).parents('.verse')[0]
+          toggleVerseHighlight(current_verse_highlighted)
+      
+        })
+      
+        $(document).keydown(function(event) {
+          if (current_verse_highlighted != false) {
+            const callback = {
+              'ArrowUp'   : moveHighlightToPrevVerse,
+              'ArrowDown' : moveHighlightToNextVerse,
+            }[event.key]
+            callback?.(event)
+          }
+        })
+      
+      });
+      
+      
+      function toggleVerseHighlight(verseElement, scrollToCenter = false) {
+        el = $($(verseElement).find('.verse_translation')[0]).toggleClass('current_highlight').get(0)
+        if (scrollToCenter) {
+          el.scrollIntoView({behavior: 'smooth', block: 'center'})
+        }
+      }
+      
+      
+      function moveHighlightToNextVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).next()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      
+      }
+      
+      function moveHighlightToPrevVerse(event) {
+        event.preventDefault()
+        toggleVerseHighlight(current_verse_highlighted)
+        current_verse_highlighted = $(current_verse_highlighted).prev()
+        toggleVerseHighlight(current_verse_highlighted, true)
+      }
+    </script>
+    <style type="text/css">
+      body {
+        color: #111;
+        /* font-size: 24px; */
+        /* font-family: 'Times New Roman', 'Manuale', serif; */
+        font-variant-ligatures: common-ligatures;
+        line-height: 1.67;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: antiquewhite;
+      }
+      .collapse.show {
+        visibility: visible;
+      }
+      .verse_controls {
+        margin-bottom: -0.65rem; 
+      }
+      .verse_translation {
+        font-weight: bold;
+        /* text-indent: -2rem; */
+      }
+      .verse_translation p {
+        margin-top: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-size: 20px;
+      }
+      .verse_purport_content p {
+        font-size: 18px
+      }
+      .verse_num {
+        /* position: absolute; */
+        /* float: right; */
+        /* right: 0.5rem; */
+        text-align: right;
+        color: #555;
+        font-size: 0.9em;
+        font-weight: normal;
+      }
+      .text_source_copied_date {
+        display: block;
+        font-size: 0.8em;
+        color: #555;
+      }
+      .verse_controls {
+        text-align: right;
+      }
+      .purport_wordcount {
+        text-color: 
+      }
+      .current_highlight {
+        border: 1px dotted;
+        border-radius: 1rem;
+        padding: 0 1rem;
+        margin: auto -1rem;
+        background: rgba(0,0,108,0.2);
+        font-weight: bold;
+      }
+      .current_highlight p {
+      
+      }
+      .Italic { /* holdover from source */
+        font-style: italic;
+      }
+      .summary div.Normal-Level { 
+        /* these are basically paragraphs in the chapter summary */
+        margin-bottom: 1rem;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prose lg:prose-2xl m-auto container p-4">
+      <h2>
+        Śrīmad-Bhāgavatam, Canto 8:<br>
+        “Withdrawal of the Cosmic Creations”
+      </h2>
+      <h1 class="text-3xl">
+        Chapter Six:<br>The Demigods and Demons Declare a Truce
+      </h1>
+      <h3>
+        Chapter Summary
+      </h3>
+      <div class="summary">
+        <p>
+          <div class="Normal-Level">This chapter describes how the Lord appeared before the demigods when they offered Him their prayers. Following the advice of the Supreme Personality of Godhead, the demigods executed a truce with the demons for the purpose of churning nectar from the sea.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Because of the prayers offered by the demigods in the previous chapter, Lord Kṣīrodakaśāyī Viṣṇu was pleased with the demigods, and thus He appeared before them. The demigods were almost blinded by His transcendental bodily effulgence. At first, therefore, they could not even see any part of His body. After some time, however, when Brahmā could see the Lord, he, along with Lord Śiva, began to offer the Lord prayers.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Lord Brahmā said: “The Supreme Personality of Godhead, being beyond birth and death, is eternal. He has no material qualities. Yet He is the ocean of unlimited auspicious qualities. He is subtler than the most subtle, He is invisible, and His form is inconceivable. He is worshipable for all the demigods. Innumerable universes exist within His form, and therefore He is never separated from these universes by time, space or circumstances. He is the chief and the <span class="Italic">pradhāna.</span> Although He is the beginning, the middle and the end of the material creation, the idea of pantheism conceived by Māyāvādī philosophers has no validity. The Supreme Personality of Godhead controls the entire material manifestation through His subordinate agent, the external energy. Because of His inconceivable transcendental position, He is always the master of the material energy. The Supreme Personality of Godhead, in His various forms, is always present even within this material world, but the material qualities cannot touch Him. One can understand His position only by His instructions, as given in <span class="Italic">Bhagavad-gītā.</span>” As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (10.10), <span class="Italic">dadāmi buddhi-yogaṁ tam.</span> <span class="Italic">Buddhi-yoga</span> means <span class="Italic">bhakti-yoga.</span> Only through the process of <span class="Italic">bhakti-yoga</span> can one understand the Supreme Lord.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">When offered prayers by Lord Śiva and Lord Brahmā, the Supreme Personality of Godhead was pleased. Thus He gave appropriate instructions to all the demigods. The Supreme Personality of Godhead, who is known as Ajita, unconquerable, advised the demigods to make a peace proposal to the demons, so that after formulating a truce, the demigods and demons could churn the ocean of milk. The rope would be the biggest serpent, known as Vāsuki, and the churning rod would be Mandara Mountain. Poison would also be produced from the churning, but it would be taken by Lord Śiva, and so there would be no need to fear it. Many other attractive things would be generated by the churning, but the Lord warned the demigods not to be captivated by such things. Nor should the demigods be angry if there were some disturbances. After advising the demigods in this way, the Lord disappeared from the scene.</div>
+        </p>
+        <p>
+          <div class="Normal-Level">Following the instructions of the Supreme Personality of Godhead, the demigods established a peace with Mahārāja Bali, the King of the demons. Then both the demons and the demigods started for the ocean, taking Mandara Mountain with them. Because of the great heaviness of the mountain, the demigods and demons became fatigued, and some of them actually died. Then the Supreme Personality of Godhead, Viṣṇu, appeared there on the back of His carrier, Garuḍa, and by His mercy He brought these demigods and demons back to life. The Lord then lifted the mountain with one of His hands and placed it on the back of Garuḍa. The Lord sat on the mountain and was carried to the spot of the churning by Garuḍa, who placed the mountain in the middle of the sea. Then the Lord asked Garuḍa to leave that place because as long as Garuḍa was present, Vāsuki could not come there.</div>
+        </p>
+      </div>
+      <div class="verse" data-verse_num="1">
+        <div class="verse_controls">
+          <button class="verse_num btn">[1.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śrī Śukadeva Gosvāmī said: O King Parīkṣit, the Supreme Personality of Godhead, Hari, being thus worshiped with prayers by the demigods and Lord Brahmā, appeared before them. His bodily effulgence resembled the simultaneous rising of thousands of suns.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="2">
+        <div class="verse_controls">
+          <button class="verse_num btn">[2.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The vision of all the demigods was blocked by the Lord’s effulgence. Thus they could see neither the sky, the directions, the land, nor even themselves, what to speak of seeing the Lord, who was present before them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="3">
+        <div class="verse_controls">
+          <button class="verse_num btn">[3–7.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā, along with Lord Śiva, saw the crystal-clear personal beauty of the Supreme Personality of Godhead, whose blackish body resembles a marakata gem, whose eyes are reddish like the depths of a lotus, who is dressed with garments that are yellow like molten gold, and whose entire body is attractively decorated. They saw His beautiful, smiling, lotuslike face, crowned by a helmet bedecked with valuable jewels. The Lord has attractive eyebrows, and His cheeks are adorned with earrings. Lord Brahmā and Lord Śiva saw the belt on the Lord’s waist, the bangles on Mis arms, the necklace on His chest, and the ankle bells on His legs. The Lord is bedecked with flower garlands, His neck is decorated with the Kaustubha gem, and He carries with Him the goddess of fortune and His personal weapons, like His disc and club. When Lord Brahmā, along with Lord Śiva and the other demigods, thus saw the form of the Lord, they all immediately fell to the ground, offering their obeisances.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="8">
+        <div class="verse_controls">
+          <button class="verse_num btn">[8.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_8_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">240</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Lord Brahmā said: Although You are never born, Your appearance and disappearance as an incarnation never cease. You are always free from the material qualities, and You are the shelter of transcendental bliss resembling an ocean. Eternally existing in Your transcendental form, You are the supreme subtle of the most extremely subtle. We therefore offer our respectful obeisances unto You, the Supreme, whose existence is inconceivable.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_8_purport">
+          <p>
+            The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (4.6):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">ajo ’pi sann avyayātmā<br>bhūtānām īśvaro ’pi san<br>prakṛtiṁ svām adhiṣṭhāya<br>sambhavāmy ātma-māyayā</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Although I am unborn and My transcendental body never deteriorates, and although I am the Lord of all sentient beings, I still appear in every millennium in My original transcendental form.” In the following verse in <span class="Ref_Italic">Bhagavad-gītā</span> (4.7), the Lord says:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yadā yadā hi dharmasya<br>glānir bhavati bhārata<br>abhyutthānam adharmasya<br>tadātmānaṁ sṛjāmy aham</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise of irreligion—at that time descend Myself.” Thus although the Supreme Lord is unborn, there is no cessation to His appearance in different forms as incarnations like Lord Kṛṣṇa and Lord Rāma. Since His incarnations are eternal, the various activities performed by these incarnations are also eternal. The Supreme Personality of Godhead does not appear because He is forced to do so by <span class="Italic">karma</span> like ordinary living entities who are forced to accept a certain type of body. It is to be understood that the Lord’s body and activities are all transcendental, being free from the contamination of the material modes of nature. These pastimes are transcendental bliss to the Lord. The word <span class="Italic">aparigaṇya-dhāmne</span> is very significant. There is no limit to the Lord’s appearance in different incarnations. All of these incarnations are eternal, blissful and full of knowledge.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="9">
+        <div class="verse_controls">
+          <button class="verse_num btn">[9.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_9_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">194</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O best of persons, O supreme director, those who actually aspire for supreme good fortune worship this form of Your Lordship according to the Vedic Tantras. My Lord, we can see all the three worlds in You.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_9_purport">
+          <p>
+            The Vedic <span class="Italic">mantras</span> say: <span class="Italic">yasmin vijñāte sarvam evaṁ vijñātaṁ bhavati.</span> When the devotee sees the Supreme Personality of Godhead by his meditation, or when he sees the Lord personally, face to face, he becomes aware of everything within this universe. Indeed, nothing is unknown to him. Everything within this material world is fully manifested to a devotee who has seen the Supreme Personality of Godhead. <span class="Ref_Italic">Bhagavad-gītā</span> (4.34) therefore advises:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">tad viddhi praṇipātena<br>paripraśnena sevayā<br>upadekṣyanti te jñānaṁ<br>jñāninas tattva-darśinaḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service unto him. The self-realized soul can impart knowledge unto you because he has seen the truth.” Lord Brahmā is one of these self-realized authorities (<span class="Italic">svayambhūr nāradaḥ śambhuḥ kumāraḥ kapilo manuḥ</span> [SB 6.3.20]). One must therefore accept the disciplic succession from Lord Brahmā, and then one can understand the Supreme Personality of Godhead in fullness. Here the word <span class="Italic">viśva-mūrtau</span> indicates that everything exists in the form of the Supreme Personality of Godhead. One who is able to worship Him can see everything in Him and see Him in everything.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="10">
+        <div class="verse_controls">
+          <button class="verse_num btn">[10.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear Lord, who are always fully independent, this entire cosmic manifestation arises from You, rests upon You and ends in You. Your Lordship is the beginning, sustenance and end of everything, like the earth, which is the cause of an earthen pot, which supports the pot, and to which the pot, when broken, finally returns.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="11">
+        <div class="verse_controls">
+          <button class="verse_num btn">[11.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_11_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">138</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Supreme, You are independent in Your self and do not take help from others. Through Your own potency, You create this cosmic manifestation and enter into it. Those who are advanced in Kṛṣṇa consciousness, who are fully in knowledge of the authoritative śāstra, and who, through the practice of bhakti-yoga, are cleansed of all material contamination, can see with clear minds that although You exist within the transformations of the material qualities, Your presence is untouched by these qualities.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_11_purport">
+          <p>
+            The Lord says in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">mayādhyakṣeṇa prakṛtiḥ<br>sūyate sacarācaram<br>hetunānena kaunteya<br>jagad viparivartate</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “This material nature, working under My direction, O son of Kuntī, is producing all moving and unmoving beings. By its rule this manifestation is created and annihilated again and again.” The material energy creates, maintains and devastates the entire cosmic manifestation because of directions given by the Supreme Personality of Godhead, who enters this universe as Garbhodakaśāyī Viṣṇu but is untouched by the material qualities. In <span class="Italic">Bhagavad-gītā</span> the Lord refers to <span class="Italic">māyā,</span> the external energy, which creates this material world, as <span class="Italic">mama māyā,</span> “My energy,” because this energy works under the full control of the Lord. These facts can be realized only by those who are well versed in Vedic knowledge and advanced in Kṛṣṇa consciousness.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="12">
+        <div class="verse_controls">
+          <button class="verse_num btn">[12.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_12_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">897</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As one can derive fire from wood, milk from the milk bag of the cow, food grains and water from the land, and prosperity in one’s livelihood from industrial enterprises, so, by the practice of bhakti-yoga, even within this material world, one can achieve Your favor or intelligently approach You. Those who are pious all affirm this.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_12_purport">
+          <p>
+            Although the Supreme Personality of Godhead is <span class="Italic">nirguṇa,</span> not to be found within this material world, the entire material world is pervaded by Him, as stated in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">mayā tatam idaṁ sarvam</span>). The material world is nothing but an expansion of the Lord’s material energy, and the entire cosmic manifestation rests upon Him (<span class="Italic">mat-sthāni sarva-bhūtāni</span>). Nonetheless, the Supreme Lord cannot be found here (<span class="Italic">na cāhaṁ teṣv avasthitaḥ</span>). A devotee, however, can see the Supreme Personality of Godhead through the practice of <span class="Italic">bhakti-yoga.</span> One ordinarily does not begin to practice <span class="Italic">bhakti-yoga</span> unless he has practiced it in previous births. Moreover, one can begin <span class="Italic">bhakti-yoga</span> only by the mercy of the spiritual master and Kṛṣṇa. <span class="Italic">Guru-kṛṣṇa-prasāde pāya bhakti-latā-bīja.</span> The seed of devotional service is obtainable by the mercy of <span class="Italic">guru,</span> the spiritual master, and Kṛṣṇa, the Supreme Personality of Godhead.
+          </p>
+          <p>
+            Only by the practice of <span class="Italic">bhakti-yoga</span> can one achieve the favor of the Supreme Personality of Godhead and see Him face to face (<span class="Italic">premāñjana-cchurita-bhakti-vilocanena santaḥ sadaiva hṛdayeṣu vilokayanti</span> [Bs. 5.38]). One cannot see the Lord by other methods, such as <span class="Italic">karma, jñāna</span> or <span class="Italic">yoga.</span> Under the direction of the spiritual master, one must cultivate <span class="Italic">bhakti-yoga</span> (<span class="Italic">śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam [SB </span>7.5.23]). Then, even within this material world, although the Lord is not visible, a devotee can see Him. This is confirmed in <span class="Italic">Bhagavad-gītā</span> (<span class="Italic">bhaktyā mām abhijānāti yāvān yaś cāsmi tattvataḥ [Bg. </span>18.55]) and in <span class="Italic">Śrīmad-Bhāgavatam</span> (<span class="Italic">bhaktyāham ekayā grāhyaḥ</span>). Thus by devotional service one can achieve the favor of the Supreme Personality of Godhead, although He is not visible or understandable to materialistic persons.
+          </p>
+          <p>
+            In this verse, the cultivation of <span class="Italic">bhakti-yoga</span> is compared to many material activities. By friction one can get fire from wood, by digging the earth one can get food grains and water, and by agitating the milk bag of the cow one can get nectarean milk. Milk is compared to nectar, which one can drink to become immortal. Of course, simply drinking milk will not make one immortal, but it can increase the duration of one’s life. In modern civilization, men do not think milk to be important, and therefore they do not live very long. Although in this age men can live up to one hundred years, their duration of life is reduced because they do not drink large quantities of milk. This is a sign of Kali-yuga. In Kali-yuga, instead of drinking milk, people prefer to slaughter an animal and eat its flesh. The Supreme Personality of Godhead, in His instructions of <span class="Italic">Bhagavad-gītā,</span> advises <span class="Italic">go-rakṣya,</span> which means cow protection. The cow should be protected, milk should be drawn from the cows, and this milk should be prepared in various ways. One should take ample milk, and thus one can prolong one’s life, develop his brain, execute devotional service, and ultimately attain the favor of the Supreme Personality of Godhead. As it is essential to get food grains and water by digging the earth, it is also essential to give protection to the cows and take nectarean milk from their milk bags.
+          </p>
+          <p>
+            The people of this age are inclined toward industrial enterprises for comfortable living, but they refuse to endeavor to execute devotional service, by which they can achieve the ultimate goal of life by returning home, back to Godhead. Unfortunately, as it is said, <span class="Italic">na te viduḥ svārtha-gatiṁ hi viṣṇuṁ durāśayā ye bahir-artha-māninaḥ [SB </span>7.5.31]<span class="Italic">.</span> People without spiritual education do not know that the ultimate goal of life is to go back home, back to Godhead. Forgetting this aim of life, they are working very hard in disappointment and frustration (<span class="Italic">moghāśā mogha-karmāṇo mogha jñānā vicetasaḥ [Bg. </span>9.12]). The so-called <span class="Italic">vaiśyas</span>—the industrialists or businessmen—are involved in big, big industrial enterprises, but they are not interested in food grains and milk. However, as indicated here, by digging for water, even in the desert, we can produce food grains; when we produce food grains and vegetables, we can give protection to the cows; while giving protection to the cows, we can draw from them abundant quantities of milk; and by getting enough milk and combining it with food grains and vegetables, we can prepare hundreds of nectarean foods. We can happily eat this food and thus avoid industrial enterprises and joblessness.
+          </p>
+          <p>
+            Agriculture and cow protection are the way to become sinless and thus be attracted to devotional service. Those who are sinful cannot be attracted by devotional service. As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (7.28):
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">yeṣāṁ tv anta-gataṁ pāpaṁ<br>janānāṁ puṇya-karmaṇām<br>te dvandva-moha-nirmuktā<br>bhajante māṁ dṛḍha-vratāḥ</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “Persons who have acted piously in previous lives and in this life, whose sinful actions are completely eradicated and who are freed from the duality of delusion, engage themselves in My service with determination.” The majority of people in this age of Kali are sinful, short-living, unfortunate and disturbed (<span class="Italic">mandāḥ sumanda-matayo manda-bhāgyā hy upadrutāḥ [SB </span>1.1.10]). For them, Caitanya Mahāprabhu has advised:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of quarrel and hypocrisy the only means of deliverance is chanting the holy name of the Lord. There is no other way. There is no other way. There is no other way.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="13">
+        <div class="verse_controls">
+          <button class="verse_num btn">[13.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_13_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">242</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Elephants afflicted by a forest fire become very happy when they get water from the Ganges. Similarly, O my Lord, from whose navel grows a lotus flower, since You have now appeared before us, we have become transcendentally happy. By seeing Your Lordship, whom we have desired to see for a very long time, we have achieved our ultimate goal in life.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_13_purport">
+          <p>
+            The devotees of the Lord are always very eager to see the Supreme Lord face to face, but they do not demand that the Lord come before them, for a pure devotee considers such a demand to be contrary to devotional service. Śrī Caitanya Mahāprabhu teaches this lesson in His <span class="Italic">Śikṣāṣṭaka.</span> <span class="Italic">Adarśanān marma-hatāṁ karotu vā.</span> The devotee is always eager to see the Lord face to face, but if he is brokenhearted because he cannot see the Lord, even life after life, he will never command the Lord to appear. This is a sign of pure devotion. Therefore in this verse we find the word <span class="Italic">ati-cira-īpsita-artham,</span> meaning that the devotee aspires for a long, long time to see the Lord. If the Lord, by His own pleasure, appears before the devotee, the devotee feels extremely happy, as Dhruva Mahārāja felt when he personally saw the Supreme Personality of Godhead. When Dhruva Mahārāja saw the Lord, he had no desire to ask the Lord for any benediction. Indeed, simply by seeing the Lord, Dhruva Mahārāja felt so satisfied that he did not want to ask the Lord for any benediction (<span class="Italic">svāmin kṛtārtho ’smi varaṁ na yāce</span>). A pure devotee, whether able or unable to see the Lord, always engages in the Lord’s devotional service, always hoping that at some time the Lord may be pleased to appear before him so that he can see the Lord face to face.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="14">
+        <div class="verse_controls">
+          <button class="verse_num btn">[14.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_14_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">116</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My Lord, we, the various demigods, the directors of this universe, have come to Your lotus feet. Please fulfill the purpose for which we have come. You are the witness of everything, from within and without. Nothing is unknown to You, and therefore it is unnecessary to inform You again of anything.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_14_purport">
+          <p>
+            As stated in <span class="Ref_Italic">Bhagavad-gītā</span> (13.3), <span class="Italic">kṣetra jñaṁ cāpi māṁ viddhi sarva-kṣetreṣu bhārata.</span> The individual souls are proprietors of their individual bodies, but the Supreme Personality of Godhead is the proprietor of all bodies. Since He is the witness of everyone’s body, nothing is unknown to Him. He knows what we need. Our duty, therefore, is to execute devotional service sincerely, under the direction of the spiritual master. Kṛṣṇa, by His grace, will supply whatever we need in executing our devotional service. In the Kṛṣṇa consciousness movement, we simply have to execute the order of Kṛṣṇa and <span class="Italic">guru.</span> Then all necessities will be supplied by Kṛṣṇa, even if we do not ask for them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="15">
+        <div class="verse_controls">
+          <button class="verse_num btn">[15.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_15_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">503</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            I [Lord Brahmā], Lord Śiva and all the demigods, accompanied by the prajāpatis like Dakṣa, are nothing but sparks illuminated by You, who are the original fire. Since we are particles of You, what can we understand about our welfare? O Supreme Lord, please give us the means of deliverance that is suitable for the brāhmaṇas and demigods.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_15_purport">
+          <p>
+            In this verse, the word <span class="Italic">dvija-deva-mantram</span> is very important. The word <span class="Italic">mantra</span> means “that which delivers one from the material world.” Only the <span class="Italic">dvijas</span> (the <span class="Italic">brāhmaṇas</span>) and the <span class="Italic">devas</span> (the demigods) can be delivered from material existence by the instructions of the Supreme Personality of Godhead. Whatever is spoken by the Supreme Personality of Godhead is a <span class="Italic">mantra</span> and is suitable for delivering the conditioned souls from mental speculation. The conditioned souls are engaged in a struggle for existence (<span class="Italic">manaḥ ṣaṣṭhānīndriyāṇi prakṛti-sthāni karṣati [Bg.<b> </b></span>15.7]). Deliverance from this struggle constitutes the highest benefit, but unless one gets a <span class="Italic">mantra</span> from the Supreme Personality of Godhead, deliverance is impossible. The beginning <span class="Italic">mantra</span> is the Gāyatrī <span class="Italic">mantra.</span> Therefore, after purification, when one is qualified to become a <span class="Italic">brāhmaṇa</span> (<span class="Italic">dvija</span>), he is offered the Gāyatrī <span class="Italic">mantra.</span> Simply by chanting the Gāyatrī <span class="Italic">mantra,</span> one can be delivered. This <span class="Italic">mantra,</span> however, is suitable only for the <span class="Italic">brāhmaṇas</span> and demigods. In Kali-yuga, we are all in a very difficult position, in which we need a suitable <span class="Italic">mantra</span> that can deliver us from the dangers of this age. Therefore the Supreme Personality of Godhead, in His incarnation as Lord Caitanya, gives us the Hare Kṛṣṇa <span class="Italic">mantra.</span>
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">harer nāma harer nāma<br>harer nāmaiva kevalam<br>kalau nāsty eva nāsty eva<br>nāsty eva gatir anyathā<br> [Adi 17.21]</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            “In this age of quarrel and hypocrisy the only means of deliverance is chanting the holy name of the Lord. There is no other way. There is no other way. There is no other way.” In His <span class="Italic">Śikṣāṣṭaka,</span> Lord Caitanya says, <span class="Italic">paraṁ vijayate śrī-kṛṣṇa-saṅkīrtanam:</span> “All glories to the chanting of <span class="Italic">śrī-kṛṣṇa-saṅkīrtana!</span>” The <span class="Italic">mahā-mantra</span>—Hare Kṛṣṇa, Hare Kṛṣṇa, Kṛṣṇa Kṛṣṇa, Hare Hare/ Hare Rāma, Hare Rāma, Rāma Rāma, Hare Hare—is directly chanted by the Lord Himself, who gives us this <span class="Italic">mantra</span> for deliverance.
+          </p>
+          <p>
+            We cannot invent any means to be delivered from the dangers of material existence. Here, even the demigods, such as Lord Brahmā and Lord Śiva, and the <span class="Italic">prajāpatis,</span> such as Dakṣa, are said to be like illuminating sparks in the presence of the Supreme Lord, who is compared to a great fire. Sparks are beautiful as long as they are in the fire. Similarly, we have to remain in the association of the Supreme Personality of Godhead and always engage in devotional service, for then we shall always be brilliant and illuminating. As soon as we fall from the service of the Lord, our brilliance and illumination will immediately be extinguished, or at least stopped for some time. When we living entities, who are like sparks of the original fire, the Supreme Lord, fall into a material condition, we must take the <span class="Italic">mantra</span> from the Supreme Personality of Godhead as it is offered by Śrī Caitanya Mahāprabhu. By chanting this Hare Kṛṣṇa <span class="Italic">mantra,</span> we shall be delivered from all the difficulties of this material world.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="16">
+        <div class="verse_controls">
+          <button class="verse_num btn">[16.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: When the Lord was thus offered prayers by the demigods, headed by Lord Brahmā, He understood the purpose for which they had approached Him. Therefore, in a deep voice that resembled the rumbling of clouds, the Lord replied to the demigods, who all stood there attentively with folded hands.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="17">
+        <div class="verse_controls">
+          <button class="verse_num btn">[17.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Although the Supreme Personality of Godhead, the master of the demigods, was capable of performing the activities of the demigods by Himself, He wanted to enjoy pastimes in churning the ocean. Therefore He spoke as follows.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="18">
+        <div class="verse_controls">
+          <button class="verse_num btn">[18.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Supreme Personality of Godhead said: O Lord Brahmā, Lord Śiva and other demigods, please hear Me with great attention, for what I say will bring good fortune for all of you.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="19">
+        <div class="verse_controls">
+          <button class="verse_num btn">[19.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_19_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">64</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            As long as you are not flourishing, you should make a truce with the demons and asuras, who are now being favored by time.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_19_purport">
+          <p>
+            One word in this verse has two readings—<span class="Italic">kālena</span> and <span class="Italic">kāvyena.</span> <span class="Italic">Kālena</span> means “favored by time,” and <span class="Italic">kāvyena</span> means “favored by Śukrācārya,” Śukrācārya being the spiritual master of the Daityas. The demons and Daityas were favored in both ways, and therefore the demigods were advised by the Supreme Lord to execute a truce for the time being, until time favored them.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="20">
+        <div class="verse_controls">
+          <button class="verse_num btn">[20.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_20_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">122</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O demigods, fulfilling one’s own interests is so important that one may even have to make a truce with one’s enemies. For the sake of one’s self-interest, one has to act according to the logic of the snake and the mouse.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_20_purport">
+          <p>
+            A snake and a mouse were once caught in a basket. Now, since the mouse is food for the snake, this was a good opportunity for the snake. However, since both of them were caught in the basket, even if the snake ate the mouse, the snake would not be able to get out. Therefore, the snake thought it wise to make a truce with the mouse and ask the mouse to make a hole in the basket so that both of them could get out. The snake’s intention was that after the mouse made the hole, the snake would eat the mouse and escape from the basket through the hole. This is called the logic of the snake and the mouse.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="21">
+        <div class="verse_controls">
+          <button class="verse_num btn">[21.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Immediately endeavor to produce nectar, which a person who is about to die may drink to become immortal.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="22">
+        <div class="verse_controls">
+          <button class="verse_num btn">[22–23.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_22_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">45</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O demigods, cast into the ocean of milk all kinds of vegetables, grass, creepers and drugs. Then, with My help, making Mandara Mountain the churning rod and Vāsuki the rope for churning, churn the ocean of milk with undiverted attention. Thus the demons will be engaged in labor, but you, the demigods, will gain the actual result, the nectar produced from the ocean.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_22_purport">
+          <p>
+            It appears that when different kinds of drugs, creepers, grass and vegetables are put into this milk and the milk is churned, as milk is churned for butter, the active principles of the vegetables and drugs mix with the milk, and the result is nectar.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="24">
+        <div class="verse_controls">
+          <button class="verse_num btn">[24.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            My dear demigods, with patience and peace everything can be done, but if one is agitated by anger, the goal is not achieved. Therefore, whatever the demons ask, agree to their proposal.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="25">
+        <div class="verse_controls">
+          <button class="verse_num btn">[25.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_25_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">56</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            A poison known as kālakūṭa will be generated from the ocean of milk, but you should not fear it. And when various products are churned from the ocean, you should not be greedy for them or anxious to obtain them, nor should you be angry.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_25_purport">
+          <p>
+            It appears that by the churning process many things would be generated from the ocean of milk, including poison, valuable gems, nectar and many beautiful women. The demigods were advised, however, not to be greedy for the gems or beautiful women, but to wait patiently for the nectar. The real purpose was to get the nectar.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="26">
+        <div class="verse_controls">
+          <button class="verse_num btn">[26.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Śukadeva Gosvāmī continued: O King Parīkṣit, after advising the demigods in this way, the independent Supreme Personality of Godhead, the best of all living entities, disappeared from their presence.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="27">
+        <div class="verse_controls">
+          <button class="verse_num btn">[27.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Then Lord Brahmā and Lord Śiva, after offering their respectful obeisances to the Lord, returned to their abodes. All the demigods then approached Mahārāja Bali.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="28">
+        <div class="verse_controls">
+          <button class="verse_num btn">[28.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_28_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">129</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Mahārāja Bali, a most celebrated king of the demons, knew very well when to make peace and when to fight. Thus although his commanders and captains were agitated and were about to kill the demigods, Mahārāja Bali, seeing that the demigods were coming to him without a militant attitude, forbade his commanders to kill them.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_28_purport">
+          <p>
+            Vedic etiquette enjoins: <span class="Italic">gṛhe śatrum api prāptaṁ viśvastam akutobhayam.</span> When enemies come to their opponent’s place, they should be received in such a way that they will forget that there is animosity between the two parties. Bali Mahārāja was well conversant with the arts of peacemaking and fighting. Thus he received the demigods very well, although his commanders and captains were agitated. This kind of treatment was prevalent even during the fight between the Pāṇḍavas and the Kurus. During the day, the Pāṇḍavas and Kurus would fight with the utmost strength, and when the day was over they would go to each other’s camps as friends and be received as such. During such friendly meetings, one enemy would offer anything the other enemy wanted. That was the system.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="29">
+        <div class="verse_controls">
+          <button class="verse_num btn">[29.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods approached Bali Mahārāja, the son of Virocana, and sat down near him. Bali Mahārāja was protected by the commanders of the demons and was most opulent, having conquered all the universes.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="30">
+        <div class="verse_controls">
+          <button class="verse_num btn">[30.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            After pleasing Bali Mahārāja with mild words, Lord Indra, the King of the demigods, who was most intelligent, very politely submitted all the proposals he had learned from the Supreme Personality of Godhead, Lord Viṣṇu.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="31">
+        <div class="verse_controls">
+          <button class="verse_num btn">[31.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_31_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">158</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The proposals submitted by King Indra were immediately accepted by Bali Mahārāja and his assistants, headed by Śambara and Ariṣṭanemi, and by all the other residents of Tripura.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_31_purport">
+          <p>
+            It appears from this verse that politics, diplomacy, the propensity to cheat, and everything that we find in this world in individual and social negotiations between two parties are also present in the upper planetary systems. The demigods went to Bali Mahārāja with the proposal to manufacture nectar, and the Daityas, the demons, immediately accepted it, thinking that since the demigods were already weak, when the nectar was produced the demons would take it from them and use it for their own purposes. The demigods, of course, had similar intentions. The only difference is that the Supreme Personality of Godhead, Lord Viṣṇu, was on the side of the demigods because the demigods were His devotees, whereas the demons did not care about Lord Viṣṇu. All over the universe there are two parties—the Viṣṇu party, or God-conscious party, and the godless party. The godless party is never happy or victorious, but the God-conscious party is always happy and victorious.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="32">
+        <div class="verse_controls">
+          <button class="verse_num btn">[32.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_32_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">74</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            O Mahārāja Parīkṣit, chastiser of enemies, the demigods and the demons thereafter made an armistice between them. Then, with great enterprise, they arranged to produce nectar, as proposed by Lord Indra.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_32_purport">
+          <p>
+            The word <span class="Italic">saṁvidam</span> is significant in this verse. The demigods and demons both agreed to stop fighting, at least for the time being, and endeavored to produce nectar. Śrīla Viśvanātha Cakravartī Ṭhākura notes in this connection:
+          </p>
+          <p>
+            <blockquote><div style=" margin-top: 0.125in">
+            <div class="Verse-in-purp">saṁvid yuddhe pratijñāyām<br>ācāre nāmni toṣaṇe<br>sambhāṣaṇe kriyākāre<br>saṅketa-jñānayor api</div>
+            </div>
+            </blockquote>
+          </p>
+          <p>
+            The word <span class="Italic">saṁvit</span> is variously used to mean “in fighting,” “in promising,” “for satisfying,” “in addressing,” “by practical action,” “indication,” and “knowledge.”
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="33">
+        <div class="verse_controls">
+          <button class="verse_num btn">[33.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, with great strength, the demons and demigods, who were all very powerful and who had long, stout arms, uprooted Mandara Mountain. Crying very loudly, they brought it toward the ocean of milk.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="34">
+        <div class="verse_controls">
+          <button class="verse_num btn">[34.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Because of conveying the great mountain for a long distance, King Indra, Mahārāja Bali and the other demigods and demons became fatigued. Being unable to carry the mountain, they left it on the way.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="35">
+        <div class="verse_controls">
+          <button class="verse_num btn">[35.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_35_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">34</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The mountain known as Mandara, which was extremely heavy, being made of gold, fell and smashed many demigods and demons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_35_purport">
+          <p>
+            By constitution, gold is heavier than stone. Since Mandara Mountain was made of gold and was therefore heavier than stone, the demigods and demons could not properly carry it to the ocean of milk.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="36">
+        <div class="verse_controls">
+          <button class="verse_num btn">[36.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The demigods and demons were frustrated and disheartened, and their arms, thighs and shoulders were broken. Therefore the Supreme Personality of Godhead, who knows everything, appeared there on the back of His carrier, Garuḍa.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="37">
+        <div class="verse_controls">
+          <button class="verse_num btn">[37.] </button>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Observing that most of the demons and the demigods had been crushed by the falling of the mountain, the Lord glanced over them and brought them back to life. Thus they became free from grief, and they even had no bruises on their bodies.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="38">
+        <div class="verse_controls">
+          <button class="verse_num btn">[38.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_38_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">272</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            The Lord very easily lifted the mountain with one hand and placed it on the back of Garuḍa. Then, He too got on the back of Garuḍa and went to the ocean of milk, surrounded by the demigods and demons.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_38_purport">
+          <p>
+            Here is proof of the omnipotence of the Supreme Personality of Godhead, who is above everyone. There are two classes of living entities—the demons and the demigods—and the Supreme Personality of Godhead is above them both. The demons believe in the “chance” theory of creation, whereas the demigods believe in creation by the hand of the Supreme Personality of Godhead. The omnipotence of the Supreme Lord is proved here, for simply with one hand He lifted Mandara Mountain, the demigods and the demons, placed them on the back of Garuḍa and brought them to the ocean of milk. Now, the demigods, the devotees, would immediately accept this incident, knowing that the Lord can lift anything, however heavy it might be. But although demons were also carried along with the demigods, demons, upon hearing of this incident, would say that it is mythological. But if God is all-powerful, why would it be difficult for Him to lift a mountain? Since He is floating innumerable planets with many hundreds and thousands of Mandara Mountains, why can’t He lift one of them with His hand? This is not mythology, but the difference between the believers and the faithless is that the devotees accept the incidents mentioned in the Vedic literatures to be true, whereas the demons simply argue and label all these historical incidents mythology. Demons would prefer to explain that everything happening in the cosmic manifestation takes place by chance, but demigods, or devotees, never consider anything to be chance. Rather, they know that everything is an arrangement of the Supreme Personality of Godhead. That is the difference between the demigods and the demons.
+          </p>
+        </div>
+      </div>
+      <div class="verse" data-verse_num="39">
+        <div class="verse_controls">
+          <button class="verse_num btn">[39.] </button><span class="verse_purport"><button aria-controls="collapseExample" aria-expanded="false" class="btn btn-sm" data-bs-target="#verse_39_purport" data-bs-toggle="collapse" type="button">P <span class="purport_wordcount text-xs text-gray-400">306</span></button></span>
+        </div>
+        <div class="verse_translation">
+          <p>
+            Thereafter, Garuḍa, the chief of birds, unloaded Mandara Mountain from his shoulder and brought it near the water. Then he was asked by the Lord to leave that place, and he left.
+          </p>
+        </div>
+        <div class="verse_purport_content collapse" id="verse_39_purport">
+          <p>
+            Garuḍa was asked by the Lord to leave that place because the snake Vāsuki, who was to be used as the rope for churning, could not go there in the presence of Garuḍa. Garuḍa, the carrier of Lord Viṣṇu, is not a vegetarian. He eats big snakes. Vāsuki, being a great snake, would be natural food for Garuḍa, the chief of birds. Lord Viṣṇu therefore asked Garuḍa to leave so that Vāsuki could be brought to churn the ocean with Mandara Mountain, which was to be used as the churning rod. These are the wonderful arrangements of the Supreme Personality of Godhead. Nothing takes place by accident. Carrying Mandara Mountain on the back of a bird and putting it in its right position might be difficult for anyone, whether demigod or demon, but for the Supreme Personality of Godhead everything is possible, as shown by this pastime. The Lord had no difficulty lifting the mountain with one hand, and Garuḍa, His carrier, carried all the demons and demigods together by the grace of the Supreme Lord. The Lord is known as Yogeśvara, the master of all mystic power, because of His omnipotence. If He likes, He can make anything lighter than cotton or heavier than the universe. Those who do not believe in the activities of the Lord cannot explain how things happen. Using words like “accident,” they take shelter of ideas that are unbelievable. Nothing is accidental. Everything is done by the Supreme Personality of Godhead, as the Lord Himself confirms in <span class="Ref_Italic">Bhagavad-gītā</span> (9.10). <span class="Italic">Mayādhyakṣeṇa prakṛtiḥ sūyate sacarācaram.</span> Whatever actions and reactions occur within the cosmic manifestation all take place under the superintendence of the Supreme Personality of Godhead. However, because the demons do not understand the potency of the Lord, when wonderful things are done, the demons think that they are accidental.
+          </p>
+        </div>
+      </div>
+      <p>
+        <em>Thus end the Bhaktivedanta purports of the Eighth Canto, Sixth Chapter, of the <span class="non-Italic">Śrīmad-Bhāgavatam,</span> entitled “The Demigods and Demons Declare a Truce.”</em>
+      </p>
+      <hr />
+      <p>
+        Text copied from: <a href="https://prabhupadabooks.com/sb/8/6">https://prabhupadabooks.com/sb/8/6</a><!-- span.text_source_copied_date
+        | on 2024-09-29 21:27:27 +0000 -->
+      </p>
+      <p>
+        <div class="Search-Heading" align="center">Previous: SB 8.5: The Demigods Appeal to the Lord for Protection     Next: SB 8.7: Lord Siva Saves the Universe by Drinking Poison</div>
+      </p>
+    </div>
+  </body>
+</html>
