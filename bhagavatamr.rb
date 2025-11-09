@@ -127,7 +127,8 @@ class Bhāgavatamr
 
     # for some reason some chapters have weird URLs; this is a list of those
     special_chapter_urls = {
-      'https://prabhupadabooks.com/sb/7/10?d=1' => 'https://prabhupadabooks.com/sb/7/10-1?d=1'
+      'https://prabhupadabooks.com/sb/7/10?d=1' => 'https://prabhupadabooks.com/sb/7/10-1?d=1',
+      'https://prabhupadabooks.com/sb/8/5?d=1' => 'https://prabhupadabooks.com/sb/8/5-1?d=1'
     }
 
     if special_chapter_urls[chapter_url.to_s]
@@ -326,6 +327,7 @@ class Bhāgavatamr
 
     # binding.pry
     output_file = self.get_output_path(canto: chapter.canto, chapter: chapter.number, name: 'output.html')
+    # binding.pry
     File.write output_file, Tilt.new('templates/chapter.slim').render(chapter)
     puts "Wrote output to #{output_file}"
   end
